@@ -1,0 +1,56 @@
+# YAML Model for conversational bot
+
+#    - exec
+#    - ask
+#    - respond
+#    - error
+#    - form
+#    - file
+#    - search
+
+interactions:
+  - node:
+      name: saudacao
+    classifiers:
+      - ola como esta
+      - diga o seu nome
+      - oi
+      - hey
+    message:
+      - olá $user
+      - meu nome é $botname
+    event: respond
+    context:
+      mood: happy
+      ton: neutral
+      subject: none
+
+  - node:
+      name: birthday
+    classifiers:
+      - voce sabe quando e meu aniversario
+      - quando eu nasci
+      - sabe que dia é hoje
+      - meu aniversario esta chegando
+    message:
+      - Ótimo! Quando será seu aniversário?
+    event: respond
+    context:
+      mood: answer
+      ton: neutral
+      subject: birthday
+
+  - node:
+      name: happy-birthday
+    classifiers:
+      - vou fazer uma festa
+      - hoje é meu aniversario
+    message:
+      - Adoro festas de aniversario,
+      - Preciso levar um presente na festa?
+      - quando será a festa?
+    event: respond
+    context:
+      mood: happy
+      ton: neutral
+      subject: birthday

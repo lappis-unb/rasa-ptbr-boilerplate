@@ -1,0 +1,19 @@
+{
+  "name": "hubot-natural",
+  "version": "0.1",
+  "private": true,
+  "author": "Diego Dorgam <diego.dorgam@rocket.chat>",
+  "description": "yaml oriented bot",
+  "dependencies": {
+    "hubot": "^2.19.0",
+    "hubot-diagnostics": "0.0.1",
+    "hubot-help": "^0.2.0",
+    "hubot-scripts": "^2.17.2",
+    "hubot-shell": "^1.0.2",
+    "js-yaml": "^3.2.5",
+    "natural": "*"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
