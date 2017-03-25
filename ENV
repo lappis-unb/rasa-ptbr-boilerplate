@@ -3,15 +3,10 @@ HUBOT_OWNER=RocketChat
 HUBOT_NAME=chatbot
 HUBOT_DESCRIPTION=Just a friendly robot
 
-ROCKETCHAT_URL='https://chat.dorgam.it'
+ROCKETCHAT_URL='http://rocketchat:3000'
 ROCKETCHAT_ROOM=general
 RESPOND_TO_DM=true
 ROCKETCHAT_USER=chatbot
 ROCKETCHAT_PASSWORD=@12345@
 ROCKETCHAT_AUTH=password
 HUBOT_LOG_LEVEL=debug
-
-
-# IRC adapter options
-
-# CAMPFIRE adapter options
