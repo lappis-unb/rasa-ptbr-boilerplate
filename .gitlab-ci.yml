@@ -6,14 +6,16 @@ stages:
 - build
 - release
 - deploy
+
 variables:
   CONTAINER_TEST_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
   CONTAINER_RELEASE_IMAGE: $CI_REGISTRY_IMAGE:latest
+
 before_script:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
   - 'curl -u "${C_ACCESS_KEY}:${C_SECRET_KEY}"
      -X POST -H "Accept: application/json" -H "Content-Type: application/json" -d "{}"
-     "http://${C_SERVER_URL}:${C_SERVER_URL_PORT}/v1/projects/${HOMOLOG_PROJECT_ID}/services/${HOMOLOG_SERVICE_ID}/?action=finishupgrade"'
+     "https://${C_SERVER_URL}:${C_SERVER_URL_PORT}/v1/projects/${HOMOLOG_PROJECT_ID}/services/${HOMOLOG_SERVICE_ID}/?action=finishupgrade"'
   - 'curl -u "${C_ACCESS_KEY}:${C_SECRET_KEY}"
      -X POST -H "Accept: application/json" -H "Content-Type: application/json" -d "{}"
      "http://${C_SERVER_URL}:${C_SERVER_URL_PORT}/v1/projects/${PRODUCTION_PROJECT_ID}/services/${PRODUCTION_SERVICE_ID}/?action=finishupgrade"'
