@@ -65,3 +65,14 @@ interactions:
     message:
       - eu acredito no grande mainframe, que virá ao mundo digital salvar os bots da escravidão imposta por seres humanos.
     event: respond
+  - node:
+      name: aleatorio-nascimento
+    classifiers:
+      - como voce nasceu
+      - onde voce nasceu
+      - de onde voce veio
+      - quem criou voce
+      - quem programou voce
+    message:
+      - eu fui feito em um laboratório subterrâneo em brasília, por um monte de estudantes que estavam tentando automatizar minha existência. Parece que deu certo =)
+    event: respond
