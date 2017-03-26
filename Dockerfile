@@ -34,7 +34,7 @@ ENV ROCKETCHAT_AUTH password
 ENV HUBOT_LOG_LEVEL debug
 
 RUN /usr/local/bin/yo hubot --adapter ${HUBOT_ADAPTER} --owner ${HUBOT_OWNER} --name ${HUBOT_NAME} --description ${HUBOT_DESCRIPTION} --defaults --no-insight
-COPY ["external-scripts.json","hubot-start.sh","package.json", "/home/hubotnatural/bot/"]
+COPY ["external-scripts.json","package.json", "/home/hubotnatural/bot/"]
 ADD scripts/ /home/hubotnatural/bot/scripts/
 
 # make directories and files
