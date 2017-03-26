@@ -37,10 +37,6 @@ RUN /usr/local/bin/yo hubot --adapter ${HUBOT_ADAPTER} --owner ${HUBOT_OWNER} --
 COPY ["external-scripts.json","package.json", "/home/hubotnatural/bot/"]
 ADD scripts/ /home/hubotnatural/bot/scripts/
 
-# make directories and files
-USER root
-RUN chmod +x /home/hubotnatural/bot/hubot-start.sh
-
 EXPOSE 80
 EXPOSE 3000
 
