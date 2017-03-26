@@ -1,3 +1,7 @@
+#BETA 4
+
+bot works?
+
 # hubot-chat
 
 hubot-chat is a chat bot built on the [Hubot][hubot] framework. It was
