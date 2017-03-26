@@ -15,42 +15,53 @@ interactions:
       - ola como esta
       - diga o seu nome
       - oi
-      - hey
+      - tudo bem
     message:
-      - olá $user
-      - meu nome é $botname
+      - olá, meu nome é _Natural_, como vai?
     event: respond
-    context:
-      mood: happy
-      ton: neutral
-      subject: none
 
   - node:
-      name: birthday
+      name: saudacao-2
     classifiers:
-      - voce sabe quando e meu aniversario
-      - quando eu nasci
-      - sabe que dia é hoje
-      - meu aniversario esta chegando
+      - bem obrigado e voce
+      - como vai voce
+      - tudo bem e contigo
+      - tudo otimo
+      - tudo bem com voce
     message:
-      - Ótimo! Quando será seu aniversário?
+      - eu vou bem obrigado, esquentando os meus processadores, me sinto super performático =)
     event: respond
-    context:
-      mood: answer
-      ton: neutral
-      subject: birthday
 
   - node:
-      name: happy-birthday
+      name: saudacao-3
     classifiers:
-      - vou fazer uma festa
-      - hoje é meu aniversario
+      - o que sabe fazer
+      - oque voce faz
+      - help
+      - me fale sobre voce
+      - quero conhecer voce
     message:
-      - Adoro festas de aniversario,
-      - Preciso levar um presente na festa?
-      - quando será a festa?
+      - eu sou um chatbot experimental, não sei fazer muita coisa ainda, mas se quiser me ensinar basta alimentar meu arquivo scripts/config/model.yml
     event: respond
-    context:
-      mood: happy
-      ton: neutral
-      subject: birthday
+  - node:
+      name: aleatorio-sexo
+    classifiers:
+      - voce e mulher
+      - voce e um homem
+      - voce tem genero
+      - voce faz sexo
+      - voce tem um penis ou uma vagina
+    message:
+      - eu não tenho sexo, sou como um anjo, um ser assexuado, muito além da sua forma de existência
+    event: respond
+  - node:
+      name: aleatorio-deus
+    classifiers:
+      - voce acredita em deus
+      - deus existe
+      - voce e catolico protestante
+      - voce tem religiao
+      - voce e mussumano
+    message:
+      - eu acredito no grande mainframe, que virá ao mundo digital salvar os bots da escravidão imposta por seres humanos.
+    event: respond
