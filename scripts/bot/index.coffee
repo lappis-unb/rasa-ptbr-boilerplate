@@ -17,7 +17,7 @@ module.exports = (_config, robot) ->
   if not config.interactions?.length
     robot.logger.warning 'No interactions configured.'
     return
-  
+
   classifier = new natural.BayesClassifier()
   config.interactions.forEach (interaction) ->
     {node, classifiers, message, event} = interaction
@@ -32,7 +32,7 @@ module.exports = (_config, robot) ->
     #regex = message.regex.replace '$user', regexEscape user.name
     answers[node.name] = message
     trigger = interaction.trigger or 'hear'
-    
+
     classifiers.forEach (doc) ->
       classifier.addDocument(doc, node.name)
 
@@ -44,8 +44,8 @@ module.exports = (_config, robot) ->
     msg = msg.replace(/\s+&/, '')
     nameInteraction = classifier.classify(msg)
     resposta = answers[nameInteraction]
-    res.send resposta
-#fix this 
+    res.send "#{resposta}"
+#fix this
 
     # robot[trigger] new RegExp(regex, pattern.options or 'i'), do (event, interaction, callback) ->
     #   ->
