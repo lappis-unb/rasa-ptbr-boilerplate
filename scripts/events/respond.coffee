@@ -1,19 +1,20 @@
 path = require 'path'
+natural = require 'natural'
+
 {msgVariables, stringElseRandomKey} = require path.join '..', 'lib', 'common.coffee'
+answers = {}
 
 class respond
   constructor: (@interaction) ->
   process: (msg) =>
-    messageType = @interaction.type?.toLowerCase() or 'respond'
-    switch messageType
-      when 'exec', 'emote'
-        messageType = 'emote'
-      else
-        messageType = 'send'
-
-    message = stringElseRandomKey @interaction.message
-
-    message = msgVariables message, msg
-    msg[messageType] message
+    type = @interaction.type?.toLowerCase() or 'random'
+    switch type
+      when 'block'
+        @interaction.message.forEach (line) ->
+          msg['send'] line
+      when 'random'
+        message = stringElseRandomKey @interaction.message
+        message = msgVariables message, msg
+        msg['send'] message
 
 module.exports = respond

@@ -30,7 +30,11 @@ interactions:
       - tudo bem com voce
     message:
       - eu vou bem obrigado, esquentando os meus processadores, me sinto super performático =)
+      - eu estou susse
+      - nao me sinto muito bem
+      - dia ruim hoje
     event: respond
+    type: random
 
   - node:
       name: saudacao-3
@@ -41,8 +45,25 @@ interactions:
       - me fale sobre voce
       - quero conhecer voce
     message:
-      - eu sou um chatbot experimental, não sei fazer muita coisa ainda, mas se quiser me ensinar basta alimentar meu arquivo scripts/config/model.yml
+      - eu sou um chatbot experimental
+      - não sei fazer muita coisa ainda
+      - mas se quiser me ensinar basta alimentar meu arquivo scripts/config/model.yml
     event: respond
+    type: block
+
+  - node:
+      name: piada
+    classifiers:
+      - sabe alguma piada
+      - voce consegue contar piadas
+      - conhece alguma piada
+    message:
+      - só sei piada sobre portugues
+      - já ouviu aquela do robo que enfiou o dedo na tomada e transcendeu?
+      - a unica piada aqui é você
+    event: respond
+    type: random
+
   - node:
       name: aleatorio-sexo
     classifiers:

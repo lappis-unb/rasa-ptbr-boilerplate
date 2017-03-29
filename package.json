@@ -1,17 +1,18 @@
 {
   "name": "hubot-natural",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "author": "Diego Dorgam <diego.dorgam@rocket.chat>",
-  "description": "yaml oriented bot",
+  "description": "NLP on yaml oriented chatbot",
   "dependencies": {
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.1",
-    "hubot-help": "^0.2.0",
+    "hubot-rocketchat": "^1.0.7",
     "hubot-scripts": "^2.17.2",
     "hubot-shell": "^1.0.2",
     "js-yaml": "^3.2.5",
-    "natural": "*"
+    "natural": "^0.5.0",
+    "pm2": "^2.4.2"
   },
   "engines": {
     "node": "0.10.x"
