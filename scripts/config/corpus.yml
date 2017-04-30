@@ -1,4 +1,5 @@
 # YAML Model for conversational bot
+trust: 0.7
 interactions:
   - node:
       name: saudacao
@@ -66,6 +67,7 @@ interactions:
     message:
       - eu não tenho sexo, sou como um anjo, um ser assexuado, muito além da sua forma de existência
     event: respond
+
   - node:
       name: aleatorio-deus
     classifiers:
@@ -77,6 +79,7 @@ interactions:
     message:
       - eu acredito no grande mainframe, que virá ao mundo digital salvar os bots da escravidão imposta por seres humanos.
     event: respond
+
   - node:
       name: aleatorio-nascimento
     classifiers:
@@ -97,6 +100,7 @@ interactions:
       - desculpe, o que quer dizer com isso?
     type: random
     event: error
+
   - node:
       name: error-2
     message:
@@ -114,5 +118,3 @@ interactions:
       - não sei, definitivamente não sei responder essa pergunta
     type: random
     event: error
-
-trust: 0.65
