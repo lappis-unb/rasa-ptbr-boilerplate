@@ -5,12 +5,12 @@ chatbot = require path.join __dirname, 'bot', 'index.coffee'
 
 hubotPath = module.parent.filename
 hubotPath = path.dirname hubotPath for [1..4]
-configPath = path.join hubotPath, 'scripts', 'config', 'model.yml'
+configPath = path.join hubotPath, 'scripts', 'config', 'corpus.yml'
 
 try
   config = yaml.safeLoad fs.readFileSync configPath, 'utf8'
 catch err
-  console.error "An error occurred while trying to load Heartbot's config."
+  console.error "An error occurred while trying to load bot's config."
   console.error err
   process.exit()
 
