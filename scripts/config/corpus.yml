@@ -1,4 +1,5 @@
 # YAML Model for conversational bot
+trust: 0.7
 interactions:
   - node:
       name: saudacao

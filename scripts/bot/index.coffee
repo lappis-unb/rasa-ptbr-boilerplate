@@ -8,7 +8,6 @@ events = {}
 nodes = {}
 error_count = 0
 err_nodes = 0
-trust = 0.7
 
 {regexEscape} = require path.join '..', 'lib', 'common.coffee'
 
@@ -20,6 +19,9 @@ module.exports = (_config, robot) ->
   config = _config
   if not config.interactions?.length
     robot.logger.warning 'No interactions configured.'
+    return
+  if not config.trust
+    robot.logger.warning 'No trust level configured.'
     return
 
   classifier = new natural.LogisticRegressionClassifier(PorterStemmerPt)
@@ -40,7 +42,7 @@ module.exports = (_config, robot) ->
     msg = res.match[0].replace res.robot.name+' ', ''
     msg = msg.replace(/^\s+/, '')
     msg = msg.replace(/\s+&/, '')
-    if classifier.getClassifications(msg)[0].value < trust
+    if classifier.getClassifications(msg)[0].value < config.trust
       error_count++
       if error_count > err_nodes then error_count=1
       node_name = "error-" + error_count
