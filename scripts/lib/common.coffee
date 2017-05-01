@@ -6,12 +6,11 @@ common.applyVariable = (string, variable, value, regexFlags = 'i') ->
 
 common.msgVariables = (message, msg) ->
   message = common.applyVariable message, 'user', msg.envelope.user.name
-  message = common.applyVariable message, 'heartbot', msg.robot.name
+  message = common.applyVariable message, 'bot', msg.robot.alias
   message = common.applyVariable message, 'room', msg.envelope.room if msg.envelope.room?
 
 common.stringElseRandomKey = (variable) ->
   return variable if typeof variable is 'string'
-
   if variable instanceof Array
     variable[Math.floor(Math.random() * variable.length)]
 

@@ -11,7 +11,8 @@ class respond
     switch type
       when 'block'
         @interaction.message.forEach (line) ->
-          msg['send'] line
+          message = msgVariables line, msg
+          msg['send'] message
       when 'random'
         message = stringElseRandomKey @interaction.message
         message = msgVariables message, msg

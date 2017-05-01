@@ -9,8 +9,10 @@ interactions:
       - oi
       - tudo bem
     message:
-      - olá, meu nome é _Natural_, como vai?
+      - olá $user, meu nome é $bot, como vai?
+      - estou feliz de estar aqui no canal $room
     event: respond
+    type: block
 
   - node:
       name: saudacao-2
