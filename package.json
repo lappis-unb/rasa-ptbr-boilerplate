@@ -1,9 +1,9 @@
 {
   "name": "hubot-natural",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "author": "Diego Dorgam <diego.dorgam@rocket.chat>",
-  "description": "NLP on yaml oriented chatbot",
+  "description": "NLP YAML oriented chatbot",
   "dependencies": {
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.1",

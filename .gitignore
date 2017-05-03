@@ -4,3 +4,7 @@ bin/
 .hubot_history
 .editorconfig
 pm2.json
+hubot.env
+.DS_Store
+Procfile
+train.js
