@@ -72,7 +72,7 @@ interactions:
   - node:
       name: quem-sou
     classifiers:
-      - quem é voce
+      - quem e voce
       - oque voce faz
       - o que voce é
       - me fale sobre voce

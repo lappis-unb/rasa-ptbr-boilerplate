@@ -36,13 +36,14 @@ module.exports = (_config, robot) ->
     if classifiers instanceof Array
       classifiers.forEach (doc) ->
         classifier.addDocument(doc, node.name)
-    classifier.train()
-    trigger = interaction.trigger or 'respond'
+
+  classifier.train()
+  #trigger = interaction.trigger or 'respond'
 
   #robot[trigger] new RegExp(regex, pattern.options or 'i'), do (event, interaction, callback) ->
 
   robot.hear /(.+)/i, (res) ->
-    #msg = res.match[0].replace res.robot.name+' ', ''
+    msg = res.match[0].replace res.robot.name+' ', ''
     msg = msg.replace(/^\s+/, '')
     msg = msg.replace(/\s+&/, '')
     if classifier.getClassifications(msg)[0].value < config.trust
