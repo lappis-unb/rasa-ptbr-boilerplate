@@ -10,10 +10,23 @@ interactions:
       - oi como vai
       - tudo bem
     message:
-      - olá $user, meu nome é $bot, como vai?
+      - olá $user, eu vou bem e você?
       - estou feliz de estar aqui =)
     event: respond
     type: block
+
+  - node:
+      name: saudacao-resposta
+    classifiers:
+      - estou bem
+      - eu estou otimo
+      - obrigado
+    message:
+      - legal =)
+      - que bom!
+      - que ótimo
+    event: respond
+    type: random
 
   - node:
       name: bom-dia
@@ -70,9 +83,9 @@ interactions:
       - Bem, eu sou um chatbot experimental, não sei fazer muita coisa ainda
       - mas tenho muita vontade de aprender.
       - Eu sei falar sobre alguns assuntos como
-      - - o TDC de Floripa
-      - - Rocket.Chat
-      - - Filosofia Robótica (!)
+      - "- o TDC de Floripa"
+      - "- Rocket.Chat"
+      - "- Filosofia Robótica (!)"
       - tem interesse em algum desses temas?
     event: respond
     type: block
@@ -433,10 +446,11 @@ interactions:
   - node:
       name: tdc-programacao
     classifiers:
-      - onde esta a programação
-      - qual e a programação do evento
+      - onde esta a programacao
+      - qual e a programacao do evento
+      - o que tem hoje no evento
       - o que vai ter no tdc
-      - programação do TDC
+      - programacao do TDC
     message:
       - oi $user, você pode encontrar tudo sobre a programação do evento no link
       - http://www.thedevelopersconference.com.br/tdc/2017/florianopolis/trilhas
