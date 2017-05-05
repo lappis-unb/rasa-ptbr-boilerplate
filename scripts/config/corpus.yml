@@ -44,7 +44,7 @@ interactions:
     type: random
 
   - node:
-      name: bom-tarde
+      name: boa-tarde
     classifiers:
       - boa tarde
       - boa tarde galera
