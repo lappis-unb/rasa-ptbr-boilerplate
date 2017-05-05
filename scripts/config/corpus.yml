@@ -371,7 +371,7 @@ interactions:
       - linguagem java
     message:
       - poderíamos falar de algo melhor não é $user ?
-    event: respon
+    event: respond
     type: block
 
   - node:
