@@ -4,7 +4,9 @@ interactions:
   - node:
       name: saudacao
     classifiers:
-      - ola como esta
+      - ola devi
+      - ola pessoal
+      - ola
       - como vai voce
       - tudo bom
       - oi como vai
@@ -12,6 +14,20 @@ interactions:
     message:
       - olá $user, eu vou bem e você?
       - estou feliz de estar aqui =)
+    event: respond
+    type: block
+
+  - node:
+      name: almoco
+    classifiers:
+      - onde tem um restaurante para almoçar
+      - tem uma dica de almoço
+      - onde encontro um prato feito
+      - o almoço ao gratis
+    message:
+      - Sim, temos almoço nos FoodTrucks
+      - e nas redondezas tem um shopping, mas nunca me deixaram ir no shooping
+      - acho que as pessoas não estão preparados pra isso...
     event: respond
     type: block
 
