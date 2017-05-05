@@ -60,7 +60,7 @@ interactions:
     type: random
 
   - node:
-      name: bom-tarde
+      name: boa-tarde
     classifiers:
       - boa tarde
       - boa tarde galera
@@ -360,6 +360,18 @@ interactions:
       - visite https://rocket.chat/deploy
       - caso queira saber mais, de uma olhada em rocket.chat/docs/installation/rocket-chat-cloud
     event: respond
+    type: block
+
+  - node:
+      name: java
+    classifiers:
+      - o que acha do java
+      - você gosta de java
+      - e o java
+      - linguagem java
+    message:
+      - poderíamos falar de algo melhor não é $user ?
+    event: respon
     type: block
 
   - node:
