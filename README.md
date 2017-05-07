@@ -94,18 +94,19 @@ Just check inside `node_modules/natural/lib/natural/stemmers/`
 
 To deploy HubotNatural, first you have to install yo hubot-generator:
 
-```
+```shell
 npm install -g yo generator-hubot
 ```
 
 Then you will clone HubotNatural repository:  
-```
+
+```shell
 git clone https://github.com/RocketChat/hubot-natural.git
 ```
 
 Now change directory name to whatever your bot's name will gonna be, and install hubot binaries, without overwitting any of the files inside the folder:
 
-```
+```shell
 mv hubot-natural mybot
 cd mybot
 npm install
@@ -151,7 +152,8 @@ yo hubot
 ```
 
 Now, to run your chatbot in shell, you should run:  
-```
+
+```shell
 bin/hubot
 ```
 
@@ -170,7 +172,7 @@ Checkout other [hubot adapters](https://github.com/github/hubot/blob/master/docs
 
 In your terminal window, run:
 
-```
+```shell
 export ROCKETCHAT_URL=http://localhost:3000
 export ROCKETCHAT_ROOM=general
 export RESPOND_TO_DM=true
@@ -187,12 +189,13 @@ You can check [hubot-rocketchat](https://github.com/RocketChat/hubot-rocketchat)
 
 As NodeJS developers we learned to love [Process Manager PM2](http://pm2.keymetrics.io), and we really encourage you to use it.
 
-```
+```shell
 npm install pm2 -g 
 ```
 
 Create a `mybot.json` file and jut set it's content as:  
-```
+
+```json
 {
 	"apps": [{
 		"name": "mybot",
@@ -218,7 +221,7 @@ Create a `mybot.json` file and jut set it's content as:
 
 You can also instantiate more than one process with PM2, if you want for example to run more than one instance of your bot:  
 
-```
+```json
 {
 	"apps": [{
 		"name": "mybot.0",
