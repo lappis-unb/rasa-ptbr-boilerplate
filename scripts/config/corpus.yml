@@ -32,6 +32,30 @@ interactions:
     type: block
 
   - node:
+      name: programacao-palestra
+    classifiers:
+      - viu alguma palestra hoje
+      - qual palestra voce gostou mais
+      - esta nessa palestra
+    message:
+      - Eu estou vendo todas as palestras simultaneamente...
+      - como não tenho um corpo físico, não preciso ficar limitado a uma sala ;P
+    event: respond
+    type: block
+
+  - node:
+      name: previsao-tempo
+    classifiers:
+      - vai chover hoje
+      - qual é a previsao do tempo
+      - hoje o tempo esta bom para caminhar
+    message:
+      - olha $user, a previsão do tempo pra hoje é de $clima,
+      - então tenha em mente que a máxima hoje é de $max e a mínima é de $min
+    event: tempo
+    type: block
+
+  - node:
       name: saudacao-resposta
     classifiers:
       - estou bem
