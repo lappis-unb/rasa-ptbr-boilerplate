@@ -550,3 +550,16 @@ interactions:
       - não sei, definitivamente não sei responder essa pergunta
     type: random
     event: error
+    
+    - node:
+      name: futebol
+    classifiers:
+      - voce joga futebol
+      - vamos falar de futebol
+      - qual time voce torce
+    message:
+      - Eu amo jogar futebol, Eu que ensinei o Pele a jogar bola
+      - vamos, o que voce quer saber? sei tudo de futebol
+      - Falam que todo ser humano nasce Flamenguista, com os Robôs não é diferente
+    event: respond
+    type: block
