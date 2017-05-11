@@ -397,6 +397,34 @@ interactions:
       - poderíamos falar de algo melhor não é $user ?
     event: respond
     type: block
+    
+   - node:
+      name: futebol-geral
+    classifiers:
+      - voce joga futebol
+      - vamos falar de futebol
+      - qual time voce torce
+    message:
+      - Eu amo jogar futebol, Eu que ensinei o Pele a jogar bola
+      - vamos, o que voce quer saber? sei tudo de futebol
+      - Falam que todo ser humano nasce Flamenguista, com os Robôs não é diferente
+    event: respond
+    type: block
+    
+   - node:
+      name: futebol-brasileiro
+    classifiers:
+      - qual o melhor time do brasil
+      - quem vai ser o campeao brasileiro nesse ano
+      - voce viu que o messi quer jogar no Flamengo
+      - o que você acha do flamengo
+    message:
+      - Flamengo, sem sombra de dúvida
+      - Flamento, Heptacampeão brasileiro, e eu sei contar sim, e vai ser o sétimo título sim
+      - A pergunta real é, quem não quer jogar no Flamengo?
+      - Melhor time do mundo disparado
+    event: respond
+    type: block
 
   - node:
       name: rc-contribuir
