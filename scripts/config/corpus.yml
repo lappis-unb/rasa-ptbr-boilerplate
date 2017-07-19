@@ -46,7 +46,7 @@ interactions:
       - olá $user, eu vou bem e você?
       - estou feliz de estar aqui =)
     next:
-      nodes:
+      interactions:
         - to-mal
         - to-bem
       trust: .5
@@ -65,9 +65,6 @@ interactions:
       - Sim, temos almoço nos FoodTrucks
       - e nas redondezas tem um shopping, mas nunca me deixaram ir no shooping
       - acho que as pessoas não estão preparados pra isso...
-    choices:
-      - saudacao
-      - cancel
     event: respond
     type: block
 

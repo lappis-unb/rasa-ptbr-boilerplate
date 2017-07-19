@@ -15,6 +15,18 @@ eventsPath = path.join __dirname, '..', 'events'
 for event in fs.readdirSync(eventsPath).sort()
   events[event.replace /\.coffee$/, ''] = require path.join eventsPath, event
 
+classifyInteraction = (interaction, classifier, interactions) ->
+  if Array.isArray interaction.classifiers
+    for doc in interaction.classifiers
+      classifier.addDocument(doc, interaction.node.name)
+      if Array.isArray interaction.next?.interactions
+        nextClassifier = new natural.LogisticRegressionClassifier(PorterStemmerPt)
+        for nextInteractionName in interaction.next.interactions
+          nextInteraction = interactions.find (n) -> n.node.name is nextInteractionName
+          classifyInteraction nextInteraction, nextClassifier
+        nextClassifier.train()
+
+
 module.exports = (_config, robot) ->
   config = _config
   if not config.interactions?.length
@@ -24,20 +36,20 @@ module.exports = (_config, robot) ->
     robot.logger.warning 'No trust level configured.'
     return
 
+  console.log 'Processing interactions'
+  console.time 'Processing interactions (Done)'
   classifier = new natural.LogisticRegressionClassifier(PorterStemmerPt)
   #console.log(config.interactions)
-  config.interactions.forEach (interaction) ->
+  for interaction in config.interactions when interaction.level != 'context'
     {node, classifiers, event} = interaction
     nodes[node.name] = new events[event] interaction
     # count error nodes
     if node.name.substr(0,5) == "error"
       err_nodes++
 
-    if classifiers instanceof Array
-      classifiers.forEach (doc) ->
-        classifier.addDocument(doc, node.name)
-
+    classifyInteraction interaction, classifier, config.interactions
   classifier.train()
+  console.timeEnd 'Processing interactions (Done)'
 
   robot.hear /(.+)/i, (res) ->
     msg = res.match[0].replace res.robot.name+' ', ''
