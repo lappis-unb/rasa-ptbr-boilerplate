@@ -72,11 +72,7 @@ module.exports = (_config, robot) ->
   classifier.train()
   console.timeEnd 'Processing interactions (Done)'
 
-  robot.hear /(.+)/i, (res) ->
-    msg = res.match[0].replace res.robot.name+' ', ''
-    msg = msg.replace(/^\s+/, '')
-    msg = msg.replace(/\s+&/, '')
-
+  processMessage = (res, msg) ->
     context = getContext(res)
     currentClassifier = classifier
     trust = config.trust
@@ -91,20 +87,24 @@ module.exports = (_config, robot) ->
 
     classifications = currentClassifier.getClassifications(msg)
 
-    if classifications[0].value < trust
-      error_count = incErrors res
+    if classifications[0].value >= trust
+      clearErrors res
+      node_name = classifications[0].label
+    else
       if Array.isArray interaction?.next?.error
+        error_count = incErrors res
         error_node_name = interaction.next.error[error_count - 1]
         if not error_node_name?
           clearErrors res
           error_node_name = interaction.next.error[0]
+      else if interaction?.next?
+        setContext(res, undefined)
+        return processMessage(res, msg)
       else
+        error_count = incErrors res
         if error_count > err_nodes
           clearErrors res
         error_node_name = "error-" + error_count
-    else
-      clearErrors res
-      node_name = classifications[0].label
 
     currentInteraction = config.interactions.find (interaction) ->
       interaction.node.name is node_name or interaction.node.name is error_node_name
@@ -121,3 +121,11 @@ module.exports = (_config, robot) ->
     currentNode = nodes[node_name or error_node_name]
     callback = currentNode.process
     callback.apply @, arguments
+
+
+  robot.hear /(.+)/i, (res) ->
+    msg = res.match[0].replace res.robot.name+' ', ''
+    msg = msg.replace(/^\s+/, '')
+    msg = msg.replace(/\s+&/, '')
+
+    processMessage res, msg
