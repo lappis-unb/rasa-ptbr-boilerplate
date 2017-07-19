@@ -1,21 +1,58 @@
 # YAML Model for conversational bot
 trust: 0.7
 interactions:
+
+  - node:
+      name: to-bem
+      level: context
+      classifiers:
+        - estou bem
+        - tou bem
+        - to bem
+        - bem
+        - legal
+        - tudo bem
+        - ok
+      message:
+        - Legal, no que posso te ajudar hoje?
+      context: clear
+      event: respond
+      type: block
+
+  - node:
+      name: to-mal
+      level: context
+      classifiers:
+        - estou mal
+        - tou mal
+        - to mal
+      message:
+        - Putz, mas posso te ajudar em algo hoje?
+      context: clear
+      event: respond
+      type: block
+
   - node:
       name: saudacao
-    classifiers:
-      - ola devi
-      - ola pessoal
-      - ola
-      - como vai voce
-      - tudo bom
-      - oi como vai
-      - tudo bem
-    message:
-      - olá $user, eu vou bem e você?
-      - estou feliz de estar aqui =)
-    event: respond
-    type: block
+      classifiers:
+        - ola devi
+        - ola pessoal
+        - ola
+        - como vai voce
+        - tudo bom
+        - oi como vai
+        - tudo bem
+      message:
+        - olá $user, eu vou bem e você?
+        - estou feliz de estar aqui =)
+      next:
+        nodes:
+          - to-mal
+          - to-bem
+        trust: .5
+        # error: node-name
+      event: respond
+      type: block
 
   - node:
       name: almoco
@@ -28,6 +65,9 @@ interactions:
       - Sim, temos almoço nos FoodTrucks
       - e nas redondezas tem um shopping, mas nunca me deixaram ir no shooping
       - acho que as pessoas não estão preparados pra isso...
+    choices:
+      - saudacao
+      - cancel
     event: respond
     type: block
 
@@ -397,8 +437,8 @@ interactions:
       - poderíamos falar de algo melhor não é $user ?
     event: respond
     type: block
-    
-   - node:
+
+  - node:
       name: futebol-geral
     classifiers:
       - voce joga futebol
@@ -410,8 +450,8 @@ interactions:
       - Falam que todo ser humano nasce Flamenguista, com os Robôs não é diferente
     event: respond
     type: block
-    
-   - node:
+
+  - node:
       name: futebol-brasileiro
     classifiers:
       - qual o melhor time do brasil
