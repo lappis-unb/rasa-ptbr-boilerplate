@@ -50,7 +50,8 @@ interactions:
         - to-mal
         - to-bem
       trust: .5
-      # error: node-name
+      # error:
+        # - node-name
     event: respond
     type: block
 
