@@ -1,5 +1,5 @@
 # YAML Model for conversational bot
-trust: 0.7
+trust: 0.9
 interactions:
 
   - node:
@@ -49,7 +49,7 @@ interactions:
       interactions:
         - to-mal
         - to-bem
-      trust: .5
+      trust: .8
       # error:
         # - node-name
     event: respond
@@ -72,12 +72,157 @@ interactions:
   - node:
       name: programacao-palestra
     classifiers:
-      - viu alguma palestra hoje
-      - qual palestra voce gostou mais
-      - esta nessa palestra
+      - qual é a programacao de hoje
+      - programacao da trilha
+      - programacao do evento
     message:
-      - Eu estou vendo todas as palestras simultaneamente...
-      - como não tenho um corpo físico, não preciso ficar limitado a uma sala ;P
+      - A programação do TDC está muito legal!
+      - Sei toda ela de cór...
+      - quer saber a programação de qual trilha?
+    next:
+      interactions:
+        - quais-trilhas-tem
+        - get-programacao
+      error:
+        - erro-trilha
+      trust: .8
+    event: respond
+    type: block
+
+  - node:
+      name: quais-trilhas-tem
+    classifiers:
+      - quais são as trilhas?
+      - não sei quais trilhas tem
+      - quais trilhas
+      - qual é a minha trilha
+    message:
+      - "Eu conheço a programação dessas trilhas. Basta perguntar assim:"
+      - "`quero saber a programação da trilha ...`"
+      - "e me passar o nome de uma dessas trilhas:"
+      - 'TRANSFORMAÇÃO DIGITAL'
+      - 'DESIGN THINKING'
+      - 'PROGRAMAÇÃO FUNCIONAL'
+      - 'BIGDATA'
+      - 'DATA SCIENCE'
+      - 'CONTAINERS'
+      - 'MODERN WEB'
+      - 'SEGURANÇA E CRIPTOGRAFIA'
+      - 'STADIUM'
+      - 'UX DESIGN'
+      - 'MICROSERVIÇOS'
+      - 'NOSQL'
+      - 'MACHINE LEARNING'
+      - 'CLOUD COMPUTING'
+      - 'NODE.JS'
+      - 'XAMARIN'
+      - 'ANDROID'
+      - 'ANÁLISE DE NEGÓCIOS'
+      - 'ACESSIBILIDADE'
+      - 'JAVA EE'
+      - 'BANCO DE DADOS'
+      - 'COMPUTAÇÃO COGNITIVA'
+      - 'DEVOPS'
+      - 'INTERNET DAS COISAS'
+      - 'MOBILE'
+      - 'iOS'
+      - 'DEVTEST'
+      - 'RAD: DELPHI C++'
+      - 'MANAGEMENT 3.0'
+      - 'ARQUITETURA .NET'
+      - 'ARQUITETURA JAVA'
+      - 'ARQUITETURA PHP'
+      - 'ARQUITETURA CORPORATIVA'
+      - 'INFRAESTRUTURA ÁGIL'
+      - 'JAVASCRIPT'
+      - 'TESTES'
+      - 'TDC4WOMEN'
+      - 'AGILE'
+      - '.NET'
+      - 'JAVA'
+      - 'PHP'
+      - 'PYTHON'
+      - 'GOLANG'
+      - 'JAVASCRIPT II'
+      - 'RUBY'
+      - 'TESTES II'
+      - 'MANAGEMENT 3.0 II'
+    next:
+      interactions:
+        - get-programacao
+        - cancela-programacao
+      error:
+        - erro-trilha
+      trust: .9
+    event: respond
+    type: block
+
+  - node:
+      name: get-programacao
+    classifiers:
+      - quero saber sobre a trilha
+      - qual é a programacao da trilha
+      - 'programacao trilha DESIGN THINKING'
+      - 'programacao trilha PROGRAMAÇÃO FUNCIONAL'
+      - 'programacao trilha BIGDATA'
+      - 'programacao trilha DATA SCIENCE'
+      - 'programacao trilha CONTAINERS'
+      - 'programacao trilha MODERN WEB'
+      - 'programacao trilha SEGURANÇA E CRIPTOGRAFIA'
+      - 'programacao trilha STADIUM'
+      - 'programacao trilha UX DESIGN'
+      - 'programacao trilha MICROSERVIÇOS'
+      - 'programacao trilha NOSQL'
+      - 'programacao trilha MACHINE LEARNING'
+      - 'programacao trilha CLOUD COMPUTING'
+      - 'programacao trilha NODE.JS'
+      - 'programacao trilha XAMARIN'
+      - 'programacao trilha ANDROID'
+      - 'programacao trilha ANÁLISE DE NEGÓCIOS'
+      - 'programacao trilha ACESSIBILIDADE'
+      - 'programacao trilha JAVA EE'
+      - 'programacao trilha BANCO DE DADOS'
+      - 'programacao trilha COMPUTAÇÃO COGNITIVA'
+      - 'programacao trilha DEVOPS'
+      - 'programacao trilha INTERNET DAS COISAS'
+      - 'programacao trilha MOBILE'
+      - 'programacao trilha iOS'
+      - 'programacao trilha DEVTEST'
+      - 'programacao trilha RAD: DELPHI C++'
+      - 'programacao trilha MANAGEMENT 3.0'
+      - 'programacao trilha ARQUITETURA .NET'
+      - 'programacao trilha ARQUITETURA JAVA'
+      - 'programacao trilha ARQUITETURA PHP'
+      - 'programacao trilha ARQUITETURA CORPORATIVA'
+      - 'programacao trilha INFRAESTRUTURA ÁGIL'
+      - 'programacao trilha JAVASCRIPT'
+      - 'programacao trilha TESTES'
+      - 'programacao trilha TDC4WOMEN'
+      - 'programacao trilha AGILE'
+      - 'programacao trilha .NET'
+      - 'programacao trilha JAVA'
+      - 'programacao trilha PHP'
+      - 'programacao trilha PYTHON'
+      - 'programacao trilha GOLANG'
+      - 'programacao trilha JAVASCRIPT II'
+      - 'programacao trilha RUBY'
+      - 'programacao trilha TESTES II'
+      - 'programacao trilha MANAGEMENT 3.0 II'
+    message:
+      - "Agora na trilha $trilha tem a seguinte programação:"
+      - $programacao
+    event: programacao
+    type: block
+
+  - node:
+      name: erro-trilha
+    message:
+      - Não entendi de qual trilha você quer a programação..
+      - Talvez eu ainda não seja tão inteligente quanto eles pensam que eu sou.
+      - "Mas para não perder o rebolado, vou te passar o link do site para você consultar:"
+      - http://www.thedevelopersconference.com.br/tdc/2017/saopaulo/trilhas
+    action:
+      - clear-context
     event: respond
     type: block
 
@@ -554,9 +699,8 @@ interactions:
       - onde acontece o developers conference
       - onde fica o centro de convenções centrosul
     message:
-      - O TDC Floripa 2017 vai rolar no Centro de Convenções CentroSul
-      - nos dias 3 a 6 de maio, das 9h às 19h00
-      - na Av. Governador Gustavo Richard, 850 - Centro
+      - O TDC Sampa 2017 vai rolar na Universidade Anhembi Morumbi
+      - nos dias 18 à 22 de julho, das 9h às 19h00
       - http://www.thedevelopersconference.com.br/tdc/2017/data-e-local
     event: respond
     type: block
@@ -571,7 +715,7 @@ interactions:
       - programacao do TDC
     message:
       - oi $user, você pode encontrar tudo sobre a programação do evento no link
-      - http://www.thedevelopersconference.com.br/tdc/2017/florianopolis/trilhas
+      - http://www.thedevelopersconference.com.br/tdc/2017/saopaulo/trilhas
     event: respond
     type: block
 
