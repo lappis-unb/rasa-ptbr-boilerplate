@@ -10,12 +10,12 @@ class respond
     type = @interaction.type?.toLowerCase() or 'random'
     switch type
       when 'block'
-        @interaction.message.forEach (line) ->
-          message = msgVariables line, msg
-          msg['send'] message
+        messages = @interaction.message.map (line) ->
+          return msgVariables line, msg
+        msg.sendWithNaturalDelay messages
       when 'random'
         message = stringElseRandomKey @interaction.message
         message = msgVariables message, msg
-        msg['send'] message
+        msg.sendWithNaturalDelay message
 
 module.exports = respond

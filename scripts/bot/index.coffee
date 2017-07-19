@@ -15,6 +15,34 @@ eventsPath = path.join __dirname, '..', 'events'
 for event in fs.readdirSync(eventsPath).sort()
   events[event.replace /\.coffee$/, ''] = require path.join eventsPath, event
 
+typing = (res, t) ->
+  res.robot.adapter.callMethod 'stream-notify-room', res.envelope.user.roomID+'/typing', res.robot.alias, t is true
+
+sendWithNaturalDelay = (msgs, elapsed=0) ->
+  if !Array.isArray msgs
+    msgs = [msgs]
+
+  keysPerSecond = 30
+  maxResponseTimeInSeconds = 3
+
+  msg = msgs.shift()
+  if typeof msg isnt 'string'
+    cb = msg.callback
+    msg = msg.message
+
+  delay = Math.min(Math.max((msg.length / keysPerSecond) * 1000 - elapsed, 0), maxResponseTimeInSeconds * 1000)
+  typing @, true
+  setTimeout =>
+    @send msg
+
+    if msgs.length
+      sendWithNaturalDelay.call @, msgs
+    else
+      typing @, false
+      cb?()
+  , delay
+
+
 classifyInteraction = (interaction, classifier, interactions) ->
   if Array.isArray interaction.classifiers
     for doc in interaction.classifiers
@@ -119,11 +147,11 @@ module.exports = (_config, robot) ->
       setContext(res, node_name)
 
     currentNode = nodes[node_name or error_node_name]
-    callback = currentNode.process
-    callback.apply @, arguments
+    currentNode.process.apply @, arguments
 
 
   robot.hear /(.+)/i, (res) ->
+    res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
     msg = res.match[0].replace res.robot.name+' ', ''
     msg = msg.replace(/^\s+/, '')
     msg = msg.replace(/\s+&/, '')
