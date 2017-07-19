@@ -27,19 +27,26 @@ classifyInteraction = (interaction, classifier, interactions) ->
         interaction.next.classifier.train()
 
 setContext = (res, context) ->
-  res.robot.brain.set('context_'+res.envelope.room, context)
+  key = 'context_'+res.envelope.room+'_'+res.envelope.user.id
+  console.log 'set context', context
+  res.robot.brain.set(key, context)
 
 getContext = (res) ->
-  return res.robot.brain.get('context_'+res.envelope.room)
+  key = 'context_'+res.envelope.room+'_'+res.envelope.user.id
+  return res.robot.brain.get(key)
 
 incErrors = (res) ->
-  errors = res.robot.brain.get('errors_'+res.envelope.room) or 0
+  key = 'errors_'+res.envelope.room+'_'+res.envelope.user.id
+  errors = res.robot.brain.get(key) or 0
   errors++
-  res.robot.brain.set('errors_'+res.envelope.room, errors)
+  console.log 'inc errors', errors
+  res.robot.brain.set(key, errors)
   return errors
 
 clearErrors = (res) ->
-  res.robot.brain.set('errors_'+res.envelope.room, 0)
+  console.log 'clear errors'
+  key = 'errors_'+res.envelope.room+'_'+res.envelope.user.id
+  res.robot.brain.set(key, 0)
 
 module.exports = (_config, robot) ->
   config = _config
@@ -72,28 +79,45 @@ module.exports = (_config, robot) ->
 
     context = getContext(res)
     currentClassifier = classifier
+    trust = config.trust
+    interaction = undefined
 
     if context
       interaction = config.interactions.find (interaction) -> interaction.node.name is context
       if interaction? and interaction.next?.classifier?
         currentClassifier = interaction.next.classifier
+        if interaction.next.trust?
+          trust = interaction.next.trust
 
     classifications = currentClassifier.getClassifications(msg)
 
-    if classifications[0].value < config.trust
+    if classifications[0].value < trust
       error_count = incErrors res
-      if error_count > err_nodes
-        clearErrors res
-      node_name = "error-" + error_count
+      if Array.isArray interaction?.next?.error
+        error_node_name = interaction.next.error[error_count - 1]
+        if not error_node_name?
+          clearErrors res
+          error_node_name = interaction.next.error[0]
+      else
+        if error_count > err_nodes
+          clearErrors res
+        error_node_name = "error-" + error_count
     else
+      clearErrors res
       node_name = classifications[0].label
 
-    currentNode = nodes[node_name]
-    currentInteraction = config.interactions.find (interaction) -> interaction.node.name is node_name
+    currentInteraction = config.interactions.find (interaction) ->
+      interaction.node.name is node_name or interaction.node.name is error_node_name
+
+    if not currentInteraction?
+      clearErrors res
+      return console.log 'Invalid interaction ['+node_name+']'
+
     if currentInteraction.context == 'clear'
       setContext(res, undefined)
-    else
+    else if node_name?
       setContext(res, node_name)
 
+    currentNode = nodes[node_name or error_node_name]
     callback = currentNode.process
     callback.apply @, arguments
