@@ -100,7 +100,72 @@ interactions:
       - "Eu conheço a programação dessas trilhas. Basta perguntar assim:"
       - "`quero saber a programação da trilha ...`"
       - "e me passar o nome de uma dessas trilhas:"
-      - 'TRANSFORMAÇÃO DIGITAL'
+      - |
+        TRANSFORMAÇÃO DIGITAL
+        DESIGN THINKING
+        PROGRAMAÇÃO FUNCIONAL
+        BIGDATA
+        DATA SCIENCE
+        CONTAINERS
+        MODERN WEB
+        SEGURANÇA E CRIPTOGRAFIA
+        STADIUM
+        UX DESIGN
+        MICROSERVIÇOS
+        NOSQL
+        MACHINE LEARNING
+        CLOUD COMPUTING
+        NODE.JS
+        XAMARIN
+        ANDROID
+        ANÁLISE DE NEGÓCIOS
+        ACESSIBILIDADE
+        JAVA EE
+        BANCO DE DADOS
+        COMPUTAÇÃO COGNITIVA
+        DEVOPS
+        INTERNET DAS COISAS
+        MOBILE
+        iOS
+        DEVTEST
+        RAD: DELPHI C++
+        MANAGEMENT 3.0
+        ARQUITETURA .NET
+        ARQUITETURA JAVA
+        ARQUITETURA PHP
+        ARQUITETURA CORPORATIVA
+        INFRAESTRUTURA ÁGIL
+        JAVASCRIPT
+        TESTES
+        TDC4WOMEN
+        AGILE
+        .NET
+        JAVA
+        PHP
+        PYTHON
+        GOLANG
+        JAVASCRIPT II
+        RUBY
+        TESTES II
+        MANAGEMENT 3.0 II
+    next:
+      trust: .4
+      interactions:
+        - get-programacao
+        - cancela-programacao
+      # error:
+      #   - erro-trilha
+    event: respond
+    type: block
+
+  - node:
+      name: get-programacao
+    # classifierTemplate:
+    #   - quero saber sobre a trilha $
+    #   - qual é a programacao da trilha $
+    # classifier
+    multi: true
+    classifiers:
       - 'DESIGN THINKING'
       - 'PROGRAMAÇÃO FUNCIONAL'
       - 'BIGDATA'
@@ -147,71 +212,10 @@ interactions:
       - 'RUBY'
       - 'TESTES II'
       - 'MANAGEMENT 3.0 II'
-    next:
-      interactions:
-        - get-programacao
-        - cancela-programacao
-      error:
-        - erro-trilha
-      trust: .9
-    event: respond
-    type: block
-
-  - node:
-      name: get-programacao
-    classifiers:
-      - quero saber sobre a trilha
-      - qual é a programacao da trilha
-      - 'programacao trilha DESIGN THINKING'
-      - 'programacao trilha PROGRAMAÇÃO FUNCIONAL'
-      - 'programacao trilha BIGDATA'
-      - 'programacao trilha DATA SCIENCE'
-      - 'programacao trilha CONTAINERS'
-      - 'programacao trilha MODERN WEB'
-      - 'programacao trilha SEGURANÇA E CRIPTOGRAFIA'
-      - 'programacao trilha STADIUM'
-      - 'programacao trilha UX DESIGN'
-      - 'programacao trilha MICROSERVIÇOS'
-      - 'programacao trilha NOSQL'
-      - 'programacao trilha MACHINE LEARNING'
-      - 'programacao trilha CLOUD COMPUTING'
-      - 'programacao trilha NODE.JS'
-      - 'programacao trilha XAMARIN'
-      - 'programacao trilha ANDROID'
-      - 'programacao trilha ANÁLISE DE NEGÓCIOS'
-      - 'programacao trilha ACESSIBILIDADE'
-      - 'programacao trilha JAVA EE'
-      - 'programacao trilha BANCO DE DADOS'
-      - 'programacao trilha COMPUTAÇÃO COGNITIVA'
-      - 'programacao trilha DEVOPS'
-      - 'programacao trilha INTERNET DAS COISAS'
-      - 'programacao trilha MOBILE'
-      - 'programacao trilha iOS'
-      - 'programacao trilha DEVTEST'
-      - 'programacao trilha RAD: DELPHI C++'
-      - 'programacao trilha MANAGEMENT 3.0'
-      - 'programacao trilha ARQUITETURA .NET'
-      - 'programacao trilha ARQUITETURA JAVA'
-      - 'programacao trilha ARQUITETURA PHP'
-      - 'programacao trilha ARQUITETURA CORPORATIVA'
-      - 'programacao trilha INFRAESTRUTURA ÁGIL'
-      - 'programacao trilha JAVASCRIPT'
-      - 'programacao trilha TESTES'
-      - 'programacao trilha TDC4WOMEN'
-      - 'programacao trilha AGILE'
-      - 'programacao trilha .NET'
-      - 'programacao trilha JAVA'
-      - 'programacao trilha PHP'
-      - 'programacao trilha PYTHON'
-      - 'programacao trilha GOLANG'
-      - 'programacao trilha JAVASCRIPT II'
-      - 'programacao trilha RUBY'
-      - 'programacao trilha TESTES II'
-      - 'programacao trilha MANAGEMENT 3.0 II'
     message:
-      - "Agora na trilha $trilha tem a seguinte programação:"
+      - "Agora na trilha *$trilha* tem a seguinte programação:"
       - $programacao
-    event: programacao
+    event: tempo
     type: block
 
   - node:

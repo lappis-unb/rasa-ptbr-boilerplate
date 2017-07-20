@@ -43,16 +43,26 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
   , delay
 
 
-classifyInteraction = (interaction, classifier, interactions) ->
+classifyInteraction = (interaction, classifier) ->
   if Array.isArray interaction.classifiers
     for doc in interaction.classifiers
       classifier.addDocument(doc, interaction.node.name)
-      if Array.isArray interaction.next?.interactions
-        interaction.next.classifier = new natural.LogisticRegressionClassifier(PorterStemmerPt)
-        for nextInteractionName in interaction.next.interactions
-          nextInteraction = interactions.find (n) -> n.node.name is nextInteractionName
-          classifyInteraction nextInteraction, interaction.next.classifier
-        interaction.next.classifier.train()
+    if Array.isArray interaction.next?.interactions
+      interaction.next.classifier = new natural.BayesClassifier(PorterStemmerPt)
+      for nextInteractionName in interaction.next.interactions
+        nextInteraction = config.interactions.find (n) ->
+          return n.node.name is nextInteractionName
+        if not nextInteraction?
+          console.log 'No valid interaction for', nextInteractionName
+          continue
+        classifyInteraction nextInteraction, interaction.next.classifier
+      interaction.next.classifier.train()
+
+    if interaction.multi == true
+      interaction.classifier = new natural.LogisticRegressionClassifier(PorterStemmerPt)
+      for doc in interaction.classifiers
+        interaction.classifier.addDocument(doc, doc)
+      interaction.classifier.train()
 
 setContext = (res, context) ->
   key = 'context_'+res.envelope.room+'_'+res.envelope.user.id
@@ -96,7 +106,7 @@ module.exports = (_config, robot) ->
     if node.name.substr(0,5) == "error"
       err_nodes++
     if interaction.level != 'context'
-      classifyInteraction interaction, classifier, config.interactions
+      classifyInteraction interaction, classifier
   classifier.train()
   console.timeEnd 'Processing interactions (Done)'
 
@@ -106,18 +116,30 @@ module.exports = (_config, robot) ->
     trust = config.trust
     interaction = undefined
 
+    console.log 'context ->', context
+
     if context
       interaction = config.interactions.find (interaction) -> interaction.node.name is context
       if interaction? and interaction.next?.classifier?
         currentClassifier = interaction.next.classifier
+        console.log 'interaction.next.trust ->', interaction.next.trust
+        console.log 'interaction.next.classifier ->', interaction.next.classifier
+        console.log 'classifications ->', interaction.next.classifier.getClassifications(msg)
+
         if interaction.next.trust?
           trust = interaction.next.trust
 
     classifications = currentClassifier.getClassifications(msg)
 
+    console.log 'classifications ->', classifications
+
     if classifications[0].value >= trust
       clearErrors res
       node_name = classifications[0].label
+      int = config.interactions.find (interaction) ->
+        interaction.node.name is node_name
+      if int.classifier?
+        subClassifications = int.classifier.getClassifications(msg)
     else
       if Array.isArray interaction?.next?.error
         error_count = incErrors res
@@ -147,7 +169,7 @@ module.exports = (_config, robot) ->
       setContext(res, node_name)
 
     currentNode = nodes[node_name or error_node_name]
-    currentNode.process.apply @, arguments
+    currentNode.process.call @, res, msg, subClassifications
 
 
   robot.hear /(.+)/i, (res) ->
