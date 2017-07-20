@@ -1,5 +1,5 @@
 # YAML Model for conversational bot
-trust: 0.9
+trust: 0.8
 interactions:
 
   - node:
@@ -128,7 +128,7 @@ interactions:
         MOBILE
         iOS
         DEVTEST
-        RAD: DELPHI C++
+        'RAD: DELPHI C++'
         MANAGEMENT 3.0
         ARQUITETURA .NET
         ARQUITETURA JAVA
@@ -149,7 +149,7 @@ interactions:
         TESTES II
         MANAGEMENT 3.0 II
     next:
-      trust: .4
+      trust: .8
       interactions:
         - get-programacao
         - cancela-programacao
@@ -573,17 +573,17 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: java
-    classifiers:
-      - o que acha do java
-      - você gosta de java
-      - e o java
-      - linguagem java
-    message:
-      - poderíamos falar de algo melhor não é $user ?
-    event: respond
-    type: block
+  # - node:
+  #     name: java
+  #   classifiers:
+  #     - o que acha do java
+  #     - você gosta de java
+  #     - e o java
+  #     - linguagem java
+  #   message:
+  #     - poderíamos falar de algo melhor não é $user ?
+  #   event: respond
+  #   type: block
 
   - node:
       name: futebol-geral

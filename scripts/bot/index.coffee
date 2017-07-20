@@ -22,8 +22,8 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
   if !Array.isArray msgs
     msgs = [msgs]
 
-  keysPerSecond = 30
-  maxResponseTimeInSeconds = 3
+  keysPerSecond = 50
+  maxResponseTimeInSeconds = 2
 
   msg = msgs.shift()
   if typeof msg isnt 'string'
@@ -46,9 +46,13 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
 classifyInteraction = (interaction, classifier) ->
   if Array.isArray interaction.classifiers
     for doc in interaction.classifiers
-      classifier.addDocument(doc, interaction.node.name)
+      if interaction.multi == true
+        classifier.addDocument(doc, interaction.node.name+'|'+doc)
+      else
+        classifier.addDocument(doc, interaction.node.name)
+
     if Array.isArray interaction.next?.interactions
-      interaction.next.classifier = new natural.BayesClassifier(PorterStemmerPt)
+      interaction.next.classifier = new natural.LogisticRegressionClassifier(PorterStemmerPt)
       for nextInteractionName in interaction.next.interactions
         nextInteraction = config.interactions.find (n) ->
           return n.node.name is nextInteractionName
@@ -122,9 +126,6 @@ module.exports = (_config, robot) ->
       interaction = config.interactions.find (interaction) -> interaction.node.name is context
       if interaction? and interaction.next?.classifier?
         currentClassifier = interaction.next.classifier
-        console.log 'interaction.next.trust ->', interaction.next.trust
-        console.log 'interaction.next.classifier ->', interaction.next.classifier
-        console.log 'classifications ->', interaction.next.classifier.getClassifications(msg)
 
         if interaction.next.trust?
           trust = interaction.next.trust
@@ -135,7 +136,8 @@ module.exports = (_config, robot) ->
 
     if classifications[0].value >= trust
       clearErrors res
-      node_name = classifications[0].label
+      [node_name, sub_node_name] = classifications[0].label.split('|')
+      console.log({node_name, sub_node_name})
       int = config.interactions.find (interaction) ->
         interaction.node.name is node_name
       if int.classifier?
