@@ -20,7 +20,7 @@ trust: .8
     message:
     - Atualmente nós conseguimos importar dados de algumas ferramentas, como Slack e Hipchat. Entretanto, estamos abertos para ampliar esse leque. É só mandar uma mensagem para support@rocket.chat.
     - Para maiores informações sobre como fazer isso no Hipchat acesse Import Hipchat.
-    - Para o Slack: Import Slack.
+    - 'Para o Slack: Import Slack.'
     event: respond
     type: block
 
@@ -65,7 +65,7 @@ trust: .8
       - Espaco ocupado pelos novos dados importados
     message:
     - Os dados importados podem ficar tanto sobre o domínio da empresa no seu servidor, quanto na nossa nuvem do Google Cloud, permitindo que você acesse os seus dados aonde quer que você esteja.
-    - Você pode ter mais informações sobre o assunto no link: https://rocket.chat/products.
+    - 'Você pode ter mais informações sobre o assunto no link: https://rocket.chat/products.'
     event: respond
     type: block
 
@@ -115,8 +115,8 @@ trust: .8
       - Disponibilidade de integrações
       - Integrar com outras aplicações
     message:
-    - São tantas integrações.. Você pode ver todas aqui: https://rocket.chat/integrations.
-    - Todos os dias ampliamos a variedade de integrações. Dá uma olhada aqui: https://rocket.chat/integrations.
+    - 'São tantas integrações.. Você pode ver todas aqui: https://rocket.chat/integrations.'
+    - 'Todos os dias ampliamos a variedade de integrações. Dá uma olhada aqui: https://rocket.chat/integrations.'
     event: respond
     type: random
 
@@ -145,7 +145,7 @@ trust: .8
       - O que é uma integração
       - Como integrar
     message:
-    - As integrações possibilitam uma maior conexão da plataforma com outras aplicações. Nós oferecemos diversas integrações, você pode ver elas aqui: https://rocket.chat/integrations
+    - 'As integrações possibilitam uma maior conexão da plataforma com outras aplicações. Nós oferecemos diversas integrações, você pode ver elas aqui: https://rocket.chat/integrations'
     - Aqui você consegue ver as integrações que nós temos, e se busca alguma que não está aqui me fala! Rocket.chat/integrations
     event: respond
     type: random
