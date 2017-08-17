@@ -214,7 +214,7 @@ interactions:
     event: respond
     type: random
 
-# + Segurança +
+# Segurança #
 
 # Como funciona a segurança das mensagens?
   - node:
@@ -322,7 +322,7 @@ interactions:
     event: respond
     type: block
 
-# + Portfolio +
+#  Portfolio
 # Quem são os clientes de vocês?
   - node:
       name: portfolio-
@@ -422,8 +422,7 @@ interactions:
     event: respond
     type: block
 
-# + Concorrentes +
-
+# Concorrentes
 # Qual a diferença de usar serviços similares?
   - node:
       name: concorrentes-
@@ -447,7 +446,7 @@ interactions:
     event: respond
     type: random
 
-# + Parcerias +
+#  Parcerias
 #
 # Vocês patrocinam eventos?
   - node:
@@ -484,7 +483,7 @@ interactions:
     type: random
 
 # Serviços:
-# +  White Label +
+# White Label
 #
 # Precos White Label
   - node:
@@ -578,238 +577,244 @@ interactions:
       - Indicamos fazer com a gente pois temos toda a sabedoria do código para isso.
     event: respond
     type: block
+ # Support
+ #
+ # Preços do suporte
+  - node:
+      name: suporte-
+    level: context
+    classifiers:
+      - Preços do suporte
+      - Custo do suporte
+      - Orçamento suporte
+      - Valor do suporte
+      - Estimativa financeira suporte
+      - Pagar pelo suporte
+      - Quantia pelo suporte
+      - Cobrar pelo suporte
+      - Taxas pelo suporte
+    message:
+      - Nós temos diferentes tipos de suporte, pensando nos diferentes tipos de empresa e demanda. Para saber o valor certinho, manda um e-mail para sales@rocket.chat.
+      - São tantas possibilidades.. Não temos um preço único, porque cada empresa precisa de alguma coisa diferente. Faz assim, manda um e-mail para sales@rocket.chat, logo você saberá a resposta.
+      - 'Só os meus amigos humanos sabem a resposta, fala com eles, prometo que são gente boa: sales@rocket.chat'
+    event: respond
+    type: random
 
- # + Support +
+ # Encontrei um Bug. Onde posso reportá-lo?
+  - node:
+      name: suporte-
+    level: context
+    classifiers:
+      - Reportar bug
+      - Achei um bug
+      - Encontrei um problema
+      - Problemas com um bug
+      - Identificar bug
+    message:
+      - Conhece o Github? A nossa comunidade conversa por lá sobre esses assuntos.
+      - 'Se tu não é chegado nesse tipo de interação, sempre poderá nos encontrar pela versão demo no canal #support ou #dev ou #general. Respondemos em tempo real.'
+      - 'Mas também pode mandar e-mail: support@rocket.chat'
+    event: respond
+    type: block
 
-  Preços do suporte
+  # Em que língua é feito o suporte?
   - node:
       name: suporte-
     level: context
     classifiers:
-  Preços do suporte
-  Custo do suporte
-  Orçamento para o suporte
-  Valor do suporte
-  Estimativa financeira para o suporte
-  Pagar pelo suporte
-  Quantia pelo suporte
-  Cobrar pelo suporte
-  Taxas pelo suporte
+      - Língua do suporte
+      - Linguagem do suporte
+      - Comunicar suporte em que língua
     message:
-  Nós temos diferentes tipos de suporte, pensando nos diferentes tipos de empresa e demanda. Para saber o valor certinho, manda um e-mail para sales@rocket.chat.
-  São tantas possibilidades.. Não temos um preço único, porque cada empresa precisa de alguma coisa diferente. Faz assim, manda um e-mail para sales@rocket.chat, logo você saberá a resposta.
-  Só os meus amigos humanos sabem a resposta, fala com eles, prometo que são gente boa: sales@rocket.chat
-      event: respond
-  type: random
-  Encontrei um Bug. Onde posso reportá-lo?
-  - node:
-      name: suporte-
-    level: context
-    classifiers:
-  Reportar bug
-  Achei um bug
-  Encontrei um problema
-  Problemas com um bug
-  Identificar bug
-    message:
-  Conhece o Github? A nossa comunidade conversa por lá sobre esses assuntos.
-  Se tu não é chegado nesse tipo de interação, sempre poderá nos encontrar pela versão demo no canal #support ou #dev ou #general. Respondemos em tempo real.
-  Mas também pode mandar e-mail: support@rocket.chat.
-      event: respond
-  type: block
-  Em que língua é feito o suporte?
-  - node:
-      name: suporte-
-    level: context
-    classifiers:
-  Língua do suporte
-  Linguagem do suporte
-  Comunicar suporte em que língua
-    message:
-  Ora bolas, na língua dos robôs! Nós dominamos tudo por aqui. Brincadeira, é Inglês.
-  Basicamente em inglês, ainda não temos versões traduzidas de suporte, mas se tiver algum problema em entender, nos avisa que tentaremos te ajudar!
-  Nós optamos por inglês, tá precisando de ajuda? Fala com a gente: support@rocket.chat.
-  Event:Respond
-  type: random
-  O suporte é feito para usuários finais e organizações igualmente?
-  - node:
-      name: suporte-
-    level: context
-    classifiers:
-  Para quem serve o suporte
-  A quem se aplica o suporte
-  Suporte aos usuários finais
-  Suporte a empresas
-  Suporte para quem
-    message:
-  Nós temos algumas versões gratuitas e pagas de suporte.
-  Caso a sua demanda se encaixe na versão paga, algumas pessoas dentro da organização ficam responsáveis pelo contato com a área de suporte.
-  Fala com a gente que conseguimos te ajudar: support@rocket.chat.
-      event: respond
-  type: block
-  Como contatar o suporte?
-  - node:
-      name: suporte-
-    level: context
-    classifiers:
-  Contatar o suporte
-  Falar com o suporte
-  Informar o suporte
-  Contato do suporte
-  Número do suporte
-  E-mail do suporte
-  Achar o suporte
-  Reportar ao suporte
-    message:
-  É só mandar um e-mail: support@rocket.chat ou procurar por nós na versão demo pelos canais #support #dev ou #general.
-  Feche os olhos, conte até 20 de trás para frente, de três pulinhos (ainda de olhos fechados) e quando abrir, manda oi pra gente pela versão Demo pelos canais #support #dev ou #general :)
-  Esses caras são super-heróis, fazem tudo! Diz que te indiquei a falar com eles, eles vão gostar. support@rocket.chat.
-      event: respond
-  type: random
-  Qual é o tempo de resposta?
-  - node:
-      name: suporte-
-    level: context
-    classifiers:
-  Tempo médio de resposta do suporte
-  Espera pela resposta do suporte
-  Esperar resposta do suporte
-  Quando vem resposta do suporte
-    message:
-  Depende de vários fatores. Se você nos contatar diretamente vamos tentar te atender o mais rápido possível.
-  Se for uma modalidade de suporte gratuíto a resposta pode demorar, pois temos uma ordem de prioridade conforme recebemos a demanda dos clientes.  Dá uma olhada se a sua demanda já não está aqui: https://github.com/rocketchat.
-  Se for uma demanda que se encaixe nos planos pagos, vamos te atender conforme o acordado.
-      event: respond
-  type: block
+      - Ora bolas, na língua dos robôs! Nós dominamos tudo por aqui. Brincadeira, é Inglês.
+      - Basicamente em inglês, ainda não temos versões traduzidas de suporte, mas se tiver algum problema em entender, nos avisa que tentaremos te ajudar!
+      - 'Nós optamos por inglês, tá precisando de ajuda? Fala com a gente: support@rocket.chat'
+    Event: Respond
+    type: random
 
-  O que está incluso no suporte?
+  # O suporte é feito para usuários finais e organizações igualmente?
   - node:
       name: suporte-
     level: context
     classifiers:
-  Como funciona o suporte
-  O que tem no suporte
-  Incluso no suporte
-  O que o suporte proporciona
-  Informações sobre o suporte
-  Resumo do suporte
-  Vantagens do suporte
-  Diferenciais do suporte
-  Suporte para chamadas de vídeo
-  Suporte para chamadas de áudio
+      - Para quem serve o suporte
+      - A quem se aplica o suporte
+      - Suporte aos usuários finais
+      - Suporte a empresas
+      - Suporte para quem
     message:
-  Trabalhamos com diferentes modalidades de suporte.
-  Tem desde consultoria, até customização, atendimento 24x7...
-  Você pode ver todos os detalhes na nossa página https://rocket.chat/support.
-      event: respond
-  type: block
+      - Nós temos algumas versões gratuitas e pagas de suporte.
+      - Caso a sua demanda se encaixe na versão paga, algumas pessoas dentro da organização ficam responsáveis pelo contato com a área de suporte.
+      - 'Fala com a gente que conseguimos te ajudar: support@rocket.chat'
+    event: respond
+    type: block
 
-  + Hosting +
-  Precos do Hosting
+  # Como contatar o suporte?
+  - node:
+      name: suporte-
+    level: context
+    classifiers:
+      - Contatar o suporte
+      - Falar com o suporte
+      - Informar o suporte
+      - Contato do suporte
+      - Número do suporte
+      - E-mail suporte
+      - Achar o suporte
+      - Reportar ao suporte
+    message:
+      - 'É só mandar um e-mail: support@rocket.chat ou procurar por nós na versão demo pelos canais #support #dev ou #general'
+      - Feche os olhos, conte até 20 de trás para frente, de três pulinhos (ainda de olhos fechados) e quando abrir, manda oi pra gente pela versão Demo pelos canais #support #dev ou #general :)
+      - Esses caras são super-heróis, fazem tudo! Diz que te indiquei a falar com eles, eles vão gostar. support@rocket.chat.
+    event: respond
+    type: random
+
+  # Qual é o tempo de resposta?
+  - node:
+      name: suporte-
+    level: context
+    classifiers:
+      - Tempo médio resposta
+      - Espera pela resposta suporte
+      - Esperar resposta suporte
+      - Quando vem resposta suporte
+    message:
+      - Depende de vários fatores. Se você nos contatar diretamente vamos tentar te atender o mais rápido possível.
+      - 'Se for uma modalidade de suporte gratuíto a resposta pode demorar, pois temos uma ordem de prioridade conforme recebemos a demanda dos clientes.  Dá uma olhada se a sua demanda já não está aqui: https://github.com/rocketchat'
+      - Se for uma demanda que se encaixe nos planos pagos, vamos te atender conforme o acordado.
+    event: respond
+    type: block
+
+  # O que está incluso no suporte?
+  - node:
+      name: suporte-
+    level: context
+    classifiers:
+      - Como funciona suporte
+      - O que tem no suporte
+      - Incluso no suporte
+      - O que o suporte proporciona
+      - Informações sobre o suporte
+      - Resumo do suporte
+      - Vantagens do suporte
+      - Diferenciais do suporte
+      - Suporte chamadas de vídeo
+      - Suporte chamadas de áudio
+    message:
+      - Trabalhamos com diferentes modalidades de suporte.
+      - Tem desde consultoria, até customização, atendimento 24x7...
+      - Você pode ver todos os detalhes na nossa página https://rocket.chat/support.
+    event: respond
+    type: block
+
+  # Hosting
+  #
+  # Precos do Hosting
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Custo de Hosting
-  Precos do Hosting
-  Variação de preços do Hosting
-  Orçamento para o Hosting
-  Valor para o Hosting
-  Estimativa financeira para o Hosting
-  Cobram pelo Hosting
-  Taxas pelo Hosting
+      - Custo de Hosting
+      - Precos do Hosting
+      - Variação preços do Hosting
+      - Orçamento Hosting
+      - Valor Hosting
+      - Estimativa financeira Hosting
+      - Cobram Hosting
+      - Taxas pelo Hosting
     message:
-  Nós cobramos para hospedar sua plataforma na nossa nuvem, você pode ver os nossos preços de Hosting aqui: https://rocket.chat/hosting.
-  Existem diversos serviços relacionados ao nosso hosting, você pode conferir tudo sobre essa possibilidade no link acima.
-      event: respond
-  type: block
+      - 'Nós cobramos para hospedar sua plataforma na nossa nuvem, você pode ver os nossos preços de Hosting aqui: https://rocket.chat/hosting.'
+      - Existem diversos serviços relacionados ao nosso hosting, você pode conferir tudo sobre essa possibilidade no link acima.
+    event: respond
+    type: block
 
-  O que está incluso no Hosting?
+  # O que está incluso no Hosting?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Incluso no hosting
-  O que tem no hosting
-  Como funciona o Hosting
-  O que é o Hosting
-  Para que serve o Hosting
-  Funcionalidades do Hosting
+      - Incluso no hosting
+      - O que tem no hosting
+      - Como funciona o Hosting
+      - O que é Hosting
+      - Para que serve o Hosting
+      - Funcionalidades Hosting
     message:
-  Todas as informações sobre hosting estão nesse link aqui: https://rocket.chat/hosting
-  Hosting é uma forma de deixar suas informações seguras na nuvem, dando flexibilidade para que você acesse seus dados independente de onde estiver. A Rocket.CHat oferece que seus usuários utilizem da sua nuvem para guardar as informações da sua empresa. Olha aqui: https://rocket.chat/hosting.
-  Hosting na nuvem é muito amor <3 Tudo que você precisa, aonde quer que você vá. Olha aqui: https://rocket.chat/hosting.
-      event: respond
-  type: random
+      - 'Todas as informações sobre hosting estão nesse link aqui: https://rocket.chat/hosting'
+      - 'Hosting é uma forma de deixar suas informações seguras na nuvem, dando flexibilidade para que você acesse seus dados independente de onde estiver. A Rocket.CHat oferece que seus usuários utilizem da sua nuvem para guardar as informações da sua empresa. Olha aqui: https://rocket.chat/hosting'
+      - 'Hosting na nuvem é muito amor <3 Tudo que você precisa, aonde quer que você vá. Olha aqui: https://rocket.chat/hosting'
+    event: respond
+    type: random
 
-  É possível colocar mais memória no Hosting da Rocket.Chat?
+  # É possível colocar mais memória no Hosting da Rocket.Chat?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Memória no Hosting
-  Adicionar memória ao Hosing
-  Mais memória ao hosting
-  Memória extra ao Hosting
-  Adicionar espaco ao hosting
-  Mais armazenamento para o Hosting
-  Funcionamento da memória do hosting
-  Capacidade de armazenamento do Hosting
-  Qual a capacidade do Hosting
+      - Memória no Hosting
+      - Adicionar memória Hosting
+      - Mais memória hosting
+      - Memória extra Hosting
+      - Adicionar espaço ao hosting
+      - Mais armazenamento para o Hosting
+      - Funcionamento da memória hosting
+      - Capacidade de armazenamento do Hosting
+      - Qual a capacidade do Hosting
     message:
-  É possível sim, se você quer saber mais sobre isso manda um email pra cloud@rocket.chat
-      event: respond
-  Type:block
+      - É possível sim, se você quer saber mais sobre isso manda um email pra cloud@rocket.chat
+    event: respond
+    Type: block
 
-  Como entro em contato com alguém do suporte para o hosting da rocket.chat?
+  # Como entro em contato com alguém do suporte para o hosting da rocket.chat?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Suporte para o Hosting
-  Auxílio com o Hosting
-  Dúvidas sobre o Hosting
-  Problemas com o Hosting
-  Ajuda com o Hosting
-  Representante do Hosting
-  Contato de alguém do Hosting
-  Problemas com o server
+      - Suporte para o Hosting
+      - Auxílio com o Hosting
+      - Dúvidas sobre o Hosting
+      - Problemas com o Hosting
+      - Ajuda com o Hosting
+      - Representante do Hosting
+      - Contato de alguém do Hosting
+      - Problemas com o server
     message:
-  Se você ainda não usa o nosso hosting, você pode tirar todas as dúvidas por esse e-mail: sales@rocket.chat.
-  Se você já usa, use esse e-mail: support@rocket.chat.
-      event: respond
-  type: block
-  O que são Hosting partners?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  O que são Hosting partners
-  Significado de hosting partners
-  Para que serve hosting partners
-  Funcão dos Hosting partner
-  A que se aplicam os hosting partners
-    message:
-  São parceiros que também oferecem o serviço de Hosting por um preço e serviço diferente do nosso.
-  Te interessou? Procura algum aqui rocket.chat/partners
-      event: respond
-  Type:block
+      - 'Se você ainda não usa o nosso hosting, você pode tirar todas as dúvidas por esse e-mail: sales@rocket.chat'
+      - 'Se você já usa, use esse e-mail: support@rocket.chat'
+    event: respond
+    type: block
 
-  Posso hospedar de graça?
+  # O que são Hosting partners?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Próprio Host
-  Hospedar no meu servidor
-  Host Próprio
-  Criar um host próprio
-  Baixar no meu servidor
+      - Hosting partners
+      - Significado hosting partners
+      - Para que serve hosting partners
+      - Função Hosting partner
+      - A que se aplicam os hosting partners
     message:
-  Você pode hospedar no seu servidor de forma gratuita ou hospedar conosco e aproveitar das nossas vantagens nuvem :)
-  Você pode ver todos os detalhes aqui: https://rocket.chat/hosting
-      event: respond
-  Type:block
+      - São parceiros que também oferecem o serviço de Hosting por um preço e serviço diferente do nosso.
+      - Te interessou? Procura algum aqui rocket.chat/partners
+    event: respond
+    Type: block
+
+  # Posso hospedar?
+  - node:
+      name: trabalho-
+    level: context
+    classifiers:
+      - Próprio Host
+      - Hospedar no meu servidor
+      - Host Próprio
+      - Criar host próprio
+      - Baixar no meu servidor
+    message:
+      - Você pode hospedar no seu servidor de forma gratuita ou hospedar conosco e aproveitar das nossas vantagens nuvem :)
+      - 'Você pode ver todos os detalhes aqui: https://rocket.chat/hosting'
+    event: respond
+    Type: block
 # Desenvolvimento de Funcionalidades #
 #
 # Quanto custa para desenvolver novas funcionalidades? #
@@ -1106,26 +1111,24 @@ interactions:
   Nós temos essa opção :)
       event: respond
   type: block
-
-
-  + Open Source +
-
-  O que é open sourcing?
+ # Open Source #
+ #
+ # O que é open sourcing #
   - node:
-      name: trabalho-
+      name: Opensource-
     level: context
     classifiers:
-  Significado de open source
-  O que é open sourcing
-  Explicar open source
-  Resumo de open source
-  Como funciona open sourcing
-  Open sourcing significado
+      - Significado open source
+      - O que é open sourcing
+      - Explicar open source
+      - Resumo open source
+      - Como funciona open sourcing
+      - Open sourcing significado
     message:
-  Open sourcing significa código aberto, a Rocket.Chat é open source, ou seja,  todo o nosso funcionamento e código (inclusive euzinho aqui) está disponível no GitHub.
-  Nós acreditamos que a sabedoria e o funcionamento do nosso produto deve ser compartilhado.
-      event: respond;
-  type: block
+      - Open sourcing significa código aberto, a Rocket.Chat é open source, ou seja,  todo o nosso funcionamento e código (inclusive euzinho aqui) está disponível no GitHub.
+      - Nós acreditamos que a sabedoria e o funcionamento do nosso produto deve ser compartilhado.
+    event: respond
+    type: block
 
   Quais são os benefícios de usar open sourcing?
   - node:
