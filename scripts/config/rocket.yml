@@ -983,134 +983,136 @@ interactions:
 
 
 
-  Produto
-   + Preço +
-  Quanto custa?
+  # Produto
+  # Preço
+  #
+  # Quanto custa?
   - node:
-      name: trabalho-
+      name: preco-
     level: context
     classifiers:
-  Quanto custa
-  Qual é o preco
-  Quanto é cobrado
-  Tabela de precos
-  Cobrar pelo servico
-  Produto precificado
-  Pagar para usar
-  Versão paga
-  Formas de pagamento
+      - Quanto custa
+      - Qual é o preco
+      - Quanto é cobrado
+      - Tabela de precos
+      - Cobrar pelo servico
+      - Produto precificado
+      - Pagar para usar
+      - Versão paga
+      - Formas de pagamento
     message:
-  O Rocket.Chat é gratuito :) Nós cobramos por serviços de customização, suporte e hospedagem, variando o preço do serviço conforme a demanda. Você pode ver todas as informações aqui: https://rocket.chat/products.
-  A plataforma é gratuita! Mas caso você precise de alguma customização, serviço de suporte ou hospedar a plataforma na nossa nuvem, nós cobramos por isso. Você pode verificar sobre a nossa gama de serviços aqui: https://rocket.chat/products e aqui sobre hospedagem https://rocket.chat/hosting ficar a par dos valores falando com essa galera: sales@rocket.chat
-      event: respond
-  type: random
+      - 'O Rocket.Chat é gratuito :) Nós cobramos por serviços de customização, suporte e hospedagem, variando o preço do serviço conforme a demanda. Você pode ver todas as informações aqui: https://rocket.chat/products'
+      - 'A plataforma é gratuita! Mas caso você precise de alguma customização, serviço de suporte ou hospedar a plataforma na nossa nuvem, nós cobramos por isso. Você pode verificar sobre a nossa gama de serviços aqui: https://rocket.chat/products e aqui sobre hospedagem https://rocket.chat/hosting ficar a par dos valores falando com essa galera: sales@rocket.chat'
+   event: respond
+   type: random
 
-  Vocês podem dar desconto?
+  # Vocês podem dar desconto?
   - node:
-      name: trabalho-
+      name: preco-
     level: context
     classifiers:
-  Desconto para organizações sem fins lucrativos
-  Conseguir desconto
-  Desconto para setor de educação e instituições de ensino
-  Convênios para o setor de educação
-  Existe desconto
-  Código promocional
+      - Desconto organizações sem fins lucrativos
+      - Conseguir desconto
+      - Desconto setor de educação e instituições de ensino
+      - Convênios setor de educação
+      - Existe desconto
+      - Código promocional
     message:
-  Nós cobramos por serviços extras, como suporte, customização e hospedagem. Esses valores são negociados com sales@rocket.chat conforme a demanda da empresa.
-  Se você é uma instituição sem fins lucrativos ou vem do setor da educação nós temos alguns benefícios para possibilitar que você possa utilizar a plataforma da melhor forma.
-  Nesse caso também entre em contato com sales@rocket.chat.
-      event: respond
-  type: block
+      - Nós cobramos por serviços extras, como suporte, customização e hospedagem. Esses valores são negociados com sales@rocket.chat conforme a demanda da empresa.
+      - Se você é uma instituição sem fins lucrativos ou vem do setor da educação nós temos alguns benefícios para possibilitar que você possa utilizar a plataforma da melhor forma.
+      - Nesse caso também entre em contato com sales@rocket.chat
+    event: respond
+    type: block
 
-  Preciso pagar por usuários desativados?
+  # Preciso pagar por usuários desativados?
   - node:
-      name: trabalho-
+      name: preco-
     level: context
     classifiers:
-  Pagamento para usuários desativados
-  Usuários cancelados
-  Exclusão de usuários
-  Cobrar por usuários desativados
+      - Pagamento usuários desativados
+      - Usuários cancelados
+      - Exclusão de usuários
+      - Cobrar usuários desativados
     message:
-  Nós não cobramos o uso da plataforma do Rocket.chat por usuários. No caso de hospedagem
-  Então depois que você fecha um pacote, pode colocar e adicionar usuários dentro dos limites do pacote a vontade
-      event: respond
-  type: block
+      - Nós não cobramos o uso da plataforma do Rocket.chat por usuários. No caso de hospedagem
+      - Então depois que você fecha um pacote, pode colocar e adicionar usuários dentro dos limites do pacote a vontade
+    event: respond
+    type: block
 
-
-  + Features +
-
-  Tem previsão para novas features?
+  # Features
+  #
+  # Tem previsão para novas features?
   - node:
-      name: trabalho-
+      name: features-
     level: context
     classifiers:
-  Novas features
-  Data para novas features
-  Mais features
-  Atualização de features
+      - Novas features
+      - Data novas features
+      - Mais features
+      - Atualização features
+      - Atualizações features
     message:
-  Estamos constantemente atualizando as nossas features, você pode acompanhar tudo na nossa página do Github: https://github.com/rocketchat.
-  Está buscando alguma feature em específico? Da uma olhada no https://github.com/RocketChat e ve se ela não está por lá :)
-      event: respond
-  type: random
+      - 'Estamos constantemente atualizando as nossas features, você pode acompanhar tudo na nossa página do Github: https://github.com/rocketchat'
+      - Está buscando alguma feature em específico? Da uma olhada no https://github.com/RocketChat e ve se ela não está por lá :)
+    event: respond
+    type: random
 
-  Quais são as features disponíveis no app?
+  # Quais são as features disponíveis no app?
   - node:
-      name: trabalho-
+      name: features-
     level: context
     classifiers:
-  Features no app
-  O que tem no app
-  Features na plataforma mobile
-  Features do aplicativo
-  Features do chat
-  Material com as features
-  Features disponíveis
-  Resumo das features
-  Quais features tem na Rocket.Chat
+      - Features no app
+      - O que tem no app
+      - Features plataforma mobile
+      - Features aplicativo
+      - Features chat
+      - Material com as features
+      - Features disponíveis
+      - Resumo das features
+      - Quais features tem na Rocket.Chat
     message:
-  Que bom que você perguntou!
-  Nós ficamos muito orgulhosos do nosso produto.
-  Você pode encontrar todas as features da Rocket.Chat no link: https://rocket.chat/features
-      event: respond
-  type: block
+      - Que bom que você perguntou!
+      - Nós ficamos muito orgulhosos do nosso produto.
+      - 'Você pode encontrar todas as features da Rocket.Chat no link: https://rocket.chat/features'
+    event: respond
+    type: block
 
-  Posso solicitar features exclusivas?
+  # Posso solicitar features exclusivas?
   - node:
-      name: trabalho-
+      name: features-
     level: context
     classifiers:
-  Features exclusivas
-  Quero feature exclusiva
-  Fazer feature exclusiva
-  Desenvolver feature personalizada
-  Sugestao de features
-  Desenvolver features
-  Pagar por features
-  Criar features
+      - Features exclusivas
+      - Quero feature exclusiva
+      - Fazer feature exclusiva
+      - Desenvolver feature personalizada
+      - Sugestao features
+      - Desenvolver features
+      - Pagar por features
+      - Criar features
     message:
-  Nós estamos desenvolvendo novas features constantemente. Dá uma olhada nesse link do Github e verifica se o que tu busca já está em desenvolvimento.
-  Se não estiver, existe a possibilidade de desenvolver a nova feature mediante investimento :)
-  Manda um e-mail para sales@rocket.chat que o pessoal pode te ajudar.
-      event: respond
-      type: block
+      - Nós estamos desenvolvendo novas features constantemente. Dá uma olhada nesse link do Github e verifica se o que tu busca já está em desenvolvimento.
+      - Se não estiver, existe a possibilidade de desenvolver a nova feature mediante investimento :)
+      - Manda um e-mail para sales@rocket.chat que o pessoal pode te ajudar.
+    event: respond
+    type: block
 
-  O que é native applications?
+  # O que é native applications?
   - node:
-      name: trabalho-
+      name: features-
     level: context
     classifiers:
-  Significado de native application
-  Explicar native application
-  O que é native application
-  Não entendi o que é native applications
+      - Significado native application
+      - Explicar native application
+      - O que é native application
+      - Não entendi o que é native applications
     message:
-  Native Applications significa aplicação nativa, sem alterações para rodar a plataforma em Android e iOS.
-  Nós temos essa opção :)
-      event: respond
-  type: block
+      - Native Applications significa aplicação nativa, sem alterações para rodar a plataforma em Android e iOS.
+      - Nós temos essa opção :)
+    event: respond
+    type: block
+
  # Open Source #
  #
  # O que é open sourcing #
@@ -1130,44 +1132,44 @@ interactions:
     event: respond
     type: block
 
-  Quais são os benefícios de usar open sourcing?
+  # Quais são os benefícios de usar open sourcing?
   - node:
-      name: trabalho-
+      name: Opensource-
     level: context
     classifiers:
-  Benefícios open sourcing
-  O que open source traz
-  Ganho com open sourcing
-  Diferenciais open sourcing
+      - Benefícios open sourcing
+      - O que open source traz
+      - Ganho com open sourcing
+      - Diferenciais open sourcing
     message:
-  São tantos os benefícios de usar uma plataforma open source… Estudantes e profissionais do mundo todo acabam desenvolvendo o nosso código.
-  O principal benefício é a possibilidade de customização, agilidade e  inovação constante. O que possibilita a oferta de um produto muito melhor que o dos nossos competidores :)
-  Você pode encontrar a lista completa de benefícios no nosso blog https://rocket.chat/blog.
-      event: respond
-  	    type: block
+      - São tantos os benefícios de usar uma plataforma open source… Estudantes e profissionais do mundo todo acabam desenvolvendo o nosso código.
+      - O principal benefício é a possibilidade de customização, agilidade e  inovação constante. O que possibilita a oferta de um produto muito melhor que o dos nossos competidores :)
+      - Você pode encontrar a lista completa de benefícios no nosso blog https://rocket.chat/blog.
+    event: respond
+  	type: block
 
-  Como posso contribuir?
+  # Como posso contribuir?
   - node:
-      name: trabalho-
+      name: Opensource-
     level: context
     classifiers:
-  Contribuir com o open sourcing
-  Ajudar o open sourcing
-  Participar do open sourcing
-  Desenvolver o open sourcing
+      - Contribuir com o open sourcing
+      - Ajudar o open sourcing
+      - Participar do open sourcing
+      - Desenvolver o open sourcing
     message:
-  Você pode entrar na nossa página do Github e ajudar a desenvolver o nosso código :)
-  Você pode desenvolver nosso código na página do Github.
-  Temos uma página do Github com todos os detalhes, ali que a galera toda se reune para desenvolver.
-      event: respond
-  type: random
+      - Você pode entrar na nossa página do Github e ajudar a desenvolver o nosso código :)
+      - Você pode desenvolver nosso código na página do Github.
+      - Temos uma página do Github com todos os detalhes, ali que a galera toda se reune para desenvolver.
+    event: respond
+    type: random
 
-  Qual o tamanho da comunidade de desenvolvedores?
+  # Qual o tamanho da comunidade de desenvolvedores?
   - node:
-      name: trabalho-
+      name: Opensource-
     level: context
     classifiers:
-  Tamanho da comunidade de desenvolvedores
+      - Tamanho comunidade de desenvolvedores
   Número de pessoas na plataforma
   Tamanho da plataforma
   Número de usuários da plataforma
