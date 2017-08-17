@@ -1,0 +1,151 @@
+trust: .8
+
+# + Importação de Dados +
+
+# Dados podem ser resgatados de outra ferramenta como o Slack? Como isso funciona?
+  - node:
+      name: dados-1
+    level: context
+    classifiers:
+      - Resgatar dados
+      - Importar dados de ferramentas
+      - Como funcionar para importar dados
+      - Transferir dados
+      - Importacão de dados
+      - Fazer transferência de dados
+      - Importar histórico de conversas
+      - Tipos de importacões
+      - Controle sobre dados importados
+      - Tipos de dados importados
+    message:
+    - Atualmente nós conseguimos importar dados de algumas ferramentas, como Slack e Hipchat. Entretanto, estamos abertos para ampliar esse leque. É só mandar uma mensagem para support@rocket.chat.
+    - Para maiores informações sobre como fazer isso no Hipchat acesse Import Hipchat.
+    - Para o Slack: Import Slack.
+    event: respond
+    type: block
+
+# É cobrado para importar dados?
+  - node:
+      name: dados-2
+    level: context
+    classifiers:
+      - Preco para importar dados
+      - Pagar para importar dados
+      - Quanto é para importar dados
+      - Cobrar pela transferência de dados
+    message:
+    - Nós temos alguns sistemas de importação já desenvolvidos para o Slack, o Hipchat e CSV.  Conforme a nossa necessidade vamos ampliar esse leque, caso você precise dessa funcionalidade com urgência, pode falar com o support@rocket.chat para verificar valores.
+    - Se a sua demanda for para importar do Slack, Hipchat ou CSV, nós temos a sua solução de graça :) Só vamos cobrar se o suporte para essa integração ainda não estiver pronto, assim conseguimos acelerar para suprir a sua demanda. Fale com o support@rocket.chat para mais informações.
+    event: respond
+    type: random
+
+# Vocês têm número de dados para importar?
+  - node:
+      name: dados-3
+    level: context
+    classifiers:
+      - Limite de dados para importar
+      - Máximo de dados para importar
+      - Quantos dados posso importar
+    message:
+    - Não temos limite de importação :) Pode ficar tranquilo,  caso já tenhamos desenvolvido o método de importação da sua plataforma tudo que você tiver lá vem para cá.
+    - Nós não temos limites rsrs Ou seja, sem limites de importação.
+    - Pode ficar tranquilo que tudo vai ser repassado, sem limites de importação.
+    event: respond
+    type: random
+
+# O armazenamento dos dados importados será feito em qual nuvem?
+  - node:
+      name: dados-4
+    level: context
+    classifiers:
+      - Armazenar dados importados onde
+      - Nuvem para armazenar dados importados
+      - Onde ficam os dados importados
+      - Espaco ocupado pelos novos dados importados
+    message:
+    - Os dados importados podem ficar tanto sobre o domínio da empresa no seu servidor, quanto na nossa nuvem do Google Cloud, permitindo que você acesse os seus dados aonde quer que você esteja.
+    - Você pode ter mais informações sobre o assunto no link: https://rocket.chat/products.
+    event: respond
+    type: block
+
+# Existe algo que não será importado?
+  - node:
+      name: dados-5
+    level: context
+    classifiers:
+      - Limitações da importação de dados
+      - Tipo de dados que são importados
+      - O que não será importado na importação de dados
+      - O que não será transferido na importação de dados
+    message:
+    - Você que escolhe :) Permitimos que você importe tudo, na hora de realizar o processo você pode selecionar o que você não quer importar.
+    - A importação fica da forma que você quiser, você pode optar se quer importar tudo ou tirar algo.
+    - Importamos tudo! Você seleciona o que não quiser importar.
+    event: respond
+    type: random
+
+
+
+    # + Integrações +
+
+# Existe um limite de integração?
+  - node:
+      name: integracao-1
+    level: context
+    classifiers:
+      - Máximo de integração
+      - Limite de integracao
+      - Quantas integrações
+    message:
+    - Não recomendamos que você coloque muuuuitas integrações, pois pode deixar o sistema mais lento, mas nós não temos um limite em relação a isso.
+    - O limite é a sua imaginação :)
+    - Não temos um limite do número de integrações possíveis, mas não recomendamos fazer muitas integrações para não deixar o sistema lento.
+    event: respond
+    type: random
+
+# Que integrações vocês possuem?
+  - node:
+      name: integracao-2
+    level: context
+    classifiers:
+      - Quais são as integrações
+      - Lista de integrações
+      - Com quem integrar
+      - Disponibilidade de integrações
+      - Integrar com outras aplicações
+    message:
+    - São tantas integrações.. Você pode ver todas aqui: https://rocket.chat/integrations.
+    - Todos os dias ampliamos a variedade de integrações. Dá uma olhada aqui: https://rocket.chat/integrations.
+    event: respond
+    type: random
+
+# É necessário API para fazer integração?
+  - node:
+      name: integracao-3
+    level: context
+    classifiers:
+      - API para integracão
+      - Precisar de API
+      - Necessário API
+      - Integrar API
+    message:
+    - Depende da integração, se você quer saber mais sobre isso manda um email pra support@rocket.chat
+    event: respond
+    type: random
+
+# Como faço uma integração?
+  - node:
+      name: integracao-4
+    level: context
+    classifiers:
+      - Como é feita uma integração
+      - Aonde acho sobre integração
+      - O que precisa para fazer uma integração
+      - O que é uma integração
+      - Como integrar
+    message:
+    - As integrações possibilitam uma maior conexão da plataforma com outras aplicações. Nós oferecemos diversas integrações, você pode ver elas aqui: https://rocket.chat/integrations
+    - Aqui você consegue ver as integrações que nós temos, e se busca alguma que não está aqui me fala! Rocket.chat/integrations
+    event: respond
+    type: random
