@@ -810,29 +810,27 @@ interactions:
   Você pode ver todos os detalhes aqui: https://rocket.chat/hosting
       event: respond
   Type:block
-
-
-  + Desenvolvimento de Funcionalidades +
-
-  Quanto custa para desenvolver novas funcionalidades?
+# Desenvolvimento de Funcionalidades #
+#
+# Quanto custa para desenvolver novas funcionalidades? #
   - node:
-      name: trabalho-
+      name: desenvolvimento-
     level: context
     classifiers:
-  Preco para novas funcionalidades
-  Custo de novas funcionalidades
-  Cobrar novas funcionalidades
-  Orçamento novas funcionalidades
-  Lista de preços para desenvolvimento de funcionalidades
-  Valor para desenvolver novas funcionalidades
-  Taxas para novas funcionalidades
-  Quantia para novas funcionalidades
+      - Preco novas funcionalidades
+      - Custo novas funcionalidades
+      - Cobrar novas funcionalidades
+      - Orçamento novas funcionalidades
+      - Lista preços desenvolvimento de funcionalidades
+      - Valor desenvolver novas funcionalidades
+      - Taxas novas funcionalidades
+      - Quantia novas funcionalidades
     message:
-  Você pode ter todas as informações com esses caras aqui: sales@rocket.chat.
-  Depende da sua demanda, fala com o pessoal que eles podem te ajudar: sales@rocket.chat.
-  Difícil dizer, temos que verificar com os meus amigos super-humanos! Manda um e-mail que eles respondem rapidinho: sales@rocket.chat.
-      event: respond
-  	    type: random
+      - 'Você pode ter todas as informações com esses caras aqui: sales@rocket.chat'
+      - 'Depende da sua demanda, fala com o pessoal que eles podem te ajudar: sales@rocket.chat'
+      - 'Difícil dizer, temos que verificar com os meus amigos super-humanos! Manda um e-mail que eles respondem rapidinho: sales@rocket.chat'
+    event: respond
+  	type: random
 
   + Importação de Dados +
   Dados podem ser resgatados de outra ferramenta como o Slack? Como isso funciona?
