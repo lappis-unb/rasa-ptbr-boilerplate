@@ -5,7 +5,9 @@ chatbot = require path.join __dirname, 'bot', 'index.coffee'
 
 hubotPath = module.parent.filename
 hubotPath = path.dirname hubotPath for [1..4]
-configPath = path.join hubotPath, 'scripts', 'config', 'corpus.yml'
+corpus = (process.env.HUBOT_CORPUS || 'corpus.yml')
+console.log(corpus)
+configPath = path.join hubotPath, 'scripts', 'config', corpus
 
 try
   config = yaml.safeLoad fs.readFileSync configPath, 'utf8'
