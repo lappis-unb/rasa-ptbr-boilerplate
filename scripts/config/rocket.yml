@@ -475,15 +475,42 @@ interactions:
   - node:
       name: servicos-1
     classifiers:
-      - Preços white label
+      - Preço white label
+      - Preço whitelabel
+      - Preço white-label
+      - Preço whitelabeling
       - Custo white label
+      - Custo whitelabel
+      - Custo white-label
+      - Custo whitelabeling
       - Orçamento white label
+      - Orçamento whitelabel
+      - Orçamento white-label
+      - Orçamento whitelabeling
       - Valor white label
+      - Valor whitelabel
+      - Valor white-label
+      - Valor whitelabeling
       - Estimativa financeira white label
+      - Estimativa fianceira whitelabel
+      - Estimativa financeira white-label
+      - Estimativa financeira whitelabeling
       - Pagar pelo white label
+      - Pagar pelo whitelabel
+      - Pagar pelo white-label
+      - Pagar pelo whitelabeling
       - Pagamento white label
+      - Pagamento whitelabel
+      - Pagamento white-label
+      - Pagamento whitelabeling
       - Taxas pelo white label
+      - Taxas whitelabel
+      - Taxas whitelabeling
+      - Taxas white-label
       - Valor white labeling
+      - Valor whitelabel
+      - Valor whitelabeling
+      - Valor white-label
     message:
       - Esse é o meu serviço preferido! Dá pra deixar a plataforma do jeitinho que você desejar. Manda um e-mail para sales@rocket.chat que eles podem te dar os detalhes.
       - Já sabe como você quer a plataforma? Dá para fazer de tudo! Manda um e-mail para sales@rocket.chat que eles podem te ajudar.
