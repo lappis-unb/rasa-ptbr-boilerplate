@@ -6,12 +6,11 @@
   "description": "NLP YAML oriented chatbot",
   "dependencies": {
     "hubot": "^2.19.0",
-    "hubot-diagnostics": "0.0.2",
+    "hubot-diagnostics": "0.0.1",
     "hubot-help": "^0.2.2",
-    "hubot-redis-brain": "0.0.4",
-    "hubot-rocketchat": "^1.0.9",
-    "hubot-rules": "^0.1.2",
     "hubot-scripts": "^2.17.2",
+    "hubot-shell": "^1.0.2",
+    "hubot-rocketchat": "^1.0.9",
     "js-yaml": "^3.2.5",
     "natural": "^0.5.0",
     "pm2": "^2.4.2"
