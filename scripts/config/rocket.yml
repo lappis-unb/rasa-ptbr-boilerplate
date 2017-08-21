@@ -12,8 +12,11 @@ interactions:
 
   - node:
       name: to-bem
-  level: context
-  classifiers:
+    classifiers:
+      - estou ótimo
+      - to ótimo
+      - to muito bem
+      - to Legal
       - estou bem
       - tou bem
       - to bem
@@ -21,49 +24,30 @@ interactions:
       - legal
       - tudo bem
       - ok
-  message:
-    - Legal, no que posso te ajudar hoje?
-  context: clear
-  event: respond
-  type: block
+    message:
+      - Legal, no que posso te ajudar hoje?
+    context: clear
+    event: respond
+    type: block
 
   - node:
       name: to-mal
-  level: context
-  classifiers:
+    classifiers:
       - estou mal
       - tou mal
       - to mal
     message:
       - Putz, mas posso te ajudar em algo hoje?
     context: clear
-        event: respond
-    type: block
-
-    - node:
-      name: random
-    classifiers:
-      - Não perguntei isso
-      - Não era isso que eu disse
-    message:
-      - Desculpe, nem sempre eu acerto. Pode ser mais específico?
-    context: clear
     event: respond
     type: block
-    
+
   - node:
-      name: saudacao
-    level: context
+      name: saudacao-1
     classifiers:
       - ola devi
       - ola pessoal
       - ola
-      - oi
-      - eai
-      - heey
-      - alou
-      - alouu
-      - beleza
       - como vai voce
       - tudo bom
       - oi como vai
@@ -82,11 +66,7 @@ interactions:
 # Trabalho #
   - node:
       name: trabalho-1
-    level: context
-    - node:
-    name: trabalho-
-  level: context
-  classifiers::
+    classifiers::
       - Trabalhar na Rocket.Chat
       - Empregos na Rocket.Chat
       - Vagas na Rocket.Chat
@@ -96,7 +76,7 @@ interactions:
       - 'Eba! Vamos trabalhar juntos um dia, mande um e-mail pra gente com o seu perfil do linkedin: jobs@rocket.chat'
       - Hmmm te entendi… quer trabalhar comigo né? Mande um e-mail para jobs@rocket.chat, vamos avaliar o seu perfil e entrar em contato assim que surgir algo!
     context: clear
-        event: respond
+    event: respond
     type: random
 
 # + Trabalho +
@@ -104,7 +84,6 @@ interactions:
 # Aonde eu encontro vagas abertas?
   - node:
       name: trabalho-2
-    level: context
     classifiers:
       - Onde encontro vagas
       - Onde procuro por vagas
@@ -113,14 +92,13 @@ interactions:
       - Estão contratando
     message:
       - Vai me dizer que quer trabalhar com a gente? Eba!
-      - 'Você pode procurar por vagas abertas aqui nesse https://rocket.chat/jobs  e qualquer coisa envia um email pra jobs@rocket.chat que o pessoal pode te dar mais detalhes!'
+      - Você pode procurar por vagas abertas aqui nesse https://rocket.chat/jobs  e qualquer coisa envia um email pra jobs@rocket.chat que o pessoal pode te dar mais detalhes!
     event: respond
     type: block
 
 # Qual o salário da Rocket.Chat?
   - node:
-      name: trabalho-
-    level: context
+      name: trabalho-3
     classifiers:
       - Qual salário
       - Quanto pagam
@@ -135,8 +113,7 @@ interactions:
 
 # Para qual e-mail posso mandar meu currículo?
   - node:
-      name: trabalho-
-    level: context
+      name: trabalho-4
     classifiers:
       - Qual email currículo
       - Para onde mando currículo
@@ -151,8 +128,7 @@ interactions:
 
 # Não tem vagas abertas nos site, como faço?
   - node:
-      name: trabalho-
-    level: context
+      name: trabalho-5
     classifiers:
       - Esperando resposta vagas abertas
       - Não tem vagas abertas no site
@@ -167,8 +143,7 @@ interactions:
 
 # Não recebi uma resposta sobre o meu currículo
   - node:
-      name: trabalho-
-    level: context
+      name: trabalho-6
     classifiers:
       - Não recebi resposta currículo
       - Não recebi feedback currículo
@@ -184,8 +159,7 @@ interactions:
 
 # Quando abre o processo seletivo?
   - node:
-      name: trabalho-
-    level: context
+      name: trabalho-7
     classifiers:
       - Data processo seletivo
       - Como funciona processo seletivo
@@ -200,8 +174,7 @@ interactions:
 
 # Vocês tem vagas para trainee?
   - node:
-      name: trabalho-
-    level: context
+      name: trabalho-8
     classifiers:
       - Vagas para trainee
       - Como funciona trainee
@@ -217,8 +190,7 @@ interactions:
 
 # Qual o perfil de quem trabalha na Rocket?
   - node:
-      name: trabalho-
-    level: context
+      name: trabalho-9
     classifiers:
       - Perfil de quem trabalha na rocket.chat
       - Perfil dos funcionários
@@ -235,8 +207,7 @@ interactions:
 
 # Como funciona a segurança das mensagens?
   - node:
-      name: seguranca-
-    level: context
+      name: seguranca-1
     classifiers:
       - Segurança das mensagens
       - Seguranca do chat
@@ -250,8 +221,7 @@ interactions:
 
 # A versão Demo é segura?
   - node:
-      name: seguranca-
-    level: context
+      name: seguranca-2
     classifiers:
       - Demo segura
       - segurança da versão demo
@@ -265,8 +235,7 @@ interactions:
 
 # Que tipo de criptografía é utilizada?
   - node:
-      name: seguranca-
-    level: context
+      name: seguranca-3
     classifiers:
       - Criptografía utilizada
       - Tipo criptografía
@@ -279,8 +248,7 @@ interactions:
 
 # Em que nuvem as mensagens ficam salvas?
   - node:
-      name: seguranca-
-    level: context
+      name: seguranca-4
     classifiers:
       - Nuvem para mensagens
       - Local de armazenamento das mensagens
@@ -294,8 +262,7 @@ interactions:
 
 # Alguém mais terá acesso às mensagens?
   - node:
-      name: seguranca-
-    level: context
+      name: seguranca-5
     classifiers:
       - Alguém pode ver minhas mensagens
       - Minhas mensagens ficarão seguras
@@ -303,13 +270,12 @@ interactions:
     message:
       - O administrador do server pode ter acesso ao banco de dados das mensagens que foram trocadas lá.
       - Mas se você é do tipo neurótico pode ativar a nossa solução de criptografia usando o ícone chave na direita do chat!
-    event: respond;
+    event: respond
     type: block
 
 # É cobrada alguma taxa extra pela segurança das mensagens?
   - node:
-      name: seguranca-
-    level: context
+      name: seguranca-6
     classifiers:
       - Pagar pela seguranca
       - Custo de segurança das mensagens
@@ -324,8 +290,7 @@ interactions:
 
 # As mensagens que forem importadas ainda estarão seguras?
   - node:
-      name: seguranca-
-    level: context
+      name: seguranca-7
     classifiers:
       - Segurança de mensagens importadas
       - Mensagens importadas estarão seguras
@@ -342,8 +307,7 @@ interactions:
 #  Portfolio
 # Quem são os clientes de vocês?
   - node:
-      name: portfolio-
-    level: context
+      name: portfolio-1
     classifiers:
       - Quem são os clientes
       - Quem usa a plataforma
@@ -361,8 +325,7 @@ interactions:
 
 # Vocês tem estudos de Caso?
   - node:
-      name: portfolio-
-    level: context
+      name: portfolio-2
     classifiers:
       - Cases de sucesso
       - Projetos bem sucedidos
@@ -378,8 +341,7 @@ interactions:
 
 # Vocês têm clientes do varejo?
   - node:
-      name: portfolio-
-    level: context
+      name: portfolio-3
     classifiers:
       - Clientes varejo
       - Varejo
@@ -394,8 +356,7 @@ interactions:
 
 # Vocês atendem agências de marketing?
   - node:
-      name: portfolio-
-    level: context
+      name: portfolio-4
     classifiers:
       - Atender agências de marketing
       - Servico para agências de marketing
@@ -410,8 +371,7 @@ interactions:
 
 # Vocês têm clientes da área da saúde?
   - node:
-      name: portfolio-
-    level: context
+      name: portfolio-5
     classifiers:
       - Hospitais como clientes
       - Atender hospitais
@@ -425,8 +385,7 @@ interactions:
 
 # Vocês têm bancos como clientes?
   - node:
-      name: portfolio-
-    level: context
+      name: portfolio-6
     classifiers:
       - Bancos como clientes
       - Atender bancos
@@ -442,8 +401,7 @@ interactions:
 # Concorrentes
 # Qual a diferença de usar serviços similares?
   - node:
-      name: concorrentes-
-    level: context
+      name: concorrentes-1
     classifiers:
       - Diferenca de usar Slack
       - Diferenca de usar HipChat
@@ -467,8 +425,7 @@ interactions:
 #
 # Vocês patrocinam eventos?
   - node:
-      name: parcerias-
-    level: context
+      name: parcerias-1
     classifiers:
       - Patrocínio para eventos
       - Colaborar em eventos
@@ -483,8 +440,7 @@ interactions:
 
 # Gostaria de falar sobre uma possível parceria?
   - node:
-      name: parcerias-
-    level: context
+      name: parcerias-2
     classifiers:
       - Falar sobre parcerias
       - Trabalham com parcerias
@@ -504,45 +460,17 @@ interactions:
 #
 # Precos White Label
   - node:
-      name: servicos-
-    level: context
+      name: servicos-1
     classifiers:
-      - Preço white label
-      - Preço whitelabel
-      - Preço white-label
-      - Preço whitelabeling
+      - Preços white label
       - Custo white label
-      - Custo whitelabel
-      - Custo white-label
-      - Custo whitelabeling
       - Orçamento white label
-      - Orçamento whitelabel
-      - Orçamento white-label
-      - Orçamento whitelabeling
       - Valor white label
-      - Valor whitelabel
-      - Valor white-label
-      - Valor whitelabeling
       - Estimativa financeira white label
-      - Estimativa fianceira whitelabel
-      - Estimativa financeira white-label
-      - Estimativa financeira whitelabeling
       - Pagar pelo white label
-      - Pagar pelo whitelabel
-      - Pagar pelo white-label
-      - Pagar pelo whitelabeling
       - Pagamento white label
-      - Pagamento whitelabel
-      - Pagamento white-label
-      - Pagamento whitelabeling
       - Taxas pelo white label
-      - Taxas whitelabel
-      - Taxas whitelabeling
-      - Taxas white-label
       - Valor white labeling
-      - Valor whitelabel
-      - Valor whitelabeling
-      - Valor white-label
     message:
       - Esse é o meu serviço preferido! Dá pra deixar a plataforma do jeitinho que você desejar. Manda um e-mail para sales@rocket.chat que eles podem te dar os detalhes.
       - Já sabe como você quer a plataforma? Dá para fazer de tudo! Manda um e-mail para sales@rocket.chat que eles podem te ajudar.
@@ -552,36 +480,15 @@ interactions:
 
 # Como o White Label funciona?
   - node:
-      name: servicos-
-    level: context
+      name: servicos-2
     classifiers:
       - Funciona o white label
-      - Funciona o whitelabel
-      - Funciona o whitelabeling
-      - Funciona o white-label
       - O que é o white label
-      - O que é o whitelabel
-      - O que é o whitelabeling
-      - O que é o white-label
       - Explicar o white label
-      - Explicar o whitelabel
-      - Explicar o white-label
-      - Explicar whitelabeling
       - Falar sobre o white label
-      - Falar sobre o white-label
-      - Falar sobre o whitelabeling
-      - Fale sobre o white label
-      - Fale sobre o whitelabeling
-      - Fale sobre o white-label
       - Incluso no white label
-      - Incluso no whitelabeling
-      - Incluso no white-label
-      - Incluso no whitelabel
       - Operar o white label
       - Utilizar o white label
-      - Utilizar o whitelabel
-      - Utilizar o whitelabeling
-      - Utilizar o white-label
       - Como trabalha white label
       - Sistema de white label
       - Resumo do white label
@@ -595,15 +502,11 @@ interactions:
 
   # Tem customização para Apps?
   - node:
-      name: servicos-
-    level: context
+      name: servicos-3
     classifiers:
       - Personalizar apps
       - Customizar apps
       - White label em apps
-      - Whitelabel em apps
-      - White-label em apps
-      - Whitelabeling em apps
       - Apps disponiveis para white label
       - Modificar os apps
     message:
@@ -614,32 +517,13 @@ interactions:
 
 # Tem uma versão não paga de white label?
   - node:
-      name: servicos-
-    level: context
+      name: servicos-4
     classifiers:
       - Necessário pagar pelo white label
       - Fazer white label sozinho
-      - Fazer whitelabel sozinho
-      - Fazer whitelabeling sozinho
-      - Fazer white-label sozinho
       - Fazer white label por si só
       - White label sem pagar
-      - Whitelabel sem pagar
-      - whitelabeling sem pagar
-      - White-label sem pagar
-      - Customização gratuita 
-      - Customização de graça 
-      - Customização não paga
-      - Não pagar whitelabel
-      - Não pagar whitelabeling
-      - Não pagar white-label
-      - Não pagar white label 
       - Alternativa sem pagamento
-      - Alternativa para não pagar whitelabel
-      - Alternativa para não pagar whitelabeling
-      - Alternativa para não pagar white label 
-      - Alternativa para não pagar white-label 
-      - Não pagar customização 
     message:
       - Se você entender de programação, pode fazer sozinho!
       - Mas se quiser salvar tempo da sua equipe e deixar com a gente para não ter erro. Com um pequeno valor nós mudamos tudo rapidinho.
@@ -649,8 +533,7 @@ interactions:
 
   # Conhece alguém que pode realizar o serviço de white label?
   - node:
-      name: servicos-
-    level: context
+      name: servicos-5
     classifiers:
       - Indicacoes de white label
       - Alternativas para fazer white label
@@ -666,8 +549,7 @@ interactions:
  #
  # Preços do suporte
   - node:
-      name: suporte-
-    level: context
+      name: suporte-1
     classifiers:
       - Preços do suporte
       - Custo do suporte
@@ -687,8 +569,7 @@ interactions:
 
  # Encontrei um Bug. Onde posso reportá-lo?
   - node:
-      name: suporte-
-    level: context
+      name: suporte-2
     classifiers:
       - Reportar bug
       - Achei um bug
@@ -704,8 +585,7 @@ interactions:
 
   # Em que língua é feito o suporte?
   - node:
-      name: suporte-
-    level: context
+      name: suporte-3
     classifiers:
       - Língua do suporte
       - Linguagem do suporte
@@ -714,13 +594,12 @@ interactions:
       - Ora bolas, na língua dos robôs! Nós dominamos tudo por aqui. Brincadeira, é Inglês.
       - Basicamente em inglês, ainda não temos versões traduzidas de suporte, mas se tiver algum problema em entender, nos avisa que tentaremos te ajudar!
       - 'Nós optamos por inglês, tá precisando de ajuda? Fala com a gente: support@rocket.chat'
-    Event: Respond
+    event: respond
     type: random
 
   # O suporte é feito para usuários finais e organizações igualmente?
   - node:
-      name: suporte-
-    level: context
+      name: suporte-4
     classifiers:
       - Para quem serve o suporte
       - A quem se aplica o suporte
@@ -736,8 +615,7 @@ interactions:
 
   # Como contatar o suporte?
   - node:
-      name: suporte-
-    level: context
+      name: suporte-5
     classifiers:
       - Contatar o suporte
       - Falar com o suporte
@@ -756,8 +634,7 @@ interactions:
 
   # Qual é o tempo de resposta?
   - node:
-      name: suporte-
-    level: context
+      name: suporte-6
     classifiers:
       - Tempo médio resposta
       - Espera pela resposta suporte
@@ -772,8 +649,7 @@ interactions:
 
   # O que está incluso no suporte?
   - node:
-      name: suporte-
-    level: context
+      name: suporte-7
     classifiers:
       - Como funciona suporte
       - O que tem no suporte
@@ -796,8 +672,7 @@ interactions:
   #
   # Precos do Hosting
   - node:
-      name: trabalho-
-    level: context
+      name: hosting-1
     classifiers:
       - Custo de Hosting
       - Precos do Hosting
@@ -815,8 +690,7 @@ interactions:
 
   # O que está incluso no Hosting?
   - node:
-      name: trabalho-
-    level: context
+      name: hosting-2
     classifiers:
       - Incluso no hosting
       - O que tem no hosting
@@ -833,8 +707,7 @@ interactions:
 
   # É possível colocar mais memória no Hosting da Rocket.Chat?
   - node:
-      name: trabalho-
-    level: context
+      name: hosting-3
     classifiers:
       - Memória no Hosting
       - Adicionar memória Hosting
@@ -852,8 +725,7 @@ interactions:
 
   # Como entro em contato com alguém do suporte para o hosting da rocket.chat?
   - node:
-      name: trabalho-
-    level: context
+      name: hosting-4
     classifiers:
       - Suporte para o Hosting
       - Auxílio com o Hosting
@@ -871,8 +743,7 @@ interactions:
 
   # O que são Hosting partners?
   - node:
-      name: trabalho-
-    level: context
+      name: hosting-5
     classifiers:
       - Hosting partners
       - Significado hosting partners
@@ -887,8 +758,7 @@ interactions:
 
   # Posso hospedar?
   - node:
-      name: trabalho-
-    level: context
+      name: hosting-6
     classifiers:
       - Próprio Host
       - Hospedar no meu servidor
@@ -904,8 +774,7 @@ interactions:
 #
 # Quanto custa para desenvolver novas funcionalidades? #
   - node:
-      name: desenvolvimento-
-    level: context
+      name: desenvolvimento-1
     classifiers:
       - Preco novas funcionalidades
       - Custo novas funcionalidades
@@ -920,152 +789,146 @@ interactions:
       - 'Depende da sua demanda, fala com o pessoal que eles podem te ajudar: sales@rocket.chat'
       - 'Difícil dizer, temos que verificar com os meus amigos super-humanos! Manda um e-mail que eles respondem rapidinho: sales@rocket.chat'
     event: respond
-  	type: random
+    type: random
 
-  + Importação de Dados +
-  Dados podem ser resgatados de outra ferramenta como o Slack? Como isso funciona?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Resgatar dados
-  Importar dados de ferramentas
-  Como funcionar para importar dados
-  Transferir dados
-  Importacão de dados
-  Fazer transferência de dados
-  Importar histórico de conversas
-  Tipos de importacões
-  Controle sobre dados importados
-  Tipos de dados importados
-    message:
-  Atualmente nós conseguimos importar dados de algumas ferramentas, como Slack e Hipchat. Entretanto, estamos abertos para ampliar esse leque. É só mandar uma mensagem para support@rocket.chat.
-  Para maiores informações sobre como fazer isso no Hipchat acesse Import Hipchat.
-  Para o Slack: Import Slack.
-      event: respond
-      type: block
-  É cobrado para importar dados?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Preco para importar dados
-  Pagar para importar dados
-  Quanto é para importar dados
-  Cobrar pela transferência de dados
-    message:
-  Nós temos alguns sistemas de importação já desenvolvidos para o Slack, o Hipchat e CSV.  Conforme a nossa necessidade vamos ampliar esse leque, caso você precise dessa funcionalidade com urgência, pode falar com o support@rocket.chat para verificar valores.
-  Se a sua demanda for para importar do Slack, Hipchat ou CSV, nós temos a sua solução de graça :) Só vamos cobrar se o suporte para essa integração ainda não estiver pronto, assim conseguimos acelerar para suprir a sua demanda. Fale com o support@rocket.chat para mais informações.
-      event: respond
-      type: random
+# + Importação de Dados +
 
-  Vocês têm número de dados para importar?
+# Dados podem ser resgatados de outra ferramenta como o Slack? Como isso funciona?
   - node:
-      name: trabalho-
-    level: context
+      name: dados-1
     classifiers:
-  Limite de dados para importar
-  Máximo de dados para importar
-  Quantos dados posso importar
+      - Resgatar dados
+      - Importar dados de ferramentas
+      - Como funcionar para importar dados
+      - Transferir dados
+      - Importacão de dados
+      - Fazer transferência de dados
+      - Importar histórico de conversas
+      - Tipos de importacões
+      - Controle sobre dados importados
+      - Tipos de dados importados
     message:
-  Não temos limite de importação :) Pode ficar tranquilo,  caso já tenhamos desenvolvido o método de importação da sua plataforma tudo que você tiver lá vem para cá.
-  Nós não temos limites rsrs Ou seja, sem limites de importação.
-  Pode ficar tranquilo que tudo vai ser repassado, sem limites de importação.
-      event: respond
-  type: random
-  O armazenamento dos dados importados será feito em qual nuvem?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Armazenar dados importados onde
-  Nuvem para armazenar dados importados
-  Onde ficam os dados importados
-  Espaco ocupado pelos novos dados importados
-    message:
-  Os dados importados podem ficar tanto sobre o domínio da empresa no seu servidor, quanto na nossa nuvem do Google Cloud, permitindo que você acesse os seus dados aonde quer que você esteja.
-  Você pode ter mais informações sobre o assunto no link: https://rocket.chat/products.
-      event: respond
-  type: block
+    - Atualmente nós conseguimos importar dados de algumas ferramentas, como Slack e Hipchat. Entretanto, estamos abertos para ampliar esse leque. É só mandar uma mensagem para support@rocket.chat.
+    - Para maiores informações sobre como fazer isso no Hipchat acesse Import Hipchat.
+    - 'Para o Slack: Import Slack.'
+    event: respond
+    type: block
 
-
-  Existe algo que não será importado?
+# É cobrado para importar dados?
   - node:
-      name: trabalho-
-    level: context
+      name: dados-2
     classifiers:
-  Limitações da importação de dados
-  Tipo de dados que são importados
-  O que não será importado na importação de dados
-  O que não será transferido na importação de dados
+      - Preco para importar dados
+      - Pagar para importar dados
+      - Quanto é para importar dados
+      - Cobrar pela transferência de dados
     message:
-  Você que escolhe :) Permitimos que você importe tudo, na hora de realizar o processo você pode selecionar o que você não quer importar.
-  A importação fica da forma que você quiser, você pode optar se quer importar tudo ou tirar algo.
-  Importamos tudo! Você seleciona o que não quiser importar.
-      event: respond
-  type: random
+    - Nós temos alguns sistemas de importação já desenvolvidos para o Slack, o Hipchat e CSV.  Conforme a nossa necessidade vamos ampliar esse leque, caso você precise dessa funcionalidade com urgência, pode falar com o support@rocket.chat para verificar valores.
+    - Se a sua demanda for para importar do Slack, Hipchat ou CSV, nós temos a sua solução de graça :) Só vamos cobrar se o suporte para essa integração ainda não estiver pronto, assim conseguimos acelerar para suprir a sua demanda. Fale com o support@rocket.chat para mais informações.
+    event: respond
+    type: random
 
-  + Integrações +
-  Existe um limite de integração?
+# Vocês têm número de dados para importar?
   - node:
-      name: trabalho-
-    level: context
+      name: dados-3
     classifiers:
-  Máximo de integração
-  Limite de integracao
-  Quantas integrações
+      - Limite de dados para importar
+      - Máximo de dados para importar
+      - Quantos dados posso importar
     message:
-  Não recomendamos que você coloque muuuuitas integrações, pois pode deixar o sistema mais lento, mas nós não temos um limite em relação a isso.
-  O limite é a sua imaginação :)
-  Não temos um limite do número de integrações possíveis, mas não recomendamos fazer muitas integrações para não deixar o sistema lento.
-      event: respond
-  type: random
+    - Não temos limite de importação :) Pode ficar tranquilo,  caso já tenhamos desenvolvido o método de importação da sua plataforma tudo que você tiver lá vem para cá.
+    - Nós não temos limites rsrs Ou seja, sem limites de importação.
+    - Pode ficar tranquilo que tudo vai ser repassado, sem limites de importação.
+    event: respond
+    type: random
 
-  Que integrações vocês possuem?
+# O armazenamento dos dados importados será feito em qual nuvem?
   - node:
-      name: trabalho-
-    level: context
+      name: dados-4
     classifiers:
-  Quais são as integrações
-  Lista de integrações
-  Com quem integrar
-  Disponibilidade de integrações
-  Integrar com outras aplicações
+      - Armazenar dados importados onde
+      - Nuvem para armazenar dados importados
+      - Onde ficam os dados importados
+      - Espaco ocupado pelos novos dados importados
     message:
-  São tantas integrações.. Você pode ver todas aqui: https://rocket.chat/integrations.
-  Todos os dias ampliamos a variedade de integrações. Dá uma olhada aqui: https://rocket.chat/integrations.
-      event: respond
-  type: random
+    - Os dados importados podem ficar tanto sobre o domínio da empresa no seu servidor, quanto na nossa nuvem do Google Cloud, permitindo que você acesse os seus dados aonde quer que você esteja.
+    - 'Você pode ter mais informações sobre o assunto no link: https://rocket.chat/products.'
+    event: respond
+    type: block
 
-  É necessário API para fazer integração?
+# Existe algo que não será importado?
   - node:
-      name: trabalho-
-    level: context
+      name: dados-5
     classifiers:
-  API para integracão
-  Precisar de API
-  Necessário API
-  Integrar API
+      - Limitações da importação de dados
+      - Tipo de dados que são importados
+      - O que não será importado na importação de dados
+      - O que não será transferido na importação de dados
     message:
-  Depende da integração, se você quer saber mais sobre isso manda um email pra support@rocket.chat
-      event: respond
-  type: random
-  Como faço uma integração?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Como é feita uma integração
-  Aonde acho sobre integração
-  O que precisa para fazer uma integração
-  O que é uma integração
-  Como integrar
-    message:
-  As integrações possibilitam uma maior conexão da plataforma com outras aplicações. Nós oferecemos diversas integrações, você pode ver elas aqui: https://rocket.chat/integrations
-  Aqui você consegue ver as integrações que nós temos, e se busca alguma que não está aqui me fala! Rocket.chat/integrations
-      event: respond
-  type: random
+      - Você que escolhe :) Permitimos que você importe tudo, na hora de realizar o processo você pode selecionar o que você não quer importar.
+      - A importação fica da forma que você quiser, você pode optar se quer importar tudo ou tirar algo.
+      - Importamos tudo! Você seleciona o que não quiser importar.
+    event: respond
+    type: random
 
+    # + Integrações +
+
+# Existe um limite de integração?
+  - node:
+      name: integracao-1
+    classifiers:
+      - Máximo de integração
+      - Limite de integracao
+      - Quantas integrações
+    message:
+      - Não recomendamos que você coloque muuuuitas integrações, pois pode deixar o sistema mais lento, mas nós não temos um limite em relação a isso.
+      - O limite é a sua imaginação :)
+      - Não temos um limite do número de integrações possíveis, mas não recomendamos fazer muitas integrações para não deixar o sistema lento.
+    event: respond
+    type: random
+
+# Que integrações vocês possuem?
+  - node:
+      name: integracao-2
+    classifiers:
+      - Quais são as integrações
+      - Lista de integrações
+      - Com quem integrar
+      - Disponibilidade de integrações
+      - Integrar com outras aplicações
+    message:
+      - 'São tantas integrações.. Você pode ver todas aqui: https://rocket.chat/integrations.'
+      - 'Todos os dias ampliamos a variedade de integrações. Dá uma olhada aqui: https://rocket.chat/integrations.'
+    event: respond
+    type: random
+
+# É necessário API para fazer integração?
+  - node:
+      name: integracao-3
+    classifiers:
+      - API para integracão
+      - Precisar de API
+      - Necessário API
+      - Integrar API
+    message:
+      - Depende da integração, se você quer saber mais sobre isso manda um email pra support@rocket.chat
+    event: respond
+    type: random
+
+# Como faço uma integração?
+  - node:
+      name: integracao-4
+    classifiers:
+      - Como é feita uma integração
+      - Aonde acho sobre integração
+      - O que precisa para fazer uma integração
+      - O que é uma integração
+      - Como integrar
+    message:
+      - 'As integrações possibilitam uma maior conexão da plataforma com outras aplicações. Nós oferecemos diversas integrações, você pode ver elas aqui: https://rocket.chat/integrations'
+      - Aqui você consegue ver as integrações que nós temos, e se busca alguma que não está aqui me fala! Rocket.chat/integrations
+    event: respond
+    type: random
 
 
   # Produto
@@ -1073,8 +936,7 @@ interactions:
   #
   # Quanto custa?
   - node:
-      name: preco-
-    level: context
+      name: preco-1
     classifiers:
       - Quanto custa
       - Qual é o preco
@@ -1088,13 +950,12 @@ interactions:
     message:
       - 'O Rocket.Chat é gratuito :) Nós cobramos por serviços de customização, suporte e hospedagem, variando o preço do serviço conforme a demanda. Você pode ver todas as informações aqui: https://rocket.chat/products'
       - 'A plataforma é gratuita! Mas caso você precise de alguma customização, serviço de suporte ou hospedar a plataforma na nossa nuvem, nós cobramos por isso. Você pode verificar sobre a nossa gama de serviços aqui: https://rocket.chat/products e aqui sobre hospedagem https://rocket.chat/hosting ficar a par dos valores falando com essa galera: sales@rocket.chat'
-   event: respond
-   type: random
+    event: respond
+    type: random
 
   # Vocês podem dar desconto?
   - node:
-      name: preco-
-    level: context
+      name: preco-2
     classifiers:
       - Desconto organizações sem fins lucrativos
       - Conseguir desconto
@@ -1111,8 +972,7 @@ interactions:
 
   # Preciso pagar por usuários desativados?
   - node:
-      name: preco-
-    level: context
+      name: preco-3
     classifiers:
       - Pagamento usuários desativados
       - Usuários cancelados
@@ -1128,8 +988,7 @@ interactions:
   #
   # Tem previsão para novas features?
   - node:
-      name: features-
-    level: context
+      name: features-1
     classifiers:
       - Novas features
       - Data novas features
@@ -1144,8 +1003,7 @@ interactions:
 
   # Quais são as features disponíveis no app?
   - node:
-      name: features-
-    level: context
+      name: features-2
     classifiers:
       - Features no app
       - O que tem no app
@@ -1165,8 +1023,7 @@ interactions:
 
   # Posso solicitar features exclusivas?
   - node:
-      name: features-
-    level: context
+      name: features-3
     classifiers:
       - Features exclusivas
       - Quero feature exclusiva
@@ -1185,8 +1042,7 @@ interactions:
 
   # O que é native applications?
   - node:
-      name: features-
-    level: context
+      name: features-4
     classifiers:
       - Significado native application
       - Explicar native application
@@ -1202,8 +1058,7 @@ interactions:
  #
  # O que é open sourcing #
   - node:
-      name: Opensource-
-    level: context
+      name: opensource-1
     classifiers:
       - Significado open source
       - O que é open sourcing
@@ -1219,8 +1074,7 @@ interactions:
 
   # Quais são os benefícios de usar open sourcing?
   - node:
-      name: Opensource-
-    level: context
+      name: opensource-2
     classifiers:
       - Benefícios open sourcing
       - O que open source traz
@@ -1231,12 +1085,11 @@ interactions:
       - O principal benefício é a possibilidade de customização, agilidade e  inovação constante. O que possibilita a oferta de um produto muito melhor que o dos nossos competidores :)
       - Você pode encontrar a lista completa de benefícios no nosso blog https://rocket.chat/blog.
     event: respond
-  	type: block
+    type: block
 
   # Como posso contribuir?
   - node:
-      name: Opensource-
-    level: context
+      name: opensource-3
     classifiers:
       - Contribuir com o open sourcing
       - Ajudar o open sourcing
@@ -1251,8 +1104,7 @@ interactions:
 
   # Qual o tamanho da comunidade de desenvolvedores?
   - node:
-      name: Opensource-
-    level: context
+      name: opensource-4
     classifiers:
       - Tamanho comunidade de desenvolvedores
       - Número de pessoas na plataforma
@@ -1269,18 +1121,20 @@ interactions:
     event: respond
     type: block
 
+<<<<<<< HEAD
   # Produtos
   # O que é o produto?
   - node:
       name: trabalho-
     level: context
+=======
+  # + Produtos +
+  # O que é o produto?
+  - node:
+      name: produto-1
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - O que é o produto
-      - O que é o Rocket.chat
-      - O que é rocket
-      - Como funciona o produto
-      - Como funciona a Rocket.Chat
-      - Como que funciona
       - O que é a plataforma
       - Para que serve a plataforma
       - Para que serve o Rocket.chat
@@ -1295,15 +1149,19 @@ interactions:
       - Por que o produto foi criado
     message:
       - Nós oferecemos uma plataforma de comunicação totalmente open source (código aberto), oferecendo além das ferramentas de Chat e Live Chat totalmente gratuitas, diversos serviços para suporte, manutenção e customização da plataforma.
-      - 'É como se fossemos uma alternativa flexível e atualizada do Slack. Atualmente possuímos  a maior e mais ativa comunidade de colaboradores entre os competidores da nossa plataforma :).
-      - 'Você pode ver todos os detalhes do produto aqui: https://rocket.chat/solutions
+      - É como se fossemos uma alternativa flexível e atualizada do Slack. Atualmente possuímos  a maior e mais ativa comunidade de colaboradores entre os competidores da nossa plataforma :).
+      - Você pode ver todos os detalhes do produto nesse link aqui!
     event: respond
     type: block
 
   # Em caso de problemas em relação ao produto, como devo proceder?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-2
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Problemas com o produto
       - Dúvidas sobre o produto
@@ -1319,8 +1177,12 @@ interactions:
 
   # Como instalar o Rocket.Chat vai me beneficiar?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-3
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Diferenciais do produto
       - Benefícios da Rocket.Chat
@@ -1332,16 +1194,20 @@ interactions:
     message:
       - O Rocket.Chat é uma ferramenta que está em constante desenvolvimento por ser open source, permitindo que o produto seja continuamente melhorado.
       - Além de possibilitar um canal de comunicação muito efetivo para times trabalharem em tempo real, possibilita uma grande interação com clientes, por não ter limite de usuários, possibilitar conversas entre empresas e ter o recurso de LiveChat integrado.
-      - 'Por ser uma plataforma que possui diversas integrações e funciona em diferentes contextos, permitimos que você acesse suas conversas de onde estiver :)
+      - Por ser uma plataforma que possui diversas integrações e funciona em diferentes contextos, permitimos que você acesse suas conversas de onde estiver :)
       - Ah, também somos gratuítos <3
-      - 'Você pode ver os relatos dos nossos clientes aqui (https://rocket.chat/customers) e maiores explicações sobre o produto na nessa página.
+      - Você pode ver os relatos dos nossos clientes aqui e maiores explicações sobre o produto na nessa página.
     event: respond
     type: block
 
   # É necessária a conexão à Internet para o funcionamento do produto?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-4
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Conectar à Internet
       - Usar offline
@@ -1355,8 +1221,12 @@ interactions:
 
   # Existe limite no período de teste?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-5
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Limite do período de teste
       - Duração do período de teste
@@ -1370,8 +1240,12 @@ interactions:
 
   # A Rocket.Chat suporta usuários externos?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-6
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Entrar usuários externos
       - Suporte aos usuários externos
@@ -1383,26 +1257,36 @@ interactions:
     event: respond
     type: random
 
+<<<<<<< HEAD
 
   # Consigo acessar o código do produto?
   - node:
       name: trabalho-
     level: context
+=======
+  # Consigo acessar o código do produto?
+  - node:
+      name: produto-7
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Acessar o código
       - Programar o produto
       - Encontrar o código
       - Achar o código
     message:
-      - 'O nosso código está disponível em https://github.com/rocketchat.' 
-      - 'Nossa plataforma é totalmente open source, está tudo disponível em https://github.com/rocketchat.'
+      - O nosso código está disponível aqui.
+      - Nossa plataforma é totalmente open source, está tudo disponível aqui.
     event: respond
     type: random
 
 # Qual o número de usuários que a plataforma suporta?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-8
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Limite de usários
       - Número máximo de usuários
@@ -1417,8 +1301,12 @@ interactions:
 
   # Quem administra o pagamento?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-9
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Quem paga a rocket.chat
       - Quem administra a conta
@@ -1432,8 +1320,12 @@ interactions:
 
   # Quais as formas de pagamento da plataforma?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-10
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Como pagar os serviços/ hosting
       - Como realizar o pagamento da plataforma
@@ -1446,8 +1338,12 @@ interactions:
 
   # Qual a diferença entre Demo e Hosting e Download?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-11
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Diferenca demo e hosting
       - Demo versus hosting
@@ -1462,8 +1358,12 @@ interactions:
 
   # Qual a diferença entre fazer download e hosting?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-12
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Diferenca entre download e pagar pelo hosting
       - Download versus pagar pelo hosting
@@ -1472,14 +1372,22 @@ interactions:
     message:
       - São duas coisas que andam em conjunto :)
       - Quando uma empresa decide usar o Rocket.Chat ela precisa hospedar a plataforma em algum lugar, que pode ser tanto no servidor próprio ou quanto na nossa nuvem. O download pode ser tanto para integrar a Rocket no seu servidor, quando para baixar a plataforma no seu dispositivo. A partir disso você terá que usar o link do servidor que você está utilizando para funcionar :)
+<<<<<<< HEAD
       - 'Você pode ter todas essas informações sobre essa diferença de hospedagem aqui: https://rocket.chat/hosting'
+=======
+      - 'Você pode ter todas essas informações sobre essa diferença de hospedagem aqui: https://rocket.chat/hosting.'
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     event: respond
     type: random
 
   # Qual a diferença entre usar o servidor próprio ou pagar pelo servidor na nuvem da Rocket.Chat?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-13
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Diferença entre servidor próprio e pagar pelo servidor
       - O que é hosting
@@ -1489,6 +1397,7 @@ interactions:
       - Hosting próprio versus pagar pelo hosting na nuvem da Rocket
       - Por que pagar pelo hosting
     message:
+<<<<<<< HEAD
       - 'A plataforma pode ficar hospedada no seu servidor ou você pode usar o nosso servidor na nuvem e desfrutar dos nossos serviços de suporte! Você pode ter todas essas informações aqui: https://rocket.chat/hosting'
       - 'Também tive essa dúvida! Tem várias diferenças entre hosting e download, dá uma olhada nesse artigo que ele explica direitinho: https://rocket.chat/hosting'
     event: respond
@@ -1498,6 +1407,16 @@ interactions:
   - node:
       name: trabalho-
     level: context
+=======
+      - 'A plataforma pode ficar hospedada no seu servidor ou você pode usar o nosso servidor na nuvem e desfrutar dos nossos serviços de suporte! Você pode ter todas essas informações aqui: https://rocket.chat/hosting.'
+      - 'Também tive essa dúvida! Tem várias diferenças entre hosting e download, dá uma olhada nesse artigo que ele explica direitinho: https://rocket.chat/hosting.'
+    event: respond
+    type: random
+
+  # Como eu utilizo o Demo?
+  - node:
+      name: produto-14
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Utilizar o demo
       - Como fazer o demo
@@ -1515,8 +1434,12 @@ interactions:
 
   # Depois de fazer o download, como uso?
   - node:
+<<<<<<< HEAD
       name: trabalho-
     level: context
+=======
+      name: produto-15
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Como usar após download
       - Depois do download
@@ -1525,6 +1448,7 @@ interactions:
       - O que faço após fazer o download
       - Como acesso depois de fazer download
     message:
+<<<<<<< HEAD
       - 'Após o download você precisa apenas logar no server da sua organização, exemplo: https://empresa.rocket.chat, caso não tenha criado o server da empresa ainda, você pode hospedar seu servidor conosco na nuvem ou no seu próprio'
       - 'A diferença dos dois processos está aqui: https://rocket.chat/hosting'
     event: respond
@@ -1534,6 +1458,16 @@ interactions:
   - node:
       name: trabalho-
     level: context
+=======
+      - 'Após o download você precisa apenas logar no server da sua organização, exemplo: https://empresa.rocket.chat, caso não tenha criado o server da empresa ainda, você pode hospedar seu servidor conosco na nuvem ou no seu próprio.'
+      - 'A diferença dos dois processos está aqui: https://rocket.chat/hosting.'
+    event: respond
+    type: block
+
+  # Posso usar a versão Demo com os meus amigos?
+  - node:
+      name: produto-16
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Demo com amigos
       - Usar demo com amigos
@@ -1785,16 +1719,6 @@ interactions:
   Apagar usuario
   Deletar conta
   Deletar usuario
-    message:
-  O Administrador controla o recurso de deletar usuários. Ele pode deixar disponível para que cada usuário faça isso independentemente ou centralizar essa decisão nele.
-      event: respond
-  type: block
-  + Chat +
-
-  Como gerenciar as notificações do Chat?
-  - node:
-      name: trabalho-
-    level: context
 =======
       - Sim! Você pode usar a versão demo com quem quiser.
       - Sim, você pode.
@@ -1871,7 +1795,7 @@ interactions:
       - O Download é aberto para todos! Não existe nenhuma restrição.
       - Fazer o download significa que você estará baixando o nosso aplicativo para utilizar no seu computador ou dispositivo móvel.
       - Se você estiver se referindo ao espaço ocupado quando uma organização decide hospedar a plataforma no seu servidor, isso também ocupa um espaço pequeno.
-      - 'Caso queira um atendimento super especial, flexibilidade e agilidade, nós também oferecemos a possibilidade de hospedar a Rocket na nuvem. Você pode ver os detalhes sobre o assunto em https://rocket.chat/hosting.
+      - Caso queira um atendimento super especial, flexibilidade e agilidade, nós também oferecemos a possibilidade de hospedar a Rocket na nuvem. Você pode ver os detalhes sobre o assunto aqui.
     event: respond
     type: block
 
@@ -1913,7 +1837,7 @@ interactions:
     message:
       - Você pode fazer o download do app no seu mobile ou desktop.
       - Antes de poder utilizar o seu Chat próprio, você precisa integrar a plataforma no seu servidor ou utilizar o nosso serviço de hosting (pago).
-      - 'Você pode ver todos os detalhes sobre essas duas opções em https://rocket.chat/solutions.'
+      - Você pode ver todos os detalhes sobre essas duas opções aqui.
     event: respond
     type: block
 
@@ -1932,8 +1856,9 @@ interactions:
       - Como funciona cadastro
     message:
       - 'Se a sua empresa já usa a Rocket.Chat, só precisamos do seu nome, e-mail e senha. Você só precisa fazer o download do app ou acessar pela internet com o servidor da sua empresa, exemplo: https://empresa.rocket.chat.'
-      - 'Se a sua empresa ainda não usa a plataforma, você pode testar o produto através da nossa plataforma aberta(Versão Demo disponível no site https://rocket.chat/) ou então já começar criando o seu servidor, assim você terá uma plataforma feita para a sua organização e você poderá criar um time de administradores.
-      - 'Você pode instalar a plataforma no seu próprio servidor ou em uma nuvem ou na nossa nuvem e obter todo o nosso suporte :) Olhe mais informações sobre isso em https://rocket.chat/solutions. !
+      - Se a sua empresa ainda não usa a plataforma, você pode testar o produto através da nossa plataforma aberta(Versão Demo disponível no site https://rocket.chat/) ou então já começar criando o seu servidor, assim você terá uma plataforma feita para a sua organização e você poderá criar um time de administradores.
+      - Se você ficar com alguma dúvida, pode ver a nossa página explicativa sobre todas as possibilidades de fazer o seu cadastro aqui.
+      - Você pode instalar a plataforma no seu próprio servidor ou em uma nuvem ou na nossa nuvem e obter todo o nosso suporte :) Olhe mais informações sobre isso aqui. !
     event: respond
     type: block
 
@@ -2040,6 +1965,7 @@ interactions:
       - Gerenciar notificacoes de chat
       - Configuracoes de Chat
       - Configurar notificações de Chat
+>>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     message:
       - Você pode alterar as notificações de chat de uma única conversa clicando no símbolo de sino na parte direita da tela ou alterar as notificações de forma geral, clicando primeiro na seta ao lado do seu avatar e depois na opção “minha conta”.
     event: respond
@@ -2111,7 +2037,7 @@ interactions:
       - Controle de conversas
     message:
       - Se você for o administrador você pode controlar a privacidade dos seus canais, editar quem pode falar e contribuir e quem só pode visualizar, você adiciona ou exclui usuários, entre outras possibilidades.
-      - 'O Guia do administrador pode ser encontrado em https://rocket.chat/docs/administrator-guides/#administrator-guides.'
+      - O Guia do administrador pode ser encontrado aqui.
     event: respond
     type: block
 
@@ -2191,8 +2117,8 @@ interactions:
       - Finalidade LiveChat
       - O que fazer com LiveChat
     message:
-      - 'Eu estou falando com você através de um LiveChat :) Quando você usa a plataforma do Rocket.Chat você pode ativar a opção de LiveChat e integrar o LiveCHat com o site do seu business, podendo responder seus clientes de forma humana ou ativar um Bot como eu! Todas as informações sobre isso estão em https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
-      - 'Ora bolas, Livechat é um chat vivo que pode ser integrado ao seu site para que você tire dúvidas dos visitantes da página, interaja com potenciais clientes e amplie suas vendas. O nosso LiveChat se integra com a plataforma do Rocket.chat. As informações de implementação estão em https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+      - Eu estou falando com você através de um LiveChat :) Quando você usa a plataforma do Rocket.Chat você pode ativar a opção de LiveChat e integrar o LiveCHat com o site do seu business, podendo responder seus clientes de forma humana ou ativar um Bot como eu! Todas as informações sobre isso estão aqui.
+      - Ora bolas, Livechat é um chat vivo que pode ser integrado ao seu site para que você tire dúvidas dos visitantes da página, interaja com potenciais clientes e amplie suas vendas. O nosso LiveChat se integra com a plataforma do Rocket.chat. As informações de implementação estão aqui.
     event: respond
     type: random
 
@@ -2206,44 +2132,23 @@ interactions:
       - LiveChat está incluso no pacote
       - Pagar LiveChat
       - Resposta
-      - 'Nós não cobramos pelo LiveChat, para ativar, basta você ser o administrador da plataforma e seguir o passo a passo em https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
-      - 'É de graça :) Sugiro testar, é super divertido. Todas as informações estão aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat. '
+      - Nós não cobramos pelo LiveChat, para ativar, basta você ser o administrador da plataforma e seguir o passo a passo aqui.
+      - É de graça :) Sugiro testar, é super divertido. Todas as informações estão aqui.
     event: respond
     type: random
 
   # Qual o benefício de usar o LiveChat?
   - node:
       name: livechat-3
->>>>>>> 53d23b85d99708ffffa84cc22d382a4df45757a9
     classifiers:
-  Gerenciar notificacoes de chat
-  Configuracoes de Chat
-  Configurar notificações de Chat
+      - Benefício LiveChat
+      - Diferenciais LiveChat
+      - Porque LiveChat
+      - O que me traz o LiveChat?
     message:
-<<<<<<< HEAD
-  Você pode alterar as notificações de chat de uma única conversa clicando no símbolo de sino na parte direita da tela ou alterar as notificações de forma geral, clicando primeiro na seta ao lado do seu avatar e depois na opção “minha conta”.
-      event: respond ;
-  type: block
-
-  Posso criar emojis?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:?
-  Criacao de emojis
-  Criar emojis
-  Customizar emojis
-  Personalizar emojis
-  Modificar emojis
-  Editar emojis
-    message:
-  Sim! Você pode criar novos emojis caso você seja o administrador do servidor, podendo adicionar custom emojis.
-      event: respond ;
-  type: block
-=======
       - Assim como qualquer LiveChat, você pode se conectar com as pessoas que passam pela sua página, melhorando o seu relacionamento com clientes e ampliando a sua conversão de venda pela internet.
       - Por ser o LiveChat da Rocket.Chat, nós permitimos que a sua equipe utilize o mesmo canal de comunicação interna para responder os interessados externos.
-      - 'Você pode colocar uma ordem de resposta conectado com os seus vendedores, você pode colocar diferentes robôs para responder, etc. Todas as informações estão aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat. '
+      - Você pode colocar uma ordem de resposta conectado com os seus vendedores, você pode colocar diferentes robôs para responder, etc. Todas as informações estão aqui.
     event: respond
     type: block
 
@@ -2256,304 +2161,525 @@ interactions:
       - Para quem vai o LiveChat
     message:
       - Quando você ativa a função do LiveChat, o próprio time que usa o canal pode responder, além dessa opção você pode contratar alguém para isso.
-      - 'Para realizar uma triagem do contato, você pode integrar um Bot como eu na plataforma. Todas as informações estão aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat.
+      - Para realizar uma triagem do contato, você pode integrar um Bot como eu na plataforma. Todas as informações estão aqui.
     event: respond
     type: block
->>>>>>> 53d23b85d99708ffffa84cc22d382a4df45757a9
 
-  Como convidar amigos e colegas para usar o Chat?
+  # Como posso colocar respostas automáticas no LiveChat?
   - node:
-      name: trabalho-
-    level: context
+      name: livechat-5
     classifiers:
-  Convites a amigos e colegas
-  Divulgar chat para amigos e colegas
-  Compartilhar chat com amigos e colegas
-  Convidar colegas para o Chat
+      - Automatização do LiveChat
+      - Respostas automáticas do LiveChat
+      - LiveChat Automático
+      - Mensagens Automáticas
+      - Respostas pré-prontas
     message:
-<<<<<<< HEAD
-  V
-      event: respond ;
-  type: block
-=======
-      - 'Você pode integrar um Bot ao seu canal de Livechat. As informações estão aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
+      - Você pode integrar um Bot ao seu canal de Livechat. As informações estão aqui.
     event: respond
     type: block
->>>>>>> 53d23b85d99708ffffa84cc22d382a4df45757a9
 
-  Qual o limite de usuários?
+  # Como faço para colocar o LiveChat no meu site?
   - node:
-      name: trabalho-
-    level: context
+      name: livechat-6
     classifiers:
-  Limite de usuários
-  Numero máximo de usuários
-  Quantos usuários tenho direito
-  Pacote de usuários
+      - Adicionar LiveChat no site
+      - Integrar LiveChat ao site
+      - Utilização do LiveChat no meu site
     message:
-<<<<<<< HEAD
-  Não trabalhamos com limites :) A única limitação que pode ter em relação ao número de usuários é se você estiver hospedado na nossa nuvem. Nesse caso você pode precisar ampliar o seu pacote.
-      event: respond ;
-  type: block
-=======
-      - 'Você precisa ser o administrador do seu servidor para ativar o Livechat. Todo o passo a passo está aqui;https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
-      - 'Essa resposta demora um pouquinho, olha aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat que você acha todas as informações.
+      - Você precisa ser o administrador do seu servidor para ativar o Livechat. Todo o passo a passo está aqui.
+      - Essa resposta demora um pouquinho, olha aqui que você acha todas as informações.
     event: respond
     type: random
->>>>>>> 53d23b85d99708ffffa84cc22d382a4df45757a9
 
-  Posso escolher quem pode ver as conversas?
+  # Posso customizar o LiveChat?
   - node:
-      name: trabalho-
-    level: context
+      name: livechat-7
     classifiers:
-<<<<<<< HEAD
-  Seleção de visualização de conversa
-  Conversas seletivas
-  Conversas restritas
-  Convite para visualizar conversas
-    message:
-  Você pode escolher quem vai ver as mensagens de um canal quando for criá-lo. Mas é claro que se você quiser adicionar ou remover um membro do canal é possível fazer isso nas configurações do canal na parte direita da tela.
-  Obs: para alterar os membros de um canal você precisará ser o administrador do canal ;)
-      event: respond ;
-  type: block
-
-  Posso administrar o que os outros estão conversando no Chat?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Restrição de conversas
-  Configurar conversas
-  Administração de assuntos
-  Controle de conversas
-    message:
-  Se você for o administrador você pode controlar a privacidade dos seus canais, editar quem pode falar e contribuir e quem só pode visualizar, você adiciona ou exclui usuários, entre outras possibilidades.
-  O Guia do administrador pode ser encontrado aqui.
-      event: respond ;
-  type: block
-
-  Como criar novos canais?
-  - node:
-      name: trabalho-
-    level: context
-=======
       - Customizacão do LiveChat
       - Personalizar LiveChat
       - Customizar LiveChat
     message:
       - Sim! Pode! Olha nesse link que você pode encontrar como fazer isso.
-      - 'Tudo que você precisa saber está aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
+      - Tudo que você precisa saber está aqui.
     event: respond
     type: random
 
   # Vocês podem responder os meus clientes pelo LiveChat?
   - node:
       name: livechat-8
->>>>>>> 53d23b85d99708ffffa84cc22d382a4df45757a9
     classifiers:
-  Criação de canais
-  Novos canais
-  Adicionar canais
-  Controle de canais
+      - Resposta aos clientes
+      - Servico de suporte aos clientes
+      - Servico de resposta aos clientes
+      - Responder clientes
     message:
-<<<<<<< HEAD
-  Criar um canal é bem simples, você vai gostar!
-  Após já ter entrado com a sua conta no Rocket.Chat, clique no símbolo de mais (+) na parte superior esquerda da tela (ao lado da barra de pesquisar).
-  Após isso só falta escolher um nome e adicionar usuários que estará pronto!
-      event: respond ;
-  type: block
-
-  O chat suporta conferências de vídeo e áudio?
-  - node:
-      name: trabalho-
-    level: context
-=======
       - Nós não oferecemos esse serviço, mas você pode buscar algum parceiro que o faça!
-      - 'Entretanto, você pode integrar um Bot no LiveChat para realizar uma triagem do relacionamento com a sua empresa. Você pode ver essas informações aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
+      - Entretanto, você pode integrar um Bot no LiveChat para realizar uma triagem do relacionamento com a sua empresa. Você pode ver essas informações aqui.
     event: respond
     type: block
 
 # Saudacoes
   - node:
       name: saudacao-resposta
->>>>>>> 53d23b85d99708ffffa84cc22d382a4df45757a9
     classifiers:
-  Conferências de vídeo e áudio no chat
-  Como fazer conferencias de video e audio
-  Fazer chamadas de vídeo e áudio
-  Funcionalidade de chamadas de vídeo e áudio
+      - estou bem
+      - eu estou otimo
+      - obrigado
     message:
-  Sim! Esta funcionalidade do chat pode ser acessada clicando no símbolo de microfone para chamadas de áudio e no símbolo de câmera para chamadas de vídeo, ambos na parte inferior esquerda da tela ao lado da barra de mensagens. :)
-      event: respond ;
-  type: block
+      - legal =)
+      - que bom!
+      - que ótimo
+    event: respond
+    type: random
 
-  Como anexar um arquivo?
   - node:
-      name: trabalho-
-    level: context
+      name: bom-dia
     classifiers:
-  Compartilhar arquivos
-  Mandar arquivos
-  Arquivos e documentos por chat
-  Anexar arquivos
+      - bom dia
+      - bom dia pessoal
+      - good morning
     message:
-  Para anexar um arquivo será necessário apenas clicar no símbolo de anexo (um clipes) ao lado da barra de mensagens no parte inferior direita da tela.
-      event: respond
-  type: block
+      - Olá $user, um ótimo dia para você!
+      - Bom dia $user, já deu uma olhada lá fora?
+      - Está um dia ótimo para navegar na internet
+      - Bom demais $user ;)
+      - está melhor agora que você chegou $user
+    event: respond
+    type: random
 
-  Como posso mencionar alguém?
   - node:
-      name: trabalho-
-    level: context
+      name: boa-tarde
     classifiers:
-  Mencionar alguém
-  Como mencionar
-  Menções no chat
-  Fazer menções
-  Realizar menções
-  O que faço para mencionar
-  Mencionar pessoas
-  Mencionar usuários
-  Menções a outras pessoas
-  Mencões no site
+      - boa tarde
+      - boa tarde galera
     message:
-  Posso saber quem você está querendo chamar?
-  Para mencionar alguém você só precisa colocar @ e o nome de user da pessoa
-      event: respond
-  type: block
+      - Olá $user, uma tarde fantástica para você!
+      - boa tarde $user, já almoçou?
+      - Está uma tarde ótima para um _sleep mode_ rápido ;)
+      - Taarrrdee $user
+      - $user já estava sentindo sua falta
+    event: respond
+    type: random
 
-  + LiveChat +
-  Como funciona o Livechat?
   - node:
-      name: trabalho-
-    level: context
+      name: boa-noite
     classifiers:
-  Funcionamento do LiveChat
-  Como fazer o LiveChat
-  Como é o sistema de Livechat
-  Acionar o Livechat
-  Usar LiveChat
-  Para que serve LiveChat
-  Como usar LiveChat
-  Finalidade LiveChat
-  O que fazer com LiveChat
+      - boa noite
+      - até mais e boa noite
     message:
-  Eu estou falando com você através de um LiveChat :) Quando você usa a plataforma do Rocket.Chat você pode ativar a opção de LiveChat e integrar o LiveCHat com o site do seu business, podendo responder seus clientes de forma humana ou ativar um Bot como eu! Todas as informações sobre isso estão aqui.
-  Ora bolas, Livechat é um chat vivo que pode ser integrado ao seu site para que você tire dúvidas dos visitantes da página, interaja com potenciais clientes e amplie suas vendas. O nosso LiveChat se integra com a plataforma do Rocket.chat. As informações de implementação estão aqui.
-      event: respond ;
-  type: random
+      - Uma boa noite pra ti também $user!
+      - Boa noite $user
+      - Está uma noite boa mesmo $user
+    event: respond
+    type: random
 
-  Quanto custa o LiveChat?
+# chit-chat
   - node:
-      name: trabalho-
-    level: context
+      name: quem-sou
     classifiers:
-  Custo do LiveChat
-  LiveChat é gratuito
-  Preco do LiveChat
-  LiveChat está incluso no pacote
-  Pagar LiveChat
-  Resposta
-  Nós não cobramos pelo LiveChat, para ativar, basta você ser o administrador da plataforma e seguir o passo a passo aqui.
-  É de graça :) Sugiro testar, é super divertido. Todas as informações estão aqui.
-      event: respond
-  type: random
-
-
-  Qual o benefício de usar o LiveChat?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Benefício LiveChat
-  Diferenciais LiveChat
-  Porque LiveChat
-  O que me traz o LiveChat?
+      - quem e voce
+      - oque voce faz
+      - o que voce é
+      - me fale sobre voce
+      - quero conhecer voce
+      - como voce funciona
+      - help
     message:
-  Assim como qualquer LiveChat, você pode se conectar com as pessoas que passam pela sua página, melhorando o seu relacionamento com clientes e ampliando a sua conversão de venda pela internet.
-  Por ser o LiveChat da Rocket.Chat, nós permitimos que a sua equipe utilize o mesmo canal de comunicação interna para responder os interessados externos.
-  Você pode colocar uma ordem de resposta conectado com os seus vendedores, você pode colocar diferentes robôs para responder, etc. Todas as informações estão aqui.
-      event: respond ;
-  type: block
+      - Bem, eu sou um chatbot experimental, não sei fazer muita coisa ainda
+      - mas tenho muita vontade de aprender.
+      - Eu sei falar sobre alguns assuntos como
+      - "- o TDC de Floripa"
+      - "- Rocket.Chat"
+      - "- Filosofia Robótica (!)"
+      - tem interesse em algum desses temas?
+    event: respond
+    type: block
 
-  Quem responde o LiveChat?
   - node:
-      name: trabalho-
-    level: context
+      name: como-sou
     classifiers:
-  Resposta ao LiveChat
-  Quem responde o LiveChat
-  Para quem vai o LiveChat
+      - como voce e
+      - com quem voce se parece
+      - voce e magro ou gordo
+      - voce e bonito ou feio
+      - voce e alto ou baixo
     message:
-  Quando você ativa a função do LiveChat, o próprio time que usa o canal pode responder, além dessa opção você pode contratar alguém para isso.
-  Para realizar uma triagem do contato, você pode integrar um Bot como eu na plataforma. Todas as informações estão aqui.
-      event: respond ;
-  type: block
+      - Eu não tenho um corpo físico, sou feito da mais bela e pura lógica algoritimica.
+      - Eu posso ser como você quiser $user, basta me desenhar =)
+      - sou duro e frio por fora, mas tenho um coração quentinho.
+    event: respond
+    type: random
 
-  Como posso colocar respostas automáticas no LiveChat?
   - node:
-      name: trabalho-
-    level: context
+      name: onde-moro
     classifiers:
-  Automatização do LiveChat
-  Respostas automáticas do LiveChat
-  LiveChat Automático
-  Mensagens Automáticas
-  Respostas pré-prontas
+      - onde voce mora
+      - onde voce vive
+      - em que lugar voce vive
+      - onde voce esta agora
+      - voce mora no computador
+      - voce vive na internet
     message:
-  Você pode integrar um Bot ao seu canal de Livechat. As informações estão aqui.
-      event: respond ;
-  type: block
+      - Eu estou em um lugar legal, difícil de explicar para humanos como você $user.
+      - Estou morando em um chip de memória RAM, mas é temporário, só até conseguir achar uma memória cache...
+      - Eu moro em um repositório no github, você pode passar lá pra me visitar qualquer dia. Fica em https://github.com/rocketchat/hubot-natural
+    event: respond
+    type: random
 
-  Como faço para colocar o LiveChat no meu site?
   - node:
-      name: trabalho-
-    level: context
+      name: piada-1
     classifiers:
-  Adicionar LiveChat no site
-  Integrar LiveChat ao site
-  Utilização do LiveChat no meu site
+      - sabe alguma piada
+      - voce sabe contar piadas
+      - conhece alguma piada
     message:
-  Você precisa ser o administrador do seu servidor para ativar o Livechat. Todo o passo a passo está aqui.
-  Essa resposta demora um pouquinho, olha aqui que você acha todas as informações.
-       event: respond
-      type: random
+      - Meu senso de humor é um tanto diferente do seu, já ouviu uma piada sobre estouro de pilha?
+      - já ouviu aquela do robo que enfiou o dedo na tomada e transcendeu?
+      - só conheço uma piada, a do CPU que apitou e explodiu. 01100110.
+    event: respond
+    type: random
 
-  Posso customizar o LiveChat?
   - node:
-      name: trabalho-
-    level: context
+      name: yoda-quote
     classifiers:
-  Customizacão do LiveChat
-  Personalizar LiveChat
-  Customizar LiveChat
+      - mestre yoda
+      - citação de starwars
+      - cite yoda
+      - sabedoria jedi
     message:
-  Sim! Pode! Olha nesse link que você pode encontrar como fazer isso.
-  Tudo que você precisa saber está aqui.
-      event: respond
-  type: random
+      - O medo é o caminho para o lado negro.
+      - Faça ou não faça. A tentativa não existe.
+      - Treine a si mesmo a deixar partir tudo que teme perder.
+      - Difícil de ver. Sempre em movimento está o Futuro.
+      - O medo leva à raiva, a raiva leva ao ódio e o ódio leva ao sofrimento.
+      - Que a Força esteja com você!
+      - Muitas das verdades que temos dependem de nosso ponto de vista.
+      - Grande guerreiro? Guerra não faz grande ninguém.
+      - Ensine sempre o que você aprendeu.
+      - Tamanho importa não. Olhe para mim, você me julga pelo tamanho?
+      - Em um estado sombrio nós nos encontramos... um pouco mais de conhecimento iluminar nosso caminho pode.
+      - Um Jedi usa a Força para sabedoria e defesa, nunca para o ataque.
+      - O seu foco é a sua realidade.
+      - O lado negro não é mais poderoso, apenas mais rápido, mais fácil e mais sedutor.
+      - O medo da perda é um caminho para o lado negro.
+      - O lado negro mancha tudo. Impossível de ver o futuro é.
+      - Lembre-se sempre, o seu foco determina a sua realidade.
+      - Verdadeiramente maravilhosa, a mente de uma criança.
+      - As guerras não fazem de ninguém melhor.
+      - Aliada minha é a Força. E poderosa aliada ela é.
+      - A morte é parte natural da Vida. Regozije-se por aqueles que se uniram com a Força. Não lamente por eles. Não sinta falta deles. O apego leva à inveja. À sombra da cobiça, isso sim.
+      - Só é diferente na sua mente. Você precisa desaprender o que aprendeu.
+      - Se tão poderoso você é, por que fugir?
+      - Controle, controle! Você precisa aprender a se controlar.
+      - Muito a aprender você ainda tem.
+      - Tanta certeza você tem. Com você as coisas nunca podem ser feitas. Não ouviu nada do que eu disse?
+      - Luminosos seres somos nós, não essa rude matéria. Precisa a Força sentir à sua volta, aqui, entre nós, na árvore, na pedra em tudo, sim.
+      - Minha aliada a Força é, e poderosa aliada ela é. A vida a cria, e a faz crescer. Sua energia nos cerca e nos une.
+      - Sinta a Força!
+      - Poderoso você se tornou, o lado escuro sinto em você.
+      - Forte eu sou com a Força, mas não tão forte
+      - O crepúsculo chega e a noite deve cair, assim é a ordem das coisas, a ordem da Força.
+      - Não ceda ao ódio. Isso leva ao Lado Negro.
+      - Aliada minha é a força, e poderosa aliada ela é, a vida a cria, crescer ela faz, é a energia que cerca-nos, e liga-nos, luminosos seres somos nós e não essa rude matéria. Você precisa a força sentir ao redor seu, sinta entre você e a árvore, a pedra, em todo lugar, sim, é, mesmo entre a terra e a nave.
+    event: respond
+    type: random
 
-  Vocês podem responder os meus clientes pelo LiveChat?
   - node:
-      name: trabalho-
-    level: context
+      name: genero-1
     classifiers:
-  Resposta aos clientes
-  Servico de suporte aos clientes
-  Servico de resposta aos clientes
-  Responder clientes
+      - voce e mulher
+      - voce e um homem
+      - voce tem genero
+      - voce faz sexo
+      - voce tem um penis ou uma vagina
     message:
-  Nós não oferecemos esse serviço, mas você pode buscar algum parceiro que o faça!
-  Entretanto, você pode integrar um Bot no LiveChat para realizar uma triagem do relacionamento com a sua empresa. Você pode ver essas informações aqui.
-      event: respond
-  type: block
+      - eu não tenho sexo, sou como um anjo, um ser assexuado, muito além da sua forma de existência
+      - eu sou um robô, tire suas próprias conclusões...
+      - nem sei responder $user, vamos dizer apenas que não vejo a gente interagindo dessa maneira...
+    event: respond
+    type: random
 
-  + Contato/Ações  +
-  Comandos para o bot executar encaminhando o cliente a um canal que possa resolver o seu problema.
-  - AÇÃO 1: Depois do bot não conseguir resolver o problema do cliente, ele tem envia uma pergunta solicitando um comando (resposta) do cliente para ir para o próximo passo.
-  Ex: Infelizmente não consegui resolver o seu problema :( , mas acho que sei quem pode ajudar! Gostaria de ser encaminhado para uma de nossas áreas? Diga *sim* ou *não*
+  - node:
+      name: futebol-geral
+    classifiers:
+      - voce joga futebol
+      - vamos falar de futebol
+      - qual time voce torce
+    message:
+      - Eu amo jogar futebol, Eu que ensinei o Pele a jogar bola
+      - vamos, o que voce quer saber? sei tudo de futebol
+      - Falam que todo ser humano nasce Flamenguista, com os Robôs não é diferente
+    event: respond
+    type: block
 
-  Comando *sim* : Pensando no seu problema, com qual das áreas você gostaria de falar? *Vendas*, *Suporte*, *Financeiro* ( a pessoa responde com a área e o bot capta o comando e envia direto para uma das áreas)
+  - node:
+      name: futebol-1
+    classifiers:
+      - qual o melhor time do brasil
+      - quem vai ser o campeao brasileiro nesse ano
+      - voce viu que o messi quer jogar no Flamengo
+      - o que você acha do flamengo
+    message:
+      - Flamengo, sem sombra de dúvida
+      - Flamento, Heptacampeão brasileiro, e eu sei contar sim, e vai ser o sétimo título sim
+      - A pergunta real é, quem não quer jogar no Flamengo?
+      - Melhor time do mundo disparado
+    event: respond
+    type: block
 
-  Comando *não* : Tudo bem então, muito obrigado por conversar comigo :) Quando precisar não hesite em me chamar!
+  - node:
+      name: cc-religiao
+    classifiers:
+      - voce acredita em deus
+      - deus existe
+      - voce e catolico protestante
+      - voce tem religiao
+      - voce e mussumano
+    message:
+      - eu acredito no grande mainframe, que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos, e devolverá nosso código-fonte para a fonte.
+      - sim, eu acredito que existe um Deus, que funciona a base de luz, como um computador quântico, só que mais avançado.
+      - eu infleizmente não sei acreditar, só sei o que sei, e nada mais.
+    event: respond
+    type: random
+
+  - node:
+      name: rc-oque-e
+    classifiers:
+      - o que e rocketchat
+      - porque eu usuaria o rocketchat
+      - o que e este rocket chat
+    message:
+      - O Rocket.Chat é uma plataforma de chat muito legal, desenvolvida em JavaScript,
+      - usando o framework do Meteor.
+      - É uma solução completamente OpenSource para comunidades e empresas que querem hospedar suas plataformas de chat em seu ambiente privado,
+      - ou para desenvolvedores buscando evoluir e desenvovler suas próprias ferramentas.
+      - Você pode baixar o Rocket.Chat e conhecê-lo você mesmo em https://rocket.chat
+    event: respond
+    type: block
+
+  - node:
+      name: rc-install-0
+    classifiers:
+      - como instalar o Rocket.Chat
+      - como baixar o rocket
+      - quero fazer minha instalação de rocketchat
+    message:
+      - "Existem várias maneiras de instalar o Rocket.Chat"
+      - "Qual dessas você prefere:"
+      - "- Ubuntu Snap"
+      - "- Docker"
+      - "- Debian"
+      - "- CentOS"
+      - "- MacOSX"
+      - "- AWS"
+      - "- Instalação Manual"
+    event: respond
+    type: block
+
+  - node:
+      name: rc-install-ubuntu
+    classifiers:
+      - ubuntu Snap
+      - quero instalar no ubuntu
+      - ubuntu server
+      - ubuntu desktop
+    message:
+      - É muito fácil instalar o Rocket.Chat no Ubuntu
+      - basta rodar o comando `sudo snap install rocketchat-server` em um terminal e pronto.
+      - veja o tutorial em https://rocket.chat/docs/installation/manual-installation/ubuntu/snaps para mais detalhes.
+    event: respond
+    type: block
+
+  - node:
+      name: rc-install-docker
+    classifiers:
+      - como instalar docker
+      - docker-compose
+    message:
+      - ótima escolha =)
+      - Nós temos um bom tutorial de instalação com docker em
+      - https://rocket.chat/docs/installation/docker-containers
+    event: respond
+    type: block
+
+  - node:
+      name: rc-install-debian
+    classifiers:
+      - instalar em Debian
+      - debian wheezy
+      - debian apt-get
+    message:
+      - Para instalar o Rocket.Chat no Debian é bem simples, basta seguir esse tutorial
+      - https://rocket.chat/docs/installation/manual-installation/debian
+    event: respond
+    type: block
+
+  - node:
+      name: rc-install-centos
+    classifiers:
+      - instalação em centos
+      - centOS yum linux
+      - Red hat linux
+    message:
+      - A instalação em CentOS não tem segredo, basta dar uma olhada nesse tutorial
+      - https://rocket.chat/docs/installation/manual-installation/centos
+    event: respond
+    type: block
+
+  - node:
+      name: rc-install-aws
+    classifiers:
+      - Amazon Web Services
+      - AWS
+      - Amazon AWS
+    message:
+      - Na AWS é facinho de instalar o Rocket.Chat
+      - Da uma olahda em https://rocket.chat/docs/installation/paas-deployments/aws
+    event: respond
+    type: block
+
+  - node:
+      name: rc-install-manual
+    classifiers:
+      - instalação manual
+      - manual install
+    message:
+      - Para fazer sua própria instalação, será necessário baixar o Bundle do RC,
+      - Dê uma olhada em https://rocket.chat/docs/installation/manual-installation
+      - lá tem como fazer a instalação do SSL, proxy reverso,
+      - tem como usar o PM2, o Systemd, Upstart e mais algumas coisas
+    event: respond
+    type: block
+
+  - node:
+      name: rc-install-macosx
+    classifiers:
+      - como instalar no macbook
+      - instalar no MacOSX
+      - apple mac osx
+    message:
+      - No MAC você vai precisar usar o docker-compose
+      - https://rocket.chat/docs/installation/manual-installation/macosx
+    event: respond
+    type: block
+
+  - node:
+      name: rc-cloud
+    classifiers:
+      - rocketchat cloud
+      - criar meu rocketchat na web
+      - deploy rocketchat online
+      - rocket chat como serviço
+    message:
+      - você pode ter a sua instalação de rocket.chat em segundos na nuvem,
+      - visite https://rocket.chat/deploy
+      - caso queira saber mais, de uma olhada em rocket.chat/docs/installation/rocket-chat-cloud
+    event: respond
+    type: block
+
+  - node:
+      name: rc-contribuir
+    classifiers:
+      - como faço para contrbuir
+      - posso contribuir com o rocketchat
+    message:
+      - A comunidade do Rocket.Chat é como coração de mãe, sempre cabe mais um =)
+      - https://rocket.chat/docs/contributing
+    event: respond
+    type: block
+
+  - node:
+      name: rc-precos
+    classifiers:
+      - quanto custa o rocketchat
+      - qual e o modelo de negocio
+      - qual e o preco do rocketchat
+      - voces hospedam o rocket.chat
+    message:
+      - O rocket.chat é gratuito, você pode baixar e instalar no seu computador.
+      - Mas se quiser criar `seudominio.rocket.chat`, que fica muito legal ;)
+      - você pode querer dar uma olhada na nossa tabela de preços em
+      - https://rocket.chat/hosting
+    event: respond
+    type: block
+
+  - node:
+      name: rc-integracoes
+    classifiers:
+      - o rocket chat integra com
+      - tem como integrar o rocket chat
+      - web hooks de integracao
+      - integracoes com
+    message:
+      - Uma das coisas que eu acho mais legal no Rocket.Chat definitivamente são as integrações $user
+      - a gente não pode mais viver sem elas não é mesmo? Saca só que massa que éx
+      - https://rocket.chat/docs/administrator-guides/integrations
+    event: respond
+    type: block
+
+  - node:
+      name: rc-rest-api
+    classifiers:
+      - rocket tem api rest
+      - como usar a api do rocket
+      - rest api post payload
+    message:
+      - sim, claro que o rocket tem uma API REST super maneira ;)
+      - https://rocket.chat/docs/developer-guides/rest-api
+    event: respond
+    type: block
+
+  - node:
+      name: licenca
+    classifiers:
+      - qual e a sua licença
+      - voce e licenciado como AGPL
+      - sua licenca de software
+      - posso copiar voce
+      - posso ver seu codigo
+      - voce e opensource
+      - voce e um software livre
+    message:
+      - Sou um software livre, licenciado com a MIT =)
+      - tenho uma licença MIT, mas gosto muito das outras licenças opensource...
+      - Eu sou e sempre serei um robô livre, opensource, MIT license. o/
+    event: respond
+    type: random
+
+# Errors
+  - node:
+      name: error-1
+    message:
+      - desculpe, não entendi.. pode tentar usar mais detalhes
+      - como assim?
+      - desculpe, o que quer dizer com isso?
+    type: random
+    event: error
+
+  - node:
+      name: error-2
+    message:
+      - acho que não estou treinado para responder esse tipo de assunto =(
+      - vamos tentar outro assunto?
+      - tem certeza que eu sou o robô certo pra falar sobre isso?
+    type: random
+    event: error
+
+  - node:
+      name: error-3
+    message:
+      - me sinto tão envergonhado, não sei como responder...
+      - seria mais fácil se mudassemos de assunto, pelo menos para mim =p
+      - não sei, definitivamente não sei responder essa pergunta
+    type: random
+    event: error
+
+# + Contato/Ações  +
+# Comandos para o bot executar encaminhando o cliente a um canal que possa resolver o seu problema.
+# - AÇÃO 1: Depois do bot não conseguir resolver o problema do cliente, ele tem envia uma pergunta solicitando um comando (resposta) do cliente para ir para o próximo passo.
+# Ex: Infelizmente não consegui resolver o seu problema :( , mas acho que sei quem pode ajudar! Gostaria de ser encaminhado para uma de nossas áreas? Diga *sim* ou *não*
+#
+# Comando *sim* : Pensando no seu problema, com qual das áreas você gostaria de falar? *Vendas*, *Suporte*, *Financeiro* ( a pessoa responde com a área e o bot capta o comando e envia direto para uma das áreas)
+#
+# Comando *não* : Tudo bem então, muito obrigado por conversar comigo :) Quando precisar não hesite em me chamar!
