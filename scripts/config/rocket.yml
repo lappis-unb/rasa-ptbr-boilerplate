@@ -523,12 +523,32 @@ interactions:
       name: servicos-2
     classifiers:
       - Funciona o white label
+      - Funciona o whitelabel
+      - Funciona o whitelabeling
+      - Funciona o white-label
       - O que é o white label
+      - O que é o whitelabel
+      - O que é o whitelabeling
+      - O que é o white-label
       - Explicar o white label
+      - Explicar o whitelabel
+      - Explicar o white-label
+      - Explicar whitelabeling
       - Falar sobre o white label
+      - Falar sobre o white-label
+      - Falar sobre o whitelabeling
+      - Fale sobre o white label
+      - Fale sobre o whitelabeling
+      - Fale sobre o white-label
       - Incluso no white label
+      - Incluso no whitelabeling
+      - Incluso no white-label
+      - Incluso no whitelabel
       - Operar o white label
       - Utilizar o white label
+      - Utilizar o whitelabel
+      - Utilizar o whitelabeling
+      - Utilizar o white-label
       - Como trabalha white label
       - Sistema de white label
       - Resumo do white label
@@ -547,6 +567,9 @@ interactions:
       - Personalizar apps
       - Customizar apps
       - White label em apps
+      - Whitelabel em apps
+      - White-label em apps
+      - Whitelabeling em apps
       - Apps disponiveis para white label
       - Modificar os apps
     message:
@@ -561,9 +584,27 @@ interactions:
     classifiers:
       - Necessário pagar pelo white label
       - Fazer white label sozinho
+      - Fazer whitelabel sozinho
+      - Fazer whitelabeling sozinho
+      - Fazer white-label sozinho
       - Fazer white label por si só
       - White label sem pagar
+      - Whitelabel sem pagar
+      - whitelabeling sem pagar
+      - White-label sem pagar
+      - Customização gratuita 
+      - Customização de graça 
+      - Customização não paga
+      - Não pagar whitelabel
+      - Não pagar whitelabeling
+      - Não pagar white-label
+      - Não pagar white label 
       - Alternativa sem pagamento
+      - Alternativa para não pagar whitelabel
+      - Alternativa para não pagar whitelabeling
+      - Alternativa para não pagar white label 
+      - Alternativa para não pagar white-label 
+      - Não pagar customização 
     message:
       - Se você entender de programação, pode fazer sozinho!
       - Mas se quiser salvar tempo da sua equipe e deixar com a gente para não ter erro. Com um pequeno valor nós mudamos tudo rapidinho.
