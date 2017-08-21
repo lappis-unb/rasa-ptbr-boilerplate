@@ -38,6 +38,17 @@ interactions:
     event: respond
     type: block
 
+    - node:
+      name: random
+    classifiers:
+      - Não perguntei isso
+      - Não era isso que eu disse
+    message:
+      - Desculpe, nem sempre eu acerto. Pode ser mais específico?
+    context: clear
+    event: respond
+    type: block
+    
   - node:
       name: saudacao-1
     classifiers:
