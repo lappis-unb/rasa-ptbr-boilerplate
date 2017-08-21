@@ -94,7 +94,7 @@ interactions:
       - Estão contratando
     message:
       - Vai me dizer que quer trabalhar com a gente? Eba!
-      - Você pode procurar por vagas abertas aqui nesse https://rocket.chat/jobs  e qualquer coisa envia um email pra jobs@rocket.chat que o pessoal pode te dar mais detalhes!
+      - 'Você pode procurar por vagas abertas aqui nesse https://rocket.chat/jobs  e qualquer coisa envia um email pra jobs@rocket.chat que o pessoal pode te dar mais detalhes!'
     event: respond
     type: block
 
@@ -1129,6 +1129,11 @@ interactions:
       name: produto-1
     classifiers:
       - O que é o produto
+      - O que é o Rocket.chat
+      - O que é rocket
+      - Como funciona o produto
+      - Como funciona a Rocket.Chat
+      - Como que funciona
       - O que é a plataforma
       - Para que serve a plataforma
       - Para que serve o Rocket.chat
@@ -1143,8 +1148,8 @@ interactions:
       - Por que o produto foi criado
     message:
       - Nós oferecemos uma plataforma de comunicação totalmente open source (código aberto), oferecendo além das ferramentas de Chat e Live Chat totalmente gratuitas, diversos serviços para suporte, manutenção e customização da plataforma.
-      - É como se fossemos uma alternativa flexível e atualizada do Slack. Atualmente possuímos  a maior e mais ativa comunidade de colaboradores entre os competidores da nossa plataforma :).
-      - Você pode ver todos os detalhes do produto nesse link aqui!
+      - 'É como se fossemos uma alternativa flexível e atualizada do Slack. Atualmente possuímos  a maior e mais ativa comunidade de colaboradores entre os competidores da nossa plataforma :).
+      - 'Você pode ver todos os detalhes do produto aqui: https://rocket.chat/solutions
     event: respond
     type: block
 
@@ -1178,9 +1183,9 @@ interactions:
     message:
       - O Rocket.Chat é uma ferramenta que está em constante desenvolvimento por ser open source, permitindo que o produto seja continuamente melhorado.
       - Além de possibilitar um canal de comunicação muito efetivo para times trabalharem em tempo real, possibilita uma grande interação com clientes, por não ter limite de usuários, possibilitar conversas entre empresas e ter o recurso de LiveChat integrado.
-      - Por ser uma plataforma que possui diversas integrações e funciona em diferentes contextos, permitimos que você acesse suas conversas de onde estiver :)
+      - 'Por ser uma plataforma que possui diversas integrações e funciona em diferentes contextos, permitimos que você acesse suas conversas de onde estiver :)
       - Ah, também somos gratuítos <3
-      - Você pode ver os relatos dos nossos clientes aqui e maiores explicações sobre o produto na nessa página.
+      - 'Você pode ver os relatos dos nossos clientes aqui (https://rocket.chat/customers) e maiores explicações sobre o produto na nessa página.
     event: respond
     type: block
 
@@ -1235,8 +1240,8 @@ interactions:
       - Encontrar o código
       - Achar o código
     message:
-      - O nosso código está disponível aqui.
-      - Nossa plataforma é totalmente open source, está tudo disponível aqui.
+      - 'O nosso código está disponível em https://github.com/rocketchat.' 
+      - 'Nossa plataforma é totalmente open source, está tudo disponível em https://github.com/rocketchat.'
     event: respond
     type: random
 
@@ -1447,7 +1452,7 @@ interactions:
       - O Download é aberto para todos! Não existe nenhuma restrição.
       - Fazer o download significa que você estará baixando o nosso aplicativo para utilizar no seu computador ou dispositivo móvel.
       - Se você estiver se referindo ao espaço ocupado quando uma organização decide hospedar a plataforma no seu servidor, isso também ocupa um espaço pequeno.
-      - Caso queira um atendimento super especial, flexibilidade e agilidade, nós também oferecemos a possibilidade de hospedar a Rocket na nuvem. Você pode ver os detalhes sobre o assunto aqui.
+      - 'Caso queira um atendimento super especial, flexibilidade e agilidade, nós também oferecemos a possibilidade de hospedar a Rocket na nuvem. Você pode ver os detalhes sobre o assunto em https://rocket.chat/hosting.
     event: respond
     type: block
 
@@ -1489,7 +1494,7 @@ interactions:
     message:
       - Você pode fazer o download do app no seu mobile ou desktop.
       - Antes de poder utilizar o seu Chat próprio, você precisa integrar a plataforma no seu servidor ou utilizar o nosso serviço de hosting (pago).
-      - Você pode ver todos os detalhes sobre essas duas opções aqui.
+      - 'Você pode ver todos os detalhes sobre essas duas opções em https://rocket.chat/solutions.'
     event: respond
     type: block
 
@@ -1508,9 +1513,8 @@ interactions:
       - Como funciona cadastro
     message:
       - 'Se a sua empresa já usa a Rocket.Chat, só precisamos do seu nome, e-mail e senha. Você só precisa fazer o download do app ou acessar pela internet com o servidor da sua empresa, exemplo: https://empresa.rocket.chat.'
-      - Se a sua empresa ainda não usa a plataforma, você pode testar o produto através da nossa plataforma aberta(Versão Demo disponível no site https://rocket.chat/) ou então já começar criando o seu servidor, assim você terá uma plataforma feita para a sua organização e você poderá criar um time de administradores.
-      - Se você ficar com alguma dúvida, pode ver a nossa página explicativa sobre todas as possibilidades de fazer o seu cadastro aqui.
-      - Você pode instalar a plataforma no seu próprio servidor ou em uma nuvem ou na nossa nuvem e obter todo o nosso suporte :) Olhe mais informações sobre isso aqui. !
+      - 'Se a sua empresa ainda não usa a plataforma, você pode testar o produto através da nossa plataforma aberta(Versão Demo disponível no site https://rocket.chat/) ou então já começar criando o seu servidor, assim você terá uma plataforma feita para a sua organização e você poderá criar um time de administradores.
+      - 'Você pode instalar a plataforma no seu próprio servidor ou em uma nuvem ou na nossa nuvem e obter todo o nosso suporte :) Olhe mais informações sobre isso em https://rocket.chat/solutions. !
     event: respond
     type: block
 
@@ -1688,7 +1692,7 @@ interactions:
       - Controle de conversas
     message:
       - Se você for o administrador você pode controlar a privacidade dos seus canais, editar quem pode falar e contribuir e quem só pode visualizar, você adiciona ou exclui usuários, entre outras possibilidades.
-      - O Guia do administrador pode ser encontrado aqui.
+      - 'O Guia do administrador pode ser encontrado em https://rocket.chat/docs/administrator-guides/#administrator-guides.'
     event: respond
     type: block
 
@@ -1768,8 +1772,8 @@ interactions:
       - Finalidade LiveChat
       - O que fazer com LiveChat
     message:
-      - Eu estou falando com você através de um LiveChat :) Quando você usa a plataforma do Rocket.Chat você pode ativar a opção de LiveChat e integrar o LiveCHat com o site do seu business, podendo responder seus clientes de forma humana ou ativar um Bot como eu! Todas as informações sobre isso estão aqui.
-      - Ora bolas, Livechat é um chat vivo que pode ser integrado ao seu site para que você tire dúvidas dos visitantes da página, interaja com potenciais clientes e amplie suas vendas. O nosso LiveChat se integra com a plataforma do Rocket.chat. As informações de implementação estão aqui.
+      - 'Eu estou falando com você através de um LiveChat :) Quando você usa a plataforma do Rocket.Chat você pode ativar a opção de LiveChat e integrar o LiveCHat com o site do seu business, podendo responder seus clientes de forma humana ou ativar um Bot como eu! Todas as informações sobre isso estão em https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
+      - 'Ora bolas, Livechat é um chat vivo que pode ser integrado ao seu site para que você tire dúvidas dos visitantes da página, interaja com potenciais clientes e amplie suas vendas. O nosso LiveChat se integra com a plataforma do Rocket.chat. As informações de implementação estão em https://rocket.chat/docs/administrator-guides/livechat/#livechat'
     event: respond
     type: random
 
@@ -1783,8 +1787,8 @@ interactions:
       - LiveChat está incluso no pacote
       - Pagar LiveChat
       - Resposta
-      - Nós não cobramos pelo LiveChat, para ativar, basta você ser o administrador da plataforma e seguir o passo a passo aqui.
-      - É de graça :) Sugiro testar, é super divertido. Todas as informações estão aqui.
+      - 'Nós não cobramos pelo LiveChat, para ativar, basta você ser o administrador da plataforma e seguir o passo a passo em https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
+      - 'É de graça :) Sugiro testar, é super divertido. Todas as informações estão aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat. '
     event: respond
     type: random
 
@@ -1799,7 +1803,7 @@ interactions:
     message:
       - Assim como qualquer LiveChat, você pode se conectar com as pessoas que passam pela sua página, melhorando o seu relacionamento com clientes e ampliando a sua conversão de venda pela internet.
       - Por ser o LiveChat da Rocket.Chat, nós permitimos que a sua equipe utilize o mesmo canal de comunicação interna para responder os interessados externos.
-      - Você pode colocar uma ordem de resposta conectado com os seus vendedores, você pode colocar diferentes robôs para responder, etc. Todas as informações estão aqui.
+      - 'Você pode colocar uma ordem de resposta conectado com os seus vendedores, você pode colocar diferentes robôs para responder, etc. Todas as informações estão aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat. '
     event: respond
     type: block
 
@@ -1812,7 +1816,7 @@ interactions:
       - Para quem vai o LiveChat
     message:
       - Quando você ativa a função do LiveChat, o próprio time que usa o canal pode responder, além dessa opção você pode contratar alguém para isso.
-      - Para realizar uma triagem do contato, você pode integrar um Bot como eu na plataforma. Todas as informações estão aqui.
+      - 'Para realizar uma triagem do contato, você pode integrar um Bot como eu na plataforma. Todas as informações estão aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat.
     event: respond
     type: block
 
@@ -1826,7 +1830,7 @@ interactions:
       - Mensagens Automáticas
       - Respostas pré-prontas
     message:
-      - Você pode integrar um Bot ao seu canal de Livechat. As informações estão aqui.
+      - 'Você pode integrar um Bot ao seu canal de Livechat. As informações estão aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
     event: respond
     type: block
 
@@ -1838,8 +1842,8 @@ interactions:
       - Integrar LiveChat ao site
       - Utilização do LiveChat no meu site
     message:
-      - Você precisa ser o administrador do seu servidor para ativar o Livechat. Todo o passo a passo está aqui.
-      - Essa resposta demora um pouquinho, olha aqui que você acha todas as informações.
+      - 'Você precisa ser o administrador do seu servidor para ativar o Livechat. Todo o passo a passo está aqui;https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
+      - 'Essa resposta demora um pouquinho, olha aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat que você acha todas as informações.
     event: respond
     type: random
 
@@ -1852,7 +1856,7 @@ interactions:
       - Customizar LiveChat
     message:
       - Sim! Pode! Olha nesse link que você pode encontrar como fazer isso.
-      - Tudo que você precisa saber está aqui.
+      - 'Tudo que você precisa saber está aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
     event: respond
     type: random
 
@@ -1866,7 +1870,7 @@ interactions:
       - Responder clientes
     message:
       - Nós não oferecemos esse serviço, mas você pode buscar algum parceiro que o faça!
-      - Entretanto, você pode integrar um Bot no LiveChat para realizar uma triagem do relacionamento com a sua empresa. Você pode ver essas informações aqui.
+      - 'Entretanto, você pode integrar um Bot no LiveChat para realizar uma triagem do relacionamento com a sua empresa. Você pode ver essas informações aqui: https://rocket.chat/docs/administrator-guides/livechat/#livechat.'
     event: respond
     type: block
 
