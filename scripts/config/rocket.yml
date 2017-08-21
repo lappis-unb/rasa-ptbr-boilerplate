@@ -1170,268 +1170,285 @@ interactions:
     level: context
     classifiers:
       - Tamanho comunidade de desenvolvedores
-  Número de pessoas na plataforma
-  Tamanho da plataforma
-  Número de usuários da plataforma
-  Quantidade de usuários da plataforma
-  Quantos colaboradores da plataforma
-  Quantos desenvolvedores da plataforma
-  Tamanho comunidade
+      - Número de pessoas na plataforma
+      - Tamanho da plataforma
+      - Número de usuários da plataforma
+      - Quantidade de usuários da plataforma
+      - Quantos colaboradores da plataforma
+      - Quantos desenvolvedores da plataforma
+      - Tamanho comunidade
     message:
-  Estamos em constante expansão!
-   É difícil dizer o tamanho da nossa comunidade porque cotidianamente temos novos usuários e desenvolvedores.
-   Mas temos mais de 500 pessoas envolvidas com o seu desenvolvimento e mais de 1500 servidores criados.
-      event: respond
-  type: block
-  + Produtos +
-  O que é o produto?
+      - Estamos em constante expansão!
+      - É difícil dizer o tamanho da nossa comunidade porque cotidianamente temos novos usuários e desenvolvedores.
+      - Mas temos mais de 500 pessoas envolvidas com o seu desenvolvimento e mais de 1500 servidores criados.
+    event: respond
+    type: block
+
+  # Produtos
+  # O que é o produto?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  O que é o produto
-  O que é a plataforma
-  Para que serve a plataforma
-  Para que serve o Rocket.chat
-  O que é o Rocket.chat
-  Qual é o produto
-  Explicacao do produto
-  Finalidade do produto
-  Para que serve o produto
-  Produtos e servicos relacionados
-  Informações sobre o serviço
-  Resumo do produto
-  Por que o produto foi criado
+      - O que é o produto
+      - O que é a plataforma
+      - Para que serve a plataforma
+      - Para que serve o Rocket.chat
+      - O que é o Rocket.chat
+      - Qual é o produto
+      - Explicacao do produto
+      - Finalidade do produto
+      - Para que serve o produto
+      - Produtos e servicos relacionados
+      - Informações sobre o serviço
+      - Resumo do produto
+      - Por que o produto foi criado
     message:
-  Nós oferecemos uma plataforma de comunicação totalmente open source (código aberto), oferecendo além das ferramentas de Chat e Live Chat totalmente gratuitas, diversos serviços para suporte, manutenção e customização da plataforma.
-  É como se fossemos uma alternativa flexível e atualizada do Slack. Atualmente possuímos  a maior e mais ativa comunidade de colaboradores entre os competidores da nossa plataforma :).
-   Você pode ver todos os detalhes do produto nesse link aqui!
-      event: respond
-  type: block
-  Em caso de problemas em relação ao produto, como devo proceder?
+      - Nós oferecemos uma plataforma de comunicação totalmente open source (código aberto), oferecendo além das ferramentas de Chat e Live Chat totalmente gratuitas, diversos serviços para suporte, manutenção e customização da plataforma.
+      - É como se fossemos uma alternativa flexível e atualizada do Slack. Atualmente possuímos  a maior e mais ativa comunidade de colaboradores entre os competidores da nossa plataforma :).
+      - Você pode ver todos os detalhes do produto nesse link aqui!
+    event: respond
+    type: block
+
+  # Em caso de problemas em relação ao produto, como devo proceder?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Problemas com o produto
-  Dúvidas sobre o produto
-  Auxílio com o produto
-  Suporte com o produto
-  Ajuda com o produto
+      - Problemas com o produto
+      - Dúvidas sobre o produto
+      - Auxílio com o produto
+      - Suporte com o produto
+      - Ajuda com o produto
     message:
-  Se você tiver qualquer problema, fala com a gente! support@rocket.chat
-  Fácil, se tiver algum problema ou dificuldade utilizando a plataforma, chama a gente! support@rocket.chat.
-  Você pode olhar no nosso FAQ ou falar com a gente support@rocket.chat
-      event: respond
-  type: random
-  Como instalar o Rocket.Chat vai me beneficiar?
+      - Se você tiver qualquer problema, fala com a gente! support@rocket.chat
+      - Fácil, se tiver algum problema ou dificuldade utilizando a plataforma, chama a gente! support@rocket.chat.
+      - Você pode olhar no nosso FAQ ou falar com a gente support@rocket.chat
+    event: respond
+    type: random
+
+  # Como instalar o Rocket.Chat vai me beneficiar?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Diferenciais do produto
-  Benefícios da Rocket.Chat
-  Benefícios do produto
-  Vantagens da Rocket.Chat
-  Porque usar o produto
-  Quais os beneficios do open source
-  Como o produto pode aumentar as minhas vendas
+      - Diferenciais do produto
+      - Benefícios da Rocket.Chat
+      - Benefícios do produto
+      - Vantagens da Rocket.Chat
+      - Porque usar o produto
+      - Quais os beneficios do open source
+      - Como o produto pode aumentar as minhas vendas
     message:
-  O Rocket.Chat é uma ferramenta que está em constante desenvolvimento por ser open source, permitindo que o produto seja continuamente melhorado.
-  Além de possibilitar um canal de comunicação muito efetivo para times trabalharem em tempo real, possibilita uma grande interação com clientes, por não ter limite de usuários, possibilitar conversas entre empresas e ter o recurso de LiveChat integrado.
-  Por ser uma plataforma que possui diversas integrações e funciona em diferentes contextos, permitimos que você acesse suas conversas de onde estiver :)
-  Ah, também somos gratuítos <3
-  Você pode ver os relatos dos nossos clientes aqui e maiores explicações sobre o produto na nessa página.
-      event: respond
-  type: block
-  É necessária a conexão à Internet para o funcionamento do produto?
+      - O Rocket.Chat é uma ferramenta que está em constante desenvolvimento por ser open source, permitindo que o produto seja continuamente melhorado.
+      - Além de possibilitar um canal de comunicação muito efetivo para times trabalharem em tempo real, possibilita uma grande interação com clientes, por não ter limite de usuários, possibilitar conversas entre empresas e ter o recurso de LiveChat integrado.
+      - Por ser uma plataforma que possui diversas integrações e funciona em diferentes contextos, permitimos que você acesse suas conversas de onde estiver :)
+      - Ah, também somos gratuítos <3
+      - Você pode ver os relatos dos nossos clientes aqui e maiores explicações sobre o produto na nessa página.
+    event: respond
+    type: block
+
+  # É necessária a conexão à Internet para o funcionamento do produto?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Conectar à Internet
-  Usar offline
-  Necessária à Internet
-  Conectar a rede
+      - Conectar à Internet
+      - Usar offline
+      - Necessária à Internet
+      - Conectar a rede
     message:
-  Para acessar remotamente, é preciso ter internet.
-  Entretanto, não é preciso ter internet se você baixar a plataforma na sua rede local e tiver os usuários cadastrados.
-      event: respond
-  type: block
-  Existe limite no período de teste?
+      - Para acessar remotamente, é preciso ter internet.
+      - Entretanto, não é preciso ter internet se você baixar a plataforma na sua rede local e tiver os usuários cadastrados.
+    event: respond
+    type: block
+
+  # Existe limite no período de teste?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Limite do período de teste
-  Duração do período de teste
-  Tempo máximo do período de teste
-  Extensão do período de teste
+      - Limite do período de teste
+      - Duração do período de teste
+      - Tempo máximo do período de teste
+      - Extensão do período de teste
     message:
-  Já ouviu falar que o que é bom dura pouco? Então… O período de teste do Hosting é limitado. Mas como o nosso produto é diferenciado, a plataforma vai ser eternamente gratuita!
-  A plataforma vai continuar sendo gratuita, mas a versão demo tem tempo finito de período de teste.
-      event: respond
-  type: random
-  A Rocket.Chat suporta usuários externos?
+      - Já ouviu falar que o que é bom dura pouco? Então… O período de teste do Hosting é limitado. Mas como o nosso produto é diferenciado, a plataforma vai ser eternamente gratuita!
+      - A plataforma vai continuar sendo gratuita, mas a versão demo tem tempo finito de período de teste.
+    event: respond
+    type: random
+
+  # A Rocket.Chat suporta usuários externos?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Entrar usuários externos
-  Suporte aos usuários externos
-  Pessoas de fora no chat
-  É necessário estar conectado
+      - Entrar usuários externos
+      - Suporte aos usuários externos
+      - Pessoas de fora no chat
+      - É necessário estar conectado
     message:
-  Quem decide se quer adicionar usuários externos ou não no seu servidor é o administrador!
-  Dentro de cada server o administrador pode escolher quem vai adicionar ou tirar :)
-      event: respond
-  type: random
-  Consigo acessar o código do produto?
+      - Quem decide se quer adicionar usuários externos ou não no seu servidor é o administrador!
+      - Dentro de cada server o administrador pode escolher quem vai adicionar ou tirar :)
+    event: respond
+    type: random
+
+
+  # Consigo acessar o código do produto?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Acessar o código
-  Programar o produto
-  Encontrar o código
-  Achar o código
-  Resposta
-  O nosso código está disponível aqui.
-  Nossa plataforma é totalmente open source, está tudo disponível aqui.
-      event: respond
-  type: random
-  Qual o número de usuários que a plataforma suporta?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Limite de usários
-  Número máximo de usuários
-  Quantos usuários pode
-  Restrição de usuários
-  Resposta
-  Ilimitado <3
-  Cabe todo mundo aqui! Não temos limite de usuários, canais, convidados, mensagens, etc.
-  Vish, não se preocupa com isso, cabe todo mundo.
-      event: respond
-  type: random
-  Quem administra o pagamento?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Quem paga a rocket.chat
-  Quem administra a conta
-  Quem tem contato com a Rocket na versão paga
-  Quem faz o pagamento dos serviços/ hosting
-  Resposta
-  Nós cobramos por serviços prestados e hosting. Cada empresa que solicita esse tipo de serviço seleciona algumas pessoas para serem os responsáveis desse relacionamento. Quem faz o pagamento depende da própria organização da empresa.
-  Nós somos gratuitos, mas qualquer empresa pode optar produtos pagos e selecionar algumas pessoas para manter o relacionamento com os nossos desenvolvedores. Já o pagamento depende da empresa e de como ela quer se organizar, para a gente não importa se é o CFO ou o estagiário que efetua o pagamento.
-      event: respond
-  type: random
-  Quais as formas de pagamento da plataforma?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Como pagar os serviços/ hosting
-  Como realizar o pagamento da plataforma
-  Como pago os serviços/ hosting
-  Resposta
-  Então, aceitamos de tudo hehe Transferencia, depósito, boleto,etc..
-  Pode pagar de diversas formas! É só clicar no Hosting que as opções vão aparecer pra você!
-      event: respond
-  type: random
-  Qual a diferença entre Demo e Hosting e Download?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Diferenca demo e hosting
-  Demo versus hosting
-  Demo contra hosting
-  O que é demo e hosting
-  Resposta
-  Os usuários da plataforma possuem essas três opções, mas com objetivos diferentes.
-  A versão demo sempre vai existir e funciona separado do resto, ela serve para testar o chat, para conversar com os desenvolvedores e pessoas do mundo todo.
-  Quando uma organização ou time decide usar a plataforma ela pode fazer o download no seu servidor ou usar o nosso serviço de hosting na nuvem.
-      event: respond
-  type: block
-  Qual a diferença entre fazer download e hosting?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Diferenca entre download e pagar pelo hosting
-  Download versus pagar pelo hosting
-  Fazer o download contra pagar pelo hosting
-  Explicar download e pagar pelo demo
-  Resposta
-  São duas coisas que andam em conjunto :)
-  Quando uma empresa decide usar o Rocket.Chat ela precisa hospedar a plataforma em algum lugar, que pode ser tanto no servidor próprio ou quanto na nossa nuvem. O download pode ser tanto para integrar a Rocket no seu servidor, quando para baixar a plataforma no seu dispositivo. A partir disso você terá que usar o link do servidor que você está utilizando para funcionar :)
-  Você pode ter todas essas informações sobre essa diferença de hospedagem aqui: https://rocket.chat/hosting.
-      event: respond
-  type: random
-  Qual a diferença entre usar o servidor próprio ou pagar pelo servidor na nuvem da Rocket.Chat?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Diferença entre servidor próprio e pagar pelo servidor
-  O que é hosting
-  Por que pagar pelo hosting
-  Por que pagar pela nuvem
-  Quais os benefícios de usar na nuvem
-  Hosting próprio versus pagar pelo hosting na nuvem da Rocket
-  Por que pagar pelo hosting
-  Resposta
-  A plataforma pode ficar hospedada no seu servidor ou você pode usar o nosso servidor na nuvem e desfrutar dos nossos serviços de suporte! Você pode ter todas essas informações aqui: https://rocket.chat/hosting.
-  Também tive essa dúvida! Tem várias diferenças entre hosting e download, dá uma olhada nesse artigo que ele explica direitinho: https://rocket.chat/hosting.
-      event: respond
-  type: random
-  Como eu utilizo o Demo?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Utilizar o demo
-  Como fazer o demo
-  O que fazer com o demo
-  Mexer no demo
-  Porque se chama demo
-  Nome demo
-  Significado de demo
-  Explique demo
+      - Acessar o código
+      - Programar o produto
+      - Encontrar o código
+      - Achar o código
     message:
-  Basta colocar o teu e-mail e começar a usar! O Demo é a versão aberta do Rocket.chat para que pessoas do mundo todo possam conversar e testar a plataforma.
-  É uma versão para testar o Rocket.Chat, uma demonstração. Sem administradores.
-      event: respond
-  type: random
-  Depois de fazer o download, como uso?
+      - O nosso código está disponível aqui.
+      - Nossa plataforma é totalmente open source, está tudo disponível aqui.
+    event: respond
+    type: random
+
+# Qual o número de usuários que a plataforma suporta?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Como usar após download
-  Depois do download
-  Uso pós download
-  Utilização do download
-  O que faço após fazer o download
-  Como acesso depois de fazer download
+      - Limite de usários
+      - Número máximo de usuários
+      - Quantos usuários pode
+      - Restrição de usuários
     message:
-  Após o download você precisa apenas logar no server da sua organização, exemplo: https://empresa.rocket.chat, caso não tenha criado o server da empresa ainda, você pode hospedar seu servidor conosco na nuvem ou no seu próprio.
-  A diferença dos dois processos está aqui: https://rocket.chat/hosting.
-      event: respond
-  Type:Block
-  Posso usar a versão Demo com os meus amigos?
+      - Ilimitado <3
+      - Cabe todo mundo aqui! Não temos limite de usuários, canais, convidados, mensagens, etc.
+      - Vish, não se preocupa com isso, cabe todo mundo.
+    event: respond
+    type: random
+
+  # Quem administra o pagamento?
   - node:
       name: trabalho-
     level: context
     classifiers:
-  Demo com amigos
-  Usar demo com amigos
-  Pode demo com amigos
-  Uso da demo com amigos
+      - Quem paga a rocket.chat
+      - Quem administra a conta
+      - Quem tem contato com a Rocket na versão paga
+      - Quem faz o pagamento dos serviços/ hosting
+    message:
+      - Nós cobramos por serviços prestados e hosting. Cada empresa que solicita esse tipo de serviço seleciona algumas pessoas para serem os responsáveis desse relacionamento. Quem faz o pagamento depende da própria organização da empresa.
+      - Nós somos gratuitos, mas qualquer empresa pode optar produtos pagos e selecionar algumas pessoas para manter o relacionamento com os nossos desenvolvedores. Já o pagamento depende da empresa e de como ela quer se organizar, para a gente não importa se é o CFO ou o estagiário que efetua o pagamento.
+    event: respond
+    type: random
+
+  # Quais as formas de pagamento da plataforma?
+  - node:
+      name: trabalho-
+    level: context
+    classifiers:
+      - Como pagar os serviços/ hosting
+      - Como realizar o pagamento da plataforma
+      - Como pago os serviços/ hosting
+    message:
+      - Então, aceitamos de tudo hehe Transferencia, depósito, boleto,etc..
+      - Pode pagar de diversas formas! É só clicar no Hosting que as opções vão aparecer pra você!
+    event: respond
+    type: random
+
+  # Qual a diferença entre Demo e Hosting e Download?
+  - node:
+      name: trabalho-
+    level: context
+    classifiers:
+      - Diferenca demo e hosting
+      - Demo versus hosting
+      - Demo contra hosting
+      - O que é demo e hosting
+    message:
+      - Os usuários da plataforma possuem essas três opções, mas com objetivos diferentes.
+      - A versão demo sempre vai existir e funciona separado do resto, ela serve para testar o chat, para conversar com os desenvolvedores e pessoas do mundo todo.
+      - Quando uma organização ou time decide usar a plataforma ela pode fazer o download no seu servidor ou usar o nosso serviço de hosting na nuvem.
+    event: respond
+    type: block
+
+  # Qual a diferença entre fazer download e hosting?
+  - node:
+      name: trabalho-
+    level: context
+    classifiers:
+      - Diferenca entre download e pagar pelo hosting
+      - Download versus pagar pelo hosting
+      - Fazer o download contra pagar pelo hosting
+      - Explicar download e pagar pelo demo
+    message:
+      - São duas coisas que andam em conjunto :)
+      - Quando uma empresa decide usar o Rocket.Chat ela precisa hospedar a plataforma em algum lugar, que pode ser tanto no servidor próprio ou quanto na nossa nuvem. O download pode ser tanto para integrar a Rocket no seu servidor, quando para baixar a plataforma no seu dispositivo. A partir disso você terá que usar o link do servidor que você está utilizando para funcionar :)
+      - 'Você pode ter todas essas informações sobre essa diferença de hospedagem aqui: https://rocket.chat/hosting'
+    event: respond
+    type: random
+
+  # Qual a diferença entre usar o servidor próprio ou pagar pelo servidor na nuvem da Rocket.Chat?
+  - node:
+      name: trabalho-
+    level: context
+    classifiers:
+      - Diferença entre servidor próprio e pagar pelo servidor
+      - O que é hosting
+      - Por que pagar pelo hosting
+      - Por que pagar pela nuvem
+      - Quais os benefícios de usar na nuvem
+      - Hosting próprio versus pagar pelo hosting na nuvem da Rocket
+      - Por que pagar pelo hosting
+    message:
+      - 'A plataforma pode ficar hospedada no seu servidor ou você pode usar o nosso servidor na nuvem e desfrutar dos nossos serviços de suporte! Você pode ter todas essas informações aqui: https://rocket.chat/hosting'
+      - 'Também tive essa dúvida! Tem várias diferenças entre hosting e download, dá uma olhada nesse artigo que ele explica direitinho: https://rocket.chat/hosting'
+    event: respond
+    type: random
+
+# Como eu utilizo o Demo?
+  - node:
+      name: trabalho-
+    level: context
+    classifiers:
+      - Utilizar o demo
+      - Como fazer o demo
+      - O que fazer com o demo
+      - Mexer no demo
+      - Porque se chama demo
+      - Nome demo
+      - Significado de demo
+      - Explique demo
+    message:
+      - Basta colocar o teu e-mail e começar a usar! O Demo é a versão aberta do Rocket.chat para que pessoas do mundo todo possam conversar e testar a plataforma.
+      - É uma versão para testar o Rocket.Chat, uma demonstração. Sem administradores.
+    event: respond
+    type: random
+
+  # Depois de fazer o download, como uso?
+  - node:
+      name: trabalho-
+    level: context
+    classifiers:
+      - Como usar após download
+      - Depois do download
+      - Uso pós download
+      - Utilização do download
+      - O que faço após fazer o download
+      - Como acesso depois de fazer download
+    message:
+      - 'Após o download você precisa apenas logar no server da sua organização, exemplo: https://empresa.rocket.chat, caso não tenha criado o server da empresa ainda, você pode hospedar seu servidor conosco na nuvem ou no seu próprio'
+      - 'A diferença dos dois processos está aqui: https://rocket.chat/hosting'
+    event: respond
+    Type: Block
+
+  # Posso usar a versão Demo com os meus amigos?
+  - node:
+      name: trabalho-
+    level: context
+    classifiers:
+      - Demo com amigos
+      - Usar demo com amigos
+      - Pode demo com amigos
+      - Uso da demo com amigos
     message:
   Sim! Você pode usar a versão demo com quem quiser.
   Sim, você pode.
