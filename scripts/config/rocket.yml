@@ -300,7 +300,7 @@ interactions:
     message:
       - Claro! Não se preocupe, nós cuidamos de tudo.
       - Hoje nós temos diversos clientes que precisam de uma segurança fortíssima, como bancos e órgãos públicos.
-      - Você pode ver detalhes sobre isso na página: https://rocket.chat/security
+      - 'Você pode ver detalhes sobre isso na página: https://rocket.chat/security'
     event: respond
     type: block
 
@@ -523,7 +523,6 @@ interactions:
       - Fazer white label sozinho
       - Fazer white label por si só
       - White label sem pagar
-      - Alternativa sem pagamento
     message:
       - Se você entender de programação, pode fazer sozinho!
       - Mas se quiser salvar tempo da sua equipe e deixar com a gente para não ter erro. Com um pequeno valor nós mudamos tudo rapidinho.
@@ -2343,8 +2342,8 @@ interactions:
   - node:
       name: yoda-quote
     classifiers:
-      - mestre yoda
-      - citação de starwars
+      - conhece o mestre yoda
+      - faça uma citação de starwars
       - cite yoda
       - sabedoria jedi
     message:
