@@ -45,21 +45,24 @@ interactions:
   - node:
       name: saudacao-1
     classifiers:
-      - ola devi
+      - ola
       - ola pessoal
       - ola
-      - como vai voce
+      - como vai
       - tudo bom
       - oi como vai
       - tudo bem
+      - bom dia
+      - boa tarde
+      - boa noite
+      - hey
+      - e ae
+      - oi oi oi
+      - salve
+      - como ta?
     message:
       - olá $user, eu vou bem e você?
       - estou feliz de estar aqui =)
-    next:
-      interactions:
-        - to-mal
-        - to-bem
-      trust: .8
     event: respond
     type: block
 
@@ -973,10 +976,11 @@ interactions:
   - node:
       name: preco-3
     classifiers:
-      - Pagamento usuários desativados
+      - Pagamento de usuarios desativados
       - Usuários cancelados
-      - Exclusão de usuários
-      - Cobrar usuários desativados
+      - Exclusão de usuarios
+      - Cobrar usuarios desativados
+      - cobrar por usuarios
     message:
       - Nós não cobramos o uso da plataforma do Rocket.chat por usuários. No caso de hospedagem
       - Então depois que você fecha um pacote, pode colocar e adicionar usuários dentro dos limites do pacote a vontade
@@ -1149,11 +1153,9 @@ interactions:
   - node:
       name: produto-2
     classifiers:
-      - Problemas com o produto
-      - Dúvidas sobre o produto
-      - Auxílio com o produto
-      - Suporte com o produto
-      - Ajuda com o produto
+      - tenho problemas com o produto
+      - quem consegue resolver meus problemas
+      - problemas com o produto
     message:
       - Se você tiver qualquer problema, fala com a gente! support@rocket.chat
       - Fácil, se tiver algum problema ou dificuldade utilizando a plataforma, chama a gente! support@rocket.chat.
@@ -1165,13 +1167,11 @@ interactions:
   - node:
       name: produto-3
     classifiers:
-      - Diferenciais do produto
-      - Benefícios da Rocket.Chat
-      - Benefícios do produto
+      - Beneficios do rocket.chat
       - Vantagens da Rocket.Chat
       - Porque usar o produto
-      - Quais os beneficios do open source
-      - Como o produto pode aumentar as minhas vendas
+      - porque usar o rocketchat
+      - rocketchat aumenta as vendas
     message:
       - O Rocket.Chat é uma ferramenta que está em constante desenvolvimento por ser open source, permitindo que o produto seja continuamente melhorado.
       - Além de possibilitar um canal de comunicação muito efetivo para times trabalharem em tempo real, possibilita uma grande interação com clientes, por não ter limite de usuários, possibilitar conversas entre empresas e ter o recurso de LiveChat integrado.
