@@ -6,9 +6,7 @@ answers = {}
 
 class configure
   constructor: (@interaction) ->
-    console.log('INTERACTION!!!', @interaction)
   process: (msg) =>
-    console.log('PROCESS!!!', msg)
     if @interaction.roleRequired?
         #TODO: Check if user has role needed
         console.log('ROLE REQUIRED...', @interaction.roleRequired)
