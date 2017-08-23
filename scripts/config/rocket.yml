@@ -1120,18 +1120,10 @@ interactions:
     event: respond
     type: block
 
-<<<<<<< HEAD
-  # Produtos
-  # O que é o produto?
-  - node:
-      name: trabalho-
-    level: context
-=======
   # + Produtos +
   # O que é o produto?
   - node:
       name: produto-1
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - O que é o produto
       - O que é a plataforma
@@ -1155,12 +1147,7 @@ interactions:
 
   # Em caso de problemas em relação ao produto, como devo proceder?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-2
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Problemas com o produto
       - Dúvidas sobre o produto
@@ -1176,12 +1163,7 @@ interactions:
 
   # Como instalar o Rocket.Chat vai me beneficiar?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-3
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Diferenciais do produto
       - Benefícios da Rocket.Chat
@@ -1201,12 +1183,7 @@ interactions:
 
   # É necessária a conexão à Internet para o funcionamento do produto?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-4
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Conectar à Internet
       - Usar offline
@@ -1220,12 +1197,7 @@ interactions:
 
   # Existe limite no período de teste?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-5
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Limite do período de teste
       - Duração do período de teste
@@ -1239,12 +1211,7 @@ interactions:
 
   # A Rocket.Chat suporta usuários externos?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-6
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Entrar usuários externos
       - Suporte aos usuários externos
@@ -1256,17 +1223,9 @@ interactions:
     event: respond
     type: random
 
-<<<<<<< HEAD
-
-  # Consigo acessar o código do produto?
-  - node:
-      name: trabalho-
-    level: context
-=======
   # Consigo acessar o código do produto?
   - node:
       name: produto-7
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Acessar o código
       - Programar o produto
@@ -1280,12 +1239,7 @@ interactions:
 
 # Qual o número de usuários que a plataforma suporta?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-8
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Limite de usários
       - Número máximo de usuários
@@ -1300,12 +1254,7 @@ interactions:
 
   # Quem administra o pagamento?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-9
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Quem paga a rocket.chat
       - Quem administra a conta
@@ -1319,12 +1268,7 @@ interactions:
 
   # Quais as formas de pagamento da plataforma?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-10
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Como pagar os serviços/ hosting
       - Como realizar o pagamento da plataforma
@@ -1337,12 +1281,7 @@ interactions:
 
   # Qual a diferença entre Demo e Hosting e Download?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-11
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Diferenca demo e hosting
       - Demo versus hosting
@@ -1357,12 +1296,7 @@ interactions:
 
   # Qual a diferença entre fazer download e hosting?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-12
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Diferenca entre download e pagar pelo hosting
       - Download versus pagar pelo hosting
@@ -1371,22 +1305,13 @@ interactions:
     message:
       - São duas coisas que andam em conjunto :)
       - Quando uma empresa decide usar o Rocket.Chat ela precisa hospedar a plataforma em algum lugar, que pode ser tanto no servidor próprio ou quanto na nossa nuvem. O download pode ser tanto para integrar a Rocket no seu servidor, quando para baixar a plataforma no seu dispositivo. A partir disso você terá que usar o link do servidor que você está utilizando para funcionar :)
-<<<<<<< HEAD
-      - 'Você pode ter todas essas informações sobre essa diferença de hospedagem aqui: https://rocket.chat/hosting'
-=======
       - 'Você pode ter todas essas informações sobre essa diferença de hospedagem aqui: https://rocket.chat/hosting.'
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     event: respond
     type: random
 
   # Qual a diferença entre usar o servidor próprio ou pagar pelo servidor na nuvem da Rocket.Chat?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-13
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Diferença entre servidor próprio e pagar pelo servidor
       - O que é hosting
@@ -1396,17 +1321,6 @@ interactions:
       - Hosting próprio versus pagar pelo hosting na nuvem da Rocket
       - Por que pagar pelo hosting
     message:
-<<<<<<< HEAD
-      - 'A plataforma pode ficar hospedada no seu servidor ou você pode usar o nosso servidor na nuvem e desfrutar dos nossos serviços de suporte! Você pode ter todas essas informações aqui: https://rocket.chat/hosting'
-      - 'Também tive essa dúvida! Tem várias diferenças entre hosting e download, dá uma olhada nesse artigo que ele explica direitinho: https://rocket.chat/hosting'
-    event: respond
-    type: random
-
-# Como eu utilizo o Demo?
-  - node:
-      name: trabalho-
-    level: context
-=======
       - 'A plataforma pode ficar hospedada no seu servidor ou você pode usar o nosso servidor na nuvem e desfrutar dos nossos serviços de suporte! Você pode ter todas essas informações aqui: https://rocket.chat/hosting.'
       - 'Também tive essa dúvida! Tem várias diferenças entre hosting e download, dá uma olhada nesse artigo que ele explica direitinho: https://rocket.chat/hosting.'
     event: respond
@@ -1415,7 +1329,6 @@ interactions:
   # Como eu utilizo o Demo?
   - node:
       name: produto-14
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Utilizar o demo
       - Como fazer o demo
@@ -1433,12 +1346,7 @@ interactions:
 
   # Depois de fazer o download, como uso?
   - node:
-<<<<<<< HEAD
-      name: trabalho-
-    level: context
-=======
       name: produto-15
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Como usar após download
       - Depois do download
@@ -1447,17 +1355,6 @@ interactions:
       - O que faço após fazer o download
       - Como acesso depois de fazer download
     message:
-<<<<<<< HEAD
-      - 'Após o download você precisa apenas logar no server da sua organização, exemplo: https://empresa.rocket.chat, caso não tenha criado o server da empresa ainda, você pode hospedar seu servidor conosco na nuvem ou no seu próprio'
-      - 'A diferença dos dois processos está aqui: https://rocket.chat/hosting'
-    event: respond
-    Type: Block
-
-  # Posso usar a versão Demo com os meus amigos?
-  - node:
-      name: trabalho-
-    level: context
-=======
       - 'Após o download você precisa apenas logar no server da sua organização, exemplo: https://empresa.rocket.chat, caso não tenha criado o server da empresa ainda, você pode hospedar seu servidor conosco na nuvem ou no seu próprio.'
       - 'A diferença dos dois processos está aqui: https://rocket.chat/hosting.'
     event: respond
@@ -1466,259 +1363,12 @@ interactions:
   # Posso usar a versão Demo com os meus amigos?
   - node:
       name: produto-16
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     classifiers:
       - Demo com amigos
       - Usar demo com amigos
       - Pode demo com amigos
       - Uso da demo com amigos
     message:
-<<<<<<< HEAD
-  Sim! Você pode usar a versão demo com quem quiser.
-  Sim, você pode.
-  Yep, a versão demo está aberta para todos.
-      event: respond
-  type: random
-  Posso usar a versão Demo na minha empresa?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Demo na empresa
-  Usar demo na empresa
-  Utilizar demo na empresa
-  Integrar demo à empressa
-    message:
-  A versão demo é aberta, ou seja, os usuários não podem administrar o conteúdo e os usuários que estão circulando por essa versão. O ideal para uma empresa é fazer o download ou utilizar do nosso Hosting onde cuidamos de tudo.
-  Então, a nossa versão é aberta, ou seja os usuários podem criar canais e se comunicar como preferirem, mas o ideal para uma empresa é fazer o download para algum server, ou utilizar direto do nosso Hosting que cuidamos de tudo.
-      event: respond
-  type: random
-  Existe uma versão Demo do LiveChat?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Demo livechat
-  Tem demo livechat
-  Usar demo livechat
-  Existe demo livechat
-    message:
-  A demonstração é euzinho aqui hehe O live Chat é gratuito, você pode autorizar a sua utilização se for o administrador da plataforma na versão de download ou hosting e conectar com o seu próprio site.
-  Tem uma demonstração melhor que eu? xD O live Chat é gratuito, sendo administrador do seu server você pode autorizar a utilização e integrar com o seu site
-      event: respond
-  type: random
-  Como posso contribuir com o Demo?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Contribuir com a demo
-  Ajudar a demo
-  Acelerar a demo
-  Desenvolver para a demo
-    message:
-  Você pode contribuir com o nosso produto sempre que quiser! Trás ideias pra gente no GitHub.com/Rocket.Chat
-  Ficaria muito feliz se você contribuísse e fizesse parte da nossa comunidade :)
-      event: respond
-  type: block
-  Posso alterar o tema/Layout da versão Demo?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Alterar tema e layout da demo
-  Mudar tema e layout da demo
-  Personalizar o tema e layout da demo
-  Customizar o tema e layout da demo
-    message:
-  Não tem como :( Essa é uma versão aberta para pessoas do mundo todo, você teria que ser administrador da plataforma para fazer isso.
-  Putz, isso não pode ser feito no demo, por que você não administra esse servidor, mas caso você faça o download no seu servidor ou utilize o nosso hosting, temos serviços de customização.
-      event: respond
-  type: random
-
-  + Download +
-  O download é restrito? Se sim, para quem?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Restricao de Download
-  A quem se aplica o download
-  Quem pode fazer download
-  Limitacao de download
-    message:
-  O Download é aberto para todos! Não existe nenhuma restrição.
-  Fazer o download significa que você estará baixando o nosso aplicativo para utilizar no seu computador ou dispositivo móvel.
-  Se você estiver se referindo ao espaço ocupado quando uma organização decide hospedar a plataforma no seu servidor, isso também ocupa um espaço pequeno.
-  Caso queira um atendimento super especial, flexibilidade e agilidade, nós também oferecemos a possibilidade de hospedar a Rocket na nuvem. Você pode ver os detalhes sobre o assunto aqui.
-      event: respond
-  Type:block
-  O download ocupará espaço no meu armazenamento? Se sim, quanto?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Armazenamento do download
-  Espaco para download
-  Ocupar espaco com download
-  Onde armazenar o download
-    message:
-  A plataforma vai ocupar um espaço pequeno da sua memória, pode ficar tranquilo :)
-  O download da ferramenta, seja no dispositivo móvel ou no fixo vai ocupar um espaço beeem pequenininho.
-      event: respond
-  type: random
-
-  Quais browsers e sistemas operacionais são suportados?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Browsers para download
-  Necessidade de sistemas operacionais atualizados
-  Suportar download em sistemas operacionais e browsers
-  Requisitos para download
-    message:
-  Você pode acessar em qualquer tipo de navegador, se quiser fazer o download do app, nós temos as opções mobile: Android, iOS e desktop: Windows, MacOS e Linux.
-      event: respond
-  type: block
-
-  Como posso realizar o download?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Fazer o download
-  Download para pc
-  Como fazer o download
-  Onde fazer download
-    message:
-  Você pode fazer o download do app no seu mobile ou desktop.
-  Antes de poder utilizar o seu Chat próprio, você precisa integrar a plataforma no seu servidor ou utilizar o nosso serviço de hosting (pago).
-  Você pode ver todos os detalhes sobre essas duas opções aqui.
-      event: respond
-  type: block
-
-  + Cadastro +
-
-  Como é feito o cadastro?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Cadastrar na Rocket.Chat
-  Cadastro na Rocket.Chat
-  Registrar na Rocket.Chat
-  Inscrever-se na Rocket.Chat
-  Criar conta na Rocket.Chat
-  Funcionamento do cadastro
-  Funcionamento do registro
-  Como funciona cadastro
-  Resposta
-  Se a sua empresa já usa a Rocket.Chat, só precisamos do seu nome, e-mail e senha. Você só precisa fazer o download do app ou acessar pela internet com o servidor da sua empresa, exemplo: https://empresa.rocket.chat.
-  Se a sua empresa ainda não usa a plataforma, você pode testar o produto através da nossa plataforma aberta(Versão Demo disponível no site https://rocket.chat/) ou então já começar criando o seu servidor, assim você terá uma plataforma feita para a sua organização e você poderá criar um time de administradores.
-  Se você ficar com alguma dúvida, pode ver a nossa página explicativa sobre todas as possibilidades de fazer o seu cadastro aqui.
-  Você pode instalar a plataforma no seu próprio servidor ou em uma nuvem ou na nossa nuvem e obter todo o nosso suporte :) Olhe mais informações sobre isso aqui. !
-      event: respond
-  type: block
-
-  Posso alterar as notificações que serão enviadas para o meu e-mail?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Notificações no e-mail
-  Configurações para o e-mail
-  Mudar sistema de notificacões?
-    message:
-  Sim! Você pode fazer isso na aba lateral esquerda, clicando na seta ao lado do seu avatar e depois clicando em “Minha conta”.
-      event: respond
-      type: block
-
-  Posso me cadastrar com o número de celular?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Cadastro com número de celular
-  Inscrever-se com número de celular
-  Registro com número de celular
-  Número de celular
-    message:
-  Não precisamos do seu número de celular para lhe cadastrar, entretanto, se essa informação for importante para a sua empresa você  pode colocar no campo adicional.
-  Fala com a gente por aqui: support@rocket.chat.
-      event: respond
-  type: block
-
-  Estou com problemas no meu cadastro. Pode me ajudar?
-  a. - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Problemas cadastro
-  Problemas registro
-  Problemas com inscricão
-  Dúvidas inscrição
-  Ajuda cadastro
-  Auxílio cadastro
-  Problemas com credenciais
-  Dificuldade de acessar conta
-  Acessar conta
-  Dificuldades com credenciais de cadastro
-    message:
-  Claro! Verifique se o seu e-mail está correto e se o servidor que você está utilizando também. Se você já se cadastrou e não lembra a senha, clique em recuperar a senha.
-  Se nada disso adiantar, mande um e-mail para: support@rocket.chat.
-      event: respond
-  type: block
-
-  Onde posso alterar as minhas configurações de cadastro?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Configurações cadastro
-  Alterar informações de cadastro
-   Mudar cadastro
-  Mudar Nome cadastro
-  Mudar nome login
-  Mudar senha
-  Alterar senha
-  Configurações de senha
-  Mudar palavra-chave
-    message:
-  Faça seu login na plataforma e clique na seta que se encontra ao lado da sua foto de perfil, no painel à esquerda. Clique em minha conta e faça as alterações necessárias.
-      event: respond
-  type: block
-
-
-  Por que meu avatar não foi atualizado?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Atualização de avatar
-  Atualização de perfil
-  Problemas avatar
-  Dificuldades perfil
-    message:
-  Não era para demorar.. Podemos estar com algum problema no sistema.
-  Tente sair e voltar para a plataforma.
-      event: respond
-  type: block
-
-  Como eu deleto a minha conta?
-  - node:
-      name: trabalho-
-    level: context
-    classifiers:
-  Cancelar conta
-  Cancelar usuário
-  Apagar conta
-  Desativar conta
-  Desativar usuario
-  Apagar usuario
-  Deletar conta
-  Deletar usuario
-=======
       - Sim! Você pode usar a versão demo com quem quiser.
       - Sim, você pode.
       - Yep, a versão demo está aberta para todos.
@@ -1964,7 +1614,6 @@ interactions:
       - Gerenciar notificacoes de chat
       - Configuracoes de Chat
       - Configurar notificações de Chat
->>>>>>> bff155c84589f79ef0633af2e318d807f4680ae4
     message:
       - Você pode alterar as notificações de chat de uma única conversa clicando no símbolo de sino na parte direita da tela ou alterar as notificações de forma geral, clicando primeiro na seta ao lado do seu avatar e depois na opção “minha conta”.
     event: respond
@@ -2673,12 +2322,3 @@ interactions:
       - não sei, definitivamente não sei responder essa pergunta
     type: random
     event: error
-
-# + Contato/Ações  +
-# Comandos para o bot executar encaminhando o cliente a um canal que possa resolver o seu problema.
-# - AÇÃO 1: Depois do bot não conseguir resolver o problema do cliente, ele tem envia uma pergunta solicitando um comando (resposta) do cliente para ir para o próximo passo.
-# Ex: Infelizmente não consegui resolver o seu problema :( , mas acho que sei quem pode ajudar! Gostaria de ser encaminhado para uma de nossas áreas? Diga *sim* ou *não*
-#
-# Comando *sim* : Pensando no seu problema, com qual das áreas você gostaria de falar? *Vendas*, *Suporte*, *Financeiro* ( a pessoa responde com a área e o bot capta o comando e envia direto para uma das áreas)
-#
-# Comando *não* : Tudo bem então, muito obrigado por conversar comigo :) Quando precisar não hesite em me chamar!
