@@ -3,6 +3,17 @@ trust: 0.8
 interactions:
 
   - node:
+      name: configure-debug
+    classifiers:
+      - "!configure debug-mode"
+    message:
+      - debug-mode changed to $value!
+    context: clear
+    event: configure
+    type: random
+    roleRequired: admin
+
+  - node:
       name: to-bem
     level: context
     classifiers:

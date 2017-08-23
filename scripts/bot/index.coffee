@@ -77,6 +77,25 @@ getContext = (res) ->
   key = 'context_'+res.envelope.room+'_'+res.envelope.user.id
   return res.robot.brain.get(key)
 
+isDebugMode = (res) ->
+  key = 'configure_debug-mode_'+res.envelope.room+'_'+res.envelope.user.id
+  return (res.robot.brain.get(key) == 'true')
+
+buildClassificationDebugMsg = (res, classifications) ->
+  list = ''
+  for classification, i in classifications
+    list = list.concat 'Label: ' + classification.label + ' Score: ' + classification.value + '\n'
+
+  newMsg = {
+    channel: res.envelope.user.roomID,
+    msg: "Classifications considered:",
+    attachments: [{
+        text: list
+    }]
+  }
+
+  return newMsg
+
 incErrors = (res) ->
   key = 'errors_'+res.envelope.room+'_'+res.envelope.user.id
   errors = res.robot.brain.get(key) or 0
@@ -119,6 +138,7 @@ module.exports = (_config, robot) ->
     currentClassifier = classifier
     trust = config.trust
     interaction = undefined
+    debugMode = isDebugMode(res)
 
     console.log 'context ->', context
 
@@ -133,6 +153,11 @@ module.exports = (_config, robot) ->
     classifications = currentClassifier.getClassifications(msg)
 
     console.log 'classifications ->', classifications
+
+    if debugMode
+      newMsg = buildClassificationDebugMsg(res, classifications)
+      robot.adapter.chatdriver.customMessage(newMsg);
+
 
     if classifications[0].value >= trust
       clearErrors res
