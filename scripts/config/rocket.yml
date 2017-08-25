@@ -26,44 +26,17 @@ interactions:
     roleRequired: admin
 
   - node:
-      name: to-bem
-    classifiers:
-      - estou ótimo
-      - to ótimo
-      - to muito bem
-      - to Legal
-      - estou bem
-      - tou bem
-      - to bem
-      - bem
-      - legal
-      - tudo bem
-      - ok
-    message:
-      - Legal, no que posso te ajudar hoje?
-    context: clear
-    event: respond
-    type: block
-
-  - node:
-      name: to-mal
-    classifiers:
-      - estou mal
-      - tou mal
-      - to mal
-    message:
-      - Putz, mas posso te ajudar em algo hoje?
-    context: clear
-    event: respond
-    type: block
-
-  - node:
       name: saudacao-1
     classifiers:
       - ola
+      - olá
+      - ola bot
       - hey
       - e ae
-      - oi oi oi
+      - oi
+      - oi bot
+      - oi 
+      - oie
       - salve
     message:
       - olá $user, eu vou bem e você?
@@ -1933,8 +1906,9 @@ interactions:
       name: bom-dia
     classifiers:
       - bom dia
-      - olá bom dia
-      - bom dia como vai
+      - bom dia bot
+      - good morning
+      - morning
     message:
       - Olá $user, um ótimo dia para você!
       - Bom dia $user, já deu uma olhada lá fora?
@@ -1948,8 +1922,8 @@ interactions:
       name: boa-tarde
     classifiers:
       - boa tarde
-      - ola boa tarde
-      - boa tarde como vai
+      - tarde
+      - good evening
     message:
       - Olá $user, uma tarde fantástica para você!
       - boa tarde $user, já almoçou?
@@ -1963,8 +1937,8 @@ interactions:
       name: boa-noite
     classifiers:
       - boa noite
-      - boa noite como vai
-      - ola boa noite
+      - noite
+      - good night
     message:
       - Uma boa noite pra ti também $user!
       - Boa noite $user
