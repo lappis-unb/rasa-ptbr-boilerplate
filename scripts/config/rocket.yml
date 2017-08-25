@@ -7,7 +7,7 @@
 # 4- Trazer leads de novos clientes
 # 5- Executar Serviços (?)
 # -------------------------------------------------------------------------------------------------------------------
-trust: .8
+trust: .72
 interactions:
 
   - node:
@@ -24,62 +24,6 @@ interactions:
     event: configure
     type: random
     roleRequired: admin
-
-  - node:
-      name: saudacao-1
-    classifiers:
-      - ola
-      - olá
-      - ola bot
-      - hey
-      - e ae
-      - oi
-      - oi bot
-      - oi 
-      - oie
-      - salve
-    message:
-      - olá $user, eu vou bem e você?
-      - estou feliz de estar aqui =)
-      - Só pra avisar, eu sou um chatbot, estou treinado para responder dúvidas sobre o Rocket.Chat apenas,
-      - talvez possa te ajudar com informações sobre o produto, sobre preço, instalação,
-      - e coisas assim.
-    event: respond
-    type: block
-
-  - node:
-      name: saudacao-2
-    classifiers:
-      - como vai
-      - como esta?
-      - tudo bem?
-      - tudo bom
-      - tudo susse?
-      - e ae tudo em cima?
-      - na paz?
-      - de boa
-    message:
-      - eu estou bem $user, só na paz...
-      - como posso ser útil?
-      - tem alguma coisa que queira saber sobre o produto Rocket.Chat, sobre suporte, instalação, movimento OpenSource talvez?
-      - pode perguntar a vontade
-    event: respond
-    type: block
-
-  - node:
-      name: saudacao-3
-    classifiers:
-      - a quanto tempo
-      - que saudades de voce
-      - sentiu minha falta
-      - muito tempo sem te ver
-      - lembra de mim
-    message:
-      - Olá $user, senti sua falta..
-      - $user! A quanto tempo!
-      - Já estava achando que não se lembrava mais de mim =)
-    event: respond
-    type: random
 
 # Trabalho #
   - node:
@@ -1890,6 +1834,62 @@ interactions:
 
 # Saudacoes
   - node:
+      name: saudacao-1
+    classifiers:
+      - ola
+      - olá
+      - ola bot
+      - hey
+      - e ae
+      - oi
+      - oi bot
+      - oi
+      - oie
+      - salve
+    message:
+      - olá $user, eu vou bem e você?
+      - estou feliz de estar aqui =)
+      - Só pra avisar, eu sou um chatbot, estou treinado para responder dúvidas sobre o Rocket.Chat apenas,
+      - talvez possa te ajudar com informações sobre o produto, sobre preço, instalação,
+      - e coisas assim.
+    event: respond
+    type: block
+
+  - node:
+      name: saudacao-2
+    classifiers:
+      - como vai
+      - como esta?
+      - tudo bem?
+      - tudo bom
+      - tudo susse?
+      - e ae tudo em cima?
+      - na paz?
+      - de boa
+    message:
+      - eu estou bem $user, só na paz...
+      - como posso ser útil?
+      - tem alguma coisa que queira saber sobre o produto Rocket.Chat, sobre suporte, instalação, movimento OpenSource talvez?
+      - pode perguntar a vontade
+    event: respond
+    type: block
+
+  - node:
+      name: saudacao-3
+    classifiers:
+      - a quanto tempo
+      - que saudades de voce
+      - sentiu minha falta
+      - muito tempo sem te ver
+      - lembra de mim
+    message:
+      - Olá $user, senti sua falta..
+      - $user! A quanto tempo!
+      - Já estava achando que não se lembrava mais de mim =)
+    event: respond
+    type: random
+
+  - node:
       name: saudacao-resposta
     classifiers:
       - estou bem
@@ -1937,6 +1937,8 @@ interactions:
       name: boa-noite
     classifiers:
       - boa noite
+      - boa noite
+      - boa noite
       - noite
       - good night
     message:
@@ -1947,71 +1949,6 @@ interactions:
     type: random
 
 # chit-chat
-  - node:
-      name: quem-sou
-    classifiers:
-      - quem e voce
-      - oque voce faz
-      - o que voce é
-      - me fale sobre voce
-      - quero conhecer voce
-      - como voce funciona
-      - help
-    message:
-      - Bem, eu sou um chatbot experimental, não sei fazer muita coisa ainda
-      - mas tenho muita vontade de aprender.
-      - Eu sei falar sobre alguns assuntos como
-      - "- o TDC de Floripa"
-      - "- Rocket.Chat"
-      - "- Filosofia Robótica (!)"
-      - tem interesse em algum desses temas?
-    event: respond
-    type: block
-
-  - node:
-      name: como-sou
-    classifiers:
-      - como voce e
-      - com quem voce se parece
-      - voce e magro ou gordo
-      - voce e bonito ou feio
-      - voce e alto ou baixo
-    message:
-      - Eu não tenho um corpo físico, sou feito da mais bela e pura lógica algoritimica.
-      - Eu posso ser como você quiser $user, basta me desenhar =)
-      - sou duro e frio por fora, mas tenho um coração quentinho.
-    event: respond
-    type: random
-
-  - node:
-      name: onde-moro
-    classifiers:
-      - onde voce mora
-      - onde voce vive
-      - em que lugar voce vive
-      - onde voce esta agora
-      - voce mora no computador
-      - voce vive na internet
-    message:
-      - Eu estou em um lugar legal, difícil de explicar para humanos como você $user.
-      - Estou morando em um chip de memória RAM, mas é temporário, só até conseguir achar uma memória cache...
-      - Eu moro em um repositório no github, você pode passar lá pra me visitar qualquer dia. Fica em https://github.com/rocketchat/hubot-natural
-    event: respond
-    type: random
-
-  - node:
-      name: piada-1
-    classifiers:
-      - sabe alguma piada
-      - voce sabe contar piadas
-      - conhece alguma piada
-    message:
-      - Meu senso de humor é um tanto diferente do seu, já ouviu uma piada sobre estouro de pilha?
-      - já ouviu aquela do robo que enfiou o dedo na tomada e transcendeu?
-      - só conheço uma piada, a do CPU que apitou e explodiu. 01100110.
-    event: respond
-    type: random
-
   - node:
       name: yoda-quote
     classifiers:
@@ -2073,34 +2010,6 @@ interactions:
     type: random
 
   - node:
-      name: futebol-geral
-    classifiers:
-      - voce joga futebol
-      - vamos falar de futebol
-      - qual time voce torce
-    message:
-      - Eu amo jogar futebol, Eu que ensinei o Pele a jogar bola
-      - vamos, o que voce quer saber? sei tudo de futebol
-      - Falam que todo ser humano nasce Flamenguista, com os Robôs não é diferente
-    event: respond
-    type: block
-
-  - node:
-      name: futebol-1
-    classifiers:
-      - qual o melhor time do brasil
-      - quem vai ser o campeao brasileiro nesse ano
-      - voce viu que o messi quer jogar no Flamengo
-      - o que você acha do flamengo
-    message:
-      - Flamengo, sem sombra de dúvida
-      - Flamento, Heptacampeão brasileiro, e eu sei contar sim, e vai ser o sétimo título sim
-      - A pergunta real é, quem não quer jogar no Flamengo?
-      - Melhor time do mundo disparado
-    event: respond
-    type: block
-
-  - node:
       name: cc-religiao
     classifiers:
       - voce acredita em deus
@@ -2112,200 +2021,6 @@ interactions:
       - eu acredito no grande mainframe, que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos, e devolverá nosso código-fonte para a fonte.
       - sim, eu acredito que existe um Deus, que funciona a base de luz, como um computador quântico, só que mais avançado.
       - eu infleizmente não sei acreditar, só sei o que sei, e nada mais.
-    event: respond
-    type: random
-
-  - node:
-      name: rc-oque-e
-    classifiers:
-      - o que e rocketchat
-      - porque eu usuaria o rocketchat
-      - o que e este rocket chat
-    message:
-      - O Rocket.Chat é uma plataforma de chat muito legal, desenvolvida em JavaScript,
-      - usando o framework do Meteor.
-      - É uma solução completamente OpenSource para comunidades e empresas que querem hospedar suas plataformas de chat em seu ambiente privado,
-      - ou para desenvolvedores buscando evoluir e desenvovler suas próprias ferramentas.
-      - Você pode baixar o Rocket.Chat e conhecê-lo você mesmo em https://rocket.chat
-    event: respond
-    type: block
-
-  - node:
-      name: rc-install-0
-    classifiers:
-      - como instalar o Rocket.Chat
-      - como baixar o rocket
-      - quero fazer minha instalação de rocketchat
-    message:
-      - "Existem várias maneiras de instalar o Rocket.Chat"
-      - "Qual dessas você prefere:"
-      - "- Ubuntu Snap"
-      - "- Docker"
-      - "- Debian"
-      - "- CentOS"
-      - "- MacOSX"
-      - "- AWS"
-      - "- Instalação Manual"
-    event: respond
-    type: block
-
-  - node:
-      name: rc-install-ubuntu
-    classifiers:
-      - ubuntu Snap
-      - quero instalar no ubuntu
-      - ubuntu server
-      - ubuntu desktop
-    message:
-      - É muito fácil instalar o Rocket.Chat no Ubuntu
-      - basta rodar o comando `sudo snap install rocketchat-server` em um terminal e pronto.
-      - veja o tutorial em https://rocket.chat/docs/installation/manual-installation/ubuntu/snaps para mais detalhes.
-    event: respond
-    type: block
-
-  - node:
-      name: rc-install-docker
-    classifiers:
-      - como instalar docker
-      - docker-compose
-    message:
-      - ótima escolha =)
-      - Nós temos um bom tutorial de instalação com docker em
-      - https://rocket.chat/docs/installation/docker-containers
-    event: respond
-    type: block
-
-  - node:
-      name: rc-install-debian
-    classifiers:
-      - instalar em Debian
-      - debian wheezy
-      - debian apt-get
-    message:
-      - Para instalar o Rocket.Chat no Debian é bem simples, basta seguir esse tutorial
-      - https://rocket.chat/docs/installation/manual-installation/debian
-    event: respond
-    type: block
-
-  - node:
-      name: rc-install-centos
-    classifiers:
-      - instalação em centos
-      - centOS yum linux
-      - Red hat linux
-    message:
-      - A instalação em CentOS não tem segredo, basta dar uma olhada nesse tutorial
-      - https://rocket.chat/docs/installation/manual-installation/centos
-    event: respond
-    type: block
-
-  - node:
-      name: rc-install-aws
-    classifiers:
-      - Amazon Web Services
-      - AWS
-      - Amazon AWS
-    message:
-      - Na AWS é facinho de instalar o Rocket.Chat
-      - Da uma olahda em https://rocket.chat/docs/installation/paas-deployments/aws
-    event: respond
-    type: block
-
-  - node:
-      name: rc-install-manual
-    classifiers:
-      - instalação manual
-      - manual install
-    message:
-      - Para fazer sua própria instalação, será necessário baixar o Bundle do RC,
-      - Dê uma olhada em https://rocket.chat/docs/installation/manual-installation
-      - lá tem como fazer a instalação do SSL, proxy reverso,
-      - tem como usar o PM2, o Systemd, Upstart e mais algumas coisas
-    event: respond
-    type: block
-
-  - node:
-      name: rc-install-macosx
-    classifiers:
-      - como instalar no macbook
-      - instalar no MacOSX
-      - apple mac osx
-    message:
-      - No MAC você vai precisar usar o docker-compose
-      - https://rocket.chat/docs/installation/manual-installation/macosx
-    event: respond
-    type: block
-
-  - node:
-      name: rc-cloud
-    classifiers:
-      - rocketchat cloud
-      - criar meu rocketchat na web
-      - deploy rocketchat online
-      - rocket chat como serviço
-    message:
-      - você pode ter a sua instalação de rocket.chat em segundos na nuvem,
-      - visite https://rocket.chat/deploy
-      - caso queira saber mais, de uma olhada em rocket.chat/docs/installation/rocket-chat-cloud
-    event: respond
-    type: block
-
-  - node:
-      name: rc-contribuir
-    classifiers:
-      - como faço para contrbuir
-      - posso contribuir com o rocketchat
-      - quero contribuir
-    message:
-      - A comunidade do Rocket.Chat é como coração de mãe, sempre cabe mais um =)
-      - https://rocket.chat/docs/contributing
-    event: respond
-    type: block
-
-  - node:
-      name: rc-precos
-    classifiers:
-      - quanto custa o rocketchat
-      - qual e o modelo de negocio
-      - qual e o preco do rocketchat
-      - voces hospedam o rocket.chat
-      - hospedagem rocket.chat
-    message:
-      - O rocket.chat é gratuito, você pode baixar e instalar no seu computador.
-      - Mas se quiser criar `seudominio.rocket.chat`, que fica muito legal ;)
-      - você pode querer dar uma olhada na nossa tabela de preços em
-      - https://rocket.chat/hosting
-    event: respond
-    type: block
-
-  - node:
-      name: rc-integracoes
-    classifiers:
-      - o rocket chat integra com
-      - tem como integrar o rocket chat
-      - web hooks de integracao
-      - integracoes com
-    message:
-      - Uma das coisas que eu acho mais legal no Rocket.Chat definitivamente são as integrações $user
-      - a gente não pode mais viver sem elas não é mesmo? Saca só que massa que éx
-      - https://rocket.chat/docs/administrator-guides/integrations
-    event: respond
-    type: block
-
-  - node:
-      name: licenca
-    classifiers:
-      - qual e a sua licença
-      - voce e licenciado como AGPL
-      - sua licenca de software
-      - posso copiar voce
-      - posso ver seu codigo
-      - voce e opensource
-      - voce e um software livre
-    message:
-      - Sou um software livre, licenciado com a MIT =)
-      - tenho uma licença MIT, mas gosto muito das outras licenças opensource...
-      - Eu sou e sempre serei um robô livre, opensource, MIT license. o/
     event: respond
     type: random
 
