@@ -11,6 +11,21 @@ trust: .8
 interactions:
 
   - node:
+      name: configure-debug
+    classifiers:
+      - "!configure debug-mode"
+      - "/set debug-mode"
+      - "let debug-mode"
+      - "turn debug-mode"
+      - "make debug-mode"
+    message:
+      - debug-mode changed to $value!
+    context: clear
+    event: configure
+    type: random
+    roleRequired: admin
+
+  - node:
       name: to-bem
     classifiers:
       - estou ótimo
@@ -46,25 +61,52 @@ interactions:
       name: saudacao-1
     classifiers:
       - ola
-      - ola pessoal
-      - ola
-      - como vai
-      - tudo bom
-      - oi como vai
-      - tudo bem
-      - bom dia
-      - boa tarde
-      - boa noite
       - hey
       - e ae
       - oi oi oi
       - salve
-      - como ta?
     message:
       - olá $user, eu vou bem e você?
       - estou feliz de estar aqui =)
+      - Só pra avisar, eu sou um chatbot, estou treinado para responder dúvidas sobre o Rocket.Chat apenas,
+      - talvez possa te ajudar com informações sobre o produto, sobre preço, instalação,
+      - e coisas assim.
     event: respond
     type: block
+
+  - node:
+      name: saudacao-2
+    classifiers:
+      - como vai
+      - como esta?
+      - tudo bem?
+      - tudo bom
+      - tudo susse?
+      - e ae tudo em cima?
+      - na paz?
+      - de boa
+    message:
+      - eu estou bem $user, só na paz...
+      - como posso ser útil?
+      - tem alguma coisa que queira saber sobre o produto Rocket.Chat, sobre suporte, instalação, movimento OpenSource talvez?
+      - pode perguntar a vontade
+    event: respond
+    type: block
+
+  - node:
+      name: saudacao-3
+    classifiers:
+      - a quanto tempo
+      - que saudades de voce
+      - sentiu minha falta
+      - muito tempo sem te ver
+      - lembra de mim
+    message:
+      - Olá $user, senti sua falta..
+      - $user! A quanto tempo!
+      - Já estava achando que não se lembrava mais de mim =)
+    event: respond
+    type: random
 
 # Trabalho #
   - node:
@@ -73,11 +115,11 @@ interactions:
       - Trabalhar na Rocket.Chat
       - Empregos na Rocket.Chat
       - Vagas na Rocket.Chat
-      - Enviar meu Curriculo
+      - Enviar meu curriculo
     message:
-      - Mande um e-mail para jobs@rocket.chat :)
+      - Se estiver procurando por oportunidades de trabalho conosco, mande um e-mail para jobs@rocket.chat :)
       - 'Eba! Vamos trabalhar juntos um dia, mande um e-mail pra gente com o seu perfil do linkedin: jobs@rocket.chat'
-      - Hmmm te entendi… quer trabalhar comigo né? Mande um e-mail para jobs@rocket.chat, vamos avaliar o seu perfil e entrar em contato assim que surgir algo!
+      - Hmmm te entendi… quer trabalhar comigo né? Mande um e-mail para jobs@rocket.chat, já vou avisando que sou bem competitivo!
     context: clear
     event: respond
     type: random
@@ -90,9 +132,9 @@ interactions:
     classifiers:
       - Onde encontro vagas
       - Onde procuro por vagas
-      - Quais as vagas abertas
-      - Busco por vagas
-      - Estão contratando
+      - Quais as vagas estão abertas
+      - busco por vagas
+      - estão contratando
     message:
       - Vai me dizer que quer trabalhar com a gente? Eba!
       - Você pode procurar por vagas abertas aqui nesse https://rocket.chat/jobs  e qualquer coisa envia um email pra jobs@rocket.chat que o pessoal pode te dar mais detalhes!
@@ -453,7 +495,7 @@ interactions:
       - Interesse Parceria
     message:
       - Oba! Você quer trabalhar junto comigo então? Faz assim, manda uma mensagem para marketing@rocket.chat.
-      - Parceria é com a gente, nós somos uma plataforma totalmente open source construída através de uma grande parceria com a nossa comunidade :)
+      - Parceria é com a gente, nós somos uma plataforma totalmente OpenSource construída através de uma grande parceria com a nossa comunidade :)
       - Faz assim, manda um e-mail para marketing@rocket.chat que os humanos conseguem te dar mais detalhes.
     event: respond
     type: random
@@ -543,7 +585,7 @@ interactions:
       - Outras pessoas para realizar o white label
       - Empresas para realizar o white label
     message:
-      - Sim! Nós podemos fazer para você de forma rápida ou sua própria equipe pode tentar programar para isso. O nosso sistema é open source, ou seja, todo mundo tem acesso.
+      - Sim! Nós podemos fazer para você de forma rápida ou sua própria equipe pode tentar programar para isso. O nosso sistema é OpenSource, ou seja, todo mundo tem acesso.
       - Indicamos fazer com a gente pois temos toda a sabedoria do código para isso.
     event: respond
     type: block
@@ -946,8 +988,9 @@ interactions:
       - Tabela de precos
       - Cobrar pelo servico
       - Produto precificado
-      - Pagar para usar
-      - Versão paga
+      - preciso pagar para usar
+      - quanto tem que pagar
+      - existe versão paga
       - Formas de pagamento
     message:
       - 'O Rocket.Chat é gratuito :) Nós cobramos por serviços de customização, suporte e hospedagem, variando o preço do serviço conforme a demanda. Você pode ver todas as informações aqui: https://rocket.chat/products'
@@ -965,6 +1008,7 @@ interactions:
       - Convênios setor de educação
       - Existe desconto
       - Código promocional
+      - pode me dar um desconto
     message:
       - Nós cobramos por serviços extras, como suporte, customização e hospedagem. Esses valores são negociados com sales@rocket.chat conforme a demanda da empresa.
       - Se você é uma instituição sem fins lucrativos ou vem do setor da educação nós temos alguns benefícios para possibilitar que você possa utilizar a plataforma da melhor forma.
@@ -977,6 +1021,8 @@ interactions:
       name: preco-3
     classifiers:
       - Pagamento de usuarios desativados
+      - preciso pagar por usuários desativados
+      - usuários desativados
       - Usuários cancelados
       - Exclusão de usuarios
       - Cobrar usuarios desativados
@@ -993,11 +1039,10 @@ interactions:
   - node:
       name: features-1
     classifiers:
-      - Novas features
+      - previsao de novas features
       - Data novas features
-      - Mais features
+      - lançamento mais features
       - Atualização features
-      - Atualizações features
     message:
       - 'Estamos constantemente atualizando as nossas features, você pode acompanhar tudo na nossa página do Github: https://github.com/rocketchat'
       - Está buscando alguma feature em específico? Da uma olhada no https://github.com/RocketChat e ve se ela não está por lá :)
@@ -1028,14 +1073,15 @@ interactions:
   - node:
       name: features-3
     classifiers:
-      - Features exclusivas
-      - Quero feature exclusiva
+      - solicitar Features exclusivas
+      - Quero pedir uma feature exclusiva
       - Fazer feature exclusiva
       - Desenvolver feature personalizada
       - Sugestao features
       - Desenvolver features
       - Pagar por features
-      - Criar features
+      - Criar novas features
+      - posso sugerir uma feature
     message:
       - Nós estamos desenvolvendo novas features constantemente. Dá uma olhada nesse link do Github e verifica se o que tu busca já está em desenvolvimento.
       - Se não estiver, existe a possibilidade de desenvolver a nova feature mediante investimento :)
@@ -1057,34 +1103,33 @@ interactions:
     event: respond
     type: block
 
- # Open Source #
+ # OpenSource #
  #
- # O que é open sourcing #
+ # O que é OpenSource #
   - node:
       name: opensource-1
     classifiers:
-      - Significado open source
-      - O que é open sourcing
-      - Explicar open source
-      - Resumo open source
-      - Como funciona open sourcing
-      - Open sourcing significado
+      - Significado opensource
+      - O que é opensource
+      - Explicar opensource
+      - Resumo opensource
+      - Como funciona opensource
     message:
-      - Open sourcing significa código aberto, a Rocket.Chat é open source, ou seja,  todo o nosso funcionamento e código (inclusive euzinho aqui) está disponível no GitHub.
-      - Nós acreditamos que a sabedoria e o funcionamento do nosso produto deve ser compartilhado.
+      - OpenSource significa código aberto, a Rocket.Chat é OpenSource, ou seja, todo o nosso código (inclusive euzinho aqui) está disponível no https://github.com/RocketChat.
+      - Nós acreditamos que o conhecimento que produzimos desenvolvendo o Rocket.Chat fica melhor quando é compartilhado!
     event: respond
     type: block
 
-  # Quais são os benefícios de usar open sourcing?
+  # Quais são os benefícios de usar opensource?
   - node:
       name: opensource-2
     classifiers:
-      - Benefícios open sourcing
-      - O que open source traz
-      - Ganho com open sourcing
-      - Diferenciais open sourcing
+      - Benefícios opensource
+      - O que OpenSource traz
+      - Ganho com opensource
+      - Diferenciais opensource
     message:
-      - São tantos os benefícios de usar uma plataforma open source… Estudantes e profissionais do mundo todo acabam desenvolvendo o nosso código.
+      - São tantos os benefícios de usar uma plataforma OpenSource… Estudantes e profissionais do mundo todo acabam desenvolvendo o nosso código.
       - O principal benefício é a possibilidade de customização, agilidade e  inovação constante. O que possibilita a oferta de um produto muito melhor que o dos nossos competidores :)
       - Você pode encontrar a lista completa de benefícios no nosso blog https://rocket.chat/blog.
     event: respond
@@ -1094,10 +1139,10 @@ interactions:
   - node:
       name: opensource-3
     classifiers:
-      - Contribuir com o open sourcing
-      - Ajudar o open sourcing
-      - Participar do open sourcing
-      - Desenvolver o open sourcing
+      - Como posso contribuir
+      - Contribuir com o Rocket.Chat
+      - Participar do Rocket.Chat
+      - Desenvolver o software opensource
     message:
       - Você pode entrar na nossa página do Github e ajudar a desenvolver o nosso código :)
       - Você pode desenvolver nosso código na página do Github.
@@ -1134,16 +1179,13 @@ interactions:
       - Para que serve a plataforma
       - Para que serve o Rocket.chat
       - O que é o Rocket.chat
-      - Qual é o produto
-      - Explicacao do produto
+      - me explique o rocket.chat
       - Finalidade do produto
       - Para que serve o produto
-      - Produtos e servicos relacionados
-      - Informações sobre o serviço
       - Resumo do produto
       - Por que o produto foi criado
     message:
-      - Nós oferecemos uma plataforma de comunicação totalmente open source (código aberto), oferecendo além das ferramentas de Chat e Live Chat totalmente gratuitas, diversos serviços para suporte, manutenção e customização da plataforma.
+      - Nós oferecemos uma plataforma de comunicação totalmente OpenSource (código aberto), oferecendo além das ferramentas de Chat e Live Chat totalmente gratuitas, diversos serviços para suporte, manutenção e customização da plataforma.
       - É como se fossemos uma alternativa flexível e atualizada do Slack. Atualmente possuímos  a maior e mais ativa comunidade de colaboradores entre os competidores da nossa plataforma :).
       - Você pode ver todos os detalhes do produto nesse link aqui!
     event: respond
@@ -1156,6 +1198,8 @@ interactions:
       - tenho problemas com o produto
       - quem consegue resolver meus problemas
       - problemas com o produto
+      - estou tendo problemas com o Rocket.chat
+      - preciso de ajuda para resolver um problema
     message:
       - Se você tiver qualquer problema, fala com a gente! support@rocket.chat
       - Fácil, se tiver algum problema ou dificuldade utilizando a plataforma, chama a gente! support@rocket.chat.
@@ -1173,7 +1217,7 @@ interactions:
       - porque usar o rocketchat
       - rocketchat aumenta as vendas
     message:
-      - O Rocket.Chat é uma ferramenta que está em constante desenvolvimento por ser open source, permitindo que o produto seja continuamente melhorado.
+      - O Rocket.Chat é uma ferramenta que está em constante desenvolvimento por ser OpenSource, permitindo que o produto seja continuamente melhorado.
       - Além de possibilitar um canal de comunicação muito efetivo para times trabalharem em tempo real, possibilita uma grande interação com clientes, por não ter limite de usuários, possibilitar conversas entre empresas e ter o recurso de LiveChat integrado.
       - Por ser uma plataforma que possui diversas integrações e funciona em diferentes contextos, permitimos que você acesse suas conversas de onde estiver :)
       - Ah, também somos gratuítos <3
@@ -1185,13 +1229,14 @@ interactions:
   - node:
       name: produto-4
     classifiers:
-      - Conectar à Internet
+      - precisa de internet
+      - tenho que estar conectado na internet
       - Usar offline
-      - Necessária à Internet
-      - Conectar a rede
+      - tem que ter internet
+      - Conectar na rede
     message:
       - Para acessar remotamente, é preciso ter internet.
-      - Entretanto, não é preciso ter internet se você baixar a plataforma na sua rede local e tiver os usuários cadastrados.
+      - mas você pode também usar o Rocket.Chat na sua rede local, basta instalar ele em uma máquina acessível por outros usuários na sua intranet.
     event: respond
     type: block
 
@@ -1199,10 +1244,11 @@ interactions:
   - node:
       name: produto-5
     classifiers:
-      - Limite do período de teste
-      - Duração do período de teste
-      - Tempo máximo do período de teste
-      - Extensão do período de teste
+      - Limite do periodo de teste
+      - Duracao do periodo de teste
+      - quanto dura o priodo de teste
+      - Tempo maximo do periodo de teste
+      - Extensao do periodo de teste
     message:
       - Já ouviu falar que o que é bom dura pouco? Então… O período de teste do Hosting é limitado. Mas como o nosso produto é diferenciado, a plataforma vai ser eternamente gratuita!
       - A plataforma vai continuar sendo gratuita, mas a versão demo tem tempo finito de período de teste.
@@ -1214,7 +1260,7 @@ interactions:
       name: produto-6
     classifiers:
       - Entrar usuários externos
-      - Suporte aos usuários externos
+      - Suporte a usuários externos
       - Pessoas de fora no chat
       - É necessário estar conectado
     message:
@@ -1233,7 +1279,7 @@ interactions:
       - Achar o código
     message:
       - O nosso código está disponível aqui.
-      - Nossa plataforma é totalmente open source, está tudo disponível aqui.
+      - Nossa plataforma é totalmente OpenSource, está tudo disponível aqui.
     event: respond
     type: random
 
@@ -1243,8 +1289,9 @@ interactions:
     classifiers:
       - Limite de usários
       - Número máximo de usuários
-      - Quantos usuários pode
+      - Quantos usuários a plataforma suporta
       - Restrição de usuários
+      - qual é o limite maximo de usuarios
     message:
       - Ilimitado <3
       - Cabe todo mundo aqui! Não temos limite de usuários, canais, convidados, mensagens, etc.
@@ -1258,8 +1305,9 @@ interactions:
     classifiers:
       - Quem paga a rocket.chat
       - Quem administra a conta
-      - Quem tem contato com a Rocket na versão paga
-      - Quem faz o pagamento dos serviços/ hosting
+      - Quem faz o pagamento dos serviços
+      - quem paga o hosting
+      - quem administra os pagamentos
     message:
       - Nós cobramos por serviços prestados e hosting. Cada empresa que solicita esse tipo de serviço seleciona algumas pessoas para serem os responsáveis desse relacionamento. Quem faz o pagamento depende da própria organização da empresa.
       - Nós somos gratuitos, mas qualquer empresa pode optar produtos pagos e selecionar algumas pessoas para manter o relacionamento com os nossos desenvolvedores. Já o pagamento depende da empresa e de como ela quer se organizar, para a gente não importa se é o CFO ou o estagiário que efetua o pagamento.
@@ -1298,10 +1346,10 @@ interactions:
   - node:
       name: produto-12
     classifiers:
-      - Diferenca entre download e pagar pelo hosting
-      - Download versus pagar pelo hosting
-      - Fazer o download contra pagar pelo hosting
-      - Explicar download e pagar pelo demo
+      - Diferenca entre download e hosting
+      - Download versus hosting
+      - Fazer o download ou pagar hosting
+      - Explicar download hosting
     message:
       - São duas coisas que andam em conjunto :)
       - Quando uma empresa decide usar o Rocket.Chat ela precisa hospedar a plataforma em algum lugar, que pode ser tanto no servidor próprio ou quanto na nossa nuvem. O download pode ser tanto para integrar a Rocket no seu servidor, quando para baixar a plataforma no seu dispositivo. A partir disso você terá que usar o link do servidor que você está utilizando para funcionar :)
@@ -1598,7 +1646,7 @@ interactions:
       - Apagar conta
       - Desativar conta
       - Desativar usuario
-      - Apagar usuario
+      - remover usuario
       - Deletar conta
       - Deletar usuario
     message:
@@ -1885,8 +1933,8 @@ interactions:
       name: bom-dia
     classifiers:
       - bom dia
-      - bom dia pessoal
-      - good morning
+      - olá bom dia
+      - bom dia como vai
     message:
       - Olá $user, um ótimo dia para você!
       - Bom dia $user, já deu uma olhada lá fora?
@@ -1900,7 +1948,8 @@ interactions:
       name: boa-tarde
     classifiers:
       - boa tarde
-      - boa tarde galera
+      - ola boa tarde
+      - boa tarde como vai
     message:
       - Olá $user, uma tarde fantástica para você!
       - boa tarde $user, já almoçou?
@@ -1914,7 +1963,8 @@ interactions:
       name: boa-noite
     classifiers:
       - boa noite
-      - até mais e boa noite
+      - boa noite como vai
+      - ola boa noite
     message:
       - Uma boa noite pra ti também $user!
       - Boa noite $user
@@ -2231,6 +2281,7 @@ interactions:
     classifiers:
       - como faço para contrbuir
       - posso contribuir com o rocketchat
+      - quero contribuir
     message:
       - A comunidade do Rocket.Chat é como coração de mãe, sempre cabe mais um =)
       - https://rocket.chat/docs/contributing
@@ -2244,6 +2295,7 @@ interactions:
       - qual e o modelo de negocio
       - qual e o preco do rocketchat
       - voces hospedam o rocket.chat
+      - hospedagem rocket.chat
     message:
       - O rocket.chat é gratuito, você pode baixar e instalar no seu computador.
       - Mas se quiser criar `seudominio.rocket.chat`, que fica muito legal ;)
@@ -2263,18 +2315,6 @@ interactions:
       - Uma das coisas que eu acho mais legal no Rocket.Chat definitivamente são as integrações $user
       - a gente não pode mais viver sem elas não é mesmo? Saca só que massa que éx
       - https://rocket.chat/docs/administrator-guides/integrations
-    event: respond
-    type: block
-
-  - node:
-      name: rc-rest-api
-    classifiers:
-      - rocket tem api rest
-      - como usar a api do rocket
-      - rest api post payload
-    message:
-      - sim, claro que o rocket tem uma API REST super maneira ;)
-      - https://rocket.chat/docs/developer-guides/rest-api
     event: respond
     type: block
 
