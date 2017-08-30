@@ -373,3 +373,152 @@ interactions:
               - 'You can get an idea of how banks and other financial companies use us here:  https://rocket.cht/customers.'
             event: respond
             type: block
+
+# Competitors
+# Qual a diferença de usar serviços similares?
+  - node:
+      name: competitors-1
+    classifiers:
+      - Difference from Slack
+      - Difference from Hipchat
+      - Difference from Mattermost
+      - Difference from Gitter
+      - Difference from Ryver
+      - Difference from Riot
+      - What is Rocket better at
+      - Rocket.chat’s distinguishing features
+      - Benefits of using Rocket.chat
+      - Rocket and competitors
+      - Difference from other tools
+    message:
+      - 'Wow, okay… there are so many… But since I already knew you would have this kind of question I got ahead and created a chart comparing us to the competitors :) Take a look here: https://rocket.chat/whatisthedifference.'
+      - 'Isn’t it obvious? They do not have a bot as nice as I am! Haha. Take a look here: https://rocket.chat/whatisthedifference.'
+      - 'We’re are so many and we are constantly changing and adapting depending on what our community wants. There is a comparative chart here: https://rocket.chat/whatisthedifference.'
+    event: respond
+    type: random
+
+# Partnerships
+#
+# Do you sponsor events?
+  - node:
+      name: partnerships-1
+    classifiers:
+      - Sponsorship for events
+      - Collaborate to events
+      - Sponsor events
+      - Partnerships for events
+      - Interest in events
+    message:
+      - 'Yes! Contact our marketing sector and they will be able to help you: marketing@rocket.chat'
+      - 'Wow! Am I famous already? ;) Send an e-mail to marketing@rocket.chat, they will want to know every detail.'
+    event: respond
+    type: random
+
+# I would like to talk about a potential partnership?
+  - node:
+      name: partnerships-2
+    classifiers:
+      - Talk about partnerships
+      - Work with partnerships
+      - With whom to talk about partnerships
+      - Contact for potential partnerships or sponsorships
+      - Potential partnerships
+      - Possible partnership
+      - Interest in partnership
+    message:
+      - 'Yay! You’d like to work with me then? Let’s do this: send an e-mail to marketing@rocket.chat :)'
+      - Partnerships is our middle name. We are a completely open source platform built from a great partnership with our community:)
+      - 'Let’s do this: Send an e-mail to marketing@rocket.chat and the humans will be able to provide you with more details'
+    event: respond
+    type: random
+
+# Services:
+# White Label
+#
+# Prices for White Label
+  - node:
+      name: services-1
+    classifiers:
+      - Prices white label
+      - Cost white label
+      - Budget white label
+      - Value white label
+      - Financial estimate white label
+      - Pay for white label
+      - Payment white label
+      - Taxes white label
+      - Value white labeling
+    message:
+      - This is my favorite kind of service! You can can have the platform looking the way you’ve always wished for. Send an e-mail to sales@rocket.chat and they will be able to provide you with details.
+      - Do you know what you want your platform to look like already? We can do anything! Send an e-mail to sales@rocket.chat and they will be able to help you out.
+      - There are multiple white label possibilities . Send an e-mail to sales@rocket.chat and they will be able to tell you what matches your organization best.
+    event: respond
+    type: random
+
+# How does White Label work?
+  - node:
+      name: services-2
+    classifiers:
+      - What is white label
+      - White label work
+      - Explain white label
+      - Talk about white label
+      - Operate white label
+      - Utilize white label
+      - How does white label work
+      - White label system
+      - White label summary
+      - How is customization done
+    message:
+      - White Label is when we customize the platform’s design in order to match the organization that is using Rocket.Chat.
+      - Basically, we customize the platform so that it matches your style :)
+      - 'Pure customization. We change the logo, the colors, everything you can imagine. All the detail are here:  https://rocket.chat/products'
+    event: respond
+    type: random
+
+  # Do you customize apps?
+  - node:
+      name: services-3
+    classifiers:
+      - Personalize apps
+      - Customize apps
+      - White label for apps
+      - Apps available for white label
+      - Modify the apps
+    message:
+      - Yes, customizing Apps is one of our services.
+      - 'You can send an e-mail to jobs@rocket.chat or access this link: https://rocket.chat/services.'
+    event: respond
+    type: block
+
+# Is there a free white label version?
+  - node:
+      name: services-4
+    classifiers:
+      - Necessary to pay for white label
+      - Do the white label by myself
+      - Do the white label independently
+      - Free white label
+      - White label without paying
+      - No-payment alternative
+    message:
+      - If you are an experienced programmer, you can do it by yourself!
+      - But if you want to save your team some time and leave it to us you won’t have to worry. With little cost we can change anything.
+      - 'Check the prices with our team: sales@rocket.chat. They know everything.'
+    event: respond
+    type: block
+
+  # Do you know anyone who could realize the white label service?
+  - node:
+      name: services-5
+    classifiers:
+      - White Label indications
+      - White label alternatives
+      - Other suggestions for white label
+      - Other people to do the white label
+      - Companies to do the white label
+    message:
+      - Yes! We could do it quickly or your own team could try programming it. Our system is open source, in other words, everyone has access.
+      - We advise you to do it with us. We have all the knowledge for that.
+    event: respond
+    type: block
