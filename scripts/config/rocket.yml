@@ -588,7 +588,7 @@ interactions:
       - Reportar ao suporte
     message:
       - 'É só mandar um e-mail: support@rocket.chat ou procurar por nós na versão demo pelos canais #support #dev ou #general'
-      - Feche os olhos, conte até 20 de trás para frente, de três pulinhos (ainda de olhos fechados) e quando abrir, manda oi pra gente pela versão Demo pelos canais #support #dev ou #general :)
+      - 'Feche os olhos, conte até 20 de trás para frente, de três pulinhos (ainda de olhos fechados) e quando abrir, manda oi pra gente pela versão Demo pelos canais #support #dev ou #general :)'
       - Esses caras são super-heróis, fazem tudo! Diz que te indiquei a falar com eles, eles vão gostar. support@rocket.chat.
     event: respond
     type: random
