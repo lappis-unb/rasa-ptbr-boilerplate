@@ -522,3 +522,395 @@ interactions:
       - We advise you to do it with us. We have all the knowledge for that.
     event: respond
     type: block
+
+# Support
+#
+# Prices for support
+ - node:
+     name: support-1
+   classifiers:
+     - Support prices
+     - Cost prices
+     - Budget support
+     - Support value
+     - Financial estimate for support
+     - Pay for support
+     - Support amount
+     - Charge for support
+     - Taxes support
+   message:
+     - We have different support alternatives because of the different types of companies and demand. To check the exact price send an e-mail to sales@rocket.chat.
+     - 'There are so many possibilities… We do not have a single price because every company has different demands. Let’s do this:  send an e-mail to sales@rocket.chat and you will get an answer soon.'
+     - 'Only my little human friends know the answer to that. Talk to them, I promise they are nice people: sales@rocket.chat'
+   event: respond
+   type: random
+
+# I found a Bug. Where can I report it?
+ - node:
+     name: support-2
+   classifiers:
+     - Report a bug
+     - Found a bug
+     - Found a problem
+     - Problems with a bug
+     - Identify bug
+   message:
+     - Do you know Github? Our community talks about that on this platform.
+     - 'If you are not into this kind of platform, you can always find us on the demo version in either of these channels: #demo, #dev, or #general. We’ll answer in no time.'
+     - But you could also send an e-mail to support@rocket.chat
+   event: respond
+   type: block
+
+ # In what language is the support done?
+ - node:
+     name: support-3
+   classifiers:
+     - Support language
+     - Communicate with support in what language
+     - Talk to support in what language
+     - What language support speaks
+   message:
+     - It is done in Robot language, what else could it be? We dominate everything. Just kidding, it’s English.
+     - It is done basically in English. We still do not have any translated support versions but, if you have a problem to understand it, let us know and we’ll try our best to help!
+     - We chose English but if you need some help contact us at support@rocket.chat.
+   event: respond
+   type: random
+
+ # Is support provided for final users and organizations equally?
+ - node:
+     name: support-4
+   classifiers:
+     - Support to whom
+     - Provide support to whom
+     - To whom applies the support
+     - Companies support
+     - Organizations support
+     - Support to whom
+   message:
+     - We have some free and some paid support versions.
+     - In case your demand fits the paid version, some people inside your organization is responsible for contacting the support sector.
+     - Talk to us at support@rocket.chat and we’ll be able to help you.
+   event: respond
+   type: block
+
+ # How to contact support?
+ - node:
+     name: support-5
+   classifiers:
+     - Contact support
+     - Talk to support
+     - Inform support
+     - Support’s contact
+     - Support’s number
+     - Support’s e-mail
+     - Find support
+     - Report to support
+   message:
+     - 'You’ll only need to send an e-mail to  support@rocket.chat or find us on either of these channels on the demo version: #support, #dev, or #general :)'
+     - 'Close your eyes, count backwards from 20, jump three times (still with your eyes closed), and when you open them say hi to us on either of these channels on the demo version: #support, #dev, or #general '
+     - These guys are super-heroes; they’ll do anything! Tell them I advised you to talk to them. They will love it!  support@rocket.chat
+   event: respond
+   type: random
+
+ # What is the average response time?
+ - node:
+     name: support-6
+   classifiers:
+     - Average response time from support
+     - Wait for support’s response
+     - Wait for support’s answer
+     - When will support answer me
+   message:
+     - That depends on several factors. If you contact us directly, we’ll try do be as quick as possible.
+     - 'If it is a free support version, the answer might take a while since we have a priority sequence depending on the clients’ demand. Check if your demand is already not here: https://github.com/rocketchat.'
+     - If it is a demand that fits the paid versions, we’ll get to you according to what has been priorly decided.
+   event: respond
+   type: block
+
+ # What is included on the support?
+ - node:
+     name: support-7
+   classifiers:
+     - How does support work
+     - What is in the support
+     - Included on the support
+     - What support provides
+     - Information about support
+     - Summary of the support
+     - Advantages of the support
+     - Distinguishing features of the support
+     - Support for video conferences
+     - Support for audio conferences
+   message:
+     - We work with different support options.
+     - There is consulting, customization, 24/7 service…
+     - You can get all the details on our webpage https://rocket.chat/support.
+   event: respond
+   type: block
+
+ # Hosting
+ #
+ # Hosting prices
+ - node:
+     name: hosting-1
+   classifiers:
+     - Hosting cost
+     - Hosting prices
+     - Price variation hosting
+     - Budget hosting
+     - Hosting value
+     - Financial estimate hosting
+     - Charge for hosting
+     - Taxes hosting
+   message:
+     - 'We charge for hosting your platform on our cloud. You can see our Hosting prices at https://rocket.chat/hosting.'
+     - There are multiple services related to our hosting, you can get all about that on the link posted above.
+   event: respond
+   type: block
+
+ # What does the hosting include?
+ - node:
+     name: hosting-2
+   classifiers:
+     - Hosting include
+     - What does the hosting provides
+     - What does the hosting have
+     - How does the hosting work
+     - What is the hosting
+     - What is the hosting used for
+     - Hosting features
+     - Hosting functionalities
+   message:
+     - 'All the information about hosting has been published here: https://rocket.chat/hosting'
+     - 'Hosting is a way of keeping your info safe on the cloud, providing you with a flexible alternative of accessing your data wherever you go. Rocket.chat offers their cloud for users to store information about their company there. Check it out here: https://rocket.chat/hosting'
+     - 'Cloud hosting is all love <3 All you’ll ever need, wherever you go. Check it out here: https://rocket.chat/hosting.'
+
+   event: respond
+   type: random
+
+ # Is it possible to add more memory to the hosting?
+ - node:
+     name: hosting-3
+   classifiers:
+     - Hosting memory
+     - Add memory to the hosting
+     - More hosting memory
+     - Extra hosting memory
+     - Add space to hosting
+     - More hosting space
+     - More hosting storage
+     - How does hosting storage work
+     - Hosting storage capacity
+     - What’s the hosting capacity
+   message:
+     - Yes, it is possible. If you’d like to know more about that send an e-mail to cloud@rocket.chat.
+   event: respond
+   Type: block
+
+ # How can I contact a support representative for the hosting?
+ - node:
+     name: hosting-4
+   classifiers:
+     - Hosting support
+     - Help with hosting
+     - Doubts about hosting
+     - Problems with hosting
+     - Hosting support representative
+     - Hosting representative
+     - Hosting contact
+     - Server problems
+   message:
+     - If you are still not using our hosting, you can get answers to all your doubts at sales@rocket.chat
+     - 'If you are already using it, contact this e-mail: support@rocket.chat'
+   event: respond
+   type: block
+
+ # What are hosting partners?
+ - node:
+     name: hosting-5
+   classifiers:
+     - What are hosting partners
+     - Meaning of hosting partners
+     - What are hosting partner for
+     - Hosting partner purpose
+     - What do hosting partners apply to
+   message:
+     - They are partners who offer the Hosting service but with price and characteristics different than ours.
+     - 'Are you interested? Find one here: https://rocket.chat/partners'
+   event: respond
+   Type: block
+
+ # Can I host for free?
+ - node:
+     name: hosting-6
+   classifiers:
+     - Own host
+     - Private host
+     - Create a personal host
+     - Single host
+   message:
+     - You can host on your own service without having to pay anything or you can host with us and take advantage of all our cloud benefits :)
+     - 'You can get all the details here: https://rocket.chat/hosting'
+   event: respond
+   Type: block
+
+# Development of Funcionallities #
+#
+# How much do you charge for developing new functionalities? #
+ - node:
+     name: desenvolvimento-1
+   classifiers:
+     - Price for new functionalities
+     - New functionalities cost
+     - Charge for new functionalities
+     - Budget for new functionalities
+     - Price chart for developing new functionalities
+     - New functionalities value
+     - New functionalities taxes
+     - Amount for new functionalities
+   message:
+     - 'You can get all the info with these guys right here: sales@rocket.chat.'
+     - 'It depends on your demand. Talk to these guys and they will be able to help you: sales@rocket.chat.'
+     - 'It is hard to say… We’ll have to check with my super-human friends! Send an e-mail to sales@rocket.chat and they will reply to you soon.'
+   event: respond
+   type: random
+
+# + Data Import  +
+
+# Can data be recovered from other applications such as Slack? How does that work?
+ - node:
+     name: data-1
+   classifiers:
+     - Recover data
+     - Import data from other applications
+     - How does data import work
+     - Transfer data
+     - Data importation
+     - Make data transfer
+     - Import chat history
+     - Types of importation
+     - Control over the imported data
+     - Types of imported data
+     - Data compatibility
+   message:
+    - We are currently able to import data from some platforms like Slack and Hipchat. We are, however, open to expand these options. You only need  to send a message to support@rocket.chat.
+    - 'For more information on how to do this on Hipchat access: https://rocket.chat/docs/administrator-guides/import/hipchat/enterprise/'
+    - 'On Slack:  https://rocket.chat/docs/administrator-guides/import/slack/.'
+   event: respond
+   type: block
+
+# Do you charge for data importation?
+ - node:
+     name: data-2
+   classifiers:
+     - Price for data importation
+     - Pay to import data
+     - How much is it to import data
+     - Charge to transfer data
+   message:
+   - We have some importation systems developed for applications such as Slack, Hipchat, and CSV. Depending on your need to expand these options and if you need this functionality with urgency, contact support@rocket.chat to check for the prices.
+   - If the application you are looking to import from is Slack, Hipchat, or CSV, we have a free solution :) We’ll only be charging if the importation service is still not ready. Talk with support@rocket.chat or more information.
+   event: respond
+   type: random
+
+# Is the data importation limited?
+ - node:
+     name: data-3
+   classifiers:
+     - Limit of data to import
+     - Maximum data to import
+     - How much data can I import
+   message:
+   - We do not have an importation limit :)  Relax, if we have already developed an importation method for your platform everything you have there will be transferred.
+   - We have no limits haha In other words, no importation limits.
+   - Keep calm, everything we’ll be imported, no importation limits.
+   event: respond
+   type: random
+
+# In which cloud will the imported data be stored?
+ - node:
+     name: data-4
+   classifiers:
+     - Store imported data where
+     - Cloud where imported data will be stored in
+     - Where will the imported data be in
+     - Space occupied by the new imported data
+   message:
+   - The data imported can be stored either in the company’s server or in our Google Cloud, allowing you to access your data wherever you go.
+   - 'You can get more information about the subject in this link: https://rocket.chat/products.'
+   event: respond
+   type: block
+
+# Is something not going to be imported?
+ - node:
+     name: data-5
+   classifiers:
+     - Limitation to the data import
+     - Type of data that will be imported
+     - What will not be imported during the data importation
+     - What will no be transferred during the data importation
+   message:
+     - You choose:) You can import whatever you like. When you begin the importation process, you will be able to choose what you want to import.
+     - You can choose how you want to import. You can choose to import everything or leave something out.
+     - We import all of it! You can choose what you do not want to import though
+   event: respond
+   type: random
+
+   # + Integrations +
+
+# Is there an integration limit?
+ - node:
+     name: integration-1
+   classifiers:
+     - Maximum integration
+     - Integration limit
+     - How many integrations
+   message:
+     - We do not recommend putting way too many integrations since it might make the system slower, but we do not have limit when it comes to integrations
+     - The sky's the limit :)
+     - We do not have a limit on the number of integrations, but we do not recommend doing many integrations in order to avoid making the system slower.
+   event: respond
+   type: random
+
+# # Which are the kinds of integrations you have?
+ - node:
+     name: integration-2
+   classifiers:
+     - What are the integrations
+     - Types of integrations
+     - List of integrations
+     - Integrate with whom
+     - Integrate other applications
+   message:
+     - 'There are just so many… You can see all of them here: https://rocket.chat/integrations.'
+     - 'Everyday we work on creating new integrations. Take a look here: https://rocket.chat/integrations.'
+   event: respond
+   type: random
+
+# Is API necessary for integrations?
+ - node:
+     name: integration-3
+   classifiers:
+     - API for integrations
+     - Need API
+     - API necessary
+     - Integrate API
+   message:
+     - Depends on the integration, if you’d like to know more about that send an e-mail to support@rocket.chat.
+   event: respond
+   type: random
+
+# How do I do an integration?
+ - node:
+     name: integration-4
+   classifiers:
+     - How is an integration done
+     - About integration
+     - What do I need to make an integration
+     - What is an integration
+     - How to integrate
+   message:
+     - 'The integrations allow for a greater connection between our platform and other applications. We offer a vast number of integrations, you can check all of them here: https://rocket.chat/integrations.'
+     - Here you’ll be able to see the integrations we currently have. If  you are looking for one that doesn’t show up there, let me know! rocket.chat/integrations
+   event: respond
+   type: random
