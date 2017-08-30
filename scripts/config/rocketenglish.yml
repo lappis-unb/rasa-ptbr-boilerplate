@@ -1,0 +1,375 @@
+# Bot goals:
+#
+# Principais objetivos do Bot:
+# 1- Recepcionar novos usuários
+# 2- Solucionar dúvidas para curiosos que entram no site
+# 3- Trazer novos usuários
+# 4- Trazer leads de novos clientes
+# 5- Executar Serviços (?)
+# -------------------------------------------------------------------------------------------------------------------
+trust: .72
+interactions:
+
+  - node:
+      name: configure-debug
+    classifiers:
+      - "!configure debug-mode"
+      - "/set debug-mode"
+      - "let debug-mode"
+      - "turn debug-mode"
+      - "make debug-mode"
+    message:
+      - debug-mode changed to $value!
+    context: clear
+    event: configure
+    type: random
+    roleRequired: admin
+
+# Work #
+
+# How can I work at Rocket.Chat?
+  - node:
+      name: Work-1
+    classifiers::
+      - Work at Rocket.chat
+      - Jobs at Rocket.chat
+      - Positions at Rocket.chat
+      - Send my CV
+
+    message:
+      - If you are looking for job opportunities with us, send an e-mail to jobs@rocket.chat :)
+      - 'Yay! Let’s work together someday, send us an e-mail with your LinkedIn profile: jobs@rocket.chat'
+      - Hmmm I feel you… wanna work with me, huh? Send an e-mail to jobs@rocket.chat, we will evaluate your profile and contact you as soon as something comes up!
+
+    context: clear
+    event: respond
+    type: random
+
+
+
+# + Work +
+
+# Where can I find open positions?
+  - node:
+      name: work-2
+    classifiers:
+      - Where to find positions
+      - Where to look for positions
+      - Which are then open positions
+      - Search for positions
+      - Find positions
+      - Are hiring
+
+    message:
+      - So you’re gonna tell me you want to work with us? Yay!
+      - You can search for open positions in here https://rocket.chat/jobs and if you are looking for more info send an e-mail to jobs@rocket.chat.
+    event: respond
+    type: block
+
+# What is the average salary at Rocket.Chat?
+  - node:
+      name: work-3
+    classifiers:
+      - What is the salary
+      - How much do you pay
+      - What is paid
+      - What it the amount paid
+
+    message:
+      - So you already wanna know about the salary? You number cruncher! xD Just kidding. If you want to know what is the salary, you can send an e-mail to jobs@rocket.chat and they will be able to help you ;)
+      - Oh it varies between R$ 10 and R$ 1.000.000,00…, to find out we will first need to get to know you better…
+      - If it was up to me I’d give you all the money in this wild world. I wish hahaha You should send an e-mail to jobs@rocket.chat and the humans will be able to help you.
+    event: respond
+    type: random
+
+# Is there an e-mail address which I could send my CV to?
+  - node:
+      name: work-4
+    classifiers:
+      - E-mail CV
+      - Where can I send the CV
+      - How to send the CV
+      - E-mail address for CV
+
+    message:
+      - I like you… I think we will hit it off. You can send your CV to jobs@rocket.chat!
+      - Nice one! Send your CV to jobs@rocket.chat.
+      - Own… I am already picturing… us, together <3 Send your CV to jobs@rocket.chat so we can get to know each other better.
+    event: respond
+    type: random
+
+# There are no open positions on the website, what can I do?
+  - node:
+      name: work-5
+    classifiers:
+      - Waiting for open positions
+      - No open positions on the website
+      - The website does not show any open spots
+      - Have not find a position that fits me
+
+    message:
+      - If this is your case, send your CV to jobs@rocket.chat and as soon as we have something that fits your profile we will let you know.
+      - Don’t be sad! There is always space for great people, send your CV to jobs@rocket.chat.
+      - Talk to the humans, they will be able to help you find something that fits your profile :) jobs@rocket.chat.
+    event: respond
+    type: random
+
+# I have not received an answer about my CV.
+  - node:
+      name: work-6
+    classifiers:
+      - Have not received an answer CV
+      - Have not received feedback CV
+      - No one contacted me about my CV
+      - No responses CV
+      - Waiting for answer CV/positions
+      - Can’t talk about my CV
+
+    message:
+      - Really?! Something must have happened. Send your CV again to jobs@rocket.chat!
+      - You should try sending your CV again to jobs@rocket.chat and we’ll see what we can do about it ;)
+    event: respond
+    type: random
+
+# When does the selection process open?
+  - node:
+      name: work-7
+    classifiers:
+      - Selection process date
+      - How does the selection process work
+      - Phases selection process
+      - Selection Process
+
+    message:
+      - This question is easy!
+      - 'You can get all the information on the website:  https://rocket.chat/jobs.'
+      - Or send an e-mail to jobs@rocket.chat and we will let you know when we have something.
+    event: respond
+    type: block
+
+# Do you have positions for trainee?
+  - node:
+      name: work-8
+    classifiers:
+      - Positions for trainee
+      - How does trainee work
+      - Work with trainee
+      - Trainee program
+      - Do you have a trainee program
+      - Trainee spots
+    message:
+      - Take a look at rocket.chat/jobs! We still do not have this type of program but there are always new stuff coming up.
+      - I have never seen that around here, even though the humans who work with me look like super-heroes… There’s just so much to do I get lost, everyday something new…
+      - 'Not yet! But stay tuned at our website (https://rocket.Chat/Jobs) and at our Facebook page, that way you won’t lose a thing.'
+    event: respond
+    type: random
+
+# What is the profile of the people who work at Rocket?
+  - node:
+      name: work-9
+    classifiers:
+      - Profile of Rocket.Chat’s workers
+      - Worker’s profile
+      - Workers characteristics
+      - Rocket.Chat profile
+
+    message:
+      - Oh anything you can imagine… super-heroes, magicians, airplane pilots,... I’m sure there is space for you as well.
+      - We like people who are willing to do it <3 People who know what they want and go beyond the daily routine.
+      - Good people! Passionate, hard-working, and well-humoured :)
+    event: respond
+    type: random
+
+    # Security #
+
+    # How does the security of the messages works?
+      - node:
+          name: security-1
+        classifiers:
+          - Message security
+          - Chat security
+          - Chat safety
+          - Security methods
+          - Is chat protected
+
+        message:
+          - Every message written on the regular chat might be accessed by the administrators. If you want use the encrypted chat, however, you’ll only need to start an off-the-record conversation.
+          - How to do that? Well you will need to click on the key symbol on the right part of your chat screen that reads OTR (off-the-record). :)
+        event: respond
+        type: block
+
+    # Is the demo version safe?
+      - node:
+          name: security-2
+        classifiers:
+          - Demo safe
+          - Demo’s security
+          - Encryption demo
+          - Demo’s protection
+        message:
+          - Yes! You can have off-the-record conversations inside the demo version.
+          - If you start an off-the-record conversation it will be encrypted but if you want to chat in open channels, anyone will be able to see it.
+        event: respond
+        type: random
+
+    # What type of encryption is used?
+      - node:
+          name: security-3
+        classifiers:
+          - Encryption used
+          - Type of encryption
+          - Which encryption
+        message:
+          - Relaaax, our chat is safely secured. If you want, however, to make sure you are using encryption access the off-the-record conversations on the key symbol on the left part of your chat screen.
+          - After activating this little key, no hacker will be able to steal your information. Did you really think I hadn’t watched Black Mirror?
+        event: respond
+        type: block
+
+    # In what cloud are the messages saved?
+      - node:
+          name: security-4
+        classifiers:
+          - Cloud messages
+          - Storage messages
+          - Storage cloud
+          - Store in which cloud
+        message:
+          - Depending on the server you choose…
+          - 'We offer a cloud on Google Cloud. You can get more info about that on the following link:  https://rocket.chat/products.'
+        event: respond
+        type: block
+
+    # Is someone else going to have access to the messages?
+      - node:
+          name: security-5
+        classifiers:
+          - Can someone see my messages
+          - My messages will be safe
+          - Who will be able to see my messages
+        message:
+          - The server administrator has access to the chats that have been traded on the platform.
+          - If you are, however, the neurotic kind of person you can activate our encryption solution by clicking on the key icon on the right part of your chat screen.
+        event: respond
+        type: block
+
+    # Am I going to be charged for the chat’s security?
+      - node:
+          name: security-6
+        classifiers:
+          - Pay for security
+          - Price for the messages’ security
+          - Pay for the encryption
+          - Security included on the service
+        message:
+          - It is awesome not having to pay for thing, huh?
+          - We also think so. It doesn’t matter how you use the platform, you will be safe :)
+          - 'You can check all the details about this on: http://rocket.chat/products.'
+        event: respond
+        type: block
+
+    # Will the messages imported from other applications still be safe?
+      - node:
+          name: security-7
+        classifiers:
+          - Security of imported messages
+          - Imported messages are safe
+          - Protection for imported messages
+          - Encryption for messages and imported chats
+          - Still protected after importing messages
+        message:
+          - Of course! Don’t worry, we’ll take care of everything.
+          - We have today multiple clients who need a super strong security such as banks and public organizations.
+          - 'You can get more details about that at:  https://rocket.chat/security.'
+        event: respond
+        type: block
+
+        #  Portfolio
+        # Who are your clients?
+          - node:
+              name: portfolio-1
+            classifiers:
+              - Who are the clients
+              - Who uses the platform
+              - List of clients
+              - Companies that use Rocket.chat
+              - Who uses
+              - Who are the users of the service
+            message:
+              - 'Good you asked! We love showing ourselves, take a look at the many study cases at:  http://rocket.chat/customers.'
+              - Oh you can find every type of company here! From churches to banks and technology companies. We usually work with companies or groups who value innovation, creativity, and promptness.
+              - "Do you want to know if you fit in here? The answer is yes!! Look how awesome our client page is: http://rocket.chat/customers."
+            event: respond
+            type: random
+
+        # Do you have case studies?
+          - node:
+              name: portfolio-2
+            classifiers:
+              - Business case
+              - Case studies
+              - User examples
+              - How clients use
+            message:
+              - 'Yep! Take a look here:  https://rocket.chat/customers.'
+              - 'Yes! We already have many organizations using our platform e we are already gathering their opinion on their experiences. You can take a look at these stories here:  http://rocket.chat/customers.'
+              - 'It’s been so little time and so many stories… I even get nostalgic… I gathered some of the in here, in case you want to take a look: https://rocket.chat/customers.'
+            event: respond
+            type: random
+
+        # Do you have clients on the retail sector?
+          - node:
+              name: portfolio-3
+            classifiers:
+              - Retail clients
+              - Retail
+              - Wholesale
+              - Retail area
+            message:
+              - Yes, we do!
+              - 'Take a look here at out case studies: https://rocket.chat/customers.'
+              - There’s also testimony from these types of company in there.
+            event: respond
+            type: block
+
+        # Do you work with marketing agencies?
+          - node:
+              name: portfolio-4
+            classifiers:
+              - Work with marketing agencies
+              - Service for marketing agencies
+              - Collaborate with marketing companies
+              - Marketing agencies as clients
+            message:
+              - 'Yep! We understand that every client is unique, but you can have an idea of how the agencies are using us here:'
+              - 'https://rocket.cht/customers'
+            event: respond
+            type: block
+
+        # Do you have clients on the health area?
+          - node:
+              name: portfolio-5
+            classifiers:
+              - Hospitals as clients
+              - Work with hospitals
+              - Example of hospitals on the platform
+              - Services for the health sector
+            message:
+              - 'Yep! We understand that every client is unique, but you can have an idea of how companies of the health sector are using us here:'
+              - 'https://rocket.cht/customers'
+            event: respond
+            type: block
+
+        # Do you have banks as clients?
+          - node:
+              name: portfolio-6
+            classifiers:
+              - Banks as clients
+              - Work with banks
+              - Example of banks on the platform
+              - Services for banks
+            message:
+              - Yes, we are very proud to have clients in the financial market.
+              - Our product is extremely safe and customizable. Did you know we work with White Labeling?
+              - 'You can get an idea of how banks and other financial companies use us here:  https://rocket.cht/customers.'
+            event: respond
+            type: block
