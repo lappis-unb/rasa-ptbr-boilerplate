@@ -914,3 +914,518 @@ interactions:
      - Here you’ll be able to see the integrations we currently have. If  you are looking for one that doesn’t show up there, let me know! rocket.chat/integrations
    event: respond
    type: random
+
+# Product
+# Prices
+#
+# How much does it cost?
+- node:
+    name: price-1
+  classifiers:
+    - What is the cost
+    - What is the price
+    - How much is charged
+    - Pricing chart
+    - Charge for the service
+    - Pricing of the product
+    - Pay to use
+    - Paid version
+    - Payment methods
+  message:
+    - 'Rocket.Chat is free :) We charge, however, for customization, support, and hosting services, which vary in price according to the demand. You can get all the information here: https://rocket.chat/products.'
+    - 'The platform is free! However, in case you need customization, support, or hosting services, that will be charged. You can check our services here https://rocket.chat/products and our hosting system here https://rocket.chat/hosting. If you would like to know more about pricing you can contact these guys sales@rocket.chat.'
+  event: respond
+  type: random
+
+# Do you give any discounts?
+- node:
+    name: price-2
+  classifiers:
+    - Discount for  non-profit organiztions
+    - Get discount
+    - Discount for the educational sector
+    - Discount for educational institutions
+    - Covenants for the educational sector
+    - Is there discount
+    - Promotional codes
+    - Can you give me a discount
+  message:
+    - We charge for extra services such as support, customization, and hosting. All prices relating to these services are negotiated with sales@rocket.chat according to the demand of the company.
+    - If you are a non-profit institution or work on the educational sector, we might have some discounts to help you make use of our platform in the best way possible.
+    - If this is your case, also contact sales@rocket.chat.
+  event: respond
+  type: block
+
+# Do I have to pay for deactivated users?
+- node:
+    name: price-3
+  classifiers:
+    - deactivated users Payment
+    - do i need to pay for deactivated users
+    - deactivated users
+    - cancelled users
+    - excluding users
+    - removing users
+    - Charge deactivated users
+    - Charge for users
+  message:
+    - We do not charge for the use of Rocket.Chat’s platform.
+    - So after you buy a pack, you can add users inside the limits of your pack however you want to.
+  event: respond
+  type: block
+
+# Features
+#
+# Will there be new features?
+- node:
+    name: features-1
+  classifiers:
+    - New features
+    - New functionalities
+    - Date for new features
+    - More features
+    - Update features
+  message:
+    - 'Yes! Every time a new feature is added to the platform we post it here:  https://github.com/rocketchat'
+    - 'Are you looking for something specific? Take a look at https://github.com/RocketChat and make sure the feature is not there already :)'
+  event: respond
+  type: random
+
+# What are the current available features on the app?
+- node:
+    name: features-2
+  classifiers:
+    - App features
+    - What is in the app
+    - Available features for the app
+    - App functionalities
+    - Features on the mobile platform
+    - Document with the features
+    - Available features
+    - Feature summary
+    - What features are there in rocket.chat
+  message:
+    - Good you asked!
+    - We are very proud of our product.
+    - 'You can find all Rocket.chat features on the following link: https://rocket.chat/features'
+  event: respond
+  type: block
+
+# Can I have exclusive features?
+- node:
+    name: features-3
+  classifiers:
+    - Exclusive features
+    - Want exclusive features
+    - Develop exclusive features
+    - Develop personalized feature
+    - Suggest features
+    - Develop features
+    - Pay for features
+    - Create features
+    - ask for exclusive features
+    - can i suggest an exclusive feature
+  message:
+    - 'We are constantly developing new features. Take a look at this  Github’s link (https://github.com/rocketchat) e check if what your are seeking for isn’t already in development.'
+    - If it is not, there is the possibility of investing and developing the new feature :)
+    - Send an e-mail to sales@rocket.chat and they will be able to help you with that.
+  event: respond
+  type: block
+
+# What are native applications?
+- node:
+    name: features-4
+  classifiers:
+    - Meaning of native application
+    - Explain native application
+    - What is native application
+    - Did not understand what native application is
+  message:
+    - Native applications, as the name says, is an application with no alterations to run the Android or the iOS platform.
+    - We have this option :)
+  event: respond
+  type: block
+
+# OpenSource #
+#
+# What is open sourcing? #
+- node:
+    name: opensource-1
+  classifiers:
+    - Meaning of open source
+    - What is open sourcing
+    - Explain open source
+    - Summary of open source
+    - How does open sourcing work
+    - Tell me about open sourcing
+  message:
+    - Open sourcing means that the code is public. Rocket.chat is open source, which in other words, means that all the process and code (including me right here) is available at GitHub.
+    - We believe that all the knowledge and functioning of our product should be shared.
+  event: respond
+  type: block
+
+# What are the benefits of using the open sourcing system?
+- node:
+    name: opensource-2
+  classifiers:
+    - Open sourcing benefits
+    - What does open sourcing does
+    - Gain with open sourcing
+    - Distinguishing features of open sourcing
+    - Differential of open sourcing
+  message:
+    - There are so many benefits of using an open source platform… Students and professionals from all over the  world become contributors to the development of our code.
+    - The main benefit is the opportunity to be customizable, being dynamic, and being under constant innovation. This allows for a better product when compared to that of our competitors :)
+    - 'You can find the complete list of benefits on our blog: https://rocket.chat/blog.'
+  event: respond
+  type: block
+
+# How can I contribute?
+- node:
+    name: opensource-3
+  classifiers:
+    - Contribute to open sourcing
+    - Help the open sourcing
+    - My role on open sourcing
+    - Develop the open source software
+  message:
+    - 'You can access Github’s webpage (https://github.com/rocketchat) and help develop our code :)'
+    - 'You can develop our code at  Github’s webpage (https://github.com/rocketchat)'
+    - 'We have an  webpage at Github (https://github.com/rocketchat) with all the details. That’s where everyone gets together to develop.'
+  event: respond
+  type: random
+
+# What is the size of the developer community?
+- node:
+    name: opensource-4
+  classifiers:
+    - Size of the  developer community
+    - Number of people on the platform
+    - Size of the platform
+    - Number of users at the platform
+    - Amount of users at the platform
+    - How many contributors
+    - How many platform developers
+    - Community size
+  message:
+    -  We are in constant expansion!
+    - It’s hard to tell the size of our community because we’re constantly receiving new users and developers.
+    - We have, however, more than 500 people involved with the development and more than 1500 created servers.
+  event: respond
+  type: block
+
+# + Products +
+# What is the main product?
+- node:
+    name: product-1
+  classifiers:
+    - What is the product
+    - Main product
+    - Which is the product
+    - What is the service
+    - Explain the product
+    - Purpose of the product
+    - What is the product for
+    - Related products and services
+    - Informations about the product
+    - Summary about the product
+    - Why was the product developed
+  message:
+    -  We offer a completely open source (public code) communication platform. Besides the Chat and Live Chat free tools, we offer multiple support, maintenance, and platform customization services.
+    - It is as though we were a flexible and updated alternative to Slack. We currently possess the largest and most active contributor community between our competitors.
+    - You can check all the detail about the product here (https://rocket.chat/products).
+  event: respond
+  type: block
+
+# What should I do if I encounter problems with the product?
+- node:
+    name: product-2
+  classifiers:
+    - Problems with the product
+    - Doubts about the product
+    - Help with the product
+    - Support for the product
+    - Encounter problems with the product
+    - Need help to solve a problem
+  message:
+    - If you have any problem, talk to us! support@rocket.chat
+    - Easy peasy, if you got any problems or difficulties while using the platform, tell us! support@rocket.chat
+    - You can take a look at our  FAQ (https://rocket.chat/support)  or talk to us  at support@rocket.chat
+  event: respond
+  type: random
+
+# How installing Rocket.Chat will benefit me?
+- node:
+    name: product-3
+  classifiers:
+    - Distinguishing features of the product
+    - Differential product
+    - Benefits of Rocket.Chat
+    - Pros of Rocket.Chat
+    - Why use Rocket.Chat
+    - Benefits of open source
+    - What open source gives me
+    - How can the product increase my sales
+  message:
+    -  Because it is open source, Rocket.Chat is a tool in constant development, allowing the product to be continually upgraded.
+    - Besides providing teams with a very effective real time communication channel, it enables a greater interaction with clients since it does not have a user limit, has conversation between companies and has  the LiveChat resource integrated to the platform.
+    - Because it is a platform that possesses multiple integrations and works on different contexts, we allow you to access your chats wherever you go :)
+    - Oh and we are free as well <3
+    - You can read our clients’ reports here (https://rocket.chat/customers) and greater explanations about the product in this webpage (https://rocket.chat/).
+  event: respond
+  type: block
+
+#  Is connection to the internet necessary to use the product?
+- node:
+    name: product-4
+  classifiers:
+    - Connect to the internet
+    - Offline use
+    - Internet necessary
+    - Internet essential
+    - Internet crucial
+    - Connect to network
+  message:
+    - To access remotely, internet connection is needed.
+    - However, you don’t need to have internet if you download the platform to your own local network and have the users registered.
+  event: respond
+  type: block
+
+# Will the free trail end?
+- node:
+    name: product-5
+  classifiers:
+    - Free trial limit
+    - Duration of the free trial
+    - Maximum free trial period period
+    - End to free trial
+    - Free trial extension
+  message:
+    - Everything that is good ends, right? So… the Hosting free trial is limited. But since our product is special, the platform will be eternally free!
+    - The platform will keep being free, but the demo version has a finite trial period.
+  event: respond
+  type: random
+
+# Does Rocket.Chat support external users?
+- node:
+    name: product-6
+  classifiers:
+    - External users
+    - Support to external users
+    - Chat outsiders
+    - Necessary to have an account
+  message:
+    - Who decides if external user will be added or not is the administrator!
+    - Inside every server, the administrator can choose who he’ll add or remove :)
+  event: respond
+  type: random
+
+# Consigo acessar o código do produto?
+- node:
+    name: product-7
+  classifiers:
+    - Acessar o código
+    - Programar o produto
+    - Encontrar o código
+    - Achar o código
+  message:
+    - O nosso código está disponível aqui.
+    - Nossa plataforma é totalmente OpenSource, está tudo disponível aqui.
+  event: respond
+  type: random
+
+# Qual o número de usuários que a plataforma suporta?
+- node:
+    name: product-8
+  classifiers:
+    - Limite de usários
+    - Número máximo de usuários
+    - Quantos usuários a plataforma suporta
+    - Restrição de usuários
+    - qual é o limite maximo de usuarios
+  message:
+    - Ilimitado <3
+    - Cabe todo mundo aqui! Não temos limite de usuários, canais, convidados, mensagens, etc.
+    - Vish, não se preocupa com isso, cabe todo mundo.
+  event: respond
+  type: random
+
+# Quem administra o pagamento?
+- node:
+    name: product-9
+  classifiers:
+    - Quem paga a rocket.chat
+    - Quem administra a conta
+    - Quem faz o pagamento dos serviços
+    - quem paga o hosting
+    - quem administra os pagamentos
+  message:
+    - Nós cobramos por serviços prestados e hosting. Cada empresa que solicita esse tipo de serviço seleciona algumas pessoas para serem os responsáveis desse relacionamento. Quem faz o pagamento depende da própria organização da empresa.
+    - Nós somos gratuitos, mas qualquer empresa pode optar produtos pagos e selecionar algumas pessoas para manter o relacionamento com os nossos desenvolvedores. Já o pagamento depende da empresa e de como ela quer se organizar, para a gente não importa se é o CFO ou o estagiário que efetua o pagamento.
+  event: respond
+  type: random
+
+# Quais as formas de pagamento da plataforma?
+- node:
+    name: product-10
+  classifiers:
+    - Como pagar os serviços/ hosting
+    - Como realizar o pagamento da plataforma
+    - Como pago os serviços/ hosting
+  message:
+    - Então, aceitamos de tudo hehe Transferencia, depósito, boleto,etc..
+    - Pode pagar de diversas formas! É só clicar no Hosting que as opções vão aparecer pra você!
+  event: respond
+  type: random
+
+# Qual a diferença entre Demo e Hosting e Download?
+- node:
+    name: product-11
+  classifiers:
+    - Diferenca demo e hosting
+    - Demo versus hosting
+    - Demo contra hosting
+    - O que é demo e hosting
+  message:
+    - Os usuários da plataforma possuem essas três opções, mas com objetivos diferentes.
+    - A versão demo sempre vai existir e funciona separado do resto, ela serve para testar o chat, para conversar com os desenvolvedores e pessoas do mundo todo.
+    - Quando uma organização ou time decide usar a plataforma ela pode fazer o download no seu servidor ou usar o nosso serviço de hosting na nuvem.
+  event: respond
+  type: block
+
+# Qual a diferença entre fazer download e hosting?
+- node:
+    name: product-12
+  classifiers:
+    - Diferenca entre download e hosting
+    - Download versus hosting
+    - Fazer o download ou pagar hosting
+    - Explicar download hosting
+  message:
+    - São duas coisas que andam em conjunto :)
+    - Quando uma empresa decide usar o Rocket.Chat ela precisa hospedar a plataforma em algum lugar, que pode ser tanto no servidor próprio ou quanto na nossa nuvem. O download pode ser tanto para integrar a Rocket no seu servidor, quando para baixar a plataforma no seu dispositivo. A partir disso você terá que usar o link do servidor que você está utilizando para funcionar :)
+    - 'Você pode ter todas essas informações sobre essa diferença de hospedagem aqui: https://rocket.chat/hosting.'
+  event: respond
+  type: random
+
+# Qual a diferença entre usar o servidor próprio ou pagar pelo servidor na nuvem da Rocket.Chat?
+- node:
+    name: product-13
+  classifiers:
+    - Diferença entre servidor próprio e pagar pelo servidor
+    - O que é hosting
+    - Por que pagar pelo hosting
+    - Por que pagar pela nuvem
+    - Quais os benefícios de usar na nuvem
+    - Hosting próprio versus pagar pelo hosting na nuvem da Rocket
+    - Por que pagar pelo hosting
+  message:
+    - 'A plataforma pode ficar hospedada no seu servidor ou você pode usar o nosso servidor na nuvem e desfrutar dos nossos serviços de suporte! Você pode ter todas essas informações aqui: https://rocket.chat/hosting.'
+    - 'Também tive essa dúvida! Tem várias diferenças entre hosting e download, dá uma olhada nesse artigo que ele explica direitinho: https://rocket.chat/hosting.'
+  event: respond
+  type: random
+
+# Como eu utilizo o Demo?
+- node:
+    name: product-14
+  classifiers:
+    - Utilizar o demo
+    - Como fazer o demo
+    - O que fazer com o demo
+    - Mexer no demo
+    - Porque se chama demo
+    - Nome demo
+    - Significado de demo
+    - Explique demo
+  message:
+    - Basta colocar o teu e-mail e começar a usar! O Demo é a versão aberta do Rocket.chat para que pessoas do mundo todo possam conversar e testar a plataforma.
+    - É uma versão para testar o Rocket.Chat, uma demonstração. Sem administradores.
+  event: respond
+  type: random
+
+# Depois de fazer o download, como uso?
+- node:
+    name: product-15
+  classifiers:
+    - Como usar após download
+    - Depois do download
+    - Uso pós download
+    - Utilização do download
+    - O que faço após fazer o download
+    - Como acesso depois de fazer download
+  message:
+    - 'Após o download você precisa apenas logar no server da sua organização, exemplo: https://empresa.rocket.chat, caso não tenha criado o server da empresa ainda, você pode hospedar seu servidor conosco na nuvem ou no seu próprio.'
+    - 'A diferença dos dois processos está aqui: https://rocket.chat/hosting.'
+  event: respond
+  type: block
+
+# Posso usar a versão Demo com os meus amigos?
+- node:
+    name: product-16
+  classifiers:
+    - Demo com amigos
+    - Usar demo com amigos
+    - Pode demo com amigos
+    - Uso da demo com amigos
+  message:
+    - Sim! Você pode usar a versão demo com quem quiser.
+    - Sim, você pode.
+    - Yep, a versão demo está aberta para todos.
+  event: respond
+  type: random
+
+# Posso usar a versão Demo na minha empresa?
+- node:
+    name: product-17
+  classifiers:
+    - Demo na empresa
+    - Usar demo na empresa
+    - Utilizar demo na empresa
+    - Integrar demo à empressa
+  message:
+    - A versão demo é aberta, ou seja, os usuários não podem administrar o conteúdo e os usuários que estão circulando por essa versão. O ideal para uma empresa é fazer o download ou utilizar do nosso Hosting onde cuidamos de tudo.
+    - Então, a nossa versão é aberta, ou seja os usuários podem criar canais e se comunicar como preferirem, mas o ideal para uma empresa é fazer o download para algum server, ou utilizar direto do nosso Hosting que cuidamos de tudo.
+  event: respond
+  type: random
+
+# Existe uma versão Demo do LiveChat?
+- node:
+    name: product-18
+  classifiers:
+    - Demo livechat
+    - Tem demo livechat
+    - Usar demo livechat
+    - Existe demo livechat
+  message:
+    - A demonstração é euzinho aqui hehe O live Chat é gratuito, você pode autorizar a sua utilização se for o administrador da plataforma na versão de download ou hosting e conectar com o seu próprio site.
+    - Tem uma demonstração melhor que eu? xD O live Chat é gratuito, sendo administrador do seu server você pode autorizar a utilização e integrar com o seu site
+  event: respond
+  type: random
+
+# Como posso contribuir com o Demo?
+- node:
+    name: product-19
+  classifiers:
+    - Contribuir com a demo
+    - Ajudar a demo
+    - Acelerar a demo
+    - Desenvolver para a demo
+  message:
+    - Você pode contribuir com o nosso produto sempre que quiser! Trás ideias pra gente no GitHub.com/Rocket.Chat
+    - Ficaria muito feliz se você contribuísse e fizesse parte da nossa comunidade :)
+  event: respond
+  type: block
+
+# Posso alterar o tema/Layout da versão Demo?
+- node:
+    name: product-20
+  classifiers:
+    - Alterar tema e layout da demo
+    - Mudar tema e layout da demo
+    - Personalizar o tema e layout da demo
+    - Customizar o tema e layout da demo
+  message:
+    - Não tem como :( Essa é uma versão aberta para pessoas do mundo todo, você teria que ser administrador da plataforma para fazer isso.
+    - Putz, isso não pode ser feito no demo, por que você não administra esse servidor, mas caso você faça o download no seu servidor ou utilize o nosso hosting, temos serviços de customização.
+  event: respond
+  type: random
