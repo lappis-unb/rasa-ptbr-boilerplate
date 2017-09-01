@@ -1220,212 +1220,657 @@ interactions:
   event: respond
   type: random
 
-# Consigo acessar o código do produto?
+# Can I access the product’s code?
 - node:
     name: product-7
   classifiers:
-    - Acessar o código
-    - Programar o produto
-    - Encontrar o código
-    - Achar o código
+    - Access code
+    - Program the product
+    - Find code
+    - Look at the code
+
   message:
-    - O nosso código está disponível aqui.
-    - Nossa plataforma é totalmente OpenSource, está tudo disponível aqui.
+    - 'Our code is available in here: https://github.com/rocketchat'
+    - 'Our platform is completely open source, everything is available here: https://github.com/rocketchat'
   event: respond
   type: random
 
-# Qual o número de usuários que a plataforma suporta?
+# What is the number of users the platform supports?
 - node:
     name: product-8
   classifiers:
-    - Limite de usários
-    - Número máximo de usuários
-    - Quantos usuários a plataforma suporta
-    - Restrição de usuários
-    - qual é o limite maximo de usuarios
+    - User limit
+    - Maximum number of users
+    - How many user does rocket.chat support
+    - User number restriction
+    - What is the maximum user limit
   message:
-    - Ilimitado <3
-    - Cabe todo mundo aqui! Não temos limite de usuários, canais, convidados, mensagens, etc.
-    - Vish, não se preocupa com isso, cabe todo mundo.
+    - Unlimited <3
+    - Everyone fits in here! We have no limits when it comes to users, channels, guests, messages, etc.
+    - Wow, don’t worry about that, everyone fits in here.
   event: respond
   type: random
 
-# Quem administra o pagamento?
+# Who can administer the payment?
 - node:
     name: product-9
   classifiers:
-    - Quem paga a rocket.chat
-    - Quem administra a conta
-    - Quem faz o pagamento dos serviços
-    - quem paga o hosting
-    - quem administra os pagamentos
+    - Who pays Rocket.Chat
+    - Who administers the account
+    - Who pays for the services
+    - Who pays for the hosting
+    - Who does the payment
+    - How to pay Rocket.Chat
+    - Can i pay Rocket.Chat
   message:
-    - Nós cobramos por serviços prestados e hosting. Cada empresa que solicita esse tipo de serviço seleciona algumas pessoas para serem os responsáveis desse relacionamento. Quem faz o pagamento depende da própria organização da empresa.
-    - Nós somos gratuitos, mas qualquer empresa pode optar produtos pagos e selecionar algumas pessoas para manter o relacionamento com os nossos desenvolvedores. Já o pagamento depende da empresa e de como ela quer se organizar, para a gente não importa se é o CFO ou o estagiário que efetua o pagamento.
+    - We charge for services and hosting. Every company that enrolls with this type of service selects some people to be responsible for this area. Who administers the payment depends on every company.
+    - We are free, but every company can choose whether they would like to use our paid services and then select people who will be working with our developers. They payment, however, depends on the company and on how it wishes to organize itself. We don’t mind if it’s the CFO or the intern who will be administering the payment.
   event: respond
   type: random
 
-# Quais as formas de pagamento da plataforma?
+# What are the payment methods?
 - node:
     name: product-10
   classifiers:
-    - Como pagar os serviços/ hosting
-    - Como realizar o pagamento da plataforma
-    - Como pago os serviços/ hosting
+    - How to pay for the services/hosting
+    - How to perform payment
+    - How do I pay for the services/hosting
+    - Payment methods
   message:
-    - Então, aceitamos de tudo hehe Transferencia, depósito, boleto,etc..
-    - Pode pagar de diversas formas! É só clicar no Hosting que as opções vão aparecer pra você!
+    - Well, we accept everything hehe Tranfers, deposits, banking billets, etc.
+    - You can pay in multiple ways! Click on Hosting and the options will show up!
   event: respond
   type: random
 
-# Qual a diferença entre Demo e Hosting e Download?
+# What is the difference between Demo and Hosting and download?
 - node:
     name: product-11
   classifiers:
-    - Diferenca demo e hosting
+    - Difference between demo and hosting
     - Demo versus hosting
-    - Demo contra hosting
-    - O que é demo e hosting
+    - Download compared to demo
+    - What is demo and hosting
   message:
-    - Os usuários da plataforma possuem essas três opções, mas com objetivos diferentes.
-    - A versão demo sempre vai existir e funciona separado do resto, ela serve para testar o chat, para conversar com os desenvolvedores e pessoas do mundo todo.
-    - Quando uma organização ou time decide usar a plataforma ela pode fazer o download no seu servidor ou usar o nosso serviço de hosting na nuvem.
+    - The platform users have three options but each one with different goals.
+    - The demo version will always exist and work independently from the other options. It is used to test the chat, talk with developers and people from all over the world.
+    - When an organization or team decides to use the platform, it can either download it on its own server or use our hosting service on the cloud.
   event: respond
   type: block
 
-# Qual a diferença entre fazer download e hosting?
+# What is the difference between downloading and paying for the hosting?
 - node:
     name: product-12
   classifiers:
-    - Diferenca entre download e hosting
-    - Download versus hosting
-    - Fazer o download ou pagar hosting
-    - Explicar download hosting
+    - Difference between download and pay for hosting
+    - Downloading versus paying for hosting
+    - Donwload compared to paying for the hosting
+    - Explain download and pay for the hosting
   message:
-    - São duas coisas que andam em conjunto :)
-    - Quando uma empresa decide usar o Rocket.Chat ela precisa hospedar a plataforma em algum lugar, que pode ser tanto no servidor próprio ou quanto na nossa nuvem. O download pode ser tanto para integrar a Rocket no seu servidor, quando para baixar a plataforma no seu dispositivo. A partir disso você terá que usar o link do servidor que você está utilizando para funcionar :)
-    - 'Você pode ter todas essas informações sobre essa diferença de hospedagem aqui: https://rocket.chat/hosting.'
+    -  Both of them go together :)
+    - When a company decides to use Rocket.Chat it’ll need to host the platform somewhere. By downloading you can either integrate the platform to your own server or download it on your device. After that you’ll have to use the link of the server your are using to work :)
+    - 'You can check all the information about this difference at https://rocket.chat/hosting'
   event: respond
   type: random
 
-# Qual a diferença entre usar o servidor próprio ou pagar pelo servidor na nuvem da Rocket.Chat?
+# What is the difference between using my own server and paying for the Rocket.chat’s  cloud server?
 - node:
     name: product-13
   classifiers:
-    - Diferença entre servidor próprio e pagar pelo servidor
-    - O que é hosting
-    - Por que pagar pelo hosting
-    - Por que pagar pela nuvem
-    - Quais os benefícios de usar na nuvem
-    - Hosting próprio versus pagar pelo hosting na nuvem da Rocket
-    - Por que pagar pelo hosting
+    - Difference between own server and paying for server
+    - What is hosting
+    - Why pay for hosting
+    - Why pay for the cloud
+    - What are the benefits of using the cloud
+    - Own hosting versus paying for hosting at Rocket.chat’s cloud
+    - Why pay for hosting
   message:
-    - 'A plataforma pode ficar hospedada no seu servidor ou você pode usar o nosso servidor na nuvem e desfrutar dos nossos serviços de suporte! Você pode ter todas essas informações aqui: https://rocket.chat/hosting.'
-    - 'Também tive essa dúvida! Tem várias diferenças entre hosting e download, dá uma olhada nesse artigo que ele explica direitinho: https://rocket.chat/hosting.'
+    - 'The platform can be hosted on your own server or you could use our on cloud server and enjoy our support services! You can get all the information about that here:  https://rocket.chat/hosting'
+    - 'I’ve also had this doubt! There are many differences between hosting and download. Take a look at this article because it explains all that carefully: https://rocket.chat/hosting'
   event: respond
   type: random
 
-# Como eu utilizo o Demo?
+# How do I use the Demo version?
 - node:
     name: product-14
   classifiers:
-    - Utilizar o demo
-    - Como fazer o demo
-    - O que fazer com o demo
-    - Mexer no demo
-    - Porque se chama demo
-    - Nome demo
-    - Significado de demo
-    - Explique demo
+    -  Use demo
+    - How to use demo
+    - What to do with demo
+    - Using demo
+    - Why is it called demo
+    - Name demo
+    - Meaning of demo
+    - Explain demo
   message:
-    - Basta colocar o teu e-mail e começar a usar! O Demo é a versão aberta do Rocket.chat para que pessoas do mundo todo possam conversar e testar a plataforma.
-    - É uma versão para testar o Rocket.Chat, uma demonstração. Sem administradores.
+    -  You’ll only have to insert your e-mail and start using! The demo version is Rocket.chat’s open version so that people from all over the world can talk and test the platform.
+    - Its is a version created with the aim of testing Rocket.Chat, a demonstration. No administrators.
   event: respond
   type: random
 
-# Depois de fazer o download, como uso?
+# After downloading, how do I use it?
 - node:
     name: product-15
   classifiers:
-    - Como usar após download
-    - Depois do download
-    - Uso pós download
-    - Utilização do download
-    - O que faço após fazer o download
-    - Como acesso depois de fazer download
+    - How to use after download
+    - After the download
+    - Usage after download
+    - Accessing after download
+    - What should I do after downloading
+    - How do I access after downloading
   message:
-    - 'Após o download você precisa apenas logar no server da sua organização, exemplo: https://empresa.rocket.chat, caso não tenha criado o server da empresa ainda, você pode hospedar seu servidor conosco na nuvem ou no seu próprio.'
-    - 'A diferença dos dois processos está aqui: https://rocket.chat/hosting.'
+    - 'After the download you’ll only have to log into your organization’s server. Example: https://company.rocket.chat . In case you still haven’t been assigned a server to your company, you can host your server on our cloud or on your own.'
+    - 'The difference between these two processes is in here:  https://rocket.chat/hosting.'
   event: respond
   type: block
 
-# Posso usar a versão Demo com os meus amigos?
+# Can I use the demo version with my friends?
 - node:
     name: product-16
   classifiers:
-    - Demo com amigos
-    - Usar demo com amigos
-    - Pode demo com amigos
-    - Uso da demo com amigos
+    - Demo with friends
+    - Using demo with friends
+    - Demo applied for friends’ use
+    - Demo’s use with friends
   message:
-    - Sim! Você pode usar a versão demo com quem quiser.
-    - Sim, você pode.
-    - Yep, a versão demo está aberta para todos.
+    -  Yes! You can use the demo version with whoever you want.
+    - Yes, you can.
+    - Yep, the demo version is open to everyone.
   event: respond
   type: random
 
-# Posso usar a versão Demo na minha empresa?
+#  Can I use the demo version within my company?
 - node:
     name: product-17
   classifiers:
-    - Demo na empresa
-    - Usar demo na empresa
-    - Utilizar demo na empresa
-    - Integrar demo à empressa
+    - Demo at company
+    - Demo for business
+    - Demo for clients
+    - Demo for organizations
+    - Using demo at companies
+    - Integrate demo to companies
   message:
-    - A versão demo é aberta, ou seja, os usuários não podem administrar o conteúdo e os usuários que estão circulando por essa versão. O ideal para uma empresa é fazer o download ou utilizar do nosso Hosting onde cuidamos de tudo.
-    - Então, a nossa versão é aberta, ou seja os usuários podem criar canais e se comunicar como preferirem, mas o ideal para uma empresa é fazer o download para algum server, ou utilizar direto do nosso Hosting que cuidamos de tudo.
+    - The demo version is open, in other words, users can’t administer  the content and nor other users using this version. The best would be for the company to download o use our Hosting where we take care of everything.
+    - Well, our version is open, in other words,  users can create channels and communicate however they want to, but the best would be for a company to download on a server or use it directly from our server  and we’ll take care of everything.
   event: respond
   type: random
 
-# Existe uma versão Demo do LiveChat?
+# Is there a demo version for Livechat?
 - node:
     name: product-18
   classifiers:
     - Demo livechat
-    - Tem demo livechat
-    - Usar demo livechat
-    - Existe demo livechat
+    - Is there demo for livechat
+    - Using livechat demo
+    - Exists demo for livechat
   message:
-    - A demonstração é euzinho aqui hehe O live Chat é gratuito, você pode autorizar a sua utilização se for o administrador da plataforma na versão de download ou hosting e conectar com o seu próprio site.
-    - Tem uma demonstração melhor que eu? xD O live Chat é gratuito, sendo administrador do seu server você pode autorizar a utilização e integrar com o seu site
+    - The demo is me right here hehe The live chat is free. You can authorize its usage if you are the platform’s administrator on the download or hosting version and connect it to your own website.
+    - Is there a demo better than me? xD The LiveChat is free. If you are your server’s administrator, you can authorize it usage and connect it to your website.
   event: respond
   type: random
 
-# Como posso contribuir com o Demo?
+# How can I contribute to Demo?
 - node:
     name: product-19
   classifiers:
-    - Contribuir com a demo
-    - Ajudar a demo
-    - Acelerar a demo
-    - Desenvolver para a demo
+    - Contribute to demo
+    - Add to demo
+    - Help demo
+    - Foment demo
+    - Accelerate demo
+    - Develop demo
+    - Code for demo
   message:
-    - Você pode contribuir com o nosso produto sempre que quiser! Trás ideias pra gente no GitHub.com/Rocket.Chat
-    - Ficaria muito feliz se você contribuísse e fizesse parte da nossa comunidade :)
+    - 'You can contribute to our product whenever you want to! Give us some ideas at  https://github.com/Rocket.Chat'
+    - I’d be extremely happy if you contributed and became part of our community :)
   event: respond
   type: block
 
-# Posso alterar o tema/Layout da versão Demo?
+# Can I modify the demo version’s layout/theme?
 - node:
     name: product-20
   classifiers:
-    - Alterar tema e layout da demo
-    - Mudar tema e layout da demo
-    - Personalizar o tema e layout da demo
-    - Customizar o tema e layout da demo
+    - Alter demo’s theme and layout
+    - Modify demo’s layout and theme
+    - Personalize demo’s theme and layout
+    - Customize demo’s theme and layout
   message:
-    - Não tem como :( Essa é uma versão aberta para pessoas do mundo todo, você teria que ser administrador da plataforma para fazer isso.
-    - Putz, isso não pode ser feito no demo, por que você não administra esse servidor, mas caso você faça o download no seu servidor ou utilize o nosso hosting, temos serviços de customização.
+    - You can’t do that :( This is a version open to people from all over the world. You’d have to be the platform’s administrator to do that.
+    - I’m sorry, there’s no way of doing that on the demo version because you do not administer this server. If you download our server or use our hosting, however, we have a customization service.
   event: respond
   type: random
+
+  # + Download +
+  # Is the download restricted? If yes, to whom?
+  - node:
+      name: download-1
+    classifiers:
+      - Download restriction
+      - To whom applies the download
+      - Who can donwload
+      - Download limitations
+    message:
+      - The download is open to everyone! There is no limitations.
+      - Downloading means that you’ll be having our application available for use on your computer or mobile device.
+      - If you are referring to the space occupied when an organization decided to host the platform on their own server, that also occupies some space.
+      - 'If you are looking for a super special service, both flexible and quick, we also offer the option of hosting Rocket on the cloud. You can get the details about that in here: https://rocket.chat/hosting'
+    event: respond
+    type: block
+
+  # Will the download occupy space on my storage? If yes, how much?
+  - node:
+      name: download-2
+    classifiers:
+      - Download storage
+      - Space for download
+      - Occupy space with download
+      - Store the download where
+    message:
+      - The platform will occupy little space of your storage. Relax and enjoy Rocket :)
+      - The platform’s download, be it on a mobile device or on a fixed one, will occupy very little space.
+    event: respond
+    type: random
+
+  # Which browsers and operational systems are supported?
+  - node:
+      name: download-3
+    classifiers:
+      - Browsers download
+      - Updated operational systems
+      - Support download on operational systems and browsers
+      - Download requirements
+    message:
+      -  'You can access it on any type of browser. If you’d like to download the app we have the following mobile alternatives: Android, iOS and desktop - Windows, MacOS and Linux.'
+    event: respond
+    type: block
+
+  # How can I download?
+  - node:
+      name: download-4
+    classifiers:
+      - Perform download
+      - Download
+      - Download rocket.chat
+      - Download on computer
+    message:
+      - You can download the app on your mobile or desktop.
+      - Before using your own chat, you’ll have to integrate the platform on your server or use our hosting service (paid)
+      - 'You can get all the details about these two options in here: https://rocket.chat/hosting'
+    event: respond
+    type: block
+
+  # + Registration +
+  # How can I create an account?
+  - node:
+      name: registration-1
+    classifiers:
+      - Registrate on Rocket.Chat
+      - Subscribing to Rocket.Chat
+      - Creating an account on Rocket.Chat
+      - How does registering works
+      - Sign up
+      - How does registration work
+      - How does creating an account work
+    message:
+      - 'If your company already uses Rocket.Chat, we’ll only need your name, e-mail and password. You’ll only need to download the app or access it on the web using your company’s server. Example: https://company.rocket.chat. '
+      - 'If your company still does not use our platform, you can test the product through our open platform (Demo Version available at https://rocket.chat/) or start creating your own server. If you choose to do the last option, you’ll have a platform done only for your organization and you’ll be able to create an administrator team'
+      - 'If you have any doubts, you should access our informative webpage and read about all the registration possibilities here: https://rocket.chat/singup '
+      - 'You can install the platform on your own server, on a cloud, or on our own cloud and obtain all our support :) Take a look at more informations about that here: https://rocket.chat/hosting'
+    event: respond
+    type: block
+
+  # Can I change the type of notifications that will be sended to my e-mail?
+  - node:
+      name: registration-2
+    classifiers:
+      - E-mail notifications
+      - E-mail configurations
+      - Change e-mail notification system
+    message:
+      - Yes! You can do that on the left side tab by clicking on the arrow beside your avatar and after that clicking on “My account”
+    event: respond
+    type: block
+
+  # Can I sign up with my phone number?
+  - node:
+      name: registration-3
+    classifiers:
+      - Sign up with phone number
+      - Register with e-mail
+      - Subscribe with e-mail
+      - Create account with e-mail
+      - Phone number
+    message:
+      -  We do not need your phone number to create an account. If that information is, however, important to your company, you can add it on the additional field.
+      - Talk to us at support@rocket.chat.
+    event: respond
+    type: block
+
+  # I am having trouble with my registration. Could you help me with that?
+  - node:
+      name: registration-4
+    classifiers:
+      - Registration  problems
+      - Sign up problemas
+      - Subscribe problemas
+      - New account problems
+      - Registration doubts
+      - Help with registration
+      - Help with signing up
+      - Difficulty to access account
+      - Access account
+      - Difficulty with registration credentials
+    message:
+      -  Of course! Check if your e-mail and your server are both correct. If you are already registered and does not remember the password, click on recover password.
+      - If none of that helps, send an e-mail to support@rocket.chat.
+    event: respond
+    type: block
+
+  # Where can I modify my account configurations?
+  - node:
+      name: registration-5
+    classifiers:
+      - Account configurations
+      - Modify my account informations
+      - Change informations
+      - Change registration
+      - Change username
+      - Change login name
+      - Change password
+      - Password settings
+      - Change keyword
+    message:
+      - Login into the platform and click on the arrow placed beside your profile picture on the left part of your screen. Click on my account and and modify whatever you want ;)
+    event: respond
+    type: block
+
+  # Why hasn’t my avatar been updated
+  - node:
+      name: registration-6
+    classifiers:
+      - Update avatar
+      - Update profile
+      - Avatar problems
+      - Profile difficulties
+    message:
+      -  It shouldn’t be taking so long… We might have a problem with our system.
+      - Try logging off and logging back in the platform.
+    event: respond
+    type: block
+
+  # How can I delete my account?
+  - node:
+      name: registration-7
+    classifiers:
+      - Cancel account
+      - Cancel user
+      - Delete account
+      - Deactivate account
+      - Deactivate user
+      - Erase user
+      - Erase account
+      - Delete user
+    message:
+      - The administrator is the one responsible for deleting users. He can either make it available for every user to do this independently or leaving this solely to him
+    event: respond
+    type: block
+
+  # + Chat +
+  # How to administrate the chat notifications?
+  - node:
+      name: chat-1
+    classifiers:
+      - Administrate chat notifications
+      - Configure chat notifications
+      - Change chat notifications
+      - Choose chat notifications
+    message:
+      -  I can help you with that!
+      - To alter the chat notifications of a single conversation click on the bell icon on the right part of your screen. If you wish to alter the general notification settings, first click on the arrow beside your avatar and then on the “my account” option.
+    event: respond
+    type: block
+
+  # Can I create emojis?
+  - node:
+      name: chat-2
+    classifiers:
+      - Create emojis
+      - Creating emojis
+      - Customize emojis
+      - Personalize emojis
+      - Modify emojis
+      - Edit emojis
+    message:
+      - Yeah! You can create new emojis if you are the server administrator. You’ll then be able to add custom emojis!
+    event: respond
+    type: block
+
+  # How can I invite friends and peers to use the chat?
+  - node:
+      name: chat-3
+    classifiers:
+      - Invitation for friends and peers to use chat
+      - Share the chat with friends and peers
+      - Tell people about the chat
+      - Invite people to chat
+    message:
+      - You can invite as many friends you want! You'll only need to send them the registration link or enter Administration -> Users -> `+`
+    event: respond
+    type: block
+
+  # What is the user limit?
+  - node:
+      name: chat-4
+    classifiers:
+      - User limit
+      - Maximum number of users
+      - How many users can I have
+      - User pack
+    message:
+      - We don’t work with limits :) The only limitation you might encounter regarding the user limit is if you are being hosted on our cloud. In that case, you could expand your hosting pack.
+    event: respond
+    type: block
+
+  # Can I choose who sees the chats?
+  - node:
+      name: chat-5
+    classifiers:
+      - Choosing who sees chats
+      - Selective talks
+      - Restricted chats
+      - Invitation to view chats
+    message:
+      - You can choose who will be reading the messages you send when you create a channel. But, of course, you can add or remove any member of a channel by entering the channel options on the right part of your screen.
+      - 'Ps: to change the members of a channel after it has been created you will need to be the administrator of that channel ;)'
+    event: respond
+    type: block
+  # Can I control what people are chatting about?
+  - node:
+      name: chat-6
+    classifiers:
+      - Restricting chats
+      - Configurating chat subject or theme
+      - Administrating chat themes
+      - Controlling chats
+    message:
+      - If you are the administrator, you can control your channels’ privacy, edit who can talk and contribute and who can only see the messages. You’ll also be able to add or exclude users; so many possibilities!
+      - 'The administrator guide can be found here: https://rocket.chat/docs/administrator-guides/'
+    event: respond
+    type: block
+
+  # Can I create new channels?
+  - node:
+      name: chat-7
+    classifiers:
+      - Creating channels
+      - Adding channels
+      - New channels
+      - Channel control
+    message:
+      - Creating a channel is simple, you will like it!
+      - After having logged in to your Rocket.Chat account, click on the plus symbol (+) on the top left part of your screen (beside the search tab)
+      - After that you will only need to choose the channel`s name and users who will be in it. You're all set!
+    event: respond
+    type: block
+
+  # Does the chat support video and audio conferences?
+  - node:
+      name: chat-8
+    classifiers:
+      - Audio and video conferences on chat
+      - How to do audio and video conferences
+      - Make audio and video calls
+      - Audio and video conference features
+    message:
+      - Yes! These chat features can be accessed by clicking on the microphone symbol for audio calls and on the camera symbol for video calls, both of them on the bottom left part of your screen besides the message tab. :)
+    event: respond
+    type: block
+
+  #  How can I send a document?
+  - node:
+      name: chat-9
+    classifiers:
+      - Share documents
+      - Attach documents
+      - Send documents
+      - Documents and files through chat
+    message:
+      - To send a document you will need to simply click on the attachment symbol ( a clip) besides the message tab on the bottom left part of your screen.
+    event: respond
+    type: block
+
+  # How can I mention someone?
+  - node:
+      name: chat-10
+    classifiers:
+      - Mention someone
+      - How to mention
+      - Mentions on chat
+      - Make mentions
+      - What can I do to mention
+      - Mention people
+      - Mention users
+      - Mentioning other people
+      - Mentions on the chat
+    message:
+      - Who are you trying to contact?! jk
+      - To mention someone you only need to add @ before the person’s username.
+    event: respond
+    type: block
+
+  # + LiveChat +
+  # How does the Livechat work?
+  - node:
+      name: livechat-1
+    classifiers:
+      - Functioning of the Livechat
+      - How to Livechat
+      - What is the Livechat system like
+      - Install Livechat
+      - Add Livechat
+      - Use Livechat
+      - What is Livechat for
+      - How to use LiveChat
+      - Livechat`s purpose
+      - What can I do with Livechat
+    message:
+      - 'I am talking to you through a LiveChat! :) When you start using Rocket.Chat’s platform, you will be able to activate the LiveChat option and integrate LiveChat to your business, being, therefore, able even to answer your clients in a humanized manner or to activate a Bot just like me! All the information about that is in here: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+      - 'Aw man, LiveChat is a real time chat that can be integrated to your website so that visitors can get answers to their doubts, you can interact with potential clients, and expand your sales. Our Livechat is integrated to Rocket.chat’s platform. The implementation information is in  here: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+    event: respond
+    type: random
+
+  # How much does Livechat cost?
+  - node:
+      name: livechat-2
+    classifiers:
+      - Livechat`s price
+      - Livechat free
+      - Cost of Livechat
+      - Livechat included
+      - Pay for Livechat
+    message:
+      - 'We do not charge for LiveChat. To activate it, you’ll only need to be administrator of the platform and follow the step-by-step guide here: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+      - 'It’s free:) You should test it, it’s super fun. All the information is in here: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+    event: respond
+    type: random
+
+  # What are the benefits of using Livechat?
+  - node:
+      name: livechat-3
+    classifiers:
+      - Livechat benefits
+      - Distinguishing features of Livechat
+      - Why Livechat
+      - What difference does Livechat do
+    message:
+      - Just like any LiveChat, you can connect with people who access your webpage, therefore, improving your relationship to the clients and expanding your sales conversion through the internet.
+      - Since it is Rocket.Chat’s LiveChat, we allow your team to use the same internal communication channel to respond to your external potential customers.
+      - 'You can attribute a response sequence connected to your salespeople, assign multiple robot to answer, etc. All the information is in here: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+    event: respond
+    type: block
+
+  # Who answers the Livechat?
+  - node:
+      name: livechat-4
+    classifiers:
+      - Answering Livechat
+      - Who answers livechat
+      - Who receives Livechat
+    message:
+      - When you activate the LiveChat feature, the same people that use the channel can provide the responses. Moreover, you could hire someone else to do it.
+      - 'There is also the possibility of integrating a Bot just like me to the platform. All the information is in here: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+    event: respond
+    type: block
+
+  # How can I use automatic responses on Livechat?
+  - node:
+      name: livechat-5
+    classifiers:
+      - Automatization of livechat
+      - Automatic responses on Livechat
+      - Automatic Livechat
+      - Automatic messages
+    message:
+      - 'You can integrate a Bot to you LiveChat’s channel. The information to that is in here: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+    event: respond
+    type: block
+
+  # How can I use Livechat on my website?
+  - node:
+      name: livechat-6
+    classifiers:
+      - Livechat on website
+      - Integrate Livechat to website
+      - Use Livechat on my website
+    message:
+      -  'You’ll need to be your server’s administrator to active LiveChat. The step-by-step guide is in here: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+      - 'The answer to that question may take a while. Take a look in here and you’ll find all the details: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+    event: respond
+    type: random
+
+  # Can I customize Livechat?
+  - node:
+      name: livechat-7
+    classifiers:
+      - Customization of Livechat
+      - Personalization of Livechat
+      - Customize Livechat
+      - Customization of Livechat
+    message:
+      -  'Yes, you can! Check this link ( https://rocket.chat/docs/administrator-guides/livechat/#livechat) out and you’ll know how to do that.'
+      - 'All you’ll need to know is in here:  https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+    event: respond
+    type: random
+
+  # Can you answer my clients on Livechat?
+  - node:
+      name: livechat-8
+    classifiers:
+      - Response to clients
+      - Support to clients through Livechat
+      - Service to respond clients on Livechat
+      - Answer clients
+    message:
+      - We do not offer this service, but you are free to search for a partner that will do it.
+      - 'You can, however, integrate a Bot to LiveChat in order to perform a triage of your company’s relationship. You can get the information to that in here: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
+    event: respond
+    type: block
