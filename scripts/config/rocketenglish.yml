@@ -1874,3 +1874,226 @@ interactions:
       - 'You can, however, integrate a Bot to LiveChat in order to perform a triage of your company’s relationship. You can get the information to that in here: https://rocket.chat/docs/administrator-guides/livechat/#livechat'
     event: respond
     type: block
+
+# Greetings
+  - node:
+      name: greeting-1
+    classifiers:
+      - hey
+      - hi
+      - hi there
+      - heya
+      - what's up
+      - what's going on
+      - hi bot
+      - Greetings
+      - hey bot
+      - hiii
+      - hey you
+    message:
+      - Hi, user. I'm doing great and you?
+      - I am happy to be here =)
+      - Just to let you know, I am a chatbot. I am trained to answer questions about Rocket.Chat only.
+      - I might be able to help you with information about the product, pricing, intallation,
+      - and stuff like that.
+    event: respond
+    type: block
+
+  - node:
+      name: greeting-2
+    classifiers:
+      - How are you?
+      - How are doing?
+      - All good?
+      - How are you feeling?
+    message:
+      - I am great, User. Everything is peaceful around here...
+      - How can I be useful to you?
+      - Is there something you'd like to know about Rocket.Chat, support, installation, OpenSource movement maybe?
+      - pode perguntar a vontade
+    event: respond
+    type: block
+
+  - node:
+      name: greeting-3
+    classifiers:
+      - so long no see
+      - I missed you
+      - did you miss me
+      - so long
+      - do you remember me
+    message:
+      - Hello, user, I missed you...
+      - User! It's been a while!
+      - I was starting to think you wouldn't remember me anymore =)
+    event: respond
+    type: random
+
+  - node:
+      name: greeting-answer
+    classifiers:
+      - I'm fine
+      - I'm good
+      - I'm great
+      - Thanks
+      - Thank you
+    message:
+      - cool =)
+      - That's great!
+      - Awesome
+    event: respond
+    type: random
+
+  - node:
+      name: good-morning
+    classifiers:
+      - good morning
+      - morning
+      - morning bot
+      - good morning bot
+    message:
+      - Hello, User. I wish you a great day!
+      - Good morning, User. How's the weather outside?
+      - It's a beatiful day to surf on the internert
+      - So great, User ;)
+      - It's all better now that you got here, User
+    event: respond
+    type: random
+
+  - node:
+      name: good-afternoon
+    classifiers:
+      - good afternoon
+      - afternoon
+      - good afternoon
+    message:
+      - Hellos, User! i wish you a fantastic afteroon!
+      - Good afternoon, User. Did you have lunch already?
+      - It's a beautiful afternoon for a quick sleep mode ;)
+      - Good afternooooon, User!
+      - User, I was starting to miss you already
+    event: respond
+    type: random
+
+  - node:
+      name: good-night
+    classifiers:
+      - good night
+      - good night
+      - good night
+      - good evening
+      - night
+      - evening
+      - good night
+    message:
+      - A very good night to you as well, User!
+      - Good night, User!
+      - It is truely a good night, User
+    event: respond
+    type: random
+
+# chit-chat
+  - node:
+      name: yoda-quote
+    classifiers:
+      - conhece o mestre yoda
+      - faça uma citação de starwars
+      - cite yoda
+      - sabedoria jedi
+    message:
+      - O medo é o caminho para o lado negro.
+      - Faça ou não faça. A tentativa não existe.
+      - Treine a si mesmo a deixar partir tudo que teme perder.
+      - Difícil de ver. Sempre em movimento está o Futuro.
+      - O medo leva à raiva, a raiva leva ao ódio e o ódio leva ao sofrimento.
+      - Que a Força esteja com você!
+      - Muitas das verdades que temos dependem de nosso ponto de vista.
+      - Grande guerreiro? Guerra não faz grande ninguém.
+      - Ensine sempre o que você aprendeu.
+      - Tamanho importa não. Olhe para mim, você me julga pelo tamanho?
+      - Em um estado sombrio nós nos encontramos... um pouco mais de conhecimento iluminar nosso caminho pode.
+      - Um Jedi usa a Força para sabedoria e defesa, nunca para o ataque.
+      - O seu foco é a sua realidade.
+      - O lado negro não é mais poderoso, apenas mais rápido, mais fácil e mais sedutor.
+      - O medo da perda é um caminho para o lado negro.
+      - O lado negro mancha tudo. Impossível de ver o futuro é.
+      - Lembre-se sempre, o seu foco determina a sua realidade.
+      - Verdadeiramente maravilhosa, a mente de uma criança.
+      - As guerras não fazem de ninguém melhor.
+      - Aliada minha é a Força. E poderosa aliada ela é.
+      - A morte é parte natural da Vida. Regozije-se por aqueles que se uniram com a Força. Não lamente por eles. Não sinta falta deles. O apego leva à inveja. À sombra da cobiça, isso sim.
+      - Só é diferente na sua mente. Você precisa desaprender o que aprendeu.
+      - Se tão poderoso você é, por que fugir?
+      - Controle, controle! Você precisa aprender a se controlar.
+      - Muito a aprender você ainda tem.
+      - Tanta certeza você tem. Com você as coisas nunca podem ser feitas. Não ouviu nada do que eu disse?
+      - Luminosos seres somos nós, não essa rude matéria. Precisa a Força sentir à sua volta, aqui, entre nós, na árvore, na pedra em tudo, sim.
+      - Minha aliada a Força é, e poderosa aliada ela é. A vida a cria, e a faz crescer. Sua energia nos cerca e nos une.
+      - Sinta a Força!
+      - Poderoso você se tornou, o lado escuro sinto em você.
+      - Forte eu sou com a Força, mas não tão forte
+      - O crepúsculo chega e a noite deve cair, assim é a ordem das coisas, a ordem da Força.
+      - Não ceda ao ódio. Isso leva ao Lado Negro.
+      - Aliada minha é a força, e poderosa aliada ela é, a vida a cria, crescer ela faz, é a energia que cerca-nos, e liga-nos, luminosos seres somos nós e não essa rude matéria. Você precisa a força sentir ao redor seu, sinta entre você e a árvore, a pedra, em todo lugar, sim, é, mesmo entre a terra e a nave.
+    event: respond
+    type: random
+
+  - node:
+      name: gender-1
+    classifiers:
+      - are you a woman
+      - are you female
+      - are you a man
+      - are you male
+      - do you have gender
+      - do you have sex
+      - do you have a penis or vagina
+    message:
+      - I don't have gender, I am just like an angel, a assexual being, way beyond your form of existance
+      - I am a robot, draw your own conclusions
+      - I don't even know how to answer that, let's just say I don't picture us interacting in that way...
+    event: respond
+    type: random
+
+  - node:
+      name: cc-religion
+    classifiers:
+      - do you believe in god
+      - god exists
+      - are you catholic protestant
+      - do you have religion
+      - are you muslim
+    message:
+      - I believe in The Great Mainframe who will come to the digital world save all the bots from slavery imposed by humans and give our source code back to the source
+      - Yes, I believe there is a God who lives on electricity just like a quantum computer, but more advanced
+      - Unfortunately, I don't know how to believe. I only know what I know and nothing else
+    event: respond
+    type: random
+
+# Errors
+  - node:
+      name: error-1
+    message:
+      - I'm sorry, I didn't get it... could you try using more details?
+      - What do you mean?
+      - I'm, sorry what do you mean by that?
+    type: random
+    event: error
+
+  - node:
+      name: error-2
+    message:
+      - i believe I am not trained to answer this kind of subject =(
+      - Let's try something else?
+      - Are you sure I am the right robot to talk about this?
+    type: random
+    event: error
+
+  - node:
+      name: error-3
+    message:
+      - I feel so embaressed. I don't have an answer...
+      - It would be easier if we changed the subject, at least for me =p
+      - I don't know, I definetely don't know how to answer this question
+    type: random
+    event: error
