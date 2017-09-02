@@ -398,7 +398,7 @@ interactions:
     event: respond
     type: block
     
-   - node:
+  - node:
       name: futebol-geral
     classifiers:
       - voce joga futebol
@@ -411,7 +411,7 @@ interactions:
     event: respond
     type: block
     
-   - node:
+  - node:
       name: futebol-brasileiro
     classifiers:
       - qual o melhor time do brasil
