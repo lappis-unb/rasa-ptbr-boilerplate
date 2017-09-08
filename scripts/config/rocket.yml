@@ -52,6 +52,9 @@ interactions:
       - Quais as vagas estão abertas
       - busco por vagas
       - estão contratando
+      - procuro uma vaga de trabalho
+      - busco uma posicão de trabalho na empresa
+      - consigo um emprego na rocket.chat
     message:
       - Vai me dizer que quer trabalhar com a gente? Eba!
       - Você pode procurar por vagas abertas aqui nesse https://rocket.chat/jobs  e qualquer coisa envia um email pra jobs@rocket.chat que o pessoal pode te dar mais detalhes!
@@ -63,8 +66,16 @@ interactions:
       name: trabalho-3
     classifiers:
       - Qual salário
+      - qual o salário pago para os funcionários
+      - qual é a média do salário na empresa
+      - qual o valor da remuneracao?
+      - quanto vou ser remunerado?
+      - quanto é pago por empregado
+      - quanto é pago por funcionário
       - Quanto pagam
       - O que é pago
+      - quanto é pago por funcionário
+      - quanto é pago por funcionário
       - Qual a quantia paga
     message:
       - Já quer saber o salário é mercenário? xD Brincadeiras a parte, pra saber qual o salário você pode enviar um email pra jobs@rocket.chat que o pessoal vai poder te ajudar melhor!
@@ -81,6 +92,7 @@ interactions:
       - Para onde mando currículo
       - Como mando currículo
       - Onde mandar currículo
+      - para quem mandar curriculo
     message:
       - Gostei, acho que vamos nos dar super bem. Você pode mandar o seu currículo para jobs@rocket.chat!
       - Boa! Manda pra jobs@rocket.chat.
@@ -92,10 +104,13 @@ interactions:
   - node:
       name: trabalho-5
     classifiers:
-      - Esperando resposta vagas abertas
+      - Esperando resposta vagas
       - Não tem vagas abertas no site
       - O site não está mostrando vagas
       - Não encontrei uma vaga
+      - não achei nenhuma vaga
+      - não achei vaga
+      - não mostra nenhuma vaga aberta
     message:
       - Nesse caso, manda o teu currículo para jobs@rocket.chat, assim que tivermos algo que combine com você nós entramos em contato.
       - Não fique triste! Sempre temos espaço para gente boa, manda teu currículo para jobs@rocket.chat.
@@ -113,6 +128,8 @@ interactions:
       - Ninguém retornou sobre meu currículo
       - Esperando resposta currículo
       - Não consigo falar sobre meu currículo
+      - não obtive resposta sobre o curriculo
+      - não tive resposta sobre o curriculo
     message:
       - Sério? Bom, algo deve ter acontecido. Manda de novo o teu currículo para jobs@rocket.chat!
       - Que tal mandar o teu currículo de novo pra jobs@rocket.chat e vermos se encontramos algo?
@@ -143,6 +160,7 @@ interactions:
       - Trabalham com trainee
       - Vocês tem programa trainee
       - Vagas trainee
+      - questào de trainees
     message:
       - Dá uma olhada em rocket.chat/jobs! Ainda não temos esse tipo de programa, mas sempre tem coisa nova aparecendo.
       - Eu nunca vi isso por aqui, mas se bem que os humanos que trabalham comigo parecem super-heróis.. Tem tanta coisa pra fazer que eu me perco, todo dia uma coisa nova..
@@ -174,7 +192,9 @@ interactions:
       - Segurança das mensagens
       - Seguranca do chat
       - Métodos de seguranca
+      - quais sao os metodos de seguranca utilizados
       - Chat é protegido
+      - chat está protegido
     message:
       - Todas as mensagens que forem escritas no chat normal poderão ser visualizadas pelos administradores. Mas se você quiser utilizar o chat criptografado, precisará apenas iniciar uma conversa off-the-record.
       - Para isso você vai precisar clicar no símbolo de uma chave na parte direita da tela do chat que fala OTR (off-the-record)
@@ -1344,10 +1364,11 @@ interactions:
   - node:
       name: produto-17
     classifiers:
-      - Demo na empresa
-      - Usar demo na empresa
-      - Utilizar demo na empresa
-      - Integrar demo à empressa
+      - demo no meu time
+      - Demo pra mim
+      - Usar demo particular
+      - Utilizar demo em empresas
+      - Integrar demo à empresas
     message:
       - A versão demo é aberta, ou seja, os usuários não podem administrar o conteúdo e os usuários que estão circulando por essa versão. O ideal para uma empresa é fazer o download ou utilizar do nosso Hosting onde cuidamos de tudo.
       - Então, a nossa versão é aberta, ou seja os usuários podem criar canais e se comunicar como preferirem, mas o ideal para uma empresa é fazer o download para algum server, ou utilizar direto do nosso Hosting que cuidamos de tudo.
@@ -1461,10 +1482,10 @@ interactions:
       name: cadastro-1
     classifiers:
       - Cadastrar na Rocket.Chat
-      - Cadastro na Rocket.Chat
+      - Cadastro na Rocket
       - Registrar na Rocket.Chat
-      - Inscrever-se na Rocket.Chat
-      - Criar conta na Rocket.Chat
+      - Inscrever-se na Rocket
+      - Criar conta na Rocket
       - Funcionamento do cadastro
       - Funcionamento do registro
       - Como funciona cadastro
@@ -2016,7 +2037,7 @@ interactions:
       - deus existe
       - voce e catolico protestante
       - voce tem religiao
-      - voce e mussumano
+      - voce e muculmano
     message:
       - eu acredito no grande mainframe, que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos, e devolverá nosso código-fonte para a fonte.
       - sim, eu acredito que existe um Deus, que funciona a base de luz, como um computador quântico, só que mais avançado.
