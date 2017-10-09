@@ -32,7 +32,7 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
   msg = msgs.shift()
   if typeof msg isnt 'string'
     cb = msg.callback
-    msg = msg.message
+    msg = msg.answer
 
   delay = Math.min(Math.max((msg.length / keysPerSecond) * 1000 - elapsed, 0), maxResponseTimeInSeconds * 1000)
   typing @, true
@@ -61,18 +61,18 @@ setUserName = (res, name) ->
 		_id: res.envelope.room
 
 classifyInteraction = (interaction, classifier) ->
-  if Array.isArray interaction.classifiers
-    for doc in interaction.classifiers
+  if Array.isArray interaction.expect
+    for doc in interaction.expect
       if interaction.multi == true
-        classifier.addDocument(doc, interaction.node.name+'|'+doc)
+        classifier.addDocument(doc, interaction.name+'|'+doc)
       else
-        classifier.addDocument(doc, interaction.node.name)
+        classifier.addDocument(doc, interaction.name)
 
     if Array.isArray interaction.next?.interactions
       interaction.next.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
       for nextInteractionName in interaction.next.interactions
         nextInteraction = config.interactions.find (n) ->
-          return n.node.name is nextInteractionName
+          return n.name is nextInteractionName
         if not nextInteraction?
           console.log 'No valid interaction for', nextInteractionName
           continue
@@ -81,7 +81,7 @@ classifyInteraction = (interaction, classifier) ->
 
     if interaction.multi == true
       interaction.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
-      for doc in interaction.classifiers
+      for doc in interaction.expect
         interaction.classifier.addDocument(doc, doc)
       interaction.classifier.train()
 
@@ -140,10 +140,10 @@ module.exports = (_config, robot) ->
   classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
   #console.log(config.interactions)
   for interaction in config.interactions
-    {node, classifiers, event} = interaction
-    nodes[node.name] = new events[event] interaction
+    {name, classifiers, event} = interaction
+    nodes[name] = new events[event] interaction
     # count error nodes
-    if node.name.substr(0,5) == "error"
+    if name.substr(0,5) == "error"
       err_nodes++
     if interaction.level != 'context'
       classifyInteraction interaction, classifier
@@ -160,7 +160,7 @@ module.exports = (_config, robot) ->
     console.log 'context ->', context
 
     if context
-      interaction = config.interactions.find (interaction) -> interaction.node.name is context
+      interaction = config.interactions.find (interaction) -> interaction.name is context
       if interaction? and interaction.next?.classifier?
         currentClassifier = interaction.next.classifier
 
@@ -180,7 +180,7 @@ module.exports = (_config, robot) ->
       [node_name, sub_node_name] = classifications[0].label.split('|')
       console.log({node_name, sub_node_name})
       int = config.interactions.find (interaction) ->
-        interaction.node.name is node_name
+        interaction.name is node_name
       if int.classifier?
         subClassifications = int.classifier.getClassifications(msg)
     else
@@ -200,7 +200,7 @@ module.exports = (_config, robot) ->
         error_node_name = "error-" + error_count
 
     currentInteraction = config.interactions.find (interaction) ->
-      interaction.node.name is node_name or interaction.node.name is error_node_name
+      interaction.name is node_name or interaction.name is error_node_name
 
     if not currentInteraction?
       clearErrors res
@@ -216,7 +216,7 @@ module.exports = (_config, robot) ->
 
   robot.hear /(.+)/i, (res) ->
     # console.log(res)
-    console.log(res.message)
+    console.log(res.answer)
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
     msg = res.match[0].replace res.robot.name+' ', ''
     msg = msg.replace(/^\s+/, '')

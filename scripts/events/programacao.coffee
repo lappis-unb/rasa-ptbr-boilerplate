@@ -15,7 +15,7 @@ getTrilha = (programacao, trilha, now = false) ->
     endTime = item.time[1]
     return item.track_title is trilha and ((not now and startTime > currentTime) or (now and startTime < currentTime and endTime > currentTime))
 
-class tempo
+class programacao
   constructor: (@interaction) ->
   process: (msg, text, classification) =>
     type = @interaction.type?.toLowerCase() or 'random'
@@ -41,12 +41,12 @@ class tempo
 
     switch type
       when 'block'
-        messages = @interaction.message.map (line) ->
+        messages = @interaction.answer.map (line) ->
           return msgVariables line, msg, variables
         msg.sendWithNaturalDelay messages
       when 'random'
-        message = stringElseRandomKey @interaction.message
+        message = stringElseRandomKey @interaction.answer
         message = msgVariables message, msg, variables
         msg.sendWithNaturalDelay message
 
-module.exports = tempo
+module.exports = programacao

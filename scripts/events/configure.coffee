@@ -11,7 +11,7 @@ class configure
         #TODO: Check if user has role needed
         console.log('ROLE REQUIRED...', @interaction.roleRequired)
 
-    configurationBlock = msg.message.text.replace('HubotNatural ', '').split('!configure ')[1]
+    configurationBlock = msg.answer.text.replace('HubotNatural ', '').split('!configure ')[1]
     configKeyValue = configurationBlock.split('=')
     configKey = configKeyValue[0]
     configValue = configKeyValue[1]
@@ -23,11 +23,11 @@ class configure
     type = @interaction.type?.toLowerCase() or 'random'
     switch type
       when 'block'
-        messages = @interaction.message.map (line) ->
+        messages = @interaction.answer.map (line) ->
           return msgVariables line, msg, {value: configValue}
         msg.sendWithNaturalDelay messages
       when 'random'
-        message = stringElseRandomKey @interaction.message
+        message = stringElseRandomKey @interaction.answer
         message = msgVariables message, msg, {value: configValue}
         msg.sendWithNaturalDelay message
 
