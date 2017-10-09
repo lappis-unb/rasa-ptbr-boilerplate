@@ -156,7 +156,7 @@ interactions:
       trust: .8
       interactions:
         - get-programacao
-        - cancela-programacao
+      #  - cancela-programacao
       # error:
       #   - erro-trilha
     event: respond

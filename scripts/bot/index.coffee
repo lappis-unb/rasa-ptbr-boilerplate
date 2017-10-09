@@ -46,6 +46,7 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
       cb?()
   , delay
 
+# check these
 livechatTransferHuman = (res) ->
 	setTimeout ->
 		res.robot.adapter.callMethod 'livechat:transfer',
@@ -59,6 +60,7 @@ setUserName = (res, name) ->
 		name: name
 	,
 		_id: res.envelope.room
+#
 
 classifyInteraction = (interaction, classifier) ->
   if Array.isArray interaction.expect
@@ -215,14 +217,18 @@ module.exports = (_config, robot) ->
     currentNode.process.call @, res, msg, subClassifications
 
   robot.hear /(.+)/i, (res) ->
-    # console.log(res)
-    console.log(res.answer)
+    console.log(res)
+    #console.log(res.answer)
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
     msg = res.match[0].replace res.robot.name+' ', ''
     msg = msg.replace(/^\s+/, '')
     msg = msg.replace(/\s+&/, '')
-
-    processMessage res, msg
+    # check if robot should respond
+    if res.envelope.user.roomType in ['c','p']
+      if (res.message.text.match new RegExp('\\b' + res.robot.name + '\\b', 'i')) or (res.message.text.match new RegExp('\\b' + res.robot.alias + '\\b', 'i'))
+        processMessage res, msg
+    else if res.envelope.user.roomType in ['d','l']
+      processMessage res, msg
 
 # TODO
 # make a function for checking roles
