@@ -226,7 +226,7 @@ interactions:
     message:
       - "Agora na trilha *$trilha* tem a seguinte programação:"
       - $programacao
-    event: tempo
+    event: programacao
     type: block
 
   - node:
@@ -239,18 +239,6 @@ interactions:
     action:
       - clear-context
     event: respond
-    type: block
-
-  - node:
-      name: previsao-tempo
-    classifiers:
-      - vai chover hoje
-      - qual é a previsao do tempo
-      - hoje o tempo esta bom para caminhar
-    message:
-      - olha $user, a previsão do tempo pra hoje é de $clima,
-      - então tenha em mente que a máxima hoje é de $max e a mínima é de $min
-    event: tempo
     type: block
 
   - node:
