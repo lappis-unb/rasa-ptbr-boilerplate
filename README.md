@@ -31,14 +31,13 @@ The YAML corpus is located in `scripts/config/corpus.yml` and it's basic structu
 ```yaml
 trust: 0.7
 interactions:
-  - node:
-      name: salutation
-    classifiers:
+  - name: salutation
+    expect:
       - hi there
       - hello everyone
       - what's up bot
       - good morning
-    message:
+    answer:
       - Hello there $user, how are you?
       - Glad to be here...
     event: respond
@@ -49,12 +48,11 @@ So to understand the syntax:
 
 - `trust`: the minimum level of certain that must be returned by the classifier in order to run this interaction. Value is 0 to 1 (0% to 100%). If a classifier returns a value of certainty minor than `trust`, the bots responds with and error interaction node.  
 - `interactions`: An vector with lots of interaction nodes that will be parsed. Every interaction designed to your chatbot must be under an interaction.node object structure.
-- `node`: where the interaction is designed.  
-- `node.name`: that's the unique name of the interaction by which it will be identified. Do not create more than one interaction with the same `node.name` attribute.  
-- `node.classifiers`: Those are the sentences that will be given to the bots training. They can be strings or keywords vectors, like `['consume','use']`.   
-- `node.message`: the messages that will be sent to the user, if the classifiers get classified above the trust level. The `node.message` will be parsed and sent by event class. You can specify variables in message. By default HubotNatural comes with `$user`, `$bot` and `$room` variables.  
-- `node.event`: is the name of the CoffeeScript or JavaScript Class inside `scripts/events`, without the file extension.  
-- `node.type`: This is an example of an event attribute. The type attribute is interpreted by respond.coffee class, and basically defines if all lines in message should be send as a `block` or if the bot should randomly send only one of the lines defined.
+- `name`: that's the unique name of the interaction by which it will be identified. Do not create more than one interaction with the same `node.name` attribute.  
+- `expect`: Those are the sentences that will be given to the bots training. They can be strings or keywords vectors, like `['consume','use']`.   
+- `answer`: the messages that will be sent to the user, if the classifiers get classified above the trust level. The `node.message` will be parsed and sent by event class. You can specify variables in message. By default HubotNatural comes with `$user`, `$bot` and `$room` variables.  
+- `event`: is the name of the CoffeeScript or JavaScript Class inside `scripts/events`, without the file extension.  
+- `type`: This is an example of an event attribute. The type attribute is interpreted by respond.coffee class, and basically defines if all lines in message should be send as a `block` or if the bot should randomly send only one of the lines defined.
 
 ### Event Coffee Classes
 
@@ -67,11 +65,11 @@ class respond
     type = @interaction.type?.toLowerCase() or 'random'
     switch type
       when 'block'
-        @interaction.message.forEach (line) ->
+        @interaction.answer.forEach (line) ->
           message = msgVariables line, msg
           msg['send'] message
       when 'random'
-        message = stringElseRandomKey @interaction.message
+        message = stringElseRandomKey @interaction.answer
         message = msgVariables message, msg
         msg['send'] message
 
@@ -88,7 +86,9 @@ The NaturalNode library comes with two kinds of classifiers, the naive classifie
 
 There is also more than one kind of stemmer. You should set the stemmer to define your language. By default we use the PorterStemmerPt for portuguese, but you can find english, russian, italian, french, spanish and other stemmers in NaturalNode libs, or even write your own based on those.
 
-Just check inside `node_modules/natural/lib/natural/stemmers/`
+Just check inside `node_modules/natural/lib/natural/stemmers/`.
+
+To change the stemmers language, just set the environment variable `HUBOT_LANG` as `pt`, `en`, `es`, and any other language termination that corresponds to a stemmer file inside the above directory.
 
 ## Deploy with Hubot
 
@@ -159,7 +159,8 @@ bin/hubot
 
 wait a minute for the loading process, and then you can talk to mybot.
 
-Take a look to adpaters to run your bot in other platafforms.
+Take a look to adapters to run your bot in other platafforms.
+
 
 ## Hubot Adapters
 
@@ -173,16 +174,24 @@ Checkout other [hubot adapters](https://github.com/github/hubot/blob/master/docs
 In your terminal window, run:
 
 ```shell
-export ROCKETCHAT_URL=http://localhost:3000
-export ROCKETCHAT_ROOM=general
+export HUBOT_ADAPTER=rocketchat
+export HUBOT_OWNER=RocketChat
+export HUBOT_NAME='Bot Name'
+export HUBOT_DESCRIPTION='Description of your bot'
+export ROCKETCHAT_URL=https://demo.rocket.chat
+export ROCKETCHAT_ROOM=GENERAL
+export LISTEN_ON_ALL_PUBLIC=false
 export RESPOND_TO_DM=true
-export ROCKETCHAT_USER=mybot
-export ROCKETCHAT_PASSWORD=12345
+export RESPOND_TO_LIVECHAT=true
+export ROCKETCHAT_USER=catbot
+export ROCKETCHAT_PASSWORD='bot password'
 export ROCKETCHAT_AUTH=password
 export HUBOT_LOG_LEVEL=debug
+export HUBOT_CORPUS='corpus-v1.yml'
+export HUBOT_LANG='en'
+bin/hubot -a rocketchat --name $HUBOT_NAME
+```  
 
-bin/hubot -a rocketchat
-```
 You can check [hubot-rocketchat](https://github.com/RocketChat/hubot-rocketchat) adapter project for more details.
 
 ### PM2 Json File
@@ -190,7 +199,7 @@ You can check [hubot-rocketchat](https://github.com/RocketChat/hubot-rocketchat)
 As NodeJS developers we learned to love [Process Manager PM2](http://pm2.keymetrics.io), and we really encourage you to use it.
 
 ```shell
-npm install pm2 -g 
+npm install pm2 -g
 ```
 
 Create a `mybot.json` file and jut set it's content as:  

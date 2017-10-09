@@ -223,3 +223,32 @@ module.exports = (_config, robot) ->
     msg = msg.replace(/\s+&/, '')
 
     processMessage res, msg
+
+# TODO
+# make a function for checking roles
+# const usersAndRoles = {};
+#
+# module.exports = function (robot) {
+#     robot.adapter.chatdriver.callMethod('getUserRoles').then(function (users) {
+#         users.forEach(function (user) {
+#             user.roles.forEach(function (role) {
+#                 if (typeof (usersAndRoles[role]) === 'undefined') {
+#                     usersAndRoles[role] = [];
+#                 }
+#
+#                 usersAndRoles[role].push(user.username);
+#             });
+#         });
+#     });
+#
+#     robot.respond(/test/i, function (res) {
+#         console.log(res);
+#
+#         if (usersAndRoles.admin.indexOf(res.message.user.name) === -1) {
+#             res.reply('What...?');
+#         } else {
+#             res.reply('hello boss!');
+#         }
+#
+#     });
+# }
