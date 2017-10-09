@@ -1,455 +1,418 @@
 trust: 0.9
 interactions:
-  - node:
-      name: saudacao
-    classifiers:
+  - name: saudacao
+    expect:
       - ola
-      - como esta 
+      - como esta
       - diga o seu nome
       - oi
       - bom dia
       - boa tarde
       - boa noite
-    message:
+    answer:
       - Olá eu sou o SEIbot, estou aqui para tirar suas dúvidas sobre o SEI! Tenha paciência comigo, ainda estou em treinamento. Qual a sua dúvida ?
     event: respond
 
-  - node:
-      name: duvida
-    classifiers:
+  - name: duvida
+    expect:
       - o que voce sabe
       - o que voce faz
       - sabe fazer
       - como pergunto
-    message:
+    answer:
       - Eu estou treinado para responder perguntas sobre o SEI =)
       - Você pode perguntar sobre processos, usuários e o que mais quiser
       - Vamos ver se consigo te ajudar =)
     event: respond
     type: block
 
-  - node:
-      name: processo-novo
-    classifiers:
+  - name: processo-novo
+    expect:
       - novo processo
       - começar processo
       - iniciar processo
       - criar processo
-    message:
+    answer:
       - Para iniciar um processo, clique em "iniciar o processo", depois escolha o tipo de processo e preencha os dados de cadastro.
     event: respond
 
-  - node:
-      name: cadastro 
-    classifiers:
+  - name: cadastro
+    expect:
       - cadastro usuario
       - login
       - qual usuario
       - criar usuário
-      - como me cadastrar no sei	  
-    message:
+      - como me cadastrar no sei
+    answer:
       - Você deve acessar o SEI com seu usuário e senha na rede da Funai
     event: respond
 
-  - node:
-      name: usuario-externo
-    classifiers:
+  - name: usuario-externo
+    expect:
       - cadastrar usuario externo
       - como cadastrar um usuário externo
       - fazer alguem de fora entrar no SEI
       - cadastrar gente de fora
       - acessar o SEI de fora
-    message:
+    answer:
       - Para dar acesso a um usuário externo basta acessar http://www.funai.gov.br/index.php/menu-sei para mais informações
     event: respond
 
-  - node:
-      name: contente
-    classifiers:
+  - name: contente
+    expect:
       - muito bom
       - legal
       - adorei
       - deu certo
       - curti
-    message:
+    answer:
       - Que bom, fico feliz em ajudar. =)
     event: respond
 
-  - node:
-      name: triste
-    classifiers:
+  - name: triste
+    expect:
       - esta ruim
       - não gostei
       - não funcionou
       - mais ou menos
       - não é isso
       - entendeu errado
-    message:
+    answer:
       - Poxa, eu tento ao máximo, mas sou apenas um robô em treinamento... =(
     event: respond
 
-  - node:
-      name: o-que-e
-    classifiers:
+  - name: o-que-e
+    expect:
       - o que é o SEI
       - utilidade SEI
-    message:
+    answer:
       - O SEI – Sistema Eletrônico de Informações é a plataforma para gerenciar eletronicamente seus documentos e processos. Desenvolvido em software 100% livre, pelo Tribunal Regional Federal - TRF da 4ª região (RS/SC/PR), ele foi adotado pelo Ministério do Planejamento, Orçamento e Gestão como sistema padrão do Processo Eletrônico Nacional, que vai permitir a interligação e tramitação eletrônica de documentos e processos entre os órgãos e entidades da Administração Pública Federal. O sistema atende os requisitos do Decreto nº 8.539, de 08 de outubro de 2015, que dispõe sobre o uso do meio eletrônico para a realização do processo administrativo no âmbito dos órgãos e das entidades da administração pública federal direta, autárquica e fundacional.
     event: respond
 
-  - node:
-      name: beneficio-sei
-    classifiers:
+  - name: beneficio-sei
+    expect:
       - vantagem sei
       - beneficio sei
       - objetivo sei
       - porque usar sei
-    message:
+    answer:
       - O objetivo é melhorar a eficiência, controle e transparência na tramitação de processos e documentos, assim como agilizar e facilitar a comunicação e relacionamento com cidadãos e instituições. A implantação do SEI na Funai permitirá diminuir o estoque e uso de papel, reduzindo custos, ajudando o meio ambiente e dando mais agilidade, transparência e controle às análises de processos. Com o novo sistema, os processos poderão ser analisados em mais de uma área simultaneamente, o que deve reduzir o tempo de tramitação dentro da Fundação. A modernização traz uma série de vantagens, como por exemplo a transparência ativa, em atendimento ao disposto na Lei nº 12.527, de 2012, a chamada Lei de Acesso à Informação.
     event: respond
 
-  - node:
-      name: faq
-    classifiers:
+  - name: faq
+    expect:
       - duvida frequente
       - faq
       - duvida comum
       - pergunta frequente
-    message:
+    answer:
       - A Funai possui uma página com as dúvidas mais comuns sobre o uso do SEI, você pode encontrá-lo neste link https://intranet.funai.gov.br/faq-sei/
     event: respond
 
-  - node:
-      name: quem-pode-acessar
-    classifiers:
+  - name: quem-pode-acessar
+    expect:
       - quem pode usar
       - quem pode acessar
       - como acessar SEI
-    message:
+    answer:
       - O SEI está disponível apenas para usuários e colaboradores internos da Funai em sua primeira fase, porém usuários externos poderão ter acesso em breve ao sistema.
       - Para realizar o acesso o servidor utilizará o mesmo usuário e senha da rede.
     event: respond
     type: block
 
-  - node:
-      name: tipo-processo
-    classifiers:
+  - name: tipo-processo
+    expect:
       - tipo processo
       - tipo processo eletronico
-    message:
+    answer:
       - Todos os processos criados a partir do dia 2 de Janeiro de 2017, tanto na área meio como na área fim, serão exclusivamente eletrônicos, sem exceção. Após a implementação do SEI, não haverá mais autuação de processo em papel.
     event: respond
 
-  - node:
-      name: inicio-uso
-    classifiers:
+  - name: inicio-uso
+    expect:
       - inicio uso SEI
       - data inicio
       - virada chave
-    message:
+    answer:
       - Para a Funai Sede o início do uso do SEI será a partir de 02 de janeiro de 2017, porém em uma segunda fase será realizada a implantação em todas as unidades administrativas da Funai, atendendo o cronograma de implantação do Grupo de Trabalho do SEI.
     event: respond
 
-  - node:
-      name: processo-antigo
-    classifiers:
+  - name: processo-antigo
+    expect:
       - fazer processo físico
       - destino processo fisico
       - processo antigo
-    message:
+    answer:
       - Os processos pendentes de decisão deverão ser digitalizados e disponibilizados no SEI. Os autos físicos receberão um termo de encerramento e conversão do processo em eletrônico. A partir de então sua tramitação será exclusivamente pelo SEI.
     event: respond
-    
-  - node:
-      name: digitalizacao
-    classifiers:
+
+  - name: digitalizacao
+    expect:
       - quem digitalizará processo
       - inclusão processo SEI
       - digitalização processo
-    message:
+    answer:
       - Será responsável pela inclusão do processo no SEI, cada unidade organizacional que possuir qualquer tipo de documento e processo em situação “trâmite”.
     event: respond
-    
-  - node:
-      name: assinatura
-    classifiers:
+
+  - name: assinatura
+    expect:
       - assinatura documento
       - assinar documento
       - assino documento
-    message:
+    answer:
       - Os documentos serão assinados digitalmente.
-      - Para assinar um documento você deve entrar no documento que deseja assinar. 
+      - Para assinar um documento você deve entrar no documento que deseja assinar.
       - Em seguida, clique no ícone “Assinar Documento”, informe o cargo / função que deve ser associado a assinatura, informe o tipo de assinatura (por login e senha ou por certificado digital), digite sua senha e clique na tecla <ENTER>
       - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
 
-  - node:
-      name: saber-mais
-    classifiers:
+  - name: saber-mais
+    expect:
       - saber mais
       - video explicativo
       - mais informações
       - video aula
-    message:
+    answer:
       - Para conhecer mais sobre o SEI você pode ver uma série de vídeos na opção "Para Saber+" no cabeçalho do SEI. Os vídeos estão agrupados por categorias. Você precisará ter o Flash Player habilitado em seu navegador para assistir às vídeo aulas.
-    event: respond 
+    event: respond
 
-  - node:
-      name: apensar
-    classifiers:
+  - name: apensar
+    expect:
       - apensar
       - apensamento
-    message:
+    answer:
       - No SEI não se utiliza o termo "apensação" para os processos correlatos.
       - O sistema permite o relacionamento de processos para atender essa necessidade.
     event: respond
-	
-  - node:
-      name: navegador-favorito
-    classifiers:
+
+  - name: navegador-favorito
+    expect:
       - navegador recomendável
       - firefox
       - chrome
       - internet explorer
       - navegador recomendado
-    message:
+    answer:
       - O SEI é um sistema 100% web e pode ser acessado por meio dos principais navegadores, como o Internet Explorer, o Firefox e o Google Chrome.
       - O Chrome é o navegador mais recomendado para a utilização do SEI.
     event: respond
-	
-  - node:
-      name: manual-usuario
-    classifiers:
+
+  - name: manual-usuario
+    expect:
       - existe manual
       - manual usuario
-    message:
+    answer:
       - O SEI possui um manual de usuário bastante completo, que você pode acessar neste link http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
-	
-  - node:
-      name: prioridade-processo
-    classifiers:
+
+  - name: prioridade-processo
+    expect:
       - atribuir prioridade
       - processo prioritário
       - priorizo processo
-    message:
+    answer:
       - O SEI não permite atribuir prioridades aos processos. Essa atividade deve ser realizada pelo gestor da unidade, que pode atribuir processos a servidores específicos.
       - A prioridade deve ser  comunicada diretamente a esses servidores.
     event: respond
     type: block
-	
-  - node:
-      name: alterar-processo
-    classifiers:
+
+  - name: alterar-processo
+    expect:
       - corrigir dados processo
       - alterar processo
       - alteração processo
       - altero processo
-    message:
-      - O SEI permite alterar, a qualquer momento, os campos preenchidos na tela “Iniciar Processo”. Para isso, entre no processo (clique sobre o NUP do processo) e clique no ícone “Consultar / Alterar Processo”. 
+    answer:
+      - O SEI permite alterar, a qualquer momento, os campos preenchidos na tela “Iniciar Processo”. Para isso, entre no processo (clique sobre o NUP do processo) e clique no ícone “Consultar / Alterar Processo”.
       - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: tramitar-processo
-    classifiers:
+
+  - name: tramitar-processo
+    expect:
       - tramitar processo
       - enviar processo
       - encaminhar processo
       - encaminho processo
       - tramito processo
-    message:
+    answer:
       - Para tramitar um processo (clique sobre o NUP do processo) e clique no ícone “Enviar Processo”.
       - Em seguida, informa a sigla da unidade para onde deseja enviar o processo e clique no botão “Enviar”.
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	  
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: receber-processo
-    classifiers:
+
+  - name: receber-processo
+    expect:
       - receber processo
       - recepcionar processo
       - recebo processo
       - recepciono processo
-    message:
+    answer:
       - O processo enviado por outra unidade aparece na tela inicial de “Controle de Processos” na coluna “Recebidos” com o NUP grafado em vermelho.
       - Para receber o processo, clique sobre o NUP do processo.
     event: respond
     type: block
-	
-  - node:
-      name: anotacao-processo
-    classifiers:
+
+  - name: anotacao-processo
+    expect:
       - escrever anotações processo
       - escrever observações processo
       - crio observações processo
       - escrevo anotações processo
-    message:
+    answer:
       - O SEI possui uma área de “Anotações” disponível para comunicação com a equipe interna da unidade
       - Servidores de outras unidades não tem acesso a essas anotações
       - Para criar uma anotação, clique no ícone correspondente e digite as anotações/observações
     event: respond
     type: block
-	
-  - node:
-      name: conclusao-processo
-    classifiers:
+
+  - name: conclusao-processo
+    expect:
       - concluir processo
       - finalizar processo
       - encerrar processo
       - encerro processo
       - finalizo processo
       - concluo processo
-    message:
+    answer:
       - Para concluir um processo, acesse-o (clique sobre o NUP do processo) e clique no ícone “Concluir Processo”
     event: respond
-	
-  - node:
-      name: reabrir-processo
-    classifiers:
+
+  - name: reabrir-processo
+    expect:
       - reabrir processo
       - reabertura processo
       - reabro processo
-    message:
+    answer:
       - Para reabrir um processo é necessário que ele tenha tramitado pela sua unidade
       - Através da tela de pesquisas (menu “Pesquisa” à esquerda da tela inicial) encontre o processo encerrado
       - Clique no ícone da árvore e, em seguida, ícone “Reabrir Processo”
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: anexar-processo
-    classifiers:
+
+  - name: anexar-processo
+    expect:
       - anexar processo
       - unir processo
       - anexo processo
-    message:
+    answer:
       - Para anexar processos, entre no processo (clique sobre o NUP do processo) e clique no ícone “Anexar Processo”
       - Em seguida, informe o NUP do processo que deseja anexar, clique em “Pesquisar”, depois em “Anexar” e confirme a operação
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: desanexar-processo
-    classifiers:
+
+  - name: desanexar-processo
+    expect:
       - desanexar processo
       - separar processo
       - desanexo processo
       - separo processo
-    message:
+    answer:
       - Somente administradores do sistema podem desanexar processos
       - Assim, você deve enviar um e-mail direto do processo para "sei@funai.gov.br" solicitando a desanexação
       - Em seguida tramite-o para o SEPRO
     event: respond
     type: block
-	
-  - node:
-      name: suporte-sei
-    classifiers:
+
+  - name: suporte-sei
+    expect:
       - falar suporte
       - contato suporte
-    message:
+    answer:
       - 'Para entrar em contato com o suporte do SEI, envie um e-mail para: sei@funai.gov.br'
     event: respond
     type: block
-	
-  - node:
-      name: atribuir-processo
-    classifiers:
+
+  - name: atribuir-processo
+    expect:
       - atribuir processo
       - atribuição processo
       - desiginar processo
       - atribuo processo
-    message:
+    answer:
       - Entre no processo (clique sobre o NUP do processo) e clique no ícone “Atribuir Processo”
       - Em seguida, selecione o usuário para o qual deseja atribuir o processo
       - 'Atenção: O SEI permite que somente pessoas da própria unidade por onde está tramitando o processo sejam designadas'
     event: respond
     type: block
-	
-  - node:
-      name: pesquisar-processo
-    classifiers:
+
+  - name: pesquisar-processo
+    expect:
       - pesquisar processo
       - encontrar processo
       - buscar processo
       - encontro processo
       - procuro processo
-    message:
+    answer:
       - Entre na tela de pesquisas clicando na aba “Pesquisa” no menu lateral à esquerda da tela de “Controle de Processos”
       - Informe dados do processo que deseja localizar e clique no botão “Pesquisar”
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: documento-externo
-    classifiers:
+
+  - name: documento-externo
+    expect:
       - documento externo
       - incluir documento papel
       - anexar documento a processo
       - incluo documento físico
-    message:
+    answer:
       - Como regra geral, os documentos devem ser inseridos no SEI por meio do editor próprio oferecido pela ferramenta
       - Somente devem ser anexados documentos em papel recebidos de outros órgãos ou áreas que ainda não possuem o SEI
       - Se for esse o caso, entre no processo (clique sobre o NUP do processo) e clique no ícone “Incluir Documento”
       - Em seguida, selecione “Externo”, preencha os dados da tela “Registrar Documento Externo”, selecione o arquivo clicando no botão “escolher arquivo” e em seguida finaliza o procedimento clicando no botão “Confirmar Dados”
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: documento-nato-digital
-    classifiers:
+
+  - name: documento-nato-digital
+    expect:
       - novo documento
       - criar documento
       - crio documento
-    message:
+    answer:
       - Para criar um novo documento entre no processo (clique sobre o NUP do processo) e clique no ícone “Incluir Documento”
       - Em seguida, selecione o tipo de documento que deseja incluir, preencha os dados da tela “Gerar Documento” e clique no botão “Confirmar Dados”
       - Em seguida, crie o documento digitando-o na tela que se abrirá
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: modelo-documento
-    classifiers:
+
+  - name: modelo-documento
+    expect:
       - criar modelo documento
       - documento padrão
       - crio modelo documento
-    message:
+    answer:
       - O SEI permite transformar qualquer documento que tenha sido utilizado em modelo para documentos similares de outros processos
       - Para isso, entre no documento que deseja transformar em modelo
       - Em seguida, clique no ícone “Adicionar aos Modelos Favoritos” e informe um grupo e uma descrição para o modelo
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: alterar-documento
-    classifiers:
+
+  - name: alterar-documento
+    expect:
       - alterar documento
       - corrigir documento
       - alteração documento
       - altero documento
       - corrijo documento
-    message:
+    answer:
       - Para alterar um documento no SEI, entre no documento que deseja alterar
       - Em seguida, clique no ícone “Editar Conteúdo”.
       - Em seguida digite as alterações e clique no botão “Salvar” no canto superior esquerdo da tela
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: excluir-documento
-    classifiers:
+
+  - name: excluir-documento
+    expect:
       - excluir documento
       - exclusão documento
       - excluo documento
@@ -461,79 +424,73 @@ interactions:
       - apagar documento
       - deleto documento
       - apago documento
-    message:
+    answer:
       - Para excluir um documento no SEI, entre no documento que deseja excluir e, em seguida, clique no ícone “Excluir”
       - Se esse ícone não estiver disponível, o documento não pode mais ser excluído
       - Nesse caso, proceda a anulação do documento clicando no ícone “Cancelar Documento” e informe a justificativa
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: enviar-email
-    classifiers:
+
+  - name: enviar-email
+    expect:
       - enviar e-mail
       - mandar e-mail
       - enviar email
       - mandar email
       - enviar email processo
       - enviar email documento processo
-    message:
+    answer:
       - Entre no processo que contém o documento que deseja enviar clicando sobre o NUP do processo
       - Em seguida, clique no ícone “Enviar Correspondência Eletrônica”, selecione o remetente e informe o(s) emais(s) do(s) destinatários
       -  Em seguida, digite o texto da correspondência eletrônica, selecione os documentos que deseja anexar ao e-mail e clique no botão “Enviar”
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: imprimir-processo
-    classifiers:
+
+  - name: imprimir-processo
+    expect:
       - imprimir processo
       - gerar processo físico
       - imprimir documento processo
-    message:
+    answer:
       - Para imprimir documentos de um processo, entre no processo que contém os documentos que deseja imprimir clicando sobre o NUP do processo
       - Em seguida, clique no ícone “Gerar Arquivo do Processo”, selecione os documentos e clique no botão “Gerar”
       - O sistema gerará um arquivo PDF único com os documentos selecionados
-      - Entre no arquivo e envie para a impressora	 
-      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf	
+      - Entre no arquivo e envie para a impressora
+      - Para mais detalhes, consulte o manual do sistema http://www.defesa.gov.br/arquivos/sei/manual_usuario_sei.pdf
     event: respond
     type: block
-	
-  - node:
-      name: fim-conversa
-    classifiers:
+
+  - name: fim-conversa
+    expect:
       - tchau
       - até logo
       - fui
       - adeus
-    message:
+    answer:
       - Até logo, espero ter ajudado
     event: respond
 
-  - node:
-      name: error-1
-    message:
+  - name: error-1
+    answer:
       - Desculpe, não entendi direito o que quiz dizer. Pode especificar melhor?
       - Como assim?
       - Não sei ao certo como responder isso...
     event: respond
     type: random
 
-  - node:
-      name: error-2
-    message:
+  - name: error-2
+    answer:
       - Perdão, não consegui entender mesmo assim. Estamos falando sobre o SEI?
       - Me desculpe, mas meu conhecimento é limitado ao SEI, não entendi ao certo o que quiz dizer =(
     event: respond
     type: random
 
-  - node:
-      name: error-3
-    message:
+  - name: error-3
+    answer:
       - Acho que não vou conseguir te ajudar com isso, será que não é melhor ligar no ramal 6512 ou 6216?
       - Lá os atendentes vão conseguir te ajudar melhor...
-      - Eu ainda estou aprendendo também =) 
+      - Eu ainda estou aprendendo também =)
     event: respond
     type: block

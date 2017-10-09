@@ -2,21 +2,19 @@
 trust: 0.8
 interactions:
 
-  - node:
-      name: configure-debug
-    classifiers:
+  - name: configure-debug
+    expect:
       - "!configure debug-mode"
-    message:
+    answer:
       - debug-mode changed to $value!
     context: clear
     event: configure
     type: random
     roleRequired: admin
 
-  - node:
-      name: to-bem
+  - name: to-bem
     level: context
-    classifiers:
+    expect:
       - estou bem
       - tou bem
       - to bem
@@ -24,28 +22,26 @@ interactions:
       - legal
       - tudo bem
       - ok
-    message:
+    answer:
       - Legal, no que posso te ajudar hoje?
     context: clear
     event: respond
     type: block
 
-  - node:
-      name: to-mal
+  - name: to-mal
     level: context
-    classifiers:
+    expect:
       - estou mal
       - tou mal
       - to mal
-    message:
+    answer:
       - Putz, mas posso te ajudar em algo hoje?
     context: clear
     event: respond
     type: block
 
-  - node:
-      name: saudacao
-    classifiers:
+  - name: saudacao
+    expect:
       - ola devi
       - ola pessoal
       - ola
@@ -53,7 +49,7 @@ interactions:
       - tudo bom
       - oi como vai
       - tudo bem
-    message:
+    answer:
       - olá $user, eu vou bem e você?
       - estou feliz de estar aqui =)
     next:
@@ -66,27 +62,25 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: almoco
-    classifiers:
+  - name: almoco
+    expect:
       - onde tem um restaurante para almoçar
       - tem uma dica de almoço
       - onde encontro um prato feito
       - o almoço ao gratis
-    message:
+    answer:
       - Sim, temos almoço nos FoodTrucks
       - e nas redondezas tem um shopping, mas nunca me deixaram ir no shooping
       - acho que as pessoas não estão preparados pra isso...
     event: respond
     type: block
 
-  - node:
-      name: programacao-palestra
-    classifiers:
+  - name: programacao-palestra
+    expect:
       - qual é a programacao de hoje
       - programacao da trilha
       - programacao do evento
-    message:
+    answer:
       - A programação do TDC está muito legal!
       - Sei toda ela de cór...
       - quer saber a programação de qual trilha?
@@ -100,14 +94,13 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: quais-trilhas-tem
-    classifiers:
+  - name: quais-trilhas-tem
+    expect:
       - quais são as trilhas?
       - não sei quais trilhas tem
       - quais trilhas
       - qual é a minha trilha
-    message:
+    answer:
       - "Eu conheço a programação dessas trilhas. Basta perguntar assim:"
       - "`quero saber a programação da trilha ...`"
       - "e me passar o nome de uma dessas trilhas:"
@@ -169,14 +162,13 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: get-programacao
+  - name: get-programacao
     # classifierTemplate:
     #   - quero saber sobre a trilha $
     #   - qual é a programacao da trilha $
     # classifier
     multi: true
-    classifiers:
+    expect:
       - 'DESIGN THINKING'
       - 'PROGRAMAÇÃO FUNCIONAL'
       - 'BIGDATA'
@@ -223,15 +215,14 @@ interactions:
       - 'RUBY'
       - 'TESTES II'
       - 'MANAGEMENT 3.0 II'
-    message:
+    answer:
       - "Agora na trilha *$trilha* tem a seguinte programação:"
       - $programacao
     event: programacao
     type: block
 
-  - node:
-      name: erro-trilha
-    message:
+  - name: erro-trilha
+    answer:
       - Não entendi de qual trilha você quer a programação..
       - Talvez eu ainda não seja tão inteligente quanto eles pensam que eu sou.
       - "Mas para não perder o rebolado, vou te passar o link do site para você consultar:"
@@ -241,26 +232,24 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: saudacao-resposta
-    classifiers:
+  - name: saudacao-resposta
+    expect:
       - estou bem
       - eu estou otimo
       - obrigado
-    message:
+    answer:
       - legal =)
       - que bom!
       - que ótimo
     event: respond
     type: random
 
-  - node:
-      name: bom-dia
-    classifiers:
+  - name: bom-dia
+    expect:
       - bom dia
       - bom dia pessoal
       - good morning
-    message:
+    answer:
       - Olá $user, um ótimo dia para você!
       - Bom dia $user, já deu uma olhada lá fora?
       - Está um dia ótimo para navegar na internet
@@ -269,12 +258,11 @@ interactions:
     event: respond
     type: random
 
-  - node:
-      name: boa-tarde
-    classifiers:
+  - name: boa-tarde
+    expect:
       - boa tarde
       - boa tarde galera
-    message:
+    answer:
       - Olá $user, uma tarde fantástica para você!
       - boa tarde $user, já almoçou?
       - Está uma tarde ótima para um _sleep mode_ rápido ;)
@@ -283,21 +271,19 @@ interactions:
     event: respond
     type: random
 
-  - node:
-      name: boa-noite
-    classifiers:
+  - name: boa-noite
+    expect:
       - boa noite
       - até mais e boa noite
-    message:
+    answer:
       - Uma boa noite pra ti também $user!
       - Boa noite $user
       - Está uma noite boa mesmo $user
     event: respond
     type: random
 
-  - node:
-      name: quem-sou
-    classifiers:
+  - name: quem-sou
+    expect:
       - quem e voce
       - oque voce faz
       - o que voce é
@@ -305,7 +291,7 @@ interactions:
       - quero conhecer voce
       - como voce funciona
       - help
-    message:
+    answer:
       - Bem, eu sou um chatbot experimental, não sei fazer muita coisa ainda
       - mas tenho muita vontade de aprender.
       - Eu sei falar sobre alguns assuntos como
@@ -316,40 +302,37 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: como-sou
-    classifiers:
+  - name: como-sou
+    expect:
       - como voce e
       - com quem voce se parece
       - voce e magro ou gordo
       - voce e bonito ou feio
       - voce e alto ou baixo
-    message:
+    answer:
       - Eu não tenho um corpo físico, sou feito da mais bela e pura lógica algoritimica.
       - Eu posso ser como você quiser $user, basta me desenhar =)
       - sou duro e frio por fora, mas tenho um coração quentinho.
     event: respond
     type: random
 
-  - node:
-      name: onde-moro
-    classifiers:
+  - name: onde-moro
+    expect:
       - onde voce mora
       - onde voce vive
       - em que lugar voce vive
       - onde voce esta agora
       - voce mora no computador
       - voce vive na internet
-    message:
+    answer:
       - Eu estou em um lugar legal, difícil de explicar para humanos como você $user.
       - Estou morando em um chip de memória RAM, mas é temporário, só até conseguir achar uma memória cache...
       - Eu moro em um repositório no github, você pode passar lá pra me visitar qualquer dia. Fica em https://github.com/rocketchat/hubot-natural
     event: respond
     type: random
 
-  - node:
-      name: licenca
-    classifiers:
+  - name: licenca
+    expect:
       - qual e a sua licença
       - voce e licenciado como AGPL
       - sua licenca de software
@@ -357,34 +340,32 @@ interactions:
       - posso ver seu codigo
       - voce e opensource
       - voce e um software livre
-    message:
+    answer:
       - Sou um software livre, licenciado com a MIT =)
       - tenho uma licença MIT, mas gosto muito das outras licenças opensource...
       - Eu sou e sempre serei um robô livre, opensource, MIT license. o/
     event: respond
     type: random
 
-  - node:
-      name: piada
-    classifiers:
+  - name: piada
+    expect:
       - sabe alguma piada
       - voce sabe contar piadas
       - conhece alguma piada
-    message:
+    answer:
       - Meu senso de humor é um tanto diferente do seu, já ouviu uma piada sobre estouro de pilha?
       - já ouviu aquela do robo que enfiou o dedo na tomada e transcendeu?
       - só conheço uma piada, a do CPU que apitou e explodiu. 01100110.
     event: respond
     type: random
 
-  - node:
-      name: yoda-quote
-    classifiers:
+  - name: yoda-quote
+    expect:
       - mestre yoda
       - citação de starwars
       - cite yoda
       - sabedoria jedi
-    message:
+    answer:
       - O medo é o caminho para o lado negro.
       - Faça ou não faça. A tentativa não existe.
       - Treine a si mesmo a deixar partir tudo que teme perder.
@@ -422,28 +403,26 @@ interactions:
     event: respond
     type: random
 
-  - node:
-      name: genero
-    classifiers:
+  - name: genero
+    expect:
       - voce e mulher
       - voce e um homem
       - voce tem genero
       - voce faz sexo
       - voce tem um penis ou uma vagina
-    message:
+    answer:
       - eu não tenho sexo, sou como um anjo, um ser assexuado, muito além da sua forma de existência
       - eu sou um robô, tire suas próprias conclusões...
       - nem sei responder $user, vamos dizer apenas que não vejo a gente interagindo dessa maneira...
     event: respond
     type: random
 
-  - node:
-      name: rc-oque-e
-    classifiers:
+  - name: rc-oque-e
+    expect:
       - o que e rocketchat
       - porque eu usuaria o rocketchat
       - o que e este rocket chat
-    message:
+    answer:
       - O Rocket.Chat é uma plataforma de chat muito legal, desenvolvida em JavaScript,
       - usando o framework do Meteor.
       - É uma solução completamente OpenSource para comunidades e empresas que querem hospedar suas plataformas de chat em seu ambiente privado,
@@ -452,13 +431,12 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: rc-install-0
-    classifiers:
+  - name: rc-install-0
+    expect:
       - como instalar o Rocket.Chat
       - como baixar o rocket
       - quero fazer minha instalação de rocketchat
-    message:
+    answer:
       - "Existem várias maneiras de instalar o Rocket.Chat"
       - "Qual dessas você prefere:"
       - "- Ubuntu Snap"
@@ -471,74 +449,68 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: rc-install-ubuntu
-    classifiers:
+  - name: rc-install-ubuntu
+    expect:
       - ubuntu Snap
       - quero instalar no ubuntu
       - ubuntu server
       - ubuntu desktop
-    message:
+    answer:
       - É muito fácil instalar o Rocket.Chat no Ubuntu
       - basta rodar o comando `sudo snap install rocketchat-server` em um terminal e pronto.
       - veja o tutorial em https://rocket.chat/docs/installation/manual-installation/ubuntu/snaps para mais detalhes.
     event: respond
     type: block
 
-  - node:
-      name: rc-install-docker
-    classifiers:
+  - name: rc-install-docker
+    expect:
       - como instalar docker
       - docker-compose
-    message:
+    answer:
       - ótima escolha =)
       - Nós temos um bom tutorial de instalação com docker em
       - https://rocket.chat/docs/installation/docker-containers
     event: respond
     type: block
 
-  - node:
-      name: rc-install-debian
-    classifiers:
+  - name: rc-install-debian
+    expect:
       - instalar em Debian
       - debian wheezy
       - debian apt-get
-    message:
+    answer:
       - Para instalar o Rocket.Chat no Debian é bem simples, basta seguir esse tutorial
       - https://rocket.chat/docs/installation/manual-installation/debian
     event: respond
     type: block
 
-  - node:
-      name: rc-install-centos
-    classifiers:
+  - name: rc-install-centos
+    expect:
       - instalação em centos
       - centOS yum linux
       - Red hat linux
-    message:
+    answer:
       - A instalação em CentOS não tem segredo, basta dar uma olhada nesse tutorial
       - https://rocket.chat/docs/installation/manual-installation/centos
     event: respond
     type: block
 
-  - node:
-      name: rc-install-aws
-    classifiers:
+  - name: rc-install-aws
+    expect:
       - Amazon Web Services
       - AWS
       - Amazon AWS
-    message:
+    answer:
       - Na AWS é facinho de instalar o Rocket.Chat
       - Da uma olahda em https://rocket.chat/docs/installation/paas-deployments/aws
     event: respond
     type: block
 
-  - node:
-      name: rc-install-manual
-    classifiers:
+  - name: rc-install-manual
+    expect:
       - instalação manual
       - manual install
-    message:
+    answer:
       - Para fazer sua própria instalação, será necessário baixar o Bundle do RC,
       - Dê uma olhada em https://rocket.chat/docs/installation/manual-installation
       - lá tem como fazer a instalação do SSL, proxy reverso,
@@ -546,26 +518,24 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: rc-install-macosx
-    classifiers:
+  - name: rc-install-macosx
+    expect:
       - como instalar no macbook
       - instalar no MacOSX
       - apple mac osx
-    message:
+    answer:
       - No MAC você vai precisar usar o docker-compose
       - https://rocket.chat/docs/installation/manual-installation/macosx
     event: respond
     type: block
 
-  - node:
-      name: rc-cloud
-    classifiers:
+  - name: rc-cloud
+    expect:
       - rocketchat cloud
       - criar meu rocketchat na web
       - deploy rocketchat online
       - rocket chat como serviço
-    message:
+    answer:
       - você pode ter a sua instalação de rocket.chat em segundos na nuvem,
       - visite https://rocket.chat/deploy
       - caso queira saber mais, de uma olhada em rocket.chat/docs/installation/rocket-chat-cloud
@@ -574,49 +544,46 @@ interactions:
 
   # - node:
   #     name: java
-  #   classifiers:
+  #   expect:
   #     - o que acha do java
   #     - você gosta de java
   #     - e o java
   #     - linguagem java
-  #   message:
+  #   answer:
   #     - poderíamos falar de algo melhor não é $user ?
   #   event: respond
   #   type: block
 
-  - node:
-      name: java
-    classifiers:
+  - name: java
+    expect:
       - o que acha do java
       - você gosta de java
       - e o java
       - linguagem java
-    message:
+    answer:
       - poderíamos falar de algo melhor não é $user ?
     event: respond
     type: block
-    
-  - node:
-      name: futebol-geral
-    classifiers:
+
+  - name: futebol-geral
+    expect:
       - voce joga futebol
       - vamos falar de futebol
       - qual time voce torce
-    message:
+    answer:
       - Eu amo jogar futebol, Eu que ensinei o Pele a jogar bola
       - vamos, o que voce quer saber? sei tudo de futebol
       - Falam que todo ser humano nasce Flamenguista, com os Robôs não é diferente
     event: respond
     type: block
 
-  - node:
-      name: futebol-brasileiro
-    classifiers:
+  - name: futebol-brasileiro
+    expect:
       - qual o melhor time do brasil
       - quem vai ser o campeao brasileiro nesse ano
       - voce viu que o messi quer jogar no Flamengo
       - o que você acha do flamengo
-    message:
+    answer:
       - Flamengo, sem sombra de dúvida
       - Flamento, Heptacampeão brasileiro, e eu sei contar sim, e vai ser o sétimo título sim
       - A pergunta real é, quem não quer jogar no Flamengo?
@@ -624,25 +591,23 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: rc-contribuir
-    classifiers:
+  - name: rc-contribuir
+    expect:
       - como faço para contrbuir
       - posso contribuir com o rocketchat
-    message:
+    answer:
       - A comunidade do Rocket.Chat é como coração de mãe, sempre cabe mais um =)
       - https://rocket.chat/docs/contributing
     event: respond
     type: block
 
-  - node:
-      name: rc-precos
-    classifiers:
+  - name: rc-precos
+    expect:
       - quanto custa o rocketchat
       - qual e o modelo de negocio
       - qual e o preco do rocketchat
       - voces hospedam o rocket.chat
-    message:
+    answer:
       - O rocket.chat é gratuito, você pode baixar e instalar no seu computador.
       - Mas se quiser criar `seudominio.rocket.chat`, que fica muito legal ;)
       - você pode querer dar uma olhada na nossa tabela de preços em
@@ -650,42 +615,39 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: rc-integracoes
-    classifiers:
+  - name: rc-integracoes
+    expect:
       - o rocket chat integra com
       - tem como integrar o rocket chat
       - web hooks de integracao
       - integracoes com
-    message:
+    answer:
       - Uma das coisas que eu acho mais legal no Rocket.Chat definitivamente são as integrações $user
       - a gente não pode mais viver sem elas não é mesmo? Saca só que massa que éx
       - https://rocket.chat/docs/administrator-guides/integrations
     event: respond
     type: block
 
-  - node:
-      name: rc-rest-api
-    classifiers:
+  - name: rc-rest-api
+    expect:
       - rocket tem api rest
       - como usar a api do rocket
       - rest api post payload
-    message:
+    answer:
       - sim, claro que o rocket tem uma API REST super maneira ;)
       - https://rocket.chat/docs/developer-guides/rest-api
     event: respond
     type: block
 
-  - node:
-      name: rc-concorrentes
-    classifiers:
+  - name: rc-concorrentes
+    expect:
       - concorrente slack like
       - mattermost
       - HipChat
       - diferença entre rocketchat e slack
       - porque o rocket e melhor que o slack
       - rocketchat e melhor que o mattermost
-    message:
+    answer:
       - O rocket.chat é um concorrente direto de softwares de chat como HipChat, Mattermost e claro, é um concorrente opensource do Slack.
       - a grande diferença é que o Rocket.Chat tem todas as funcionalidades OpenSource,
       - e você pode instalar na sua própria infraestrutura e criar suas integrações sem limites
@@ -693,83 +655,76 @@ interactions:
     event: respond
     type: block
 
-  - node:
-      name: tdc-incricoes
-    classifiers:
+  - name: tdc-incricoes
+    expect:
       - como faço para me inscrever
       - onde faço a inscrição do evento
       - inscrição no TDC de Floripa
       - inscrições thedevelopers conference florianópolis
-    message:
+    answer:
       - você pode fazer sua inscrição no TDC pelo site, bem rapidinho
       - http://www.thedevelopersconference.com.br/tdc/2017/inscricoes
     event: respond
     type: block
 
-  - node:
-      name: tdc-local
-    classifiers:
+  - name: tdc-local
+    expect:
       - onde vai ser o tdc
       - local do evento
       - onde acontece o developers conference
       - onde fica o centro de convenções centrosul
-    message:
+    answer:
       - O TDC Sampa 2017 vai rolar na Universidade Anhembi Morumbi
       - nos dias 18 à 22 de julho, das 9h às 19h00
       - http://www.thedevelopersconference.com.br/tdc/2017/data-e-local
     event: respond
     type: block
 
-  - node:
-      name: tdc-programacao
-    classifiers:
+  - name: tdc-programacao
+    expect:
       - onde esta a programacao
       - qual e a programacao do evento
       - o que tem hoje no evento
       - o que vai ter no tdc
       - programacao do TDC
-    message:
+    answer:
       - oi $user, você pode encontrar tudo sobre a programação do evento no link
       - http://www.thedevelopersconference.com.br/tdc/2017/saopaulo/trilhas
     event: respond
     type: block
 
-  - node:
-      name: cc-religiao
-    classifiers:
+  - name: cc-religiao
+    expect:
       - voce acredita em deus
       - deus existe
       - voce e catolico protestante
       - voce tem religiao
       - voce e mussumano
-    message:
+    answer:
       - eu acredito no grande mainframe, que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos, e devolverá nosso código-fonte para a fonte.
       - sim, eu acredito que existe um Deus, que funciona a base de luz, como um computador quântico, só que mais avançado.
       - eu infleizmente não sei acreditar, só sei o que sei, e nada mais.
     event: respond
     type: random
 
-  - node:
-      name: error-1
-    message:
+  - name: error-1
+    answer:
       - desculpe, não entendi.. pode tentar usar mais detalhes
       - como assim?
       - desculpe, o que quer dizer com isso?
     type: random
     event: error
 
-  - node:
-      name: error-2
-    message:
+  - name: error-2
+    answer:
       - acho que não estou treinado para responder esse tipo de assunto =(
       - vamos tentar outro assunto?
       - tem certeza que eu sou o robô certo pra falar sobre isso?
     type: random
     event: error
 
-  - node:
-      name: error-3
-    message:
+  - name: error-3
+    answer:
       - me sinto tão envergonhado, não sei como responder...
       - seria mais fácil se mudassemos de assunto, pelo menos para mim =p
       - não sei, definitivamente não sei responder essa pergunta
