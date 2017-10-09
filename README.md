@@ -86,7 +86,7 @@ The NaturalNode library comes with two kinds of classifiers, the naive classifie
 
 #### PorterStemmer
 
-There is also more than one kind of stemmer. You should set the stemmer to define your language. By default we use the PorterStemmerPt for portuguese, but you can find english, russian, italian, french, spanish and other stemmers in NaturalNode libs, or even right your own based on those.
+There is also more than one kind of stemmer. You should set the stemmer to define your language. By default we use the PorterStemmerPt for portuguese, but you can find english, russian, italian, french, spanish and other stemmers in NaturalNode libs, or even write your own based on those.
 
 Just check inside `node_modules/natural/lib/natural/stemmers/`
 

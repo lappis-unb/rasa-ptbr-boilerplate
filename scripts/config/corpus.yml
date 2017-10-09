@@ -585,6 +585,18 @@ interactions:
   #   type: block
 
   - node:
+      name: java
+    classifiers:
+      - o que acha do java
+      - você gosta de java
+      - e o java
+      - linguagem java
+    message:
+      - poderíamos falar de algo melhor não é $user ?
+    event: respond
+    type: block
+    
+  - node:
       name: futebol-geral
     classifiers:
       - voce joga futebol
