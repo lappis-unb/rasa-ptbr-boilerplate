@@ -8,4 +8,5 @@ hubot.env
 .DS_Store
 Procfile
 train.js
-scripts/config/rocket.yml
+env.sh
+brill.js

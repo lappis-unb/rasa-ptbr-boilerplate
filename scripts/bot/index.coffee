@@ -1,7 +1,11 @@
 fs = require 'fs'
 path = require 'path'
 natural = require 'natural'
-PorterStemmerPt = require path.join '..','..','node_modules','natural','lib','natural','stemmers','porter_stemmer_pt.js'
+lang = (process.env.HUBOT_LANG || 'en')
+if lang == "en"
+  PorterStemmer = require path.join '..','..','node_modules','natural','lib','natural','stemmers','porter_stemmer.js'
+else
+  PorterStemmer = require path.join '..','..','node_modules','natural','lib','natural','stemmers','porter_stemmer_' + lang + '.js'
 
 config = {}
 events = {}
@@ -42,6 +46,19 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
       cb?()
   , delay
 
+livechatTransferHuman = (res) ->
+	setTimeout ->
+		res.robot.adapter.callMethod 'livechat:transfer',
+			roomId: res.envelope.room
+			departmentId: process.env.DEPARTMENT_ID
+	, 1000
+
+setUserName = (res, name) ->
+	res.robot.adapter.callMethod 'livechat:saveInfo',
+		_id: res.envelope.user.id
+		name: name
+	,
+		_id: res.envelope.room
 
 classifyInteraction = (interaction, classifier) ->
   if Array.isArray interaction.classifiers
@@ -52,7 +69,7 @@ classifyInteraction = (interaction, classifier) ->
         classifier.addDocument(doc, interaction.node.name)
 
     if Array.isArray interaction.next?.interactions
-      interaction.next.classifier = new natural.LogisticRegressionClassifier(PorterStemmerPt)
+      interaction.next.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
       for nextInteractionName in interaction.next.interactions
         nextInteraction = config.interactions.find (n) ->
           return n.node.name is nextInteractionName
@@ -63,7 +80,7 @@ classifyInteraction = (interaction, classifier) ->
       interaction.next.classifier.train()
 
     if interaction.multi == true
-      interaction.classifier = new natural.LogisticRegressionClassifier(PorterStemmerPt)
+      interaction.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
       for doc in interaction.classifiers
         interaction.classifier.addDocument(doc, doc)
       interaction.classifier.train()
@@ -100,7 +117,7 @@ incErrors = (res) ->
   key = 'errors_'+res.envelope.room+'_'+res.envelope.user.id
   errors = res.robot.brain.get(key) or 0
   errors++
-  console.log 'inc errors', errors
+  console.log 'inc errors ', errors
   res.robot.brain.set(key, errors)
   return errors
 
@@ -120,7 +137,7 @@ module.exports = (_config, robot) ->
 
   console.log 'Processing interactions'
   console.time 'Processing interactions (Done)'
-  classifier = new natural.LogisticRegressionClassifier(PorterStemmerPt)
+  classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
   #console.log(config.interactions)
   for interaction in config.interactions
     {node, classifiers, event} = interaction
@@ -157,7 +174,6 @@ module.exports = (_config, robot) ->
     if debugMode
       newMsg = buildClassificationDebugMsg(res, classifications)
       robot.adapter.chatdriver.customMessage(newMsg);
-
 
     if classifications[0].value >= trust
       clearErrors res
@@ -198,8 +214,9 @@ module.exports = (_config, robot) ->
     currentNode = nodes[node_name or error_node_name]
     currentNode.process.call @, res, msg, subClassifications
 
-
   robot.hear /(.+)/i, (res) ->
+    # console.log(res)
+    console.log(res.message)
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
     msg = res.match[0].replace res.robot.name+' ', ''
     msg = msg.replace(/^\s+/, '')

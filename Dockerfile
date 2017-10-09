@@ -2,7 +2,7 @@ FROM node:alpine
 
 LABEL mantainer "Diego Dorgam <diego.dorgam@rocket.chat>"
 
-ENV LISTEN_ON_ALL_PUBLIC=false RESPOND_TO_DM=true RESPOND_TO_EDITED=true HUBOT_CORPUS='corpus.yml' HUBOT_ADAPTER=rocketchat HUBOT_OWNER=RocketChat HUBOT_NAME=HubotNatural HUBOT_DESCRIPTION="Processamento de linguagem natural com hubot" ROCKETCHAT_URL=http://rocketchat:3000 ROCKETCHAT_ROOM=GENERAL RESPOND_TO_DM=true ROCKETCHAT_USER=chatbot ROCKETCHAT_PASSWORD=@12345@ ROCKETCHAT_AUTH=password HUBOT_LOG_LEVEL=debug
+ENV HUBOT_LANG='pt' RESPOND_TO_LIVECHAT=true LISTEN_ON_ALL_PUBLIC=false RESPOND_TO_DM=true RESPOND_TO_EDITED=true HUBOT_CORPUS='corpus.yml' HUBOT_ADAPTER=rocketchat HUBOT_OWNER=RocketChat HUBOT_NAME=HubotNatural HUBOT_DESCRIPTION="Processamento de linguagem natural com hubot" ROCKETCHAT_URL=http://rocketchat:3000 ROCKETCHAT_ROOM=GENERAL RESPOND_TO_DM=true ROCKETCHAT_USER=chatbot ROCKETCHAT_PASSWORD=@12345@ ROCKETCHAT_AUTH=password HUBOT_LOG_LEVEL=debug
 
 RUN npm install -g coffee-script hubot yo generator-hubot natural js-yaml && \
     apk --update add --no-cache git && \
