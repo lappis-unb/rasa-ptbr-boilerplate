@@ -4,10 +4,13 @@ common.applyVariable = (string, variable, value, regexFlags = 'i') ->
   string.replace new RegExp("(^|\\W)\\$#{variable}(\\W|$)", regexFlags), (match) ->
     match.replace "$#{variable}", value
 
-common.msgVariables = (message, msg) ->
+common.msgVariables = (message, msg, variables = {}) ->
   message = common.applyVariable message, 'user', msg.envelope.user.name
   message = common.applyVariable message, 'bot', msg.robot.alias
   message = common.applyVariable message, 'room', msg.envelope.room if msg.envelope.room?
+  for key, value of variables
+    message = common.applyVariable message, key, value
+  return message
 
 common.stringElseRandomKey = (variable) ->
   return variable if typeof variable is 'string'

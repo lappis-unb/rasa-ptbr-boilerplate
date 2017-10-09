@@ -8,3 +8,5 @@ hubot.env
 .DS_Store
 Procfile
 train.js
+env.sh
+brill.js
