@@ -10,11 +10,11 @@ class respond
     type = @interaction.type?.toLowerCase() or 'random'
     switch type
       when 'block'
-        messages = @interaction.message.map (line) ->
+        messages = @interaction.answer.map (line) ->
           return msgVariables line, msg
         msg.sendWithNaturalDelay messages
       when 'random'
-        message = stringElseRandomKey @interaction.message
+        message = stringElseRandomKey @interaction.answer
         message = msgVariables message, msg
         msg.sendWithNaturalDelay message
 
