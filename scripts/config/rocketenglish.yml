@@ -7,7 +7,7 @@
 # 4- Trazer leads de novos clientes
 # 5- Executar Serviços (?)
 # -------------------------------------------------------------------------------------------------------------------
-trust: .72
+trust: .78
 interactions:
 
   - name: configure-debug
@@ -38,17 +38,13 @@ interactions:
       - Jobs at Rocket.chat
       - Positions at Rocket.chat
       - Send my CV
-
     answer:
       - If you are looking for job opportunities with us, send an e-mail to jobs@rocket.chat :)
       - 'Yay! Let’s work together someday, send us an e-mail with your LinkedIn profile: jobs@rocket.chat'
       - Hmmm I feel you… wanna work with me, huh? Send an e-mail to jobs@rocket.chat, we will evaluate your profile and contact you as soon as something comes up!
-
     context: clear
     event: respond
     type: random
-
-
 
 # + Work +
 
@@ -61,7 +57,6 @@ interactions:
       - Search for positions
       - Find positions
       - Are hiring
-
     answer:
       - So you’re gonna tell me you want to work with us? Yay!
       - You can search for open positions in here https://rocket.chat/jobs and if you are looking for more info send an e-mail to jobs@rocket.chat.
@@ -75,7 +70,6 @@ interactions:
       - How much do you pay
       - What is paid
       - What it the amount paid
-
     answer:
       - So you already wanna know about the salary? You number cruncher! xD Just kidding. If you want to know what is the salary, you can send an e-mail to jobs@rocket.chat and they will be able to help you ;)
       - Oh it varies between R$ 10 and R$ 1.000.000,00…, to find out we will first need to get to know you better…
@@ -90,7 +84,6 @@ interactions:
       - Where can I send the CV
       - How to send the CV
       - E-mail address for CV
-
     answer:
       - I like you… I think we will hit it off. You can send your CV to jobs@rocket.chat!
       - Nice one! Send your CV to jobs@rocket.chat.
@@ -105,7 +98,6 @@ interactions:
       - No open positions on the website
       - The website does not show any open spots
       - Have not find a position that fits me
-
     answer:
       - If this is your case, send your CV to jobs@rocket.chat and as soon as we have something that fits your profile we will let you know.
       - Don’t be sad! There is always space for great people, send your CV to jobs@rocket.chat.
@@ -122,7 +114,6 @@ interactions:
       - No responses CV
       - Waiting for answer CV/positions
       - Can’t talk about my CV
-
     answer:
       - Really?! Something must have happened. Send your CV again to jobs@rocket.chat!
       - You should try sending your CV again to jobs@rocket.chat and we’ll see what we can do about it ;)
@@ -136,7 +127,6 @@ interactions:
       - How does the selection process work
       - Phases selection process
       - Selection Process
-
     answer:
       - This question is easy!
       - 'You can get all the information on the website:  https://rocket.chat/jobs.'
@@ -167,7 +157,6 @@ interactions:
       - Worker’s profile
       - Workers characteristics
       - Rocket.Chat profile
-
     answer:
       - Oh anything you can imagine… super-heroes, magicians, airplane pilots,... I’m sure there is space for you as well.
       - We like people who are willing to do it <3 People who know what they want and go beyond the daily routine.
@@ -178,183 +167,182 @@ interactions:
     # Security #
 
     # How does the security of the messages works?
-      -     name: security-1
-        expect:
-          - Message security
-          - Chat security
-          - Chat safety
-          - Security methods
-          - Is chat protected
+  - name: security-1
+    expect:
+      - Message security
+      - Chat security
+      - Chat safety
+      - Security methods
+      - Is chat protected
+    answer:
+      - Every message written on the regular chat might be accessed by the administrators. If you want use the encrypted chat, however, you’ll only need to start an off-the-record conversation.
+      - How to do that? Well you will need to click on the key symbol on the right part of your chat screen that reads OTR (off-the-record). :)
+    event: respond
+    type: block
 
-        answer:
-          - Every message written on the regular chat might be accessed by the administrators. If you want use the encrypted chat, however, you’ll only need to start an off-the-record conversation.
-          - How to do that? Well you will need to click on the key symbol on the right part of your chat screen that reads OTR (off-the-record). :)
-        event: respond
-        type: block
+# Is the demo version safe?
+  - name: security-2
+    expect:
+      - Demo safe
+      - Demo’s security
+      - Encryption demo
+      - Demo’s protection
+    answer:
+      - Yes! You can have off-the-record conversations inside the demo version.
+      - If you start an off-the-record conversation it will be encrypted but if you want to chat in open channels, anyone will be able to see it.
+    event: respond
+    type: random
 
-    # Is the demo version safe?
-      -     name: security-2
-        expect:
-          - Demo safe
-          - Demo’s security
-          - Encryption demo
-          - Demo’s protection
-        answer:
-          - Yes! You can have off-the-record conversations inside the demo version.
-          - If you start an off-the-record conversation it will be encrypted but if you want to chat in open channels, anyone will be able to see it.
-        event: respond
-        type: random
+# What type of encryption is used?
+  - name: security-3
+    expect:
+      - Encryption used
+      - Type of encryption
+      - Which encryption
+    answer:
+      - Relaaax, our chat is safely secured. If you want, however, to make sure you are using encryption access the off-the-record conversations on the key symbol on the left part of your chat screen.
+      - After activating this little key, no hacker will be able to steal your information. Did you really think I hadn’t watched Black Mirror?
+    event: respond
+    type: block
 
-    # What type of encryption is used?
-      -     name: security-3
-        expect:
-          - Encryption used
-          - Type of encryption
-          - Which encryption
-        answer:
-          - Relaaax, our chat is safely secured. If you want, however, to make sure you are using encryption access the off-the-record conversations on the key symbol on the left part of your chat screen.
-          - After activating this little key, no hacker will be able to steal your information. Did you really think I hadn’t watched Black Mirror?
-        event: respond
-        type: block
+# In what cloud are the messages saved?
+  - name: security-4
+    expect:
+      - Cloud messages
+      - Storage messages
+      - Storage cloud
+      - Store in which cloud
+    answer:
+      - Depending on the server you choose…
+      - 'We offer a cloud on Google Cloud. You can get more info about that on the following link:  https://rocket.chat/products.'
+    event: respond
+    type: block
 
-    # In what cloud are the messages saved?
-      -     name: security-4
-        expect:
-          - Cloud messages
-          - Storage messages
-          - Storage cloud
-          - Store in which cloud
-        answer:
-          - Depending on the server you choose…
-          - 'We offer a cloud on Google Cloud. You can get more info about that on the following link:  https://rocket.chat/products.'
-        event: respond
-        type: block
+# Is someone else going to have access to the messages?
+  - name: security-5
+    expect:
+      - Can someone see my messages
+      - My messages will be safe
+      - Who will be able to see my messages
+    answer:
+      - The server administrator has access to the chats that have been traded on the platform.
+      - If you are, however, the neurotic kind of person you can activate our encryption solution by clicking on the key icon on the right part of your chat screen.
+    event: respond
+    type: block
 
-    # Is someone else going to have access to the messages?
-      -     name: security-5
-        expect:
-          - Can someone see my messages
-          - My messages will be safe
-          - Who will be able to see my messages
-        answer:
-          - The server administrator has access to the chats that have been traded on the platform.
-          - If you are, however, the neurotic kind of person you can activate our encryption solution by clicking on the key icon on the right part of your chat screen.
-        event: respond
-        type: block
+# Am I going to be charged for the chat’s security?
+  - name: security-6
+    expect:
+      - Pay for security
+      - Price for the messages’ security
+      - Pay for the encryption
+      - Security included on the service
+    answer:
+      - It is awesome not having to pay for thing, huh?
+      - We also think so. It doesn’t matter how you use the platform, you will be safe :)
+      - 'You can check all the details about this on: http://rocket.chat/products.'
+    event: respond
+    type: block
 
-    # Am I going to be charged for the chat’s security?
-      -     name: security-6
-        expect:
-          - Pay for security
-          - Price for the messages’ security
-          - Pay for the encryption
-          - Security included on the service
-        answer:
-          - It is awesome not having to pay for thing, huh?
-          - We also think so. It doesn’t matter how you use the platform, you will be safe :)
-          - 'You can check all the details about this on: http://rocket.chat/products.'
-        event: respond
-        type: block
+# Will the messages imported from other applications still be safe?
+  - name: security-7
+    expect:
+      - Security of imported messages
+      - Imported messages are safe
+      - Protection for imported messages
+      - Encryption for messages and imported chats
+      - Still protected after importing messages
+    answer:
+      - Of course! Don’t worry, we’ll take care of everything.
+      - We have today multiple clients who need a super strong security such as banks and public organizations.
+      - 'You can get more details about that at:  https://rocket.chat/security.'
+    event: respond
+    type: block
 
-    # Will the messages imported from other applications still be safe?
-      -     name: security-7
-        expect:
-          - Security of imported messages
-          - Imported messages are safe
-          - Protection for imported messages
-          - Encryption for messages and imported chats
-          - Still protected after importing messages
-        answer:
-          - Of course! Don’t worry, we’ll take care of everything.
-          - We have today multiple clients who need a super strong security such as banks and public organizations.
-          - 'You can get more details about that at:  https://rocket.chat/security.'
-        event: respond
-        type: block
+#  Portfolio
+# Who are your clients?
+  - name: portfolio-1
+    expect:
+      - Who are the clients
+      - Who uses the platform
+      - List of clients
+      - Companies that use Rocket.chat
+      - Who uses
+      - Who are the users of the service
+    answer:
+      - 'Good you asked! We love showing ourselves, take a look at the many study cases at:  http://rocket.chat/customers.'
+      - Oh you can find every type of company here! From churches to banks and technology companies. We usually work with companies or groups who value innovation, creativity, and promptness.
+      - "Do you want to know if you fit in here? The answer is yes!! Look how awesome our client page is: http://rocket.chat/customers."
+    event: respond
+    type: random
 
-        #  Portfolio
-        # Who are your clients?
-          -         name: portfolio-1
-            expect:
-              - Who are the clients
-              - Who uses the platform
-              - List of clients
-              - Companies that use Rocket.chat
-              - Who uses
-              - Who are the users of the service
-            answer:
-              - 'Good you asked! We love showing ourselves, take a look at the many study cases at:  http://rocket.chat/customers.'
-              - Oh you can find every type of company here! From churches to banks and technology companies. We usually work with companies or groups who value innovation, creativity, and promptness.
-              - "Do you want to know if you fit in here? The answer is yes!! Look how awesome our client page is: http://rocket.chat/customers."
-            event: respond
-            type: random
+# Do you have case studies?
+  - name: portfolio-2
+    expect:
+      - Business case
+      - Case studies
+      - User examples
+      - How clients use
+    answer:
+      - 'Yep! Take a look here:  https://rocket.chat/customers.'
+      - 'Yes! We already have many organizations using our platform e we are already gathering their opinion on their experiences. You can take a look at these stories here:  http://rocket.chat/customers.'
+      - 'It’s been so little time and so many stories… I even get nostalgic… I gathered some of the in here, in case you want to take a look: https://rocket.chat/customers.'
+    event: respond
+    type: random
 
-        # Do you have case studies?
-          -         name: portfolio-2
-            expect:
-              - Business case
-              - Case studies
-              - User examples
-              - How clients use
-            answer:
-              - 'Yep! Take a look here:  https://rocket.chat/customers.'
-              - 'Yes! We already have many organizations using our platform e we are already gathering their opinion on their experiences. You can take a look at these stories here:  http://rocket.chat/customers.'
-              - 'It’s been so little time and so many stories… I even get nostalgic… I gathered some of the in here, in case you want to take a look: https://rocket.chat/customers.'
-            event: respond
-            type: random
+# Do you have clients on the retail sector?
+  - name: portfolio-3
+    expect:
+      - Retail clients
+      - Retail
+      - Wholesale
+      - Retail area
+    answer:
+      - Yes, we do!
+      - 'Take a look here at out case studies: https://rocket.chat/customers.'
+      - There’s also testimony from these types of company in there.
+    event: respond
+    type: block
 
-        # Do you have clients on the retail sector?
-          -         name: portfolio-3
-            expect:
-              - Retail clients
-              - Retail
-              - Wholesale
-              - Retail area
-            answer:
-              - Yes, we do!
-              - 'Take a look here at out case studies: https://rocket.chat/customers.'
-              - There’s also testimony from these types of company in there.
-            event: respond
-            type: block
+# Do you work with marketing agencies?
+  - name: portfolio-4
+    expect:
+      - Work with marketing agencies
+      - Service for marketing agencies
+      - Collaborate with marketing companies
+      - Marketing agencies as clients
+    answer:
+      - 'Yep! We understand that every client is unique, but you can have an idea of how the agencies are using us here:'
+      - 'https://rocket.cht/customers'
+    event: respond
+    type: block
 
-        # Do you work with marketing agencies?
-          -         name: portfolio-4
-            expect:
-              - Work with marketing agencies
-              - Service for marketing agencies
-              - Collaborate with marketing companies
-              - Marketing agencies as clients
-            answer:
-              - 'Yep! We understand that every client is unique, but you can have an idea of how the agencies are using us here:'
-              - 'https://rocket.cht/customers'
-            event: respond
-            type: block
+# Do you have clients on the health area?
+  - name: portfolio-5
+    expect:
+      - Hospitals as clients
+      - Work with hospitals
+      - Example of hospitals on the platform
+      - Services for the health sector
+    answer:
+      - 'Yep! We understand that every client is unique, but you can have an idea of how companies of the health sector are using us here:'
+      - 'https://rocket.cht/customers'
+    event: respond
+    type: block
 
-        # Do you have clients on the health area?
-          -         name: portfolio-5
-            expect:
-              - Hospitals as clients
-              - Work with hospitals
-              - Example of hospitals on the platform
-              - Services for the health sector
-            answer:
-              - 'Yep! We understand that every client is unique, but you can have an idea of how companies of the health sector are using us here:'
-              - 'https://rocket.cht/customers'
-            event: respond
-            type: block
-
-        # Do you have banks as clients?
-          -         name: portfolio-6
-            expect:
-              - Banks as clients
-              - Work with banks
-              - Example of banks on the platform
-              - Services for banks
-            answer:
-              - Yes, we are very proud to have clients in the financial market.
-              - Our product is extremely safe and customizable. Did you know we work with White Labeling?
-              - 'You can get an idea of how banks and other financial companies use us here:  https://rocket.cht/customers.'
-            event: respond
-            type: block
+# Do you have banks as clients?
+  - name: portfolio-6
+    expect:
+      - Banks as clients
+      - Work with banks
+      - Example of banks on the platform
+      - Services for banks
+    answer:
+      - Yes, we are very proud to have clients in the financial market.
+      - Our product is extremely safe and customizable. Did you know we work with White Labeling?
+      - 'You can get an idea of how banks and other financial companies use us here:  https://rocket.cht/customers.'
+    event: respond
+    type: block
 
 # Competitors
 # Qual a diferença de usar serviços similares?
@@ -500,77 +488,72 @@ interactions:
 # Support
 #
 # Prices for support
- - node:
-     name: support-1
-   expect:
-     - Support prices
-     - Cost prices
-     - Budget support
-     - Support value
-     - Financial estimate for support
-     - Pay for support
-     - Support amount
-     - Charge for support
-     - Taxes support
-   answer:
-     - We have different support alternatives because of the different types of companies and demand. To check the exact price send an e-mail to sales@rocket.chat.
-     - 'There are so many possibilities… We do not have a single price because every company has different demands. Let’s do this:  send an e-mail to sales@rocket.chat and you will get an answer soon.'
-     - 'Only my little human friends know the answer to that. Talk to them, I promise they are nice people: sales@rocket.chat'
-   event: respond
-   type: random
+  - name: support-1
+    expect:
+      - Support prices
+      - Cost prices
+      - Budget support
+      - Support value
+      - Financial estimate for support
+      - Pay for support
+      - Support amount
+      - Charge for support
+      - Taxes support
+    answer:
+      - We have different support alternatives because of the different types of companies and demand. To check the exact price send an e-mail to sales@rocket.chat.
+      - 'There are so many possibilities… We do not have a single price because every company has different demands. Let’s do this:  send an e-mail to sales@rocket.chat and you will get an answer soon.'
+      - 'Only my little human friends know the answer to that. Talk to them, I promise they are nice people: sales@rocket.chat'
+    event: respond
+    type: random
 
 # I found a Bug. Where can I report it?
- - node:
-     name: support-2
-   expect:
-     - Report a bug
-     - Found a bug
-     - Found a problem
-     - Problems with a bug
-     - Identify bug
-   answer:
-     - Do you know Github? Our community talks about that on this platform.
-     - 'If you are not into this kind of platform, you can always find us on the demo version in either of these channels: #demo, #dev, or #general. We’ll answer in no time.'
-     - But you could also send an e-mail to support@rocket.chat
-   event: respond
-   type: block
+  - name: support-2
+    expect:
+      - Report a bug
+      - Found a bug
+      - Found a problem
+      - Problems with a bug
+      - Identify bug
+    answer:
+      - Do you know Github? Our community talks about that on this platform.
+      - 'If you are not into this kind of platform, you can always find us on the demo version in either of these channels: #demo, #dev, or #general. We’ll answer in no time.'
+      - But you could also send an e-mail to support@rocket.chat
+    event: respond
+    type: block
 
- # In what language is the support done?
- - node:
-     name: support-3
-   expect:
-     - Support language
-     - Communicate with support in what language
-     - Talk to support in what language
-     - What language support speaks
-   answer:
-     - It is done in Robot language, what else could it be? We dominate everything. Just kidding, it’s English.
-     - It is done basically in English. We still do not have any translated support versions but, if you have a problem to understand it, let us know and we’ll try our best to help!
-     - We chose English but if you need some help contact us at support@rocket.chat.
-   event: respond
-   type: random
+  # In what language is the support done?
+  - name: support-3
+    expect:
+      - Support language
+      - Communicate with support in what language
+      - Talk to support in what language
+      - What language support speaks
+    answer:
+      - It is done in Robot language, what else could it be? We dominate everything. Just kidding, it’s English.
+      - It is done basically in English. We still do not have any translated support versions but, if you have a problem to understand it, let us know and we’ll try our best to help!
+      - We chose English but if you need some help contact us at support@rocket.chat.
+    event: respond
+    type: random
 
- # Is support provided for final users and organizations equally?
- - node:
-     name: support-4
-   expect:
+  # Is support provided for final users and organizations equally?
+  - name: support-4
+    expect:
      - Support to whom
      - Provide support to whom
      - To whom applies the support
      - Companies support
      - Organizations support
      - Support to whom
-   answer:
+    answer:
      - We have some free and some paid support versions.
      - In case your demand fits the paid version, some people inside your organization is responsible for contacting the support sector.
      - Talk to us at support@rocket.chat and we’ll be able to help you.
-   event: respond
-   type: block
+    event: respond
+    type: block
 
- # How to contact support?
- - node:
-     name: support-5
-   expect:
+  # How to contact support?
+  - name: support-5
+    expect:
      - Contact support
      - Talk to support
      - Inform support
@@ -579,32 +562,30 @@ interactions:
      - Support’s e-mail
      - Find support
      - Report to support
-   answer:
+    answer:
      - 'You’ll only need to send an e-mail to  support@rocket.chat or find us on either of these channels on the demo version: #support, #dev, or #general :)'
      - 'Close your eyes, count backwards from 20, jump three times (still with your eyes closed), and when you open them say hi to us on either of these channels on the demo version: #support, #dev, or #general '
      - These guys are super-heroes; they’ll do anything! Tell them I advised you to talk to them. They will love it!  support@rocket.chat
-   event: respond
-   type: random
+    event: respond
+    type: random
 
- # What is the average response time?
- - node:
-     name: support-6
-   expect:
+  # What is the average response time?
+  - name: support-6
+    expect:
      - Average response time from support
      - Wait for support’s response
      - Wait for support’s answer
      - When will support answer me
-   answer:
+    answer:
      - That depends on several factors. If you contact us directly, we’ll try do be as quick as possible.
      - 'If it is a free support version, the answer might take a while since we have a priority sequence depending on the clients’ demand. Check if your demand is already not here: https://github.com/rocketchat.'
      - If it is a demand that fits the paid versions, we’ll get to you according to what has been priorly decided.
-   event: respond
-   type: block
+    event: respond
+    type: block
 
- # What is included on the support?
- - node:
-     name: support-7
-   expect:
+  # What is included on the support?
+  - name: support-7
+    expect:
      - How does support work
      - What is in the support
      - Included on the support
@@ -615,19 +596,18 @@ interactions:
      - Distinguishing features of the support
      - Support for video conferences
      - Support for audio conferences
-   answer:
+    answer:
      - We work with different support options.
      - There is consulting, customization, 24/7 service…
      - You can get all the details on our webpage https://rocket.chat/support.
-   event: respond
-   type: block
+    event: respond
+    type: block
 
- # Hosting
- #
- # Hosting prices
- - node:
-     name: hosting-1
-   expect:
+  # Hosting
+  #
+  # Hosting prices
+  - name: hosting-1
+    expect:
      - Hosting cost
      - Hosting prices
      - Price variation hosting
@@ -636,16 +616,15 @@ interactions:
      - Financial estimate hosting
      - Charge for hosting
      - Taxes hosting
-   answer:
+    answer:
      - 'We charge for hosting your platform on our cloud. You can see our Hosting prices at https://rocket.chat/hosting.'
      - There are multiple services related to our hosting, you can get all about that on the link posted above.
-   event: respond
-   type: block
+    event: respond
+    type: block
 
- # What does the hosting include?
- - node:
-     name: hosting-2
-   expect:
+  # What does the hosting include?
+  - name: hosting-2
+    expect:
      - Hosting include
      - What does the hosting provides
      - What does the hosting have
@@ -654,18 +633,16 @@ interactions:
      - What is the hosting used for
      - Hosting features
      - Hosting functionalities
-   answer:
+    answer:
      - 'All the information about hosting has been published here: https://rocket.chat/hosting'
      - 'Hosting is a way of keeping your info safe on the cloud, providing you with a flexible alternative of accessing your data wherever you go. Rocket.chat offers their cloud for users to store information about their company there. Check it out here: https://rocket.chat/hosting'
      - 'Cloud hosting is all love <3 All you’ll ever need, wherever you go. Check it out here: https://rocket.chat/hosting.'
+    event: respond
+    type: random
 
-   event: respond
-   type: random
-
- # Is it possible to add more memory to the hosting?
- - node:
-     name: hosting-3
-   expect:
+  # Is it possible to add more memory to the hosting?
+  - name: hosting-3
+    expect:
      - Hosting memory
      - Add memory to the hosting
      - More hosting memory
@@ -676,64 +653,60 @@ interactions:
      - How does hosting storage work
      - Hosting storage capacity
      - What’s the hosting capacity
-   answer:
+    answer:
      - Yes, it is possible. If you’d like to know more about that send an e-mail to cloud@rocket.chat.
-   event: respond
-   Type: block
+    event: respond
+    Type: block
 
- # How can I contact a support representative for the hosting?
- - node:
-     name: hosting-4
-   expect:
-     - Hosting support
-     - Help with hosting
-     - Doubts about hosting
-     - Problems with hosting
-     - Hosting support representative
-     - Hosting representative
-     - Hosting contact
-     - Server problems
-   answer:
-     - If you are still not using our hosting, you can get answers to all your doubts at sales@rocket.chat
-     - 'If you are already using it, contact this e-mail: support@rocket.chat'
-   event: respond
-   type: block
+  # How can I contact a support representative for the hosting?
+  - name: hosting-4
+    expect:
+      - Hosting support
+      - Help with hosting
+      - Doubts about hosting
+      - Problems with hosting
+      - Hosting support representative
+      - Hosting representative
+      - Hosting contact
+      - Server problems
+    answer:
+      - If you are still not using our hosting, you can get answers to all your doubts at sales@rocket.chat
+      - 'If you are already using it, contact this e-mail: support@rocket.chat'
+    event: respond
+    type: block
 
- # What are hosting partners?
- - node:
-     name: hosting-5
-   expect:
+  # What are hosting partners?
+  - name: hosting-5
+    expect:
      - What are hosting partners
      - Meaning of hosting partners
      - What are hosting partner for
      - Hosting partner purpose
      - What do hosting partners apply to
-   answer:
+    answer:
      - They are partners who offer the Hosting service but with price and characteristics different than ours.
      - 'Are you interested? Find one here: https://rocket.chat/partners'
-   event: respond
-   Type: block
+    event: respond
+    Type: block
 
- # Can I host for free?
- - node:
-     name: hosting-6
-   expect:
+  # Can I host for free?
+  - name: hosting-6
+    expect:
      - Own host
      - Private host
      - Create a personal host
      - Single host
-   answer:
+    answer:
      - You can host on your own service without having to pay anything or you can host with us and take advantage of all our cloud benefits :)
      - 'You can get all the details here: https://rocket.chat/hosting'
-   event: respond
-   Type: block
+    event: respond
+    Type: block
 
-# Development of Funcionallities #
-#
-# How much do you charge for developing new functionalities? #
- - node:
-     name: desenvolvimento-1
-   expect:
+  # Development of Funcionallities #
+  #
+  # How much do you charge for developing new functionalities? #
+  - name: desenvolvimento-1
+    expect:
      - Price for new functionalities
      - New functionalities cost
      - Charge for new functionalities
@@ -742,19 +715,18 @@ interactions:
      - New functionalities value
      - New functionalities taxes
      - Amount for new functionalities
-   answer:
+    answer:
      - 'You can get all the info with these guys right here: sales@rocket.chat.'
      - 'It depends on your demand. Talk to these guys and they will be able to help you: sales@rocket.chat.'
      - 'It is hard to say… We’ll have to check with my super-human friends! Send an e-mail to sales@rocket.chat and they will reply to you soon.'
-   event: respond
-   type: random
+    event: respond
+    type: random
 
-# + Data Import  +
+  # + Data Import  +
 
-# Can data be recovered from other applications such as Slack? How does that work?
- - node:
-     name: data-1
-   expect:
+  # Can data be recovered from other applications such as Slack? How does that work?
+  - name: data-1
+    expect:
      - Recover data
      - Import data from other applications
      - How does data import work
@@ -766,652 +738,613 @@ interactions:
      - Control over the imported data
      - Types of imported data
      - Data compatibility
-   answer:
+    answer:
     - We are currently able to import data from some platforms like Slack and Hipchat. We are, however, open to expand these options. You only need  to send a message to support@rocket.chat.
     - 'For more information on how to do this on Hipchat access: https://rocket.chat/docs/administrator-guides/import/hipchat/enterprise/'
     - 'On Slack:  https://rocket.chat/docs/administrator-guides/import/slack/.'
-   event: respond
-   type: block
+    event: respond
+    type: block
 
-# Do you charge for data importation?
- - node:
-     name: data-2
-   expect:
+  # Do you charge for data importation?
+  - name: data-2
+    expect:
      - Price for data importation
      - Pay to import data
      - How much is it to import data
      - Charge to transfer data
-   answer:
-   - We have some importation systems developed for applications such as Slack, Hipchat, and CSV. Depending on your need to expand these options and if you need this functionality with urgency, contact support@rocket.chat to check for the prices.
-   - If the application you are looking to import from is Slack, Hipchat, or CSV, we have a free solution :) We’ll only be charging if the importation service is still not ready. Talk with support@rocket.chat or more information.
-   event: respond
-   type: random
+    answer:
+    - We have some importation systems developed for applications such as Slack, Hipchat, and CSV. Depending on your need to expand these options and if you need this functionality with urgency, contact support@rocket.chat to check for the prices.
+    - If the application you are looking to import from is Slack, Hipchat, or CSV, we have a free solution :) We’ll only be charging if the importation service is still not ready. Talk with support@rocket.chat or more information.
+    event: respond
+    type: random
 
-# Is the data importation limited?
- - node:
-     name: data-3
-   expect:
+  # Is the data importation limited?
+  - name: data-3
+    expect:
      - Limit of data to import
      - Maximum data to import
      - How much data can I import
-   answer:
-   - We do not have an importation limit :)  Relax, if we have already developed an importation method for your platform everything you have there will be transferred.
-   - We have no limits haha In other words, no importation limits.
-   - Keep calm, everything we’ll be imported, no importation limits.
-   event: respond
-   type: random
+    answer:
+    - We do not have an importation limit :)  Relax, if we have already developed an importation method for your platform everything you have there will be transferred.
+    - We have no limits haha In other words, no importation limits.
+    - Keep calm, everything we’ll be imported, no importation limits.
+    event: respond
+    type: random
 
-# In which cloud will the imported data be stored?
- - node:
-     name: data-4
-   expect:
+  # In which cloud will the imported data be stored?
+  - name: data-4
+    expect:
      - Store imported data where
      - Cloud where imported data will be stored in
      - Where will the imported data be in
      - Space occupied by the new imported data
-   answer:
-   - The data imported can be stored either in the company’s server or in our Google Cloud, allowing you to access your data wherever you go.
-   - 'You can get more information about the subject in this link: https://rocket.chat/products.'
-   event: respond
-   type: block
+    answer:
+    - The data imported can be stored either in the company’s server or in our Google Cloud, allowing you to access your data wherever you go.
+    - 'You can get more information about the subject in this link: https://rocket.chat/products.'
+    event: respond
+    type: block
 
-# Is something not going to be imported?
- - node:
-     name: data-5
-   expect:
+  # Is something not going to be imported?
+  - name: data-5
+    expect:
      - Limitation to the data import
      - Type of data that will be imported
      - What will not be imported during the data importation
      - What will no be transferred during the data importation
-   answer:
+    answer:
      - You choose:) You can import whatever you like. When you begin the importation process, you will be able to choose what you want to import.
      - You can choose how you want to import. You can choose to import everything or leave something out.
      - We import all of it! You can choose what you do not want to import though
-   event: respond
-   type: random
+    event: respond
+    type: random
 
-   # + Integrations +
+    # + Integrations +
 
-# Is there an integration limit?
- - node:
-     name: integration-1
-   expect:
+  # Is there an integration limit?
+  - name: integration-1
+    expect:
      - Maximum integration
-     - Integration limit
-     - How many integrations
-   answer:
-     - We do not recommend putting way too many integrations since it might make the system slower, but we do not have limit when it comes to integrations
-     - The sky's the limit :)
-     - We do not have a limit on the number of integrations, but we do not recommend doing many integrations in order to avoid making the system slower.
-   event: respond
-   type: random
+      - Integration limit
+      - How many integrations
+    answer:
+      - We do not recommend putting way too many integrations since it might make the system slower, but we do not have limit when it comes to integrations
+      - The sky's the limit :)
+      - We do not have a limit on the number of integrations, but we do not recommend doing many integrations in order to avoid making the system slower.
+    event: respond
+    type: random
 
-# # Which are the kinds of integrations you have?
- - node:
-     name: integration-2
-   expect:
-     - What are the integrations
-     - Types of integrations
-     - List of integrations
-     - Integrate with whom
-     - Integrate other applications
-   answer:
-     - 'There are just so many… You can see all of them here: https://rocket.chat/integrations.'
-     - 'Everyday we work on creating new integrations. Take a look here: https://rocket.chat/integrations.'
-   event: respond
-   type: random
+  # # Which are the kinds of integrations you have?
+  - name: integration-2
+    expect:
+      - What are the integrations
+      - Types of integrations
+      - List of integrations
+      - Integrate with whom
+      - Integrate other applications
+    answer:
+      - 'There are just so many… You can see all of them here: https://rocket.chat/integrations.'
+      - 'Everyday we work on creating new integrations. Take a look here: https://rocket.chat/integrations.'
+    event: respond
+    type: random
 
-# Is API necessary for integrations?
- - node:
-     name: integration-3
-   expect:
-     - API for integrations
-     - Need API
-     - API necessary
-     - Integrate API
-   answer:
-     - Depends on the integration, if you’d like to know more about that send an e-mail to support@rocket.chat.
-   event: respond
-   type: random
+  # Is API necessary for integrations?
+  - name: integration-3
+    expect:
+      - API for integrations
+      - Need API
+      - API necessary
+      - Integrate API
+    answer:
+      - Depends on the integration, if you’d like to know more about that send an e-mail to support@rocket.chat.
+    event: respond
+    type: random
 
-# How do I do an integration?
- - node:
-     name: integration-4
-   expect:
-     - How is an integration done
-     - About integration
-     - What do I need to make an integration
-     - What is an integration
-     - How to integrate
-   answer:
-     - 'The integrations allow for a greater connection between our platform and other applications. We offer a vast number of integrations, you can check all of them here: https://rocket.chat/integrations.'
-     - Here you’ll be able to see the integrations we currently have. If  you are looking for one that doesn’t show up there, let me know! rocket.chat/integrations
-   event: respond
-   type: random
+  # How do I do an integration?
+  - name: integration-4
+    expect:
+      - How is an integration done
+      - About integration
+      - What do I need to make an integration
+      - What is an integration
+      - How to integrate
+    answer:
+      - 'The integrations allow for a greater connection between our platform and other applications. We offer a vast number of integrations, you can check all of them here: https://rocket.chat/integrations.'
+      - Here you’ll be able to see the integrations we currently have. If  you are looking for one that doesn’t show up there, let me know! rocket.chat/integrations
+    event: respond
+    type: random
 
 # Product
 # Prices
 #
 # How much does it cost?
-- node:
-    name: price-1
-  expect:
-    - What is the cost
-    - What is the price
-    - How much is charged
-    - Pricing chart
-    - Charge for the service
-    - Pricing of the product
-    - Pay to use
-    - Paid version
-    - Payment methods
-  answer:
-    - 'Rocket.Chat is free :) We charge, however, for customization, support, and hosting services, which vary in price according to the demand. You can get all the information here: https://rocket.chat/products.'
-    - 'The platform is free! However, in case you need customization, support, or hosting services, that will be charged. You can check our services here https://rocket.chat/products and our hosting system here https://rocket.chat/hosting. If you would like to know more about pricing you can contact these guys sales@rocket.chat.'
-  event: respond
-  type: random
+  - name: price-1
+    expect:
+      - What is the cost
+      - What is the price
+      - How much is charged
+      - Pricing chart
+      - Charge for the service
+      - Pricing of the product
+      - Pay to use
+      - Paid version
+      - Payment methods
+    answer:
+      - 'Rocket.Chat is free :) We charge, however, for customization, support, and hosting services, which vary in price according to the demand. You can get all the information here: https://rocket.chat/products.'
+      - 'The platform is free! However, in case you need customization, support, or hosting services, that will be charged. You can check our services here https://rocket.chat/products and our hosting system here https://rocket.chat/hosting. If you would like to know more about pricing you can contact these guys sales@rocket.chat.'
+    event: respond
+    type: random
 
-# Do you give any discounts?
-- node:
-    name: price-2
-  expect:
-    - Discount for  non-profit organiztions
-    - Get discount
-    - Discount for the educational sector
-    - Discount for educational institutions
-    - Covenants for the educational sector
-    - Is there discount
-    - Promotional codes
-    - Can you give me a discount
-  answer:
-    - We charge for extra services such as support, customization, and hosting. All prices relating to these services are negotiated with sales@rocket.chat according to the demand of the company.
-    - If you are a non-profit institution or work on the educational sector, we might have some discounts to help you make use of our platform in the best way possible.
-    - If this is your case, also contact sales@rocket.chat.
-  event: respond
-  type: block
+  # Do you give any discounts?
+  - name: price-2
+    expect:
+      - Discount for  non-profit organiztions
+      - Get discount
+      - Discount for the educational sector
+      - Discount for educational institutions
+      - Covenants for the educational sector
+      - Is there discount
+      - Promotional codes
+      - Can you give me a discount
+    answer:
+      - We charge for extra services such as support, customization, and hosting. All prices relating to these services are negotiated with sales@rocket.chat according to the demand of the company.
+      - If you are a non-profit institution or work on the educational sector, we might have some discounts to help you make use of our platform in the best way possible.
+      - If this is your case, also contact sales@rocket.chat.
+    event: respond
+    type: block
 
-# Do I have to pay for deactivated users?
-- node:
-    name: price-3
-  expect:
-    - deactivated users Payment
-    - do i need to pay for deactivated users
-    - deactivated users
-    - cancelled users
-    - excluding users
-    - removing users
-    - Charge deactivated users
-    - Charge for users
-  answer:
-    - We do not charge for the use of Rocket.Chat’s platform.
-    - So after you buy a pack, you can add users inside the limits of your pack however you want to.
-  event: respond
-  type: block
+  # Do I have to pay for deactivated users?
+  - name: price-3
+    expect:
+      - deactivated users Payment
+      - do i need to pay for deactivated users
+      - deactivated users
+      - cancelled users
+      - excluding users
+      - removing users
+      - Charge deactivated users
+      - Charge for users
+    answer:
+      - We do not charge for the use of Rocket.Chat’s platform.
+      - So after you buy a pack, you can add users inside the limits of your pack however you want to.
+    event: respond
+    type: block
 
-# Features
-#
-# Will there be new features?
-- node:
-    name: features-1
-  expect:
-    - New features
-    - New functionalities
-    - Date for new features
-    - More features
-    - Update features
-  answer:
-    - 'Yes! Every time a new feature is added to the platform we post it here:  https://github.com/rocketchat'
-    - 'Are you looking for something specific? Take a look at https://github.com/RocketChat and make sure the feature is not there already :)'
-  event: respond
-  type: random
+  # Features
+  #
+  # Will there be new features?
+  - name: features-1
+    expect:
+      - New features
+      - New functionalities
+      - Date for new features
+      - More features
+      - Update features
+    answer:
+      - 'Yes! Every time a new feature is added to the platform we post it here:  https://github.com/rocketchat'
+      - 'Are you looking for something specific? Take a look at https://github.com/RocketChat and make sure the feature is not there already :)'
+    event: respond
+    type: random
 
-# What are the current available features on the app?
-- node:
-    name: features-2
-  expect:
-    - App features
-    - What is in the app
-    - Available features for the app
-    - App functionalities
-    - Features on the mobile platform
-    - Document with the features
-    - Available features
-    - Feature summary
-    - What features are there in rocket.chat
-  answer:
-    - Good you asked!
-    - We are very proud of our product.
-    - 'You can find all Rocket.chat features on the following link: https://rocket.chat/features'
-  event: respond
-  type: block
+  # What are the current available features on the app?
+  - name: features-2
+    expect:
+      - App features
+      - What is in the app
+      - Available features for the app
+      - App functionalities
+      - Features on the mobile platform
+      - Document with the features
+      - Available features
+      - Feature summary
+      - What features are there in rocket.chat
+    answer:
+      - Good you asked!
+      - We are very proud of our product.
+      - 'You can find all Rocket.chat features on the following link: https://rocket.chat/features'
+    event: respond
+    type: block
 
-# Can I have exclusive features?
-- node:
-    name: features-3
-  expect:
-    - Exclusive features
-    - Want exclusive features
-    - Develop exclusive features
-    - Develop personalized feature
-    - Suggest features
-    - Develop features
-    - Pay for features
-    - Create features
-    - ask for exclusive features
-    - can i suggest an exclusive feature
-  answer:
-    - 'We are constantly developing new features. Take a look at this  Github’s link (https://github.com/rocketchat) e check if what your are seeking for isn’t already in development.'
-    - If it is not, there is the possibility of investing and developing the new feature :)
-    - Send an e-mail to sales@rocket.chat and they will be able to help you with that.
-  event: respond
-  type: block
+  # Can I have exclusive features?
+  - name: features-3
+    expect:
+      - Exclusive features
+      - Want exclusive features
+      - Develop exclusive features
+      - Develop personalized feature
+      - Suggest features
+      - Develop features
+      - Pay for features
+      - Create features
+      - ask for exclusive features
+      - can i suggest an exclusive feature
+    answer:
+      - 'We are constantly developing new features. Take a look at this  Github’s link (https://github.com/rocketchat) e check if what your are seeking for isn’t already in development.'
+      - If it is not, there is the possibility of investing and developing the new feature :)
+      - Send an e-mail to sales@rocket.chat and they will be able to help you with that.
+    event: respond
+    type: block
 
-# What are native applications?
-- node:
-    name: features-4
-  expect:
-    - Meaning of native application
-    - Explain native application
-    - What is native application
-    - Did not understand what native application is
-  answer:
-    - Native applications, as the name says, is an application with no alterations to run the Android or the iOS platform.
-    - We have this option :)
-  event: respond
-  type: block
+  # What are native applications?
+  - name: features-4
+    expect:
+      - Meaning of native application
+      - Explain native application
+      - What is native application
+      - Did not understand what native application is
+    answer:
+      - Native applications, as the name says, is an application with no alterations to run the Android or the iOS platform.
+      - We have this option :)
+    event: respond
+    type: block
 
-# OpenSource #
-#
-# What is open sourcing? #
-- node:
-    name: opensource-1
-  expect:
-    - Meaning of open source
-    - What is open sourcing
-    - Explain open source
-    - Summary of open source
-    - How does open sourcing work
-    - Tell me about open sourcing
-  answer:
-    - Open sourcing means that the code is public. Rocket.chat is open source, which in other words, means that all the process and code (including me right here) is available at GitHub.
-    - We believe that all the knowledge and functioning of our product should be shared.
-  event: respond
-  type: block
+  # OpenSource #
+  #
+  # What is open sourcing? #
+  - name: opensource-1
+    expect:
+      - Meaning of open source
+      - What is open sourcing
+      - Explain open source
+      - Summary of open source
+      - How does open sourcing work
+      - Tell me about open sourcing
+    answer:
+      - Open sourcing means that the code is public. Rocket.chat is open source, which in other words, means that all the process and code (including me right here) is available at GitHub.
+      - We believe that all the knowledge and functioning of our product should be shared.
+    event: respond
+    type: block
 
-# What are the benefits of using the open sourcing system?
-- node:
-    name: opensource-2
-  expect:
-    - Open sourcing benefits
-    - What does open sourcing does
-    - Gain with open sourcing
-    - Distinguishing features of open sourcing
-    - Differential of open sourcing
-  answer:
-    - There are so many benefits of using an open source platform… Students and professionals from all over the  world become contributors to the development of our code.
-    - The main benefit is the opportunity to be customizable, being dynamic, and being under constant innovation. This allows for a better product when compared to that of our competitors :)
-    - 'You can find the complete list of benefits on our blog: https://rocket.chat/blog.'
-  event: respond
-  type: block
+  # What are the benefits of using the open sourcing system?
+  - name: opensource-2
+    expect:
+      - Open sourcing benefits
+      - What does open sourcing does
+      - Gain with open sourcing
+      - Distinguishing features of open sourcing
+      - Differential of open sourcing
+    answer:
+      - There are so many benefits of using an open source platform… Students and professionals from all over the  world become contributors to the development of our code.
+      - The main benefit is the opportunity to be customizable, being dynamic, and being under constant innovation. This allows for a better product when compared to that of our competitors :)
+      - 'You can find the complete list of benefits on our blog: https://rocket.chat/blog.'
+    event: respond
+    type: block
 
-# How can I contribute?
-- node:
-    name: opensource-3
-  expect:
-    - Contribute to open sourcing
-    - Help the open sourcing
-    - My role on open sourcing
-    - Develop the open source software
-  answer:
-    - 'You can access Github’s webpage (https://github.com/rocketchat) and help develop our code :)'
-    - 'You can develop our code at  Github’s webpage (https://github.com/rocketchat)'
-    - 'We have an  webpage at Github (https://github.com/rocketchat) with all the details. That’s where everyone gets together to develop.'
-  event: respond
-  type: random
+  # How can I contribute?
+  - name: opensource-3
+    expect:
+      - Contribute to open sourcing
+      - Help the open sourcing
+      - My role on open sourcing
+      - Develop the open source software
+    answer:
+      - 'You can access Github’s webpage (https://github.com/rocketchat) and help develop our code :)'
+      - 'You can develop our code at  Github’s webpage (https://github.com/rocketchat)'
+      - 'We have an  webpage at Github (https://github.com/rocketchat) with all the details. That’s where everyone gets together to develop.'
+    event: respond
+    type: random
 
-# What is the size of the developer community?
-- node:
-    name: opensource-4
-  expect:
-    - Size of the  developer community
-    - Number of people on the platform
-    - Size of the platform
-    - Number of users at the platform
-    - Amount of users at the platform
-    - How many contributors
-    - How many platform developers
-    - Community size
-  answer:
-    -  We are in constant expansion!
-    - It’s hard to tell the size of our community because we’re constantly receiving new users and developers.
-    - We have, however, more than 500 people involved with the development and more than 1500 created servers.
-  event: respond
-  type: block
+  # What is the size of the developer community?
+  - name: opensource-4
+    expect:
+      - Size of the  developer community
+      - Number of people on the platform
+      - Size of the platform
+      - Number of users at the platform
+      - Amount of users at the platform
+      - How many contributors
+      - How many platform developers
+      - Community size
+    answer:
+      -  We are in constant expansion!
+      - It’s hard to tell the size of our community because we’re constantly receiving new users and developers.
+      - We have, however, more than 500 people involved with the development and more than 1500 created servers.
+    event: respond
+    type: block
 
-# + Products +
-# What is the main product?
-- node:
-    name: product-1
-  expect:
-    - What is the product
-    - Main product
-    - Which is the product
-    - What is the service
-    - Explain the product
-    - Purpose of the product
-    - What is the product for
-    - Related products and services
-    - Informations about the product
-    - Summary about the product
-    - Why was the product developed
-  answer:
-    -  We offer a completely open source (public code) communication platform. Besides the Chat and Live Chat free tools, we offer multiple support, maintenance, and platform customization services.
-    - It is as though we were a flexible and updated alternative to Slack. We currently possess the largest and most active contributor community between our competitors.
-    - You can check all the detail about the product here (https://rocket.chat/products).
-  event: respond
-  type: block
+  # + Products +
+  # What is the main product?
+  - name: product-1
+    expect:
+      - What is the product
+      - Main product
+      - Which is the product
+      - What is the service
+      - Explain the product
+      - Purpose of the product
+      - What is the product for
+      - Related products and services
+      - Informations about the product
+      - Summary about the product
+      - Why was the product developed
+    answer:
+      -  We offer a completely open source (public code) communication platform. Besides the Chat and Live Chat free tools, we offer multiple support, maintenance, and platform customization services.
+      - It is as though we were a flexible and updated alternative to Slack. We currently possess the largest and most active contributor community between our competitors.
+      - You can check all the detail about the product here (https://rocket.chat/products).
+    event: respond
+    type: block
 
-# What should I do if I encounter problems with the product?
-- node:
-    name: product-2
-  expect:
-    - Problems with the product
-    - Doubts about the product
-    - Help with the product
-    - Support for the product
-    - Encounter problems with the product
-    - Need help to solve a problem
-  answer:
-    - If you have any problem, talk to us! support@rocket.chat
-    - Easy peasy, if you got any problems or difficulties while using the platform, tell us! support@rocket.chat
-    - You can take a look at our  FAQ (https://rocket.chat/support)  or talk to us  at support@rocket.chat
-  event: respond
-  type: random
+  # What should I do if I encounter problems with the product?
+  - name: product-2
+    expect:
+      - Problems with the product
+      - Doubts about the product
+      - Help with the product
+      - Support for the product
+      - Encounter problems with the product
+      - Need help to solve a problem
+    answer:
+      - If you have any problem, talk to us! support@rocket.chat
+      - Easy peasy, if you got any problems or difficulties while using the platform, tell us! support@rocket.chat
+      - You can take a look at our  FAQ (https://rocket.chat/support)  or talk to us  at support@rocket.chat
+    event: respond
+    type: random
 
-# How installing Rocket.Chat will benefit me?
-- node:
-    name: product-3
-  expect:
-    - Distinguishing features of the product
-    - Differential product
-    - Benefits of Rocket.Chat
-    - Pros of Rocket.Chat
-    - Why use Rocket.Chat
-    - Benefits of open source
-    - What open source gives me
-    - How can the product increase my sales
-  answer:
-    -  Because it is open source, Rocket.Chat is a tool in constant development, allowing the product to be continually upgraded.
-    - Besides providing teams with a very effective real time communication channel, it enables a greater interaction with clients since it does not have a user limit, has conversation between companies and has  the LiveChat resource integrated to the platform.
-    - Because it is a platform that possesses multiple integrations and works on different contexts, we allow you to access your chats wherever you go :)
-    - Oh and we are free as well <3
-    - You can read our clients’ reports here (https://rocket.chat/customers) and greater explanations about the product in this webpage (https://rocket.chat/).
-  event: respond
-  type: block
+  # How installing Rocket.Chat will benefit me?
+  - name: product-3
+    expect:
+      - Distinguishing features of the product
+      - Differential product
+      - Benefits of Rocket.Chat
+      - Pros of Rocket.Chat
+      - Why use Rocket.Chat
+      - Benefits of open source
+      - What open source gives me
+      - How can the product increase my sales
+    answer:
+      -  Because it is open source, Rocket.Chat is a tool in constant development, allowing the product to be continually upgraded.
+      - Besides providing teams with a very effective real time communication channel, it enables a greater interaction with clients since it does not have a user limit, has conversation between companies and has  the LiveChat resource integrated to the platform.
+      - Because it is a platform that possesses multiple integrations and works on different contexts, we allow you to access your chats wherever you go :)
+      - Oh and we are free as well <3
+      - You can read our clients’ reports here (https://rocket.chat/customers) and greater explanations about the product in this webpage (https://rocket.chat/).
+    event: respond
+    type: block
 
-#  Is connection to the internet necessary to use the product?
-- node:
-    name: product-4
-  expect:
-    - Connect to the internet
-    - Offline use
-    - Internet necessary
-    - Internet essential
-    - Internet crucial
-    - Connect to network
-  answer:
-    - To access remotely, internet connection is needed.
-    - However, you don’t need to have internet if you download the platform to your own local network and have the users registered.
-  event: respond
-  type: block
+  #  Is connection to the internet necessary to use the product?
+  - name: product-4
+    expect:
+      - Connect to the internet
+      - Offline use
+      - Internet necessary
+      - Internet essential
+      - Internet crucial
+      - Connect to network
+    answer:
+      - To access remotely, internet connection is needed.
+      - However, you don’t need to have internet if you download the platform to your own local network and have the users registered.
+    event: respond
+    type: block
 
-# Will the free trail end?
-- node:
-    name: product-5
-  expect:
-    - Free trial limit
-    - Duration of the free trial
-    - Maximum free trial period period
-    - End to free trial
-    - Free trial extension
-  answer:
-    - Everything that is good ends, right? So… the Hosting free trial is limited. But since our product is special, the platform will be eternally free!
-    - The platform will keep being free, but the demo version has a finite trial period.
-  event: respond
-  type: random
+  # Will the free trail end?
+  - name: product-5
+    expect:
+      - Free trial limit
+      - Duration of the free trial
+      - Maximum free trial period period
+      - End to free trial
+      - Free trial extension
+    answer:
+      - Everything that is good ends, right? So… the Hosting free trial is limited. But since our product is special, the platform will be eternally free!
+      - The platform will keep being free, but the demo version has a finite trial period.
+    event: respond
+    type: random
 
-# Does Rocket.Chat support external users?
-- node:
-    name: product-6
-  expect:
-    - External users
-    - Support to external users
-    - Chat outsiders
-    - Necessary to have an account
-  answer:
-    - Who decides if external user will be added or not is the administrator!
-    - Inside every server, the administrator can choose who he’ll add or remove :)
-  event: respond
-  type: random
+  # Does Rocket.Chat support external users?
+  - name: product-6
+    expect:
+      - External users
+      - Support to external users
+      - Chat outsiders
+      - Necessary to have an account
+    answer:
+      - Who decides if external user will be added or not is the administrator!
+      - Inside every server, the administrator can choose who he’ll add or remove :)
+    event: respond
+    type: random
 
-# Can I access the product’s code?
-- node:
-    name: product-7
-  expect:
-    - Access code
-    - Program the product
-    - Find code
-    - Look at the code
+  # Can I access the product’s code?
+  - name: product-7
+    expect:
+      - Access code
+      - Program the product
+      - Find code
+      - Look at the code
 
-  answer:
-    - 'Our code is available in here: https://github.com/rocketchat'
-    - 'Our platform is completely open source, everything is available here: https://github.com/rocketchat'
-  event: respond
-  type: random
+    answer:
+      - 'Our code is available in here: https://github.com/rocketchat'
+      - 'Our platform is completely open source, everything is available here: https://github.com/rocketchat'
+    event: respond
+    type: random
 
-# What is the number of users the platform supports?
-- node:
-    name: product-8
-  expect:
-    - User limit
-    - Maximum number of users
-    - How many user does rocket.chat support
-    - User number restriction
-    - What is the maximum user limit
-  answer:
-    - Unlimited <3
-    - Everyone fits in here! We have no limits when it comes to users, channels, guests, messages, etc.
-    - Wow, don’t worry about that, everyone fits in here.
-  event: respond
-  type: random
+  # What is the number of users the platform supports?
+  - name: product-8
+    expect:
+      - User limit
+      - Maximum number of users
+      - How many user does rocket.chat support
+      - User number restriction
+      - What is the maximum user limit
+    answer:
+      - Unlimited <3
+      - Everyone fits in here! We have no limits when it comes to users, channels, guests, messages, etc.
+      - Wow, don’t worry about that, everyone fits in here.
+    event: respond
+    type: random
 
-# Who can administer the payment?
-- node:
-    name: product-9
-  expect:
-    - Who pays Rocket.Chat
-    - Who administers the account
-    - Who pays for the services
-    - Who pays for the hosting
-    - Who does the payment
-    - How to pay Rocket.Chat
-    - Can i pay Rocket.Chat
-  answer:
-    - We charge for services and hosting. Every company that enrolls with this type of service selects some people to be responsible for this area. Who administers the payment depends on every company.
-    - We are free, but every company can choose whether they would like to use our paid services and then select people who will be working with our developers. They payment, however, depends on the company and on how it wishes to organize itself. We don’t mind if it’s the CFO or the intern who will be administering the payment.
-  event: respond
-  type: random
+  # Who can administer the payment?
+  - name: product-9
+    expect:
+      - Who pays Rocket.Chat
+      - Who administers the account
+      - Who pays for the services
+      - Who pays for the hosting
+      - Who does the payment
+      - How to pay Rocket.Chat
+      - Can i pay Rocket.Chat
+    answer:
+      - We charge for services and hosting. Every company that enrolls with this type of service selects some people to be responsible for this area. Who administers the payment depends on every company.
+      - We are free, but every company can choose whether they would like to use our paid services and then select people who will be working with our developers. They payment, however, depends on the company and on how it wishes to organize itself. We don’t mind if it’s the CFO or the intern who will be administering the payment.
+    event: respond
+    type: random
 
-# What are the payment methods?
-- node:
-    name: product-10
-  expect:
-    - How to pay for the services/hosting
-    - How to perform payment
-    - How do I pay for the services/hosting
-    - Payment methods
-  answer:
-    - Well, we accept everything hehe Tranfers, deposits, banking billets, etc.
-    - You can pay in multiple ways! Click on Hosting and the options will show up!
-  event: respond
-  type: random
+  # What are the payment methods?
+  - name: product-10
+    expect:
+      - How to pay for the services/hosting
+      - How to perform payment
+      - How do I pay for the services/hosting
+      - Payment methods
+    answer:
+      - Well, we accept everything hehe Tranfers, deposits, banking billets, etc.
+      - You can pay in multiple ways! Click on Hosting and the options will show up!
+    event: respond
+    type: random
 
-# What is the difference between Demo and Hosting and download?
-- node:
-    name: product-11
-  expect:
-    - Difference between demo and hosting
-    - Demo versus hosting
-    - Download compared to demo
-    - What is demo and hosting
-  answer:
-    - The platform users have three options but each one with different goals.
-    - The demo version will always exist and work independently from the other options. It is used to test the chat, talk with developers and people from all over the world.
-    - When an organization or team decides to use the platform, it can either download it on its own server or use our hosting service on the cloud.
-  event: respond
-  type: block
+  # What is the difference between Demo and Hosting and download?
+  - name: product-11
+    expect:
+      - Difference between demo and hosting
+      - Demo versus hosting
+      - Download compared to demo
+      - What is demo and hosting
+    answer:
+      - The platform users have three options but each one with different goals.
+      - The demo version will always exist and work independently from the other options. It is used to test the chat, talk with developers and people from all over the world.
+      - When an organization or team decides to use the platform, it can either download it on its own server or use our hosting service on the cloud.
+    event: respond
+    type: block
 
-# What is the difference between downloading and paying for the hosting?
-- node:
-    name: product-12
-  expect:
-    - Difference between download and pay for hosting
-    - Downloading versus paying for hosting
-    - Donwload compared to paying for the hosting
-    - Explain download and pay for the hosting
-  answer:
-    -  Both of them go together :)
-    - When a company decides to use Rocket.Chat it’ll need to host the platform somewhere. By downloading you can either integrate the platform to your own server or download it on your device. After that you’ll have to use the link of the server your are using to work :)
-    - 'You can check all the information about this difference at https://rocket.chat/hosting'
-  event: respond
-  type: random
+  # What is the difference between downloading and paying for the hosting?
+  - name: product-12
+    expect:
+      - Difference between download and pay for hosting
+      - Downloading versus paying for hosting
+      - Donwload compared to paying for the hosting
+      - Explain download and pay for the hosting
+    answer:
+      -  Both of them go together :)
+      - When a company decides to use Rocket.Chat it’ll need to host the platform somewhere. By downloading you can either integrate the platform to your own server or download it on your device. After that you’ll have to use the link of the server your are using to work :)
+      - 'You can check all the information about this difference at https://rocket.chat/hosting'
+    event: respond
+    type: random
 
-# What is the difference between using my own server and paying for the Rocket.chat’s  cloud server?
-- node:
-    name: product-13
-  expect:
-    - Difference between own server and paying for server
-    - What is hosting
-    - Why pay for hosting
-    - Why pay for the cloud
-    - What are the benefits of using the cloud
-    - Own hosting versus paying for hosting at Rocket.chat’s cloud
-    - Why pay for hosting
-  answer:
-    - 'The platform can be hosted on your own server or you could use our on cloud server and enjoy our support services! You can get all the information about that here:  https://rocket.chat/hosting'
-    - 'I’ve also had this doubt! There are many differences between hosting and download. Take a look at this article because it explains all that carefully: https://rocket.chat/hosting'
-  event: respond
-  type: random
+  # What is the difference between using my own server and paying for the Rocket.chat’s  cloud server?
+  - name: product-13
+    expect:
+      - Difference between own server and paying for server
+      - What is hosting
+      - Why pay for hosting
+      - Why pay for the cloud
+      - What are the benefits of using the cloud
+      - Own hosting versus paying for hosting at Rocket.chat’s cloud
+      - Why pay for hosting
+    answer:
+      - 'The platform can be hosted on your own server or you could use our on cloud server and enjoy our support services! You can get all the information about that here:  https://rocket.chat/hosting'
+      - 'I’ve also had this doubt! There are many differences between hosting and download. Take a look at this article because it explains all that carefully: https://rocket.chat/hosting'
+    event: respond
+    type: random
 
-# How do I use the Demo version?
-- node:
-    name: product-14
-  expect:
-    -  Use demo
-    - How to use demo
-    - What to do with demo
-    - Using demo
-    - Why is it called demo
-    - Name demo
-    - Meaning of demo
-    - Explain demo
-  answer:
-    -  You’ll only have to insert your e-mail and start using! The demo version is Rocket.chat’s open version so that people from all over the world can talk and test the platform.
-    - Its is a version created with the aim of testing Rocket.Chat, a demonstration. No administrators.
-  event: respond
-  type: random
+  # How do I use the Demo version?
+  - name: product-14
+    expect:
+      -  Use demo
+      - How to use demo
+      - What to do with demo
+      - Using demo
+      - Why is it called demo
+      - Name demo
+      - Meaning of demo
+      - Explain demo
+    answer:
+      -  You’ll only have to insert your e-mail and start using! The demo version is Rocket.chat’s open version so that people from all over the world can talk and test the platform.
+      - Its is a version created with the aim of testing Rocket.Chat, a demonstration. No administrators.
+    event: respond
+    type: random
 
-# After downloading, how do I use it?
-- node:
-    name: product-15
-  expect:
-    - How to use after download
-    - After the download
-    - Usage after download
-    - Accessing after download
-    - What should I do after downloading
-    - How do I access after downloading
-  answer:
-    - 'After the download you’ll only have to log into your organization’s server. Example: https://company.rocket.chat . In case you still haven’t been assigned a server to your company, you can host your server on our cloud or on your own.'
-    - 'The difference between these two processes is in here:  https://rocket.chat/hosting.'
-  event: respond
-  type: block
+  # After downloading, how do I use it?
+  - name: product-15
+    expect:
+      - How to use after download
+      - After the download
+      - Usage after download
+      - Accessing after download
+      - What should I do after downloading
+      - How do I access after downloading
+    answer:
+      - 'After the download you’ll only have to log into your organization’s server. Example: https://company.rocket.chat . In case you still haven’t been assigned a server to your company, you can host your server on our cloud or on your own.'
+      - 'The difference between these two processes is in here:  https://rocket.chat/hosting.'
+    event: respond
+    type: block
 
-# Can I use the demo version with my friends?
-- node:
-    name: product-16
-  expect:
-    - Demo with friends
-    - Using demo with friends
-    - Demo applied for friends’ use
-    - Demo’s use with friends
-  answer:
-    -  Yes! You can use the demo version with whoever you want.
-    - Yes, you can.
-    - Yep, the demo version is open to everyone.
-  event: respond
-  type: random
+  # Can I use the demo version with my friends?
+  - name: product-16
+    expect:
+      - Demo with friends
+      - Using demo with friends
+      - Demo applied for friends’ use
+      - Demo’s use with friends
+    answer:
+      -  Yes! You can use the demo version with whoever you want.
+      - Yes, you can.
+      - Yep, the demo version is open to everyone.
+    event: respond
+    type: random
 
-#  Can I use the demo version within my company?
-- node:
-    name: product-17
-  expect:
-    - Demo at company
-    - Demo for business
-    - Demo for clients
-    - Demo for organizations
-    - Using demo at companies
-    - Integrate demo to companies
-  answer:
-    - The demo version is open, in other words, users can’t administer  the content and nor other users using this version. The best would be for the company to download o use our Hosting where we take care of everything.
-    - Well, our version is open, in other words,  users can create channels and communicate however they want to, but the best would be for a company to download on a server or use it directly from our server  and we’ll take care of everything.
-  event: respond
-  type: random
+  #  Can I use the demo version within my company?
+  - name: product-17
+    expect:
+      - Demo at company
+      - Demo for business
+      - Demo for clients
+      - Demo for organizations
+      - Using demo at companies
+      - Integrate demo to companies
+    answer:
+      - The demo version is open, in other words, users can’t administer  the content and nor other users using this version. The best would be for the company to download o use our Hosting where we take care of everything.
+      - Well, our version is open, in other words,  users can create channels and communicate however they want to, but the best would be for a company to download on a server or use it directly from our server  and we’ll take care of everything.
+    event: respond
+    type: random
 
-# Is there a demo version for Livechat?
-- node:
-    name: product-18
-  expect:
-    - Demo livechat
-    - Is there demo for livechat
-    - Using livechat demo
-    - Exists demo for livechat
-  answer:
-    - The demo is me right here hehe The live chat is free. You can authorize its usage if you are the platform’s administrator on the download or hosting version and connect it to your own website.
-    - Is there a demo better than me? xD The LiveChat is free. If you are your server’s administrator, you can authorize it usage and connect it to your website.
-  event: respond
-  type: random
+  # Is there a demo version for Livechat?
+  - name: product-18
+    expect:
+      - Demo livechat
+      - Is there demo for livechat
+      - Using livechat demo
+      - Exists demo for livechat
+    answer:
+      - The demo is me right here hehe The live chat is free. You can authorize its usage if you are the platform’s administrator on the download or hosting version and connect it to your own website.
+      - Is there a demo better than me? xD The LiveChat is free. If you are your server’s administrator, you can authorize it usage and connect it to your website.
+    event: respond
+    type: random
 
-# How can I contribute to Demo?
-- node:
-    name: product-19
-  expect:
-    - Contribute to demo
-    - Add to demo
-    - Help demo
-    - Foment demo
-    - Accelerate demo
-    - Develop demo
-    - Code for demo
-  answer:
-    - 'You can contribute to our product whenever you want to! Give us some ideas at  https://github.com/Rocket.Chat'
-    - I’d be extremely happy if you contributed and became part of our community :)
-  event: respond
-  type: block
+  # How can I contribute to Demo?
+  - name: product-19
+    expect:
+      - Contribute to demo
+      - Add to demo
+      - Help demo
+      - Foment demo
+      - Accelerate demo
+      - Develop demo
+      - Code for demo
+    answer:
+      - 'You can contribute to our product whenever you want to! Give us some ideas at  https://github.com/Rocket.Chat'
+      - I’d be extremely happy if you contributed and became part of our community :)
+    event: respond
+    type: block
 
-# Can I modify the demo version’s layout/theme?
-- node:
-    name: product-20
-  expect:
-    - Alter demo’s theme and layout
-    - Modify demo’s layout and theme
-    - Personalize demo’s theme and layout
-    - Customize demo’s theme and layout
-  answer:
-    - You can’t do that :( This is a version open to people from all over the world. You’d have to be the platform’s administrator to do that.
-    - I’m sorry, there’s no way of doing that on the demo version because you do not administer this server. If you download our server or use our hosting, however, we have a customization service.
-  event: respond
-  type: random
+  # Can I modify the demo version’s layout/theme?
+  - name: product-20
+    expect:
+      - Alter demo’s theme and layout
+      - Modify demo’s layout and theme
+      - Personalize demo’s theme and layout
+      - Customize demo’s theme and layout
+    answer:
+      - You can’t do that :( This is a version open to people from all over the world. You’d have to be the platform’s administrator to do that.
+      - I’m sorry, there’s no way of doing that on the demo version because you do not administer this server. If you download our server or use our hosting, however, we have a customization service.
+    event: respond
+    type: random
 
   # + Download +
   # Is the download restricted? If yes, to whom?
