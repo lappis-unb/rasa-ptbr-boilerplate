@@ -12,13 +12,18 @@ interactions:
 
   - name: configure-debug
     expect:
-      - "!configure debug-mode"
-      - "/set debug-mode"
-      - "let debug-mode"
-      - "turn debug-mode"
-      - "make debug-mode"
+      - "configure debug-"
+      - "set debug-"
+      - "let debug-"
+      - "turn debug-"
+      - "make debug-"
+      - "var debug-"
     answer:
-      - debug-mode changed to $value!
+      - $key changed to $value!
+      - Got it! Now $key is $value
+      - Sure thing! $key is set to $value
+      - blip blip =] $key equals $value
+      - $key = $value -> https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif
     context: clear
     event: configure
     type: random

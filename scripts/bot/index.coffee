@@ -100,8 +100,18 @@ isDebugMode = (res) ->
   key = 'configure_debug-mode_'+res.envelope.room+'_'+res.envelope.user.id
   return (res.robot.brain.get(key) == 'true')
 
+getDebugCount = (res) ->
+  key = 'configure_debug-count_'+res.envelope.room+'_'+res.envelope.user.id
+
+  return if res.robot.brain.get(key) then res.robot.brain.get(key) - 1 else false
+
 buildClassificationDebugMsg = (res, classifications) ->
   list = ''
+  debugCount = getDebugCount(res)
+
+  if debugCount
+    classifications = classifications[0..debugCount]
+
   for classification, i in classifications
     list = list.concat 'Label: ' + classification.label + ' Score: ' + classification.value + '\n'
 
@@ -171,7 +181,7 @@ module.exports = (_config, robot) ->
 
     classifications = currentClassifier.getClassifications(msg)
 
-    console.log 'classifications ->', classifications
+    console.log 'classifications ->', classifications[0..4]
 
     if debugMode
       newMsg = buildClassificationDebugMsg(res, classifications)
@@ -217,7 +227,7 @@ module.exports = (_config, robot) ->
     currentNode.process.call @, res, msg, subClassifications
 
   robot.hear /(.+)/i, (res) ->
-    console.log(res)
+    # console.log(res)
     #console.log(res.answer)
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
     msg = res.match[0].replace res.robot.name+' ', ''

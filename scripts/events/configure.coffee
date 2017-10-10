@@ -9,14 +9,16 @@ class configure
   process: (msg) =>
     if @interaction.roleRequired?
         #TODO: Check if user has role needed
-        console.log('ROLE REQUIRED...', @interaction.roleRequired)
+        console.log('ROLE REQUIRED:', @interaction.roleRequired)
 
-    configurationBlock = msg.answer.text.replace('HubotNatural ', '').split('!configure ')[1]
+#    console.log msg
+    configurationBlock = msg.message.text.replace(msg.robot.name + ' ', '').split(' ')[-1..].toString()
+    console.log configurationBlock
     configKeyValue = configurationBlock.split('=')
     configKey = configKeyValue[0]
     configValue = configKeyValue[1]
 
-    console.log('WANTS To CONFIGURE...', configKeyValue)
+    console.log('WANTS To CONFIGURE: ', configKeyValue)
     key = 'configure_'+configKey+'_'+msg.envelope.room+'_'+msg.envelope.user.id
     msg.robot.brain.set(key, configValue)
 
@@ -24,11 +26,11 @@ class configure
     switch type
       when 'block'
         messages = @interaction.answer.map (line) ->
-          return msgVariables line, msg, {value: configValue}
+          return msgVariables line, msg, {key:configKey, value: configValue}
         msg.sendWithNaturalDelay messages
       when 'random'
         message = stringElseRandomKey @interaction.answer
-        message = msgVariables message, msg, {value: configValue}
+        message = msgVariables message, msg, {key:configKey, value: configValue}
         msg.sendWithNaturalDelay message
 
 module.exports = configure
