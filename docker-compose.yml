@@ -1,18 +1,69 @@
 version: '2'
 
 services:
-  hubot-natural:
-    image: diegodorgam/hubot-natural:alpine
+  rocketchat:
+    image: rocketchat/rocket.chat:latest
+    restart: unless-stopped
+    volumes:
+      - ./uploads:/app/uploads
     environment:
-      ROCKETCHAT_URL: 'https://demo.rocket.chat'
-      HUBOT_ADAPTER: rocketchat
-      HUBOT_NAME: 'Cat Bot'
-      HUBOT_DESCRIPTION: 'Processamento de linguagem natural com hubot'
-      ROCKETCHAT_ROOM: j8pjQdHtZR5JnGF2S
-      RESPOND_TO_DM: 'true'
-      RESPOND_TO_LIVECHAT: 'true'
-      ROCKETCHAT_USER: catbot
-      ROCKETCHAT_PASSWORD: '@cat!bot'
-      ROCKETCHAT_AUTH: password
-      HUBOT_LOG_LEVEL: debug
-      HUBOT_CORPUS: 'rocket.yml'
+      - PORT=3000
+      - ROOT_URL=http://localhost:3000
+      - MONGO_URL=mongodb://mongo:27017/rocketchat
+      - MONGO_OPLOG_URL=mongodb://mongo:27017/local
+      - MAIL_URL=smtp://smtp.email
+#       - HTTP_PROXY=http://proxy.domain.com
+#       - HTTPS_PROXY=http://proxy.domain.com
+    depends_on:
+      - mongo
+    ports:
+      - 3000:3000
+    labels:
+      - "traefik.backend=rocketchat"
+      - "traefik.frontend.rule=Host: your.domain.tld"
+
+  mongo:
+    image: mongo:3.2
+    restart: unless-stopped
+    volumes:
+     - ./data/db:/data/db
+     #- ./data/dump:/dump
+    command: mongod --smallfiles --oplogSize 128 --replSet rs0
+    labels:
+      - "traefik.enable=false"
+
+  # this container's job is just run the command to initialize the replica set.
+  # it will run the command and remove himself (it will not stay running)
+  mongo-init-replica:
+    image: mongo:3.2
+    command: 'mongo mongo/rocketchat --eval "rs.initiate({ _id: ''rs0'', members: [ { _id: 0, host: ''localhost:27017'' } ]})"'
+    depends_on:
+      - mongo
+
+  hubot-natural:
+    # image: diegodorgam/hubot-natural:alpine
+    build: .
+    restart: unless-stopped
+    environment:
+      - HUBOT_ADAPTER=rocketchat
+      - HUBOT_NAME='Hubot Natural'
+      - HUBOT_OWNER=RocketChat
+      - HUBOT_DESCRIPTION='Hubot natural language processing'
+      - HUBOT_LOG_LEVEL=debug
+      - HUBOT_CORPUS=corpus.yml
+      - HUBOT_LANG=pt
+      - RESPOND_TO_DM=true
+      - RESPOND_TO_LIVECHAT=true
+      - RESPOND_TO_EDITED=true
+      - LISTEN_ON_ALL_PUBLIC=false
+      - ROCKETCHAT_AUTH=password
+      - ROCKETCHAT_URL=rocketchat:3000
+      - ROCKETCHAT_ROOM=GENERAL
+      - ROCKETCHAT_USER=botnat
+      - ROCKETCHAT_PASSWORD=botnatpass
+    volumes:
+      - ./scripts:/home/hubotnat/bot/scripts
+    depends_on:
+      - rocketchat
+    ports:
+      - 3001:8080
