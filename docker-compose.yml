@@ -1,18 +1,45 @@
 version: '2'
 
 services:
-  hubot-natural:
-    image: diegodorgam/hubot-natural:alpine
+  mongo:
+    image: mongo
+    volumes:
+    - ./chat/data/db:/data/db
+    - ./chat/data/dump:/dump
+    tty: true
+    command:
+    - mongod
+    - --smallfiles
+    - --oplogSize
+    - '128'
+
+  rocketchat:
+    image: rocketchat/rocket.chat:latest
+    links:
+      - mongo
     environment:
-      ROCKETCHAT_URL: 'https://demo.rocket.chat'
+      MONGO_URL: 'mongodb://mongo:27017/rocketchat'
+      PORT: '3000'
+      ROOT_URL: 'http://localhost:3000'
+    volumes:
+      - ./chat/uploads:/app/uploads
+    ports:
+      - '3000:3000'
+
+  hubot-natural:
+    image: diegodorgam/hubot-natural:latest
+    links:
+      - rocketchat
+    environment:
+      ROCKETCHAT_URL: 'http://rocketchat:3000'
       HUBOT_ADAPTER: rocketchat
-      HUBOT_NAME: 'Cat Bot'
+      HUBOT_NAME: 'CatBot'
       HUBOT_DESCRIPTION: 'Processamento de linguagem natural com hubot'
-      ROCKETCHAT_ROOM: j8pjQdHtZR5JnGF2S
+      ROCKETCHAT_ROOM: GENERAL
       RESPOND_TO_DM: 'true'
       RESPOND_TO_LIVECHAT: 'true'
       ROCKETCHAT_USER: catbot
-      ROCKETCHAT_PASSWORD: '@cat!bot'
+      ROCKETCHAT_PASSWORD: 'catbotpass'
       ROCKETCHAT_AUTH: password
       HUBOT_LOG_LEVEL: debug
-      HUBOT_CORPUS: 'rocket.yml'
+      HUBOT_CORPUS: 'rocket-small.yml'

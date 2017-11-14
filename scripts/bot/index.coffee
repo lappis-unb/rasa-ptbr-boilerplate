@@ -2,6 +2,7 @@ fs = require 'fs'
 path = require 'path'
 natural = require 'natural'
 lang = (process.env.HUBOT_LANG || 'en')
+
 if lang == "en"
   PorterStemmer = require path.join '..','..','node_modules','natural','lib','natural','stemmers','porter_stemmer.js'
 else
@@ -45,6 +46,35 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
       typing @, false
       cb?()
   , delay
+
+
+getUserRoles = (userid) ->
+  robot.adapter.chatdriver.callMethod('getUserRoles').then (users) ->
+    robot.logger.debug 'gUR Users: ' + JSON.stringify(users)
+    users.forEach (user) ->
+      user.roles.forEach (role) ->
+        if typeof usersAndRoles[role] == 'undefined'
+          usersAndRoles[role] = []
+        usersAndRoles[role].push user.username
+        return
+      return
+    robot.logger.info 'gUR Users and Roles loaded: ' + JSON.stringify(usersAndRoles)
+    return
+  return
+
+checkRole = (role, uname) ->
+  robot.logger.debug 'cR uname: ' + uname
+  robot.logger.debug 'cR role: ' + role
+  if typeof usersAndRoles[role] != 'undefined'
+    if usersAndRoles[role].indexOf(uname) == -1
+      robot.logger.debug 'cR role: ' + role
+      robot.logger.debug 'cR indexOf: ' + usersAndRoles[role].indexOf(uname)
+      false
+    else
+      true
+  else
+    robot.logger.info 'Role ' + role + ' não encontrado'
+    false
 
 # check these
 livechatTransferHuman = (res) ->
@@ -97,12 +127,11 @@ getContext = (res) ->
   return res.robot.brain.get(key)
 
 isDebugMode = (res) ->
-  key = 'configure_debug-mode_'+res.envelope.room+'_'+res.envelope.user.id
+  key = 'configure_debug-mode_'+res.envelope.room
   return (res.robot.brain.get(key) == 'true')
 
 getDebugCount = (res) ->
-  key = 'configure_debug-count_'+res.envelope.room+'_'+res.envelope.user.id
-
+  key = 'configure_debug-count_'+res.envelope.room
   return if res.robot.brain.get(key) then res.robot.brain.get(key) - 1 else false
 
 buildClassificationDebugMsg = (res, classifications) ->
@@ -150,7 +179,6 @@ module.exports = (_config, robot) ->
   console.log 'Processing interactions'
   console.time 'Processing interactions (Done)'
   classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
-  #console.log(config.interactions)
   for interaction in config.interactions
     {name, classifiers, event} = interaction
     nodes[name] = new events[event] interaction
@@ -168,7 +196,6 @@ module.exports = (_config, robot) ->
     trust = config.trust
     interaction = undefined
     debugMode = isDebugMode(res)
-
     console.log 'context ->', context
 
     if context
@@ -226,9 +253,8 @@ module.exports = (_config, robot) ->
     currentNode = nodes[node_name or error_node_name]
     currentNode.process.call @, res, msg, subClassifications
 
+# Listener Callback
   robot.hear /(.+)/i, (res) ->
-    # console.log(res)
-    #console.log(res.answer)
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
     msg = res.match[0].replace res.robot.name+' ', ''
     msg = msg.replace(/^\s+/, '')
@@ -237,34 +263,6 @@ module.exports = (_config, robot) ->
     if res.envelope.user.roomType in ['c','p']
       if (res.message.text.match new RegExp('\\b' + res.robot.name + '\\b', 'i')) or (res.message.text.match new RegExp('\\b' + res.robot.alias + '\\b', 'i'))
         processMessage res, msg
+        # TODO: Add engaged user conversation recognition
     else if res.envelope.user.roomType in ['d','l']
       processMessage res, msg
-
-# TODO
-# make a function for checking roles
-# const usersAndRoles = {};
-#
-# module.exports = function (robot) {
-#     robot.adapter.chatdriver.callMethod('getUserRoles').then(function (users) {
-#         users.forEach(function (user) {
-#             user.roles.forEach(function (role) {
-#                 if (typeof (usersAndRoles[role]) === 'undefined') {
-#                     usersAndRoles[role] = [];
-#                 }
-#
-#                 usersAndRoles[role].push(user.username);
-#             });
-#         });
-#     });
-#
-#     robot.respond(/test/i, function (res) {
-#         console.log(res);
-#
-#         if (usersAndRoles.admin.indexOf(res.message.user.name) === -1) {
-#             res.reply('What...?');
-#         } else {
-#             res.reply('hello boss!');
-#         }
-#
-#     });
-# }

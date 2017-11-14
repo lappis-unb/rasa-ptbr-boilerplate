@@ -10,3 +10,4 @@ Procfile
 train.js
 env.sh
 brill.js
+chat/

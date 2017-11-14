@@ -13,13 +13,14 @@ class configure
 
 #    console.log msg
     configurationBlock = msg.message.text.replace(msg.robot.name + ' ', '').split(' ')[-1..].toString()
-    console.log configurationBlock
+#    console.log configurationBlock
     configKeyValue = configurationBlock.split('=')
     configKey = configKeyValue[0]
     configValue = configKeyValue[1]
 
-    console.log('WANTS To CONFIGURE: ', configKeyValue)
-    key = 'configure_'+configKey+'_'+msg.envelope.room+'_'+msg.envelope.user.id
+    console.log('Setting config ', configKeyValue)
+    key = 'configure_'+configKey+'_'+msg.envelope.room
+#    key = 'configure_'+configKey+'_'+msg.envelope.room+'_'+msg.envelope.user.id
     msg.robot.brain.set(key, configValue)
 
     type = @interaction.type?.toLowerCase() or 'random'
