@@ -1,11 +1,14 @@
 fs = require 'fs'
 path = require 'path'
 natural = require 'natural'
+
 lang = (process.env.HUBOT_LANG || 'en')
 if lang == "en"
   PorterStemmer = require path.join '..','..','node_modules','natural','lib','natural','stemmers','porter_stemmer.js'
 else
   PorterStemmer = require path.join '..','..','node_modules','natural','lib','natural','stemmers','porter_stemmer_' + lang + '.js'
+
+debug_mode = ((process.env.HUBOT_NATURAL_DEBUG_MODE == 'true') || false)
 
 config = {}
 events = {}
@@ -13,7 +16,7 @@ nodes = {}
 error_count = 0
 err_nodes = 0
 
-{regexEscape} = require path.join '..', 'lib', 'common.coffee'
+{regexEscape, loadConfigfile} = require path.join '..', 'lib', 'common.coffee'
 
 eventsPath = path.join __dirname, '..', 'events'
 for event in fs.readdirSync(eventsPath).sort()
@@ -138,8 +141,10 @@ clearErrors = (res) ->
   key = 'errors_'+res.envelope.room+'_'+res.envelope.user.id
   res.robot.brain.set(key, 0)
 
-module.exports = (_config, robot) ->
+module.exports = (_config, _configPath, robot) ->
   config = _config
+  configPath = _configPath
+
   if not config.interactions?.length
     robot.logger.warning 'No interactions configured.'
     return
@@ -147,20 +152,30 @@ module.exports = (_config, robot) ->
     robot.logger.warning 'No trust level configured.'
     return
 
-  console.log 'Processing interactions'
-  console.time 'Processing interactions (Done)'
   classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
-  #console.log(config.interactions)
-  for interaction in config.interactions
-    {name, classifiers, event} = interaction
-    nodes[name] = new events[event] interaction
-    # count error nodes
-    if name.substr(0,5) == "error"
-      err_nodes++
-    if interaction.level != 'context'
-      classifyInteraction interaction, classifier
-  classifier.train()
-  console.timeEnd 'Processing interactions (Done)'
+
+  trainBot = (retrain = false) ->
+    console.log 'Processing interactions'
+    console.time 'Processing interactions (Done)'
+
+    if retrain
+        nodes = {}
+        classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
+
+    for interaction in config.interactions
+      {name, classifiers, event} = interaction
+      nodes[name] = new events[event] interaction
+      # count error nodes
+      if name.substr(0,5) == "error"
+        err_nodes++
+      if interaction.level != 'context'
+        classifyInteraction interaction, classifier
+
+    classifier.train()
+
+    console.timeEnd 'Processing interactions (Done)'
+
+  trainBot()
 
   processMessage = (res, msg) ->
     context = getContext(res)
@@ -226,9 +241,12 @@ module.exports = (_config, robot) ->
     currentNode = nodes[node_name or error_node_name]
     currentNode.process.call @, res, msg, subClassifications
 
+  if debug_mode
+    robot.respond /bottrain/i, (res) ->
+      config = loadConfigfile(configPath)
+      trainBot(true)
+
   robot.hear /(.+)/i, (res) ->
-    # console.log(res)
-    #console.log(res.answer)
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
     msg = res.match[0].replace res.robot.name+' ', ''
     msg = msg.replace(/^\s+/, '')

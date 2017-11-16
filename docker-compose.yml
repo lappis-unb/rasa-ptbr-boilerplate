@@ -61,6 +61,7 @@ services:
       - ROCKETCHAT_ROOM=GENERAL
       - ROCKETCHAT_USER=botnat
       - ROCKETCHAT_PASSWORD=botnatpass
+      - HUBOT_NATURAL_DEBUG_MODE=true
     volumes:
       - ./scripts:/home/hubotnat/bot/scripts
       - ./training_data:/home/hubotnat/bot/training_data

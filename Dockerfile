@@ -17,7 +17,8 @@ ENV HUBOT_LANG='pt'                                                  \
     RESPOND_TO_DM=true                                               \
     RESPOND_TO_LIVECHAT=true                                         \
     RESPOND_TO_EDITED=true                                           \
-    LISTEN_ON_ALL_PUBLIC=false
+    LISTEN_ON_ALL_PUBLIC=false                                       \
+    HUBOT_NATURAL_DEBUG_MODE=false
 
 RUN apk --update add --no-cache git python make g++ && \
     addgroup -S hubotnat && adduser -S -g hubotnat hubotnat
