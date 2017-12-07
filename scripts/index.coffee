@@ -1,21 +1,18 @@
-fs = require 'fs'
-yaml = require 'js-yaml'
 path = require 'path'
+
+{loadConfigfile} = require path.join path.join __dirname, 'lib', 'common.coffee'
 chatbot = require path.join __dirname, 'bot', 'index.coffee'
 
 hubotPath = module.parent.filename
 hubotPath = path.dirname hubotPath for [1..4]
 corpus = (process.env.HUBOT_CORPUS || 'corpus.yml')
-console.log(corpus)
-configPath = path.join hubotPath, 'scripts', 'config', corpus
+configPath = path.join hubotPath, 'training_data', corpus
 
 try
-  config = yaml.safeLoad fs.readFileSync configPath, 'utf8'
+  config = loadConfigfile configPath
 catch err
-  console.error "An error occurred while trying to load bot's config."
-  console.error err
   process.exit()
 
-chatbot = chatbot.bind null, config
+chatbot = chatbot.bind null, config, configPath
 
 module.exports = chatbot

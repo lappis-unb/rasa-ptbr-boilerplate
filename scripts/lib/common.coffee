@@ -1,3 +1,6 @@
+fs = require 'fs'
+yaml = require 'js-yaml'
+
 common = {}
 
 common.applyVariable = (string, variable, value, regexFlags = 'i') ->
@@ -20,5 +23,14 @@ common.stringElseRandomKey = (variable) ->
 common.regexEscape = (string) ->
   #http://stackoverflow.com/a/6969486
   string.replace /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"
+
+common.loadConfigfile = (filepath) ->
+    try
+      console.log("Loading corpus: " + filepath)
+      return yaml.safeLoad fs.readFileSync filepath, 'utf8'
+    catch err
+      console.error "An error occurred while trying to load bot's config."
+      console.error err
+      throw "Error on loading YAML file " + filepath
 
 module.exports = common
