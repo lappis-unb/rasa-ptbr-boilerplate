@@ -18,9 +18,9 @@ services:
       - mongo
     ports:
       - 3000:3000
-    labels:
-      - "traefik.backend=rocketchat"
-      - "traefik.frontend.rule=Host: your.domain.tld"
+    # labels:
+    #   - "traefik.backend=rocketchat"
+    #   - "traefik.frontend.rule=Host: your.domain.tld"
 
   mongo:
     image: mongo:3.2
@@ -29,8 +29,8 @@ services:
      - ./data/db:/data/db
      #- ./data/dump:/dump
     command: mongod --smallfiles --oplogSize 128 --replSet rs0
-    labels:
-      - "traefik.enable=false"
+    # labels:
+    #   - "traefik.enable=false"
 
   # this container's job is just run the command to initialize the replica set.
   # it will run the command and remove himself (it will not stay running)
@@ -41,7 +41,7 @@ services:
       - mongo
 
   hubot-natural:
-    # image: diegodorgam/hubot-natural:alpine
+    # image: diegodorgam/hubot-natural:latest
     build: .
     restart: unless-stopped
     environment:

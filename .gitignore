@@ -123,3 +123,7 @@ Session.vim
 tags
 
 # End of https://www.gitignore.io/api/vim,node,macos,linux
+# Hubot files
+.editorconfig
+.hubot_history
+bin/
