@@ -127,3 +127,4 @@ tags
 .editorconfig
 .hubot_history
 bin/
+chat/
