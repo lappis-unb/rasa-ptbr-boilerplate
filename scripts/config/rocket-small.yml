@@ -169,19 +169,18 @@ interactions:
 #
 # # Segurança #
 #
-# # Como funciona a segurança das mensagens?
-#   - node:
-#       name: seguranca-1
-#     expect:
-#       - Segurança das mensagens
-#       - Seguranca do chat
-#       - Métodos de seguranca
-#       - Chat é protegido
-#     answer:
-#       - Todas as mensagens que forem escritas no chat normal poderão ser visualizadas pelos administradores. Mas se você quiser utilizar o chat criptografado, precisará apenas iniciar uma conversa off-the-record.
-#       - Para isso você vai precisar clicar no símbolo de uma chave na parte direita da tela do chat que fala OTR (off-the-record)
-#     event: respond
-#     type: block
+# Como funciona a segurança das mensagens?
+  - name: seguranca-1
+    expect:
+      - Segurança das mensagens
+      - Seguranca do chat
+      - Métodos de seguranca
+      - Chat é protegido
+    answer:
+      - Todas as mensagens que forem escritas no chat normal poderão ser visualizadas pelos administradores. Mas se você quiser utilizar o chat criptografado, precisará apenas iniciar uma conversa off-the-record.
+      - Para isso você vai precisar clicar no símbolo de uma chave na parte direita da tela do chat que fala OTR (off-the-record)
+    event: respond
+    type: block
 #
 # # A versão Demo é segura?
 #   - node:
@@ -269,23 +268,22 @@ interactions:
 #   #   type: block
 #
 # #  Portfolio
-# # Quem são os clientes de vocês?
-#   - node:
-#       name: portfolio-1
-#     expect:
-#       - Quem são os clientes
-#       - Quem usa a plataforma
-#       - Lista de clientes
-#       - Empresas que usam o Rocket.Chat
-#       - Quem usa
-#       - Quem são os usuários do servico
-#     answer:
-#       - 'Que bom que você perguntou! Amamos nos exibir, dá uma olhada nos diversos estudos de caso aqui: http://rocket.chat/customers.'
-#       - 'Tem de tudo! Desde igrejas até bancos e empresas de tecnologia. Normalmente são empresas e/ou grupos que valorizam inovação, criatividade e agilidade.'
-#       - 'Quer saber se você se encaixa aqui? A resposta é sim! Olha que demais a nossa página de clientes, tem de tudo: http://rocket.chat/customers.'
-#       - 'Temos bastante clientes aqui, e normalmente eles tem uma coisa em comum: São amantes da tecnologia e querem o sucesso para seu ambiente e seus clientes.'
-#     event: respond
-#     type: random
+# Quem são os clientes de vocês?
+  - name: portfolio-1
+    expect:
+      - Quem são os clientes
+      - Quem usa a plataforma
+      - Lista de clientes
+      - Empresas que usam o Rocket.Chat
+      - Quem usa
+      - Quem são os usuários do servico
+    answer:
+      - 'Que bom que você perguntou! Amamos nos exibir, dá uma olhada nos diversos estudos de caso aqui: http://rocket.chat/customers.'
+      - 'Tem de tudo! Desde igrejas até bancos e empresas de tecnologia. Normalmente são empresas e/ou grupos que valorizam inovação, criatividade e agilidade.'
+      - 'Quer saber se você se encaixa aqui? A resposta é sim! Olha que demais a nossa página de clientes, tem de tudo: http://rocket.chat/customers.'
+      - 'Temos bastante clientes aqui, e normalmente eles tem uma coisa em comum: São amantes da tecnologia e querem o sucesso para seu ambiente e seus clientes.'
+    event: respond
+    type: random
 #
 # # Vocês tem estudos de Caso?
 #   - node:
@@ -363,27 +361,26 @@ interactions:
 #     type: block
 #
 # # Concorrentes
-# # Qual a diferença de usar serviços similares?
-#   - node:
-#       name: concorrentes-1
-#     expect:
-#       - Diferenca de usar Slack
-#       - Diferenca de usar HipChat
-#       - Diferenca de usar Mattermost
-#       - Diferenca de usar Gitter
-#       - Diferenca de usar Ryver
-#       - Diferenca de usar Riot
-#       - No que a Rocket é melhor
-#       - Diferenciais da Rocket
-#       - Vantagens da rocket em relação aos competidores
-#       - Rocket e competidores
-#       - Diferenca de outras ferramentas
-#     answer:
-#       - 'Vish, são tantas diferenças… Mas já sabia que você teria essa dúvida, por isso me adiantei e criei uma tabela comparando o nosso produto dos outros :) Olha aqui: https://rocket.chat/whatisthedifference.'
-#       - 'Não é óbvio? Eles não tem um bot tão legal quanto eu! rsrs. Olha aqui: https://rocket.chat/whatisthedifference.'
-#       - 'Nós somos muitos e estamos constantemente mudando conforme nossa comunidade quer. Criamos uma tabela comparativa aqui pra mostrar como fazemos: https://rocket.chat/whatisthedifference.'
-#     event: respond
-#     type: random
+# Qual a diferença de usar serviços similares?
+  - name: concorrentes-1
+    expect:
+      - Diferenca de usar Slack
+      - Diferenca de usar HipChat
+      - Diferenca de usar Mattermost
+      - Diferenca de usar Gitter
+      - Diferenca de usar Ryver
+      - Diferenca de usar Riot
+      - No que a Rocket é melhor
+      - Diferenciais da Rocket
+      - Vantagens da rocket em relação aos competidores
+      - Rocket e competidores
+      - Diferenca de outras ferramentas
+    answer:
+      - 'Vish, são tantas diferenças… Mas já sabia que você teria essa dúvida, por isso me adiantei e criei uma tabela comparando o nosso produto dos outros :) Olha aqui: https://rocket.chat/whatisthedifference.'
+      - 'Não é óbvio? Eles não tem um bot tão legal quanto eu! rsrs. Olha aqui: https://rocket.chat/whatisthedifference.'
+      - 'Nós somos muitos e estamos constantemente mudando conforme nossa comunidade quer. Criamos uma tabela comparativa aqui pra mostrar como fazemos: https://rocket.chat/whatisthedifference.'
+    event: respond
+    type: random
 #
 # #  Parcerias
 # #
@@ -1024,20 +1021,19 @@ interactions:
 #
 #  # OpenSource #
 #  #
-#  # O que é OpenSource #
-#   - node:
-#       name: opensource-1
-#     expect:
-#       - Significado opensource
-#       - O que é opensource
-#       - Explicar opensource
-#       - Resumo opensource
-#       - Como funciona opensource
-#     answer:
-#       - OpenSource significa código aberto, a Rocket.Chat é OpenSource, ou seja, todo o nosso código (inclusive euzinho aqui) está disponível no https://github.com/RocketChat.
-#       - Nós acreditamos que o conhecimento que produzimos desenvolvendo o Rocket.Chat fica melhor quando é compartilhado!
-#     event: respond
-#     type: block
+ # O que é OpenSource #
+  - name: opensource-1
+    expect:
+      - Significado opensource
+      - O que é opensource
+      - Explicar opensource
+      - Resumo opensource
+      - Como funciona opensource
+    answer:
+      - OpenSource significa código aberto, a Rocket.Chat é OpenSource, ou seja, todo o nosso código (inclusive euzinho aqui) está disponível no https://github.com/RocketChat.
+      - Nós acreditamos que o conhecimento que produzimos desenvolvendo o Rocket.Chat fica melhor quando é compartilhado!
+    event: respond
+    type: block
 #
 #   # Quais são os benefícios de usar opensource?
 #   - node:
@@ -1054,20 +1050,19 @@ interactions:
 #     event: respond
 #     type: block
 #
-#   # Como posso contribuir?
-#   - node:
-#       name: opensource-3
-#     expect:
-#       - Como posso contribuir
-#       - Contribuir com o Rocket.Chat
-#       - Participar do Rocket.Chat
-#       - Desenvolver o software opensource
-#     answer:
-#       - Você pode entrar na nossa página do Github e ajudar a desenvolver o nosso código :)
-#       - Você pode desenvolver nosso código na página do Github.
-#       - Temos uma página do Github com todos os detalhes, ali que a galera toda se reune para desenvolver.
-#     event: respond
-#     type: random
+  # Como posso contribuir?
+  - name: opensource-3
+    expect:
+      - Como posso contribuir
+      - Contribuir com o Rocket.Chat
+      - Participar do Rocket.Chat
+      - Desenvolver o software opensource
+    answer:
+      - Você pode entrar na nossa página do Github e ajudar a desenvolver o nosso código :)
+      - Você pode desenvolver nosso código na página do Github.
+      - Temos uma página do Github com todos os detalhes, ali que a galera toda se reune para desenvolver.
+    event: respond
+    type: random
 #
 #   # Qual o tamanho da comunidade de desenvolvedores?
 #   # - node:
