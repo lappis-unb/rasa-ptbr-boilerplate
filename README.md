@@ -1,8 +1,10 @@
-# Hubot Natural Language ChatBot
+# Hubot Natural
 
-Hubot is one of the most famous bot creating framework on the web, that's because github made it easy to create. If you can define your commands in a RegEx param, basically you can do anything with Hubot. That's a great contribution to ChatOps culture.
+## Natural Language ChatBot
 
-Inspired by that, we wanted to provide the same simplicity to our community to develop chatbots that can actually process natural language and execute tasks, as easy as building RegEx oriented Bots.
+Hubot is one of the most famous bot creating framework on the web, that's because github made it easy to create. If you can define your commands in a RegExp param, basically you can do anything with Hubot. That's a great contribution to ChatOps culture.
+
+Inspired by that, we wanted to provide the same simplicity to our community to develop chatbots that can actually process natural language and execute tasks, as easy as building RegExp oriented bots.
 
 So, we've found a really charming project to initiate from, the [Digital Ocean's Heartbot](https://github.com/digitalocean/heartbot) _a shot of love to for your favorite chat client_ =)
 
@@ -10,7 +12,7 @@ Based on Heartbot, we introduced some NLP power from [NaturalNode](https://githu
 
 And so, the _magic_ happens...
 
-Welcome to *HubotNatural*, a new an exiting chatbot framework based in Hubot and NaturalNode libs, with an simple and extensible architecture designed by Digital Ocean's HeartBot Team, made with love and care by Rocket.Chat Team.  
+Welcome to *HubotNatural*, a new an exciting chatbot framework based in Hubot and NaturalNode libs, with an simple and extensible architecture designed by Digital Ocean's HeartBot Team, made with love and care by Rocket.Chat Team.  
 
 We hope you enjoy the project and find some time to contribute.  
 
@@ -26,10 +28,10 @@ Event classes give the possibility to extend HubotNatural. By writing your own e
 
 The YAML file is loaded in `scripts/index.js`, parsed and passed to chatbot bind, which will be found in `scripts/bot/index.js`, the cortex of the bot, where all information flux and control are programmed.
 
-The YAML corpus is located in `scripts/config/corpus.yml` and it's basic structure looks like this:  
+The YAML corpus is located in `training_data/corpus.yml` and it's basic structure looks like this:  
 
 ```yaml
-trust: 0.7
+trust: .85
 interactions:
   - name: salutation
     expect:
@@ -44,7 +46,7 @@ interactions:
     type: block
 ```
 
-So to understand the syntax:
+What this syntax means:
 
 - `trust`: the minimum level of certain that must be returned by the classifier in order to run this interaction. Value is 0 to 1 (0% to 100%). If a classifier returns a value of certainty minor than `trust`, the bots responds with and error interaction node.  
 - `interactions`: An vector with lots of interaction nodes that will be parsed. Every interaction designed to your chatbot must be under an interaction.node object structure.
@@ -80,7 +82,7 @@ It's base constructor is the `@interaction` node so you can have access to all a
 
 #### Logistic Regression Classifier
 
-The NaturalNode library comes with two kinds of classifiers, the naive classifier known as the `BayesClassifier` and the `LogisticRegressionClassifier` functions. By default, HubotNatural uses the `LogisticRegressionClassifier`. It just came with better results in our tests.
+The NaturalNode library comes with two kinds of classifiers, the Naive Bayes classifier known as the `BayesClassifier` and the `LogisticRegressionClassifier` functions. By default, HubotNatural uses the `LogisticRegressionClassifier`. It just came with better results in our tests.
 
 #### PorterStemmer
 
@@ -89,6 +91,85 @@ There is also more than one kind of stemmer. You should set the stemmer to defin
 Just check inside `node_modules/natural/lib/natural/stemmers/`.
 
 To change the stemmers language, just set the environment variable `HUBOT_LANG` as `pt`, `en`, `es`, and any other language termination that corresponds to a stemmer file inside the above directory.
+
+## Deploy with Docker
+
+We have a Dockerfile that builds a lightweight image based in Linux Alpine with all the repository content so you can upload that image to a docker registry and deploy your chatbot from there.
+
+You also can use `docker-compose.yml` file to load a local instance of Rocket.Chat, MongoDB and HubotNatural services, where you can change the parameters if you must.
+
+The docker-compose file looks like this:
+
+```yaml
+version: '2'
+
+services:
+  rocketchat:
+    image: rocketchat/rocket.chat:latest
+    restart: unless-stopped
+    volumes:
+      - ./uploads:/app/uploads
+    environment:
+      - PORT=3000
+      - ROOT_URL=http://localhost:3000
+      - MONGO_URL=mongodb://mongo:27017/rocketchat
+      - MONGO_OPLOG_URL=mongodb://mongo:27017/local
+      - MAIL_URL=smtp://smtp.email
+#       - HTTP_PROXY=http://proxy.domain.com
+#       - HTTPS_PROXY=http://proxy.domain.com
+    depends_on:
+      - mongo
+    ports:
+      - 3000:3000
+
+  mongo:
+    image: mongo:3.2
+    restart: unless-stopped
+    volumes:
+     - ./data/db:/data/db
+     #- ./data/dump:/dump
+    command: mongod --smallfiles --oplogSize 128 --replSet rs0
+
+  mongo-init-replica:
+    image: mongo:3.2
+    command: 'mongo mongo/rocketchat --eval "rs.initiate({ _id: ''rs0'', members: [ { _id: 0, host: ''localhost:27017'' } ]})"'
+    depends_on:
+      - mongo
+
+  hubot-natural:
+    build: .
+    restart: unless-stopped
+    environment:
+      - HUBOT_ADAPTER=rocketchat
+      - HUBOT_NAME='Hubot Natural'
+      - HUBOT_OWNER=RocketChat
+      - HUBOT_DESCRIPTION='Hubot natural language processing'
+      - HUBOT_LOG_LEVEL=debug
+      - HUBOT_CORPUS=corpus.yml
+      - HUBOT_LANG=pt
+      - RESPOND_TO_DM=true
+      - RESPOND_TO_LIVECHAT=true
+      - RESPOND_TO_EDITED=true
+      - LISTEN_ON_ALL_PUBLIC=false
+      - ROCKETCHAT_AUTH=password
+      - ROCKETCHAT_URL=rocketchat:3000
+      - ROCKETCHAT_ROOM=GENERAL
+      - ROCKETCHAT_USER=botnat
+      - ROCKETCHAT_PASSWORD=botnatpass
+      - HUBOT_NATURAL_DEBUG_MODE=true
+    volumes:
+      - ./scripts:/home/hubotnat/bot/scripts
+      - ./training_data:/home/hubotnat/bot/training_data
+    depends_on:
+      - rocketchat
+    ports:
+      - 3001:8080
+```
+
+You can change the attributes of variables and volumes to your specific needs and run `docker-compose up` in terminal to start the rocketchat service at `http://localhost:3000`.
+*ATTENTION:* You must remember that hubot must have a real rocketchat user created to login with. So by the first time you run this, you must first go into rocketchat and create a new user for hubot, change the `ROCKETCHAT_USER` and `ROCKETCHAT_PASSWORD` variables in the docker-compose.yml file, and then reload the services using `docker-compose stop && docker-compose up` to start it all over again.
+
+If you want to run only the hubot-natural service to connect an already running instance of Rocket.Chat, you just need to remember to set the `ROCKETCHAT_URL` to a correct value, like `https://open.rocket.chat`.
 
 ## Deploy with Hubot
 
@@ -161,15 +242,7 @@ wait a minute for the loading process, and then you can talk to mybot.
 
 Take a look to adapters to run your bot in other platafforms.
 
-
-## Hubot Adapters
-
-Hubot comes with at least 38 adapters, including Rocket.Chat addapter of course.  
-To connect to your Rocket.Chat instance, you can set env variables, our config pm2 json file.
-
-Checkout other [hubot adapters](https://github.com/github/hubot/blob/master/docs/adapters.md) for more info.
-
-### Env Variables:
+## Env Variables:
 
 In your terminal window, run:
 
@@ -178,7 +251,7 @@ export HUBOT_ADAPTER=rocketchat
 export HUBOT_OWNER=RocketChat
 export HUBOT_NAME='Bot Name'
 export HUBOT_DESCRIPTION='Description of your bot'
-export ROCKETCHAT_URL=https://demo.rocket.chat
+export ROCKETCHAT_URL=https://open.rocket.chat
 export ROCKETCHAT_ROOM=GENERAL
 export LISTEN_ON_ALL_PUBLIC=false
 export RESPOND_TO_DM=true
@@ -187,7 +260,7 @@ export ROCKETCHAT_USER=catbot
 export ROCKETCHAT_PASSWORD='bot password'
 export ROCKETCHAT_AUTH=password
 export HUBOT_LOG_LEVEL=debug
-export HUBOT_CORPUS='corpus-v1.yml'
+export HUBOT_CORPUS='corpus.yml'
 export HUBOT_LANG='en'
 bin/hubot -a rocketchat --name $HUBOT_NAME
 ```  
@@ -273,6 +346,12 @@ You can also instantiate more than one process with PM2, if you want for example
 
 And of course, you can go nuts setting configs for different plataforms, like facebook mensenger, twitter or telegram ;P.
 
+## Hubot Adapters
+
+Hubot comes with at least 38 adapters, including Rocket.Chat addapter of course.  
+To connect to your Rocket.Chat instance, you can set env variables, our config pm2 json file.
+
+Checkout other [hubot adapters](https://github.com/github/hubot/blob/master/docs/adapters.md) for more info.
 
 ## Thanks to
 
