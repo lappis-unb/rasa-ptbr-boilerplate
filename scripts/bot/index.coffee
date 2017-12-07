@@ -18,6 +18,7 @@ error_count = 0
 err_nodes = 0
 
 {regexEscape, loadConfigfile} = require path.join '..', 'lib', 'common.coffee'
+{getUserRoles, checkRole} = require path.join '..', 'lib', 'security.coffee'
 
 eventsPath = path.join __dirname, '..', 'events'
 for event in fs.readdirSync(eventsPath).sort()
@@ -50,34 +51,6 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
       cb?()
   , delay
 
-
-getUserRoles = (userid) ->
-  robot.adapter.chatdriver.callMethod('getUserRoles').then (users) ->
-    robot.logger.debug 'gUR Users: ' + JSON.stringify(users)
-    users.forEach (user) ->
-      user.roles.forEach (role) ->
-        if typeof usersAndRoles[role] == 'undefined'
-          usersAndRoles[role] = []
-        usersAndRoles[role].push user.username
-        return
-      return
-    robot.logger.info 'gUR Users and Roles loaded: ' + JSON.stringify(usersAndRoles)
-    return
-  return
-
-checkRole = (role, uname) ->
-  robot.logger.debug 'cR uname: ' + uname
-  robot.logger.debug 'cR role: ' + role
-  if typeof usersAndRoles[role] != 'undefined'
-    if usersAndRoles[role].indexOf(uname) == -1
-      robot.logger.debug 'cR role: ' + role
-      robot.logger.debug 'cR indexOf: ' + usersAndRoles[role].indexOf(uname)
-      false
-    else
-      true
-  else
-    robot.logger.info 'Role ' + role + ' não encontrado'
-    false
 
 # check these
 livechatTransferHuman = (res) ->
@@ -171,51 +144,52 @@ clearErrors = (res) ->
   res.robot.brain.set(key, 0)
 
 module.exports = (_config, _configPath, robot) ->
-  config = _config
-  configPath = _configPath
+  global.config = _config
+  global.configPath = _configPath
 
-  if not config.interactions?.length
+  global.usersAndRoles = getUserRoles(robot)
+
+  if not global.config.interactions?.length
     robot.logger.warning 'No interactions configured.'
     return
-  if not config.trust
+  if not global.config.trust
     robot.logger.warning 'No trust level configured.'
     return
 
   classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
 
-  trainBot = (retrain = false) ->
+  global.train = () ->
     console.log 'Processing interactions'
     console.time 'Processing interactions (Done)'
 
-    if retrain
-        nodes = {}
-        classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
+    global.nodes = {}
+    global.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
 
-    for interaction in config.interactions
-      {name, classifiers, event} = interaction
-      nodes[name] = new events[event] interaction
+    for interaction in global.config.interactions
+      {name, event} = interaction
+      global.nodes[name] = new events[event] interaction
       # count error nodes
       if name.substr(0,5) == "error"
         err_nodes++
       if interaction.level != 'context'
-        classifyInteraction interaction, classifier
+        classifyInteraction interaction, global.classifier
 
-    classifier.train()
+    global.classifier.train()
 
     console.timeEnd 'Processing interactions (Done)'
 
-  trainBot()
+  global.train()
 
   processMessage = (res, msg) ->
     context = getContext(res)
-    currentClassifier = classifier
-    trust = config.trust
+    currentClassifier = global.classifier
+    trust = global.config.trust
     interaction = undefined
     debugMode = isDebugMode(res)
     console.log 'context ->', context
 
     if context
-      interaction = config.interactions.find (interaction) -> interaction.name is context
+      interaction = global.config.interactions.find (interaction) -> interaction.name is context
       if interaction? and interaction.next?.classifier?
         currentClassifier = interaction.next.classifier
 
@@ -234,7 +208,7 @@ module.exports = (_config, _configPath, robot) ->
       clearErrors res
       [node_name, sub_node_name] = classifications[0].label.split('|')
       console.log({node_name, sub_node_name})
-      int = config.interactions.find (interaction) ->
+      int = global.config.interactions.find (interaction) ->
         interaction.name is node_name
       if int.classifier?
         subClassifications = int.classifier.getClassifications(msg)
@@ -254,7 +228,7 @@ module.exports = (_config, _configPath, robot) ->
           clearErrors res
         error_node_name = "error-" + error_count
 
-    currentInteraction = config.interactions.find (interaction) ->
+    currentInteraction = global.config.interactions.find (interaction) ->
       interaction.name is node_name or interaction.name is error_node_name
 
     if not currentInteraction?
@@ -266,13 +240,8 @@ module.exports = (_config, _configPath, robot) ->
     else if node_name?
       setContext(res, node_name)
 
-    currentNode = nodes[node_name or error_node_name]
+    currentNode = global.nodes[node_name or error_node_name]
     currentNode.process.call @, res, msg, subClassifications
-
-  if debug_mode
-    robot.respond /bottrain/i, (res) ->
-      config = loadConfigfile(configPath)
-      trainBot(true)
 
   robot.hear /(.+)/i, (res) ->
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)

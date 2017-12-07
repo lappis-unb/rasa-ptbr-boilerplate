@@ -1,28 +1,30 @@
 path = require 'path'
 natural = require 'natural'
 
-{msgVariables, stringElseRandomKey} = require path.join '..', 'lib', 'common.coffee'
+{msgVariables, stringElseRandomKey, loadConfigfile} = require path.join '..', 'lib', 'common.coffee'
+{checkRole} = require path.join '..', 'lib', 'security.coffee'
 answers = {}
+# usersAndRoles = getUserRoles()
 
 class configure
   constructor: (@interaction) ->
-  process: (msg) =>
-    if @interaction.roleRequired?
-        #TODO: Check if user has role needed
-        console.log('ROLE REQUIRED:', @interaction.roleRequired)
 
-#    console.log msg
+  process: (msg) =>
+    if @interaction.role?
+        if checkRole(msg, @interaction.role)
+          @act(msg)
+        else
+          msg.sendWithNaturalDelay "*Acces Denied* Action requires role #{@interaction.role}"
+    else
+      @act(msg)
+
+  setVariable: (msg) ->
     configurationBlock = msg.message.text.replace(msg.robot.name + ' ', '').split(' ')[-1..].toString()
-#    console.log configurationBlock
     configKeyValue = configurationBlock.split('=')
     configKey = configKeyValue[0]
     configValue = configKeyValue[1]
-
-    console.log('Setting config ', configKeyValue)
     key = 'configure_'+configKey+'_'+msg.envelope.room
-#    key = 'configure_'+configKey+'_'+msg.envelope.room+'_'+msg.envelope.user.id
     msg.robot.brain.set(key, configValue)
-
     type = @interaction.type?.toLowerCase() or 'random'
     switch type
       when 'block'
@@ -33,5 +35,34 @@ class configure
         message = stringElseRandomKey @interaction.answer
         message = msgVariables message, msg, {key:configKey, value: configValue}
         msg.sendWithNaturalDelay message
+    return
+
+  retrain: (msg) ->
+    console.log 'inside retrain'
+    scriptPath = path.join __dirname, '..'
+    global.config = loadConfigfile(global.configPath)
+    global.train()
+
+    type = @interaction.type?.toLowerCase() or 'random'
+    switch type
+      when 'block'
+        messages = @interaction.answer.map (line) ->
+          return msgVariables line, msg
+        msg.sendWithNaturalDelay messages
+      when 'random'
+        message = stringElseRandomKey @interaction.answer
+        message = msgVariables message, msg
+        msg.sendWithNaturalDelay message
+    return
+
+  act: (msg) ->
+    action = @interaction.action or 'setVariable'
+    console.log action
+    switch action
+      when 'setVariable'
+        @setVariable(msg)
+      when 'train'
+        @retrain(msg)
+    return
 
 module.exports = configure

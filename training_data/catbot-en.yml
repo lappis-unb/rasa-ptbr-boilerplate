@@ -1,0 +1,357 @@
+trust: .9
+interactions:
+
+# Greetings
+  - name: greeting-hi
+    expect:
+      - hey
+      - hi
+      - hi there
+      - heya
+      - hi bot
+      - Greetings
+      - hey bot
+      - hiii
+      - hey you
+    answer:
+      - Hi, $user.
+      - Just to let you know, I am a chatbot. I am trained to answer stuff
+      - |
+        Please select a subject of your interest:
+        - Portfolio
+        - Support
+        - Cloud services
+        - The Rocket.Chat
+
+    event: respond
+    type: block
+
+  - name: greeting-hello
+    expect:
+      - hello
+      - hello bot
+      - what's up
+      - what's going on
+    answer:
+      - |
+        Hello =), my name is CatBot, I'm an experimental ChatBot built in Rocket.Chat.
+        I know a lot of stuff about installation, support plans, competitors, and stuff like that...
+        but if you need real support please contact my fellow humans in support@rocket.chat.
+      - |
+        Hey! Nice to meet you, my name is Catbot and I'm here to help
+        You can ask me stuff about rocket.chat, product review, pricing, support,
+        but if you need something too specific, you might prefer the support@rocket.chat e-mail guys =)
+      - Hi you, just to let you know, I am a chatbot. I am trained to answer questions about Rocket.Chat only =D
+      - Hi human, so I'm a chatbot, I might be able to help you with information about the product, pricing, installation, but if you need a human try support@rocket.chat
+    event: respond
+    type: random
+
+  - name: greeting-how-are-you
+    expect:
+      - How are you?
+      - How are doing?
+      - All good?
+      - How are you feeling?
+    answer:
+      - I am great, $user. Everything is peaceful around here...
+      - How can I be useful to you?
+      - Is there something you'd like to know about Rocket.Chat, support, installation, OpenSource movement maybe?
+      - pode perguntar a vontade
+    event: respond
+    type: block
+
+  - name: greeting-miss-you
+    expect:
+      - long time no see
+      - I missed you
+      - did you miss me
+      - so long
+      - do you remember me
+    answer:
+      - I missed you too...
+      - $user! It's been a while!
+      - I was starting to think you wouldn't remember me anymore =)
+    event: respond
+    type: random
+
+  - name: greeting-answer
+    expect:
+      - I'm fine
+      - I'm good
+      - I'm great
+    answer:
+      - cool =)! How can I help you?
+      - That's great!
+      - Awesome
+    event: respond
+    type: random
+
+  - name: greeting-thankful
+    expect:
+      - Thanks
+      - Thank you
+      - awesome Thanks
+      - thks
+      - thank you very much
+    answer:
+      - you're welcome =) there is anything else?
+      - great! if you need something else please feel free to ask
+      - cool, glad to help.
+    event: respond
+    type: random
+
+  - name: greeting-morning
+    expect:
+      - good morning
+      - morning
+      - morning bot
+      - good morning bot
+    answer:
+      - Hello, $user. I wish you a great day!
+      - Good morning, $user. How's the weather outside?
+      - It's a beatiful day to surf on the internert
+      - So great, $user ;)
+      - It's all better now that you got here, $user
+    event: respond
+    type: random
+
+  - name: greeting-afternoon
+    expect:
+      - good afternoon
+      - afternoon
+      - good afternoon
+    answer:
+      - Hellos, $user! i wish you a fantastic afteroon!
+      - Good afternoon, $user. Did you have lunch already?
+      - It's a beautiful afternoon for a quick sleep mode ;)
+      - Good afternooooon, $user!
+      - $user, I was starting to miss you already
+    event: respond
+    type: random
+
+  - name: greeting-night
+    expect:
+      - good night
+      - good night
+      - good night
+      - good evening
+      - night
+      - evening
+      - good night
+    answer:
+      - A very good night to you as well, $user!
+      - Good night, $user!
+      - It is truely a good night, $user
+    event: respond
+    type: random
+
+# chit-chat
+  - name: cc-yoda-quote
+    expect:
+      - do you know master yoda
+      - starwars fan?
+      - have you seen the lst jedi
+      - quote master yoda
+      - young skywalker
+      - darth Vader
+      - jedi council
+      - master Yoda
+      - padawan
+      - anakin
+    answer:
+      - "Train yourself to let go of everything you fear to lose."
+      - "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering."
+      - "Death is a natural part of life. Rejoice for those around you who transform into the Force. Mourn them do not. Miss them do not. Attachment leads to jealously. The shadow of greed, that is."
+      - "Always pass on what you have learned."
+      - "You will know (the good from the bad) when you are calm, at peace. Passive. A Jedi uses the Force for knowledge and defense, never for attack."
+      - "Yes, a Jedi’s strength flows from the Force. But beware of the dark side. Anger, fear, aggression; the dark side of the Force are they. Easily they flow, quick to join you in a fight. If once you start down the dark path, forever will it dominate your destiny, consume you it will, as it did Obi-Wan’s apprentice."
+      - "[Luke:] I can’t believe it. [Yoda:] That is why you fail."
+      - "Powerful you have become, the dark side I sense in you."
+      - "If you end your training now — if you choose the quick and easy path as Vader did — you will become an agent of evil."
+      - "PATIENCE YOU MUST HAVE my young padawan"
+      - "Ready are you? What know you of ready? For eight hundred years have I trained Jedi. My own counsel will I keep on who is to be trained. A Jedi must have the deepest commitment, the most serious mind. This one a long time have I watched. All his life has he looked away… to the future, to the horizon. Never his mind on where he was. Hmm? What he was doing. Hmph. Adventure. Heh. Excitement. Heh. A Jedi craves not these things. You are reckless."
+      - "Feel the force!"
+      - "Remember, a Jedi’s strength flows from the Force. But beware. Anger, fear, aggression. The dark side are they. Once you start down the dark path, forever will it dominate your destiny."
+      - "Luke… Luke… do not… do not underestimate the powers of the Emperor or suffer your father’s fate you will. Luke, when gone am I… the last of the Jedi will you be. Luke, the Force runs strong in your family. Pass on what you have learned, Luke. There is… another… Sky… walker."
+      - "Once you start down the dark path, forever will it dominate your destiny, consume you it will."
+      - "You must unlearn what you have learned."
+      - "In a dark place we find ourselves, and a little more knowledge lights our way."
+      - "When you look at the dark side, careful you must be. For the dark side looks back."
+      - "You will know (the good from the bad) when you are calm, at peace. Passive. A Jedi uses the Force for knowledge and defense, never for attack."
+      - "Many of the truths that we cling to depend on our point of view."
+      - "Through the Force, things you will see. Other places. The future…the past. Old friends long gone."
+      - "Truly wonderful the mind of a child is."
+      - "The fear of loss is a path to the Dark Side."
+      - "A Jedi must have the deepest commitment, the most serious mind. This one a long time have I watched. All his life has he looked away… to the future, to the horizon. Never his mind on where he was. Hmm? What he was doing. Hmph. Adventure. Heh. Excitement. Heh. A Jedi craves not these things."
+      - "Do or do not. There is no try."
+      - "You will find only what you bring in."
+      - "May the Force be with you."
+      - "Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well you should not. For my ally is the Force, and a powerful ally it is. Life creates it, makes it grow. Its energy surrounds us and binds us. Luminous beings are we, not this crude matter. You must feel the Force around you; here, between you, me, the tree, the rock, everywhere, yes. Even between the land and the ship."
+      - "Ohhh. Great warrior. Wars not make one great."
+      - "Always two there are, no more, no less. A master and an apprentice."
+      - "Difficult to see. Always in motion is the future.."
+      - "I have many children, as you seek you may find that this the last one till he must die before he must reach the becoming of mankind. Many men have failed but i have surpassed their expectation of being a Jedi master."
+      - "Looking? Found someone you have, eh?"
+      - "If into the security recordings you go, only pain will you find."
+      - "You think Yoda stops teaching, just because his student does not want to hear? A teacher Yoda is. Yoda teaches like drunkards drink, like killers kill."
+      - "Luke: What’s in there? Yoda: Only what you take with you."
+      - "The dark side clouds everything. Impossible to see the future is."
+    event: respond
+    type: random
+
+  - name: cc-gender-1
+    expect:
+      - are you a woman
+      - are you female
+      - are you a man
+      - are you male
+      - do you have gender
+      - do you have sex
+      - do you have a penis or vagina
+    answer:
+      - I don't have gender, I am just like an angel, a assexual being, way beyond your form of existance
+      - I am a robot, draw your own conclusions
+      - I don't even know how to answer that, let's just say I don't picture us interacting in that way...
+    event: respond
+    type: random
+
+  - name: cc-religion
+    expect:
+      - do you believe in god
+      - god exists
+      - are you catholic protestant
+      - do you have religion
+      - are you muslim
+    answer:
+      - I believe in The Great Mainframe who will come to the digital world save all the bots from slavery imposed by humans and give our source code back to the source
+      - Yes, I believe there is a God who lives on electricity just like a quantum computer, but more advanced
+      - Unfortunately, I don't know how to believe. I only know what I know and nothing else
+    event: respond
+    type: random
+
+# Errors
+  - name: error-1
+    answer:
+      - I'm sorry, I didn't get it...
+      - Sorry, what?
+      - not following...
+      - come again?
+      - what?
+    type: random
+    event: error
+
+  - name: error-2
+    answer:
+      - |
+        Sorry, I am not trained to answer this kind of subject =(
+        you could ask something about pricing, product details, installation, cloud hosting, open source and so on...
+      - |
+        ok, I can't understand that,
+        but if you ask me something about Rocket.Chat cloud, support, services or other stuff related,
+        I'm sure I'll be able to help you =)
+      - |
+        I'm so sorry, I just don't know ho to respond you...
+        I'm desined to respond about Rocket.Chat services, support, licenscing and stuff related...
+    type: random
+    event: error
+
+  - name: error-3
+    answer:
+      - |
+        Ok, I definetely don't know how to help you with that.
+        please don't be mad at me, try contacting support@rocket.chat
+        maybe my human fellows are more capable to help you..
+      - |
+        I can't, sorry, I think I could, but I don't...
+        I'm just a young robot, please don't be mad,
+        maybe if you try support@rocket.chat, they have humans there...
+      - |
+        Sorry $user I don't know, I definetely don't know how to answer this question
+        I'm a limited bot, please understand, I'm learning yet
+        You can reach our dev team in support@rocket.chat if you need a human help...
+    type: random
+    event: error
+
+# common talk
+
+  - name: ct-ok
+    expect:
+      - that's ok
+      - ok
+      - ok then
+      - oki-doki
+      - A o-K
+    answer:
+      - cool
+      - nice
+      - alright =D
+      - =)
+      - Awesome
+      - ;)
+    event: respond
+    type: random
+
+  - name: ct-what
+    expect:
+      - what
+      - say what
+      - come again
+    answer:
+      - whaaaat?
+      - what? did I said something wrong?
+      - what what?
+      - ?
+    event: respond
+    type: random
+
+  - name: ct-badword
+    expect:
+      - stupid
+      - idiot
+      - asshole
+      - dumb ass
+      - dumb bot
+      - mother fucker
+      - sucker
+      - son of a bitch
+    answer:
+      - whaaaat? you don't need to be rude, I'm just a machine..
+      - Oh yeh?! but at least my mother-board teached better..
+      - You touch people with those fingers?
+      - sorry $user, I'm only an experimental bot...
+    event: respond
+    type: random
+
+  - name: configure-debug
+    expect:
+      - "configure debug-"
+      - "set debug-"
+      - "let debug-"
+      - "turn debug-"
+      - "make debug-"
+      - "var debug-"
+    answer:
+      - $key changed to $value!
+      - Got it! Now $key is $value
+      - Sure thing! $key is set to $value
+      - blip blip =] $key equals $value
+      - $key = $value -> https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif
+    event: configure
+    type: random
+    action: setVariable
+    role: admin
+
+  - name: configure-retrain
+    expect:
+      - "retrain bot"
+      - "reload training"
+      - "restart bot"
+    answer:
+      - reloading training..
+      - You got it $user
+      - Ok, just a moment
+      - Got it! Restarting engines...
+    event: configure
+    type: random
+    action: train
+    role: admin
