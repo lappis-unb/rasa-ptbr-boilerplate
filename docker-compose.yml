@@ -1,45 +1,71 @@
 version: '2'
 
 services:
-  mongo:
-    image: mongo
-    volumes:
-    - ./chat/data/db:/data/db
-    - ./chat/data/dump:/dump
-    tty: true
-    command:
-    - mongod
-    - --smallfiles
-    - --oplogSize
-    - '128'
-
   rocketchat:
     image: rocketchat/rocket.chat:latest
-    links:
-      - mongo
-    environment:
-      MONGO_URL: 'mongodb://mongo:27017/rocketchat'
-      PORT: '3000'
-      ROOT_URL: 'http://localhost:3000'
+    restart: unless-stopped
     volumes:
-      - ./chat/uploads:/app/uploads
+      - ./uploads:/app/uploads
+    environment:
+      - PORT=3000
+      - ROOT_URL=http://localhost:3000
+      - MONGO_URL=mongodb://mongo:27017/rocketchat
+      - MONGO_OPLOG_URL=mongodb://mongo:27017/local
+      - MAIL_URL=smtp://smtp.email
+#       - HTTP_PROXY=http://proxy.domain.com
+#       - HTTPS_PROXY=http://proxy.domain.com
+    depends_on:
+      - mongo
     ports:
-      - '3000:3000'
+      - 3000:3000
+    labels:
+      - "traefik.backend=rocketchat"
+      - "traefik.frontend.rule=Host: your.domain.tld"
+
+  mongo:
+    image: mongo:3.2
+    restart: unless-stopped
+    volumes:
+     - ./data/db:/data/db
+     #- ./data/dump:/dump
+    command: mongod --smallfiles --oplogSize 128 --replSet rs0
+    labels:
+      - "traefik.enable=false"
+
+  # this container's job is just run the command to initialize the replica set.
+  # it will run the command and remove himself (it will not stay running)
+  mongo-init-replica:
+    image: mongo:3.2
+    command: 'mongo mongo/rocketchat --eval "rs.initiate({ _id: ''rs0'', members: [ { _id: 0, host: ''localhost:27017'' } ]})"'
+    depends_on:
+      - mongo
 
   hubot-natural:
-    image: diegodorgam/hubot-natural:latest
-    links:
-      - rocketchat
+    # image: diegodorgam/hubot-natural:alpine
+    build: .
+    restart: unless-stopped
     environment:
-      ROCKETCHAT_URL: 'http://rocketchat:3000'
-      HUBOT_ADAPTER: rocketchat
-      HUBOT_NAME: 'CatBot'
-      HUBOT_DESCRIPTION: 'Processamento de linguagem natural com hubot'
-      ROCKETCHAT_ROOM: GENERAL
-      RESPOND_TO_DM: 'true'
-      RESPOND_TO_LIVECHAT: 'true'
-      ROCKETCHAT_USER: catbot
-      ROCKETCHAT_PASSWORD: 'catbotpass'
-      ROCKETCHAT_AUTH: password
-      HUBOT_LOG_LEVEL: debug
-      HUBOT_CORPUS: 'rocket-small.yml'
+      - HUBOT_ADAPTER=rocketchat
+      - HUBOT_NAME='Hubot Natural'
+      - HUBOT_OWNER=RocketChat
+      - HUBOT_DESCRIPTION='Hubot natural language processing'
+      - HUBOT_LOG_LEVEL=debug
+      - HUBOT_CORPUS=corpus.yml
+      - HUBOT_LANG=pt
+      - RESPOND_TO_DM=true
+      - RESPOND_TO_LIVECHAT=true
+      - RESPOND_TO_EDITED=true
+      - LISTEN_ON_ALL_PUBLIC=false
+      - ROCKETCHAT_AUTH=password
+      - ROCKETCHAT_URL=rocketchat:3000
+      - ROCKETCHAT_ROOM=GENERAL
+      - ROCKETCHAT_USER=botnat
+      - ROCKETCHAT_PASSWORD=botnatpass
+      - HUBOT_NATURAL_DEBUG_MODE=true
+    volumes:
+      - ./scripts:/home/hubotnat/bot/scripts
+      - ./training_data:/home/hubotnat/bot/training_data
+    depends_on:
+      - rocketchat
+    ports:
+      - 3001:8080

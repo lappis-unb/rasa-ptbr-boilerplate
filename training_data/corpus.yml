@@ -156,7 +156,6 @@ interactions:
       trust: .8
       interactions:
         - get-programacao
-        - cancela-programacao
       # error:
       #   - erro-trilha
     event: respond
@@ -218,7 +217,7 @@ interactions:
     answer:
       - "Agora na trilha *$trilha* tem a seguinte programação:"
       - $programacao
-    event: programacao
+    event: respond
     type: block
 
   - name: erro-trilha
