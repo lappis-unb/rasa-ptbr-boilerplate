@@ -4,15 +4,7 @@ interactions:
 # Greetings
   - name: greeting-hi
     expect:
-      - hey
-      - hi
-      - hi there
-      - heya
-      - hi bot
-      - Greetings
-      - hey bot
-      - hiii
-      - hey you
+
     answer:
       - Hi, $user.
       - Just to let you know, I am a chatbot. I am trained to answer stuff
@@ -32,6 +24,15 @@ interactions:
       - hello bot
       - what's up
       - what's going on
+      - hey
+      - hi
+      - hi there
+      - heya
+      - hi bot
+      - Greetings
+      - hey bot
+      - hiii
+      - hey you
     answer:
       - |
         Hello =), my name is CatBot, I'm an experimental ChatBot built in Rocket.Chat.
@@ -55,8 +56,6 @@ interactions:
     answer:
       - I am great, $user. Everything is peaceful around here...
       - How can I be useful to you?
-      - Is there something you'd like to know about Rocket.Chat, support, installation, OpenSource movement maybe?
-      - pode perguntar a vontade
     event: respond
     type: block
 
@@ -203,10 +202,8 @@ interactions:
     expect:
       - are you a woman
       - are you female
-      - are you a man
-      - are you male
       - do you have gender
-      - do you have sex
+      - you make sex
       - do you have a penis or vagina
     answer:
       - I don't have gender, I am just like an angel, a assexual being, way beyond your form of existance
@@ -326,15 +323,10 @@ interactions:
     expect:
       - "configure debug-"
       - "set debug-"
-      - "let debug-"
-      - "turn debug-"
-      - "make debug-"
       - "var debug-"
     answer:
       - $key changed to $value!
       - Got it! Now $key is $value
-      - Sure thing! $key is set to $value
-      - blip blip =] $key equals $value
       - $key = $value -> https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif
     event: configure
     type: random
@@ -346,11 +338,14 @@ interactions:
       - "retrain bot"
       - "reload training"
       - "restart bot"
+      - "train again"
     answer:
-      - reloading training..
-      - You got it $user
-      - Ok, just a moment
-      - Got it! Restarting engines...
+      - Right >>> Training reloaded
+      - You got it $user. Let's start again.
+      - Ok, just a moment... Fine we can start it over.
+      - Got it! Restarting engines... I'm finished training
+      - Training harder!
+      - Alright! No pain, no gain!
     event: configure
     type: random
     action: train

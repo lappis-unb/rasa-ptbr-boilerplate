@@ -2,7 +2,7 @@ FROM node:alpine
 
 LABEL mantainer "Diego Dorgam <diego.dorgam@rocket.chat>"
 
-ENV HUBOT_LANG='pt'                                                  \
+ENV HUBOT_LANG='en'                                                  \
     HUBOT_CORPUS='corpus.yml'                                        \
     HUBOT_ADAPTER=rocketchat                                         \
     HUBOT_OWNER=RocketChat                                           \
@@ -17,10 +17,9 @@ ENV HUBOT_LANG='pt'                                                  \
     RESPOND_TO_DM=true                                               \
     RESPOND_TO_LIVECHAT=true                                         \
     RESPOND_TO_EDITED=true                                           \
-    LISTEN_ON_ALL_PUBLIC=false                                       \
-    HUBOT_NATURAL_DEBUG_MODE=false
+    LISTEN_ON_ALL_PUBLIC=true
 
-RUN apk --update add --no-cache git python make g++ && \
+RUN apk --update add --no-cache git && \
     addgroup -S hubotnat && adduser -S -g hubotnat hubotnat
 
 USER node
@@ -47,10 +46,18 @@ RUN yo hubot --adapter ${HUBOT_ADAPTER}         \
              --owner ${HUBOT_OWNER}             \
              --name ${HUBOT_NAME}               \
              --description ${HUBOT_DESCRIPTION} \
-             --defaults --no-insight
+             --defaults --no-insight         && \
+    rm /home/hubotnat/bot/external-scripts.json \
+    /home/hubotnat/bot/scripts/example.coffee   \
+    /home/hubotnat/bot/hubot-scripts.json
 
-COPY ["external-scripts.json","package.json", "/home/hubotnat/bot/"]
+
+COPY ["package.json", "/home/hubotnat/bot/"]
 
 ADD scripts/ /home/hubotnat/bot/scripts/
 
 ENTRYPOINT /home/hubotnat/bot/bin/hubot -a rocketchat
+
+USER root
+RUN apk del git               && \
+    rm -rf /var/cache/apk/*
