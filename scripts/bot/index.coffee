@@ -79,7 +79,7 @@ classifyInteraction = (interaction, classifier) ->
     if Array.isArray interaction.next?.interactions
       interaction.next.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
       for nextInteractionName in interaction.next.interactions
-        nextInteraction = config.interactions.find (n) ->
+        nextInteraction = global.config.interactions.find (n) ->
           return n.name is nextInteractionName
         if not nextInteraction?
           console.log 'No valid interaction for', nextInteractionName
