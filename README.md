@@ -182,13 +182,12 @@ npm install -g yo generator-hubot
 Then you will clone HubotNatural repository:  
 
 ```shell
-git clone https://github.com/RocketChat/hubot-natural.git
+git clone https://github.com/RocketChat/hubot-natural.git mybot
 ```
 
-Now change directory name to whatever your bot's name will gonna be, and install hubot binaries, without overwitting any of the files inside the folder:
+Change 'mybot' in the git clone command above to whatever your bot's name will be, and install hubot binaries, without overwitting any of the files inside the folder:
 
 ```shell
-mv hubot-natural mybot
 cd mybot
 npm install
 yo hubot
