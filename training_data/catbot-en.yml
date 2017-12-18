@@ -2,23 +2,8 @@ trust: .9
 interactions:
 
 # Greetings
+
   - name: greeting-hi
-    expect:
-
-    answer:
-      - Hi, $user.
-      - Just to let you know, I am a chatbot. I am trained to answer stuff
-      - |
-        Please select a subject of your interest:
-        - Portfolio
-        - Support
-        - Cloud services
-        - The Rocket.Chat
-
-    event: respond
-    type: block
-
-  - name: greeting-hello
     expect:
       - hello
       - hello bot
@@ -33,116 +18,586 @@ interactions:
       - hey bot
       - hiii
       - hey you
+      - howdy
     answer:
       - |
         Hello =), my name is CatBot, I'm an experimental ChatBot built in Rocket.Chat.
-        I know a lot of stuff about installation, support plans, competitors, and stuff like that...
-        but if you need real support please contact my fellow humans in support@rocket.chat.
-      - |
-        Hey! Nice to meet you, my name is Catbot and I'm here to help
-        You can ask me stuff about rocket.chat, product review, pricing, support,
-        but if you need something too specific, you might prefer the support@rocket.chat e-mail guys =)
-      - Hi you, just to let you know, I am a chatbot. I am trained to answer questions about Rocket.Chat only =D
-      - Hi human, so I'm a chatbot, I might be able to help you with information about the product, pricing, installation, but if you need a human try support@rocket.chat
-    event: respond
-    type: random
-
-  - name: greeting-how-are-you
-    expect:
-      - How are you?
-      - How are doing?
-      - All good?
-      - How are you feeling?
-    answer:
-      - I am great, $user. Everything is peaceful around here...
-      - How can I be useful to you?
+        You can ask me stuff about:
+          - RocketChat Installation
+          - Support Plans
+          - Product Features
+          - Cloud Services
+          - Development and White Labeling
+          - Partnership
+      - Please select a subject of those or
+      - if you need to talk to a real person, just need to ask me and I'll transfer you to a fellow human.
+    next:
+      interactions:
+        - install-intro
+        - support-intro
+        - product-intro
+        - cloud-intro
+        - development-intro
+        - partnership-intro
+        - livechat-transfer
+      trust: .9
+      error:
+        - greetings-error
     event: respond
     type: block
 
-  - name: greeting-miss-you
+  - name: livechat-transfer
     expect:
-      - long time no see
-      - I missed you
-      - did you miss me
-      - so long
-      - do you remember me
+      - transfer me
+      - want to talk to a person
+      - wann talk to a human
+      - call me your supervisor
+      - call a person
+      - call a human
+      - transfer to a person
     answer:
-      - I missed you too...
-      - $user! It's been a while!
-      - I was starting to think you wouldn't remember me anymore =)
+      - Ok, I'm transfering this to a real person.
+      - one moment please.
+    event: respond
+    action: tranfer
+    type: block
+
+  - name: greeting-help
+    expect:
+      - help me
+      - get support
+      - found a bug
+    answer:
+      - |
+        Need some help? You can find assistance in:
+          - Support Channel (https://open.rocket.chat/channel/support)
+          - Support E-mail support@rocket.chat
+          - Developers Channel (https://open.rocket.chat/channel/dev)
+          - GitHub Community (https://github.com/RocketChat/Rocket.Chat/issues)
+        if you need to talk to a real person, just need to ask me and I'll transfer you to a fellow human.
+    event: respond
+    type: block
+
+# RocketChat Installation
+
+  - name: install-intro
+    level: installation
+    expect:
+      - Installation
+      - how to install
+      - problems installing
+      - how to deploy
+    answer:
+      - "Cool! About Rocket.Chat's install, you may choose one of the following methods:"
+      - |
+        - Rocket.Chat Cloud
+        - PaaS Deployments
+        - Docker Containers
+        - Manual Installation
+        - Automation Tools
+        - Updating
+        - Minimum Requirements
+      - Want to know more about any of those methods?
+    next:
+      interactions:
+        - install-rc-cloud
+        - install-paas
+        - install-docker
+        - install-manual
+        - install-automation
+        - install-updating
+        - install-requirements
+        - install-return
+      trust: .9
+      error:
+        - install-error
+    event: respond
+    type: block
+
+  - name: install-rc-cloud
+    level: installation
+    expect:
+      - Rocket.Chat Cloud
+      - Cloud Services
+      - my instance in your cloud
+    answer:
+      - you can have your full featured trial at RocketChat cloud,
+      - checkout at https://rocket.chat/cloud
+    context: clear
+    event: respond
+    type: block
+
+  - name: install-paas
+    level: installation
+    expect:
+      - PaaS Deployments
+      - AWS deploy
+      - heroku Deployments
+      - bluemix ibm deploy
+      - platform service deploy
+    answer:
+      - You can have your Rocket.Chat instance deployed in your favorite server
+      - like AWS, DigitalOcean, Heroku, Bluemix or Sandstorm...
+      - Check it out at https://rocket.chat/docs/installation/paas-deployments/
+    context: clear
+    event: respond
+    type: block
+
+  - name: install-docker
+    level: installation
+    expect:
+      - Docker Containers
+      - deploy with docker
+      - docker images
+    answer:
+      - Want to deploy with Docker?
+      - Checkout our docs in https://rocket.chat/docs/installation/docker-containers/
+      - and don't forget to visit our oficial Docker Image repository in
+      - https://store.docker.com/images/rocketchat
+    context: clear
+    event: respond
+    type: block
+
+  - name: install-manual
+    level: installation
+    expect:
+      - Manual Installation
+      - Debian
+      - Centos
+      - ubuntu
+      - opensuse
+    answer:
+      - If you want to perform a manual install,
+      - In a Mac, Windows or Linux server,
+      - please checkout our docs in https://rocket.chat/docs/installation/manual-installation/
+    context: clear
+    event: respond
+    type: block
+
+  - name: install-automation
+    level: installation
+    expect:
+      - Automation Tools
+      - Ansible install
+      - Openshift install
+      - Vagrant installation
+    answer:
+      - we love automation tools, everything you must know about deploying Rocket.Chat with automation is in
+      - https://rocket.chat/docs/installation/automation-tools/
+    context: clear
+    event: respond
+    type: block
+
+  - name: install-updating
+    level: installation
+    expect:
+      - Updating RocketChat
+      - server update
+      - upgrade services
+    answer:
+      - Is always good to be up to date. Take a look at Rocket.Chat's releases
+      - https://github.com/RocketChat/Rocket.Chat/releases
+      - Your upgrade strategy depends on the kind of installation that you have.
+      - If you need any more help with that, please jump into https://open.rocket.chat/channel/support
+    context: clear
+    event: respond
+    type: block
+
+  - name: install-requirements
+    level: installation
+    expect:
+      - Minimum Requirements
+      - server specs
+      - minimum resources
+      - how many cpus ram memory disk size
+    answer:
+      - For the minimum server requirements, you can visit https://rocket.chat/docs/installation/minimum-requirements/
+      - there you will find the specs for a minimum installation
+    context: clear
+    event: respond
+    type: block
+
+  - name: install-return
+    level: installation
+    expect:
+      - go back
+      - get back
+      - that is not what I am looking for
+      - return
+      - reset
+      - it's not that
+    answer:
+      - ok, let's get back on the main subjects
+    context: clear
+    event: respond
+    type: block
+
+  - name: install-error
+    level: installation
+    answer:
+      - Sorry, I couldn't understand what you said, please choose one of the installations topics, or `return` to the main topics
+      - I don't understand, please choose one of the installation topics, or `get back` to the main topics
     event: respond
     type: random
 
-  - name: greeting-answer
-    expect:
-      - I'm fine
-      - I'm good
-      - I'm great
-    answer:
-      - cool =)! How can I help you?
-      - That's great!
-      - Awesome
-    event: respond
-    type: random
+#Support Plans
 
-  - name: greeting-thankful
+  - name: support-intro
+    level: support
     expect:
-      - Thanks
-      - Thank you
-      - awesome Thanks
-      - thks
-      - thank you very much
+      - Support Plans
+      - help and support
+      - subscription
+      - paid support
+      - service level agreement
     answer:
-      - you're welcome =) there is anything else?
-      - great! if you need something else please feel free to ask
-      - cool, glad to help.
+      - |
+        About the support plans, I can help you to find:
+          - Free community support
+          - Paid Enterprise support
+          - Reporting bugs
+    next:
+      interactions:
+        - support-free
+        - support-paid
+        - support-bugs
+      trust: .9
+      error:
+        - support-error
     event: respond
-    type: random
+    type: block
 
-  - name: greeting-morning
+  - name: support-free
+    level: support
     expect:
-      - good morning
-      - morning
-      - morning bot
-      - good morning bot
+      - Free community support
+      - community channels
+      - free help and support
     answer:
-      - Hello, $user. I wish you a great day!
-      - Good morning, $user. How's the weather outside?
-      - It's a beatiful day to surf on the internert
-      - So great, $user ;)
-      - It's all better now that you got here, $user
+      - we have a great community, they're contribution and support are awesome.
+      - |
+        checkout some channels in https://open.rocket.chat/:
+          - #support channel for help with general Rocket.Chat
+          - #ubuntu-snap channel for help with snap installs
+          - #desktop channel for help with the desktop client
+          - #hubot channel for help with hubot scripting
+          - #dev channel for developers needing help developing new features
+      - just keep in mind that this support is provided by other members in their own free time, so please be patience.
     event: respond
-    type: random
+    type: block
 
-  - name: greeting-afternoon
+  - name: support-paid
+    level: support
     expect:
-      - good afternoon
-      - afternoon
-      - good afternoon
+      - Paid Enterprise support
+      - paid support
+      - Enterprise Plans support
+      - support with sla
+      - service level agreement support
     answer:
-      - Hellos, $user! i wish you a fantastic afteroon!
-      - Good afternoon, $user. Did you have lunch already?
-      - It's a beautiful afternoon for a quick sleep mode ;)
-      - Good afternooooon, $user!
-      - $user, I was starting to miss you already
+      - if you can't wait for community support, we are here to help you.
+      - For enterprise chalenges we offer a 24/7/365 support plan,
+      - with advanced security patches releases and tunning services.
+      - If you need a quotation please e-mail us at sales@rocket.chat
     event: respond
-    type: random
+    type: block
 
-  - name: greeting-night
+  - name: support-bugs
+    level: support
     expect:
-      - good night
-      - good night
-      - good night
-      - good evening
-      - night
-      - evening
-      - good night
+      - Reporting bugs
+      - finding bugs
+      - solve bugs
     answer:
-      - A very good night to you as well, $user!
-      - Good night, $user!
-      - It is truely a good night, $user
+      - if you want to report a found bug, please go to https://github.com/RocketChat/Rocket.Chat/issues
+      - and open a new issue, describing the bug that you found.
     event: respond
-    type: random
+    type: block
+
+  - name: support-error
+    level: support
+    answer:
+      - sorry, I don't understand, are we still talking about support?
+      - if no, please let me know if you wanna `go back` to the main topics.
+    event: respond
+    type: block
+
+  - name: support-return
+    level: support
+    expect:
+      - go back
+      - get back
+      - that is not what I am looking for
+      - return
+      - reset
+      - it's not that
+    answer:
+      - ok, let's get back on the main topics.
+    context: clear
+    event: respond
+    type: block
+
+# Product Features
+
+  - name: product-intro
+    level: product
+    expect:
+      - Product Features
+      - product specifications
+      - product specs
+      - features
+      - specifications
+      - about rocketchat
+    answer:
+      - |
+        About the product, I can tell you a lot of cool things about Rocket.Chat
+        tell me what you want to know:
+          - Connecting to a new server
+          - Mobile Apps
+          - Voice and Video Calls
+          - Mensaging
+          - Channels
+          - End to End Encryption
+          - Bots and Integrations
+          - Price and Licenscing
+          - Usage and Limits
+          - Experiment Demo
+    next:
+      interactions:
+          - product-connecting
+          - product-mobile
+          - product-voice
+          - product-mensaging
+          - product-channels
+          - product-encryption
+          - product-bots
+          - product-price
+          - product-usage
+          - product-demo
+      trust: .9
+      error:
+        - product-error
+    event: respond
+    type: block
+
+  - name: product-connecting
+    level: product
+    expect:
+      - Connecting to a new server
+      - can I coonect to mor servers
+      - connect more servers
+    answer:
+      - did you know you can connect to more than one RocketChat server from your device?
+      - check it out how by taking a look in this link https://rocket.chat/docs/user-guides/connecting-to-a-server/
+    event: respond
+    type: block
+
+  - name: product-mobile
+    level: product
+    expect:
+      - Mobile Apps
+      - android app
+      - iOS app
+      - App Store
+      - google play
+      - windows mobile
+    answer:
+      - we have native apps for iOS and Android, you can download them in the stores, by searching for Rocket.Chat+
+      - the plus (+) stands for better performance
+    event: respond
+    type: block
+
+  - name: product-voice
+    level: product
+    expect:
+      - Voice and Video Calls
+      - calling from rocketchat
+      - videconference
+      - call my friends
+    answer:
+      - yes, Rocket.Chat comes with WebRTC support, wich means that you can freely call to other users,
+      - and even make video conferences.
+      - Check it out in https://rocket.chat/docs/user-guides/voice-and-video-calls/
+    event: respond
+    type: block
+
+  - name: product-mensaging
+    level: product
+    expect:
+      - Mensaging
+      - how mesaging works
+      - can i edit mesages
+      - send audio mesages
+      - record video mesages
+    answer:
+      - about mensaging, we have a lot of cool stuff in Rocket.Chat
+      - editing messages, notifications, attachments, audio, video and much more...
+      - please take a look at our user guides if you're interested
+      - https://rocket.chat/docs/user-guides/messaging/
+    event: respond
+    type: block
+
+  - name: product-channels
+    level: product
+    expect:
+      - Channels
+      - public Channels
+      - private Channels
+      - channel functions
+      - channel configuration
+    answer:
+      - you can get to know all about channels by reading our user guides
+      - https://rocket.chat/docs/user-guides/channels/
+    event: respond
+    type: block
+
+  - name: product-encryption
+    level: product
+    expect:
+      - End to End Encryption
+      - off the record
+      - security encrypted message
+    answer:
+      - Our chat is safely secured. If you want to make sure you are using encryption access the off-the-record conversations on the key symbol on the left part of your chat screen.
+      - After activating this little key, no one will be able to steal your information.
+    event: respond
+    type: block
+
+  - name: product-bots
+    level: product
+    expect:
+      - Bots and Integrations
+      - do you have some Bots
+      - does it integrate with
+    answer:
+      - Rocket.Chat has a lot of integrations and bots,
+      - you can check it out in https://github.com/RocketChat/Rocket.Chat.Integrations
+      - to get to know some integrations scripts for webhooks
+      - And of course, you can always connect any Hubot script to our internal hubot.
+    event: respond
+    type: block
+
+  - name: product-price
+    level: product
+    expect:
+      - Price and Licenscing
+      - how much it costs
+      - what is the price of rocketchat
+      - what is the licensce
+    answer:
+      - Rocket.Chat is free and licensced under MIT, so if you can download and run it freely.
+      - We charge only for hosting and services, you can check our hosting princes in
+      - https://rocket.chat/cloud
+      - and if you want a quotation for services, please fill out the contact form
+      - https://rocket.chat/contact
+    event: respond
+    type: block
+
+  - name: product-usage
+    level: product
+    expect:
+      - Usage and Limits
+      - limit of users
+      - user limit
+      - message limits
+      - message history limit
+    answer:
+      - here there is no limit for the number of users and messages in your own hosted Rocket.Chat instances.
+      - however we have some different plans for cloud hosting with different tiers of usage.
+      - check it out in https://rocket.chat/cloud
+    event: respond
+    type: block
+
+  - name: product-demo
+    level: product
+    expect:
+      - Experiment Demo
+      - Demo Hosting
+      - open rocketchat
+      - demo rocketchat
+    answer:
+      - You can try our demo version in https://open.rocket.chat
+      - And you can even create some channels to talk to your collegues there.
+      - However is good to remember that demo instance is administrated by Rocket.Chat team only.
+    event: respond
+    type: block
+
+  - name: product-return
+    level: product
+    expect:
+      - go back
+      - get back
+      - that is not what I am looking for
+      - return
+      - reset
+      - it's not that
+    answer:
+      - ok, let's get back on the main topics.
+    context: clear
+    event: respond
+    type: block
+
+  - name: product-error
+    level: product
+    answer:
+      - sorry, I don't understand, are we still talking about the product?
+      - if no, please let me know if you wanna `go back` to the main topics.
+    event: respond
+    type: block
+
+# # Cloud Services
+#
+#   - name:
+#     level:
+#     expect:
+#       -
+#     answer:
+#       -
+#     next:
+#       interactions:
+#         -
+#       trust: .9
+#       error:
+#         -
+#     event: respond
+#     type: block
+#
+#
+# # Development and White Labeling
+#
+#   - name:
+#     level:
+#     expect:
+#       -
+#     answer:
+#       -
+#     next:
+#       interactions:
+#         -
+#       trust: .9
+#       error:
+#         -
+#     event: respond
+#     type: block
+#
+#
+# # Partnership
+#
+#   - name:
+#     level:
+#     expect:
+#       -
+#     answer:
+#       -
+#     next:
+#       interactions:
+#         -
+#       trust: .9
+#       error:
+#         -
+#     event: respond
+#     type: block
+#
 
 # chit-chat
   - name: cc-yoda-quote
@@ -319,6 +774,99 @@ interactions:
     event: respond
     type: random
 
+  - name: greeting-how-are-you
+    expect:
+      - How are you?
+      - How are doing?
+      - How are you feeling?
+    answer:
+      - I am great, $user. Everything is peaceful around here...
+      - How can I be useful to you?
+    event: respond
+    type: block
+
+  - name: greeting-miss-you
+    expect:
+      - long time no see
+      - I missed you
+      - did you miss me
+      - do you remember me
+    answer:
+      - I missed you too...
+      - $user! It's been a while!
+      - I was starting to think you wouldn't remember me anymore =)
+    event: respond
+    type: random
+
+  - name: greeting-answer
+    expect:
+      - I'm fine
+      - I'm good
+      - I'm great
+    answer:
+      - cool =)! How can I help you?
+      - That's great!
+      - Awesome
+      - ok =)
+    event: respond
+    type: random
+
+  - name: greeting-thankful
+    expect:
+      - Thanks
+      - Thank you
+      - awesome Thanks
+      - thks
+      - thank you very much
+    answer:
+      - you're welcome =) there is anything else?
+      - great! if you need something else please feel free to ask
+      - cool, glad to help.
+    event: respond
+    type: random
+
+  - name: greeting-morning
+    expect:
+      - good morning
+      - morning
+      - morning bot
+      - good morning bot
+    answer:
+      - Hello, $user. I wish you a great day!
+      - Good morning, $user. How's the weather outside?
+      - It's a beatiful day to surf on the internert
+      - So great, $user ;)
+      - It's all better now that you got here, $user
+    event: respond
+    type: random
+
+  - name: greeting-afternoon
+    expect:
+      - afternoon
+      - good afternoon
+    answer:
+      - Hellos, $user! i wish you a fantastic afteroon!
+      - Good afternoon, $user. Did you have lunch already?
+      - It's a beautiful afternoon for a quick sleep mode ;)
+      - Good afternooooon, $user!
+      - $user, I was starting to miss you already
+    event: respond
+    type: random
+
+  - name: greeting-night
+    expect:
+      - good night
+      - good evening
+      - night
+      - evening
+    answer:
+      - A very good night to you as well, $user!
+      - Good night, $user!
+      - It is truely a good night, $user
+    event: respond
+    type: random
+
+# Configuration
   - name: configure-debug
     expect:
       - "configure debug-"

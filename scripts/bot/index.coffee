@@ -51,7 +51,6 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
       cb?()
   , delay
 
-
 # check these
 livechatTransferHuman = (res) ->
 	setTimeout ->
