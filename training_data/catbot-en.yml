@@ -669,7 +669,7 @@ interactions:
     answer:
       - |
         About our services of white labeling and developing, wich of the subjects bellow can I help you with?
-        - Develop new Features
+        - Develop new Open Source Features
         - Integrations with Rocket.Chat
         - Customize the Web Interface
         - Customize the App
@@ -691,13 +691,13 @@ interactions:
   - name: development-features
     level: development
     expect:
-      - Develop new Features
+      - Develop new Open Source Features
       - hire developers
       - pay for features
       - how much it costs a developer hour
     answer:
       - |
-        You can hire development hours from Rocket.Chat engineers to develop new features,
+        You can book development hours from Rocket.Chat engineers to develop new open source features,
         or just to offer technical consultting in your own project.
         To get a quote please send an e-mail to sales@rocket.chat
     event: respond
