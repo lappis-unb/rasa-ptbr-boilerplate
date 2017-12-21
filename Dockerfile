@@ -56,6 +56,8 @@ COPY ["package.json", "/home/hubotnat/bot/"]
 
 ADD scripts/ /home/hubotnat/bot/scripts/
 
+ADD training_data/ /home/hubotnat/bot/training_data
+
 ENTRYPOINT /home/hubotnat/bot/bin/hubot -a rocketchat
 
 USER root
