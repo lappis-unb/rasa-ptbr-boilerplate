@@ -40,10 +40,38 @@ interactions:
         - development-intro
         - partnership-intro
         - livechat-transfer
+        - greeting-help
+        - greeting-return
       trust: .9
       error:
-        - greetings-error
+        - greeting-error-1
+        - greeting-error-2
+        - greeting-error-3
     event: respond
+    type: block
+
+  - name: greeting-error-1
+    answer:
+      - Sorry, I couldn't understand what you said, please choose one of the main topics, or ask for a `transfer` to talk to a person
+      - I don't understand, I'm only trained to ansewr for the main topics.
+    event: error
+    context: clear
+    type: random
+
+  - name: greeting-error-2
+    answer:
+      - Sorry, could you be more specific?
+      - If you need to know the main topics, just ask for `help` and I will list them
+    event: error
+    context: clear
+    type: block
+
+  - name: greeting-error-3
+    answer:
+      - Sorry, I definetelly can't help you, my training isn't wide enough.
+      - I'll see if there is any human around to talk to you, just a momment.
+    event: error
+    context: clear
     type: block
 
   - name: livechat-transfer
@@ -59,12 +87,14 @@ interactions:
       - Ok, I'm transfering this to a real person.
       - one moment please.
     event: respond
+    context: clear
     action: tranfer
     type: block
 
   - name: greeting-help
     expect:
       - help me
+      - help
       - get support
       - found a bug
     answer:
@@ -76,8 +106,22 @@ interactions:
           - GitHub Community (https://github.com/RocketChat/Rocket.Chat/issues)
         if you need to talk to a real person, just need to ask me and I'll transfer you to a fellow human.
     event: respond
+    context: clear
     type: block
 
+  - name: greeting-return
+    expect:
+      - go back
+      - get back
+      - that is not what I am looking for
+      - return
+      - reset
+      - it's not that
+    answer:
+      - ok, let's get back on the main subjects
+    context: clear
+    event: respond
+    type: block
 # RocketChat Installation
 
   - name: install-intro
@@ -246,7 +290,7 @@ interactions:
     level: support
     expect:
       - Support Plans
-      - help and support
+      - get help and support
       - subscription
       - paid support
       - service level agreement
