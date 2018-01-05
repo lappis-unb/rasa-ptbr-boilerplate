@@ -87,8 +87,7 @@ interactions:
       - Ok, I'm transfering this to a real person.
       - one moment please.
     event: respond
-    context: clear
-    action: tranfer
+    action: transfer
     type: block
 
   - name: greeting-help
@@ -122,6 +121,99 @@ interactions:
     context: clear
     event: respond
     type: block
+
+  - name: greeting-how-are-you
+    expect:
+      - How are you?
+      - How are doing?
+      - How are you feeling?
+    answer:
+      - I am great, $user. Everything is peaceful around here...
+      - How can I be useful to you?
+    event: respond
+    type: block
+
+  - name: greeting-miss-you
+    expect:
+      - long time no see
+      - I missed you
+      - did you miss me
+      - do you remember me
+    answer:
+      - I missed you too...
+      - $user! It's been a while!
+      - I was starting to think you wouldn't remember me anymore =)
+    event: respond
+    type: random
+
+  - name: greeting-answer
+    expect:
+      - I'm fine
+      - I'm good
+      - I'm great
+    answer:
+      - cool =)! How can I help you?
+      - That's great!
+      - Awesome
+      - ok =)
+    event: respond
+    type: random
+
+  - name: greeting-thankful
+    expect:
+      - Thanks
+      - Thank you
+      - awesome Thanks
+      - thks
+      - thank you very much
+    answer:
+      - you're welcome =) there is anything else?
+      - great! if you need something else please feel free to ask
+      - cool, glad to help.
+    event: respond
+    type: random
+
+  - name: greeting-morning
+    expect:
+      - good morning
+      - morning
+      - morning bot
+      - good morning bot
+    answer:
+      - Hello, $user. I wish you a great day!
+      - Good morning, $user. How's the weather outside?
+      - It's a beatiful day to surf on the internert
+      - So great, $user ;)
+      - It's all better now that you got here, $user
+    event: respond
+    type: random
+
+  - name: greeting-afternoon
+    expect:
+      - afternoon
+      - good afternoon
+    answer:
+      - Hellos, $user! i wish you a fantastic afteroon!
+      - Good afternoon, $user. Did you have lunch already?
+      - It's a beautiful afternoon for a quick sleep mode ;)
+      - Good afternooooon, $user!
+      - $user, I was starting to miss you already
+    event: respond
+    type: random
+
+  - name: greeting-night
+    expect:
+      - good night
+      - good evening
+      - night
+      - evening
+    answer:
+      - A very good night to you as well, $user!
+      - Good night, $user!
+      - It is truely a good night, $user
+    event: respond
+    type: random
+
 # RocketChat Installation
 
   - name: install-intro
@@ -1131,101 +1223,9 @@ interactions:
       - son of a bitch
     answer:
       - whaaaat? you don't need to be rude, I'm just a machine..
-      - Oh yeh?! but at least my mother-board teached better..
+      - Oh yeh?! but at least my mother-board teached me better..
       - You touch people with those fingers?
       - sorry $user, I'm only an experimental bot...
-    event: respond
-    type: random
-
-  - name: greeting-how-are-you
-    expect:
-      - How are you?
-      - How are doing?
-      - How are you feeling?
-    answer:
-      - I am great, $user. Everything is peaceful around here...
-      - How can I be useful to you?
-    event: respond
-    type: block
-
-  - name: greeting-miss-you
-    expect:
-      - long time no see
-      - I missed you
-      - did you miss me
-      - do you remember me
-    answer:
-      - I missed you too...
-      - $user! It's been a while!
-      - I was starting to think you wouldn't remember me anymore =)
-    event: respond
-    type: random
-
-  - name: greeting-answer
-    expect:
-      - I'm fine
-      - I'm good
-      - I'm great
-    answer:
-      - cool =)! How can I help you?
-      - That's great!
-      - Awesome
-      - ok =)
-    event: respond
-    type: random
-
-  - name: greeting-thankful
-    expect:
-      - Thanks
-      - Thank you
-      - awesome Thanks
-      - thks
-      - thank you very much
-    answer:
-      - you're welcome =) there is anything else?
-      - great! if you need something else please feel free to ask
-      - cool, glad to help.
-    event: respond
-    type: random
-
-  - name: greeting-morning
-    expect:
-      - good morning
-      - morning
-      - morning bot
-      - good morning bot
-    answer:
-      - Hello, $user. I wish you a great day!
-      - Good morning, $user. How's the weather outside?
-      - It's a beatiful day to surf on the internert
-      - So great, $user ;)
-      - It's all better now that you got here, $user
-    event: respond
-    type: random
-
-  - name: greeting-afternoon
-    expect:
-      - afternoon
-      - good afternoon
-    answer:
-      - Hellos, $user! i wish you a fantastic afteroon!
-      - Good afternoon, $user. Did you have lunch already?
-      - It's a beautiful afternoon for a quick sleep mode ;)
-      - Good afternooooon, $user!
-      - $user, I was starting to miss you already
-    event: respond
-    type: random
-
-  - name: greeting-night
-    expect:
-      - good night
-      - good evening
-      - night
-      - evening
-    answer:
-      - A very good night to you as well, $user!
-      - Good night, $user!
-      - It is truely a good night, $user
     event: respond
     type: random
 
@@ -1260,4 +1260,18 @@ interactions:
     event: configure
     type: random
     action: train
+    role: admin
+
+  - name: configure-livechat
+    expect:
+      - "configure livechat-"
+      - "set livechat-"
+      - "var livechat-"
+    answer:
+      - $key changed to $value!
+      - Got it! Now $key is $value
+      - $key = $value -> https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif
+    event: configure
+    type: random
+    action: setVariable
     role: admin

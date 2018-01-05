@@ -41,6 +41,7 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
 
   delay = Math.min(Math.max((msg.length / keysPerSecond) * 1000 - elapsed, 0), maxResponseTimeInSeconds * 1000)
   typing @, true
+
   setTimeout =>
     @send msg
 
@@ -51,21 +52,13 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
       cb?()
   , delay
 
-# check these
-livechatTransferHuman = (res) ->
-	setTimeout ->
-		res.robot.adapter.callMethod 'livechat:transfer',
-			roomId: res.envelope.room
-			departmentId: process.env.DEPARTMENT_ID
-	, 1000
-
-setUserName = (res, name) ->
-	res.robot.adapter.callMethod 'livechat:saveInfo',
-		_id: res.envelope.user.id
-		name: name
-	,
-		_id: res.envelope.room
-#
+# setUserName = (res, name) ->
+# 	res.robot.adapter.callMethod 'livechat:saveInfo',
+# 		_id: res.envelope.user.id
+# 		name: name
+# 	,
+# 		_id: res.envelope.room
+# #
 
 classifyInteraction = (interaction, classifier) ->
   if Array.isArray interaction.expect
@@ -247,17 +240,10 @@ module.exports = (_config, _configPath, robot) ->
     msg = res.match[0].replace res.robot.name+' ', ''
     msg = msg.replace(/^\s+/, '')
     msg = msg.replace(/\s+&/, '')
-    # console.log '\n\n'
-    # console.log JSON.stringify(res.robot)
-    # console.log '\n\n'
-    console.log JSON.stringify(res.message)
-    console.log '\n\n'
-    console.log JSON.stringify(res.envelope)
-    console.log '\n\n'
     # check if robot should respond
     if res.envelope.user.roomType in ['c','p']
       if (res.message.text.match new RegExp('\\b' + res.robot.name + '\\b', 'i')) or (res.message.text.match new RegExp('\\b' + res.robot.alias + '\\b', 'i'))
         processMessage res, msg
-        # TODO: Add engaged user conversation recognition
+        # TODO: Add engaged user conversation recognition/tracking
     else if res.envelope.user.roomType in ['d','l']
       processMessage res, msg
