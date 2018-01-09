@@ -17,6 +17,7 @@ ENV HUBOT_LANG='en'                                                  \
     RESPOND_TO_DM=true                                               \
     RESPOND_TO_LIVECHAT=true                                         \
     RESPOND_TO_EDITED=true                                           \
+    LIVECHAT_DEPARTMENT_ID=null                                      \
     LISTEN_ON_ALL_PUBLIC=true
 
 RUN apk --update add --no-cache git && \
