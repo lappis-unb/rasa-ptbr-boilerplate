@@ -1,6 +1,6 @@
 {
   "name": "hubot-natural",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": true,
   "author": "Diego Dorgam <diego.dorgam@rocket.chat>",
   "description": "NLP YAML oriented chatbot",

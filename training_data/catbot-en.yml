@@ -84,11 +84,15 @@ interactions:
       - call a human
       - transfer to a person
     answer:
-      - Ok, I'm transfering this to a real person.
-      - one moment please.
+      - Ok, I'll try to transfer this to a real person, one moment please...
+      - Alright, let me just check if there is a person online...
+      - No problem, let me just find a human online here...
+    offline:
+      - sorry, there is no one online right now. Please, if you can send an e-mail to sales@rocket.chat, our team will answer you as soon as possible.
     event: respond
     action: transfer
-    type: block
+    department: 6yXL9RLoyY5m882P2
+    type: random
 
   - name: greeting-help
     expect:

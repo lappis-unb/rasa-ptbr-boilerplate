@@ -128,3 +128,4 @@ tags
 .hubot_history
 bin/
 chat/
+launch.sh
