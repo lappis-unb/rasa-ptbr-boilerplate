@@ -21,16 +21,15 @@ interactions:
       - howdy
     answer:
       - |
-        Hello =), my name is CatBot, I'm an experimental ChatBot built in Rocket.Chat.
-        You can ask me stuff about:
+        Hello =), my name is CatBot, I'm a ChatBot built in Rocket.Chat.
+        Maybe I can help you with:
           - RocketChat Installation
           - Support Plans
           - Product Features
           - Cloud Services
           - Development and White Labeling
           - Partnership
-      - Please select a subject of those or
-      - if you need to talk to a real person, just need to ask me and I'll transfer you to a fellow human.
+      - if you need to talk to a real person I can transfer you to a fellow human.
     next:
       interactions:
         - install-intro
@@ -53,7 +52,7 @@ interactions:
   - name: greeting-error-1
     answer:
       - Sorry, I couldn't understand what you said, please choose one of the main topics, or ask for a `transfer` to talk to a person
-      - I don't understand, I'm only trained to ansewr for the main topics.
+      - I don't understand, I'm only trained to answer for the main topics.
     event: error
     context: clear
     type: random
@@ -1197,21 +1196,32 @@ interactions:
       - nice
       - alright =D
       - =)
-      - Awesome
       - ;)
+    event: respond
+    type: random
+
+  - name: ct-bye
+    expect:
+      - bye bye then
+      - goodbye
+      - see ya
+      - close this
+    answer:
+      - nice talking to you, bye =)
+      - great, hope I did helped you, bye bye.
+      - farwell, best regards.
     event: respond
     type: random
 
   - name: ct-what
     expect:
-      - what
+      - whaaat
       - say what
       - come again
     answer:
       - whaaaat?
       - what? did I said something wrong?
       - what what?
-      - ?
     event: respond
     type: random
 
@@ -1225,6 +1235,8 @@ interactions:
       - mother fucker
       - sucker
       - son of a bitch
+      - fuck you
+      - fucker
     answer:
       - whaaaat? you don't need to be rude, I'm just a machine..
       - Oh yeh?! but at least my mother-board teached me better..
