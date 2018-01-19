@@ -20,6 +20,16 @@ common.stringElseRandomKey = (variable) ->
   if variable instanceof Array
     variable[Math.floor(Math.random() * variable.length)]
 
+getYAMLFiles = (filepath) ->
+  listFile = fs.readdirSync filepath
+  dataFiles = []
+  if listFile.length > 0
+    dataFiles = listFile.map (filename) ->
+      return yaml.safeLoad fs.readFileSync filepath+'/'+filename, 'utf8'
+  else
+    console.error('The directory: '+ filepath + ' is empty.')
+  return dataFiles
+
 common.regexEscape = (string) ->
   #http://stackoverflow.com/a/6969486
   string.replace /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"
@@ -30,7 +40,12 @@ common.getConfigFilePath = () ->
 common.loadConfigfile = (filepath) ->
     try
       console.log("Loading corpus: " + filepath)
-      return yaml.safeLoad fs.readFileSync filepath, 'utf8'
+      if fs.lstatSync(filepath).isFile()
+        return yaml.safeLoad fs.readFileSync filepath, 'utf8'
+      else if fs.lstatSync(filepath).isDirectory()
+        # Return array with ymls files data
+        yamlFiles = getYAMLFiles(filepath)
+        console.log(yamlFiles)
     catch err
       console.error "An error occurred while trying to load bot's config."
       console.error err
