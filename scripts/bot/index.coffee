@@ -135,9 +135,8 @@ clearErrors = (res) ->
   key = 'errors_'+res.envelope.room+'_'+res.envelope.user.id
   res.robot.brain.set(key, 0)
 
-module.exports = (_config, _configPath, robot) ->
+module.exports = (_config, robot) ->
   global.config = _config
-  global.configPath = _configPath
 
   global.usersAndRoles = getUserRoles(robot)
 

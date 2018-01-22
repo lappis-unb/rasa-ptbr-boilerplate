@@ -3,7 +3,7 @@ FROM node:alpine
 LABEL mantainer "Diego Dorgam <diego.dorgam@rocket.chat>"
 
 ENV HUBOT_LANG='en'                                                  \
-    HUBOT_CORPUS='corpus.yml'                                        \
+    HUBOT_CORPUS='training_data/corpus.yml'                          \
     HUBOT_ADAPTER=rocketchat                                         \
     HUBOT_OWNER=RocketChat                                           \
     HUBOT_NAME=HubotNatural                                          \

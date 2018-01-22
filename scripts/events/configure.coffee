@@ -1,10 +1,9 @@
 path = require 'path'
 natural = require 'natural'
 
-{msgVariables, stringElseRandomKey, loadConfigfile} = require path.join '..', 'lib', 'common.coffee'
+{msgVariables, stringElseRandomKey, loadConfigfile, getConfigFilePath} = require  '../lib/common'
 {checkRole} = require path.join '..', 'lib', 'security.coffee'
 answers = {}
-# usersAndRoles = getUserRoles()
 
 class configure
   constructor: (@interaction) ->
@@ -40,7 +39,7 @@ class configure
   retrain: (msg) ->
     console.log 'inside retrain'
     scriptPath = path.join __dirname, '..'
-    global.config = loadConfigfile(global.configPath)
+    global.config = loadConfigfile getConfigFilePath()
     global.train()
 
     type = @interaction.type?.toLowerCase() or 'random'

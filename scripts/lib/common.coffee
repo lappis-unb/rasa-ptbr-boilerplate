@@ -24,6 +24,9 @@ common.regexEscape = (string) ->
   #http://stackoverflow.com/a/6969486
   string.replace /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"
 
+common.getConfigFilePath = () ->
+    return process.env.HUBOT_CORPUS || 'training_data/corpus.yml'
+
 common.loadConfigfile = (filepath) ->
     try
       console.log("Loading corpus: " + filepath)
