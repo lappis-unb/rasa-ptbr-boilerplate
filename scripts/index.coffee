@@ -1,9 +1,6 @@
 require 'coffeescript/register'
 
-path = require 'path'
-fs = require 'fs'
-
-{loadConfigfile, getConfigFilePath} = require  './lib/common'
+{ loadConfigfile, getConfigFilePath } = require  './lib/common'
 chatbot = require './bot/index'
 
 try

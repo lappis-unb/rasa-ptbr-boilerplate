@@ -1,7 +1,7 @@
 path = require 'path'
 natural = require 'natural'
 
-{msgVariables, stringElseRandomKey} = require path.join '..', 'lib', 'common.coffee'
+{ msgVariables, stringElseRandomKey } = require path.join '..', 'lib', 'common.coffee'
 answers = {}
 
 class error
