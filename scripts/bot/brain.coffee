@@ -1,5 +1,3 @@
-fs = require 'fs'
-path = require 'path'
 natural = require 'natural'
 
 brain = {}
@@ -10,14 +8,9 @@ PorterStemmer = natural.PorterStemmer
 if lang != 'en'
   PorterStemmer = require '../../node_modules/natural/lib/natural/stemmers/porter_stemmer_' + lang + '.js'
 
-events = {}
 nodes = {}
 error_count = 0
 err_nodes = 0
-
-eventsPath = path.join __dirname, '..', 'events'
-for event in fs.readdirSync(eventsPath).sort()
-  events[event.replace /\.coffee$/, ''] = require path.join eventsPath, event
 
 classifyInteraction = (interaction, classifier) ->
   if Array.isArray interaction.expect
@@ -53,7 +46,7 @@ brain.train = () ->
 
   for interaction in global.config.interactions
     {name, event} = interaction
-    global.nodes[name] = new events[event] interaction
+    global.nodes[name] = new global.events[event] interaction
     # count error nodes
     if name.substr(0,5) == "error"
       err_nodes++

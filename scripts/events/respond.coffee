@@ -1,8 +1,7 @@
-path = require 'path'
-natural = require 'natural'
+require 'coffeescript/register'
 
-{ msgVariables, stringElseRandomKey } = require path.join '..', 'lib', 'common.coffee'
-answers = {}
+{msgVariables, stringElseRandomKey} = require '../lib/common'
+
 livechat_department = (process.env.LIVECHAT_DEPARTMENT_ID || null )
 
 class respond

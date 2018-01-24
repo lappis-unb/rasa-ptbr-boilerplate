@@ -1,10 +1,16 @@
 require 'coffeescript/register'
 
+fs = require 'fs'
 path = require 'path'
 
 {regexEscape, loadConfigfile} = require '../lib/common'
 {getUserRoles, checkRole} = require '../lib/security'
-brain = require './brain'
+brain = require '../bot/brain'
+
+global.events = {}
+eventsPath = path.join __dirname, '..', 'events'
+for event in fs.readdirSync(eventsPath).sort()
+  global.events[event.replace /\.coffee$/, ''] = require path.join eventsPath, event
 
 typing = (res, t) ->
   res.robot.adapter.callMethod 'stream-notify-room',

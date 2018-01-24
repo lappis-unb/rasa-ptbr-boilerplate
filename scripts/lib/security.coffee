@@ -21,7 +21,7 @@ security.checkRole = (msg, role) ->
     else
       return true
   else
-    msg.robot.logger.info 'Role ' + role + ' não encontrado'
+    msg.robot.logger.info 'Role ' + role + ' not found'
     return false
 
 module.exports = security

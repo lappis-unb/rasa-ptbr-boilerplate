@@ -1,12 +1,8 @@
 require 'coffeescript/register'
 
-path = require 'path'
-natural = require 'natural'
-
+brain = require '../bot/brain'
 { msgVariables, stringElseRandomKey, loadConfigfile, getConfigFilePath } = require  '../lib/common'
-{ checkRole } = require '../lib/security.coffee'
-
-answers = {}
+{checkRole} = require '../lib/security'
 
 class configure
   constructor: (@interaction) ->
@@ -41,10 +37,8 @@ class configure
     return
 
   retrain: (msg) ->
-    console.log 'inside retrain'
-    scriptPath = path.join __dirname, '..'
     global.config = loadConfigfile getConfigFilePath()
-    global.train()
+    brain.train()
 
     type = @interaction.type?.toLowerCase() or 'random'
     switch type
