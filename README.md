@@ -96,7 +96,7 @@ To change the stemmers language, just set the environment variable `HUBOT_LANG` 
 
 ## Deploy with Docker
 
-We have a Dockerfile that builds a lightweight image based in Linux Alpine with all the repository content so you can upload that image to a docker registry and deploy your chatbot from there.
+We have a Dockerfile that builds a lightweight image based in Linux Alpine with all the repository content so you can upload that image to a docker registry and deploy your chatbot from there. It is located on `docker` folder.
 
 You also can use `docker-compose.yml` file to load a local instance of Rocket.Chat, MongoDB and HubotNatural services, where you can change the parameters if you must.
 
@@ -173,6 +173,16 @@ You can change the attributes of variables and volumes to your specific needs an
 
 If you want to run only the hubot-natural service to connect an already running instance of Rocket.Chat, you just need to remember to set the `ROCKETCHAT_URL` to a correct value, like `https://open.rocket.chat`.
 
+## Bot configuration
+
+In order to correctly use Hubot Natural, after running `docker-compose up` command, it is necessary to do some configuration steps. To do that, there are two main options:
+
+The first one is to do manually the steps described at [bot config documentation](docs/config_bot.md).
+
+The second option is to execute the script `bot_config.py`, located at root directory on project. That will automatically configure bot based on following variables defined on script: `admin_name, admin_password, bot_name` and `bot_password`.  It is important to remember of properly set the values of this variables according to the context. The values used on `bot_name` and `bot_password` must be the same defined on docker-compose.yml, on the variables `ROCKETCHAT_USER` and `ROCKETCHAT_PASSWORD` respectively. And the values defined at `admin_name` and `admin_password` variables must be the credentials of an pre existent user on rocketchat, that has admin permissions.
+
+To create an admin user automatically, before executing the services, just define the variables `ADMIN_USERNAME` and `ADMIN_PASS` for rocketchat service on `docker-compose.yml`.
+
 ## Deploy with Hubot
 
 To deploy HubotNatural, first you have to install yo hubot-generator:
@@ -242,6 +252,11 @@ bin/hubot
 wait a minute for the loading process, and then you can talk to mybot.
 
 Take a look to adapters to run your bot in other platafforms.
+
+## Configure Live Transfer
+
+It's possible to configure Hubot Natural to redirect conversation to a real person, in moments when the bot can not help users as much as needed.
+To activate and configure `Live Transfer` feature, follow the steps described on [live transfer config documentation](docs/config_live_transfer.md).
 
 ## Env Variables:
 
