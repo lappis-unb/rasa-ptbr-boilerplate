@@ -1,16 +1,9 @@
 require 'coffeescript/register'
 
-fs = require 'fs'
-path = require 'path'
-
-{regexEscape, loadConfigfile} = require '../lib/common'
-{getUserRoles, checkRole} = require '../lib/security'
-brain = require '../bot/brain'
-
-global.events = {}
-eventsPath = path.join __dirname, '..', 'events'
-for event in fs.readdirSync(eventsPath).sort()
-  global.events[event.replace /\.coffee$/, ''] = require path.join eventsPath, event
+{ regexEscape, loadConfigfile } = require '../lib/common'
+{ getUserRoles, checkRole } = require '../lib/security'
+actionHandler = require './action-handler'
+brain = require './brain'
 
 typing = (res, t) ->
   res.robot.adapter.callMethod 'stream-notify-room',
@@ -42,6 +35,9 @@ sendWithNaturalDelay = (msgs, elapsed = 0) ->
       cb?()
   , delay
 
+createMatch = (text) ->
+  return res.message.text.match new RegExp('\\b' + text + '\\b', 'i')
+
 module.exports = (_config, robot) ->
   global.config = _config
 
@@ -54,17 +50,19 @@ module.exports = (_config, robot) ->
     robot.logger.warning 'No trust level configured.'
     return
 
+  actionHandler.registerActions(global.config)
   brain.train()
 
   robot.hear /(.+)/i, (res) ->
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
-    msg = res.match[0].replace res.robot.name + ' ', ''
-    msg = msg.replace(/^\s+/, '')
-    msg = msg.replace(/\s+&/, '')
+    msg = (res.match[0].replace res.robot.name + ' ', '').trim()
+
     # check if robot should respond
     if res.envelope.user.roomType in ['c', 'p']
-      if (res.message.text.match new RegExp('\\b' + res.robot.name + '\\b', 'i')) or (res.message.text.match new RegExp('\\b' + res.robot.alias + '\\b', 'i'))
-        brain.processMessage res, msg
+      if (createMatch(res.robot.name)) or (createMatch(res.robot.alias))
+        actionName = brain.processMessage(res, msg)
+        actionHandler.takeAction(actionName, res)
         # TODO: Add engaged user conversation recognition/tracking
-    else if res.envelope.user.roomType in ['d','l']
-      brain.processMessage res, msg
+    else if res.envelope.user.roomType in ['d', 'l']
+      actionName = brain.processMessage(res, msg)
+      actionHandler.takeAction(actionName, res)

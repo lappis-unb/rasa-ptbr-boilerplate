@@ -1,3 +1,5 @@
+require 'coffeescript/register'
+
 natural = require 'natural'
 
 brain = {}
@@ -8,15 +10,16 @@ PorterStemmer = natural.PorterStemmer
 if lang != 'en'
   PorterStemmer = require '../../node_modules/natural/lib/natural/stemmers/porter_stemmer_' + lang + '.js'
 
-nodes = {}
+actionHandler = require './action-handler'
+
+classifier = {}
 error_count = 0
-err_nodes = 0
 
 classifyInteraction = (interaction, classifier) ->
   if Array.isArray interaction.expect
     for doc in interaction.expect
       if interaction.multi == true
-        classifier.addDocument(doc, interaction.name+'|'+doc)
+        classifier.addDocument(doc, interaction.name + '|' + doc)
       else
         classifier.addDocument(doc, interaction.name)
 
@@ -41,37 +44,31 @@ brain.train = () ->
   console.log 'Processing interactions'
   console.time 'Processing interactions (Done)'
 
-  global.nodes = {}
-  global.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
+  classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
 
   for interaction in global.config.interactions
-    {name, event} = interaction
-    global.nodes[name] = new global.events[event] interaction
-    # count error nodes
-    if name.substr(0,5) == "error"
-      err_nodes++
     if interaction.level != 'context'
-      classifyInteraction interaction, global.classifier
+      classifyInteraction interaction, classifier
 
-  global.classifier.train()
+  classifier.train()
 
   console.timeEnd 'Processing interactions (Done)'
 
 setContext = (res, context) ->
-  key = 'context_'+res.envelope.room+'_'+res.envelope.user.id
+  key = 'context_' + res.envelope.room + '_' + res.envelope.user.id
   console.log 'set context', context
   res.robot.brain.set(key, context)
 
 getContext = (res) ->
-  key = 'context_'+res.envelope.room+'_'+res.envelope.user.id
+  key = 'context_' + res.envelope.room + '_' + res.envelope.user.id
   return res.robot.brain.get(key)
 
 isDebugMode = (res) ->
-  key = 'configure_debug-mode_'+res.envelope.room
+  key = 'configure_debug-mode_' + res.envelope.room
   return (res.robot.brain.get(key) == 'true')
 
 getDebugCount = (res) ->
-  key = 'configure_debug-count_'+res.envelope.room
+  key = 'configure_debug-count_' + res.envelope.room
   return if res.robot.brain.get(key) then res.robot.brain.get(key) - 1 else false
 
 buildClassificationDebugMsg = (res, classifications) ->
@@ -82,7 +79,8 @@ buildClassificationDebugMsg = (res, classifications) ->
     classifications = classifications[0..debugCount]
 
   for classification, i in classifications
-    list = list.concat 'Label: ' + classification.label + ' Score: ' + classification.value + '\n'
+    list = (list.concat 'Label: ' + classification.label + ' Score: ' +
+              classification.value + '\n')
 
   newMsg = {
     channel: res.envelope.user.roomID,
@@ -95,7 +93,7 @@ buildClassificationDebugMsg = (res, classifications) ->
   return newMsg
 
 incErrors = (res) ->
-  key = 'errors_'+res.envelope.room+'_'+res.envelope.user.id
+  key = 'errors_' + res.envelope.room + '_' + res.envelope.user.id
   errors = res.robot.brain.get(key) or 0
   errors++
   console.log 'inc errors ', errors
@@ -104,22 +102,22 @@ incErrors = (res) ->
 
 clearErrors = (res) ->
   console.log 'clear errors'
-  key = 'errors_'+res.envelope.room+'_'+res.envelope.user.id
+  key = 'errors_' + res.envelope.room + '_' + res.envelope.user.id
   res.robot.brain.set(key, 0)
 
 brain.processMessage = (res, msg) ->
   context = getContext(res)
-  currentClassifier = global.classifier
+  currentClassifier = classifier
   trust = global.config.trust
   interaction = undefined
   debugMode = isDebugMode(res)
   console.log 'context ->', context
 
   if context
-    interaction = global.config.interactions.find (interaction) -> interaction.name is context
+    interaction = global.config.interactions.find (interaction) ->
+      interaction.name is context
     if interaction? and interaction.next?.classifier?
       currentClassifier = interaction.next.classifier
-
       if interaction.next.trust?
         trust = interaction.next.trust
 
@@ -129,16 +127,16 @@ brain.processMessage = (res, msg) ->
 
   if debugMode
     newMsg = buildClassificationDebugMsg(res, classifications)
-    robot.adapter.chatdriver.customMessage(newMsg);
+    robot.adapter.chatdriver.customMessage(newMsg)
 
   if classifications[0].value >= trust
     clearErrors res
     [node_name, sub_node_name] = classifications[0].label.split('|')
-    console.log({node_name, sub_node_name})
+    console.log({ node_name, sub_node_name })
     int = global.config.interactions.find (interaction) ->
       interaction.name is node_name
     if int.classifier?
-      subClassifications = int.classifier.getClassifications(msg)
+      int.classifier.getClassifications(msg)
   else
     if Array.isArray interaction?.next?.error
       error_count = incErrors res
@@ -151,7 +149,7 @@ brain.processMessage = (res, msg) ->
       return brain.processMessage(res, msg)
     else
       error_count = incErrors res
-      if error_count > err_nodes
+      if error_count > actionHandler.errorNodesCount()
         clearErrors res
       error_node_name = "error-" + error_count
 
@@ -160,14 +158,13 @@ brain.processMessage = (res, msg) ->
 
   if not currentInteraction?
     clearErrors res
-    return console.log 'Invalid interaction ['+node_name+']'
+    return console.log 'Invalid interaction [' + node_name + ']'
 
   if currentInteraction.context == 'clear'
     setContext(res, undefined)
   else if node_name?
     setContext(res, node_name)
 
-  currentNode = global.nodes[node_name or error_node_name]
-  currentNode.process.call @, res, msg, subClassifications
+  return node_name or error_node_name
 
 module.exports = brain

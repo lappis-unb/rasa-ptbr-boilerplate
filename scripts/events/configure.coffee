@@ -2,17 +2,16 @@ require 'coffeescript/register'
 
 brain = require '../bot/brain'
 { msgVariables, stringElseRandomKey, loadConfigfile, getConfigFilePath } = require  '../lib/common'
-{checkRole} = require '../lib/security'
 
 class configure
   constructor: (@interaction) ->
 
   process: (msg) =>
     if @interaction.role?
-        if checkRole(msg, @interaction.role)
-          @act(msg)
-        else
-          msg.sendWithNaturalDelay "*Acces Denied* Action requires role #{@interaction.role}"
+      if checkRole(msg, @interaction.role)
+        @act(msg)
+      else
+        msg.sendWithNaturalDelay "*Acces Denied* Action requires role #{@interaction.role}"
     else
       @act(msg)
 

@@ -1,6 +1,6 @@
 require 'coffeescript/register'
 
-{msgVariables, stringElseRandomKey} = require '../lib/common'
+{ msgVariables, stringElseRandomKey } = require '../lib/common'
 
 livechat_department = (process.env.LIVECHAT_DEPARTMENT_ID || null )
 
