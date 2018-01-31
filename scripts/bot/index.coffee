@@ -21,8 +21,9 @@ sendWithNaturalDelay = (msgs, elapsed = 0) ->
     cb = msg.callback
     msg = msg.answer
 
-  delay = Math.min(Math.max((msg.length / keysPerSecond) * 1000 - elapsed, 0),
-    maxResponseTimeInSeconds * 1000)
+  minTimeTyping = maxResponseTimeInSeconds * 1000
+  timeToType = (msg.length / keysPerSecond) * 1000 - elapsed
+  delay = Math.min(Math.max(timeToType, 0), minTimeTyping)
   typing @, true
 
   setTimeout =>

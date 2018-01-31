@@ -4,11 +4,13 @@ require 'coffeescript/register'
 
 livechat_department = (process.env.LIVECHAT_DEPARTMENT_ID || null )
 
-class respond
+class Respond
   constructor: (@interaction) ->
   process: (msg) =>
     lc_dept = @interaction.department or livechat_department
-    offline_message = @interaction.offline or 'Sorry, there is no online agents to transfer to.'
+    offline_message = (
+      @interaction.offline or 'Sorry, there is no online agents to transfer to.'
+    )
     type = @interaction.type?.toLowerCase() or 'random'
     switch type
       when 'block'
@@ -46,4 +48,4 @@ class respond
                             msg.sendWithNaturalDelay message
                 ), delay)
 
-module.exports = respond
+module.exports = Respond

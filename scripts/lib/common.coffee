@@ -3,14 +3,19 @@ yaml = require 'js-yaml'
 
 common = {}
 
-common.applyVariable = (string, variable, value, regexFlags = 'i') ->
-  string.replace new RegExp("(^|\\W)\\$#{variable}(\\W|$)", regexFlags), (match) ->
-    match.replace "$#{variable}", value
+applyVariable = (string, variable, value, regexFlags = 'i') ->
+  string.replace(
+    new RegExp("(^|\\W)\\$#{variable}(\\W|$)", regexFlags),
+    (match) ->
+      match.replace "$#{variable}", value
+  )
 
 common.msgVariables = (message, msg, variables = {}) ->
-  message = common.applyVariable message, 'user', msg.envelope.user.name
-  message = common.applyVariable message, 'bot', msg.robot.alias
-  message = common.applyVariable message, 'room', msg.envelope.room if msg.envelope.room?
+  message = applyVariable message, 'user', msg.envelope.user.name
+  message = applyVariable message, 'bot', msg.robot.alias
+  if (msg.envelope.room?)
+    message = applyVariable message, 'room', msg.envelope.room
+
   for key, value of variables
     message = common.applyVariable message, key, value
   return message
@@ -46,20 +51,22 @@ common.regexEscape = (string) ->
   string.replace /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"
 
 common.getConfigFilePath = () ->
-    return process.env.HUBOT_CORPUS || 'training_data/corpus.yml'
+  return process.env.HUBOT_CORPUS || 'training_data/corpus.yml'
 
 common.loadConfigfile = (filepath) ->
-    try
-      console.log("Loading corpus: " + filepath)
-      if fs.lstatSync(filepath).isFile()
-        return yaml.safeLoad fs.readFileSync filepath, 'utf8'
-      else if fs.lstatSync(filepath).isDirectory()
-        yamlFiles = getYAMLFiles(filepath)
-        return concatYAMLFiles(yamlFiles)
-    catch err
-      console.error "An error occurred while trying to load bot's config."
-      console.error err
-      errorMessage = "Error on loading YAML file " + filepath
-      throw errorMessage
+  try
+    console.log("Loading corpus: " + filepath)
+
+    if fs.lstatSync(filepath).isFile()
+      return yaml.safeLoad fs.readFileSync filepath, 'utf8'
+
+    else if fs.lstatSync(filepath).isDirectory()
+      yamlFiles = getYAMLFiles(filepath)
+      return concatYAMLFiles(yamlFiles)
+
+  catch err
+    console.error "An error occurred while trying to load bot's config."
+    console.error err
+    throw Error("Error on loading YAML file " + filepath)
 
 module.exports = common

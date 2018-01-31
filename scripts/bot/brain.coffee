@@ -8,7 +8,8 @@ lang = (process.env.HUBOT_LANG || 'en')
 
 PorterStemmer = natural.PorterStemmer
 if lang != 'en'
-  PorterStemmer = require '../../node_modules/natural/lib/natural/stemmers/porter_stemmer_' + lang + '.js'
+  lang_captilize = lang.charAt(0).toUpperCase() + lang.slice(1)
+  PorterStemmer = natural['PorterStemmer' + lang_captilize]
 
 actionHandler = require './action-handler'
 
@@ -24,7 +25,9 @@ classifyInteraction = (interaction, classifier) ->
         classifier.addDocument(doc, interaction.name)
 
     if Array.isArray interaction.next?.interactions
-      interaction.next.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
+      interaction.next.classifier = new natural.LogisticRegressionClassifier(
+        PorterStemmer
+      )
       for nextInteractionName in interaction.next.interactions
         nextInteraction = global.config.interactions.find (n) ->
           return n.name is nextInteractionName
@@ -35,7 +38,9 @@ classifyInteraction = (interaction, classifier) ->
       interaction.next.classifier.train()
 
     if interaction.multi == true
-      interaction.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
+      interaction.classifier = new natural.LogisticRegressionClassifier(
+        PorterStemmer
+      )
       for doc in interaction.expect
         interaction.classifier.addDocument(doc, doc)
       interaction.classifier.train()
@@ -50,6 +55,9 @@ brain.train = () ->
     if interaction.level != 'context'
       classifyInteraction interaction, classifier
 
+    console.log('\tProcessing interaction: ' + interaction.name)
+
+  console.log 'Training Bot (This could be take a while...)'
   classifier.train()
 
   console.timeEnd 'Processing interactions (Done)'
@@ -69,7 +77,10 @@ isDebugMode = (res) ->
 
 getDebugCount = (res) ->
   key = 'configure_debug-count_' + res.envelope.room
-  return if res.robot.brain.get(key) then res.robot.brain.get(key) - 1 else false
+  if res.robot.brain.get(key)
+    return res.robot.brain.get(key) - 1
+  else
+    return false
 
 buildClassificationDebugMsg = (res, classifications) ->
   list = ''
