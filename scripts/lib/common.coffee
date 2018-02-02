@@ -20,17 +20,46 @@ common.stringElseRandomKey = (variable) ->
   if variable instanceof Array
     variable[Math.floor(Math.random() * variable.length)]
 
+getYAMLFiles = (filepath) ->
+  listFile = fs.readdirSync filepath
+  dataFiles = []
+  if listFile.length > 0
+    dataFiles = listFile.map (filename) ->
+      return yaml.safeLoad fs.readFileSync filepath + '/' + filename, 'utf8'
+  else
+    console.error('The directory: ' + filepath + ' is empty.')
+  return dataFiles
+
+concatYAMLFiles = (dataFiles) ->
+  mindBot = {}
+  if dataFiles.length > 0
+    mindBot = { trust: dataFiles[0].trust, interactions: [] }
+    dataFiles.forEach (element) ->
+      mindBot.trust = Math.min(mindBot.trust, element.trust)
+      mindBot.interactions = mindBot.interactions.concat element.interactions
+  else
+    console.error('Data files is empty.')
+  return mindBot
+
 common.regexEscape = (string) ->
   #http://stackoverflow.com/a/6969486
   string.replace /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"
 
+common.getConfigFilePath = () ->
+    return process.env.HUBOT_CORPUS || 'training_data/corpus.yml'
+
 common.loadConfigfile = (filepath) ->
     try
       console.log("Loading corpus: " + filepath)
-      return yaml.safeLoad fs.readFileSync filepath, 'utf8'
+      if fs.lstatSync(filepath).isFile()
+        return yaml.safeLoad fs.readFileSync filepath, 'utf8'
+      else if fs.lstatSync(filepath).isDirectory()
+        yamlFiles = getYAMLFiles(filepath)
+        return concatYAMLFiles(yamlFiles)
     catch err
       console.error "An error occurred while trying to load bot's config."
       console.error err
-      throw "Error on loading YAML file " + filepath
+      errorMessage = "Error on loading YAML file " + filepath
+      throw errorMessage
 
 module.exports = common

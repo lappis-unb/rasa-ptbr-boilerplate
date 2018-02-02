@@ -5,9 +5,11 @@ natural = require 'natural'
 lang = (process.env.HUBOT_LANG || 'en')
 
 if lang == "en"
-  PorterStemmer = require path.join '..','..','node_modules','natural','lib','natural','stemmers','porter_stemmer.js'
+  PorterStemmer = require path.join '..', '..', 'node_modules', 'natural', 'lib',
+   'natural', 'stemmers', 'porter_stemmer.js'
 else
-  PorterStemmer = require path.join '..','..','node_modules','natural','lib','natural','stemmers','porter_stemmer_' + lang + '.js'
+  PorterStemmer = require path.join '..', '..', 'node_modules', 'natural', 'lib',
+    'natural', 'stemmers', 'porter_stemmer_' + lang + '.js'
 
 debug_mode = ((process.env.HUBOT_NATURAL_DEBUG_MODE == 'true') || false)
 
@@ -17,17 +19,18 @@ nodes = {}
 error_count = 0
 err_nodes = 0
 
-{regexEscape, loadConfigfile} = require path.join '..', 'lib', 'common.coffee'
-{getUserRoles, checkRole} = require path.join '..', 'lib', 'security.coffee'
+{ regexEscape, loadConfigfile } = require path.join '..', 'lib', 'common.coffee'
+{ getUserRoles, checkRole } = require path.join '..', 'lib', 'security.coffee'
 
 eventsPath = path.join __dirname, '..', 'events'
 for event in fs.readdirSync(eventsPath).sort()
   events[event.replace /\.coffee$/, ''] = require path.join eventsPath, event
 
 typing = (res, t) ->
-  res.robot.adapter.callMethod 'stream-notify-room', res.envelope.user.roomID+'/typing', res.robot.alias, t is true
+  res.robot.adapter.callMethod 'stream-notify-room',
+    res.envelope.user.roomID + '/typing', res.robot.alias, t is true
 
-sendWithNaturalDelay = (msgs, elapsed=0) ->
+sendWithNaturalDelay = (msgs, elapsed = 0) ->
   if !Array.isArray msgs
     msgs = [msgs]
 
@@ -39,7 +42,8 @@ sendWithNaturalDelay = (msgs, elapsed=0) ->
     cb = msg.callback
     msg = msg.answer
 
-  delay = Math.min(Math.max((msg.length / keysPerSecond) * 1000 - elapsed, 0), maxResponseTimeInSeconds * 1000)
+  delay = Math.min(Math.max((msg.length / keysPerSecond) * 1000 - elapsed, 0),
+    maxResponseTimeInSeconds * 1000)
   typing @, true
 
   setTimeout =>
@@ -64,7 +68,7 @@ classifyInteraction = (interaction, classifier) ->
   if Array.isArray interaction.expect
     for doc in interaction.expect
       if interaction.multi == true
-        classifier.addDocument(doc, interaction.name+'|'+doc)
+        classifier.addDocument(doc, interaction.name + '|' + doc)
       else
         classifier.addDocument(doc, interaction.name)
 
@@ -86,20 +90,20 @@ classifyInteraction = (interaction, classifier) ->
       interaction.classifier.train()
 
 setContext = (res, context) ->
-  key = 'context_'+res.envelope.room+'_'+res.envelope.user.id
+  key = 'context_' + res.envelope.room + '_' + res.envelope.user.id
   console.log 'set context', context
   res.robot.brain.set(key, context)
 
 getContext = (res) ->
-  key = 'context_'+res.envelope.room+'_'+res.envelope.user.id
+  key = 'context_' + res.envelope.room + '_' + res.envelope.user.id
   return res.robot.brain.get(key)
 
 isDebugMode = (res) ->
-  key = 'configure_debug-mode_'+res.envelope.room
+  key = 'configure_debug-mode_' + res.envelope.room
   return (res.robot.brain.get(key) == 'true')
 
 getDebugCount = (res) ->
-  key = 'configure_debug-count_'+res.envelope.room
+  key = 'configure_debug-count_' + res.envelope.room
   return if res.robot.brain.get(key) then res.robot.brain.get(key) - 1 else false
 
 buildClassificationDebugMsg = (res, classifications) ->
@@ -123,7 +127,7 @@ buildClassificationDebugMsg = (res, classifications) ->
   return newMsg
 
 incErrors = (res) ->
-  key = 'errors_'+res.envelope.room+'_'+res.envelope.user.id
+  key = 'errors_' + res.envelope.room + '_' + res.envelope.user.id
   errors = res.robot.brain.get(key) or 0
   errors++
   console.log 'inc errors ', errors
@@ -132,12 +136,11 @@ incErrors = (res) ->
 
 clearErrors = (res) ->
   console.log 'clear errors'
-  key = 'errors_'+res.envelope.room+'_'+res.envelope.user.id
+  key = 'errors_' + res.envelope.room + '_' + res.envelope.user.id
   res.robot.brain.set(key, 0)
 
-module.exports = (_config, _configPath, robot) ->
+module.exports = (_config, robot) ->
   global.config = _config
-  global.configPath = _configPath
 
   global.usersAndRoles = getUserRoles(robot)
 
@@ -158,17 +161,20 @@ module.exports = (_config, _configPath, robot) ->
     global.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
 
     for interaction in global.config.interactions
-      {name, event} = interaction
+      { name, event } = interaction
       global.nodes[name] = new events[event] interaction
       # count error nodes
-      if name.substr(0,5) == "error"
+      if name.substr(0, 5) == "error"
         err_nodes++
       if interaction.level != 'context'
         classifyInteraction interaction, global.classifier
+      console.log('\tProcessing interaction: ' + name)
 
+    console.log 'Training Hubot (This could be take a while...)'
     global.classifier.train()
+    console.log '\n'
 
-    console.timeEnd 'Processing interactions (Done)'
+    console.timeEnd '\nProcessing interactions (Done)'
 
   global.train()
 
@@ -194,12 +200,12 @@ module.exports = (_config, _configPath, robot) ->
 
     if debugMode
       newMsg = buildClassificationDebugMsg(res, classifications)
-      robot.adapter.chatdriver.customMessage(newMsg);
+      robot.adapter.chatdriver.customMessage(newMsg)
 
     if classifications[0].value >= trust
       clearErrors res
       [node_name, sub_node_name] = classifications[0].label.split('|')
-      console.log({node_name, sub_node_name})
+      console.log({ node_name, sub_node_name })
       int = global.config.interactions.find (interaction) ->
         interaction.name is node_name
       if int.classifier?
@@ -225,7 +231,7 @@ module.exports = (_config, _configPath, robot) ->
 
     if not currentInteraction?
       clearErrors res
-      return console.log 'Invalid interaction ['+node_name+']'
+      return console.log 'Invalid interaction [' + node_name + ']'
 
     if currentInteraction.context == 'clear'
       setContext(res, undefined)
@@ -237,13 +243,13 @@ module.exports = (_config, _configPath, robot) ->
 
   robot.hear /(.+)/i, (res) ->
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
-    msg = res.match[0].replace res.robot.name+' ', ''
+    msg = res.match[0].replace res.robot.name + ' ', ''
     msg = msg.replace(/^\s+/, '')
     msg = msg.replace(/\s+&/, '')
     # check if robot should respond
-    if res.envelope.user.roomType in ['c','p']
+    if res.envelope.user.roomType in ['c', 'p']
       if (res.message.text.match new RegExp('\\b' + res.robot.name + '\\b', 'i')) or (res.message.text.match new RegExp('\\b' + res.robot.alias + '\\b', 'i'))
         processMessage res, msg
         # TODO: Add engaged user conversation recognition/tracking
-    else if res.envelope.user.roomType in ['d','l']
+    else if res.envelope.user.roomType in ['d', 'l']
       processMessage res, msg

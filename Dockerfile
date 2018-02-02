@@ -3,7 +3,7 @@ FROM node:alpine
 LABEL mantainer "Diego Dorgam <diego.dorgam@rocket.chat>"
 
 ENV HUBOT_LANG='en'                                                  \
-    HUBOT_CORPUS='corpus.yml'                                        \
+    HUBOT_CORPUS='training_data/corpus.yml'                          \
     HUBOT_ADAPTER=rocketchat                                         \
     HUBOT_OWNER=RocketChat                                           \
     HUBOT_NAME=HubotNatural                                          \
@@ -20,7 +20,7 @@ ENV HUBOT_LANG='en'                                                  \
     LIVECHAT_DEPARTMENT_ID=null                                      \
     LISTEN_ON_ALL_PUBLIC=true
 
-RUN apk --update add --no-cache git && \
+RUN apk --update add --no-cache git make gcc g++ python && \
     addgroup -S hubotnat && adduser -S -g hubotnat hubotnat
 
 USER node
@@ -60,7 +60,3 @@ ADD scripts/ /home/hubotnat/bot/scripts/
 ADD training_data/ /home/hubotnat/bot/training_data
 
 ENTRYPOINT /home/hubotnat/bot/bin/hubot -a rocketchat
-
-USER root
-RUN apk del git               && \
-    rm -rf /var/cache/apk/*

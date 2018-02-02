@@ -1,7 +1,7 @@
 path = require 'path'
 natural = require 'natural'
 
-{msgVariables, stringElseRandomKey} = require path.join '..', 'lib', 'common.coffee'
+{ msgVariables, stringElseRandomKey } = require path.join '..', 'lib', 'common.coffee'
 answers = {}
 livechat_department = (process.env.LIVECHAT_DEPARTMENT_ID || null )
 
@@ -27,7 +27,7 @@ class respond
         @livechatTransfer(msg, 3000, lc_dept, offline_message, type)
 
 
-  livechatTransfer: (msg, delay=3000, lc_dept, offline_message, type) ->
+  livechatTransfer: (msg, delay = 3000, lc_dept, offline_message, type) ->
     setTimeout((-> msg.robot.adapter.callMethod('livechat:transfer',
                       roomId: msg.envelope.room
                       departmentId: lc_dept
