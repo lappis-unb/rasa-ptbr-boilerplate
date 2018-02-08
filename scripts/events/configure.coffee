@@ -1,6 +1,6 @@
 require 'coffeescript/register'
 
-brain = require '../bot/brain'
+classifier = require '../bot/classifier'
 security = require '../lib/security'
 { msgVariables, stringElseRandomKey,
   loadConfigfile, getConfigFilePath } = require  '../lib/common'
@@ -48,7 +48,7 @@ class Configure
 
   retrain: (msg) ->
     global.config = loadConfigfile getConfigFilePath()
-    brain.train()
+    classifier.train()
 
     type = @interaction.type?.toLowerCase() or 'random'
     switch type

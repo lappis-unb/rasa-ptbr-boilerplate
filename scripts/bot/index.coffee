@@ -3,7 +3,7 @@ require 'coffeescript/register'
 { regexEscape, loadConfigfile } = require '../lib/common'
 { getUserRoles, checkRole } = require '../lib/security'
 actionHandler = require './action-handler'
-brain = require './brain'
+classifier = require './classifier'
 
 typing = (res, t) ->
   res.robot.adapter.callMethod 'stream-notify-room',
@@ -52,7 +52,7 @@ module.exports = (_config, robot) ->
     return
 
   actionHandler.registerActions(global.config)
-  brain.train()
+  classifier.train()
 
   robot.hear /(.+)/i, (res) ->
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
@@ -61,9 +61,9 @@ module.exports = (_config, robot) ->
     # check if robot should respond
     if res.envelope.user.roomType in ['c', 'p']
       if (createMatch(res.robot.name)) or (createMatch(res.robot.alias))
-        actionName = brain.processMessage(res, msg)
+        actionName = classifier.processMessage(res, msg)
         actionHandler.takeAction(actionName, res)
         # TODO: Add engaged user conversation recognition/tracking
     else if res.envelope.user.roomType in ['d', 'l']
-      actionName = brain.processMessage(res, msg)
+      actionName = classifier.processMessage(res, msg)
       actionHandler.takeAction(actionName, res)

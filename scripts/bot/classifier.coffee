@@ -2,7 +2,7 @@ require 'coffeescript/register'
 
 natural = require 'natural'
 
-brain = {}
+classifier = {}
 
 lang = (process.env.HUBOT_LANG || 'en')
 
@@ -13,7 +13,8 @@ if lang != 'en'
 
 actionHandler = require './action-handler'
 
-classifier = {}
+# Classifier that holds all root level interactions
+root_classifier = {}
 error_count = 0
 
 classifyInteraction = (interaction, classifier) ->
@@ -45,20 +46,20 @@ classifyInteraction = (interaction, classifier) ->
         interaction.classifier.addDocument(doc, doc)
       interaction.classifier.train()
 
-brain.train = () ->
+classifier.train = () ->
   console.log 'Processing interactions'
   console.time 'Processing interactions (Done)'
 
-  classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
+  root_classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
 
   for interaction in global.config.interactions
     if interaction.level != 'context'
-      classifyInteraction interaction, classifier
+      classifyInteraction interaction, root_classifier
 
     console.log('\tProcessing interaction: ' + interaction.name)
 
   console.log 'Training Bot (This could be take a while...)'
-  classifier.train()
+  root_classifier.train()
 
   console.timeEnd 'Processing interactions (Done)'
 
@@ -116,9 +117,9 @@ clearErrors = (res) ->
   key = 'errors_' + res.envelope.room + '_' + res.envelope.user.id
   res.robot.brain.set(key, 0)
 
-brain.processMessage = (res, msg) ->
+classifier.processMessage = (res, msg) ->
   context = getContext(res)
-  currentClassifier = classifier
+  currentClassifier = root_classifier
   trust = global.config.trust
   interaction = undefined
   debugMode = isDebugMode(res)
@@ -157,7 +158,7 @@ brain.processMessage = (res, msg) ->
         error_node_name = interaction.next.error[0]
     else if interaction?.next?
       setContext(res, undefined)
-      return brain.processMessage(res, msg)
+      return classifier.processMessage(res, msg)
     else
       error_count = incErrors res
       if error_count > actionHandler.errorNodesCount()
@@ -178,4 +179,4 @@ brain.processMessage = (res, msg) ->
 
   return node_name or error_node_name
 
-module.exports = brain
+module.exports = classifier
