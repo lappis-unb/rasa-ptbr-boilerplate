@@ -22,8 +22,8 @@ class Respond
         message = msgVariables message, msg
         msg.sendWithNaturalDelay message
 
-    action = @interaction.action?.toLowerCase() or false
-    switch action
+    command = @interaction.command?.toLowerCase() or false
+    switch command
       when 'transfer'
         @livechatTransfer(msg, 3000, lc_dept, offline_message, type)
 

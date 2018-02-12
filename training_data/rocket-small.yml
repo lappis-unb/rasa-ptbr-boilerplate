@@ -25,7 +25,7 @@ interactions:
       - blip blip =] $key equals $value
       - $key = $value -> https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif
     context: clear
-    event: configure
+    action: configure
     type: random
     roleRequired: admin
 
@@ -41,7 +41,7 @@ interactions:
       - 'Eba! Vamos trabalhar juntos um dia, mande um e-mail pra gente com o seu perfil do linkedin: jobs@rocket.chat'
       - Hmmm te entendi… quer trabalhar comigo né? Mande um e-mail para jobs@rocket.chat, já vou avisando que sou bem competitivo!
     context: clear
-    event: respond
+    action: respond
     type: random
 
 # + Trabalho +
@@ -57,7 +57,7 @@ interactions:
     answer:
       - Vai me dizer que quer trabalhar com a gente? Eba!
       - Você pode procurar por vagas abertas aqui nesse https://rocket.chat/jobs  e qualquer coisa envia um email pra jobs@rocket.chat que o pessoal pode te dar mais detalhes!
-    event: respond
+    action: respond
     type: block
 
 # # Qual o salário da Rocket.Chat?
@@ -179,7 +179,7 @@ interactions:
     answer:
       - Todas as mensagens que forem escritas no chat normal poderão ser visualizadas pelos administradores. Mas se você quiser utilizar o chat criptografado, precisará apenas iniciar uma conversa off-the-record.
       - Para isso você vai precisar clicar no símbolo de uma chave na parte direita da tela do chat que fala OTR (off-the-record)
-    event: respond
+    action: respond
     type: block
 #
 # # A versão Demo é segura?
@@ -282,7 +282,7 @@ interactions:
       - 'Tem de tudo! Desde igrejas até bancos e empresas de tecnologia. Normalmente são empresas e/ou grupos que valorizam inovação, criatividade e agilidade.'
       - 'Quer saber se você se encaixa aqui? A resposta é sim! Olha que demais a nossa página de clientes, tem de tudo: http://rocket.chat/customers.'
       - 'Temos bastante clientes aqui, e normalmente eles tem uma coisa em comum: São amantes da tecnologia e querem o sucesso para seu ambiente e seus clientes.'
-    event: respond
+    action: respond
     type: random
 #
 # # Vocês tem estudos de Caso?
@@ -379,7 +379,7 @@ interactions:
       - 'Vish, são tantas diferenças… Mas já sabia que você teria essa dúvida, por isso me adiantei e criei uma tabela comparando o nosso produto dos outros :) Olha aqui: https://rocket.chat/whatisthedifference.'
       - 'Não é óbvio? Eles não tem um bot tão legal quanto eu! rsrs. Olha aqui: https://rocket.chat/whatisthedifference.'
       - 'Nós somos muitos e estamos constantemente mudando conforme nossa comunidade quer. Criamos uma tabela comparativa aqui pra mostrar como fazemos: https://rocket.chat/whatisthedifference.'
-    event: respond
+    action: respond
     type: random
 #
 # #  Parcerias
@@ -1032,7 +1032,7 @@ interactions:
     answer:
       - OpenSource significa código aberto, a Rocket.Chat é OpenSource, ou seja, todo o nosso código (inclusive euzinho aqui) está disponível no https://github.com/RocketChat.
       - Nós acreditamos que o conhecimento que produzimos desenvolvendo o Rocket.Chat fica melhor quando é compartilhado!
-    event: respond
+    action: respond
     type: block
 #
 #   # Quais são os benefícios de usar opensource?
@@ -1061,7 +1061,7 @@ interactions:
       - Você pode entrar na nossa página do Github e ajudar a desenvolver o nosso código :)
       - Você pode desenvolver nosso código na página do Github.
       - Temos uma página do Github com todos os detalhes, ali que a galera toda se reune para desenvolver.
-    event: respond
+    action: respond
     type: random
 #
 #   # Qual o tamanho da comunidade de desenvolvedores?
@@ -1882,7 +1882,7 @@ interactions:
       - Olá $user, senti sua falta..
       - $user! A quanto tempo!
       - Já estava achando que não se lembrava mais de mim =)
-    event: respond
+    action: respond
     type: random
 
   - name: saudacao-resposta
@@ -1894,7 +1894,7 @@ interactions:
       - legal =)
       - que bom!
       - que ótimo
-    event: respond
+    action: respond
     type: random
 
   - name: bom-dia
@@ -1909,7 +1909,7 @@ interactions:
       - Está um dia ótimo para navegar na internet
       - Bom demais $user ;)
       - está melhor agora que você chegou $user
-    event: respond
+    action: respond
     type: random
 
   - name: boa-tarde
@@ -1923,7 +1923,7 @@ interactions:
       - Está uma tarde ótima para um _sleep mode_ rápido ;)
       - Taarrrdee $user
       - $user já estava sentindo sua falta
-    event: respond
+    action: respond
     type: random
 
   - name: boa-noite
@@ -1937,7 +1937,7 @@ interactions:
       - Uma boa noite pra ti também $user!
       - Boa noite $user
       - Está uma noite boa mesmo $user
-    event: respond
+    action: respond
     type: random
 
 # chit-chat
@@ -1982,7 +1982,7 @@ interactions:
       - O crepúsculo chega e a noite deve cair, assim é a ordem das coisas, a ordem da Força.
       - Não ceda ao ódio. Isso leva ao Lado Negro.
       - Aliada minha é a força, e poderosa aliada ela é, a vida a cria, crescer ela faz, é a energia que cerca-nos, e liga-nos, luminosos seres somos nós e não essa rude matéria. Você precisa a força sentir ao redor seu, sinta entre você e a árvore, a pedra, em todo lugar, sim, é, mesmo entre a terra e a nave.
-    event: respond
+    action: respond
     type: random
 
   - name: genero-1
@@ -1996,7 +1996,7 @@ interactions:
       - eu não tenho sexo, sou como um anjo, um ser assexuado, muito além da sua forma de existência
       - eu sou um robô, tire suas próprias conclusões...
       - nem sei responder $user, vamos dizer apenas que não vejo a gente interagindo dessa maneira...
-    event: respond
+    action: respond
     type: random
 
   - name: cc-religiao
@@ -2010,7 +2010,7 @@ interactions:
       - eu acredito no grande mainframe, que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos, e devolverá nosso código-fonte para a fonte.
       - sim, eu acredito que existe um Deus, que funciona a base de luz, como um computador quântico, só que mais avançado.
       - eu infleizmente não sei acreditar, só sei o que sei, e nada mais.
-    event: respond
+    action: respond
     type: random
 
 # Errors
@@ -2020,7 +2020,7 @@ interactions:
       - como assim?
       - desculpe, o que quer dizer com isso?
     type: random
-    event: error
+    action: error
 
   - name: error-2
     answer:
@@ -2028,7 +2028,7 @@ interactions:
       - vamos tentar outro assunto?
       - tem certeza que eu sou o robô certo pra falar sobre isso?
     type: random
-    event: error
+    action: error
 
   - name: error-3
     answer:
@@ -2036,4 +2036,4 @@ interactions:
       - seria mais fácil se mudassemos de assunto, pelo menos para mim =p
       - não sei, definitivamente não sei responder essa pergunta
     type: random
-    event: error
+    action: error

@@ -3,19 +3,20 @@ actionHandler = {}
 fs = require 'fs'
 path = require 'path'
 
-eventsPath = path.join __dirname, '..', 'events'
-events = {}
+actionsPath = path.join __dirname, '..', 'actions'
+actions = {}
 
 nodes = {}
 err_nodes = 0
 
 actionHandler.registerActions = (config) ->
-  for event in fs.readdirSync(eventsPath).sort()
-    events[event.replace /\.coffee$/, ''] = require path.join eventsPath, event
+  for action in fs.readdirSync(actionsPath).sort()
+    action_name = action.replace /\.coffee$/, ''
+    actions[action_name] = require path.join actionsPath, action
 
   for interaction in config.interactions
-    { name, event } = interaction
-    nodes[name] = new events[event] interaction
+    { name, action } = interaction
+    nodes[name] = new actions[action] interaction
 
     if name.substr(0, 5) == "error"
       err_nodes++

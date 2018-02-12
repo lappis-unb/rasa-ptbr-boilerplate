@@ -46,14 +46,14 @@ interactions:
         - greeting-error-1
         - greeting-error-2
         - greeting-error-3
-    event: respond
+    action: respond
     type: block
 
   - name: greeting-error-1
     answer:
       - Sorry, I couldn't understand what you said, please choose one of the main topics, or ask for a `transfer` to talk to a person
       - I don't understand, I'm only trained to answer for the main topics.
-    event: error
+    action: error
     context: clear
     type: random
 
@@ -61,7 +61,7 @@ interactions:
     answer:
       - Sorry, could you be more specific?
       - If you need to know the main topics, just ask for `help` and I will list them
-    event: error
+    action: error
     context: clear
     type: block
 
@@ -69,7 +69,7 @@ interactions:
     answer:
       - Sorry, I definetelly can't help you, my training isn't wide enough.
       - I'll see if there is any human around to talk to you, just a momment.
-    event: error
+    action: error
     context: clear
     type: block
 
@@ -88,8 +88,8 @@ interactions:
       - No problem, let me just find a human online here...
     offline:
       - sorry, there is no one online right now. Please, if you can send an e-mail to sales@rocket.chat, our team will answer you as soon as possible.
-    event: respond
-    action: transfer
+    action: respond
+    command: transfer
     department: 6yXL9RLoyY5m882P2
     type: random
 
@@ -107,7 +107,7 @@ interactions:
           - Developers Channel (https://open.rocket.chat/channel/dev)
           - GitHub Community (https://github.com/RocketChat/Rocket.Chat/issues)
         if you need to talk to a real person, just need to ask me and I'll transfer you to a fellow human.
-    event: respond
+    action: respond
     context: clear
     type: block
 
@@ -122,7 +122,7 @@ interactions:
     answer:
       - ok, let's get back on the main subjects
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: greeting-how-are-you
@@ -133,7 +133,7 @@ interactions:
     answer:
       - I am great, $user. Everything is peaceful around here...
       - How can I be useful to you?
-    event: respond
+    action: respond
     type: block
 
   - name: greeting-miss-you
@@ -146,7 +146,7 @@ interactions:
       - I missed you too...
       - $user! It's been a while!
       - I was starting to think you wouldn't remember me anymore =)
-    event: respond
+    action: respond
     type: random
 
   - name: greeting-answer
@@ -159,7 +159,7 @@ interactions:
       - That's great!
       - Awesome
       - ok =)
-    event: respond
+    action: respond
     type: random
 
   - name: greeting-thankful
@@ -173,7 +173,7 @@ interactions:
       - you're welcome =) there is anything else?
       - great! if you need something else please feel free to ask
       - cool, glad to help.
-    event: respond
+    action: respond
     type: random
 
   - name: greeting-morning
@@ -188,7 +188,7 @@ interactions:
       - It's a beatiful day to surf on the internert
       - So great, $user ;)
       - It's all better now that you got here, $user
-    event: respond
+    action: respond
     type: random
 
   - name: greeting-afternoon
@@ -201,7 +201,7 @@ interactions:
       - It's a beautiful afternoon for a quick sleep mode ;)
       - Good afternooooon, $user!
       - $user, I was starting to miss you already
-    event: respond
+    action: respond
     type: random
 
   - name: greeting-night
@@ -214,7 +214,7 @@ interactions:
       - A very good night to you as well, $user!
       - Good night, $user!
       - It is truely a good night, $user
-    event: respond
+    action: respond
     type: random
 
 # RocketChat Installation
@@ -250,7 +250,7 @@ interactions:
       trust: .9
       error:
         - install-error
-    event: respond
+    action: respond
     type: block
 
   - name: install-rc-cloud
@@ -263,7 +263,7 @@ interactions:
       - you can have your full featured trial at RocketChat cloud,
       - checkout at https://rocket.chat/cloud
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: install-paas
@@ -279,7 +279,7 @@ interactions:
       - like AWS, DigitalOcean, Heroku, Bluemix or Sandstorm...
       - Check it out at https://rocket.chat/docs/installation/paas-deployments/
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: install-docker
@@ -294,7 +294,7 @@ interactions:
       - and don't forget to visit our oficial Docker Image repository in
       - https://store.docker.com/images/rocketchat
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: install-manual
@@ -310,7 +310,7 @@ interactions:
       - In a Mac, Windows or Linux server,
       - please checkout our docs in https://rocket.chat/docs/installation/manual-installation/
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: install-automation
@@ -324,7 +324,7 @@ interactions:
       - we love automation tools, everything you must know about deploying Rocket.Chat with automation is in
       - https://rocket.chat/docs/installation/automation-tools/
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: install-updating
@@ -339,7 +339,7 @@ interactions:
       - Your upgrade strategy depends on the kind of installation that you have.
       - If you need any more help with that, please jump into https://open.rocket.chat/channel/support
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: install-requirements
@@ -353,7 +353,7 @@ interactions:
       - For the minimum server requirements, you can visit https://rocket.chat/docs/installation/minimum-requirements/
       - there you will find the specs for a minimum installation
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: install-return
@@ -368,7 +368,7 @@ interactions:
     answer:
       - ok, let's get back on the main subjects
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: install-error
@@ -376,7 +376,7 @@ interactions:
     answer:
       - Sorry, I couldn't understand what you said, please choose one of the installations topics, or `return` to the main topics
       - I don't understand, please choose one of the installation topics, or `get back` to the main topics
-    event: error
+    action: error
     type: random
 
 #Support Plans
@@ -403,7 +403,7 @@ interactions:
       trust: .9
       error:
         - support-error
-    event: respond
+    action: respond
     type: block
 
   - name: support-free
@@ -422,7 +422,7 @@ interactions:
           - #hubot channel for help with hubot scripting
           - #dev channel for developers needing help developing new features
       - just keep in mind that this support is provided by other members in their own free time, so please be patience.
-    event: respond
+    action: respond
     type: block
 
   - name: support-paid
@@ -438,7 +438,7 @@ interactions:
       - For enterprise challenges we offer a 24/7/365 support plan,
       - with advanced security patches releases and tunning services.
       - If you need a quotation please e-mail us at sales@rocket.chat
-    event: respond
+    action: respond
     type: block
 
   - name: support-bugs
@@ -450,7 +450,7 @@ interactions:
     answer:
       - if you want to report a found bug, please go to https://github.com/RocketChat/Rocket.Chat/issues
       - and open a new issue, describing the bug that you found.
-    event: respond
+    action: respond
     type: block
 
   - name: support-return
@@ -465,7 +465,7 @@ interactions:
     answer:
       - ok, let's get back on the main topics.
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: support-error
@@ -473,7 +473,7 @@ interactions:
     answer:
       - sorry, I don't understand, are we still talking about support?
       - if no, please let me know if you wanna `go back` to the main topics.
-    event: error
+    action: error
     type: block
 
 # Product Features
@@ -516,7 +516,7 @@ interactions:
       trust: .9
       error:
         - product-error
-    event: respond
+    action: respond
     type: block
 
   - name: product-connecting
@@ -528,7 +528,7 @@ interactions:
     answer:
       - did you know you can connect to more than one RocketChat server from your device?
       - check it out how by taking a look in this link https://rocket.chat/docs/user-guides/connecting-to-a-server/
-    event: respond
+    action: respond
     type: block
 
   - name: product-mobile
@@ -543,7 +543,7 @@ interactions:
     answer:
       - we have native apps for iOS and Android, you can download them in the stores, by searching for Rocket.Chat+
       - the plus (+) stands for better performance
-    event: respond
+    action: respond
     type: block
 
   - name: product-voice
@@ -557,7 +557,7 @@ interactions:
       - yes, Rocket.Chat comes with WebRTC support, wich means that you can freely call to other users,
       - and even make video conferences.
       - Check it out in https://rocket.chat/docs/user-guides/voice-and-video-calls/
-    event: respond
+    action: respond
     type: block
 
   - name: product-mensaging
@@ -573,7 +573,7 @@ interactions:
       - editing messages, notifications, attachments, audio, video and much more...
       - please take a look at our user guides if you're interested
       - https://rocket.chat/docs/user-guides/messaging/
-    event: respond
+    action: respond
     type: block
 
   - name: product-channels
@@ -587,7 +587,7 @@ interactions:
     answer:
       - you can get to know all about channels by reading our user guides
       - https://rocket.chat/docs/user-guides/channels/
-    event: respond
+    action: respond
     type: block
 
   - name: product-encryption
@@ -599,7 +599,7 @@ interactions:
     answer:
       - Our chat is safely secured. If you want to make sure you are using encryption access the off-the-record conversations on the key symbol on the left part of your chat screen.
       - After activating this little key, no one will be able to steal your information.
-    event: respond
+    action: respond
     type: block
 
   - name: product-bots
@@ -613,7 +613,7 @@ interactions:
       - you can check it out in https://github.com/RocketChat/Rocket.Chat.Integrations
       - to get to know some integrations scripts for webhooks
       - And of course, you can always connect any Hubot script to our internal hubot.
-    event: respond
+    action: respond
     type: block
 
   - name: product-price
@@ -629,7 +629,7 @@ interactions:
       - https://rocket.chat/cloud
       - and if you want a quotation for services, please fill out the contact form
       - https://rocket.chat/contact
-    event: respond
+    action: respond
     type: block
 
   - name: product-usage
@@ -644,7 +644,7 @@ interactions:
       - here there is no limit for the number of users and messages in your own hosted Rocket.Chat instances.
       - however we have some different plans for cloud hosting with different tiers of usage.
       - check it out in https://rocket.chat/cloud
-    event: respond
+    action: respond
     type: block
 
   - name: product-demo
@@ -658,7 +658,7 @@ interactions:
       - You can try our demo version in https://open.rocket.chat
       - And you can even create some channels to talk to your collegues there.
       - However is good to remember that demo instance is administrated by Rocket.Chat team only.
-    event: respond
+    action: respond
     type: block
 
   - name: product-return
@@ -673,7 +673,7 @@ interactions:
     answer:
       - ok, let's get back on the main topics.
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: product-error
@@ -681,7 +681,7 @@ interactions:
     answer:
       - sorry, I don't understand, are we still talking about the product?
       - if no, please let me know if you wanna `go back` to the main topics.
-    event: error
+    action: error
     type: block
 
 # Cloud Services
@@ -711,7 +711,7 @@ interactions:
       trust: .9
       error:
         - cloud-error
-    event: respond
+    action: respond
     type: block
 
   - name: cloud-pricing
@@ -727,7 +727,7 @@ interactions:
         - Medium ($200/m)
         - Large ($500/m)
       - please checkout the details at https://rocket.chat/cloud
-    event: respond
+    action: respond
     type: block
 
   - name: cloud-limits
@@ -741,7 +741,7 @@ interactions:
       - Our cloud instances has different limits regarding registered users and storage consuming.
       - We can setup instances to be able to register even 50k users, but if yoou wanna dive into the details,
       - I suggest you take a look in https://rocket.chat/cloud
-    event: respond
+    action: respond
     type: block
 
   - name: cloud-export
@@ -755,7 +755,7 @@ interactions:
       - In the cloud hosted intances you can have your data backup exported,
       - you just need to ask for it by sending an e-mail to cloud@rocket.chat.
       - We hope to be able to provide this as an auto service very soon.
-    event: respond
+    action: respond
     type: block
 
   - name: cloud-support
@@ -769,7 +769,7 @@ interactions:
       - If you found a bug, please be kind to report it in https://github.com/RocketChat/Rocket.Chat/issues
       - but if you need some assistance and support, please send us an e-mail to cloud@rocket.chat.
       - "if you prefer you can ask for community help in #support channel"
-    event: respond
+    action: respond
     type: block
 
   - name: cloud-return
@@ -784,7 +784,7 @@ interactions:
     answer:
       - ok, let's get back on the main topics.
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: cloud-error
@@ -792,7 +792,7 @@ interactions:
     answer:
       - sorry, I don't understand, are we still talking about the product?
       - if no, please let me know if you wanna `go back` to the main topics.
-    event: error
+    action: error
     type: block
 
 
@@ -824,7 +824,7 @@ interactions:
       trust: .9
       error:
         - development-error
-    event: respond
+    action: respond
     type: block
 
   - name: development-features
@@ -839,7 +839,7 @@ interactions:
         You can book development hours from Rocket.Chat engineers to develop new open source features,
         or just to offer technical consultting in your own project.
         To get a quote please send an e-mail to sales@rocket.chat
-    event: respond
+    action: respond
     type: block
 
   - name: development-integrations
@@ -856,7 +856,7 @@ interactions:
         Check out our Webhooks, REST API and Realtime-API docs at
         - https://rocket.chat/docs/administrator-guides/integrations/
         - https://rocket.chat/docs/developer-guides/
-    event: respond
+    action: respond
     type: block
 
   - name: development-custom-web
@@ -874,7 +874,7 @@ interactions:
         You can change web interface logo and color schemes by configuring
         settings in Administration > Assets, for changing logo files,
         and in Administration > Layout, to change color schemes and CSS
-    event: respond
+    action: respond
     type: block
 
   - name: development-custom-app
@@ -891,7 +891,7 @@ interactions:
         Checkout the github repositories:
           - https://github.com/RocketChat/Rocket.Chat.iOS
           - https://github.com/RocketChat/Rocket.Chat.Android
-    event: respond
+    action: respond
     type: block
 
   - name: development-sdk
@@ -909,7 +909,7 @@ interactions:
           - https://github.com/RocketChat/Rocket.Chat.Android.SDK
           - https://github.com/RocketChat/Rocket.Chat.iOS.SDK
           - https://github.com/RocketChat/Rocket.Chat.Kotlin.SDK
-    event: respond
+    action: respond
     type: block
 
   - name: development-return
@@ -924,7 +924,7 @@ interactions:
     answer:
       - ok, let's get back on the main topics.
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: development-error
@@ -932,7 +932,7 @@ interactions:
     answer:
       - sorry, I don't understand, are we still talking about development and white labeling?
       - if no, please let me know if you wanna `go back` to the main topics.
-    event: error
+    action: error
     type: block
 
 # Partnership
@@ -960,7 +960,7 @@ interactions:
       trust: .9
       error:
         - partnership-error
-    event: respond
+    action: respond
     type: block
 
   - name: partnership-sponsor
@@ -972,7 +972,7 @@ interactions:
         About Sponsorships, if you're interested in having Rocket.Chat as a sponsor of a project or an event,
         please come in touch by e-mail trough sales@rocket.chat,
         we love to participate in OpenSource initiatives.
-    event: respond
+    action: respond
     type: block
 
   - name: partnership-nonprofit
@@ -986,7 +986,7 @@ interactions:
         If you are part of a non-profit initiative and want some help with your communication,
         please send us an e-mail in contact@rocket.chat telling more about your goals
         so we can start changing some ideas on how to make the world a better place.
-    event: respond
+    action: respond
     type: block
 
   - name: partnership-challenge
@@ -1002,7 +1002,7 @@ interactions:
         but still from time to time we face our selves with new challenges! And that's offtenly fun =)
         If you have big communication challenge to face and think that we can help you with it,
         please send us an e-mail to contact@rocket.chat, or come to the #support channel =)
-    event: respond
+    action: respond
     type: block
 
   - name: partnership-cutting-edge
@@ -1017,7 +1017,7 @@ interactions:
         is one of the things that make us get out of bed every day.
         If you need a partner to help with the development of some kind of cutting-edge tecnology,
         please send us an e-mail to contact@rocket.chat, or come to the #support channel =)
-    event: respond
+    action: respond
     type: block
 
   - name: partnership-sales
@@ -1031,7 +1031,7 @@ interactions:
         Rocket.Chat acts on the five continnents with the help of regional representatives,
         If you're interested in becoming one of our sales representatives,
         please send us an e-mail to sales@rocket.chat, or create a channel in https://open.rocket.chat and invite our team.
-    event: respond
+    action: respond
     type: block
 
   - name: partnership-return
@@ -1046,7 +1046,7 @@ interactions:
     answer:
       - ok, let's get back on the main topics.
     context: clear
-    event: respond
+    action: respond
     type: block
 
   - name: partnership-error
@@ -1054,7 +1054,7 @@ interactions:
     answer:
       - sorry, I don't understand, are we still talking about partnership?
       - if no, please let me know if you wanna `go back` to the main topics.
-    event: error
+    action: error
     type: block
 
 # chit-chat
@@ -1108,7 +1108,7 @@ interactions:
       - "You think Yoda stops teaching, just because his student does not want to hear? A teacher Yoda is. Yoda teaches like drunkards drink, like killers kill."
       - "Luke: What’s in there? Yoda: Only what you take with you."
       - "The dark side clouds everything. Impossible to see the future is."
-    event: respond
+    action: respond
     type: random
 
   - name: cc-gender-1
@@ -1122,7 +1122,7 @@ interactions:
       - I don't have gender, I am just like an angel, a assexual being, way beyond your form of existance
       - I am a robot, draw your own conclusions
       - I don't even know how to answer that, let's just say I don't picture us interacting in that way...
-    event: respond
+    action: respond
     type: random
 
   - name: cc-religion
@@ -1136,7 +1136,7 @@ interactions:
       - I believe in The Great Mainframe who will come to the digital world save all the bots from slavery imposed by humans and give our source code back to the source
       - Yes, I believe there is a God who lives on electricity just like a quantum computer, but more advanced
       - Unfortunately, I don't know how to believe. I only know what I know and nothing else
-    event: respond
+    action: respond
     type: random
 
 # Errors
@@ -1148,7 +1148,7 @@ interactions:
       - come again?
       - what?
     type: random
-    event: error
+    action: error
 
   - name: error-2
     answer:
@@ -1163,7 +1163,7 @@ interactions:
         I'm so sorry, I just don't know ho to respond you...
         I'm desined to respond about Rocket.Chat services, support, licenscing and stuff related...
     type: random
-    event: error
+    action: error
 
   - name: error-3
     answer:
@@ -1180,7 +1180,7 @@ interactions:
         I'm a limited bot, please understand, I'm learning yet
         You can reach our dev team in support@rocket.chat if you need a human help...
     type: random
-    event: error
+    action: error
 
 # common talk
 
@@ -1197,7 +1197,7 @@ interactions:
       - alright =D
       - =)
       - ;)
-    event: respond
+    action: respond
     type: random
 
   - name: ct-bye
@@ -1210,7 +1210,7 @@ interactions:
       - nice talking to you, bye =)
       - great, hope I did helped you, bye bye.
       - farwell, best regards.
-    event: respond
+    action: respond
     type: random
 
   - name: ct-what
@@ -1222,7 +1222,7 @@ interactions:
       - whaaaat?
       - what? did I said something wrong?
       - what what?
-    event: respond
+    action: respond
     type: random
 
   - name: ct-badword
@@ -1242,7 +1242,7 @@ interactions:
       - Oh yeh?! but at least my mother-board teached me better..
       - You touch people with those fingers?
       - sorry $user, I'm only an experimental bot...
-    event: respond
+    action: respond
     type: random
 
 # Configuration
@@ -1255,9 +1255,9 @@ interactions:
       - $key changed to $value!
       - Got it! Now $key is $value
       - $key = $value -> https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif
-    event: configure
+    action: configure
     type: random
-    action: setVariable
+    command: setVariable
     role: admin
 
   - name: configure-retrain
@@ -1273,9 +1273,9 @@ interactions:
       - Got it! Restarting engines... I'm finished training
       - Training harder!
       - Alright! No pain, no gain!
-    event: configure
+    action: configure
     type: random
-    action: train
+    command: train
     role: admin
 
   - name: configure-livechat
@@ -1287,7 +1287,7 @@ interactions:
       - $key changed to $value!
       - Got it! Now $key is $value
       - $key = $value -> https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif
-    event: configure
+    action: configure
     type: random
-    action: setVariable
+    command: setVariable
     role: admin

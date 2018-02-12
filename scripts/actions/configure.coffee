@@ -63,9 +63,9 @@ class Configure
     return
 
   act: (msg) ->
-    action = @interaction.action or 'setVariable'
-    console.log action
-    switch action
+    command = @interaction.command or 'setVariable'
+    console.log command
+    switch command
       when 'setVariable'
         @setVariable(msg)
       when 'train'
