@@ -25,6 +25,13 @@ common.stringElseRandomKey = (variable) ->
   if variable instanceof Array
     variable[Math.floor(Math.random() * variable.length)]
 
+common.sendMessages = (messages, msg, variables = {}) ->
+  if !Array.isArray messages
+    messages = [messages]
+  messages = messages.map (message) ->
+    return common.msgVariables message, msg, variables
+  msg.sendWithNaturalDelay messages
+
 getYAMLFiles = (filepath) ->
   listFile = fs.readdirSync filepath
   dataFiles = []

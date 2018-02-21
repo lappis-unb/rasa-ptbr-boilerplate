@@ -42,10 +42,10 @@ interactions:
       - what's up bot
       - good morning
     answer:
-      - Hello there $user, how are you?
-      - Glad to be here...
+      - - Hello there $user, how are you?
+        - Glad to be here...
+      - Hey there, nice to see you!
     event: respond
-    type: block
 ```
 
 What this syntax means:
@@ -54,9 +54,8 @@ What this syntax means:
 - `interactions`: An vector with lots of interaction nodes that will be parsed. Every interaction designed to your chatbot must be under an interaction.node object structure.
 - `name`: that's the unique name of the interaction by which it will be identified. Do not create more than one interaction with the same `node.name` attribute.  
 - `expect`: Those are the sentences that will be given to the bots training. They can be strings or keywords vectors, like `['consume','use']`.   
-- `answer`: the messages that will be sent to the user, if the classifiers get classified above the trust level. The `node.message` will be parsed and sent by event class. You can specify variables in message. By default HubotNatural comes with `$user`, `$bot` and `$room` variables.  
-- `event`: is the name of the CoffeeScript or JavaScript Class inside `scripts/events`, without the file extension.  
-- `type`: This is an example of an event attribute. The type attribute is interpreted by respond.coffee class, and basically defines if all lines in message should be send as a `block` or if the bot should randomly send only one of the lines defined.
+- `answer`: the messages that will be sent to the user, if the classifiers get classified above the trust level. The `node.message` will be parsed and sent by event class. In order to use multiline strings inside your YAML, you must follow the [YAML Multiline Strings](http://yaml-multiline.info/) syntax. You can specify variables in message. By default HubotNatural comes with `$user`, `$bot` and `$room` variables.
+- `event`: is the name of the CoffeeScript or JavaScript Class inside `scripts/events`, without the file extension.
 
 ### Event Coffee Classes
 
@@ -66,21 +65,13 @@ Event classes can be written to extend the chatbot skills. They receives the int
 class respond
   constructor: (@interaction) ->
   process: (msg) =>
-    type = @interaction.type?.toLowerCase() or 'random'
-    switch type
-      when 'block'
-        @interaction.answer.forEach (line) ->
-          message = msgVariables line, msg
-          msg['send'] message
-      when 'random'
-        message = stringElseRandomKey @interaction.answer
-        message = msgVariables message, msg
-        msg['send'] message
+    sendMessages(stringElseRandomKey(@interaction.answer), msg)
 
 module.exports = respond
 ```
 
-It's base constructor is the `@interaction` node so you can have access to all attributes inside an interaction just using `@interaction.attribute`. Here you can parse texts, call APIs, read files, access databases, and everything else you need.
+It's base constructor is the `@interaction` node so you can have access to all attributes inside an interaction just using `@interaction.attribute`. Here you can parse texts, call APIs, read files, access databases, and everything else you need.  
+You may want to use the function `stringElseRandomKey` to get a random element of a list, if it's parameter is a list, and use the function `sendMessages` to send messages to an user.
 
 #### Logistic Regression Classifier
 

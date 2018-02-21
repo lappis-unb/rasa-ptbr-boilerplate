@@ -1,6 +1,6 @@
 require 'coffeescript/register'
 
-{ msgVariables, stringElseRandomKey } = require '../lib/common'
+{ msgVariables, sendMessages, stringElseRandomKey } = require '../lib/common'
 
 livechat_department = (process.env.LIVECHAT_DEPARTMENT_ID || null )
 
@@ -11,24 +11,15 @@ class Respond
     offline_message = (
       @interaction.offline or 'Sorry, there is no online agents to transfer to.'
     )
-    type = @interaction.type?.toLowerCase() or 'random'
-    switch type
-      when 'block'
-        messages = @interaction.answer.map (line) ->
-          return msgVariables line, msg
-        msg.sendWithNaturalDelay messages
-      when 'random'
-        message = stringElseRandomKey @interaction.answer
-        message = msgVariables message, msg
-        msg.sendWithNaturalDelay message
+    sendMessages(stringElseRandomKey(@interaction.answer), msg)
 
     command = @interaction.command?.toLowerCase() or false
     switch command
       when 'transfer'
-        @livechatTransfer(msg, 3000, lc_dept, offline_message, type)
+        @livechatTransfer(msg, 3000, lc_dept, offline_message)
 
 
-  livechatTransfer: (msg, delay = 3000, lc_dept, offline_message, type) ->
+  livechatTransfer: (msg, delay = 3000, lc_dept, offline_message) ->
     setTimeout((-> msg.robot.adapter.callMethod('livechat:transfer',
                       roomId: msg.envelope.room
                       departmentId: lc_dept
@@ -37,15 +28,7 @@ class Respond
                         console.log 'livechatTransfer executed!'
                       else
                         console.log 'livechatTransfer NOT executed!'
-                        switch type
-                          when 'block'
-                            messages = offline_message.map (line) ->
-                              return msgVariables line, msg
-                            msg.sendWithNaturalDelay messages
-                          when 'random'
-                            message = stringElseRandomKey offline_message
-                            message = msgVariables message, msg
-                            msg.sendWithNaturalDelay message
+                        sendMessages(stringElseRandomKey(offline_message), msg)
                 ), delay)
 
 module.exports = Respond
