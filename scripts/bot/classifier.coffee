@@ -161,8 +161,11 @@ classifier.processMessage = (res, msg) ->
       return classifier.processMessage(res, msg)
     else
       error_count = incErrors res
+
       if error_count > actionHandler.errorNodesCount()
         clearErrors res
+        error_count = incErrors res
+
       error_node_name = "error-" + error_count
 
   currentInteraction = global.config.interactions.find (interaction) ->
