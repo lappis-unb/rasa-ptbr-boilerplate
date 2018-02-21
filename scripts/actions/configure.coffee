@@ -2,7 +2,7 @@ require 'coffeescript/register'
 
 classifier = require '../bot/classifier'
 security = require '../lib/security'
-{ msgVariables, stringElseRandomKey,
+{ msgVariables, stringElseRandomKey, sendMessages,
   loadConfigfile, getConfigFilePath } = require  '../lib/common'
 
 class Configure
@@ -29,37 +29,14 @@ class Configure
 
     key = 'configure_' + configKey + '_' + msg.envelope.room
     msg.robot.brain.set(key, configValue)
-
-    type = @interaction.type?.toLowerCase() or 'random'
-
-    switch type
-      when 'block'
-        messages = @interaction.answer.map (line) ->
-          return msgVariables line, msg, { key: configKey, value: configValue }
-        msg.sendWithNaturalDelay messages
-      when 'random'
-        message = stringElseRandomKey @interaction.answer
-        message = msgVariables(message, msg, {
-          key:   configKey,
-          value: configValue
-        })
-        msg.sendWithNaturalDelay message
+    sendMessages(stringElseRandomKey(@interaction.answer), msg,
+                  { key: configKey, value: configValue })
     return
 
   retrain: (msg) ->
     global.config = loadConfigfile getConfigFilePath()
     classifier.train()
-
-    type = @interaction.type?.toLowerCase() or 'random'
-    switch type
-      when 'block'
-        messages = @interaction.answer.map (line) ->
-          return msgVariables line, msg
-        msg.sendWithNaturalDelay messages
-      when 'random'
-        message = stringElseRandomKey @interaction.answer
-        message = msgVariables message, msg
-        msg.sendWithNaturalDelay message
+    sendMessages(stringElseRandomKey(@interaction.answer), msg)
     return
 
   act: (msg) ->

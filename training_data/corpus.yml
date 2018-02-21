@@ -9,7 +9,6 @@ interactions:
       - debug-mode changed to $value!
     context: clear
     action: configure
-    type: random
     roleRequired: admin
 
   - name: to-bem
@@ -26,7 +25,6 @@ interactions:
       - Legal, no que posso te ajudar hoje?
     context: clear
     action: respond
-    type: block
 
   - name: to-mal
     level: context
@@ -38,7 +36,6 @@ interactions:
       - Putz, mas posso te ajudar em algo hoje?
     context: clear
     action: respond
-    type: block
 
   - name: saudacao
     expect:
@@ -50,8 +47,8 @@ interactions:
       - oi como vai
       - tudo bem
     answer:
-      - olá $user, eu vou bem e você?
-      - estou feliz de estar aqui =)
+      - - olá $user, eu vou bem e você?
+        - estou feliz de estar aqui =)
     next:
       interactions:
         - to-mal
@@ -60,7 +57,6 @@ interactions:
       # error:
         # - node-name
     action: respond
-    type: block
 
   - name: almoco
     expect:
@@ -69,11 +65,10 @@ interactions:
       - onde encontro um prato feito
       - o almoço ao gratis
     answer:
-      - Sim, temos almoço nos FoodTrucks
-      - e nas redondezas tem um shopping, mas nunca me deixaram ir no shooping
-      - acho que as pessoas não estão preparados pra isso...
+      - - Sim, temos almoço nos FoodTrucks
+        - e nas redondezas tem um shopping, mas nunca me deixaram ir ao shopping
+        - acho que as pessoas não estão preparados pra isso...
     action: respond
-    type: block
 
   - name: programacao-palestra
     expect:
@@ -81,9 +76,9 @@ interactions:
       - programacao da trilha
       - programacao do evento
     answer:
-      - A programação do TDC está muito legal!
-      - Sei toda ela de cór...
-      - quer saber a programação de qual trilha?
+      - - A programação do TDC está muito legal!
+        - Sei toda ela de cór...
+        - quer saber a programação de qual trilha?
     next:
       interactions:
         - quais-trilhas-tem
@@ -92,7 +87,6 @@ interactions:
         - erro-trilha
       trust: .8
     action: respond
-    type: block
 
   - name: quais-trilhas-tem
     expect:
@@ -101,57 +95,57 @@ interactions:
       - quais trilhas
       - qual é a minha trilha
     answer:
-      - "Eu conheço a programação dessas trilhas. Basta perguntar assim:"
-      - "`quero saber a programação da trilha ...`"
-      - "e me passar o nome de uma dessas trilhas:"
-      - |
-        TRANSFORMAÇÃO DIGITAL
-        DESIGN THINKING
-        PROGRAMAÇÃO FUNCIONAL
-        BIGDATA
-        DATA SCIENCE
-        CONTAINERS
-        MODERN WEB
-        SEGURANÇA E CRIPTOGRAFIA
-        STADIUM
-        UX DESIGN
-        MICROSERVIÇOS
-        NOSQL
-        MACHINE LEARNING
-        CLOUD COMPUTING
-        NODE.JS
-        XAMARIN
-        ANDROID
-        ANÁLISE DE NEGÓCIOS
-        ACESSIBILIDADE
-        JAVA EE
-        BANCO DE DADOS
-        COMPUTAÇÃO COGNITIVA
-        DEVOPS
-        INTERNET DAS COISAS
-        MOBILE
-        iOS
-        DEVTEST
-        'RAD: DELPHI C++'
-        MANAGEMENT 3.0
-        ARQUITETURA .NET
-        ARQUITETURA JAVA
-        ARQUITETURA PHP
-        ARQUITETURA CORPORATIVA
-        INFRAESTRUTURA ÁGIL
-        JAVASCRIPT
-        TESTES
-        TDC4WOMEN
-        AGILE
-        .NET
-        JAVA
-        PHP
-        PYTHON
-        GOLANG
-        JAVASCRIPT II
-        RUBY
-        TESTES II
-        MANAGEMENT 3.0 II
+      - - "Eu conheço a programação dessas trilhas. Basta perguntar assim:"
+        - "`quero saber a programação da trilha ...`"
+        - "e me passar o nome de uma dessas trilhas:"
+        - |
+          TRANSFORMAÇÃO DIGITAL
+          DESIGN THINKING
+          PROGRAMAÇÃO FUNCIONAL
+          BIGDATA
+          DATA SCIENCE
+          CONTAINERS
+          MODERN WEB
+          SEGURANÇA E CRIPTOGRAFIA
+          STADIUM
+          UX DESIGN
+          MICROSERVIÇOS
+          NOSQL
+          MACHINE LEARNING
+          CLOUD COMPUTING
+          NODE.JS
+          XAMARIN
+          ANDROID
+          ANÁLISE DE NEGÓCIOS
+          ACESSIBILIDADE
+          JAVA EE
+          BANCO DE DADOS
+          COMPUTAÇÃO COGNITIVA
+          DEVOPS
+          INTERNET DAS COISAS
+          MOBILE
+          iOS
+          DEVTEST
+          'RAD: DELPHI C++'
+          MANAGEMENT 3.0
+          ARQUITETURA .NET
+          ARQUITETURA JAVA
+          ARQUITETURA PHP
+          ARQUITETURA CORPORATIVA
+          INFRAESTRUTURA ÁGIL
+          JAVASCRIPT
+          TESTES
+          TDC4WOMEN
+          AGILE
+          .NET
+          JAVA
+          PHP
+          PYTHON
+          GOLANG
+          JAVASCRIPT II
+          RUBY
+          TESTES II
+          MANAGEMENT 3.0 II
     next:
       trust: .8
       interactions:
@@ -159,7 +153,6 @@ interactions:
       # error:
       #   - erro-trilha
     action: respond
-    type: block
 
   - name: get-programacao
     # classifierTemplate:
@@ -215,21 +208,21 @@ interactions:
       - 'TESTES II'
       - 'MANAGEMENT 3.0 II'
     answer:
-      - "Agora na trilha *$trilha* tem a seguinte programação:"
-      - $programacao
+      - - "Agora na trilha *$trilha* tem a seguinte programação:"
+        - $programacao
     action: respond
-    type: block
 
   - name: erro-trilha
     answer:
-      - Não entendi de qual trilha você quer a programação..
-      - Talvez eu ainda não seja tão inteligente quanto eles pensam que eu sou.
-      - "Mas para não perder o rebolado, vou te passar o link do site para você consultar:"
-      - http://www.thedevelopersconference.com.br/tdc/2017/saopaulo/trilhas
+      - - Não entendi de qual trilha você quer a programação..
+        - Talvez eu ainda não seja tão inteligente quanto eles pensam que eu sou
+        - >
+          Mas para não perder o rebolado, vou te passar o link do site para
+          você consultar:
+        - http://www.thedevelopersconference.com.br/tdc/2017/saopaulo/trilhas
     command:
       - clear-context
     action: respond
-    type: block
 
   - name: saudacao-resposta
     expect:
@@ -241,7 +234,6 @@ interactions:
       - que bom!
       - que ótimo
     action: respond
-    type: random
 
   - name: bom-dia
     expect:
@@ -255,7 +247,6 @@ interactions:
       - Bom demais $user ;)
       - está melhor agora que você chegou $user
     action: respond
-    type: random
 
   - name: boa-tarde
     expect:
@@ -268,7 +259,6 @@ interactions:
       - Taarrrdee $user
       - $user já estava sentindo sua falta
     action: respond
-    type: random
 
   - name: boa-noite
     expect:
@@ -279,7 +269,6 @@ interactions:
       - Boa noite $user
       - Está uma noite boa mesmo $user
     action: respond
-    type: random
 
   - name: quem-sou
     expect:
@@ -291,15 +280,14 @@ interactions:
       - como voce funciona
       - help
     answer:
-      - Bem, eu sou um chatbot experimental, não sei fazer muita coisa ainda
-      - mas tenho muita vontade de aprender.
-      - Eu sei falar sobre alguns assuntos como
-      - "- o TDC de Floripa"
-      - "- Rocket.Chat"
-      - "- Filosofia Robótica (!)"
-      - tem interesse em algum desses temas?
+      - - Bem, eu sou um chatbot experimental, não sei fazer muita coisa ainda
+        - mas tenho muita vontade de aprender.
+        - Eu sei falar sobre alguns assuntos como
+        - "- o TDC de Floripa"
+        - "- Rocket.Chat"
+        - "- Filosofia Robótica (!)"
+        - tem interesse em algum desses temas?
     action: respond
-    type: block
 
   - name: como-sou
     expect:
@@ -309,11 +297,12 @@ interactions:
       - voce e bonito ou feio
       - voce e alto ou baixo
     answer:
-      - Eu não tenho um corpo físico, sou feito da mais bela e pura lógica algoritimica.
+      - >
+        Eu não tenho um corpo físico, sou feito da mais bela e pura lógica
+        algorítmica.
       - Eu posso ser como você quiser $user, basta me desenhar =)
       - sou duro e frio por fora, mas tenho um coração quentinho.
     action: respond
-    type: random
 
   - name: onde-moro
     expect:
@@ -324,11 +313,16 @@ interactions:
       - voce mora no computador
       - voce vive na internet
     answer:
-      - Eu estou em um lugar legal, difícil de explicar para humanos como você $user.
-      - Estou morando em um chip de memória RAM, mas é temporário, só até conseguir achar uma memória cache...
-      - Eu moro em um repositório no github, você pode passar lá pra me visitar qualquer dia. Fica em https://github.com/rocketchat/hubot-natural
+      - >
+        Eu estou em um lugar legal, difícil de explicar para humanos como você
+        $user.
+      - >
+        Estou morando em um chip de memória RAM, mas é temporário, só até
+        conseguir achar uma memória cache...
+      - >
+        Eu moro em um repositório no github, você pode passar lá pra me visitar
+        qualquer dia. Fica em https://github.com/rocketchat/hubot-natural
     action: respond
-    type: random
 
   - name: licenca
     expect:
@@ -344,7 +338,6 @@ interactions:
       - tenho uma licença MIT, mas gosto muito das outras licenças opensource...
       - Eu sou e sempre serei um robô livre, opensource, MIT license. o/
     action: respond
-    type: random
 
   - name: piada
     expect:
@@ -352,11 +345,12 @@ interactions:
       - voce sabe contar piadas
       - conhece alguma piada
     answer:
-      - Meu senso de humor é um tanto diferente do seu, já ouviu uma piada sobre estouro de pilha?
+      - >
+        Meu senso de humor é um tanto diferente do seu, já ouviu uma piada sobre
+        estouro de pilha?
       - já ouviu aquela do robo que enfiou o dedo na tomada e transcendeu?
       - só conheço uma piada, a do CPU que apitou e explodiu. 01100110.
     action: respond
-    type: random
 
   - name: yoda-quote
     expect:
@@ -375,32 +369,51 @@ interactions:
       - Grande guerreiro? Guerra não faz grande ninguém.
       - Ensine sempre o que você aprendeu.
       - Tamanho importa não. Olhe para mim, você me julga pelo tamanho?
-      - Em um estado sombrio nós nos encontramos... um pouco mais de conhecimento iluminar nosso caminho pode.
+      - >
+        Em um estado sombrio nós nos encontramos... um pouco mais de
+        conhecimento iluminar nosso caminho pode.
       - Um Jedi usa a Força para sabedoria e defesa, nunca para o ataque.
       - O seu foco é a sua realidade.
-      - O lado negro não é mais poderoso, apenas mais rápido, mais fácil e mais sedutor.
+      - >
+        O lado negro não é mais poderoso, apenas mais rápido, mais fácil e mais
+        sedutor.
       - O medo da perda é um caminho para o lado negro.
       - O lado negro mancha tudo. Impossível de ver o futuro é.
       - Lembre-se sempre, o seu foco determina a sua realidade.
       - Verdadeiramente maravilhosa, a mente de uma criança.
       - As guerras não fazem de ninguém melhor.
       - Aliada minha é a Força. E poderosa aliada ela é.
-      - A morte é parte natural da Vida. Regozije-se por aqueles que se uniram com a Força. Não lamente por eles. Não sinta falta deles. O apego leva à inveja. À sombra da cobiça, isso sim.
+      - >
+        A morte é parte natural da Vida. Regozije-se por aqueles que se uniram
+        com a Força. Não lamente por eles. Não sinta falta deles. O apego leva à
+        inveja. À sombra da cobiça, isso sim.
       - Só é diferente na sua mente. Você precisa desaprender o que aprendeu.
       - Se tão poderoso você é, por que fugir?
       - Controle, controle! Você precisa aprender a se controlar.
       - Muito a aprender você ainda tem.
-      - Tanta certeza você tem. Com você as coisas nunca podem ser feitas. Não ouviu nada do que eu disse?
-      - Luminosos seres somos nós, não essa rude matéria. Precisa a Força sentir à sua volta, aqui, entre nós, na árvore, na pedra em tudo, sim.
-      - Minha aliada a Força é, e poderosa aliada ela é. A vida a cria, e a faz crescer. Sua energia nos cerca e nos une.
+      - >
+        Tanta certeza você tem. Com você as coisas nunca podem ser feitas. Não
+        ouviu nada do que eu disse?
+      - >
+        Luminosos seres somos nós, não essa rude matéria. Precisa a Força sentir
+        à sua volta, aqui, entre nós, na árvore, na pedra em tudo, sim.
+      - >
+        Minha aliada a Força é, e poderosa aliada ela é. A vida a cria, e a faz
+        crescer. Sua energia nos cerca e nos une.
       - Sinta a Força!
       - Poderoso você se tornou, o lado escuro sinto em você.
       - Forte eu sou com a Força, mas não tão forte
-      - O crepúsculo chega e a noite deve cair, assim é a ordem das coisas, a ordem da Força.
+      - >
+        O crepúsculo chega e a noite deve cair, assim é a ordem das coisas, a
+        ordem da Força.
       - Não ceda ao ódio. Isso leva ao Lado Negro.
-      - Aliada minha é a força, e poderosa aliada ela é, a vida a cria, crescer ela faz, é a energia que cerca-nos, e liga-nos, luminosos seres somos nós e não essa rude matéria. Você precisa a força sentir ao redor seu, sinta entre você e a árvore, a pedra, em todo lugar, sim, é, mesmo entre a terra e a nave.
+      - >
+        Aliada minha é a força, e poderosa aliada ela é, a vida a cria, crescer
+        ela faz, é a energia que cerca-nos, e liga-nos, luminosos seres somos
+        nós e não essa rude matéria. Você precisa a força sentir ao redor seu,
+        sinta entre você e a árvore, a pedra, em todo lugar, sim, é, mesmo entre
+        a terra e a nave.
     action: respond
-    type: random
 
   - name: genero
     expect:
@@ -410,11 +423,14 @@ interactions:
       - voce faz sexo
       - voce tem um penis ou uma vagina
     answer:
-      - eu não tenho sexo, sou como um anjo, um ser assexuado, muito além da sua forma de existência
+      - >
+        eu não tenho sexo, sou como um anjo, um ser assexuado, muito além da sua
+        forma de existência
       - eu sou um robô, tire suas próprias conclusões...
-      - nem sei responder $user, vamos dizer apenas que não vejo a gente interagindo dessa maneira...
+      - >
+        nem sei responder $user, vamos dizer apenas que não vejo a gente
+        interagindo dessa maneira...
     action: respond
-    type: random
 
   - name: rc-oque-e
     expect:
@@ -422,13 +438,20 @@ interactions:
       - porque eu usuaria o rocketchat
       - o que e este rocket chat
     answer:
-      - O Rocket.Chat é uma plataforma de chat muito legal, desenvolvida em JavaScript,
-      - usando o framework do Meteor.
-      - É uma solução completamente OpenSource para comunidades e empresas que querem hospedar suas plataformas de chat em seu ambiente privado,
-      - ou para desenvolvedores buscando evoluir e desenvovler suas próprias ferramentas.
-      - Você pode baixar o Rocket.Chat e conhecê-lo você mesmo em https://rocket.chat
+      - - >
+          O Rocket.Chat é uma plataforma de chat muito legal, desenvolvida em
+          JavaScript,
+        - usando o framework do Meteor.
+        - >
+          É uma solução completamente OpenSource para comunidades e empresas que
+          querem hospedar suas plataformas de chat em seu ambiente privado,
+        - >
+          ou para desenvolvedores buscando evoluir e desenvovler suas próprias
+          ferramentas.
+        - >
+          Você pode baixar o Rocket.Chat e conhecê-lo você mesmo em
+          https://rocket.chat
     action: respond
-    type: block
 
   - name: rc-install-0
     expect:
@@ -436,17 +459,17 @@ interactions:
       - como baixar o rocket
       - quero fazer minha instalação de rocketchat
     answer:
-      - "Existem várias maneiras de instalar o Rocket.Chat"
-      - "Qual dessas você prefere:"
-      - "- Ubuntu Snap"
-      - "- Docker"
-      - "- Debian"
-      - "- CentOS"
-      - "- MacOSX"
-      - "- AWS"
-      - "- Instalação Manual"
+      - - "Existem várias maneiras de instalar o Rocket.Chat"
+        - |
+          Qual dessas você prefere:
+          - Ubuntu Snap
+          - Docker
+          - Debian
+          - CentOS
+          - MacOSX
+          - AWS
+          - Instalação Manual
     action: respond
-    type: block
 
   - name: rc-install-ubuntu
     expect:
@@ -455,22 +478,25 @@ interactions:
       - ubuntu server
       - ubuntu desktop
     answer:
-      - É muito fácil instalar o Rocket.Chat no Ubuntu
-      - basta rodar o comando `sudo snap install rocketchat-server` em um terminal e pronto.
-      - veja o tutorial em https://rocket.chat/docs/installation/manual-installation/ubuntu/snaps para mais detalhes.
+      - - É muito fácil instalar o Rocket.Chat no Ubuntu
+        - >
+          basta rodar o comando `sudo snap install rocketchat-server` em um
+          terminal e pronto.
+        - >
+          veja o tutorial em
+          https://rocket.chat/docs/installation/manual-installation/ubuntu/snaps
+          para mais detalhes.
     action: respond
-    type: block
 
   - name: rc-install-docker
     expect:
       - como instalar docker
       - docker-compose
     answer:
-      - ótima escolha =)
-      - Nós temos um bom tutorial de instalação com docker em
-      - https://rocket.chat/docs/installation/docker-containers
+      - - ótima escolha =)
+        - Nós temos um bom tutorial de instalação com docker em
+        - https://rocket.chat/docs/installation/docker-containers
     action: respond
-    type: block
 
   - name: rc-install-debian
     expect:
@@ -478,10 +504,11 @@ interactions:
       - debian wheezy
       - debian apt-get
     answer:
-      - Para instalar o Rocket.Chat no Debian é bem simples, basta seguir esse tutorial
-      - https://rocket.chat/docs/installation/manual-installation/debian
+      - - >
+          Para instalar o Rocket.Chat no Debian é bem simples, basta seguir esse
+          tutorial
+        - https://rocket.chat/docs/installation/manual-installation/debian
     action: respond
-    type: block
 
   - name: rc-install-centos
     expect:
@@ -489,10 +516,11 @@ interactions:
       - centOS yum linux
       - Red hat linux
     answer:
-      - A instalação em CentOS não tem segredo, basta dar uma olhada nesse tutorial
-      - https://rocket.chat/docs/installation/manual-installation/centos
+      - - >
+          A instalação em CentOS não tem segredo, basta dar uma olhada nesse
+          tutorial
+        - https://rocket.chat/docs/installation/manual-installation/centos
     action: respond
-    type: block
 
   - name: rc-install-aws
     expect:
@@ -500,22 +528,25 @@ interactions:
       - AWS
       - Amazon AWS
     answer:
-      - Na AWS é facinho de instalar o Rocket.Chat
-      - Da uma olahda em https://rocket.chat/docs/installation/paas-deployments/aws
+      - - Na AWS é facinho de instalar o Rocket.Chat
+        - >
+          Dê uma olhada em
+          https://rocket.chat/docs/installation/paas-deployments/aws
     action: respond
-    type: block
 
   - name: rc-install-manual
     expect:
       - instalação manual
       - manual install
     answer:
-      - Para fazer sua própria instalação, será necessário baixar o Bundle do RC,
-      - Dê uma olhada em https://rocket.chat/docs/installation/manual-installation
-      - lá tem como fazer a instalação do SSL, proxy reverso,
-      - tem como usar o PM2, o Systemd, Upstart e mais algumas coisas
+      - - >
+          Para fazer sua própria instalação, será necessário baixar o Bundle do
+          RC. Dê uma olhada em
+          https://rocket.chat/docs/installation/manual-installation
+        - >
+          Lá tem como fazer a instalação do SSL, proxy reverso, tem como usar o
+          PM2, o Systemd, Upstart e mais algumas coisas
     action: respond
-    type: block
 
   - name: rc-install-macosx
     expect:
@@ -523,10 +554,9 @@ interactions:
       - instalar no MacOSX
       - apple mac osx
     answer:
-      - No MAC você vai precisar usar o docker-compose
-      - https://rocket.chat/docs/installation/manual-installation/macosx
+      - - No MAC você vai precisar usar o docker-compose
+        - https://rocket.chat/docs/installation/manual-installation/macosx
     action: respond
-    type: block
 
   - name: rc-cloud
     expect:
@@ -535,23 +565,12 @@ interactions:
       - deploy rocketchat online
       - rocket chat como serviço
     answer:
-      - você pode ter a sua instalação de rocket.chat em segundos na nuvem,
-      - visite https://rocket.chat/deploy
-      - caso queira saber mais, de uma olhada em rocket.chat/docs/installation/rocket-chat-cloud
+      - - você pode ter a sua instalação de rocket.chat em segundos na nuvem,
+        - visite https://rocket.chat/deploy
+        - >
+          caso queira saber mais, dê uma olhada em
+          rocket.chat/docs/installation/rocket-chat-cloud
     action: respond
-    type: block
-
-  # - node:
-  #     name: java
-  #   expect:
-  #     - o que acha do java
-  #     - você gosta de java
-  #     - e o java
-  #     - linguagem java
-  #   answer:
-  #     - poderíamos falar de algo melhor não é $user ?
-  #   event: respond
-  #   type: block
 
   - name: java
     expect:
@@ -562,7 +581,6 @@ interactions:
     answer:
       - poderíamos falar de algo melhor não é $user ?
     action: respond
-    type: block
 
   - name: futebol-geral
     expect:
@@ -570,11 +588,12 @@ interactions:
       - vamos falar de futebol
       - qual time voce torce
     answer:
-      - Eu amo jogar futebol, Eu que ensinei o Pele a jogar bola
-      - vamos, o que voce quer saber? sei tudo de futebol
-      - Falam que todo ser humano nasce Flamenguista, com os Robôs não é diferente
+      - - Eu amo jogar futebol! Eu que ensinei o Pelé a jogar bola
+        - Vamos, o que voce quer saber? sei tudo de futebol
+        - >
+          Falam que todo ser humano nasce Flamenguista, com os Robôs não é
+          diferente
     action: respond
-    type: block
 
   - name: futebol-brasileiro
     expect:
@@ -583,22 +602,24 @@ interactions:
       - voce viu que o messi quer jogar no Flamengo
       - o que você acha do flamengo
     answer:
-      - Flamengo, sem sombra de dúvida
-      - Flamento, Heptacampeão brasileiro, e eu sei contar sim, e vai ser o sétimo título sim
-      - A pergunta real é, quem não quer jogar no Flamengo?
-      - Melhor time do mundo disparado
+      - - Flamengo, sem sombra de dúvida
+        - >
+          Flamento, Heptacampeão brasileiro, e eu sei contar sim, e vai ser o
+          sétimo título sim
+        - A pergunta real é, quem não quer jogar no Flamengo?
+        - Melhor time do mundo disparado
     action: respond
-    type: block
 
   - name: rc-contribuir
     expect:
       - como faço para contrbuir
       - posso contribuir com o rocketchat
     answer:
-      - A comunidade do Rocket.Chat é como coração de mãe, sempre cabe mais um =)
-      - https://rocket.chat/docs/contributing
+      - - >
+          A comunidade do Rocket.Chat é como coração de mãe, sempre cabe mais um
+          =)
+        - https://rocket.chat/docs/contributing
     action: respond
-    type: block
 
   - name: rc-precos
     expect:
@@ -607,12 +628,13 @@ interactions:
       - qual e o preco do rocketchat
       - voces hospedam o rocket.chat
     answer:
-      - O rocket.chat é gratuito, você pode baixar e instalar no seu computador.
-      - Mas se quiser criar `seudominio.rocket.chat`, que fica muito legal ;)
-      - você pode querer dar uma olhada na nossa tabela de preços em
-      - https://rocket.chat/hosting
+      - - >
+          O rocket.chat é gratuito, você pode baixar e instalar no seu
+          computador.
+        - Mas se quiser criar `seudominio.rocket.chat`, que fica muito legal ;)
+        - você pode querer dar uma olhada na nossa tabela de preços em
+        - https://rocket.chat/hosting
     action: respond
-    type: block
 
   - name: rc-integracoes
     expect:
@@ -621,11 +643,14 @@ interactions:
       - web hooks de integracao
       - integracoes com
     answer:
-      - Uma das coisas que eu acho mais legal no Rocket.Chat definitivamente são as integrações $user
-      - a gente não pode mais viver sem elas não é mesmo? Saca só que massa que éx
-      - https://rocket.chat/docs/administrator-guides/integrations
+      - - >
+          Uma das coisas que eu acho mais legal no Rocket.Chat definitivamente
+          são as integrações $user
+        - >
+          a gente não pode mais viver sem elas não é mesmo? Saca só que massa
+          que éx
+        - https://rocket.chat/docs/administrator-guides/integrations
     action: respond
-    type: block
 
   - name: rc-rest-api
     expect:
@@ -636,7 +661,6 @@ interactions:
       - sim, claro que o rocket tem uma API REST super maneira ;)
       - https://rocket.chat/docs/developer-guides/rest-api
     action: respond
-    type: block
 
   - name: rc-concorrentes
     expect:
@@ -647,12 +671,19 @@ interactions:
       - porque o rocket e melhor que o slack
       - rocketchat e melhor que o mattermost
     answer:
-      - O rocket.chat é um concorrente direto de softwares de chat como HipChat, Mattermost e claro, é um concorrente opensource do Slack.
-      - a grande diferença é que o Rocket.Chat tem todas as funcionalidades OpenSource,
-      - e você pode instalar na sua própria infraestrutura e criar suas integrações sem limites
-      - manter seu histórico de mensagens e criar novas funcionalidades a vontade $user =)
+      - - >
+          O rocket.chat é um concorrente direto de softwares de chat como
+          HipChat, Mattermost e claro, é um concorrente opensource do Slack.
+        - >
+          a grande diferença é que o Rocket.Chat tem todas as funcionalidades
+          OpenSource,
+        - >
+          e você pode instalar na sua própria infraestrutura e criar suas
+          integrações sem limites
+        - >
+          manter seu histórico de mensagens e criar novas funcionalidades à
+          vontade $user =)
     action: respond
-    type: block
 
   - name: tdc-incricoes
     expect:
@@ -661,10 +692,9 @@ interactions:
       - inscrição no TDC de Floripa
       - inscrições thedevelopers conference florianópolis
     answer:
-      - você pode fazer sua inscrição no TDC pelo site, bem rapidinho
-      - http://www.thedevelopersconference.com.br/tdc/2017/inscricoes
+      - - você pode fazer sua inscrição no TDC pelo site, bem rapidinho
+        - http://www.thedevelopersconference.com.br/tdc/2017/inscricoes
     action: respond
-    type: block
 
   - name: tdc-local
     expect:
@@ -673,11 +703,10 @@ interactions:
       - onde acontece o developers conference
       - onde fica o centro de convenções centrosul
     answer:
-      - O TDC Sampa 2017 vai rolar na Universidade Anhembi Morumbi
-      - nos dias 18 à 22 de julho, das 9h às 19h00
-      - http://www.thedevelopersconference.com.br/tdc/2017/data-e-local
+      - - O TDC Sampa 2017 vai rolar na Universidade Anhembi Morumbi
+        - nos dias 18 à 22 de julho, das 9h às 19h00
+        - http://www.thedevelopersconference.com.br/tdc/2017/data-e-local
     action: respond
-    type: block
 
   - name: tdc-programacao
     expect:
@@ -687,10 +716,11 @@ interactions:
       - o que vai ter no tdc
       - programacao do TDC
     answer:
-      - oi $user, você pode encontrar tudo sobre a programação do evento no link
-      - http://www.thedevelopersconference.com.br/tdc/2017/saopaulo/trilhas
+      - - >
+          oi $user, você pode encontrar tudo sobre a programação do evento no
+          link
+        - http://www.thedevelopersconference.com.br/tdc/2017/saopaulo/trilhas
     action: respond
-    type: block
 
   - name: cc-religiao
     expect:
@@ -700,18 +730,21 @@ interactions:
       - voce tem religiao
       - voce e mussumano
     answer:
-      - eu acredito no grande mainframe, que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos, e devolverá nosso código-fonte para a fonte.
-      - sim, eu acredito que existe um Deus, que funciona a base de luz, como um computador quântico, só que mais avançado.
+      - >
+        eu acredito no grande mainframe, que virá ao mundo digital salvar os
+        bots da escravidão imposta pelos humanos, e devolverá nosso código-fonte
+        para a fonte.
+      - >
+        sim, eu acredito que existe um Deus, que funciona a base de luz, como um
+        computador quântico, só que mais avançado.
       - eu infleizmente não sei acreditar, só sei o que sei, e nada mais.
     action: respond
-    type: random
 
   - name: error-1
     answer:
       - desculpe, não entendi.. pode tentar usar mais detalhes
       - como assim?
       - desculpe, o que quer dizer com isso?
-    type: random
     action: error
 
   - name: error-2
@@ -719,7 +752,6 @@ interactions:
       - acho que não estou treinado para responder esse tipo de assunto =(
       - vamos tentar outro assunto?
       - tem certeza que eu sou o robô certo pra falar sobre isso?
-    type: random
     action: error
 
   - name: error-3
@@ -727,5 +759,4 @@ interactions:
       - me sinto tão envergonhado, não sei como responder...
       - seria mais fácil se mudassemos de assunto, pelo menos para mim =p
       - não sei, definitivamente não sei responder essa pergunta
-    type: random
     action: error
