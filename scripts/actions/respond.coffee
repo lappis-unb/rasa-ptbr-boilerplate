@@ -1,15 +1,16 @@
-path = require 'path'
-natural = require 'natural'
+require 'coffeescript/register'
 
-{ msgVariables, stringElseRandomKey } = require path.join '..', 'lib', 'common.coffee'
-answers = {}
+{ msgVariables, stringElseRandomKey } = require '../lib/common'
+
 livechat_department = (process.env.LIVECHAT_DEPARTMENT_ID || null )
 
-class respond
+class Respond
   constructor: (@interaction) ->
   process: (msg) =>
     lc_dept = @interaction.department or livechat_department
-    offline_message = @interaction.offline or 'Sorry, there is no online agents to transfer to.'
+    offline_message = (
+      @interaction.offline or 'Sorry, there is no online agents to transfer to.'
+    )
     type = @interaction.type?.toLowerCase() or 'random'
     switch type
       when 'block'
@@ -21,8 +22,8 @@ class respond
         message = msgVariables message, msg
         msg.sendWithNaturalDelay message
 
-    action = @interaction.action?.toLowerCase() or false
-    switch action
+    command = @interaction.command?.toLowerCase() or false
+    switch command
       when 'transfer'
         @livechatTransfer(msg, 3000, lc_dept, offline_message, type)
 
@@ -47,4 +48,4 @@ class respond
                             msg.sendWithNaturalDelay message
                 ), delay)
 
-module.exports = respond
+module.exports = Respond

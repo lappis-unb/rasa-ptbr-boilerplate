@@ -1,10 +1,8 @@
-path = require 'path'
-natural = require 'natural'
+require 'coffeescript/register'
 
-{ msgVariables, stringElseRandomKey } = require path.join '..', 'lib', 'common.coffee'
-answers = {}
+{ msgVariables, stringElseRandomKey } = require '../lib/common'
 
-class error
+class Error
   constructor: (@interaction) ->
   process: (msg) =>
     type = @interaction.type?.toLowerCase() or 'random'
@@ -18,4 +16,4 @@ class error
         message = msgVariables message, msg
         msg.sendWithNaturalDelay message
 
-module.exports = error
+module.exports = Error
