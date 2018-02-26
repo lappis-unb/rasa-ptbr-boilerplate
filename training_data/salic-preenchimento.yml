@@ -1,0 +1,255 @@
+trust: 0.9
+interactions:
+
+  - name: vinculo-de-propostas
+    action: respond
+    expect:
+      - Como faço para vincular uma proposta ao CPF do responsável?
+      - vincular proposta ao CPF
+    answer:
+      - - >
+          Prezado(a),
+
+          Segue abaixo o passo a passo.
+
+          Administrativo > Gerenciar responsáveis > Vincular propostas > Clicar
+          na bolinha (vincular) > Inserir responsável > abaixo terá o número da
+          proposta/nome > nome do responsável selecionado > Clicar na bolinha >
+          Vincular.
+        - >
+          ATENÇÃO: Quem poderá fazer essa ação, é o dirigente cadastrado no
+          sistema. Este terá que acessar o sistema com CPF e senha e fazer o
+          passo a passo.
+        - >
+          ATENÇÃO: Desvinculando o atual usuário e vinculando o dirigente,
+          apenas este terá acesso a proposta.
+
+
+  - name: custos-vinculados
+    action: respond
+    expect:
+      - >
+        Estou preenchendo a planilha orçamentária, porém, o sistema não me
+        permite cadastrar as rubricas em custos vinculados. Como resolver?
+      - >
+        Na planilha orçamentária, por que o sistema não me permite cadastrar as
+        rubricas em custos vinculados?
+    answer:
+      - - >
+          Prezado(a),
+
+          Agora com a nova IN 05/2017 não são mais necessárias o detalhamento
+          das rubricas de custos administrativos nem de divulgação, direitos
+          autorais e remuneração por captação. Proponente só precisa informar
+          as porcentagens e para isso é só ir na aba custos vinculados. O
+          detalhamento se dará na prestação de contas.
+        - >
+          Para mais informação de como preencher uma proposta cultura entre em
+          http://rouanet.cultura.gov.br/tutoriais/.
+
+
+  - name: visualizar-propostas-projetos
+    action: respond
+    expect:
+      - Não consigo achar minha proposta no sistema, porém a mesma está ativa.
+      - Como encontrar a minha proposta no sistema?
+    answer:
+      - - >
+          Prezado(a) proponente,
+
+          Basta selecionar o CPF ou CNPJ que deseja como proponente e listar a
+          proposta do CPF ou CNPJ selecionado.
+        - >
+          Para isso, vá em Proposta > Listar proposta > Clicar em CPF do
+          proponente > Selecionar o CNPJ.
+        - Aparecerão todas as propostas ativas no sistema.
+
+
+  - name: aceitar-vinculo
+    action: respond
+    expect:
+      - >
+        Sou responsável por inserir a proposta no sistema, mas o sistema acusa
+        como “solicitação de vínculo pendente”. Como resolver?
+    answer:
+      - >
+        Prezado(a),
+
+        Só quem pode vincular uma pessoa física ao CNPJ é o dirigente da
+        instituição. O dirigente deve entrar com login e senha e aceitar o
+        vínculo.
+
+
+  - name: apresentar-proposta-cultural
+    action: respond
+    expect:
+      - Como apresentar uma proposta cultural?
+    answer:
+      - - >
+          Prezado(a),
+
+          Para saber como enviar uma proposta cultural acesse:
+          http://rouanet.cultura.gov.br/
+        - >
+          Para mais informações de como preencher uma proposta cultura entre em
+          http://rouanet.cultura.gov.br/tutoriais/
+        - ATENÇÃO: leia toda a legislação.
+
+
+  - name: valor-por-beneficiario
+    action: respond
+    expect:
+      - >
+        O sistema informa que o custo por beneficiário não pode ultrapassar o
+        valor de 250,00, mas não irei comercializar ingressos ou o ingresso não
+        ultrapassa o valor citado. Como resolver?
+      - >
+        Não irei comercializar ingressos ou o ingresso não ultrapassa o valor
+        citado. Como resolver?
+    answer:
+      - - >
+          Prezado(a),
+
+          IV - o valor máximo do produto cultural, por beneficiário, será de
+          até R$ 250,00.
+
+          Essa Métrica é utilizada para ver a viabilidade do projeto, que não
+          pode ultrapassar R$ 250,00 por beneficiário.
+        - >
+          Exemplo: R$ 9.445.076,00 / 22.556 pessoas = R$ 419,18 por
+          beneficiário.
+
+          Para sanar esse problema, diminua o custo do projeto ou aumente a
+          estimativa de público.
+
+
+  - name: definicao-modal
+    action: respond
+    expect:
+      - O que é a modal?
+    answer:
+      - - >
+          Prezado(a),
+
+          A modal é calculada com base na série histórica de todos os projetos
+          aprovados desde o início da Lei Rouanet. Ela leva em consideração a
+          rubrica, o produto e a região do projeto (estado e município).
+        - >
+          Normalmente, quando alguma rubrica extrapola a modal é devido ao
+          preenchimento incorreto do valor unitário do item.
+        - >
+          O valor unitário representa o valor individual de um item e não seu
+          valor global.
+
+          Para atingir o valor global desejado o proponente deve alterar os
+          campos quantidade e/ou ocorrência.
+
+          Contudo, caso o preenchimento esteja correto e mesmo assim a rubrica
+          ultrapassa a modal, o proponente precisa justificar tecnicamente no
+          campo “INFORMAÇÕES INICIAS -> OUTRAS INFORMAÇÕES” o motivo do custo
+          elevado.
+
+
+  - name: close-without-saving-error
+    action: respond
+    expect:
+      - >
+        Preenchi minha proposta toda e fechei o sistema. Ao retornar percebi
+        que a mesma não tinha sido salva. O que ocorreu?
+    answer:
+      - - >
+          Prezado(a),
+
+          Esse erro aconteceu por exceder o tempo logado no sistema.
+
+          A primeira etapa para preenchimento, não pode ultrapassar o limite de
+          20 minutos.
+
+          Entre novamente no sistema e envie a proposta.
+
+          Se o erro persistir, envie um e-mail para salic@cultura.gov.br.
+
+
+  - name: assessoria-contabil-juridica
+    action: respond
+    expect:
+      - Como faço para cadastrar as rubricas de advogado e contador?
+    answer:
+      - >
+        Prezado(a) proponente,
+
+        Ir em orçamento do projeto > custos por produto > clicar no produto
+        desejado > clicar no local de realização > clicar na aba assessoria
+        contábil e jurídica.
+
+
+  - name: prazo-envio-cnae
+    action: respond
+    expect:
+      - Qual é o prazo limite para envio do CNAE?
+    answer:
+      - >
+        Prezado(a),
+
+        O proponente tem o prazo de 40 dias para responder a diligência 20+20
+        prorrogados automaticamente. Não é necessário fazer solicitação. Caso
+        seja insuficiente, o proponente poderá anexar o protocolo da receita
+        de inserção do CNAE no Salic.
+
+
+  - name: planos-execucao-imediata
+    action: respond
+    expect:
+      - O que é o plano de execução imediata?
+    answer:
+      - - |
+          Prezado(a) proponente,
+          Verificamos e a proposta está marcada como “proposta normal”.
+        - >
+          Ao mudar essa situação no campo “plano de execução imediata”, terá
+          que ser anexado documento que comprove a contemplação da proposta em
+          edital.
+
+
+  - name: planilha-sumiu
+    action: respond
+    expect:
+      - >
+        Ao atender a diligência encaminhada, percebi que minha planilha havia
+        sumido. O que faço?
+    answer:
+      - >
+        Prezado(a),
+
+        Excluindo algum produto do plano de distribuição a planilha vai zerar
+        e o proponente deverá refaze-la novamente.
+
+
+  - name: novo-fluxo
+    action: respond
+    expect:
+      - Qual é o novo fluxo do Salic?
+    answer:
+      - >
+        Prezado(a),
+
+        A proposta passa pela análise inicial, após ganhar um Pronac o projeto
+        será enquadrado, depois de enquadrado você terá 10 dias para entrar
+        com recurso, vai para a fase de análise documental e depois publicação.
+
+        Após publicado o projeto deve no mínimo captar 10%. Após captar os 10%,
+        o projeto vai para a adequação para ir para a fase de análise técnica
+        e depois de passar para análise técnica ele vai para a CNIC.
+
+        São no mínimo 90 dias esse trâmite. Somente após a CNIC o projeto será
+        homologado e poderá iniciar a sua execução.
+
+
+  - name: custo-auditoria
+    action: respond
+    expect:
+      - O que devo preencher no campo "Custo de Auditoria"?
+    answer:
+      - |
+        Prezado(a),
+        Não é necessário incluir esse item no momento.
