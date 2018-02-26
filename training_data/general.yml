@@ -1,0 +1,74 @@
+trust: 0.9
+interactions:
+
+  - name: livechat-transfer
+    action: respond
+    command: transfer
+    department: LdMhXS7HvDKcWy8GZ
+    expect:
+      - me transfira para um atendente
+      - quero conversar com uma pessoa
+      - conversar com ser humano
+      - falar com um supervisor
+      - transferir para humano
+    answer:
+      - >
+        Sem problemas, estou tentando te transferir para um atendente agora
+        mesmo. Aguarde um momento, por favor...
+      - >
+        Ok, apenas estou verificando se algum de nossos atendentes está online
+        no momento...
+      - Já te transfiro, deixe-me apenas conferir se algum atendente está
+        disponível no momento...
+    offline:
+      - - >
+          Me desculpe, mas nenhum de nossos atendentes está disponível agora.
+          Se você preferir, o Ministério da Cultura conta com as seguintes
+          formas de contato
+        - |
+          Fone: +55 61 1234-5678
+          E-mail: cultura@ministerio.gov.br
+
+
+  - name: saudacao-basica
+    action: respond
+    expect:
+      - Olá
+      - Oi
+      - Bom dia
+      - Boa tarde
+      - Boa noite
+    answer:
+      - Olá, estou feliz de estar aqui. Em que posso de ajudar hoje?
+      - Olá!
+    next:
+      interactions:
+        - to-mal
+        - to-bem
+
+
+  - name: to-bem
+    level: context
+    expect:
+      - estou bem
+      - tou bem
+      - to bem
+      - bem
+      - legal
+      - tudo bem
+      - ok
+    answer:
+      - Legal, no que posso te ajudar hoje?
+    context: clear
+    action: respond
+
+  - name: to-mal
+    level: context
+    expect:
+      - estou mal
+      - tou mal
+      - to mal
+    answer:
+      - Putz, mas posso te ajudar em algo hoje?
+    context: clear
+    action: respond
