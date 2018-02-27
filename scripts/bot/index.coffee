@@ -36,8 +36,8 @@ sendWithNaturalDelay = (msgs, elapsed = 0) ->
       cb?()
   , delay
 
-createMatch = (text) ->
-  return res.message.text.match new RegExp('\\b' + text + '\\b', 'i')
+createMatch = (text, pattern) ->
+  return text.match new RegExp('\\b' + pattern + '\\b', 'i')
 
 module.exports = (_config, robot) ->
   global.config = _config
@@ -60,7 +60,8 @@ module.exports = (_config, robot) ->
 
     # check if robot should respond
     if res.envelope.user.roomType in ['c', 'p']
-      if (createMatch(res.robot.name)) or (createMatch(res.robot.alias))
+      if (createMatch(res.message.text, res.robot.name) or
+          createMatch(res.message.text, res.robot.alias))
         actionName = classifier.processMessage(res, msg)
         actionHandler.takeAction(actionName, res)
         # TODO: Add engaged user conversation recognition/tracking
