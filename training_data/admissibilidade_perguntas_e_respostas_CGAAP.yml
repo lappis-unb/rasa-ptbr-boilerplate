@@ -1,29 +1,6 @@
 trust: 0.7
 interactions:
-
-  - name: cadastro-de-procuracao-para-visualizacao-do-procurador-fase-de-projeto
-    action: respond
-    expect:
-      -
-        Minha proposta foi transformada em projeto, 
-        porém não consigo visualiza-lo. Como resolvo?
-    answer:
-      -
-        - >
-          Prezado(a) proponente,
-          Clicar em administrativo > Procuração > Cadastramento. 
-
-  - name: cadastro-agencia-bancaria
-    action: respond
-    expect:
-      - >
-        Estou preenchendo a proposta via Salic, porém ao cadastrar a agência, 
-        o sistema indica inválida. Como resolver?
-    answer:
-      - >
-        A agência bancária deve ser do banco do Brasil, deve conter 5 dígitos, 
-        sem hifens, pontos ou letras. 
-
+  # STATUS DO PROJETO
   - name: projeto-homologado
     action: respond
     expect:
@@ -43,7 +20,7 @@ interactions:
           proposta.incentivo@cultura.gov.br , pelo e-mail cadastrado no 
           sistema, se desiste do prazo recursal (caso concorde) ou poderá 
           encaminhar pedido de reconsideração (caso descorde).
-
+  # STATUS DO PROJETO
   - name: fase-de-adequacao-do-projeto
     action: respond
     expect:
@@ -83,7 +60,7 @@ interactions:
           Na planilha não há possibilidade de aumentar o valor. 
           Resumo, objetivos e justificativas não podem ser alterados e o 
           cronograma não pode ser inferior a 90 dias. 
-
+  # STATUS DO PROJETO
   - name: fase-de-enquadramento-do-projeto
     action: respond
     expect:
@@ -105,7 +82,7 @@ interactions:
         - >  
           ATENÇÃO: O prazo dos 10 dias corridos, começam a valer a partir da 
           data do enquadramento. 
-
+  # STATUS DO PROJETO
   - name: pedido-de-reativacao 
     action: respond
     expect:
@@ -121,7 +98,7 @@ interactions:
           O pedido deve conter as devidas justificativas para a reanálise do 
           indeferimento e a resposta da diligência. E-mail para encaminhamento: 
           reativacao.proposta@cultura.gov.br
-
+  # SISTEMA SALIC
   - name: recuperacao-de-senha 
     action: respond
     expect:
@@ -132,7 +109,7 @@ interactions:
       - > 
         Prezado(a) proponente, encaminhar e-mail para a área responsável, 
         pelo e-mail: senhasalic@cultura.gov.br
-
+  # SISTEMA SALIC
   - name: captacao-de-recursos 
     action: respond
     expect:
@@ -142,16 +119,30 @@ interactions:
         Prezado(a), O projeto ainda passará pela fase de enquadramento e somente 
         após o enquadramento ele será enviado para análise documental e depois 
         publicação. Somente após a publicação que será liberada a captação.
-
-  - name: problemas-no-sistema
+  # SISTEMA SALIC
+  - name: cadastro-de-procuracao-para-visualizacao-do-procurador-fase-de-projeto
     action: respond
     expect:
-      - Estou com problemas no Salic. Qual setor posso tirar minhas dúvidas?
+      - >
+        Minha proposta foi transformada em projeto, 
+        porém não consigo visualiza-lo. Como resolvo?
+    answer:
+      -
+        - >
+          Prezado(a) proponente,
+          Clicar em administrativo > Procuração > Cadastramento. 
+  # SISTEMA SALIC
+  - name: cadastro-agencia-bancaria
+    action: respond
+    expect:
+      - >
+        Estou preenchendo a proposta via Salic, porém ao cadastrar a agência, 
+        o sistema indica inválida. Como resolver?
     answer:
       - >
-        Prezado(a), Problemas no sistema é junto ao e-mail salic@cultura.gov.br 
-        envie o print da tela com o erro. 
-
+        A agência bancária deve ser do banco do Brasil, deve conter 5 dígitos, 
+        sem hifens, pontos ou letras. 
+  # SISTEMA SALIC
   - name: cadastro-do-proponente-no-salic
     action: respond
     expect:
@@ -160,7 +151,7 @@ interactions:
       - >
         Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
         Preencher todos os dados.
-
+  # SISTEMA SALIC
   - name: cadastro-do-dirigente-no-salic
     action: respond
     expect:
@@ -170,7 +161,7 @@ interactions:
         Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > 
         Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
         esquerdo da tela > Clicar em dirigente > Novo dirigente. 
-
+  # SISTEMA SALIC
   - name: cadastro-de-email-proponente-no-salic
     action: respond
     expect:
@@ -180,7 +171,7 @@ interactions:
         Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > 
         Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado 
         esquerdo da tela > Clicar em e-mail > Preencher os dados.
-
+  # SISTEMA SALIC
   - name: cadastro-de-endereco-proponente-no-salic
     action: respond
     expect:
@@ -190,7 +181,7 @@ interactions:
         Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > 
         Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado 
         esquerdo da tela > Clicar em endereço > Preencher os dados.
-
+  # SISTEMA SALIC
   - name: cadastro-de-telefone-proponente-no-salic
     action: respond
     expect:
@@ -200,7 +191,7 @@ interactions:
         Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > 
         Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado 
         esquerdo da tela > Clicar em telefone > Preencher os dados.
-
+  # SISTEMA SALIC
   - name: cadastro-natureza-do-proponente-no-salic
     action: respond
     expect:
@@ -210,7 +201,7 @@ interactions:
         Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > 
         Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado 
         esquerdo da tela > Clicar natureza > Preencher os dados.
-
+  # SISTEMA SALIC
   - name: cadastro-data-de-nascimento-do-proponente-no-salic
     action: respond
     expect:
@@ -222,6 +213,15 @@ interactions:
         Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
         Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
         esquerdo da tela > Clicar informações adicionais > Preencher os dados.
+  # PROBLEMAS COM SALIC
+  - name: problemas-no-sistema
+    action: respond
+    expect:
+      - Estou com problemas no Salic. Qual setor posso tirar minhas dúvidas?
+    answer:
+      - >
+        Prezado(a), Problemas no sistema é junto ao e-mail salic@cultura.gov.br 
+        envie o print da tela com o erro. 
 
 #  - name: edital-minc
 #    action: respond

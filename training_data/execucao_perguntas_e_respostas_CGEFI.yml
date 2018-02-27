@@ -2,6 +2,7 @@
 
 trust: .6
 interactions:
+  # BENEFICIO
   - name: beneficio-de-incentivo-a-projetos
     action: respond
     expect:
@@ -23,7 +24,7 @@ interactions:
         - |
           a) Doações,
           b) Patrocínios.
-
+  # BENEFICIO
   - name: empresas-que-se-beficiam-de-incentivos-fiscais
     action: respond
     expect:
@@ -40,7 +41,7 @@ interactions:
         administração do Imposto sobre a Renda e Proventos de Qualquer Natureza.
         ), de 26 de março de 1999, no artigo 246, estabelece as que são 
         obrigadas a se enquadrar nesse regime de tributação.
-
+  # BENEFICIO
   - name: parentes-nao-podem-incentivar-projetos
     action: respond
     expect:
@@ -52,7 +53,7 @@ interactions:
         titulares, administradores, acionistas ou sócios de pessoa jurídica 
         vinculada ao doador ou patrocinador, na data da operação, ou nos doze 
         meses anteriores
-
+  # CUSTO
   - name: deduzir-impostos-de-renda-incentivador-de-projetos
     action: respond
     expect:
@@ -86,7 +87,7 @@ interactions:
         - >  
           As empresas que investem nesses segmentos não podem lançar o valor 
           incentivado como despesa operacional.
-
+  # CUSTO
   - name: procedimentos-de-captacao-de-recursos
     action: respond
     expect:
@@ -100,7 +101,7 @@ interactions:
         - >  
           Após essa etapa, o proponente está habilitado a captar recursos junto 
           aos incentivadores.
-
+  # LEI ROUANET
   - name: diferenca-entre-contrato-de-pratocinio-e-carta-de-intencao
     action: respond
     expect:
@@ -122,7 +123,7 @@ interactions:
           A carta de intenção, diferentemente, apenas informa sobre a 
           possibilidade da ocorrência de patrocínio, não havendo comprometimento 
           do possível patrocinador com o patrocinado. 
-
+  # LEI ROUANET
   - name: deducao-de-imposto-de-renda
     action: respond
     expect:
@@ -142,7 +143,7 @@ interactions:
           operacional no caso de projeto enquadrado no Art. 26 da Lei 8313/91. 
           No caso de pessoas físicas, a dedução será feita do imposto a pagar 
           na declaração anual do Imposto de Renda.
-
+  # CUSTO
   - name: deducao-de-imposto-de-pessoas-juridicas-tributadas
     action: respond
     expect:
@@ -155,7 +156,7 @@ interactions:
         permitida qualquer dedução a título de incentivo fiscal. Somente pessoas
         jurídicas tributadas pelo Lucro Real podem deduzir 
         incentivos fiscais.
-
+  # LEI ROUANET
   - name: microempresas-podem-deduzir-as-doacoes-e-patrocinios
     action: respond
     expect:
@@ -167,7 +168,7 @@ interactions:
         Não. As microempresas (ME) e empresas de pequeno porte (EPP), optantes 
         pelo Simples, estão excluídas de qualquer benefício de dedução de 
         incentivos do IRPJ.
-
+  # LEI ROUANET
   - name: doacoes-patrocinios-nao-sofrem-retencao
     action: respond
     expect:
@@ -178,7 +179,7 @@ interactions:
       - >
         As transferências a título de doações ou patrocínios não estão sujeitas 
         à incidência do imposto de renda na fonte.
-
+  # LEI ROUANET
   - name: contas-podem-ser-abertas-em-qualquer-banco
     action: respond
     expect:
@@ -188,7 +189,7 @@ interactions:
         O MinC possui um Termo de Cooperação Técnica com o Banco do Brasil para 
         gestão das contas do PRONAC. Por isso, as contas somente são abertas 
         pelo MinC no Banco do Brasil.
-
+  # LEI ROUANET
   - name: procedimentos-para-abertura-das-contas
     action: respond
     expect:
@@ -204,7 +205,7 @@ interactions:
           o MinC encaminha solicitação de abertura das contas ao banco, com a 
           indicação de agência pelo proponente, e após aberta disponibiliza os 
           dados das contas na página do projeto no sistema Salic.
-
+  # LEI ROUANET
   - name: procedimentos-para-captacao-de-recursos
     action: respond
     expect:
@@ -223,7 +224,7 @@ interactions:
           b) Transferência Eletrônica Disponível (TED) ou Documento de Operação 
           de Crédito (DOC), desde que contenham, também, o CPF ou o CNPJ do(s) 
           depositante(s).
-
+  # LEI ROUANET
   - name: aplicacao-financeira-com-os-recursos-do-projeto
     action: respond
     expect:
@@ -235,7 +236,7 @@ interactions:
         ou em fundos de aplicação financeira de curto prazo (Exceto: CDB e RDB).
         Recomenda-se, ainda, que no momento da aplicação seja habilitada a 
         função "resgate automático".
-
+  # PRAZO
   - name: inicio-de-movimentacao-de-conta
     action: respond
     expect:
@@ -253,7 +254,7 @@ interactions:
           Obs: Para projetos de plano anual, a conta pode ser movimentada quando
           o proponente tiver captado um doze avos (1/12) do valor aprovado para
           a captação.
-
+  # PRAZO
   - name: tempo-para-transferencia-de-recursos-conta-bloqueada-conta-movimento
     action: respond
     expect:
@@ -265,7 +266,7 @@ interactions:
         Até 5 dias úteis. Desde que o proponente esteja regular junto ao MinC, 
         que os recursos não estejam aplicados e que não tenha ocorrido troca de 
         agência.
-
+  # LEI ROUANET
   - name: deposito-na-conta-do-pronac-errado
     action: respond
     expect:
@@ -288,7 +289,7 @@ interactions:
           2) Depósitos feitos em duplicidade.
           Uma Nota Técnica será elaborada pelo MinC informando os procedimentos 
           adotados para cada caso.
-
+  # LEI ROUANET
   - name: procedimento-para-captacao-do-valor-acima-autorizado-pelo-minc
     action: respond
     expect:
@@ -304,7 +305,7 @@ interactions:
           Tudo o que for captado além do autorizado será registrado no sistema 
           SALIC e deverá ser recolhido ao Fundo Nacional da Cultura sem prejuízo 
           ao incentivador quanto ao benefício fiscal.
-
+  # LEI ROUANET
   - name: impedimento-para-receber-aportes
     action: respond
     expect:
@@ -317,7 +318,7 @@ interactions:
         proponente, entretanto a transferência de recursos entre as contas 
         bancárias do projeto (Captação e Movimento), bem como a utilização do 
         saldo só serão permitidas após a habilitação do proponente. 
-
+  # PRAZO
   - name: prazo-limite-para-pedir-prorrogacao-de-prazo
     action: respond
     expect:
@@ -330,14 +331,14 @@ interactions:
         com antecedência de, no mínimo, 30 dias do encerramento do prazo 
         vigente, publicado no Diário Oficial da União. 
         A solicitação de prorrogação de prazo de execução segue a mesma regra.
-
+  # PRAZO
   - name: tempo-para-analisar-pedidos-de-prorrogacao
     action: respond
     expect:
       - Em quanto tempo o MinC analisa os pedidos de prorrogação?
     answer:
       - Até 30 dias corridos para análise.
-
+  # PRAZO
   - name: renovacao-do-prazo-de-captacao
     action: respond
     expect:
@@ -349,7 +350,7 @@ interactions:
         Quando o pedido de prorrogação de prazo de execução, somente, é 
         deferido, é indicado que não há interesse em captar mais recursos e há 
         interesse somente em executar o projeto. 
-
+  # PRAZO
   - name: diferenca-prazo-de-captacao-e-execucao
     action: respond
     expect:
@@ -372,7 +373,7 @@ interactions:
           Nesse contexto, é erro encaminhar dois  pedidos ao mesmo tempo, 
           de captação e execução: ou o proponente capta (e pode executar) ou 
           apenas executa os recursos já captados.        
-
+  # PRAZO
   - name: possuo-prazo-para-executar-o-projeto
     expect:
       - >
@@ -386,7 +387,7 @@ interactions:
         informado em Ofício quando é solicitada a prorrogação do 
         período de execução.
     action: respond
-
+  # PRAZO
   - name: projeto-aprovado-para-execucao-no-periodo-de-dois-anos
     action: respond
     expect:
@@ -406,7 +407,7 @@ interactions:
           SALIC com antecedência de 30 dias do término do prazo vigente.
           Não serão prorrogados projetos com calendário previamente informado ou 
           historicamente definida, bem como planos anuais.
-
+  # PRAZO
   - name: tempo-que-o-projeto-podera-ser-prorrogado
     action: respond
     expect:
@@ -425,7 +426,7 @@ interactions:
           b) Não serão prorrogados projetos relativos a planos anuais de 
           atividades e projetos com calendário específico com data previamente 
           informada ou historicamente definida.
-
+  # LEI ROUANET
   - name: procedimento-para-captacao-incompleta
     action: respond
     expect:
@@ -452,7 +453,7 @@ interactions:
           b) Ou deverá ser apresentada a prestação de contas do montante captado
           em até 30 dias a contar da finalização do prazo de execução, 
           finalizando o projeto.
-
+  # LEI ROUANET
   - name: solitacao-da-prorrogacao-de-captacao
     action: respond
     expect:
@@ -472,7 +473,7 @@ interactions:
         b) Não serão prorrogados projetos relativos a planos anuais de 
         atividades e projetos com calendário específico com data previamente 
         informada ou historicamente definida.
-
+  # PRAZO
   - name: prazo-de-execucao-do-projeto-expirou
     action: respond
     expect:
@@ -489,7 +490,7 @@ interactions:
           Entretanto, caso o proponente tenha se manifestado sobre o prazo,assim 
           que o processo for recebido pela Sefic terá o pedido de prorrogação 
           analisado e, se for o caso, o projeto terá sua vigência regularizada.
-
+  # PRAZO
   - name: prazo-para-pedir-recurso
     action: respond
     expect:
@@ -501,7 +502,7 @@ interactions:
         Até dez dias corridos, a partir do seu registro no SALIC. Por isso, 
         é muito importante o acompanhamento constante do sistema para verificar 
         atualizações no sistema.
-
+  # PRAZO
   - name: prazo-para-apresentacao-de-contas
     action: respond
     expect:
@@ -514,7 +515,7 @@ interactions:
         a contar do encerramento do prazo de execução do projeto, ou seja, 
         o proponente não está apto a executar metas físicas ou financeiras 
         nesse período.
-
+  # LEI ROUANET
   - name: remanejar-despesas-da-planilha-financeira
     action: respond
     expect:
@@ -541,7 +542,7 @@ interactions:
           de Atividades), a não ser que o projeto tenha sido contemplado por 
           uma seleção pública ou tenha contrato de patrocínio que garanta a 
           captação de 20% do valor aprovado.
-
+  # LEI ROUANET
   - name: solicitar-alteracao-do-valor-aprovado
     action: respond
     expect:
@@ -570,7 +571,7 @@ interactions:
             contrato de patrocínio que garantam a captação dos 20%.
             Para Plano Anual de Atividades, a captação deverá ser, no mínimo, 
             1/2 dos recursos.
-
+  # PRAZO
   - name: planilha-orcamentaria-do-projeto-cultural
     action: respond
     expect:
@@ -595,7 +596,7 @@ interactions:
           recursos, ou via papel, anteriormente à captação mínima. Para Plano 
           Anual de Atividades, a captação deverá ser, no mínimo, de 1/12 dos 
           recursos. 
-
+  # LEI ROUANET
   - name: fontes-de-recurso-para-fazer-pagamento
     action: respond
     expect:
@@ -606,7 +607,7 @@ interactions:
       - >
         Não. É vedado o uso de diferentes fontes de financiamento para pagamento
         de um mesmo item de despesa.
-
+  # CUSTO
   - name: autorizacao-para-remanejamento-de-despesas
     action: respond
     expect:
@@ -630,7 +631,7 @@ interactions:
         - >
           Para Plano Anual de Atividades, a captação deverá ser, no mínimo, de 
           1/12 dos recursos. 
-
+  # LEI ROUANET
   - name: valor-total-menor-do-que-o-solicitado 
     action: respond
     expect:
@@ -651,7 +652,7 @@ interactions:
           global do projeto, o valor da rubrica referente à remuneração para 
           captação de recursos e os custos da etapa Divulgação também serão 
           proporcionalmente reduzidos.
-
+  # CUSTO
   - name: saldo-da-aplicacao-financeira-para-pagamento
     action: respond
     expect:
@@ -678,7 +679,7 @@ interactions:
           respaldo de contrato de patrocínio, que garanta a captação de 20%. 
           Para Plano Anual de Atividades, a captação deverá ser, no mínimo, 
           de 1/12 dos recursos. 
-
+  # LEI ROUANET
   - name: alteracao-do-plano-de-distribuicao
     action: respond
     expect:
@@ -700,7 +701,7 @@ interactions:
           manter preços populares e acessíveis e respeitar as porcentagens de 
           distribuição, sobretudo a quantidade destinada à população de baixa
           renda.
-
+  # PRAZO
   - name: produto-cultural-do-projeto
     action: respond
     expect:
@@ -721,7 +722,7 @@ interactions:
           No momento da apresentação da prestação de contas final do projeto, 
           deve-se relatar a contribuição das outras fontes de recurso para a 
           realização do produto. 
-
+  # LEI ROUANET
   - name: produto-cultural-inicial-do-projeto-sendo-executado
     action: respond
     expect:
@@ -751,7 +752,7 @@ interactions:
           tenha contrato de patrocínio (que garanta a captação de 20%) e não 
           deverá ultrapassar 40% do valor total aprovado. Para Plano Anual de 
           Atividades, a captação deverá ser, no mínimo, 1/12 dos recursos. 
-
+  # PRAZO
   - name: produto-cultural-do-projeto-fontes-de-recursos
     action: respond
     expect:
@@ -772,7 +773,7 @@ interactions:
           No momento da apresentação da 
           prestação de contas final do projeto, deve-se relatar a contribuição 
           das outras fontes de recurso para a realização do produto.
-
+  # LEI ROUANET
   - name: regras-de-aplicacao-do-pronac
     action: respond
     expect:
@@ -784,7 +785,7 @@ interactions:
         As regras de aplicação e uso das marcas do Programa Nacional de Apoio à
         Cultura (PRONAC) estão registradas no Manual de Uso das Marcas do 
         Pronac, disponível no endereço eletrônico http://www.cultura.gov.br.
-
+  # LEI ROUANET
   - name: logotipos-da-lei-rouanet
     action: respond
     expect:
@@ -796,7 +797,7 @@ interactions:
         Os logotipos da Lei Federal de Incentivo à Cultura (Lei Rouanet), 
         Ministério da Cultura e Governo Federal estão disponíveis para download 
         no endereço eletrônico: http://www.cultura.gov.br/logotipos
-
+  # LEI ROUANET
   - name: identificacao-dos-grupos-de-logomarcas
     action: respond
     expect:
@@ -810,7 +811,7 @@ interactions:
         etc..). Assim, tal identificação ficará a critério do proponente, desde 
         que observadas as regras de aplicação das logomarcas estipuladas pelo
         citado manual.
-
+  # LEI ROUANET
   - name: material-de-divulgacao-indeferido-pelo-minc
     action: respond
     expect:
@@ -825,7 +826,7 @@ interactions:
         do(s) patrocinador(es)) deverá ser por extenso, 
         não devendo conter logomarcas em seu corpo. 
         As logomarcas devem ser aplicadas no bloco de marcas.
-
+  # LEI ROUANET
   - name: anexar-arquivo-audio-video-para-analise
     action: respond
     expect:
@@ -840,7 +841,7 @@ interactions:
         anexados ao Novo Salic. Os arquivos de áudio devem ser transcritos e os 
         em vídeo devem ter os frames que contêm as logomarcas capturados e 
         convertidos em um arquivo.
-
+  # SISTEMA SALIC
   - name: extensoes-de-arquivos-para-anexacao
     action: respond
     expect:
@@ -851,7 +852,7 @@ interactions:
       - >
         As extensões são BMP, GIF, JPEG, JPG, PNG, RAW, TIF e PDF, com limite 
         de tamanho de 5MB cada.
-
+  # LEI ROUANET
   - name: anexar-material-divulgacao-para-analise
     action: respond
     expect:
@@ -861,7 +862,7 @@ interactions:
         A anexação deverá ocorrer no Novo Salic 
         (http://novosalic.cultura.gov.br), mediante link "Marcas", localizado 
         no campo lateral esquerdo da página do projeto.
-
+  # PRAZO
   - name: quando-solicitar-arquivamento-projeto
     action: respond
     expect:
@@ -871,7 +872,7 @@ interactions:
         Se concluir que a execução do projeto é inviável, ou se não obtiver 
         êxito na captação de recursos, devo formalizar o pedido de arquivamento 
         junto à Coordenação Geral de Acompanhamento e Avaliação de Projetos.
-
+  # LEI ROUANET
   - name: como-fazer-solicitacao-arquivamento-projeto
     action: respond
     expect:
@@ -894,7 +895,7 @@ interactions:
           Se for o caso, é necessário entrar em contato com o Banco do Brasil e 
           solicitar a desaplicação dos recursos e desmarcar a opção de aplicação
           automática.
-
+  # PRAZO
   - name: encerramento-das-contas-do-projeto
     action: respond
     expect:
@@ -908,7 +909,7 @@ interactions:
         financeiras (crédito e débito) e somente serão encerradas pelo Banco do 
         Brasil, após 2 anos sem movimentação, conforme Termo de Cooperação 
         Técnica firmado entre o Banco do Brasil e o MinC.
-
+  # LEI ROUANET
   - name: solicitacao-de-desarquivamento
     action: respond
     expect:
@@ -930,7 +931,7 @@ interactions:
           dias poderá ser considerada, caso o projeto tenha sido contemplado em 
           seleção pública de incentivador ou possua comprovada garantia de 
           patrocínio.
-
+  # SISTEMA SALIC
   - name: pedido-de-alteracao-no-novo-salic
     action: respond
     expect:
@@ -947,7 +948,7 @@ interactions:
         - >  
           Nas demais situações, as demandas devem ser encaminhadas ao MinC, 
           via postal.
-
+  # SISTEMA SALIC
   - name: pedido-de-prorrogacao-no-novo-salic
     action: respond
     expect:
