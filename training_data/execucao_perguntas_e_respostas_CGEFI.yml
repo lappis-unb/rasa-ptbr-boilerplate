@@ -1,0 +1,969 @@
+# Neste arquivo contém o que cada identificador de situação representa
+
+trust: .6
+interactions:
+  - name: beneficio-de-incentivo-a-projetos
+    action: respond
+    expect:
+      - Qual o benefício de incentivar projetos culturais?
+    answer:
+      -
+        - >
+          Com o objetivo de incentivar as atividades culturais,
+          por meio do incentivo é possível aplicar parcelas do imposto sobre a 
+          renda, a título de doações ou patrocínios no apoio direto a projetos 
+          culturais apresentados por pessoas jurídicas de natureza cultural e 
+          pessoas físicas, desde que os projetos atendam aos critérios 
+          estabelecidos no Programa Nacional de Apoio à Cultura - PRONAC.
+        - >  
+          As empresas poderão deduzir do imposto de renda devido as quantias 
+          efetivamente despendidas em projetos aprovados pelo Ministério da 
+          Cultura, nos limites e condições estabelecidos na legislação do 
+          imposto de renda vigente:
+        - |
+          a) Doações,
+          b) Patrocínios.
+
+  - name: empresas-que-se-beficiam-de-incentivos-fiscais
+    action: respond
+    expect:
+      - >
+        Qualquer empresa pode se beneficiar de incentivos fiscais, 
+        apoiando projetos culturais?
+    answer:
+      - >
+        Não. Somente as Pessoas Jurídicas tributadas com base no Lucro Real 
+        podem deduzir do imposto de renda devido as doações ou patrocínios, 
+        observado o limite de 4% do imposto devido. 
+      - >  
+        O Decreto 3.000 (Regulamenta a tributação, fiscalização, arrecadação e 
+        administração do Imposto sobre a Renda e Proventos de Qualquer Natureza.
+        ), de 26 de março de 1999, no artigo 246, estabelece as que são 
+        obrigadas a se enquadrar nesse regime de tributação.
+
+  - name: parentes-nao-podem-incentivar-projetos
+    action: respond
+    expect:
+      - Meus parentes podem incentivar meu projeto?
+    answer:
+      - >
+        Não podem incentivar: o cônjuge, os parentes até o terceiro grau, 
+        inclusive os afins, e os dependentes do doador ou patrocinador ou dos 
+        titulares, administradores, acionistas ou sócios de pessoa jurídica 
+        vinculada ao doador ou patrocinador, na data da operação, ou nos doze 
+        meses anteriores
+
+  - name: deduzir-impostos-de-renda-incentivador-de-projetos
+    action: respond
+    expect:
+      - >
+        Quanto o incentivador de projetos culturais pode deduzir de seu imposto 
+        de renda?
+    answer:
+      - 
+        - >
+          Atualmente, existem 2 situações descritas na Lei 8313/91: 
+          1) O artigo 26 da Lei indica os percentuais de dedução do IR,
+          limitados aos estabelecidos pela legislação do imposto de renda 
+          vigente, que atualmente são 4% do imposto devido para empresas e 6% do
+          imposto devido para pessoa física.
+        - >
+          A empresa incentivadora poderá ainda lançar o valor incentivado como 
+          despesa operacional. Os percentuais de dedução são os seguintes:
+        - |
+          Empresas:
+            até 30% do valor patrocinado;
+            até 40% do valor doado
+          Pessoa física:
+            até 60% do valor patrocinado;
+            até 80% do valor doado.
+        - >
+          2) Com a modificação implementada pela Lei 9.874/99, quem investe em 
+          projetos culturais enquadrados nos segmentos indicados pelo artigo 18 
+          da Lei passou a ter a possibilidade de deduzir até 100% do valor doado
+          ou patrocinado, também dentro dos limites da legislação do imposto de
+          renda vigente (atualmente 4% para empresas e 6% para pessoa física).
+        - >  
+          As empresas que investem nesses segmentos não podem lançar o valor 
+          incentivado como despesa operacional.
+
+  - name: procedimentos-de-captacao-de-recursos
+    action: respond
+    expect:
+      - Quais os procedimentos necessários para a captação de recursos?
+    answer:
+      -
+        - >
+          Antes do início da captação, o proponente deve aguardar a abertura 
+          pelo MinC das contas correntes vinculadas ao projeto, pois toda 
+          movimentação de recursos captados deverá ser efetuada nelas. 
+        - >  
+          Após essa etapa, o proponente está habilitado a captar recursos junto 
+          aos incentivadores.
+
+  - name: diferenca-entre-contrato-de-pratocinio-e-carta-de-intencao
+    action: respond
+    expect:
+      - >
+        Há diferença entre contrato de patrocínio e carta de intenção de 
+        patrocínio?
+    answer:
+      -
+        - >
+          Sim. Carta de intenção de patrocínio não se iguala ao contrato de 
+          patrocínio, uma vez que apenas nesse último há a garantia de que as 
+          condições firmadas entre patrocinador e patrocinado serão cumpridas, 
+          bem como de que o(s) aporte(s) será(ão) realizado(s). 
+        - >  
+          Nesse documento constam o valor a ser aportado, a(s) data(s) do(s) 
+          aporte(s), as condições estabelecidas entre os interessados e as 
+          assinaturas dos responsáveis reconhecidas em cartório.
+        - >  
+          A carta de intenção, diferentemente, apenas informa sobre a 
+          possibilidade da ocorrência de patrocínio, não havendo comprometimento 
+          do possível patrocinador com o patrocinado. 
+
+  - name: deducao-de-imposto-de-renda
+    action: respond
+    expect:
+      - Como é feita a dedução do Imposto de Renda?
+    answer:
+      -
+        - >
+          A dedução é feita no momento do pagamento do imposto, ao fim do 
+          período fiscal do recolhimento. Ou seja, a empresa deixa de pagar à 
+          União a parcela da doação ou patrocínio, subtrai o valor do imposto 
+          apurado e recolhe para a União, por meio de DARF, apenas o imposto 
+          devido após a dedução do incentivo. 
+        - >  
+          A dedução poderá ser calculada do imposto devido determinado no lucro 
+          real. As pessoas jurídicas tributadas com base no lucro real só 
+          poderão deduzir o valor da doação e/ou do patrocínio como despesa 
+          operacional no caso de projeto enquadrado no Art. 26 da Lei 8313/91. 
+          No caso de pessoas físicas, a dedução será feita do imposto a pagar 
+          na declaração anual do Imposto de Renda.
+
+  - name: deducao-de-imposto-de-pessoas-juridicas-tributadas
+    action: respond
+    expect:
+      - >
+        Pessoas Jurídicas tributadas com base no lucro presumido ou arbitrado 
+        podem deduzir o IR as doações e patrocínios a atividades culturais?
+    answer:
+      - >
+        Não. Do imposto apurado com base no lucro presumido ou arbitrado não é 
+        permitida qualquer dedução a título de incentivo fiscal. Somente pessoas
+        jurídicas tributadas pelo Lucro Real podem deduzir 
+        incentivos fiscais.
+
+  - name: microempresas-podem-deduzir-as-doacoes-e-patrocinios
+    action: respond
+    expect:
+      - >
+        Microempresas e EPP optantes pelo Simples podem deduzir as doações e 
+        patrocínios?
+    answer:
+      - >
+        Não. As microempresas (ME) e empresas de pequeno porte (EPP), optantes 
+        pelo Simples, estão excluídas de qualquer benefício de dedução de 
+        incentivos do IRPJ.
+
+  - name: doacoes-patrocinios-nao-sofrem-retencao
+    action: respond
+    expect:
+      - >
+        As doações ou patrocínios a atividades culturais sofrem retenção de 
+        IR na Fonte?
+    answer:
+      - >
+        As transferências a título de doações ou patrocínios não estão sujeitas 
+        à incidência do imposto de renda na fonte.
+
+  - name: contas-podem-ser-abertas-em-qualquer-banco
+    action: respond
+    expect:
+      - As contas podem ser abertas em qualquer banco?
+    answer:
+      - >
+        O MinC possui um Termo de Cooperação Técnica com o Banco do Brasil para 
+        gestão das contas do PRONAC. Por isso, as contas somente são abertas 
+        pelo MinC no Banco do Brasil.
+
+  - name: procedimentos-para-abertura-das-contas
+    action: respond
+    expect:
+      - Qual o procedimento para a abertura das contas?
+    answer:
+      -
+        - >
+          Quando do encaminhamento do projeto para análise do Ministério, o 
+          proponente deve indicar em qual agência do Banco do Brasil gostaria 
+          que as contas fossem abertas. 
+        - >
+          Após a aprovação e publicação do projeto no Diário Oficial da União, 
+          o MinC encaminha solicitação de abertura das contas ao banco, com a 
+          indicação de agência pelo proponente, e após aberta disponibiliza os 
+          dados das contas na página do projeto no sistema Salic.
+
+  - name: procedimentos-para-captacao-de-recursos
+    action: respond
+    expect:
+      - Como deve será feita a captação de recursos?
+    answer:
+      - 
+        - >
+          O Ministério da Cultura e a Secretaria da Receita Federal exigem que 
+          os recursos financeiros correspondentes a doações ou patrocínios sejam
+          depositados na conta denominada "conta captação" mantida especialmente
+          para esse fim no Banco do Brasil. Os aportes podem ser feitos:
+        - >  
+          a) Depósito identificado, contendo obrigatoriamente o CPF ou o CNPJ 
+          do(s) depositante(s);
+        - >
+          b) Transferência Eletrônica Disponível (TED) ou Documento de Operação 
+          de Crédito (DOC), desde que contenham, também, o CPF ou o CNPJ do(s) 
+          depositante(s).
+
+  - name: aplicacao-financeira-com-os-recursos-do-projeto
+    action: respond
+    expect:
+      - Posso realizar aplicação financeira com os recursos do projeto?
+    answer:
+      - |
+        Sim. Os recursos depositados nas contas do projeto e ainda não 
+        utilizados na sua execução devem ser aplicados em caderneta de poupança 
+        ou em fundos de aplicação financeira de curto prazo (Exceto: CDB e RDB).
+        Recomenda-se, ainda, que no momento da aplicação seja habilitada a 
+        função "resgate automático".
+
+  - name: inicio-de-movimentacao-de-conta
+    action: respond
+    expect:
+      - A partir de quando a conta pode ser movimentada?
+    answer:
+      -
+        - >
+          A primeira transferência de recursos da conta bloqueada para a conta 
+          movimento será efetuada pelo MinC, após a captação ter atingido, 
+          no mínimo, 20% do valor aprovado para a captação do projeto, exceto se 
+          tiverem sido contemplados em seleção pública ou tenham sido 
+          respaldados por contrato de patrocínio que garantam a 
+          captação dos 20%.
+        - >  
+          Obs: Para projetos de plano anual, a conta pode ser movimentada quando
+          o proponente tiver captado um doze avos (1/12) do valor aprovado para
+          a captação.
+
+  - name: tempo-para-transferencia-de-recursos-conta-bloqueada-conta-movimento
+    action: respond
+    expect:
+      - >
+        Quanto tempo leva para o MinC transferir os recursos da conta bloqueada 
+        para a conta movimento?
+    answer:
+      - >
+        Até 5 dias úteis. Desde que o proponente esteja regular junto ao MinC, 
+        que os recursos não estejam aplicados e que não tenha ocorrido troca de 
+        agência.
+
+  - name: deposito-na-conta-do-pronac-errado
+    action: respond
+    expect:
+      - >
+        O que fazer caso o incentivador faça o depósito na conta do PRONAC 
+        errado?
+    answer:
+      -
+        - >
+          Para regularização da situação e consequente transferência dos 
+          recursos, é necessário encaminhar correspondências do proponente e do 
+          incentivador, informando a que se refere o equívoco e identificando as
+          seguintes ocorrências:
+        - >
+          1) O depósito deveria ser direcionado ao projeto A e foi direcionado 
+          ao projeto B, por equívoco no cadastro do incentivador; - O depósito 
+          não refere-se a recursos incentivados (recursos próprios do 
+          incentivador ou depositante e não geram comunicado de mecenato)
+        - >
+          2) Depósitos feitos em duplicidade.
+          Uma Nota Técnica será elaborada pelo MinC informando os procedimentos 
+          adotados para cada caso.
+
+  - name: procedimento-para-captacao-do-valor-acima-autorizado-pelo-minc
+    action: respond
+    expect:
+      - >
+        O que fazer se for captado valor acima do autorizado pelo Ministério da
+        Cultura?
+    answer:
+      -
+        - >
+          O projeto é aprovado por meio de portaria ministerial, onde consta o 
+          valor a ser captado, que deve ser observado.
+        - >
+          Tudo o que for captado além do autorizado será registrado no sistema 
+          SALIC e deverá ser recolhido ao Fundo Nacional da Cultura sem prejuízo 
+          ao incentivador quanto ao benefício fiscal.
+
+  - name: impedimento-para-receber-aportes
+    action: respond
+    expect:
+      - >
+        A inabilitação do proponente em um projeto cultural impede que ele 
+        receba aportes em outro?
+    answer:
+      - >
+        Não. Os aportes poderão ser realizados durante a inabilitação do 
+        proponente, entretanto a transferência de recursos entre as contas 
+        bancárias do projeto (Captação e Movimento), bem como a utilização do 
+        saldo só serão permitidas após a habilitação do proponente. 
+
+  - name: prazo-limite-para-pedir-prorrogacao-de-prazo
+    action: respond
+    expect:
+      - >
+        Qual o prazo limite para pedir a prorrogação de prazo para captação de 
+        recursos e/ou de execução do projeto?
+    answer:
+      - >
+        A solicitação de prorrogação de prazo para captação deverá ser feita 
+        com antecedência de, no mínimo, 30 dias do encerramento do prazo 
+        vigente, publicado no Diário Oficial da União. 
+        A solicitação de prorrogação de prazo de execução segue a mesma regra.
+
+  - name: tempo-para-analisar-pedidos-de-prorrogacao
+    action: respond
+    expect:
+      - Em quanto tempo o MinC analisa os pedidos de prorrogação?
+    answer:
+      - Até 30 dias corridos para análise.
+
+  - name: renovacao-do-prazo-de-captacao
+    action: respond
+    expect:
+      - O prazo de execução renova o de captação?
+    answer:
+      - >
+        Não. O prazo de captação coincide com o de execução, ou seja, se eu
+        estou apto a captar recursos, eu posso executar o projeto. 
+        Quando o pedido de prorrogação de prazo de execução, somente, é 
+        deferido, é indicado que não há interesse em captar mais recursos e há 
+        interesse somente em executar o projeto. 
+
+  - name: diferenca-prazo-de-captacao-e-execucao
+    action: respond
+    expect:
+      - Qual a diferença entre prazo de captação e execução?
+    answer:
+      -
+        - >
+          A prorrogação do prazo de captação deve ser solicitada quando o 
+          proponente tem o interesse em continuar captando recursos. 
+          Para este caso, à medida que capta, pode, obviamente, executar as 
+          atividades previstas para o projeto. Entretanto, a extensão do prazo
+          de execução não prorroga o prazo de captação. 
+        - >  
+          O proponente apenas deve 
+          solicitar a prorrogação do prazo de execução quando não mais tiver 
+          interesse em captar recursos para o projeto. Este caso se aplica 
+          exclusivamente para projeto que possui captação total ou suficiente 
+          para a realização das atividades.
+        - > 
+          Nesse contexto, é erro encaminhar dois  pedidos ao mesmo tempo, 
+          de captação e execução: ou o proponente capta (e pode executar) ou 
+          apenas executa os recursos já captados.        
+
+  - name: possuo-prazo-para-executar-o-projeto
+    expect:
+      - >
+        O período de execução informado quando da apresentação da proposta 
+        garante que eu possuo prazo para executar o projeto?
+    answer:
+      - >
+        Não. Esse período de execução é uma previsão de execução do projeto e 
+        irá determinar o acesso aos campos de prestação de contas no sistema. 
+        O prazo legal válido é o publicado em Diário Oficial da União ou 
+        informado em Ofício quando é solicitada a prorrogação do 
+        período de execução.
+    action: respond
+
+  - name: projeto-aprovado-para-execucao-no-periodo-de-dois-anos
+    action: respond
+    expect:
+      - >
+        Se o projeto cultural foi aprovado para execução no período de dois anos
+        , devo solicitar prorrogação de prazo de captação/execução no 
+        final do primeiro ano?
+    answer:
+      -
+        - >
+          Sim. Quando o projeto é aprovado, o prazo de captação é publicado no 
+          Diário Oficial da União e, este prazo, está limitado ao exercício 
+          fiscal em que o projeto foi aprovado. 
+        - >  
+          Por isso, caso haja a intenção de 
+          prorrogar a captação ou execução, deve-se solicitar a prorrogação pelo 
+          SALIC com antecedência de 30 dias do término do prazo vigente.
+          Não serão prorrogados projetos com calendário previamente informado ou 
+          historicamente definida, bem como planos anuais.
+
+  - name: tempo-que-o-projeto-podera-ser-prorrogado
+    action: respond
+    expect:
+      - Por quanto tempo o projeto poderá ser prorrogado?
+    answer:
+      -
+        - >
+          O prazo máximo para captação será de até 24 meses a partir da data de 
+          publicação da portaria de autorização para captação, exceto em caso 
+          fortuito ou força maior, comprovado. Ressaltamos que:
+        - >
+          a) O prazo pode ser ampliado para 4 exercícios fiscais para projetos de 
+          recuperação do patrimônio histórico ou construção de imóveis, conforme 
+          característica do projeto e complexidade da obra.
+        - >  
+          b) Não serão prorrogados projetos relativos a planos anuais de 
+          atividades e projetos com calendário específico com data previamente 
+          informada ou historicamente definida.
+
+  - name: procedimento-para-captacao-incompleta
+    action: respond
+    expect:
+      - >
+        Qual o procedimento a ser feito quando o prazo de captação termina e eu 
+        não captei 100% do valor aprovado para o projeto?
+    answer:
+      -
+        - >
+          1) Caso haja o intuito de captar o saldo restante, é necessário 
+          solicitar a prorrogação do período de captação de recursos, até 30
+          dias corridos antes do fim do prazo estabelecido na portaria de 
+          aprovação do projeto, publicada no Diário Oficial da União. 
+          
+          A prestação de contas poderá ser apresentada de forma parcial, por 
+          iniciativa do beneficiário ou quando solicitada pelo ministério.
+        - >
+          2) Caso não haja interesse em captar o saldo restante:
+          a) O proponente deverá solicitar a prorrogação do prazo de execução, 
+          também até 30 dias corridos antes do prazo estabelecido em portaria de
+          aprovação, caso o projeto possa ser executado conforme pactuado 
+          com o MinC;
+
+          b) Ou deverá ser apresentada a prestação de contas do montante captado
+          em até 30 dias a contar da finalização do prazo de execução, 
+          finalizando o projeto.
+
+  - name: solitacao-da-prorrogacao-de-captacao
+    action: respond
+    expect:
+      - >
+        Caso eu não solicite a prorrogação de captação e o prazo do projeto 
+        expirar, o que acontece?
+    answer:
+      - >
+        O prazo máximo para captação será de até 24 meses a partir da data de 
+        publicação da portaria de autorização para captação, exceto em caso 
+        fortuito ou força maior, comprovado. Ressaltamos que:
+        
+        a) O prazo pode ser ampliado para 4 exercícios fiscais para projetos de 
+        recuperação do patrimônio histórico ou construção de imóveis, conforme 
+        característica do projeto e complexidade da obra.
+
+        b) Não serão prorrogados projetos relativos a planos anuais de 
+        atividades e projetos com calendário específico com data previamente 
+        informada ou historicamente definida.
+
+  - name: prazo-de-execucao-do-projeto-expirou
+    action: respond
+    expect:
+      - >
+        O prazo de execução do projeto expirou enquanto estava em análise na 
+        unidade vinculada ao MinC. Como proceder acerca da vigência?
+    answer:
+      -
+        - >
+          O proponente deve estar sempre atento ao prazo de vigência do projeto. 
+          Por questões técnicas,não é possível prorrogar os projetos que estejam 
+          com as unidades vinculadas ao MinC.
+        - >
+          Entretanto, caso o proponente tenha se manifestado sobre o prazo,assim 
+          que o processo for recebido pela Sefic terá o pedido de prorrogação 
+          analisado e, se for o caso, o projeto terá sua vigência regularizada.
+
+  - name: prazo-para-pedir-recurso
+    action: respond
+    expect:
+      - >
+        Qual o prazo para pedir reconsideração/recurso de uma decisão 
+        proferida pelo MinC?
+    answer:
+      - >
+        Até dez dias corridos, a partir do seu registro no SALIC. Por isso, 
+        é muito importante o acompanhamento constante do sistema para verificar 
+        atualizações no sistema.
+
+  - name: prazo-para-apresentacao-de-contas
+    action: respond
+    expect:
+      - >
+        O prazo para apresentação da prestação de contas final é considerado 
+        período de execução do projeto?
+    answer:
+      - >
+        Não. O prazo para apresentação da Prestação de Contas Final é de 30 dias
+        a contar do encerramento do prazo de execução do projeto, ou seja, 
+        o proponente não está apto a executar metas físicas ou financeiras 
+        nesse período.
+
+  - name: remanejar-despesas-da-planilha-financeira
+    action: respond
+    expect:
+      - >
+        É possível remanejar despesas da planilha financeira após a aprovação 
+        inicial pelo Ministério da Cultura?
+    answer:
+      -
+        - >
+          Sim. Ressaltamos que não necessitam de prévia autorização do MinC 
+          alterações de itens dentro do limite de 20% para mais ou para menos do 
+          valor do item, desde que:
+        - >
+          a) Não alterem o valor total do orçamento aprovado para o projeto;
+        - >
+          b) Os remanejamentos não podem aumentar o valor aprovado para as 
+          etapas: Custos Administrativos, Divulgação e Captação de Recursos;
+        - >
+          c) Os remanejamentos não podem ser feitos para itens retirados pelo 
+          MinC na aprovação. Outras alterações que se pretenda fazer no 
+          orçamento aprovado deve ser submetida antecipadamente ao ministério 
+          para avaliação e só serão analisadas se houver captação de 20% do 
+          valor total aprovado (ou 1/12 dos recursos, no caso de Plano Anual 
+          de Atividades), a não ser que o projeto tenha sido contemplado por 
+          uma seleção pública ou tenha contrato de patrocínio que garanta a 
+          captação de 20% do valor aprovado.
+
+  - name: solicitar-alteracao-do-valor-aprovado
+    action: respond
+    expect:
+        - >
+          Posso solicitar alteração do valor aprovado para a execução do 
+          projeto, com redução ou complementação de verba?
+    answer:
+        -
+          - >
+            Sim. O pedido deve ser encaminhado, justificado, e com apresentação 
+            de nova planilha orçamentária, contendo o detalhamento das 
+            alterações efetuadas.
+          - >  
+            A alteração de metas e redução de custos poderão ser autorizadas,
+            desde que os objetivos do projeto não se alterem. Nestes casos, o 
+            projeto é reconduzido à unidade supervisionada para emissão de novo 
+            parecer técnico.
+          - >
+            A complementação orçamentária se limitará a 50% do valor aprovado e
+            a análise estará condicionada à captação de, no mínimo, 50% do valor 
+            aprovado.
+          - >
+            A redução orçamentária se limitará a 40% do valor aprovado e estará 
+            condicionada à captação de, no mínimo, 20% do valor aprovado, ou 
+            caso tenha sido contemplado em seleções públicas ou respaldados por 
+            contrato de patrocínio que garantam a captação dos 20%.
+            Para Plano Anual de Atividades, a captação deverá ser, no mínimo, 
+            1/2 dos recursos.
+
+  - name: planilha-orcamentaria-do-projeto-cultural
+    action: respond
+    expect:
+      - >
+        Posso alterar a planilha orçamentária do projeto cultural, modificando 
+        a fonte de custeio de alguns itens?
+    answer:
+      -
+        - >
+          Sim. Para este caso, deve ser encaminhada uma nova planilha 
+          orçamentária com a indicação dos itens que serão custeados com 
+          recursos diversos da Rouanet.
+        - >
+          É importante destacar que, junto à planilha orçamentária, o proponente 
+          deve encaminhar a comprovação de obtenção dos recursos de outras 
+          fontes, como contratos de patrocínio ou de prestação de serviços, ou, 
+          para casos de apoio de outros órgãos da administração pública, como 
+          prefeituras ou governos estaduais, o documento que comprove o 
+          respectivo apoio.
+        - >  
+          O pedido deverá ser encaminhado via Salic, após captação de 20% dos 
+          recursos, ou via papel, anteriormente à captação mínima. Para Plano 
+          Anual de Atividades, a captação deverá ser, no mínimo, de 1/12 dos 
+          recursos. 
+
+  - name: fontes-de-recurso-para-fazer-pagamento
+    action: respond
+    expect:
+      - >
+        Posso utilizar diferentes fontes de recurso para fazer o pagamento de 
+        um mesmo item orçamentário?
+    answer:
+      - >
+        Não. É vedado o uso de diferentes fontes de financiamento para pagamento
+        de um mesmo item de despesa.
+
+  - name: autorizacao-para-remanejamento-de-despesas
+    action: respond
+    expect:
+      - >
+        A inclusão de novo(s) item(s) na planilha orçamentária do projeto 
+        cultural, com remanejamento de despesas dentro do limite de 20% do valor 
+        de cada rubrica, necessita de prévia autorização do MinC?
+    answer:
+      -
+        - >
+          Sim. Mesmo não alterando o valor total aprovado para o projeto 
+          cultural e não ultrapassando o limite de 20% estabelecido pela 
+          normativa do MinC, a inclusão de novos itens na planilha orçamentária 
+          do projeto deve ser submetida previamente ao MinC.
+        - > 
+          O pedido só poderá ser encaminhado ao Ministério após a captação de 
+          20% dos recursos aprovados (ou com comprovante de aprovação em seleção
+          pública ou com respaldo de contrato de patrocínio, que garanta a 
+          captação de 20%) e os novos itens orçamentários não poderão ser iguais
+          a itens retirados pelo MinC na aprovação inicial. 
+        - >
+          Para Plano Anual de Atividades, a captação deverá ser, no mínimo, de 
+          1/12 dos recursos. 
+
+  - name: valor-total-menor-do-que-o-solicitado 
+    action: respond
+    expect:
+      - >
+        A redução (ou complementação) orçamentária do projeto cultural foi 
+        aprovada pelo MinC com um valor total abaixo do solicitado. 
+        Houve algum erro de cálculo?
+    answer:
+      -
+        - >
+          Antes de concluir que houve erro de cálculo na análise do pedido, é 
+          preciso verificar se a redução ou aumento do valor de alguns itens 
+          orçamentários solicitados não foram autorizados, conforme legislação 
+          vigente ou entendimento do analista técnico da área, diante da 
+          realidade de mercado.
+        - >
+          Contudo, também se deve lembrar que, no caso de redução do valor 
+          global do projeto, o valor da rubrica referente à remuneração para 
+          captação de recursos e os custos da etapa Divulgação também serão 
+          proporcionalmente reduzidos.
+
+  - name: saldo-da-aplicacao-financeira-para-pagamento
+    action: respond
+    expect:
+      - >
+        Posso utilizar o saldo da aplicação financeira para pagamento de 
+        despesas do projeto cultural?
+    answer:
+      -
+        - >
+          Sim. O saldo da aplicação financeira poderá ser utilizado tanto em 
+          projetos com captação parcial de recursos, quanto em projetos com 
+          captação total. Em ambas as situações: 
+        - >   
+          a) Caso a readequação dos itens orçamentários fique limitada a 20%, 
+          para mais ou para menos, do valor da rubrica, não é necessário o envio
+          de solicitação ao Minc;
+        - >
+          b) Caso a readequação apresente aumento ou redução dos valores das 
+          rubricas acima de 20% dos seus valores totais, o pedido deve ser 
+          encaminhado ao Ministério.
+        - >
+          A solicitação só poderá ocorrer após a captação de 20% dos recursos 
+          aprovados ou com comprovante de aprovação em seleção pública ou com 
+          respaldo de contrato de patrocínio, que garanta a captação de 20%. 
+          Para Plano Anual de Atividades, a captação deverá ser, no mínimo, 
+          de 1/12 dos recursos. 
+
+  - name: alteracao-do-plano-de-distribuicao
+    action: respond
+    expect:
+      - Posso alterar o plano de distribuição aprovado para o projeto? 
+    answer:
+      -
+        - >
+          Sim. A alteração no plano de distribuição (público alvo, quantidade do 
+          produto cultural, valores, dentre outras) deve ser submetida à análise 
+          do MinC, somente após a captação de 20% do valor total aprovado ou de 
+          1/12 dos recursos, para Plano Anual de Atividades. No pedido, deve-se 
+          indicar claramente quais alterações se pretende fazer, atentando-se 
+          para as seguintes condições: 
+        - >
+          a) Caso o projeto seja inteiramente gratuito, deve-se manter a sua 
+          total gratuidade; 
+        - >
+          b) Caso o projeto apresente comercialização de produtos, deve-se 
+          manter preços populares e acessíveis e respeitar as porcentagens de 
+          distribuição, sobretudo a quantidade destinada à população de baixa
+          renda.
+
+  - name: produto-cultural-do-projeto
+    action: respond
+    expect:
+      - >
+        Quando o produto cultural do projeto é realizado com diferentes fontes 
+        de recursos (incentivados ou não), os exemplares (unidades) pagos com 
+        recursos de outras fontes devem ser incluídos no plano de distribuição 
+        aprovado pelo MinC? 
+    answer:
+      -
+        - >
+          Sim. Para a distribuição do produto cultural, deve ser considerada a 
+          quantidade total de itens produzidos dentro do escopo do projeto, 
+          pois, uma vez que o produto foi realizado, mesmo que parcialmente, com 
+          recursos incentivados, todos os seus exemplares (unidades) devem ser 
+          considerados como resultado da proposta aprovada pelo MinC.
+        - >  
+          No momento da apresentação da prestação de contas final do projeto, 
+          deve-se relatar a contribuição das outras fontes de recurso para a 
+          realização do produto. 
+
+  - name: produto-cultural-inicial-do-projeto-sendo-executado
+    action: respond
+    expect:
+      - >
+        As atividades e/ou os produtos culturais inicialmente propostos no 
+        projeto podem ser executados proporcionalmente ao percentual captado?
+    answer:
+      -
+        - >
+          Caso o proponente conclua que não conseguirá realizar a totalidade das 
+          atividades e/ou dos produtos culturais propostos, ele poderá solicitar 
+          a redução orçamentária do projeto ao MinC e, por conseguinte, a 
+          alteração proporcional das metas inicialmente aprovadas. Contudo, 
+          orientamos para que se atente às seguintes situações:
+        - >
+          a) Caso não haja perpectivas de novas captações para o projeto e/ou o 
+          prazo de captação tenha finalizado: o pedido de redução orçamentária e 
+          alteração de metas poderá ser encaminhado ao MinC
+        - >  
+          b) Caso ainda haja a possibilidade de novos patrocínios para o 
+          projeto: aguarde o término do período de captação, para se certificar 
+          de que não haverá novos patrocínios e que o valor total do projeto 
+          poderá ser reduzido, e encaminhe o pedido ao MinC. 
+        - >  
+          O pedido só poderá ser efetuado após a captação de, pelo menos, 
+          20% dos recursos, ou caso tenha sido contemplado em seleção pública ou 
+          tenha contrato de patrocínio (que garanta a captação de 20%) e não 
+          deverá ultrapassar 40% do valor total aprovado. Para Plano Anual de 
+          Atividades, a captação deverá ser, no mínimo, 1/12 dos recursos. 
+
+  - name: produto-cultural-do-projeto-fontes-de-recursos
+    action: respond
+    expect:
+      - >
+        Quando o produto cultural do projeto é realizado com diferentes 
+        fontes de recursos (incentivados ou não), os exemplares (unidades) 
+        pagos com recursos de outras fontes deverão apresentar as marcas do 
+        PRONAC?
+    answer:
+      -
+        - >
+          Sim, todos os exemplares (unidades) do produto cultural devem 
+          apresentar as marcas do Governo Federal e da Lei Rouanet, pois, 
+          uma vez que o produto foi realizado, mesmo que parcialmente, com 
+          recursos incentivados, toda a sua tiragem (produção) deve ser 
+          considerada como resultado da proposta aprovada pelo MinC. 
+        - >  
+          No momento da apresentação da 
+          prestação de contas final do projeto, deve-se relatar a contribuição 
+          das outras fontes de recurso para a realização do produto.
+
+  - name: regras-de-aplicacao-do-pronac
+    action: respond
+    expect:
+      - >
+        Quais são as regras de aplicação das marcas do Programa Nacional de 
+        Apoio à Cultura (PRONAC)?
+    answer:
+      - >
+        As regras de aplicação e uso das marcas do Programa Nacional de Apoio à
+        Cultura (PRONAC) estão registradas no Manual de Uso das Marcas do 
+        Pronac, disponível no endereço eletrônico http://www.cultura.gov.br.
+
+  - name: logotipos-da-lei-rouanet
+    action: respond
+    expect:
+      - >
+        Onde consigo os logotipos da Lei Federal de Incentivo à Cultura 
+        (Lei Rouanet), Ministério da Cultura e Governo Federal?
+    answer:
+      - >
+        Os logotipos da Lei Federal de Incentivo à Cultura (Lei Rouanet), 
+        Ministério da Cultura e Governo Federal estão disponíveis para download 
+        no endereço eletrônico: http://www.cultura.gov.br/logotipos
+
+  - name: identificacao-dos-grupos-de-logomarcas
+    action: respond
+    expect:
+      - >
+        É necessário identificar os grupos no campo de logomarcas, como por 
+        exemplo "Apoio", "Patrocínio", etc?
+    answer:
+      - >
+        O Manual de Uso das Marcas do Pronac não faz menção à identificação dos 
+        grupos no bloco de marcas (como, por exemplo, Patrocinadores, Apoio, 
+        etc..). Assim, tal identificação ficará a critério do proponente, desde 
+        que observadas as regras de aplicação das logomarcas estipuladas pelo
+        citado manual.
+
+  - name: material-de-divulgacao-indeferido-pelo-minc
+    action: respond
+    expect:
+      - >
+        Meu material de divulgação foi indeferido com a justificativa de que a 
+        expressão "Ministério da Cultura apresenta" deve estar escrita por 
+        extenso. Como devo proceder nesse caso?
+    answer:
+      - >
+        A expressão "Ministério da Cultura apresenta" (para projetos enquadrados
+        no artigo 18 da Lei 8.313/1991) e suas variantes (inclusão do(s) nome(s)
+        do(s) patrocinador(es)) deverá ser por extenso, 
+        não devendo conter logomarcas em seu corpo. 
+        As logomarcas devem ser aplicadas no bloco de marcas.
+
+  - name: anexar-arquivo-audio-video-para-analise
+    action: respond
+    expect:
+      - >
+        Possuo um arquivo de áudio/vídeo para a análise, porém o sistema do 
+        Ministério da Cultura não permite a anexação de tais arquivos. 
+        O que faço?
+    answer:
+      - >
+        Para análise do material de divulgação em áudio e/ou vídeo, os arquivos
+        devem ser convertidos em documentos no formato PDF e posteriormente 
+        anexados ao Novo Salic. Os arquivos de áudio devem ser transcritos e os 
+        em vídeo devem ter os frames que contêm as logomarcas capturados e 
+        convertidos em um arquivo.
+
+  - name: extensoes-de-arquivos-para-anexacao
+    action: respond
+    expect:
+      - >
+        Quais são as extensões de arquivo permitidas para 
+        anexação no Novo Salic?
+    answer:
+      - >
+        As extensões são BMP, GIF, JPEG, JPG, PNG, RAW, TIF e PDF, com limite 
+        de tamanho de 5MB cada.
+
+  - name: anexar-material-divulgacao-para-analise
+    action: respond
+    expect:
+      - Como faço para anexar meu material de divulgação para análise?
+    answer:
+      - >
+        A anexação deverá ocorrer no Novo Salic 
+        (http://novosalic.cultura.gov.br), mediante link "Marcas", localizado 
+        no campo lateral esquerdo da página do projeto.
+
+  - name: quando-solicitar-arquivamento-projeto
+    action: respond
+    expect:
+      - Quando devo solicitar o arquivamento do projeto?
+    answer:
+      - >
+        Se concluir que a execução do projeto é inviável, ou se não obtiver 
+        êxito na captação de recursos, devo formalizar o pedido de arquivamento 
+        junto à Coordenação Geral de Acompanhamento e Avaliação de Projetos.
+
+  - name: como-fazer-solicitacao-arquivamento-projeto
+    action: respond
+    expect:
+      - Como fazer a solicitação de arquivamento do projeto?
+    answer:
+      -
+        - >
+          A solicitação de arquivamento será realizada por meio do envio de 
+          carta simples, assinada pelo proponente ou dirigente cadastrado no 
+          SALIC. 
+        - >  
+          Além disso, se houve captação de recursos, é necessário encaminhar 
+          anuência para o recolhimento dos recursos captados ao Fundo Nacional 
+          da Cultura.
+        - >
+          IMPORTANTE: Ressaltamos que, para efetuar o recolhimento ao FNC, 
+          é necessário que tais recursos estejam disponíveis em conta, ou seja, 
+          eles não podem estar aplicados.
+        - >  
+          Se for o caso, é necessário entrar em contato com o Banco do Brasil e 
+          solicitar a desaplicação dos recursos e desmarcar a opção de aplicação
+          automática.
+
+  - name: encerramento-das-contas-do-projeto
+    action: respond
+    expect:
+      - >
+        Quando o projeto for arquivado ou quando a prestação de contas for 
+        apresentada, as contas do projeto serão encerradas?
+    answer:
+      - >
+        Não. Quando o projeto for arquivado ou se prestação de contas foi a
+        presentada, as contas serão bloqueadas pelo MinC para operações 
+        financeiras (crédito e débito) e somente serão encerradas pelo Banco do 
+        Brasil, após 2 anos sem movimentação, conforme Termo de Cooperação 
+        Técnica firmado entre o Banco do Brasil e o MinC.
+
+  - name: solicitacao-de-desarquivamento
+    action: respond
+    expect:
+      - >
+        Caso meu projeto tenha sido arquivado, posso solicitar o
+        desarquivamento?
+    answer:
+      -
+        - >
+          Sim, desde que o pedido obedeça aos seguintes prazos:
+        - >
+          a) A solicitação de desarquivamento de projeto ou reativação de 
+          proposta cancelada automaticamente, deverá ser justificada e feita em 
+          até dez dias corridos da data de registro do arquivamento no SALIC, 
+          desde que o proponente não tenha desistido formalmente.
+        - >
+          b) Se o projeto tiver sido aprovado, mas arquivado antes da 
+          autorização para captação, a solicitação feita entre dez e sessenta 
+          dias poderá ser considerada, caso o projeto tenha sido contemplado em 
+          seleção pública de incentivador ou possua comprovada garantia de 
+          patrocínio.
+
+  - name: pedido-de-alteracao-no-novo-salic
+    action: respond
+    expect:
+      - >
+        Não é possível realizar o pedido de alteração (local de realização, 
+        plano de distribuição, nome, proponente) pelo Novo Salic. 
+        Como devo proceder?
+    answer:
+      -
+        - >
+          O sistema permite o registro desse tipo de solicitação apenas nos 
+          casos que tenha havido a captação de, no mínimo, 20% do valor total 
+          aprovado ou 1/12 para Plano Anual de Atividades. 
+        - >  
+          Nas demais situações, as demandas devem ser encaminhadas ao MinC, 
+          via postal.
+
+  - name: pedido-de-prorrogacao-no-novo-salic
+    action: respond
+    expect:
+      - >
+        Não é possível realizar o pedido de prorrogação de captação/execução 
+        pelo Novo Salic. O que devo fazer?
+    answer:
+      -
+        - >
+          Após a finalização do prazo de captação/execução vigente não será 
+          possível realizar o pedido de prorrogação pelo sistema, uma vez que o 
+          módulo de solicitação é bloqueado para projetos com prazos expirados, 
+          cuja solicitação de prorrogação não foi efetuada com 30 dias de 
+          antecedência da data final.
+        - >
+          Desse modo, orientamos o proponente a 
+          encaminhar pedido ao MinC, em meio físico. A solicitação da 
+          prorrogação de prazo, realizada intempestivamente, será analisada caso
+          a caso.
