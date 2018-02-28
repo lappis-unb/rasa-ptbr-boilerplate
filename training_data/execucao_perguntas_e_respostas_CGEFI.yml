@@ -6,7 +6,12 @@ interactions:
   - name: beneficio-de-incentivo-a-projetos
     action: respond
     expect:
-      - Qual o benefício de incentivar projetos culturais?
+      - Qual o benefício de incentivar projetos culturais ?
+      - Há benefício para incentivar projetos culturais ?
+      - O que ganho investindo em projetos culturais ?
+      - Investimento e projetos culturais, tem benefícios?
+      - O que se ganha ao incentivar projetos culturais ?
+      - Incentivo a projetos culturais há benefícios ?
     answer:
       -
         - >
@@ -30,7 +35,11 @@ interactions:
     expect:
       - >
         Qualquer empresa pode se beneficiar de incentivos fiscais, 
-        apoiando projetos culturais?
+        apoiando projetos culturais ?
+      - Quais empresas podem se beneficiar ao apoiar projetos culturais ?
+      - Que tipos de empresas podem se beneficiar ao apoiar projetos culturais ?
+      - Apoiando projetos culturais, qualquer empresa se benificia ?
+      - Empresas que se beneficiam ao apoiar projeto culturais ?
     answer:
       - >
         Não. Somente as Pessoas Jurídicas tributadas com base no Lucro Real 
@@ -45,7 +54,15 @@ interactions:
   - name: parentes-nao-podem-incentivar-projetos
     action: respond
     expect:
-      - Meus parentes podem incentivar meu projeto?
+      - Meus parentes podem incentivar meu projeto ?
+      - Tem problema parentes incentivarem projetos ?
+      - >
+        Tenho parentes que desejam incentivar meus projetos, tem alguma 
+        restrição ?
+      - Parentes incentivando meus projetos. Tem problema ?
+      - >
+        Tem problema meu irmão ou irmã, tio ou tia, primo ou prima, mãe ou pai
+        incentivar meus projetos ?
     answer:
       - >
         Não podem incentivar: o cônjuge, os parentes até o terceiro grau, 
@@ -60,6 +77,12 @@ interactions:
       - >
         Quanto o incentivador de projetos culturais pode deduzir de seu imposto 
         de renda?
+      - >
+        Incetivadores de projetos podem deduzir quanto de impostos de renda ?
+      - >
+        Quanto de imposto de renda incentivadores conseguem deduzir de impostos ?
+      - >
+        Qual valor um incentivador consegue deduzir de impostos de renda ?
     answer:
       - 
         - >
@@ -92,6 +115,11 @@ interactions:
     action: respond
     expect:
       - Quais os procedimentos necessários para a captação de recursos?
+      - Qual é o processo apra fazer a captação de recursos?
+      - O que devo fazer para realizar a captação de recursos?
+      - Captação de recursos como fazer?
+      - O que é necessário para fazer a captação de recursos?
+      - Desejo fazer a captação de recursos como devo prosseguir?
     answer:
       -
         - >
@@ -105,9 +133,14 @@ interactions:
   - name: diferenca-entre-contrato-de-pratocinio-e-carta-de-intencao
     action: respond
     expect:
+      - Tem diferenças entre contrato de patrocínio e carta de intenção
+      - Diferença entre contrato de patrocínio e carta de intenção
       - >
         Há diferença entre contrato de patrocínio e carta de intenção de 
         patrocínio?
+      - >
+        Qual são as diferenças entre contrato de patrocínio e carta de 
+        intenção
     answer:
       -
         - >
@@ -127,7 +160,12 @@ interactions:
   - name: deducao-de-imposto-de-renda
     action: respond
     expect:
-      - Como é feita a dedução do Imposto de Renda?
+      - Como é feita a dedução do Imposto de Renda ?
+      - Dedução de impostos de renda como é processo ?
+      - Qual é o processo de impostos de renda ?
+      - Dedução impostos de renda como é feito?
+      - Como é feita a dedução do IR ?
+      - Qual é o processo de IR ?
     answer:
       -
         - >
@@ -143,10 +181,14 @@ interactions:
           operacional no caso de projeto enquadrado no Art. 26 da Lei 8313/91. 
           No caso de pessoas físicas, a dedução será feita do imposto a pagar 
           na declaração anual do Imposto de Renda.
-  # CUSTO
+  # CUSTO - ESPERADO INCOMPLETO
   - name: deducao-de-imposto-de-pessoas-juridicas-tributadas
     action: respond
     expect:
+      - >
+        Pessoas Jurídicas tributadas com base no lucro presumido ou arbitrado 
+        podem deduzir o imposto de renda as doações e patrocínios a atividades 
+        culturais?
       - >
         Pessoas Jurídicas tributadas com base no lucro presumido ou arbitrado 
         podem deduzir o IR as doações e patrocínios a atividades culturais?
@@ -156,7 +198,7 @@ interactions:
         permitida qualquer dedução a título de incentivo fiscal. Somente pessoas
         jurídicas tributadas pelo Lucro Real podem deduzir 
         incentivos fiscais.
-  # LEI ROUANET
+  # LEI ROUANET - ESPERADO INCOMPLETO
   - name: microempresas-podem-deduzir-as-doacoes-e-patrocinios
     action: respond
     expect:
@@ -174,7 +216,9 @@ interactions:
     expect:
       - >
         As doações ou patrocínios a atividades culturais sofrem retenção de 
-        IR na Fonte?
+        imposto de renda na Fonte?
+      - O que sofre retenção de imposto de renda na Fonte?
+      - As doações ou patrocínios a atividades culturais tem retenção de IR?
     answer:
       - >
         As transferências a título de doações ou patrocínios não estão sujeitas 
@@ -184,6 +228,10 @@ interactions:
     action: respond
     expect:
       - As contas podem ser abertas em qualquer banco?
+      - Tem que criar contas em algum banco em específico?
+      - Qual banco que deve se criar a conta?
+      - Onde devo abrir uma conta?
+      - Posso escolher o banco para abrir uma conta? ou tem algum banco definido ?
     answer:
       - >
         O MinC possui um Termo de Cooperação Técnica com o Banco do Brasil para 
@@ -193,7 +241,12 @@ interactions:
   - name: procedimentos-para-abertura-das-contas
     action: respond
     expect:
-      - Qual o procedimento para a abertura das contas?
+      - Qual o procedimento para a abertura das contas ?
+      - O que devo fazer para criar uma contas ?
+      - Qual é o processo para se criar uma conta ?
+      - Como faço para criar uma conta ?
+      - Desejo criar uma conta, o que devo fazer ?
+      - Desejo abrir uma conta, como devo proceder ?
     answer:
       -
         - >
@@ -209,7 +262,11 @@ interactions:
   - name: procedimentos-para-captacao-de-recursos
     action: respond
     expect:
-      - Como deve será feita a captação de recursos?
+      - Como deve será feita a captação de recursos ?
+      - Como fazer a captação de recursos ?
+      - Como funciona para fazer a captação de recursos ?
+      - Desejo fazer a captação de recursos, como devo fazer?
+      - Qual o procedimento para fazer a captação de recursos ?
     answer:
       - 
         - >
@@ -228,7 +285,10 @@ interactions:
   - name: aplicacao-financeira-com-os-recursos-do-projeto
     action: respond
     expect:
-      - Posso realizar aplicação financeira com os recursos do projeto?
+      - Posso realizar aplicação financeira com os recursos do projeto ?
+      - Tem como fazer aplicação financeira com os recursos do projeto ?
+      - Aplicações financeiras com os recursos do projeto ?
+      - Recursos do projeto podem ser utilizados para aplicação financeira ?
     answer:
       - |
         Sim. Os recursos depositados nas contas do projeto e ainda não 
@@ -241,6 +301,10 @@ interactions:
     action: respond
     expect:
       - A partir de quando a conta pode ser movimentada?
+      - Quando que posso começar a movimentar a conta?
+      - A partir de que momento posso movimentar a conta?
+      - Desejo movimentar a conta, quando que posso utiliza la?
+      - Quando que a conta poderá ser utilizada?
     answer:
       -
         - >
@@ -261,6 +325,15 @@ interactions:
       - >
         Quanto tempo leva para o MinC transferir os recursos da conta bloqueada 
         para a conta movimento?
+      - >
+        Demora muito para passar os recursos da conta bloqueada para a conta 
+        movimento?
+      - >
+        Quanto tempo para a transferência de dinheiro de uma conta bloqueada 
+        para a movimentada ?
+      - >
+        Periodo de transferência de dinheiro / recurso de uma conta bloqueada 
+        para uma conta movimentada ?  
     answer:
       - >
         Até 5 dias úteis. Desde que o proponente esteja regular junto ao MinC, 
@@ -272,6 +345,13 @@ interactions:
     expect:
       - >
         O que fazer caso o incentivador faça o depósito na conta do PRONAC 
+        errado?
+      - >
+        O incentivador fez o depósito na conta do PRONAC errado? O que devo 
+        fazer?
+      - Qual é o procedimento para quando o incentivador deposita errado errado?
+      - >
+        O que fazer caso o incentivador faça o deposito na conta do PRONAC 
         errado?
     answer:
       -
@@ -296,6 +376,11 @@ interactions:
       - >
         O que fazer se for captado valor acima do autorizado pelo Ministério da
         Cultura?
+      - O valor captado foi superior ao autorizado pelo MinC, o que devo fazer?
+      - >
+        O que fazer caso o valor que foi captado for superio ao permitido pelo 
+        Minc?
+          
     answer:
       -
         - >
@@ -312,6 +397,11 @@ interactions:
       - >
         A inabilitação do proponente em um projeto cultural impede que ele 
         receba aportes em outro?
+      - >
+        Caso o proponente não seja habilitado em um projeto cultural isso o 
+        impede de receber aportes em outro?
+      - >
+        O proponente não está habilitado no projeto cultural, o que devo fazer?
     answer:
       - >
         Não. Os aportes poderão ser realizados durante a inabilitação do 
@@ -324,7 +414,13 @@ interactions:
     expect:
       - >
         Qual o prazo limite para pedir a prorrogação de prazo para captação de 
-        recursos e/ou de execução do projeto?
+        recursos e/ou de execução do projeto ?
+      - >
+        O prazo limite para pedir a prorrogação de prazo é de quanto tempo ?
+      - >
+        Para adiar o prazo, qual é o período limite ?
+      - >
+        Qual é limite para adiar o prazo de captação de dinheiro ? 
     answer:
       - >
         A solicitação de prorrogação de prazo para captação deverá ser feita 
@@ -336,6 +432,9 @@ interactions:
     action: respond
     expect:
       - Em quanto tempo o MinC analisa os pedidos de prorrogação?
+      - Qual é prazo para o MinC analisar os pedidos de prorrogação?
+      - Em relação a pedidos de prorrogação, quanto tempo leva?
+      - Para pedidos de prorrogação, qual é o prazo minimo?
     answer:
       - Até 30 dias corridos para análise.
   # PRAZO
@@ -343,6 +442,8 @@ interactions:
     action: respond
     expect:
       - O prazo de execução renova o de captação?
+      - Em relação ao prazo de execução, este renova o de captação?
+      - O prazo de captação é renovado com o de execução?
     answer:
       - >
         Não. O prazo de captação coincide com o de execução, ou seja, se eu
@@ -355,6 +456,9 @@ interactions:
     action: respond
     expect:
       - Qual a diferença entre prazo de captação e execução?
+      - Há diferença entre prazo de captação e execução ?
+      - Tem diferença entre o prazo de captação e de execução ?
+      - O prazo de captação e de execução é o mesmo?
     answer:
       -
         - >
@@ -373,7 +477,7 @@ interactions:
           Nesse contexto, é erro encaminhar dois  pedidos ao mesmo tempo, 
           de captação e execução: ou o proponente capta (e pode executar) ou 
           apenas executa os recursos já captados.        
-  # PRAZO
+  # PRAZO - INCOMPLETO
   - name: possuo-prazo-para-executar-o-projeto
     expect:
       - >
@@ -387,7 +491,7 @@ interactions:
         informado em Ofício quando é solicitada a prorrogação do 
         período de execução.
     action: respond
-  # PRAZO
+  # PRAZO - INCOMPLETO
   - name: projeto-aprovado-para-execucao-no-periodo-de-dois-anos
     action: respond
     expect:
@@ -412,6 +516,9 @@ interactions:
     action: respond
     expect:
       - Por quanto tempo o projeto poderá ser prorrogado?
+      - Qual o período que o projeto pode ser adiado?
+      - Em relação a prorrogação de um projeto, qual é tempo máximo?
+      - Ao adiar um projeto, qual é prazo máximo?
     answer:
       -
         - >
