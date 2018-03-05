@@ -1,4 +1,4 @@
-trust: 0.9
+trust: 0.7
 interactions:
 
   - name: livechat-transfer
@@ -16,18 +16,18 @@ interactions:
         Sem problemas, estou tentando te transferir para um atendente agora
         mesmo. Aguarde um momento, por favor...
       - >
-        Ok, apenas estou verificando se algum de nossos atendentes está online
-        no momento...
+        Ok, apenas estou verificando se algum de nossos atendentes está
+        online...
       - Já te transfiro, deixe-me apenas conferir se algum atendente está
         disponível no momento...
     offline:
       - - >
-          Me desculpe, mas nenhum de nossos atendentes está disponível agora.
-          Se você preferir, o Ministério da Cultura conta com as seguintes
-          formas de contato
+          Me desculpe, mas nenhum de nossos atendentes está disponível no
+          momento. Você pode tentar novamente mais tarde ou, se preferir, pode
+          falar conosco através da Ouvidoria MinC.
         - |
-          Fone: +55 61 1234-5678
-          E-mail: cultura@ministerio.gov.br
+          Fone: +55 (61) 2024-2245
+          E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
 
 
   - name: saudacao-basica
@@ -38,13 +38,36 @@ interactions:
       - Bom dia
       - Boa tarde
       - Boa noite
+      - Hey
     answer:
-      - Olá, estou feliz de estar aqui. Em que posso de ajudar hoje?
-      - Olá!
-    next:
-      interactions:
-        - to-mal
-        - to-bem
+      - Olá, estou feliz de estar aqui.
+      - Olá, em que posso te ajudar?
+      - Olá, em que posso ajudá-lo hoje?
+
+
+  - name: saudacao-pergunta
+    action: respond
+    expect:
+      - Tudo bem?
+      - Como você está?
+      - Tudo bem com você?
+      - Você está bem?
+      - Olá, tudo bem?
+      - Oi, tudo bem?
+      - Olá, como você está?
+      - Oi, como você está?
+      - Bom dia, como você está?
+      - Boa tarde, como você está?
+      - Boa noite, como você está?
+      - Olá, tudo bem com você?
+      - Oi, tudo bem com você?
+      - Bom dia, tudo bem com você?
+      - Boa tarde, tudo bem com você?
+      - Boa noite, tudo bem com você?
+    answer:
+      - Estou feliz de estar aqui. Em que posso te ajudar?
+      - Estou ótimo! Em que posso ajudá-lo?
+      - Estou bem! Posso ajudá-lo?
 
 
   - name: to-bem
@@ -58,9 +81,10 @@ interactions:
       - tudo bem
       - ok
     answer:
-      - Legal, no que posso te ajudar hoje?
+      - Legal, em que posso te ajudar hoje?
     context: clear
     action: respond
+
 
   - name: to-mal
     level: context
@@ -69,6 +93,48 @@ interactions:
       - tou mal
       - to mal
     answer:
-      - Putz, mas posso te ajudar em algo hoje?
+      - Poxa, mas posso te ajudar em algo hoje?
     context: clear
     action: respond
+
+
+  - name: agradecimento
+    action: respond
+    expect:
+      - obrigado
+      - obrigada
+      - Muito obrigado!
+      - Muito obrigada!
+      - Obrigado pela informação
+      - Obrigada pela informação
+      - Essa informação foi bastante útil para mim
+      - Agradecido
+      - Agradecida
+    answer:
+      - Fico feliz em poder ajudar.
+      - Sempre que precisar estarei aqui para ajudar =)
+      - Sempre que tiver alguma dúvida, pode falar comigo!
+
+
+  - name: error-1
+    answer:
+      - desculpe, não entendi.. pode tentar usar mais detalhes
+      - como assim?
+      - desculpe, o que quer dizer com isso?
+    action: error
+
+
+  - name: error-2
+    answer:
+      - acho que não estou treinado para responder esse tipo de assunto =(
+      - vamos tentar outro assunto?
+      - tem certeza que eu sou o robô certo pra falar sobre isso?
+    action: error
+
+
+  - name: error-3
+    answer:
+      - me sinto tão envergonhado, não sei como responder...
+      - seria mais fácil se mudassemos de assunto, pelo menos para mim =p
+      - não sei, definitivamente não sei responder essa pergunta
+    action: error
