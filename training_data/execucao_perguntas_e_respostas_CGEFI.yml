@@ -431,10 +431,10 @@ interactions:
   - name: tempo-para-analisar-pedidos-de-prorrogacao
     action: respond
     expect:
-      - Em quanto tempo o MinC analisa os pedidos de prorrogação?
-      - Qual é prazo para o MinC analisar os pedidos de prorrogação?
-      - Em relação a pedidos de prorrogação, quanto tempo leva?
-      - Para pedidos de prorrogação, qual é o prazo minimo?
+      - Em quanto tempo o MinC analisa os pedidos de prorrogação ?
+      - Qual é prazo para o MinC analisar os pedidos de prorrogação ?
+      - Em relação a pedidos de prorrogação, quanto tempo leva ?
+      - Para pedidos de prorrogação, qual é o prazo minimo ?
     answer:
       - Até 30 dias corridos para análise.
   # PRAZO
@@ -455,10 +455,10 @@ interactions:
   - name: diferenca-prazo-de-captacao-e-execucao
     action: respond
     expect:
-      - Qual a diferença entre prazo de captação e execução?
+      - Qual a diferença entre prazo de captação e execução ?
       - Há diferença entre prazo de captação e execução ?
       - Tem diferença entre o prazo de captação e de execução ?
-      - O prazo de captação e de execução é o mesmo?
+      - O prazo de captação e de execução é o mesmo ?
     answer:
       -
         - >
@@ -515,10 +515,10 @@ interactions:
   - name: tempo-que-o-projeto-podera-ser-prorrogado
     action: respond
     expect:
-      - Por quanto tempo o projeto poderá ser prorrogado?
-      - Qual o período que o projeto pode ser adiado?
-      - Em relação a prorrogação de um projeto, qual é tempo máximo?
-      - Ao adiar um projeto, qual é prazo máximo?
+      - Por quanto tempo o projeto poderá ser prorrogado ?
+      - Qual o período que o projeto pode ser adiado ?
+      - Em relação a prorrogação de um projeto, qual é tempo máximo ?
+      - Ao adiar um projeto, qual é prazo máximo ?
     answer:
       -
         - >
@@ -540,6 +540,15 @@ interactions:
       - >
         Qual o procedimento a ser feito quando o prazo de captação termina e eu 
         não captei 100% do valor aprovado para o projeto?
+      - >
+        O prazo de captação terminou e não conseguir captar 100% do valor 
+        aprovado. O devo fazer ?
+      - >
+        Não captei 100% do valor aprovado para o projeto. Qual é o processo para 
+        essa situação ?
+      - >
+        Não consegui captar todo o valor aprovado para o projeto. Qual é o 
+        procedimento para captar mais ?
     answer:
       -
         - >
@@ -566,7 +575,16 @@ interactions:
     expect:
       - >
         Caso eu não solicite a prorrogação de captação e o prazo do projeto 
-        expirar, o que acontece?
+        expirar, o que acontece ?
+      - >
+        O que acontece se não houver solicitação da prorrogação de captação 
+        e o prazo do projeto expirar ?
+      - >
+        Não fiz a solicitação da prorrogação de captação e o prazo do projeto 
+        terminou. O que acontece ?
+      - >
+        Esqueci de fazer a solicitação da prorrogação e o prazo do projeto 
+        acabou. O que ocorre ? Tem algum problema ?  
     answer:
       - >
         O prazo máximo para captação será de até 24 meses a partir da data de 
@@ -586,7 +604,13 @@ interactions:
     expect:
       - >
         O prazo de execução do projeto expirou enquanto estava em análise na 
-        unidade vinculada ao MinC. Como proceder acerca da vigência?
+        unidade vinculada ao MinC. Como proceder acerca da vigência ?
+      - >
+        O que fazer caso o prazo de execução do projeto expirar enquanto 
+        estiver em análise na unidade vinculada ao MinC ?
+      - >
+        O prazo de execução encerrou quando estava na fase de análise 
+        na unidade vinculada ao MinC. O que devo fazer a respeito da vigência?
     answer:
       -
         - >
@@ -604,6 +628,17 @@ interactions:
       - >
         Qual o prazo para pedir reconsideração/recurso de uma decisão 
         proferida pelo MinC?
+      - >
+        Qual o prazo para pedir reconsideração/recurso de uma decisão 
+        proferida pelo Ministério da Cultura?
+      - >
+        De quanto tempo é o prazo para solicitar a reconsideração de uma decisão 
+        do MinC?
+      - >
+        De quanto tempo é o prazo para solicitar a reconsideração de uma decisão 
+        do Ministério da Cultura?
+      - Para reivindicar a reconsideração do MinC. É até quando?
+      - O prazo para fazer recurso de uma decisão do MinC é qual?
     answer:
       - >
         Até dez dias corridos, a partir do seu registro no SALIC. Por isso, 
@@ -615,7 +650,13 @@ interactions:
     expect:
       - >
         O prazo para apresentação da prestação de contas final é considerado 
-        período de execução do projeto?
+        período de execução do projeto ?
+      - >
+        O período de execução do projeto inclui o prazo para apresentação da 
+        prestação de contas final ?
+      - >
+        Em relação ao prazo da apresentação da prestação de contas é 
+        considerando no período de execução do projeto ?
     answer:
       - >
         Não. O prazo para apresentação da Prestação de Contas Final é de 30 dias
@@ -629,6 +670,15 @@ interactions:
       - >
         É possível remanejar despesas da planilha financeira após a aprovação 
         inicial pelo Ministério da Cultura?
+      - >
+        Tem como modificar despesas da planilha financeira depois da aprovação 
+        inicial do MinC?
+      - >
+        Na planilha financeira, há como remanejar despesas depois da aprovação 
+        inicial do MinC?
+      - >
+        Na planilha financeira, há como remanejar despesas depois da aprovação 
+        inicial do Ministério da Cultura?
     answer:
       -
         - >
@@ -656,6 +706,15 @@ interactions:
         - >
           Posso solicitar alteração do valor aprovado para a execução do 
           projeto, com redução ou complementação de verba?
+        - >
+          Em relação ao valor aprovado para a execução do projeto, posso 
+          solicitar alteração com redução de verba?
+        - >
+          Em relação ao valor aprovado para a execução do projeto, posso 
+          solicitar alteração com complementação de verba?
+        - >
+          O valor aprovado para a execução do projeto pode ser alterado com 
+          redução ou complementação de verba?
     answer:
         -
           - >
@@ -678,12 +737,15 @@ interactions:
             contrato de patrocínio que garantam a captação dos 20%.
             Para Plano Anual de Atividades, a captação deverá ser, no mínimo, 
             1/2 dos recursos.
-  # PRAZO
+  # PRAZO - IMCOPLETO
   - name: planilha-orcamentaria-do-projeto-cultural
     action: respond
     expect:
       - >
         Posso alterar a planilha orçamentária do projeto cultural, modificando 
+        a fonte de custeio de alguns itens?
+      - >
+        Em relação a planilha orçamentária do projeto cultural, posso modificar 
         a fonte de custeio de alguns itens?
     answer:
       -
@@ -703,13 +765,16 @@ interactions:
           recursos, ou via papel, anteriormente à captação mínima. Para Plano 
           Anual de Atividades, a captação deverá ser, no mínimo, de 1/12 dos 
           recursos. 
-  # LEI ROUANET
+  # LEI ROUANET - IMCOPLETO
   - name: fontes-de-recurso-para-fazer-pagamento
     action: respond
     expect:
       - >
-        Posso utilizar diferentes fontes de recurso para fazer o pagamento de 
+        Posso utilizar diferentes fontes de recursos para fazer o pagamento de 
         um mesmo item orçamentário?
+      - >
+        Estou utilizando diferentes fontes de recursos para fazer o pagamento de 
+        um mesmo item orçamentário. Posso fazer isso?
     answer:
       - >
         Não. É vedado o uso de diferentes fontes de financiamento para pagamento
@@ -722,6 +787,19 @@ interactions:
         A inclusão de novo(s) item(s) na planilha orçamentária do projeto 
         cultural, com remanejamento de despesas dentro do limite de 20% do valor 
         de cada rubrica, necessita de prévia autorização do MinC?
+      - >
+        Para fazer inclusão de novos itens na planilha orçamentária do projeto 
+        cultural, com remanejamento de despesas dentro do limite de 20% do valor 
+        de cada rubrica, necessita de prévia autorização do Ministério Cultura?
+      - >
+        É necessário ter prévia autorização do Ministério Cultura para fazer 
+        inclusão de novos itens na planilha orçamentária do projeto cultural, 
+        com remanejamento de despesas dentro do limite de 20% do valor de cada 
+        rubrica ?
+      - >
+        A inclusão de novo item na planilha orçamentária do projeto 
+        cultural, com remanejamento de despesas dentro do limite de 20% do valor 
+        de cada rubrica, necessita de prévia autorização do MinC ?
     answer:
       -
         - >
@@ -745,7 +823,19 @@ interactions:
       - >
         A redução (ou complementação) orçamentária do projeto cultural foi 
         aprovada pelo MinC com um valor total abaixo do solicitado. 
-        Houve algum erro de cálculo?
+        Houve algum erro de cálculo ?
+      - >
+        A redução (ou complementação) orçamentária do projeto cultural foi 
+        aprovada pelo Ministério da Cultura com um valor total abaixo do 
+        solicitado. Houve algum erro de cálculo ?
+      - >
+        Houve uma redução orçamentária do projeto cultural aprovado pelo 
+        Ministério da Cultura com um valor total inferior ao solicitado. 
+        Houve algum problema ?
+      - >
+        A complementação orçamentária do projeto cultural foi aprovada pelo 
+        Ministério da Cultura com um valor total abaixo do solicitado. Qual foi 
+        o problema ?
     answer:
       -
         - >
@@ -765,7 +855,16 @@ interactions:
     expect:
       - >
         Posso utilizar o saldo da aplicação financeira para pagamento de 
-        despesas do projeto cultural?
+        despesas do projeto cultural ?
+      - >
+        Em relação a aplicações financeiras, posso utilizar o saldo da destas
+        para pagar despesas do projeto cultural ?
+      - >
+        O saldo da aplicação financeira pode ser utilizado para pagar despesas 
+        do projeto cultural ?
+      - >
+        Para pagar despesas do projeto cultural posso pagar com o saldo da 
+        aplicação financeira ?
     answer:
       -
         - >
@@ -790,7 +889,11 @@ interactions:
   - name: alteracao-do-plano-de-distribuicao
     action: respond
     expect:
-      - Posso alterar o plano de distribuição aprovado para o projeto? 
+      - Posso alterar o plano de distribuição aprovado para o projeto ?
+      - O plano de distribuição depois que foi aprovado posso altera lo ?
+      - >
+        Em relação ao plano de distribuição aprovado, posso altera lo para o 
+        projeto ?
     answer:
       -
         - >
@@ -808,7 +911,7 @@ interactions:
           manter preços populares e acessíveis e respeitar as porcentagens de 
           distribuição, sobretudo a quantidade destinada à população de baixa
           renda.
-  # PRAZO
+  # PRAZO - IMCOPLETO
   - name: produto-cultural-do-projeto
     action: respond
     expect:
@@ -816,7 +919,7 @@ interactions:
         Quando o produto cultural do projeto é realizado com diferentes fontes 
         de recursos (incentivados ou não), os exemplares (unidades) pagos com 
         recursos de outras fontes devem ser incluídos no plano de distribuição 
-        aprovado pelo MinC? 
+        aprovado pelo MinC?
     answer:
       -
         - >
@@ -829,7 +932,7 @@ interactions:
           No momento da apresentação da prestação de contas final do projeto, 
           deve-se relatar a contribuição das outras fontes de recurso para a 
           realização do produto. 
-  # LEI ROUANET
+  # LEI ROUANET - IMCOMPLETO
   - name: produto-cultural-inicial-do-projeto-sendo-executado
     action: respond
     expect:
@@ -859,7 +962,7 @@ interactions:
           tenha contrato de patrocínio (que garanta a captação de 20%) e não 
           deverá ultrapassar 40% do valor total aprovado. Para Plano Anual de 
           Atividades, a captação deverá ser, no mínimo, 1/12 dos recursos. 
-  # PRAZO
+  # PRAZO - IMCOMPLETO
   - name: produto-cultural-do-projeto-fontes-de-recursos
     action: respond
     expect:
@@ -899,6 +1002,9 @@ interactions:
       - >
         Onde consigo os logotipos da Lei Federal de Incentivo à Cultura 
         (Lei Rouanet), Ministério da Cultura e Governo Federal?
+      - >
+        Sobre os logotipos da Lei Rouanet, MinC e Governo Federal, como faço 
+        para obter?
     answer:
       - >
         Os logotipos da Lei Federal de Incentivo à Cultura (Lei Rouanet), 
@@ -911,6 +1017,11 @@ interactions:
       - >
         É necessário identificar os grupos no campo de logomarcas, como por 
         exemplo "Apoio", "Patrocínio", etc?
+      - >
+        Há a necessidade de identificar "Apoio", "Patrocínio" entre outros 
+        no campo de logomarcas ?
+      - >
+        Precisa identificar os grupos nos campos de logomarcas?
     answer:
       - >
         O Manual de Uso das Marcas do Pronac não faz menção à identificação dos 
@@ -918,7 +1029,7 @@ interactions:
         etc..). Assim, tal identificação ficará a critério do proponente, desde 
         que observadas as regras de aplicação das logomarcas estipuladas pelo
         citado manual.
-  # LEI ROUANET
+  # LEI ROUANET - IMCOMPLETO
   - name: material-de-divulgacao-indeferido-pelo-minc
     action: respond
     expect:
@@ -937,10 +1048,15 @@ interactions:
   - name: anexar-arquivo-audio-video-para-analise
     action: respond
     expect:
+      - Como faço para anexar um arquivo de áudio / vídeo para a análise?
+      - Tem como anexar um arquivo de aúdio / vídeo? Se sim como posso fazer?
       - >
         Possuo um arquivo de áudio/vídeo para a análise, porém o sistema do 
         Ministério da Cultura não permite a anexação de tais arquivos. 
         O que faço?
+      - >
+        Gostaria de submeter um arquivo de áudio / vídeo para a análise, 
+        Como faço para anexar estes?
     answer:
       - >
         Para análise do material de divulgação em áudio e/ou vídeo, os arquivos
@@ -952,9 +1068,12 @@ interactions:
   - name: extensoes-de-arquivos-para-anexacao
     action: respond
     expect:
+      - Quais extensões de arquivo que o Novo Salic suporta?
+      - Quais tipos de arquivo são suportados no Novo Salic ?
+      - O Novo Salic suporta outros tipos arquivos? Se sim, quais?
       - >
-        Quais são as extensões de arquivo permitidas para 
-        anexação no Novo Salic?
+        Quais são as extensões de arquivo permitidas para anexação no 
+        Novo Salic?
     answer:
       - >
         As extensões são BMP, GIF, JPEG, JPG, PNG, RAW, TIF e PDF, com limite 
@@ -964,6 +1083,9 @@ interactions:
     action: respond
     expect:
       - Como faço para anexar meu material de divulgação para análise?
+      - Para anexar materiais de divulgação para análise, como é o procedimento?
+      - Como é que faz para anexar materiais de divulgação para análise?
+      - Sobre anexação de arquivos de divulgação, como submeto para análise?
     answer:
       - >
         A anexação deverá ocorrer no Novo Salic 
@@ -973,7 +1095,9 @@ interactions:
   - name: quando-solicitar-arquivamento-projeto
     action: respond
     expect:
-      - Quando devo solicitar o arquivamento do projeto?
+      - Quando devo solicitar o arquivamento do projeto ?
+      - Qual é o prazo de solicitação do arquivamento do projeto ?
+      - Sobre o arquivamento de projetos, quando devo solicitar ?
     answer:
       - >
         Se concluir que a execução do projeto é inviável, ou se não obtiver 
@@ -983,7 +1107,10 @@ interactions:
   - name: como-fazer-solicitacao-arquivamento-projeto
     action: respond
     expect:
-      - Como fazer a solicitação de arquivamento do projeto?
+      - Como fazer a solicitação de arquivamento do projeto ?
+      - Sobre a solicitação de arquivamento do projeto, como proceder ?
+      - Sobre a solicitação de arquivamento do projeto, como faço ?
+      - Para solicitar o arquivamento do projeto, como devo fazer ?
     answer:
       -
         - >
@@ -1008,7 +1135,13 @@ interactions:
     expect:
       - >
         Quando o projeto for arquivado ou quando a prestação de contas for 
-        apresentada, as contas do projeto serão encerradas?
+        apresentada, as contas do projeto serão encerradas ?
+      - >
+        Quando a prestação de contas for apresentada, as contas do projeto 
+        serão encerradas ?
+      - Quando o projeto for arquivado, as contas do projeto serão encerradas ?
+      - Quando as contas do projeto serão encerradas ?
+      - Quando as contas do projeto se encerram
     answer:
       - >
         Não. Quando o projeto for arquivado ou se prestação de contas foi a
@@ -1022,7 +1155,11 @@ interactions:
     expect:
       - >
         Caso meu projeto tenha sido arquivado, posso solicitar o
-        desarquivamento?
+        desarquivamento ?
+      - Tem como desarquivar um projeto que já foi arquivado ?
+      - Há a possibilidade de desarquivar um projeto arquivado ?
+      - Desejo desarquivar um projeto já arquivado, o que devo fazer?
+      - Em relação a desarquivar um projeto arquivado, tem como fazer ?
     answer:
       -
         - >
@@ -1046,6 +1183,12 @@ interactions:
         Não é possível realizar o pedido de alteração (local de realização, 
         plano de distribuição, nome, proponente) pelo Novo Salic. 
         Como devo proceder?
+      - >
+        Não estou conseguindo fazer o pedido de alteração pelo Novo Salic. 
+        O que devo fazer?
+      - >
+        Estou tentando fazer o pedido de alteração de nome pelo Novo Salic, e 
+        não estou conseguindo o que devo fazer?
     answer:
       -
         - >
@@ -1062,6 +1205,12 @@ interactions:
       - >
         Não é possível realizar o pedido de prorrogação de captação/execução 
         pelo Novo Salic. O que devo fazer?
+      - >
+        Não estou conseguindo fazer o pedido de prorrogação de captação/execução 
+        pelo Novo Salic. Como proceder?
+      - >
+        Estou tentando fazer o pedido de prorrogação de captação/execução 
+        pelo Novo Salic. E agora?
     answer:
       -
         - >
