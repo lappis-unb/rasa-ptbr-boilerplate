@@ -21,10 +21,17 @@ actionHandler.registerActions = (config) ->
     if name.substr(0, 5) == "error"
       err_nodes++
 
+  if err_nodes == 0
+    console.log("WARNING! You don't have any error nodes, you need at least " +
+                "one to garantee that the bot always will respond something")
+
 actionHandler.errorNodesCount = () ->
   return err_nodes
 
 actionHandler.takeAction = (name, res) ->
-  nodes[name].process(res)
+  if not name?
+    res.sendWithNaturalDelay "I'm sorry Dave, I'm afraid I can't do that =/"
+  else
+    nodes[name].process(res)
 
 module.exports = actionHandler
