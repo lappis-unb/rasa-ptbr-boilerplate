@@ -10,32 +10,32 @@ interactions:
       - d52 o que significa ?
       - Estado de projeto homologado ?
     answer:
-      - 
+      -
         - >
           Posição definitiva do projeto (aprovação ou não).
-          O termo de homologação é anexado ao projeto para verificação do 
-          proponente. O mesmo tem o prazo de 10 dias corridos, a contar da data 
+          O termo de homologação é anexado ao projeto para verificação do
+          proponente. O mesmo tem o prazo de 10 dias corridos, a contar da data
           de homologação para se manifestar quanto o mesmo.
         - >
-          O proponente poderá encaminhar para o e-mail: 
-          proposta.incentivo@cultura.gov.br , pelo e-mail cadastrado no 
-          sistema, se desiste do prazo recursal (caso concorde) ou poderá 
+          O proponente poderá encaminhar para o e-mail:
+          proposta.incentivo@cultura.gov.br , pelo e-mail cadastrado no
+          sistema, se desiste do prazo recursal (caso concorde) ou poderá
           encaminhar pedido de reconsideração (caso descorde).
   # STATUS DO PROJETO
   - name: fase-de-adequacao-do-projeto
     action: respond
     expect:
       - >
-        Meu projeto está com a situação E90 projeto liberado para adequação, 
+        Meu projeto está com a situação E90 projeto liberado para adequação,
         o que significa ?
       - O que significa o estado do projeto e90 ?
       - Projeto liberado para adequação o que é ?
       - e90 o que significa ?
       - Estado de projeto liberado para adequação ?
     answer:
-      - 
+      -
         - >
-          Proponente após garantir mínimo 10% do valor do projeto, poderá 
+          Proponente após garantir mínimo 10% do valor do projeto, poderá
           adequar o mesmo conforme a sua realidade.
         - |
           Passo a passo para não alteração no projeto:
@@ -44,27 +44,27 @@ interactions:
           2- Selecionar o CNPJ do proponente
           3- Ao lado direito da tela aparecerá um ícone azul
             (clicar na opção verde “alterar projeto”
-          4- Clicar no ícone verde 
+          4- Clicar no ícone verde
           5- Clicar no menu ao lado esquerdo da tela, na opção
-            “enviar projeto ao Minc”. 
-        - |  
+            “enviar projeto ao Minc”.
+        - |
           Passo a passo para alteração no projeto:
-        - |  
+        - |
           1- Listar projetos
           2- Selecionar o CNPJ do proponente
           3- Ao lado direito da tela aparecerá um ícone azul
             (clicar na opção verde “alterar projeto”)
-          4- Clicar no ícone verde 
-          5- A partir daí, realizar os ajustes, conforme a realidade. 
+          4- Clicar no ícone verde
+          5- A partir daí, realizar os ajustes, conforme a realidade.
           6- Após os ajustes, clicar na opção “Enviar projeto ao Minc”.
 
         - |
-          Ressalto que, o plano de distribuição poderá haver ajustes, mas não 
+          Ressalto que, o plano de distribuição poderá haver ajustes, mas não
           pode acrescentar produtos.
         - |
-          Na planilha não há possibilidade de aumentar o valor. 
-          Resumo, objetivos e justificativas não podem ser alterados e o 
-          cronograma não pode ser inferior a 90 dias. 
+          Na planilha não há possibilidade de aumentar o valor.
+          Resumo, objetivos e justificativas não podem ser alterados e o
+          cronograma não pode ser inferior a 90 dias.
   # STATUS DO PROJETO
   - name: fase-de-enquadramento-do-projeto
     action: respond
@@ -77,57 +77,57 @@ interactions:
       - B02, como desisto do recursal  ?
       - Como desisto de encaminhar recurso  ?
     answer:
-      - 
+      -
         - >
-          Prezado(a) proponente, O seu projeto foi enquadrado. Iniciou-se, 
-          portanto, o prazo de 10 dias corridos para recorrer caso não tenha 
+          Prezado(a) proponente, O seu projeto foi enquadrado. Iniciou-se,
+          portanto, o prazo de 10 dias corridos para recorrer caso não tenha
           acordo com o enquadramento proposto para o projeto.
-        - >  
-          Caso concorde com o enquadramento dado é possível abrir mão (desistir) 
+        - >
+          Caso concorde com o enquadramento dado é possível abrir mão (desistir)
           desse prazo obrigatório – o que abreviará os trâmites processuais.
-        - >  
-          Ambas as manifestações se dão por via da aba “recurso” no Menu ao lado 
+        - >
+          Ambas as manifestações se dão por via da aba “recurso” no Menu ao lado
           esquerdo da tela do projeto, no Salic.
-        - >  
-          ATENÇÃO: O prazo dos 10 dias corridos, começam a valer a partir da 
-          data do enquadramento. 
+        - >
+          ATENÇÃO: O prazo dos 10 dias corridos, começam a valer a partir da
+          data do enquadramento.
   # STATUS DO PROJETO
-  - name: pedido-de-reativacao 
+  - name: pedido-de-reativacao
     action: respond
     expect:
       - >
-        Minha proposta foi indeferida, porém posso encaminhar pedido de 
+        Minha proposta foi indeferida, porém posso encaminhar pedido de
         reativação. Como proceder ?
       - Como encaminhar pedido de reativação ?
       - Como refazer o a reativação de pedido ?
       - O que fazer para refazer o encaminhamento do pedido de reativação ?
       - Pedido de reativação, como fazer ?
     answer:
-      - 
+      -
         - >
-          Prezado(a) proponente, o pedido de reativação deve ser encaminhado 
-          através de PDF e assinado pelo proponente. 
-        - >  
-          O pedido deve conter as devidas justificativas para a reanálise do 
-          indeferimento e a resposta da diligência. E-mail para encaminhamento: 
+          Prezado(a) proponente, o pedido de reativação deve ser encaminhado
+          através de PDF e assinado pelo proponente.
+        - >
+          O pedido deve conter as devidas justificativas para a reanálise do
+          indeferimento e a resposta da diligência. E-mail para encaminhamento:
           reativacao.proposta@cultura.gov.br
   # SISTEMA SALIC
-  - name: recuperacao-de-senha 
+  - name: recuperacao-de-senha
     action: respond
     expect:
       - >
-        Me cadastrei a muito tempo no Salic, mas não me recordo da senha de 
+        Me cadastrei a muito tempo no Salic, mas não me recordo da senha de
         acesso. Como faço para resolver ?
       - Esqueci a senha do Salic, o faço ?
       - Como recuperar senha do Salic ?
       - O que fazer quando se esquece a senha do Salic ?
       - Esqueci a senha de acesso, e agora ?
     answer:
-      - > 
-        Prezado(a) proponente, encaminhar e-mail para a área responsável, 
+      - >
+        Prezado(a) proponente, encaminhar e-mail para a área responsável,
         pelo e-mail: senhasalic@cultura.gov.br
   # SISTEMA SALIC
-  - name: captacao-de-recursos 
+  - name: captacao-de-recursos
     action: respond
     expect:
       - Quando poderei efetuar a captação de recursos do meu projeto ?
@@ -137,15 +137,15 @@ interactions:
       - Quando posso fazer a captação de recursos da minha proposta ?
     answer:
       - >
-        Prezado(a), O projeto ainda passará pela fase de enquadramento e somente 
-        após o enquadramento ele será enviado para análise documental e depois 
+        Prezado(a), O projeto ainda passará pela fase de enquadramento e somente
+        após o enquadramento ele será enviado para análise documental e depois
         publicação. Somente após a publicação que será liberada a captação.
   # SISTEMA SALIC
   - name: cadastro-de-procuracao-para-visualizacao-do-procurador-fase-de-projeto
     action: respond
     expect:
       - >
-        Minha proposta foi transformada em projeto, 
+        Minha proposta foi transformada em projeto,
         porém não consigo visualiza-lo. Como resolvo ?
       - Como visualizar meu projeto ?
       - Como ver minha proposta ?
@@ -156,13 +156,13 @@ interactions:
       -
         - >
           Prezado(a) proponente,
-          Clicar em administrativo > Procuração > Cadastramento. 
+          Clicar em administrativo > Procuração > Cadastramento.
   # SISTEMA SALIC
   - name: cadastro-agencia-bancaria
     action: respond
     expect:
       - >
-        Estou preenchendo a proposta via Salic, porém ao cadastrar a agência, 
+        Estou preenchendo a proposta via Salic, porém ao cadastrar a agência,
         o sistema indica inválida. Como resolver ?
       - Cadastro de agência inválido, o que faço ?
       - Está dando sistema inválido quando cadastro a agência, como proceder ?
@@ -170,8 +170,8 @@ interactions:
       - O sistema não está aceitando a agência que estou cadastrando, e agora ?
     answer:
       - >
-        A agência bancária deve ser do banco do Brasil, deve conter 5 dígitos, 
-        sem hifens, pontos ou letras. 
+        A agência bancária deve ser do banco do Brasil, deve conter 5 dígitos,
+        sem hifens, pontos ou letras.
   # SISTEMA SALIC
   - name: cadastro-do-proponente-no-salic
     action: respond
@@ -196,9 +196,9 @@ interactions:
       - Como fazer cadastro de dirigente?
     answer:
       - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > 
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
         Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
-        esquerdo da tela > Clicar em dirigente > Novo dirigente. 
+        esquerdo da tela > Clicar em dirigente > Novo dirigente.
   # SISTEMA SALIC
   - name: cadastro-de-email-proponente-no-salic
     action: respond
@@ -215,8 +215,8 @@ interactions:
       - Como fazer a atualização de e mail do proponente?
     answer:
       - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > 
-        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado 
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
+        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
         esquerdo da tela > Clicar em e-mail > Preencher os dados.
   # SISTEMA SALIC
   - name: cadastro-de-endereco-proponente-no-salic
@@ -234,8 +234,8 @@ interactions:
       - Como fazer a atualização de endereço do proponente?
     answer:
       - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > 
-        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado 
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
+        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
         esquerdo da tela > Clicar em endereço > Preencher os dados.
   # SISTEMA SALIC
   - name: cadastro-de-telefone-proponente-no-salic
@@ -253,8 +253,8 @@ interactions:
       - Como fazer a atualização de telefone do proponente?
     answer:
       - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > 
-        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado 
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
+        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
         esquerdo da tela > Clicar em telefone > Preencher os dados.
   # SISTEMA SALIC
   - name: cadastro-natureza-do-proponente-no-salic
@@ -268,8 +268,8 @@ interactions:
       - Como proceder para cadastrar natureza do proponente ?
     answer:
       - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > 
-        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado 
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
+        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
         esquerdo da tela > Clicar natureza > Preencher os dados.
   # SISTEMA SALIC
   - name: cadastro-data-de-nascimento-do-proponente-no-salic
@@ -282,7 +282,7 @@ interactions:
       - Como cadastrar data de nascimento do proponente no Salic ?
       - Como fazer o cadastro da data de nascimento do proponente ?
       - O que devo fazer para cadastrar a data de nascimento do proponente ?
-      - Como proceder para cadastrar a data de nascimento do proponente ? 
+      - Como proceder para cadastrar a data de nascimento do proponente ?
     answer:
       - >
         Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
@@ -300,8 +300,8 @@ interactions:
       - Tenho algumas questões, onde consigo sanar las?
     answer:
       - >
-        Prezado(a), Problemas no sistema é junto ao e-mail salic@cultura.gov.br 
-        envie o print da tela com o erro. 
+        Prezado(a), Problemas no sistema é junto ao e-mail salic@cultura.gov.br
+        envie o print da tela com o erro.
 
 #  - name: edital-minc
 #    action: respond
@@ -309,8 +309,8 @@ interactions:
 #      - FALTA ESTA PERGUNTA
 #    answer:
 #      - >
-#        Prezado(a), essa proposta se trata de Edital, nosso setor não trabalha 
-#        com esse tipo de proposta. Entre em contato com o setor responsável 
+#        Prezado(a), essa proposta se trata de Edital, nosso setor não trabalha
+#        com esse tipo de proposta. Entre em contato com o setor responsável
 #        pelo número (61)2024-2412 ou 2000.
 
 #  - name: d03–projeto-aprovado-aguardando-analise-documental
@@ -319,7 +319,7 @@ interactions:
 #      - FALTA ESTA PERGUNTA
 #    answer:
 #      - >
-#        Prezado(a), a fase de análise documental não tem prazo previsto na 
+#        Prezado(a), a fase de análise documental não tem prazo previsto na
 #        Instrução Normativa. Peço que acompanhe pelo sistema.
 
 #  - name: prorrogacao-automatica
@@ -328,7 +328,7 @@ interactions:
 #      - FALTA ESTA PERGUNTA
 #    answer:
 #      - |
-#        Prezado(a), os projetos que estão marcados com prorrogação automática, 
+#        Prezado(a), os projetos que estão marcados com prorrogação automática,
 #        serão prorrogados automaticamente.
 
 #  - name: projetos-em-analise-pela-secretaria-do-audiovisual
@@ -337,8 +337,8 @@ interactions:
 #      - FALTA ESTA PERGUNTA
 #    answer:
 #      - |
-#        Prezado(a) proponente, Encaminhar e-mail para a área responsável, 
-#        pelo e-mail: coaap.sav@cultura.gov.br 
+#        Prezado(a) proponente, Encaminhar e-mail para a área responsável,
+#        pelo e-mail: coaap.sav@cultura.gov.br
 
 #  - name: projetos-em-analise-pelo-acompanhamento-ou-duvidas-referentes-a-area
 #    action: respond
@@ -346,5 +346,5 @@ interactions:
 #      - FALTA ESTA PERGUNTA
 #    answer:
 #      - |
-#        Prezado(a) proponente, encaminhar e-mail para a área responsável, 
-#        pelo e-mail: acompanhamento.incentivo@cultura.gov.br 
+#        Prezado(a) proponente, encaminhar e-mail para a área responsável,
+#        pelo e-mail: acompanhamento.incentivo@cultura.gov.br
