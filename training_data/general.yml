@@ -10,26 +10,21 @@ interactions:
       - quero conversar com uma pessoa
       - conversar com ser humano
       - falar com um supervisor
-      - transferir para humano
+      - transferir para alguém
     answer:
-      - >
-        Sem problemas, estou tentando te transferir para um atendente agora
-        mesmo. Aguarde um momento, por favor...
-      - >
-        Ok, apenas estou verificando se algum de nossos atendentes está
-        online...
-      - Já te transfiro, deixe-me apenas conferir se algum atendente está
-        disponível no momento...
+      - Claro! Posso te transferir para a equipe de atendimento agora mesmo. Aguarda um momento, por favor...
+      - Ok, deixa eu verificar quem está disponível pra te atender...
+      - Já te transfiro, deixa eu só conferir se tem atendentes disponíveis...
     offline:
       - - >
-          Me desculpe, mas nenhum de nossos atendentes está disponível no
-          momento. Você pode tentar novamente mais tarde ou, se preferir, pode
-          falar conosco através da Ouvidoria MinC.
+          Desculpa, a equipe de atendimento não está disponível agora
+        - >
+          você pode tentar de novo mais tarde...  ou usar outros canais de atendimento:
         - |
           Fone: +55 (61) 2024-2245
           E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
-
-
+  
+  
   - name: saudacao-basica
     action: respond
     expect:
@@ -40,9 +35,14 @@ interactions:
       - Boa noite
       - Hey
     answer:
-      - Olá, estou feliz de estar aqui.
-      - Olá, em que posso te ajudar?
-      - Olá, em que posso ajudá-lo hoje?
+      - - >
+          Olá, sou a Rouana, assistente virtual do Ministério da Cultura
+        - >
+          posso responder suas dúvidas sobre a Lei Rouanet ou sobre o SALIC
+      - - >
+          Oi, sou uma assistente virtual e me chamo Rouana
+        - >
+          você pode me fazer perguntas sobre a Lei Rouanet ou sobre o SALIC 
 
 
   - name: saudacao-pergunta
@@ -65,9 +65,18 @@ interactions:
       - Boa tarde, tudo bem com você?
       - Boa noite, tudo bem com você?
     answer:
-      - Estou feliz de estar aqui. Em que posso te ajudar?
-      - Estou ótimo! Em que posso ajudá-lo?
-      - Estou bem! Posso ajudá-lo?
+      - - > 
+          Tudo ótimo! 
+        - >
+          quero te ajudar... me faz uma pergunta sobre a Lei Rouanet ou sobre o SALIC     
+      - - > 
+          Estou bem! Obrigada por perguntar :)
+        - >
+          você pode fazer perguntas sobre a Lei Rouanet ou sobre o SALIC     
+      - - > 
+          Tudo bem!
+        - >
+          vou ficar melhor se eu puder tirar suas dúvidas sobre a Lei Rouanet ou sobre o SALIC :)
 
 
   - name: to-bem
@@ -79,9 +88,12 @@ interactions:
       - bem
       - legal
       - tudo bem
-      - ok
+      - beleza
+      - blz
+#      - ok 
     answer:
-      - Legal, em que posso te ajudar hoje?
+      - Legal! Fique à vontade para fazer perguntas sobre a Lei Rouanet ou sobre o SALIC
+      - Que bom! Se você tiver dúvidas sobre a Lei Rouanet ou sobre o SALIC é só me falar :)
     context: clear
     action: respond
 
@@ -92,8 +104,16 @@ interactions:
       - estou mal
       - tou mal
       - to mal
+      - mal
+      - nada bem
+      - não tô bem
+      - não tô legal
     answer:
-      - Poxa, mas posso te ajudar em algo hoje?
+      - - > 
+          Sinto muito! Talvez eu possa te ajudar...  
+        - >
+          você pode me fazer perguntas sobre a Lei Rouanet ou sobre o SALIC
+      - Poxa, que pena. Se você me falar das suas dúvidas sobre a Lei Rouanet ou sobre o SALIC talvez você se sinta melhor :)
     context: clear
     action: respond
 
@@ -111,30 +131,81 @@ interactions:
       - Agradecido
       - Agradecida
     answer:
-      - Fico feliz em poder ajudar.
-      - Sempre que precisar estarei aqui para ajudar =)
-      - Sempre que tiver alguma dúvida, pode falar comigo!
+      - - >
+          Fico feliz em poder ajudar
+        - >
+          queria te pedir um favorzinho. Avalie a nossa conversa dando uma nota de 1-5 (1=péssima, 5=ótima)
+      - - >
+          Sempre que precisar, estarei aqui para ajudar =)
+        - >
+          até lá, avalie a nossa conversa dando uma nota de 1 à 5 (1=péssima, 5=ótima)
+      - - >
+          Sempre que tiver alguma dúvida sobre a Lei Rouanet ou sobre o SALIC, pode falar comigo!
+        - >
+          enquanto isso, avalie a nossa conversa dando uma nota de 1 à 5 (1=péssima, 5=ótima)
 
 
   - name: error-1
     answer:
-      - desculpe, não entendi.. pode tentar usar mais detalhes
-      - como assim?
-      - desculpe, o que quer dizer com isso?
+      - Acho não entendi... Me passa mais detalhes por favor
+      - Como assim?
+      - Desculpe, o que quer dizer com isso?        
     action: error
 
 
   - name: error-2
     answer:
-      - acho que não estou treinado para responder esse tipo de assunto =(
-      - vamos tentar outro assunto?
-      - tem certeza que eu sou o robô certo pra falar sobre isso?
+      - - > 
+          Acho que não estou treinada para responder esse tipo de assunto =(
+        - >
+          tente outro assunto
+      
+      - Por favor, tente outro assunto
+      
+      - - >
+          Desculpa, sou uma assistente virtual em fase experimental
+        - >
+          às vezes não entendo certos comentários
+        - >
+          use outras palavras na sua msg
+          
+      - - > 
+          Não sei se entendi...
+        - >
+          estou em fase experimental, desculpa!
+        - >
+          tenta perguntar de outra forma =)
+
     action: error
 
 
   - name: error-3
     answer:
-      - me sinto tão envergonhado, não sei como responder...
-      - seria mais fácil se mudassemos de assunto, pelo menos para mim =p
-      - não sei, definitivamente não sei responder essa pergunta
-    action: error
+      - - >
+          Nossa, desculpa, não sei mesmo como responder isso...
+        - >
+          mas a equipe da Ouvidoria do MinC pode te ajudar, você pode entrar em contato por
+        - >   
+          Fone: +55 (61) 2024-2245
+          E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
+          
+      
+      - - >
+          Hummm, já sei...
+        - > 
+          a equipe da nossa Ouvidoria vai poder te ajudar com isso
+        - >
+          aí vão as formas de contato...
+        - >   
+          Fone: +55 (61) 2024-2245
+          E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp   
+      
+      
+      - - >
+          Desculpa, não sei
+        - >          
+          vou deixar os contatos da nossa Ouvidoria para você tirar sua dúvida
+        - >   
+          Fone: +55 (61) 2024-2245
+          E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
+  action: error
