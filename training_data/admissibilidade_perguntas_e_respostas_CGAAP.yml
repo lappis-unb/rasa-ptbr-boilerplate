@@ -9,62 +9,86 @@ interactions:
       - Projeto homologado o que é ?
       - d52 o que significa ?
       - Estado de projeto homologado ?
+      - Situação de projeto homologado ?
     answer:
-      -
+      - - Um projeto homologado (estado D52) recebeu uma posição definitiva
+        - ou seja, é um projeto que foi aprovado ou não
+        - > 
+          aí, um termo de homologação é anexado ao projeto 
+          para o proponente verificar e se manifestar a respeito
         - >
-          Posição definitiva do projeto (aprovação ou não).
-          O termo de homologação é anexado ao projeto para verificação do
-          proponente. O mesmo tem o prazo de 10 dias corridos, a contar da data
-          de homologação para se manifestar quanto o mesmo.
+          caso não concorde com a homologação, 
+          o proponente pode encaminhar um pedido de reconsideração para proposta.incentivo@cultura.gov.br
         - >
-          O proponente poderá encaminhar para o e-mail:
-          proposta.incentivo@cultura.gov.br , pelo e-mail cadastrado no
-          sistema, se desiste do prazo recursal (caso concorde) ou poderá
-          encaminhar pedido de reconsideração (caso descorde).
+          ou, caso concorde, 
+          pode avisar que não quer entrar com recurso (também pelo proposta.incentivo@cultura.gov.br)
+          #TODO MinC: qual a vantagem para o proponente de avisar que não tem interesse em recurso? Acelera o processo? Se sim, devemos ressaltar essa vantagem
+          
+        - o prazo para recursos é de 10 dias corridos a partir da data de homologação
+        - >
+          ah, muito importante... o proponente que quiser se manifestar 
+          deve enviar o e-mail a partir do mesmo endereço que está cadastrado no projeto
+        
+        
   # STATUS DO PROJETO
   - name: fase-de-adequacao-do-projeto
     action: respond
     expect:
-      - >
-        Meu projeto está com a situação E90 projeto liberado para adequação,
-        o que significa ?
+      - Meu projeto está com a situação E90 projeto liberado para adequação, o que significa ?
       - O que significa o estado do projeto e90 ?
       - Projeto liberado para adequação o que é ?
       - e90 o que significa ?
       - Estado de projeto liberado para adequação ?
     answer:
-      -
-        - >
-          Proponente após garantir mínimo 10% do valor do projeto, poderá
-          adequar o mesmo conforme a sua realidade.
-        - |
-          Passo a passo para não alteração no projeto:
-        - |
-          1- Listar projetos
-          2- Selecionar o CNPJ do proponente
-          3- Ao lado direito da tela aparecerá um ícone azul
-            (clicar na opção verde “alterar projeto”
-          4- Clicar no ícone verde
-          5- Clicar no menu ao lado esquerdo da tela, na opção
-            “enviar projeto ao Minc”.
-        - |
-          Passo a passo para alteração no projeto:
-        - |
-          1- Listar projetos
-          2- Selecionar o CNPJ do proponente
-          3- Ao lado direito da tela aparecerá um ícone azul
-            (clicar na opção verde “alterar projeto”)
-          4- Clicar no ícone verde
-          5- A partir daí, realizar os ajustes, conforme a realidade.
-          6- Após os ajustes, clicar na opção “Enviar projeto ao Minc”.
-
-        - |
-          Ressalto que, o plano de distribuição poderá haver ajustes, mas não
-          pode acrescentar produtos.
-        - |
-          Na planilha não há possibilidade de aumentar o valor.
-          Resumo, objetivos e justificativas não podem ser alterados e o
-          cronograma não pode ser inferior a 90 dias.
+      - - > 
+          Um projeto liberado para adequação (estado E90) 
+          é um projeto que garantiu o mínimo de 10% do seu valor...
+        - e que agora pode ser adequado conforme a sua realidade
+          #TODO MinC: seria bom ter alguns exemplos de possibilidade de ajuste
+        - se você quiser saber como dar prosseguimento ao projeto sem fazer alterações, escreva “prosseguir com e90”
+        - ou, para entender como fazer alterações e o que pode ser alterado, escreva “alterar e90”
+        
+        
+         
+         
+  # STATUS DO PROJETO
+  - name: fase-de-adequacao-do-projeto-sem-alteracao
+    action: respond
+    expect:
+      - prosseguir com e90
+      - prosseguimento e90
+    answer:
+      - - Legal! Aqui vai o passo a passo para prosseguir sem alterar o projeto...
+        - 1- entre no sistema e clique em Projetos > Listar projetos
+        - 2- selecione o CNPJ do proponente, em seguida irá aparecer um ícone azul do lado direito da tela
+        - 3- clique na opção verde Alterar projeto, depois clique no ícone verde
+        - 4- por fim, clique na opção Enviar projeto ao Minc, no menu ao lado esquerdo da tela
+          
+ # STATUS DO PROJETO
+  - name: fase-de-adequacao-do-projeto-com-alteracao
+    action: respond
+    expect:
+      - alterar e90
+      - alteração e90
+    answer:     
+      - - Vamos lá... para alterar o projeto você deve seguir estes passos:
+        - 1- entre no sistema e clique em Projetos > Listar projetos
+        - 2- selecione o CNPJ do proponente, em seguida irá aparecer um ícone azul do lado direito da tela
+        - 3- clique na opção verde “Alterar projeto”, depois clique no ícone verde
+        - 4- nesse ponto você pode realizar os ajustes, conforme a realidade do projeto
+        - >   
+          5- depois dos ajustes, clique na opção “Enviar projeto ao Minc”, 
+          no menu ao lado esquerdo da tela  
+        #TODO LAPPIS: quebrar essa parte em uma pergunta separada quando tivermos contextos ou encadeamento de perguntas
+        - agora... 
+        - algumas coisas não podem ser alteradas como o Resumo, os Objetivos e as Justificativas
+        - o cronograma não pode ser inferior a 90 dias
+        - você pode mudar o plano de distribuição mas não pode acrescentar produtos
+        - e não é possível aumentar o valor na planilha 
+        - =)
+          
+          
+          
   # STATUS DO PROJETO
   - name: fase-de-enquadramento-do-projeto
     action: respond
@@ -76,21 +100,18 @@ interactions:
       - O que fazer para desistir do prazo recursal  ?
       - B02, como desisto do recursal  ?
       - Como desisto de encaminhar recurso  ?
-    answer:
-      -
-        - >
-          Prezado(a) proponente, O seu projeto foi enquadrado. Iniciou-se,
-          portanto, o prazo de 10 dias corridos para recorrer caso não tenha
-          acordo com o enquadramento proposto para o projeto.
-        - >
-          Caso concorde com o enquadramento dado é possível abrir mão (desistir)
-          desse prazo obrigatório – o que abreviará os trâmites processuais.
-        - >
-          Ambas as manifestações se dão por via da aba “recurso” no Menu ao lado
-          esquerdo da tela do projeto, no Salic.
-        - >
-          ATENÇÃO: O prazo dos 10 dias corridos, começam a valer a partir da
-          data do enquadramento.
+    answer:       
+      - - >Então, só pra te explicar o contexto... 
+           Quando um projeto é enquadrado, começa a contar o prazo de 10 dias corridos 
+           para o proponente se manifestar sobre o enquadramento
+        - |
+          você pode registrar a sua manifestação pelo Salic,
+          na aba Recurso, na tela do projeto
+          #TODO LAPPIS: detalhar melhor esse caminho
+        - >aí caso você concorde com o enquadramento, você pode desistir do prazo obrigatório
+           e acelerar o trâmite do projeto        
+          
+          
   # STATUS DO PROJETO
   - name: pedido-de-reativacao
     action: respond
@@ -103,14 +124,14 @@ interactions:
       - O que fazer para refazer o encaminhamento do pedido de reativação ?
       - Pedido de reativação, como fazer ?
     answer:
-      -
-        - >
-          Prezado(a) proponente, o pedido de reativação deve ser encaminhado
-          através de PDF e assinado pelo proponente.
-        - >
-          O pedido deve conter as devidas justificativas para a reanálise do
-          indeferimento e a resposta da diligência. E-mail para encaminhamento:
-          reativacao.proposta@cultura.gov.br
+      - - >Pra reativar uma proposta indeferida você deve enviar 
+           um pedido de reativação
+        - >esse pedido tem que expor as justificativas apropriadas para a reanálise
+           e deve ser assinado pelo proponente
+        - >você encaminha o pedido em formato PDF para reativacao.proposta@cultura.gov.br
+        - >e aí é só aguardar uma resposta =)
+          
+          
   # SISTEMA SALIC
   - name: recuperacao-de-senha
     action: respond
@@ -118,14 +139,16 @@ interactions:
       - >
         Me cadastrei a muito tempo no Salic, mas não me recordo da senha de
         acesso. Como faço para resolver ?
-      - Esqueci a senha do Salic, o faço ?
+      - Esqueci a senha do Salic, o que faço ?
       - Como recuperar senha do Salic ?
       - O que fazer quando se esquece a senha do Salic ?
       - Esqueci a senha de acesso, e agora ?
     answer:
-      - >
-        Prezado(a) proponente, encaminhar e-mail para a área responsável,
-        pelo e-mail: senhasalic@cultura.gov.br
+      - - Ah isso acontece com todo mundo ;)
+        - você pode gerar uma nova senha aqui: http://salic.cultura.gov.br/autenticacao/index/solicitarsenha
+        - ou se isso não funcionar, mande uma solicitação para o e-mail senhasalic@cultura.gov.br
+        
+        
   # SISTEMA SALIC
   - name: captacao-de-recursos
     action: respond
@@ -134,29 +157,39 @@ interactions:
       - Captação de recursos, quando fazer ?
       - Qual é o momento para fazer a captação de recursos ?
       - Quando fazer a captação de recursos do projeto ?
-      - Quando posso fazer a captação de recursos da minha proposta ?
+      - Quando posso começar a captação de recursos da minha proposta ?
+      - Quando começa a captação?
+      - A partir de quando posso começar a captar recursos?
     answer:
-      - >
-        Prezado(a), O projeto ainda passará pela fase de enquadramento e somente
-        após o enquadramento ele será enviado para análise documental e depois
-        publicação. Somente após a publicação que será liberada a captação.
+      - - >A captação só pode começar
+         depois que o projeto passa pela fase de enquadramento, pela análise documental e pela publicação
+        - Assim que o projeto é publicado no Diário Oficial da União você pode começar a captar recursos
+
+        
+        
+        
   # SISTEMA SALIC
-  - name: cadastro-de-procuracao-para-visualizacao-do-procurador-fase-de-projeto
-    action: respond
-    expect:
-      - >
-        Minha proposta foi transformada em projeto,
-        porém não consigo visualiza-lo. Como resolvo ?
-      - Como visualizar meu projeto ?
-      - Como ver minha proposta ?
-      - Onde acho meu projeto ?
-      - Minha proposta virou projeto, como faço para ve lo ?
-      - Como faço para ver um projeto ?
-    answer:
-      -
-        - >
-          Prezado(a) proponente,
-          Clicar em administrativo > Procuração > Cadastramento.
+#  - name: cadastro-de-procuracao-para-visualizacao-do-procurador-fase-de-projeto
+#    action: respond
+#    expect:
+#      - >
+#        Minha proposta foi transformada em projeto,
+#        porém não consigo visualiza-lo. Como resolvo ?
+#      - Como visualizar meu projeto ?
+#      - Como ver minha proposta ?
+#      - Onde acho meu projeto ?
+#      - Minha proposta virou projeto, como faço para ve lo ?
+#      - Como faço para ver um projeto ?
+#
+#TODO MinC: especificar se é o proponente que cadastra o procurador ou se é o próprio procurador
+#
+#    answer:
+#      -
+#        - >
+#          Prezado(a) proponente,
+#          Clicar em administrativo > Procuração > Cadastramento.
+          
+          
   # SISTEMA SALIC
   - name: cadastro-agencia-bancaria
     action: respond
@@ -169,9 +202,10 @@ interactions:
       - O que devo fazer quando o cadastro da agência está inválido ?
       - O sistema não está aceitando a agência que estou cadastrando, e agora ?
     answer:
-      - >
-        A agência bancária deve ser do banco do Brasil, deve conter 5 dígitos,
-        sem hifens, pontos ou letras.
+      - - Ah sim... a agência bancária só pode ser do Banco do Brasil
+        - e deve ser preenchida com 5 dígitos, sem hífen, pontos ou letras
+        
+        
   # SISTEMA SALIC
   - name: cadastro-do-proponente-no-salic
     action: respond
@@ -182,28 +216,33 @@ interactions:
       - Cadastro de proponente ?
       - Como fazer cadastro de proponente?
     answer:
-      - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
-        Preencher todos os dados.
+      - - Basta você entrar no Salic...
+        - clicar em Administrativo > Cadastrar proponente
+        - e preencher todos os dados :)
+        
+        
   # SISTEMA SALIC
-  - name: cadastro-do-dirigente-no-salic
-    action: respond
-    expect:
-      - Como cadastrar o dirigente via Salic ?
-      - Como cadastro um dirigente no Salic ?
-      - O que devo fazer para cadastrar um dirigente ?
-      - Cadastro de dirigente como proceder ?
-      - Como fazer cadastro de dirigente?
-    answer:
-      - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
-        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
-        esquerdo da tela > Clicar em dirigente > Novo dirigente.
+#  - name: cadastro-do-dirigente-no-salic
+#    action: respond
+#    expect:
+#      - Como cadastrar o dirigente via Salic ?
+#      - Como cadastro um dirigente no Salic ?
+#      - O que devo fazer para cadastrar um dirigente ?
+#      - Cadastro de dirigente como proceder ?
+#      - Como fazer cadastro de dirigente?
+#    answer:
+#TODO MinC: A instrução não corresponde ao sistema
+#      - >
+#        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
+#        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
+#        esquerdo da tela > Clicar em dirigente > Novo dirigente.
+#        
+        
   # SISTEMA SALIC
   - name: cadastro-de-email-proponente-no-salic
     action: respond
     expect:
-      - Como faço para cadastrar ou atualizar o e mail do proponente ?
+      - Como faço para cadastrar ou atualizar o e-mail do proponente ?
       - Como cadastrar o email do proponente ?
       - Como atualizar o e-mail do proponente ?
       - Como cadastro e atualizo email do proponente no Salic ?
@@ -214,10 +253,21 @@ interactions:
       - Como fazer cadastro de email do proponente?
       - Como fazer a atualização de e mail do proponente?
     answer:
-      - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
-        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
-        esquerdo da tela > Clicar em e-mail > Preencher os dados.
+      - - Vou te passar o passo a passo. Vamos lá... 
+        - | 
+          1- entre no Salic
+          2- clique em Administrativo > Cadastrar proponente
+          3- digite o CNPJ ou CPF
+        - nesse ponto o sistema vai trazer os dados do proponente, se já estiver cadastrado
+        - em seguida...
+        - | 
+          4- clique em Emails no menu esquerdo
+          5- clique no botão Novo
+          6- preencha os dados atualizados
+          7- clique em Salvar
+        - Prontinho!        
+        
+        
   # SISTEMA SALIC
   - name: cadastro-de-endereco-proponente-no-salic
     action: respond
@@ -233,10 +283,20 @@ interactions:
       - Como fazer cadastro de endereço do proponente?
       - Como fazer a atualização de endereço do proponente?
     answer:
-      - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
-        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
-        esquerdo da tela > Clicar em endereço > Preencher os dados.
+      - - Você faz o seguinte: 
+        - | 
+          1- entra no Salic
+          2- clica em Administrativo > Cadastrar proponente
+          3- digita o CNPJ ou CPF
+        - se este proponente já estiver cadastrado o sistema vai buscar os dados 
+        - aí na sequência você...
+        - | 
+          4- clica em Endereços no menu esquerdo
+          5- clica no botão Novo
+          6- preenche os dados atualizados
+          7- clica em Salvar pra concluir =)
+        
+        
   # SISTEMA SALIC
   - name: cadastro-de-telefone-proponente-no-salic
     action: respond
@@ -251,26 +311,41 @@ interactions:
       - Cadastro do telefone do proponente como proceder ?
       - Como fazer cadastro de telefone do proponente?
       - Como fazer a atualização de telefone do proponente?
-    answer:
-      - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
-        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
-        esquerdo da tela > Clicar em telefone > Preencher os dados.
+    answer:    
+      - - Aqui vão as etapas: 
+        - | 
+          1- entre no Salic
+          2- clique em Administrativo > Cadastrar proponente
+          3- digite o CNPJ ou CPF
+        - se este proponente já estiver cadastrado o sistema vai buscar os dados 
+        - em seguida você...
+        - | 
+          4- clica em Telefones no menu esquerdo
+          5- clica no botão Novo
+          6- preenche os dados atualizados
+          7- clica em Salvar
+        - e pronto! =)
+        
+        
   # SISTEMA SALIC
-  - name: cadastro-natureza-do-proponente-no-salic
-    action: respond
-    expect:
-      - O sistema me pede a natureza do proponente, como faço para cadastrar ?
-      - Como faço para cadastrar a natureza do proponente ?
-      - Como cadastrar a natureza do proponente no Salic ?
-      - Como fazer o cadastro da natureza do proponente ?
-      - O que devo fazer para cadastrar a natureza do proponente ?
-      - Como proceder para cadastrar natureza do proponente ?
-    answer:
-      - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
-        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
-        esquerdo da tela > Clicar natureza > Preencher os dados.
+#  - name: cadastro-natureza-do-proponente-no-salic
+#    action: respond
+#    expect:
+#      - O sistema me pede a natureza do proponente, como faço para cadastrar ?
+#      - Como faço para cadastrar a natureza do proponente ?
+#      - Como cadastrar a natureza do proponente no Salic ?
+#      - Como fazer o cadastro da natureza do proponente ?
+#      - O que devo fazer para cadastrar a natureza do proponente ?
+#      - Como proceder para cadastrar natureza do proponente ?
+#    answer:
+#    #TODO MinC: A instrução não corresponde ao sistema
+#
+#      - >
+#        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
+#        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
+#        esquerdo da tela > Clicar natureza > Preencher os dados.
+        
+        
   # SISTEMA SALIC
   - name: cadastro-data-de-nascimento-do-proponente-no-salic
     action: respond
@@ -288,6 +363,23 @@ interactions:
         Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
         Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
         esquerdo da tela > Clicar informações adicionais > Preencher os dados.
+        
+      - - Vou te passar o passo a passo. Vamos lá... 
+        - | 
+          1- entre no Salic
+          2- clique em Administrativo > Cadastrar proponente
+          3- digite o CNPJ ou CPF
+        - nesse ponto o sistema vai trazer os dados do proponente, se já estiver cadastrado
+        - em seguida...
+        - | 
+          4- clique em Informações Adicionais no menu esquerdo
+          5- preencha todos os dados obrigatórios
+          7- clique em Salvar
+        - Prontinho!     
+        
+
+        
+        
   # PROBLEMAS COM SALIC
   - name: problemas-no-sistema
     action: respond
@@ -295,14 +387,15 @@ interactions:
       - Estou com problemas no Salic. Qual setor posso tirar minhas dúvidas ?
       - Onde tiro dúvidas a respeito do Salic ?
       - Tenho dúvidas, com quem posso falar ?
+      - Tenho algumas perguntas sobre o Salic
       - Com devo falar para tirar algumas dúvidas a respeito do Salic?
       - Qual setor devo contactar para sanar minhas dúvidas a respeito do Salic
-      - Tenho algumas questões, onde consigo sanar las?
+      - Tenho algumas questões, onde consigo saná-las?
     answer:
-      - >
-        Prezado(a), Problemas no sistema é junto ao e-mail salic@cultura.gov.br
-        envie o print da tela com o erro.
-
+      - Estou aqui pra te ajudar com o Salic. Qual a sua dúvida?
+      - Talvez eu possa te ajudar... Do que você precisa?
+        
+    
 #  - name: edital-minc
 #    action: respond
 #    expect:
