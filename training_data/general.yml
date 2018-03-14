@@ -185,7 +185,7 @@ interactions:
           Nossa, desculpa, não sei mesmo como responder isso...
         - >
           mas a equipe da Ouvidoria do MinC pode te ajudar, você pode entrar em contato por
-        - >   
+        - |   
           Fone: +55 (61) 2024-2245
           E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
           
@@ -196,7 +196,7 @@ interactions:
           a equipe da nossa Ouvidoria vai poder te ajudar com isso
         - >
           aí vão as formas de contato...
-        - >   
+        - |  
           Fone: +55 (61) 2024-2245
           E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp   
       
@@ -205,7 +205,7 @@ interactions:
           Desculpa, não sei
         - >          
           vou deixar os contatos da nossa Ouvidoria para você tirar sua dúvida
-        - >   
+        - |   
           Fone: +55 (61) 2024-2245
           E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
   action: error
