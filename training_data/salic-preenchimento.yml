@@ -12,7 +12,7 @@ interactions:
       - >
         1- Administrativo > Gerenciar responsáveis
       - > 
-        Em seguida...
+        em seguida...
       - > 
         2- Vincular propostas > Clicar na "bolinha" (Vincular) > Inserir responsável > abaixo terá o número da
         Proposta/Nome > Nome do responsável selecionado > Clicar na "bolinha"
@@ -25,19 +25,23 @@ interactions:
         Estou preenchendo a planilha orçamentária, porém, o sistema não me
         permite cadastrar as rubricas em custos vinculados. Como resolver?
       - >
-        Na planilha orçamentária, por que o sistema não me permite cadastrar as
+        na planilha orçamentária, por que o sistema não me permite cadastrar as
         rubricas em custos vinculados?
     answer:
       - - >
           Entendi. Vamos lá:
         - >
-          A partir da IN 05/2017 não são necessários o detalhamento
+          a partir da IN 05/2017 não são necessários o detalhamento
           das rubricas de custos administrativos nem de divulgação, direitos
-          autorais e remuneração por captação.
+          autorais e remuneração por captação
         - >
-          O proponente precisa apenas informar as porcentagens.
+          o proponente precisa apenas informar as porcentagens
         - >
-          Para isso, basta ir na aba Custos vinculados. O detalhamento se dará na Prestação de contas. 
+          para isso, basta ir na aba Custos vinculados
+        - >
+          o detalhamento se dará na Prestação de contas :)
+          
+          
   - name: visualizar-propostas-projetos
     action: respond
     expect:
@@ -47,16 +51,16 @@ interactions:
       - - >
           O procedimento é simples...
         - >
-          Seleciona o CPF ou CNPJ que deseja como proponente e lista a
-          proposta do CPF ou CNPJ selecionado.
+          selecione o CPF ou CNPJ que deseja como proponente e liste a
+          proposta do CPF ou CNPJ selecionado
         - >
-          Para isso, vá em: 
+          para isso, vá em: 
         - >
           1- Proposta > Listar proposta
         - >
           2- Clicar em CPF Proponente > Selecionar o CNPJ
         - >
-          Aparecerão todas as propostas ativas no sistema.
+          aparecerão todas as propostas ativas no sistema
 
 
   - name: aceitar-vinculo
@@ -70,12 +74,13 @@ interactions:
       - Como meu dirigente vincula meu CPF a pessoa jurídica do projeto?
     answer:
     - - > 
-        Uma informação importante:
+        Então, só para explicar...
       - >
-        Só quem pode vincular uma pessoa física ao CNPJ é o dirigente da
-        instituição.
+        apenas o dirigente da instituição é quem pode vincular uma pessoa física ao CNPJ
       - >
-        O dirigente deve entrar com login e senha e aceitar o vínculo.
+        o dirigente deve entrar com login e senha e aceitar o vínculo
+        #TODO LAPPIS: esclarecer o passo a passo de vinculacao
+        
   - name: apresentar-proposta-cultural
     action: respond
     expect:
@@ -85,11 +90,12 @@ interactions:
       - Por onde eu começo minha proposta cultura?
     answer:
       - - >
-          Para saber como enviar uma proposta cultural acesse:
-          http://rouanet.cultura.gov.br/
+          Uma proposta cultural tem vários detalhes,
+          você vai encontrar todas as informações aqui: http://rouanet.cultura.gov.br/
         - >
-          Para mais informações sobre como preencher uma proposta cultural entre em:
+          já as instruções para preencher uma proposta cultural estão neste endereço:
           http://rouanet.cultura.gov.br/tutoriais/
+
   - name: valor-por-beneficiario
     action: respond
     expect:
@@ -102,14 +108,16 @@ interactions:
         citado. Como resolver?
     answer:
       - - >
-          Essa métrica é utilizada para conferir a viabilidade do projeto, que não
-          pode ultrapassar R$ 250,00 por beneficiário.
+          Esse valor é usado para conferir a viabilidade do projeto 
+          e não pode ultrapassar R$ 250,00 por beneficiário.
         - >
-          Exemplo: R$ 9.445.076,00 / 22.556 pessoas = R$ 419,18 por
-          beneficiário.
+          por exemplo: R$ 9.445.076,00 / 22.556 pessoas = R$ 419,18 por
+          beneficiário, ou seja, está acima do limite
         - >  
-          Para sanar esse problema, diminua o custo do projeto ou aumente a
-          estimativa de público. ;)
+          para sanar esse problema, você pode diminuir o custo do projeto ou aumentar a
+          estimativa de público ;)
+          
+          
   - name: definicao-modal
     action: respond
     expect:
@@ -117,25 +125,26 @@ interactions:
       - Como a modal é calculada?
     answer:
       - - >
-          Vamos lá...A modal é calculada com base na série histórica de todos os projetos
-          aprovados desde o início da Lei Rouanet.
+          Vamos lá... A modal é calculada com base na série histórica de todos os projetos
+          aprovados desde o início da Lei Rouanet
         - >  
-          Ela leva em consideração a
-          rubrica, o produto e a região do projeto (estado e município).
+          ela leva em consideração a
+          rubrica, o produto e a região do projeto (estado e município)
         - >
-          Normalmente, quando alguma rubrica extrapola a modal é devido ao
-          preenchimento incorreto do valor unitário do item.
+          normalmente, quando alguma rubrica extrapola a modal é devido ao
+          preenchimento incorreto do valor unitário do item
         - >
-          O valor unitário representa o Valor Individual de um item e não seu
-          Valor Global.
+          o valor unitário representa o Valor Individual de um item e não seu
+          Valor Global
         - >  
-          Para atingir o valor global desejado o proponente deve alterar os
-          campos Quantidade e/ou Ocorrência.
+          para atingir o valor global desejado o proponente deve alterar os
+          campos Quantidade e/ou Ocorrência
         - >  
-          Contudo, caso o preenchimento esteja correto e mesmo assim a rubrica
+          agora, caso o preenchimento esteja correto e mesmo assim a rubrica
           ultrapassar a modal, o proponente precisa justificar tecnicamente no
           campo “INFORMAÇÕES INICIAS -> OUTRAS INFORMAÇÕES” o motivo do custo
-          elevado. :)
+          elevado :)
+          
   - name: close-without-saving-error
     action: respond
     expect:
