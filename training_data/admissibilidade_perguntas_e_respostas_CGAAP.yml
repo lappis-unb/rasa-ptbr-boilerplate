@@ -74,7 +74,7 @@ interactions:
       - - Vamos lá... para alterar o projeto você deve seguir estes passos:
         - 1- entre no sistema e clique em Projetos > Listar projetos
         - 2- selecione o CNPJ do proponente, em seguida irá aparecer um ícone azul do lado direito da tela
-        - 3- clique na opção verde “Alterar projeto”, depois clique no ícone verde
+        - 3- clique na opção verde Alterar projeto, depois clique no ícone verde
         - 4- nesse ponto você pode realizar os ajustes, conforme a realidade do projeto
         - >   
           5- depois dos ajustes, clique na opção “Enviar projeto ao Minc”, 
@@ -102,7 +102,7 @@ interactions:
       - Como desisto de encaminhar recurso  ?
     answer:       
       - - >Então, só pra te explicar o contexto... 
-           Quando um projeto é enquadrado, começa a contar o prazo de 10 dias corridos 
+           Quando um projeto é enquadrado (estado B02), começa a contar o prazo de 10 dias corridos 
            para o proponente se manifestar sobre o enquadramento
         - |
           você pode registrar a sua manifestação pelo Salic,
@@ -126,7 +126,7 @@ interactions:
     answer:
       - - >Pra reativar uma proposta indeferida você deve enviar 
            um pedido de reativação
-        - >esse pedido tem que expor as justificativas apropriadas para a reanálise
+        - >esse pedido tem que expor as justificativas apropriadas para reanálise
            e deve ser assinado pelo proponente
         - >você encaminha o pedido em formato PDF para reativacao.proposta@cultura.gov.br
         - >e aí é só aguardar uma resposta =)
@@ -146,7 +146,7 @@ interactions:
     answer:
       - - Ah isso acontece com todo mundo ;)
         - você pode gerar uma nova senha aqui: http://salic.cultura.gov.br/autenticacao/index/solicitarsenha
-        - ou se isso não funcionar, mande uma solicitação para o e-mail senhasalic@cultura.gov.br
+        - ou se isso não funcionar, mande uma solicitação para: senhasalic@cultura.gov.br
         
         
   # SISTEMA SALIC
@@ -358,12 +358,7 @@ interactions:
       - Como fazer o cadastro da data de nascimento do proponente ?
       - O que devo fazer para cadastrar a data de nascimento do proponente ?
       - Como proceder para cadastrar a data de nascimento do proponente ?
-    answer:
-      - >
-        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente >
-        Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado
-        esquerdo da tela > Clicar informações adicionais > Preencher os dados.
-        
+    answer:       
       - - Vou te passar o passo a passo. Vamos lá... 
         - | 
           1- entre no Salic
