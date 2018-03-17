@@ -98,8 +98,9 @@ interactions:
     answer:
       - - Sinto muito! Talvez eu possa te ajudar...  
         - você pode me fazer perguntas sobre a Lei Rouanet ou sobre o SALIC
-      - > Poxa, que pena. Se você me falar das suas dúvidas sobre a Lei Rouanet
-          ou sobre o SALIC talvez você se sinta melhor :)
+      - > 
+        Poxa, que pena. Se você me falar das suas dúvidas sobre a Lei Rouanet
+        ou sobre o SALIC talvez você se sinta melhor :)
     context: clear
     action: respond
 
@@ -149,20 +150,23 @@ interactions:
 
   - name: error-3
     answer:
-      - - Nossa, desculpa, não sei mesmo como responder isso...
+      - 
+        - Nossa, desculpa, não sei mesmo como responder isso...
         - mas a equipe da Ouvidoria do MinC pode te ajudar, você pode entrar em contato por
         - |   
           Fone: +55 (61) 2024-2245
           E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
-      - - Hummm, já sei...
+      - 
+        - Hummm, já sei...
         - a equipe da nossa Ouvidoria vai poder te ajudar com isso
         - aí vão as formas de contato...
         - |  
           Fone: +55 (61) 2024-2245
           E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp         
-      - - Desculpa, não sei
+      - 
+        - Desculpa, não sei
         - vou deixar os contatos da nossa Ouvidoria para você tirar sua dúvida
         - |   
           Fone: +55 (61) 2024-2245
           E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
-  action: error
+    action: error
