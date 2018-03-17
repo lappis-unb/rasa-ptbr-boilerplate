@@ -101,15 +101,18 @@ interactions:
       - B02, como desisto do recursal  ?
       - Como desisto de encaminhar recurso  ?
     answer:       
-      - - >Então, só pra te explicar o contexto... 
-           Quando um projeto é enquadrado (estado B02), começa a contar o prazo de 10 dias corridos 
-           para o proponente se manifestar sobre o enquadramento
+      - 
+        - >
+          Então, só pra te explicar o contexto... 
+          Quando um projeto é enquadrado (estado B02), começa a contar o prazo de 10 dias corridos 
+          para o proponente se manifestar sobre o enquadramento
         - |
           você pode registrar a sua manifestação pelo Salic,
           na aba Recurso, na tela do projeto
           #TODO LAPPIS: detalhar melhor esse caminho
-        - >aí caso você concorde com o enquadramento, você pode desistir do prazo obrigatório
-           e acelerar o trâmite do projeto        
+        - >
+          aí caso você concorde com o enquadramento, você pode desistir do prazo obrigatório
+          e acelerar o trâmite do projeto        
           
           
   # STATUS DO PROJETO
@@ -124,12 +127,17 @@ interactions:
       - O que fazer para refazer o encaminhamento do pedido de reativação ?
       - Pedido de reativação, como fazer ?
     answer:
-      - - >Pra reativar uma proposta indeferida você deve enviar 
-           um pedido de reativação
-        - >esse pedido tem que expor as justificativas apropriadas para reanálise
-           e deve ser assinado pelo proponente
-        - >você encaminha o pedido em formato PDF para reativacao.proposta@cultura.gov.br
-        - >e aí é só aguardar uma resposta =)
+      - 
+        - >
+          Pra reativar uma proposta indeferida você deve enviar 
+          um pedido de reativação
+        - >
+          esse pedido tem que expor as justificativas apropriadas para reanálise
+          e deve ser assinado pelo proponente
+        - >
+          você encaminha o pedido em formato PDF para reativacao.proposta@cultura.gov.br
+        - >
+          e aí é só aguardar uma resposta =)
           
           
   # SISTEMA SALIC
@@ -161,8 +169,10 @@ interactions:
       - Quando começa a captação?
       - A partir de quando posso começar a captar recursos?
     answer:
-      - - >A captação só pode começar
-         depois que o projeto passa pela fase de enquadramento, pela análise documental e pela publicação
+      - 
+        - >
+          A captação só pode começar
+          depois que o projeto passa pela fase de enquadramento, pela análise documental e pela publicação
         - Assim que o projeto é publicado no Diário Oficial da União você pode começar a captar recursos
 
         
