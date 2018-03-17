@@ -73,7 +73,8 @@ interactions:
       - Como vinculo um CPF a um CNPJ?
       - Como meu dirigente vincula meu CPF a pessoa jurídica do projeto?
     answer:
-    - - > 
+    - 
+      - > 
         Então, só para explicar...
       - >
         apenas o dirigente da instituição é quem pode vincular uma pessoa física ao CNPJ
