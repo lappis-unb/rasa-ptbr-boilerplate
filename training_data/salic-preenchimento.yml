@@ -1,7 +1,8 @@
-trust: 0.7
+trust: 0.9
 interactions:
 
-  - name: vinculo-de-propostas
+  - name: preenchimento-vinculo-de-propostas
+    level: preenchimento
     action: respond
     expect:
       - Como faço para vincular uma proposta ao CPF do responsável?
@@ -11,14 +12,16 @@ interactions:
         O dirigente do projeto deve acessar o sistema e seguir os passos:
       - >
         1- Administrativo > Gerenciar responsáveis
-      - > 
+      - >
         em seguida...
-      - > 
+      - >
         2- Vincular propostas > Clicar na "bolinha" (Vincular) > Inserir responsável > abaixo terá o número da
         Proposta/Nome > Nome do responsável selecionado > Clicar na "bolinha"
-      - >  
+      - >
         3- Por último... clica também no botão Vincular
-  - name: custos-vinculados
+
+  - name: preenchimento-custos-vinculados
+    level: preenchimento
     action: respond
     expect:
       - >
@@ -40,9 +43,10 @@ interactions:
           para isso, basta ir na aba Custos vinculados
         - >
           o detalhamento se dará na Prestação de contas :)
-          
-          
-  - name: visualizar-propostas-projetos
+
+
+  - name: preenchimento-visualizar-propostas-projetos
+    level: preenchimento
     action: respond
     expect:
       - Não consigo achar minha proposta no sistema, porém a mesma está ativa.
@@ -54,7 +58,7 @@ interactions:
           selecione o CPF ou CNPJ que deseja como proponente e liste a
           proposta do CPF ou CNPJ selecionado
         - >
-          para isso, vá em: 
+          para isso, vá em:
         - >
           1- Proposta > Listar proposta
         - >
@@ -63,7 +67,8 @@ interactions:
           aparecerão todas as propostas ativas no sistema
 
 
-  - name: aceitar-vinculo
+  - name: preenchimento-aceitar-vinculo
+    level: preenchimento
     action: respond
     expect:
       - >
@@ -73,16 +78,17 @@ interactions:
       - Como vinculo um CPF a um CNPJ?
       - Como meu dirigente vincula meu CPF a pessoa jurídica do projeto?
     answer:
-    - 
-      - > 
+    -
+      - >
         Então, só para explicar...
       - >
         apenas o dirigente da instituição é quem pode vincular uma pessoa física ao CNPJ
       - >
         o dirigente deve entrar com login e senha e aceitar o vínculo
         #TODO LAPPIS: esclarecer o passo a passo de vinculacao
-        
-  - name: apresentar-proposta-cultural
+
+  - name: preenchimento-apresentar-proposta-cultural
+    level: preenchimento
     action: respond
     expect:
       - Como apresentar uma proposta cultural?
@@ -97,7 +103,8 @@ interactions:
           já as instruções para preencher uma proposta cultural estão neste endereço:
           http://rouanet.cultura.gov.br/tutoriais/
 
-  - name: valor-por-beneficiario
+  - name: preenchimento-valor-por-beneficiario
+    level: preenchimento
     action: respond
     expect:
       - >
@@ -109,17 +116,18 @@ interactions:
         citado. Como resolver?
     answer:
       - - >
-          Esse valor é usado para conferir a viabilidade do projeto 
+          Esse valor é usado para conferir a viabilidade do projeto
           e não pode ultrapassar R$ 250,00 por beneficiário.
         - >
           por exemplo: R$ 9.445.076,00 / 22.556 pessoas = R$ 419,18 por
           beneficiário, ou seja, está acima do limite
-        - >  
+        - >
           para sanar esse problema, você pode diminuir o custo do projeto ou aumentar a
           estimativa de público ;)
-          
-          
-  - name: definicao-modal
+
+
+  - name: preenchimento-definicao-modal
+    level: preenchimento
     action: respond
     expect:
       - O que é a modal?
@@ -128,7 +136,7 @@ interactions:
       - - >
           Vamos lá... A modal é calculada com base na série histórica de todos os projetos
           aprovados desde o início da Lei Rouanet
-        - >  
+        - >
           ela leva em consideração a
           rubrica, o produto e a região do projeto (estado e município)
         - >
@@ -137,16 +145,17 @@ interactions:
         - >
           o valor unitário representa o Valor Individual de um item e não seu
           Valor Global
-        - >  
+        - >
           para atingir o valor global desejado o proponente deve alterar os
           campos Quantidade e/ou Ocorrência
-        - >  
+        - >
           agora, caso o preenchimento esteja correto e mesmo assim a rubrica
           ultrapassar a modal, o proponente precisa justificar tecnicamente no
           campo “INFORMAÇÕES INICIAS -> OUTRAS INFORMAÇÕES” o motivo do custo
           elevado :)
-          
-  - name: close-without-saving-error
+
+  - name: preenchimento-close-without-saving-error
+    level: preenchimento
     action: respond
     expect:
       - >
@@ -156,13 +165,14 @@ interactions:
       - O SALIC não salvou minhas alterações na proposta
       - O sistema não salvou minhas alterações na proposta
     answer:
-    - - > 
+    - - >
         Entendi! Esse erro aconteceu por exceder o tempo logado no sistema.
-      - > 
+      - >
         O limite de tempo para o preenchimento da proposta é 20 minutos.
 
 
-  - name: assessoria-contabil-juridica
+  - name: preenchimento-assessoria-contabil-juridica
+    level: preenchimento
     action: respond
     expect:
       - Como faço para cadastrar as rubricas de advogado e contador?
@@ -170,12 +180,13 @@ interactions:
       - Cadastro de rubricas de contador
     answer:
       - >
-        Você deve ir em: 
+        Você deve ir em:
       - >
         1- Orçamento do projeto > Custos por produto > Clicar no produto desejado
       - >
         2- Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
-  - name: prazo-envio-cnae
+  - name: preenchimento-prazo-envio-cnae
+    level: preenchimento
     action: respond
     expect:
       - Qual é o prazo limite para envio do CNAE?
@@ -189,7 +200,8 @@ interactions:
         Caso seja insuficiente, o proponente poderá anexar o protocolo da Receita
         de inserção do CNAE no Salic.
 
-  - name: planilha-sumiu
+  - name: preenchimento-planilha-sumiu
+    level: preenchimento
     action: respond
     expect:
       - >
@@ -203,14 +215,16 @@ interactions:
       - >
         Ao excluir algum produto do plano de distribuição a planilha vai "zerar"
         e o proponente deverá refazê-la novamente.
-  - name: novo-fluxo
+
+  - name: preenchimento-novo-fluxo
+    level: preenchimento
     action: respond
     expect:
       - Qual é o novo fluxo do Salic?
     answer:
       - - >
           Vamos lá:
-        - >   
+        - >
           1- A proposta passa pela análise inicial...
         - >
           2- Após ganhar um Pronac o projeto será enquadrado.
@@ -219,19 +233,86 @@ interactions:
         - >
           4- ... Vai para a fase de análise documental e depois publicação.
         - >
-          5- Após publicado o projeto deve no mínimo captar 10%. 
+          5- Após publicado o projeto deve no mínimo captar 10%.
         - >
           6- Quando captar os 10%, o projeto vai para a adequação...e para a fase de análise técnica.
-        - > 
+        - >
           8- Depois de passar pela análise técnica ele vai para a CNIC.
         - >
-          São no mínimo 90 dias esse trâmite. 
+          São no mínimo 90 dias esse trâmite.
         - >
           9- Após a CNIC... o projeto será homologado e poderá iniciar a sua execução. =D
-  - name: custo-auditoria
+
+  - name: preenchimento-custo-auditoria
+    level: preenchimento
     action: respond
     expect:
       - O que devo preencher no campo Custo de Auditoria?
     answer:
-      - >
-        Não precisa preencher esse campo no momento. ;)
+      - Não precisa preencher esse campo no momento. ;)
+
+
+
+###### Fallback
+
+  - name: preenchimento-error-1
+    level: preenchimento
+    action: error
+    answer:
+      - Acho não entendi... Me passa mais detalhes por favor
+      - Não entendi, Como assim?
+      - Desculpe, o que quer dizer com isso?
+
+  - name: preenchimento-error-2
+    level: preenchimento
+    action: error
+    answer:
+      - - Acho que ainda não estou treinada para responder esse tipo de assunto =(
+        - tente outro assunto
+      - - Desculpa, sou uma assistente virtual em fase experimental
+        - às vezes não entendo certos comentários
+        - use outras palavras na sua mensagem
+      - - Não sei se entendi...
+        - estou em fase experimental, desculpa!
+        - tenta perguntar de outra forma =)
+
+  - name: preenchimento-error-3
+    level: preenchimento
+    action: error
+    answer:
+      -
+        - Nossa, desculpa, não sei mesmo como responder isso...
+        - mas a equipe da Ouvidoria do MinC pode te ajudar, você pode entrar em contato por
+        - |
+          Telefone: +55 (61) 2024-2245
+          Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
+      -
+        - Hummm, já sei...
+        - a equipe da nossa Ouvidoria vai poder te ajudar com isso
+        - |
+          Telefone: +55 (61) 2024-2245
+          Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
+      -
+        - Desculpa, não sei
+        - vou deixar os contatos da nossa Ouvidoria para você tirar sua dúvida
+        - |
+          Telefone: +55 (61) 2024-2245
+          Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
+
+  # - name: preenchimento-transferencia-lei-rouanet
+  #   level: preenchimento
+  #   action: respond
+  #   expect:
+  #     - Lei Rouanet
+  #     - Quero falar sobre a Lei Rouanet
+  #     - Me conte mais sobre a Lei Rouanet
+  #     - Queria perguntar sobre a lei rouanet
+  #     - Quero saber mais sobre a lei rouanet
+  #   answer:
+  #     - ..............
+  #   next:
+  #     interactions:
+  #       - ==========================================================================================TODO
+  #     trust: .9
+  #     error:
+  #       - ==========================================================================================TODO

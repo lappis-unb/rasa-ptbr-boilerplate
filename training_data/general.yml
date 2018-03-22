@@ -1,4 +1,4 @@
-trust: 0.7
+trust: 0.9
 interactions:
 
   - name: livechat-transfer
@@ -19,13 +19,14 @@ interactions:
       - - Desculpa, a equipe de atendimento não está disponível agora
         - você pode tentar de novo mais tarde...  ou usar outros canais de atendimento:
         - |
-          Fone: +55 (61) 2024-2245
-          E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp  
-  
+          Telefone: +55 (61) 2024-2245
+          Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
+
   - name: saudacao-basica
     action: respond
     expect:
       - Olá
+      - Ola
       - Oi
       - Bom dia
       - Boa tarde
@@ -33,10 +34,22 @@ interactions:
       - Hey
     answer:
       - - Olá, sou a Rouana, assistente virtual do Ministério da Cultura
-        - posso responder suas dúvidas sobre a Lei Rouanet ou sobre o SALIC
+        - |
+          posso responder suas dúvidas sobre:
+          - A Lei Rouanet
+          - Preenchimento de proposta no SALIC
+          - A fase admissibilidade do seu projeto
+          - A fase execução do seu projeto
+        - você deseja falar sobre o quê?
       - - Oi, sou uma assistente virtual e me chamo Rouana
-        - você pode me fazer perguntas sobre a Lei Rouanet ou sobre o SALIC 
-
+        - você pode me fazer perguntas sobre:
+        - |
+          posso responder suas dúvidas sobre:
+          - A Lei Rouanet
+          - Preenchimento de proposta no SALIC
+          - A fase admissibilidade do seu projeto
+          - A fase execução do seu projeto
+        - sobre o que você quer falar?
 
   - name: saudacao-pergunta
     action: respond
@@ -58,16 +71,33 @@ interactions:
       - Boa tarde, tudo bem com você?
       - Boa noite, tudo bem com você?
     answer:
-      - - Tudo ótimo! 
-        - quero te ajudar... me faz uma pergunta sobre a Lei Rouanet ou sobre o SALIC     
+      - - Tudo ótimo!
+        - |
+          quero te ajudar... me faça uma pergunta sobre:
+          - A Lei Rouanet
+          - Preenchimento de proposta no SALIC
+          - A fase admissibilidade do seu projeto
+          - A fase execução do seu projeto
       - - Estou bem! Obrigada por perguntar :)
-        - você pode fazer perguntas sobre a Lei Rouanet ou sobre o SALIC     
+        - |
+          você pode fazer perguntas sobre:
+          - A Lei Rouanet
+          - Preenchimento de proposta no SALIC
+          - A fase admissibilidade do seu projeto
+          - A fase execução do seu projeto
+          Sobre o que você quer perguntar?
       - - Tudo bem!
-        - vou ficar melhor se eu puder tirar suas dúvidas sobre a Lei Rouanet ou sobre o SALIC :)
+        - |
+          vou ficar melhor se eu puder tirar suas dúvidas sobre:
+          - A Lei Rouanet
+          - Preenchimento de proposta no SALIC
+          - A fase admissibilidade do seu projeto
+          - A fase execução do seu projeto
+          Sobre o que você quer falar?
 
 
   - name: to-bem
-    level: context
+    action: respond
     expect:
       - estou bem
       - tou bem
@@ -77,16 +107,24 @@ interactions:
       - tudo bem
       - beleza
       - blz
-#      - ok 
     answer:
-      - Legal! Fique à vontade para fazer perguntas sobre a Lei Rouanet ou sobre o SALIC
-      - Que bom! Se você tiver dúvidas sobre a Lei Rouanet ou sobre o SALIC é só me falar :)
-    context: clear
-    action: respond
-
+      - |
+        Legal! Fique à vontade para fazer perguntas sobre:
+        - A Lei Rouanet
+        - Preenchimento de proposta no SALIC
+        - A fase admissibilidade do seu projeto
+        - A fase execução do seu projeto
+        Sobre o que você quer falar?
+      - |
+        Que bom! Se você tiver dúvidas sobre:
+        - A Lei Rouanet
+        - Preenchimento de proposta no SALIC
+        - A fase admissibilidade do seu projeto
+        - A fase execução do seu projeto
+        Sobre o que você quer falar?
 
   - name: to-mal
-    level: context
+    action: respond
     expect:
       - estou mal
       - tou mal
@@ -96,13 +134,21 @@ interactions:
       - não tô bem
       - não tô legal
     answer:
-      - - Sinto muito! Talvez eu possa te ajudar...  
-        - você pode me fazer perguntas sobre a Lei Rouanet ou sobre o SALIC
-      - > 
-        Poxa, que pena. Se você me falar das suas dúvidas sobre a Lei Rouanet
-        ou sobre o SALIC talvez você se sinta melhor :)
-    context: clear
-    action: respond
+      - - Sinto muito! Talvez eu possa te ajudar...
+        - |
+          você pode me fazer perguntas sobre:
+          - A Lei Rouanet
+          - Preenchimento de proposta no SALIC
+          - A fase admissibilidade do seu projeto
+          - A fase execução do seu projeto
+          Sobre o que você quer falar?
+      - - Poxa, que pena. Se você me falar das suas dúvidas talvez você se sinta melhor :)
+        - |
+          Sobre o que você quer falar:
+          - A Lei Rouanet
+          - Preenchimento de proposta no SALIC
+          - A fase admissibilidade do seu projeto
+          - A fase execução do seu projeto
 
 
   - name: agradecimento
@@ -124,49 +170,129 @@ interactions:
         - até lá, avalie a nossa conversa dando uma nota de 1 à 5 (1=péssima, 5=ótima)
       - - Sempre que tiver alguma dúvida sobre a Lei Rouanet ou sobre o SALIC, pode falar comigo!
         - enquanto isso, avalie a nossa conversa dando uma nota de 1 à 5 (1=péssima, 5=ótima)
+    next:
+      trust: .4
+      interactions:
+        - receber-nota
 
+  - name: receber-nota
+    level: receber-nota-level
+    context: clear
+    expect:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - minha nota é
+      - dou a nota
+      - você vale um
+    answer:
+      - Obrigado pela nota! Deseja saber mais algumas coisa? Estou aqui para te ajudar
+
+
+  - name: falar-sobre-lei-rouanet
+    action: respond
+    expect:
+      - Lei Rouanet
+      - Quero falar sobre a Lei Rouanet
+      - Me conte mais sobre a Lei Rouanet
+      - Queria perguntar sobre a lei rouanet
+      - Quero saber mais sobre a lei rouanet
+    answer:
+      - - Que bom! É meu assunto preferido =)
+        - O que você gostaria de saber sobre ela?
+      - Legal! O que você gostaria de saber sobre ela?
+    next:
+      trust: .9
+      interactions:
+        - livechat-transfer
+        - falar-sobre-preenchimento
+        - lei-rouanet-definicao
+        - lei-rouanet-diff-fomento-incentivo
+        - lei-rouanet-projetos
+        - lei-rouanet-elegibilidade
+        - lei-rouanet-arrecadamento
+        - lei-rouanet-denuncia
+        - lei-rouanet-papeis
+      error:
+        - lei-rouanet-error-1
+        - lei-rouanet-error-2
+        - lei-rouanet-error-3
+
+  - name: falar-sobre-preenchimento
+    action: respond
+    expect:
+      - Preenchimento
+      - como preenche um campo
+      - estou em duvida no preenchimento
+      - preciso preencher minha proposta
+      - como eu preencho uma proposta
+      - estou pronto para fazer minha proposta
+    answer:
+      - - Então vamos falar sobre preenchimento
+        - O que você gostaria de saber sobre ele?
+      - O que você gostaria de saber sobre preenchimento?
+    next:
+      trust: .9
+      interactions:
+        - livechat-transfer
+        - falar-sobre-lei-rouanet
+        - preenchimento-vinculo-de-propostas
+        - preenchimento-custos-vinculados
+        - preenchimento-visualizar-propostas-projetos
+        - preenchimento-aceitar-vinculo
+        - preenchimento-apresentar-proposta-cultural
+        - preenchimento-valor-por-beneficiario
+        - preenchimento-definicao-modal
+        - preenchimento-close-without-saving-error
+        - preenchimento-assessoria-contabil-juridica
+        - preenchimento-prazo-envio-cnae
+        - preenchimento-planilha-sumiu
+        - preenchimento-novo-fluxo
+        - preenchimento-custo-auditoria
+      error:
+        - preenchimento-error-1
+        - preenchimento-error-2
+        - preenchimento-error-3
 
   - name: error-1
+    action: error
     answer:
       - Acho não entendi... Me passa mais detalhes por favor
-      - Como assim?
-      - Desculpe, o que quer dizer com isso?        
-    action: error
-
+      - Não entendi, Como assim?
+      - Desculpe, o que quer dizer com isso?
 
   - name: error-2
+    action: error
     answer:
-      - - Acho que não estou treinada para responder esse tipo de assunto =(
+      - - Acho que ainda não estou treinada para responder esse tipo de assunto =(
         - tente outro assunto
-      - Por favor, tente outro assunto
       - - Desculpa, sou uma assistente virtual em fase experimental
         - às vezes não entendo certos comentários
-        - use outras palavras na sua msg
+        - use outras palavras na sua mensagem
       - - Não sei se entendi...
         - estou em fase experimental, desculpa!
         - tenta perguntar de outra forma =)
-    action: error
-
 
   - name: error-3
+    action: error
     answer:
-      - 
+      -
         - Nossa, desculpa, não sei mesmo como responder isso...
         - mas a equipe da Ouvidoria do MinC pode te ajudar, você pode entrar em contato por
-        - |   
-          Fone: +55 (61) 2024-2245
-          E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
-      - 
+        - |
+          Telefone: +55 (61) 2024-2245
+          Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
+      -
         - Hummm, já sei...
         - a equipe da nossa Ouvidoria vai poder te ajudar com isso
-        - aí vão as formas de contato...
-        - |  
-          Fone: +55 (61) 2024-2245
-          E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp         
-      - 
+        - |
+          Telefone: +55 (61) 2024-2245
+          Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
+      -
         - Desculpa, não sei
         - vou deixar os contatos da nossa Ouvidoria para você tirar sua dúvida
-        - |   
-          Fone: +55 (61) 2024-2245
-          E-mail: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
-    action: error
+        - |
+          Telefone: +55 (61) 2024-2245
+          Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
