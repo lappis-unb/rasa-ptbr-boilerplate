@@ -15,20 +15,16 @@ interactions:
     answer:
       -
         - >
-          Com o objetivo de incentivar as atividades culturais,
-          por meio do incentivo é possível aplicar parcelas do imposto sobre a
-          renda, a título de doações ou patrocínios no apoio direto a projetos
-          culturais apresentados por pessoas jurídicas de natureza cultural e
-          pessoas físicas, desde que os projetos atendam aos critérios
-          estabelecidos no Programa Nacional de Apoio à Cultura - PRONAC.
-        - >
-          As empresas poderão deduzir do imposto de renda devido as quantias
-          efetivamente despendidas em projetos aprovados pelo Ministério da
-          Cultura, nos limites e condições estabelecidos na legislação do
-          imposto de renda vigente:
-        - |
-          a) Doações,
-          b) Patrocínios.
+          O principal benefício de incentivar projetos culturais 
+          é dar a chance para sociedade usufruir das mais diversas manifestações culturais 
+          que talvez nunca fossem possíveis sem incentivo. Bacana, né? E tem mais... 
+        - > 
+          as empresas que incentivam projetos culturais podem deduzir do imposto de renda 
+          as quantias que efetivamente despenderam em projetos aprovados pelo Ministério da Cultura 
+        - > 
+          é claro que essa dedução do imposto de renda acontece nas condições 
+          estabelecidas na legislação do imposto de renda vigente e está limitada a 4% do imposto devido
+          
   # BENEFICIO
   - name: empresas-que-se-beficiam-de-incentivos-fiscais
     action: respond
@@ -42,14 +38,15 @@ interactions:
       - Empresas que se beneficiam ao apoiar projeto culturais ?
     answer:
       - >
-        Não. Somente as Pessoas Jurídicas tributadas com base no Lucro Real
-        podem deduzir do imposto de renda devido as doações ou patrocínios,
-        observado o limite de 4% do imposto devido.
+        Veja... somente as Pessoas Jurídicas tributadas com base no Lucro Real
+        podem descontar as doações ou patrocínios do imposto de renda 
+        observando sempre o limite máximo de 4% do imposto devido
       - >
-        O Decreto 3.000 (Regulamenta a tributação, fiscalização, arrecadação e
-        administração do Imposto sobre a Renda e Proventos de Qualquer Natureza.
-        ), de 26 de março de 1999, no artigo 246, estabelece as que são
-        obrigadas a se enquadrar nesse regime de tributação.
+        se você quiser saber mais sobre quais Pessoas Jurídicas são obrigadas a fazer a apuração do lucro real
+        confira o artigo 246, do Decreto 3.000 de 26 de março de 1999 que "Regulamenta a tributação, fiscalização, arrecadação e
+        administração do Imposto sobre a Renda e Proventos de Qualquer Natureza", 
+        (http://www.planalto.gov.br/ccivil_03/decreto/d3000.htm)
+        
   # BENEFICIO
   - name: parentes-nao-podem-incentivar-projetos
     action: respond
@@ -65,11 +62,20 @@ interactions:
         incentivar meus projetos ?
     answer:
       - >
-        Não podem incentivar: o cônjuge, os parentes até o terceiro grau,
-        inclusive os afins, e os dependentes do doador ou patrocinador ou dos
-        titulares, administradores, acionistas ou sócios de pessoa jurídica
-        vinculada ao doador ou patrocinador, na data da operação, ou nos doze
-        meses anteriores
+        Olha, alguns familiares não podem incentivar projetos:
+      - |
+        - o cônjuge
+        - os parentes até o terceiro grau, inclusive os afins
+        - e os dependentes...
+      - | 
+        tanto do doador,
+        quanto do patrocinador,
+        dos titulares, 
+        administradores, 
+        acionistas ou 
+        sócios de pessoa jurídica vinculada ao doador ou patrocinador,
+        na data da operação, ou nos doze meses anteriores
+        
   # CUSTO
   - name: deduzir-impostos-de-renda-incentivador-de-projetos
     action: respond
