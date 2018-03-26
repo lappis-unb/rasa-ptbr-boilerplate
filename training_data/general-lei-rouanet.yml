@@ -50,7 +50,17 @@ interactions:
       - como se aplicar?
       - quem pode se aplicar?
     answer:
-      - ..............
+      - |
+        Todo projeto cultural, de qualquer artista, produtor e agente cultural
+        brasileiro, pode se beneficiar desta Lei e se candidatar à captação de
+        recursos de renúncia fiscal. A proponência pode ser feita por Pessoas
+        físicas com atuação comprovada na área cultural, ou Pessoas jurídicas
+        de natureza cultural com, no mínimo, dois anos de atividade,
+        podendo ser":"
+          - Pessoas jurídicas públicas da administração indireta 
+          (autarquias, fundações culturais etc.)
+          - Pessoas jurídicas privadas com ou sem fins lucrativos 
+          (empresas, cooperativas, fundações, ONGs, organizações culturais etc.)
 
   - name: lei-rouanet-arrecadamento
     level: lei-rouanet
@@ -65,7 +75,16 @@ interactions:
       - eu como cidadao posso contribuir para um projeto
       - pessoa fisica pode contribuir
     answer:
-      - ..............
+      - |
+        O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de
+        estimular o apoio da iniciativa privada ao setor cultural. Ou seja,
+        o governo abre mão de parte dos impostos,
+        para que esses valores sejam investidos na Cultura.
+        Qualquer empresa tributada com base no lucro real, e pessoas físicas 
+        pagadoras de Imposto de Renda (IR) que fazem a declaração no modelo completo
+        podem contribuir com a lei Rouanet apoiando projetos.
+        Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.
+
 
   - name: lei-rouanet-denuncia
     level: lei-rouanet
@@ -80,7 +99,12 @@ interactions:
       - tenho um projeto para denunciar
       - o que fazer quando alguem utiliza o dinheiro de forma ilegal
     answer:
-      - ..............
+      - |
+        Para denunciar um projeto suspeito de irregularigades é preciso
+        registrar uma denúncia para o Ministério Público Federal.
+        Sua denúncia pode ser feita no site do ministério público no link":" 
+         "http://aplicativos.pgr.mpf.mp.br/ouvidoria/portal/cadastro.html?tipoServico=2"
+        , ou pelo aplicativo do MPF na opção de "Registrar denúncia ou solicitação".
 
   - name: lei-rouanet-papeis
     level: lei-rouanet
@@ -93,8 +117,19 @@ interactions:
       - Minstério da cultura tem a alguma interferencia na lei rouanet?
       - O que a SEFIC faz na lei rouanet?
       - Secretaria de fomento e incentivo a cultura
-    answer:
-      - ..............
+    answer: 
+      - |
+        O Ministério da Cultura é o responsável pela aprovação e monitoramento
+        dos projetos submetidos para captação.
+        Para que um projeto seja aprovado uma proposta deve ser cadastrada
+        junto ao Ministério da Cultura onde a proposta passa por um exame de
+        admissibilidade, que diz respeito à viabilidade técnica da atividade
+        a ser realizada. Uma vez que a proposta seja aprovada, ela se
+        transformará em um projeto (com um número de Pronac). O projeto,
+        por sua vez, precisa ser aprovado por uma das unidades técnicas
+        vinculadas ao Minitério da Cultura. Após o parecer do Ministério da 
+        Cultura, o projeto ainda é submetido à CNIC que irá aprová-lo
+        ou indeferi-lo
 
   - name: lei-rouanet-error-1
     level: lei-rouanet
