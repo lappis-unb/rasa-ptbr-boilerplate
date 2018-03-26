@@ -4,6 +4,7 @@ yaml = require 'js-yaml'
 common = {}
 
 applyVariable = (string, variable, value, regexFlags = 'i') ->
+  console.log(string)
   string.replace(
     new RegExp("(^|\\W)\\$#{variable}(\\W|$)", regexFlags),
     (match) ->
@@ -26,6 +27,7 @@ common.stringElseRandomKey = (variable) ->
     variable[Math.floor(Math.random() * variable.length)]
 
 common.sendMessages = (messages, msg, variables = {}) ->
+  console.log(messages)
   if !Array.isArray messages
     messages = [messages]
   messages = messages.map (message) ->
