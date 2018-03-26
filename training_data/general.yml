@@ -17,7 +17,7 @@ interactions:
       - Já te transfiro, deixa eu só conferir se tem atendentes disponíveis...
     offline:
       - - Desculpa, a equipe de atendimento não está disponível agora
-        - você pode tentar de novo mais tarde...  ou usar outros canais de atendimento:
+        - "você pode tentar de novo mais tarde...  ou usar outros canais de atendimento:"
         - |
           Telefone: +55 (61) 2024-2245
           Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
@@ -34,17 +34,16 @@ interactions:
       - Hey
     answer:
       - - Olá, sou a Rouana, assistente virtual do Ministério da Cultura
+        - "posso responder suas dúvidas sobre:"
         - |
-          posso responder suas dúvidas sobre:
           - A Lei Rouanet
           - Preenchimento de proposta no SALIC
           - A fase admissibilidade do seu projeto
           - A fase execução do seu projeto
         - você deseja falar sobre o quê?
       - - Oi, sou uma assistente virtual e me chamo Rouana
-        - você pode me fazer perguntas sobre:
+        - "você pode me fazer perguntas sobre:"
         - |
-          posso responder suas dúvidas sobre:
           - A Lei Rouanet
           - Preenchimento de proposta no SALIC
           - A fase admissibilidade do seu projeto
@@ -78,7 +77,7 @@ interactions:
           - Preenchimento de proposta no SALIC
           - A fase admissibilidade do seu projeto
           - A fase execução do seu projeto
-      - - Estou bem! Obrigada por perguntar :)
+      - - "Estou bem! Obrigada por perguntar :)"
         - |
           você pode fazer perguntas sobre:
           - A Lei Rouanet
@@ -136,15 +135,15 @@ interactions:
     answer:
       - - Sinto muito! Talvez eu possa te ajudar...
         - |
-          você pode me fazer perguntas sobre:
+          "você pode me fazer perguntas sobre:"
           - A Lei Rouanet
           - Preenchimento de proposta no SALIC
           - A fase admissibilidade do seu projeto
           - A fase execução do seu projeto
           Sobre o que você quer falar?
-      - - Poxa, que pena. Se você me falar das suas dúvidas talvez você se sinta melhor :)
+      - - "Poxa, que pena. Se você me falar das suas dúvidas talvez você se sinta melhor :)"
         - |
-          Sobre o que você quer falar:
+          "Sobre o que você quer falar:"
           - A Lei Rouanet
           - Preenchimento de proposta no SALIC
           - A fase admissibilidade do seu projeto
@@ -165,7 +164,7 @@ interactions:
       - Agradecida
     answer:
       - - Fico feliz em poder ajudar
-        - queria te pedir um favorzinho. Avalie a nossa conversa dando uma nota de 1-5 (1=péssima, 5=ótima)
+        - "queria te pedir um favorzinho. Avalie a nossa conversa dando uma nota de 1-5 (1=péssima, 5=ótima)"
       - - Sempre que precisar, estarei aqui para ajudar =)
         - até lá, avalie a nossa conversa dando uma nota de 1 à 5 (1=péssima, 5=ótima)
       - - Sempre que tiver alguma dúvida sobre a Lei Rouanet ou sobre o SALIC, pode falar comigo!
@@ -209,8 +208,9 @@ interactions:
       interactions:
         - livechat-transfer
         - falar-sobre-preenchimento
+        - falar-sobre-admissibilidade
+        - falar-sobre-execucao
         - lei-rouanet-definicao
-        - lei-rouanet-diff-fomento-incentivo
         - lei-rouanet-projetos
         - lei-rouanet-elegibilidade
         - lei-rouanet-arrecadamento
@@ -239,6 +239,8 @@ interactions:
       interactions:
         - livechat-transfer
         - falar-sobre-lei-rouanet
+        - falar-sobre-admissibilidade
+        - falar-sobre-execucao
         - preenchimento-vinculo-de-propostas
         - preenchimento-custos-vinculados
         - preenchimento-visualizar-propostas-projetos
@@ -256,6 +258,126 @@ interactions:
         - preenchimento-error-1
         - preenchimento-error-2
         - preenchimento-error-3
+
+  - name: falar-sobre-admissibilidade
+    action: respond
+    expect:
+      - Adimissibilidade
+      - fase de admissibilidade
+      - estou na fase de adimissibilidade e gostaria de tirar uma dúvida
+      - estou em duvida quanto a adimissibilidade
+      - minha proposta está sendo julgada na admissibilidade
+      - estou com duvidas no cadastramento do meu projeto no salic
+    answer:
+      - - Então você está na fase de adimissibilidade
+        - Qual sua dúvida sobre ela?
+      - O que você gostaria de saber sobre adimissibilidade?
+    next:
+      trust: .9
+      interactions:
+        - livechat-transfer
+        - falar-sobre-lei-rouanet
+        - falar-sobre-preenchimento
+        - falar-sobre-execucao
+        - admissibilidade-projeto-homologado
+        - admissibilidade-fase-de-adequacao-do-projeto
+        - admissibilidade-fase-de-adequacao-do-projeto-sem-alteracao
+        - admissibilidade-fase-de-adequacao-do-projeto-com-alteracao
+        - admissibilidade-fase-de-enquadramento-do-projeto
+        - admissibilidade-pedido-de-reativacao
+        - admissibilidade-recuperacao-de-senha
+        - admissibilidade-captacao-de-recursos
+        - admissibilidade-cadastro-agencia-bancaria
+        - admissibilidade-cadastro-do-proponente-no-salic
+        - admissibilidade-cadastro-email-proponente-salic
+        - admissibilidade-cadastro-endereco-proponente-salic
+        - admissibilidade-cadastro-telefone-proponente-salic
+        - admissibilidade-data-de-nascimento-proponente-salic
+        - admissibilidade-problemas-no-sistema
+      error:
+        - adimissibilidade-error-1
+        - adimissibilidade-error-2
+        - adimissibilidade-error-3
+
+  - name: falar-sobre-execucao
+    action: respond
+    expect:
+      - Execucao
+      - fase de execucao
+      - estou na fase de exeucao e gostaria de tirar uma dúvida
+      - meu projeto esta sendo executado, tenho uma duvida quanto a
+      - duvida sobre meu projeto que esta em execucao
+      - já estou executando o projeto, tenho uma duvida
+    answer:
+      - - Então você quer saber sobre a fase de execução =)
+        - Qual sua dúvida sobre ela?
+      - O que você gostaria de saber sobre a fase de execução?
+    next:
+      trust: .9
+      interactions:
+        - livechat-transfer
+        - falar-sobre-lei-rouanet
+        - falar-sobre-preenchimento
+        - falar-sobre-admissibilidade
+        - execucao-beneficio-de-incentivo-a-projetos
+        - execucao-empresas-que-se-beficiam-de-incentivos-fiscais
+        - execucao-parentes-nao-podem-incentivar-projetos
+        - execucao-deduzir-impostos-de-renda-incentivador-de-projetos
+        - execucao-procedimentos-de-captacao-de-recursos
+        - execucao-diferenca-entre-contrato-de-pratocinio-e-carta-de-intencao
+        - execucao-deducao-de-imposto-de-renda
+        - execucao-deducao-de-imposto-de-pessoas-juridicas-tributadas
+        - execucao-microempresas-podem-deduzir-as-doacoes-e-patrocinios
+        - execucao-doacoes-patrocinios-nao-sofrem-retencao
+        - execucao-contas-podem-ser-abertas-em-qualquer-banco
+        - execucao-procedimentos-para-abertura-das-contas
+        - execucao-procedimentos-para-captacao-de-recursos
+        - execucao-aplicacao-financeira-com-os-recursos-do-projeto
+        - execucao-inicio-de-movimentacao-de-conta
+        - execucao-tempo-para-transferencia-de-recursos-conta-bloqueada-conta-movimento
+        - execucao-deposito-na-conta-do-pronac-errado
+        - execucao-procedimento-para-captacao-do-valor-acima-autorizado-pelo-minc
+        - execucao-impedimento-para-receber-aportes
+        - execucao-prazo-limite-para-pedir-prorrogacao-de-prazo
+        - execucao-tempo-para-analisar-pedidos-de-prorrogacao
+        - execucao-renovacao-do-prazo-de-captacao
+        - execucao-diferenca-prazo-de-captacao-e-execucao
+        - execucao-possuo-prazo-para-executar-o-projeto
+        - execucao-projeto-aprovado-para-execucao-no-periodo-de-dois-anos
+        - execucao-tempo-que-o-projeto-podera-ser-prorrogado
+        - execucao-procedimento-para-captacao-incompleta
+        - execucao-solitacao-da-prorrogacao-de-captacao
+        - execucao-prazo-de-execucao-do-projeto-expirou
+        - execucao-prazo-para-pedir-recurso
+        - execucao-prazo-para-apresentacao-de-contas
+        - execucao-remanejar-despesas-da-planilha-financeira
+        - execucao-solicitar-alteracao-do-valor-aprovado
+        - execucao-planilha-orcamentaria-do-projeto-cultural
+        - execucao-fontes-de-recurso-para-fazer-pagamento
+        - execucao-autorizacao-para-remanejamento-de-despesas
+        - execucao-valor-total-menor-do-que-o-solicitado
+        - execucao-saldo-da-aplicacao-financeira-para-pagamento
+        - execucao-alteracao-do-plano-de-distribuicao
+        - execucao-produto-cultural-do-projeto
+        - execucao-produto-cultural-inicial-do-projeto-sendo-executado
+        - execucao-produto-cultural-do-projeto-fontes-de-recursos
+        - execucao-regras-de-aplicacao-do-pronac
+        - execucao-logotipos-da-lei-rouanet
+        - execucao-identificacao-dos-grupos-de-logomarcas
+        - execucao-material-de-divulgacao-indeferido-pelo-minc
+        - execucao-anexar-arquivo-audio-video-para-analise
+        - execucao-extensoes-de-arquivos-para-anexacao
+        - execucao-anexar-material-divulgacao-para-analise
+        - execucao-quando-solicitar-arquivamento-projeto
+        - execucao-como-fazer-solicitacao-arquivamento-projeto
+        - execucao-encerramento-das-contas-do-projeto
+        - execucao-solicitacao-de-desarquivamento
+        - execucao-pedido-de-alteracao-no-novo-salic
+        - execucao-pedido-de-prorrogacao-no-novo-salic
+      error:
+        - execucao-error-1
+        - execucao-error-2
+        - execucao-error-3
 
   - name: error-1
     action: error
