@@ -177,6 +177,7 @@ interactions:
 
   - name: receber-nota
     level: receber-nota-level
+    action: respond
     context: clear
     expect:
       - 1

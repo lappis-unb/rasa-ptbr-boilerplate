@@ -30,9 +30,11 @@ classifyInteraction = (interaction, classifier) ->
     interaction.expect = [interaction.expect]
 
   for doc in interaction.expect
+    if typeof(doc) != 'string'
+      doc = '' + doc
     classifier.addDocument(doc, interaction.name)
 
-  if interaction.next?.interactions?
+  if interaction.next?.interactions? and not interaction.next?.classifier?
     if not Array.isArray interaction.next.interactions
       interactions.next.interactions = [interactions.next.interactions]
 

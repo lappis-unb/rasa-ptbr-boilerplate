@@ -96,8 +96,6 @@ interactions:
     answer:
       - ..............
 
-###### Fallback
-
   - name: lei-rouanet-error-1
     level: lei-rouanet
     action: error
@@ -112,6 +110,11 @@ interactions:
     answer:
       - - Acho que ainda não estou treinada para responder esse tipo de assunto =(
         - tente outro assunto
+        - |
+          Além da Lei Rouanet, eu sei falar sobre:
+          - Preenchimento de proposta no SALIC
+          - A fase admissibilidade do seu projeto
+          - A fase execução do seu projeto
       - - Desculpa, sou uma assistente virtual em fase experimental
         - às vezes não entendo certos comentários
         - use outras palavras na sua mensagem
@@ -141,21 +144,3 @@ interactions:
         - |
           Telefone: +55 (61) 2024-2245
           Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
-
-  # - name: lei-rouanet-transferencia-preenchimento
-  #   level: lei-rouanet
-  #   action: respond
-  #   expect:
-  #     - como preenche um campo
-  #     - estou em duvida no preenchimento
-  #     - preciso preencher minha proposta
-  #     - como eu preencho uma proposta
-  #     - estou pronto para fazer minha proposta
-  #   answer:
-  #     - ..............
-  #   next:
-  #     interactions:
-  #       - ==========================================================================================TODO
-  #     trust: .9
-  #     error:
-  #       - ==========================================================================================TODO

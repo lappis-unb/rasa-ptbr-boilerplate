@@ -85,7 +85,6 @@ interactions:
         apenas o dirigente da instituição é quem pode vincular uma pessoa física ao CNPJ
       - >
         o dirigente deve entrar com login e senha e aceitar o vínculo
-        #TODO LAPPIS: esclarecer o passo a passo de vinculacao
 
   - name: preenchimento-apresentar-proposta-cultural
     level: preenchimento
@@ -252,9 +251,6 @@ interactions:
       - Não precisa preencher esse campo no momento. ;)
 
 
-
-###### Fallback
-
   - name: preenchimento-error-1
     level: preenchimento
     action: error
@@ -298,21 +294,3 @@ interactions:
         - |
           Telefone: +55 (61) 2024-2245
           Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
-
-  # - name: preenchimento-transferencia-lei-rouanet
-  #   level: preenchimento
-  #   action: respond
-  #   expect:
-  #     - Lei Rouanet
-  #     - Quero falar sobre a Lei Rouanet
-  #     - Me conte mais sobre a Lei Rouanet
-  #     - Queria perguntar sobre a lei rouanet
-  #     - Quero saber mais sobre a lei rouanet
-  #   answer:
-  #     - ..............
-  #   next:
-  #     interactions:
-  #       - ==========================================================================================TODO
-  #     trust: .9
-  #     error:
-  #       - ==========================================================================================TODO
