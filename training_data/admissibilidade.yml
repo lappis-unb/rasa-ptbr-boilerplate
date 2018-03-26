@@ -4,6 +4,7 @@ interactions:
   # STATUS DO PROJETO
   - name: admissibilidade-projeto-homologado
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - Meu projeto está com a situação D52 projeto homologado, o que significa
@@ -32,6 +33,7 @@ interactions:
   # STATUS DO PROJETO
   - name: admissibilidade-fase-de-adequacao-do-projeto
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - Meu projeto está com a situação E90 projeto liberado para adequação, o que significa ?
@@ -50,6 +52,7 @@ interactions:
   # STATUS DO PROJETO
   - name: admissibilidade-fase-de-adequacao-do-projeto-sem-alteracao
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - prosseguir com e90
@@ -64,6 +67,7 @@ interactions:
   # STATUS DO PROJETO
   - name: admissibilidade-fase-de-adequacao-do-projeto-com-alteracao
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - alterar e90
@@ -87,6 +91,7 @@ interactions:
   # STATUS DO PROJETO
   - name: admissibilidade-fase-de-enquadramento-do-projeto
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - >
@@ -113,6 +118,7 @@ interactions:
   # STATUS DO PROJETO
   - name: admissibilidade-pedido-de-reativacao
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - >
@@ -139,6 +145,7 @@ interactions:
   # SISTEMA SALIC
   - name: admissibilidade-recuperacao-de-senha
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - >
@@ -157,6 +164,7 @@ interactions:
   # SISTEMA SALIC
   - name: admissibilidade-captacao-de-recursos
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - Quando poderei efetuar a captação de recursos do meu projeto ?
@@ -177,6 +185,7 @@ interactions:
   # SISTEMA SALIC
   - name: admissibilidade-cadastro-agencia-bancaria
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - >
@@ -194,6 +203,7 @@ interactions:
   # SISTEMA SALIC
   - name: admissibilidade-cadastro-do-proponente-no-salic
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - Como cadastrar o proponente via Salic ?
@@ -209,6 +219,7 @@ interactions:
   # SISTEMA SALIC
   - name: admissibilidade-cadastro-email-proponente-salic
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - "Como faço para cadastrar ou atualizar o e-mail do proponente ?"
@@ -239,6 +250,7 @@ interactions:
   # SISTEMA SALIC
   - name: admissibilidade-cadastro-endereco-proponente-salic
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - Como faço para cadastrar ou atualizar o endereço do proponente ?
@@ -268,6 +280,7 @@ interactions:
   # SISTEMA SALIC
   - name: admissibilidade-cadastro-telefone-proponente-salic
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - Como faço para cadastrar ou atualizar o telefone do proponente ?
@@ -298,6 +311,7 @@ interactions:
   # SISTEMA SALIC
   - name: admissibilidade-data-de-nascimento-proponente-salic
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - >
@@ -325,6 +339,7 @@ interactions:
   # PROBLEMAS COM SALIC
   - name: admissibilidade-problemas-no-sistema
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - Estou com problemas no Salic. Qual setor posso tirar minhas dúvidas ?
@@ -343,6 +358,7 @@ interactions:
 
   - name: admissibilidade-error-1
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: error
     answer:
       - Acho não entendi... Me passa mais detalhes por favor
@@ -351,6 +367,7 @@ interactions:
 
   - name: admissibilidade-error-2
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: error
     answer:
       - - Acho que ainda não estou treinada para responder esse tipo de assunto =(
@@ -364,6 +381,7 @@ interactions:
 
   - name: admissibilidade-error-3
     level: admissibilidade
+    context: falar-sobre-admissibilidade
     action: error
     answer:
       -

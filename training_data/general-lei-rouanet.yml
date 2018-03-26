@@ -3,6 +3,7 @@ interactions:
 
   - name: lei-rouanet-definicao
     level: lei-rouanet
+    context: falar-sobre-lei-rouanet
     action: respond
     expect:
       - O que é Lei Rouanet?
@@ -12,13 +13,14 @@ interactions:
       - Me fale sobre a lei rouanet
     answer:
       -
-        - A Lei 8.313/91, conhecida como Lei Rouanet, é o principal mecanismo de fomento à Cultura do Brasil. Ela instituiu o Programa Nacional de Apoio à Cultura (Pronac). 
-        - O nome Rouanet remete a seu criador, o então secretário Nacional de Cultura, o diplomata Sérgio Paulo Rouanet. 
-        - A Lei estabelece as normativas de como o Governo Federal deve disponibilizar recursos para a realização de projetos artístico-culturais. 
+        - A Lei 8.313/91, conhecida como Lei Rouanet, é o principal mecanismo de fomento à Cultura do Brasil. Ela instituiu o Programa Nacional de Apoio à Cultura (Pronac).
+        - O nome Rouanet remete a seu criador, o então secretário Nacional de Cultura, o diplomata Sérgio Paulo Rouanet.
+        - A Lei estabelece as normativas de como o Governo Federal deve disponibilizar recursos para a realização de projetos artístico-culturais.
         - "A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de Investimento Cultural e Artístico (Ficart). Este nunca foi implementado, enquanto o Incentivo Fiscal – também chamado de mecenato – prevaleceu e chega ser confundido com a própria Lei."
 
   - name: lei-rouanet-projetos
     level: lei-rouanet
+    context: falar-sobre-lei-rouanet
     action: respond
     expect:
       - Quantos projetos já foram agraciados pela lei rouanet?
@@ -34,6 +36,7 @@ interactions:
 
   - name: lei-rouanet-elegibilidade
     level: lei-rouanet
+    context: falar-sobre-lei-rouanet
     action: respond
     expect:
       - quem pode se inscrever na lei rouanet?
@@ -45,27 +48,28 @@ interactions:
       - como se aplicar?
       - quem pode se aplicar?
     answer:
-      - 
+      -
         - >
-          Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro, 
+          Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro,
           pode se beneficiar desta Lei e se candidatar à captação de
-          recursos de renúncia fiscal. 
+          recursos de renúncia fiscal.
 
         - >
-          A proponência pode ser feita por Pessoas físicas com atuação comprovada na área cultural, 
+          A proponência pode ser feita por Pessoas físicas com atuação comprovada na área cultural,
           ou Pessoas jurídicas de natureza cultural com, no mínimo, dois anos de atividade,
           podendo ser:
 
         - >
-          Pessoas jurídicas públicas da administração indireta 
+          Pessoas jurídicas públicas da administração indireta
           (autarquias, fundações culturais etc.)
 
         - >
-          ou pessoas jurídicas privadas com ou sem fins lucrativos 
+          ou pessoas jurídicas privadas com ou sem fins lucrativos
           (empresas, cooperativas, fundações, ONGs, organizações culturais etc.)
 
   - name: lei-rouanet-arrecadamento
     level: lei-rouanet
+    context: falar-sobre-lei-rouanet
     action: respond
     expect:
       - quanto dinheiro a lei movimenta?
@@ -77,20 +81,21 @@ interactions:
       - eu como cidadao posso contribuir para um projeto
       - pessoa fisica pode contribuir
     answer:
-      - 
+      -
         - >
-          O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural. 
+          O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural.
           Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura.
-        
+
         - >
           Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a declaração no modelo completo
           podem contribuir com a lei Rouanet apoiando projetos.
-        
+
         - >
           Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.
 
   - name: lei-rouanet-denuncia
     level: lei-rouanet
+    context: falar-sobre-lei-rouanet
     action: respond
     expect:
       - quero denunciar um projeto
@@ -102,10 +107,10 @@ interactions:
       - tenho um projeto para denunciar
       - o que fazer quando alguem utiliza o dinheiro de forma ilegal
     answer:
-      - 
+      -
         - >
           Para denunciar um projeto suspeito de irregularigades é preciso registrar uma denúncia para o Ministério Público Federal.
-          Sua denúncia pode ser feita no site do ministério público no link: 
+          Sua denúncia pode ser feita no site do ministério público no link:
 
         - >
           http://aplicativos.pgr.mpf.mp.br/ouvidoria/portal/cadastro.html?tipoServico=2
@@ -113,6 +118,7 @@ interactions:
 
   - name: lei-rouanet-papeis
     level: lei-rouanet
+    context: falar-sobre-lei-rouanet
     action: respond
     expect:
       - Qual o papel do ministério da cultura na lei rouanet?
@@ -122,25 +128,26 @@ interactions:
       - Minstério da cultura tem a alguma interferencia na lei rouanet?
       - O que a SEFIC faz na lei rouanet?
       - Secretaria de fomento e incentivo a cultura
-    answer: 
-      - 
+    answer:
+      -
         - >
           O Ministério da Cultura é o responsável pela aprovação e monitoramento dos projetos submetidos para captação.
-          Para que um projeto seja aprovado uma proposta deve ser cadastrada junto ao Ministério da Cultura onde a proposta 
-          passa por um exame de admissibilidade, que diz respeito à viabilidade técnica da atividade a ser realizada. 
+          Para que um projeto seja aprovado uma proposta deve ser cadastrada junto ao Ministério da Cultura onde a proposta
+          passa por um exame de admissibilidade, que diz respeito à viabilidade técnica da atividade a ser realizada.
 
         - >
           Uma vez que a proposta seja aprovada, ela se transformará em um projeto (com um número de Pronac). O projeto,
-          por sua vez, precisa ser aprovado por uma das unidades técnicas vinculadas ao Minitério da Cultura. 
+          por sua vez, precisa ser aprovado por uma das unidades técnicas vinculadas ao Minitério da Cultura.
           Após o parecer do Ministério da Cultura, o projeto ainda é submetido à CNIC que irá aprová-lo
           ou indeferi-lo
 
         - >
-          A Sefic (Secretaria de Fomento e Incentivo à Cultura) planeja, coordena e supervisiona a operacionalização do 
+          A Sefic (Secretaria de Fomento e Incentivo à Cultura) planeja, coordena e supervisiona a operacionalização do
           Programa Nacional de Apoio à Cultura (Pronac), na aprovação, monitoramento e prestação de contas de projetos culturais.
 
   - name: lei-rouanet-error-1
     level: lei-rouanet
+    context: falar-sobre-lei-rouanet
     action: error
     answer:
       - Acho não entendi... Me passa mais detalhes por favor
@@ -149,6 +156,7 @@ interactions:
 
   - name: lei-rouanet-error-2
     level: lei-rouanet
+    context: falar-sobre-lei-rouanet
     action: error
     answer:
       - - Acho que ainda não estou treinada para responder esse tipo de assunto =(
@@ -167,6 +175,7 @@ interactions:
 
   - name: lei-rouanet-error-3
     level: lei-rouanet
+    context: falar-sobre-lei-rouanet
     action: error
     answer:
       -

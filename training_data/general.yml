@@ -192,6 +192,7 @@ interactions:
 
 
   - name: falar-sobre-lei-rouanet
+    context: falar-sobre-lei-rouanet
     action: respond
     expect:
       - Lei Rouanet
@@ -222,6 +223,7 @@ interactions:
         - lei-rouanet-error-3
 
   - name: falar-sobre-preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - Preenchimento
@@ -260,6 +262,7 @@ interactions:
         - preenchimento-error-3
 
   - name: falar-sobre-admissibilidade
+    context: falar-sobre-admissibilidade
     action: respond
     expect:
       - Adimissibilidade
@@ -300,6 +303,7 @@ interactions:
         - adimissibilidade-error-3
 
   - name: falar-sobre-execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Execucao

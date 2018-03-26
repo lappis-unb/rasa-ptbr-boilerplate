@@ -181,6 +181,8 @@ classifier.processMessage = (res, msg) ->
 
   if currentInteraction.context == 'clear'
     setContext(res, undefined)
+  else if currentInteraction.context?
+    setContext(res, currentInteraction.context)
   else if node_name?
     setContext(res, node_name)
 

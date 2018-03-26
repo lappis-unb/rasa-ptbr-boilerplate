@@ -3,6 +3,7 @@ interactions:
   # BENEFICIO
   - name: execucao-beneficio-de-incentivo-a-projetos
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Qual o benefício de incentivar projetos culturais ?
@@ -26,6 +27,7 @@ interactions:
   # BENEFICIO
   - name: execucao-empresas-que-se-beficiam-de-incentivos-fiscais
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -49,6 +51,7 @@ interactions:
   # BENEFICIO
   - name: execucao-parentes-nao-podem-incentivar-projetos
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Meus parentes podem incentivar meu projeto ?
@@ -79,6 +82,7 @@ interactions:
   # CUSTO
   - name: execucao-deduzir-impostos-de-renda-incentivador-de-projetos
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -120,6 +124,7 @@ interactions:
   # CUSTO
   - name: execucao-procedimentos-de-captacao-de-recursos
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Quais os procedimentos necessários para a captação de recursos?
@@ -140,6 +145,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-diferenca-entre-contrato-de-pratocinio-e-carta-de-intencao
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Tem diferenças entre contrato de patrocínio e carta de intenção
@@ -168,6 +174,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-deducao-de-imposto-de-renda
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Como é feita a dedução do Imposto de Renda ?
@@ -194,6 +201,7 @@ interactions:
   # CUSTO - ESPERADO INCOMPLETO
   - name: execucao-deducao-de-imposto-de-pessoas-juridicas-tributadas
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -212,6 +220,7 @@ interactions:
   # LEI ROUANET - ESPERADO INCOMPLETO
   - name: execucao-microempresas-podem-deduzir-as-doacoes-e-patrocinios
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -225,6 +234,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-doacoes-patrocinios-nao-sofrem-retencao
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -239,6 +249,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-contas-podem-ser-abertas-em-qualquer-banco
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - As contas podem ser abertas em qualquer banco?
@@ -254,6 +265,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-procedimentos-para-abertura-das-contas
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Qual o procedimento para a abertura das contas ?
@@ -276,6 +288,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-procedimentos-para-captacao-de-recursos
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Como deve será feita a captação de recursos ?
@@ -300,6 +313,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-aplicacao-financeira-com-os-recursos-do-projeto
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Posso realizar aplicação financeira com os recursos do projeto ?
@@ -316,6 +330,7 @@ interactions:
   # PRAZO
   - name: execucao-inicio-de-movimentacao-de-conta
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - A partir de quando a conta pode ser movimentada?
@@ -339,6 +354,7 @@ interactions:
   # PRAZO
   - name: execucao-tempo-para-transferencia-de-recursos-conta-bloqueada-conta-movimento
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -361,6 +377,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-deposito-na-conta-do-pronac-errado
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -392,6 +409,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-procedimento-para-captacao-do-valor-acima-autorizado-pelo-minc
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -413,6 +431,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-impedimento-para-receber-aportes
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -432,6 +451,7 @@ interactions:
   # PRAZO
   - name: execucao-prazo-limite-para-pedir-prorrogacao-de-prazo
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -452,6 +472,7 @@ interactions:
   # PRAZO
   - name: execucao-tempo-para-analisar-pedidos-de-prorrogacao
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Em quanto tempo o MinC analisa os pedidos de prorrogação ?
@@ -464,6 +485,7 @@ interactions:
   # PRAZO
   - name: execucao-renovacao-do-prazo-de-captacao
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - O prazo de execução renova o de captação?
@@ -479,6 +501,7 @@ interactions:
   # PRAZO
   - name: execucao-diferenca-prazo-de-captacao-e-execucao
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Qual a diferença entre prazo de captação e execução ?
@@ -506,6 +529,7 @@ interactions:
   # PRAZO - INCOMPLETO
   - name: execucao-possuo-prazo-para-executar-o-projeto
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -521,6 +545,7 @@ interactions:
   # PRAZO - INCOMPLETO
   - name: execucao-projeto-aprovado-para-execucao-no-periodo-de-dois-anos
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -542,6 +567,7 @@ interactions:
   # PRAZO
   - name: execucao-tempo-que-o-projeto-podera-ser-prorrogado
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Por quanto tempo o projeto poderá ser prorrogado ?
@@ -565,6 +591,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-procedimento-para-captacao-incompleta
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -600,6 +627,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-solitacao-da-prorrogacao-de-captacao
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -628,6 +656,7 @@ interactions:
   # PRAZO
   - name: execucao-prazo-de-execucao-do-projeto-expirou
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -652,6 +681,7 @@ interactions:
   # PRAZO
   - name: execucao-prazo-para-pedir-recurso
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -676,6 +706,7 @@ interactions:
   # PRAZO
   - name: execucao-prazo-para-apresentacao-de-contas
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -696,6 +727,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-remanejar-despesas-da-planilha-financeira
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -733,6 +765,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-solicitar-alteracao-do-valor-aprovado
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
         - >
@@ -772,6 +805,7 @@ interactions:
   # PRAZO - IMCOPLETO
   - name: execucao-planilha-orcamentaria-do-projeto-cultural
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -801,6 +835,7 @@ interactions:
   # LEI ROUANET - IMCOPLETO
   - name: execucao-fontes-de-recurso-para-fazer-pagamento
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -816,6 +851,7 @@ interactions:
   # CUSTO
   - name: execucao-autorizacao-para-remanejamento-de-despesas
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -854,6 +890,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-valor-total-menor-do-que-o-solicitado
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -888,6 +925,7 @@ interactions:
   # CUSTO
   - name: execucao-saldo-da-aplicacao-financeira-para-pagamento
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -925,6 +963,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-alteracao-do-plano-de-distribuicao
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Posso alterar o plano de distribuição aprovado para o projeto ?
@@ -952,6 +991,7 @@ interactions:
   # PRAZO - IMCOPLETO
   - name: execucao-produto-cultural-do-projeto
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -974,6 +1014,7 @@ interactions:
   # LEI ROUANET - IMCOMPLETO
   - name: execucao-produto-cultural-inicial-do-projeto-sendo-executado
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -1005,6 +1046,7 @@ interactions:
   # PRAZO - IMCOMPLETO
   - name: execucao-produto-cultural-do-projeto-fontes-de-recursos
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -1027,6 +1069,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-regras-de-aplicacao-do-pronac
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -1040,6 +1083,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-logotipos-da-lei-rouanet
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -1056,6 +1100,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-identificacao-dos-grupos-de-logomarcas
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -1076,6 +1121,7 @@ interactions:
   # LEI ROUANET - IMCOMPLETO
   - name: execucao-material-de-divulgacao-indeferido-pelo-minc
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -1092,6 +1138,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-anexar-arquivo-audio-video-para-analise
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Como faço para anexar um arquivo de áudio / vídeo para a análise?
@@ -1113,6 +1160,7 @@ interactions:
   # SISTEMA SALIC
   - name: execucao-extensoes-de-arquivos-para-anexacao
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Quais extensões de arquivo que o Novo Salic suporta?
@@ -1128,6 +1176,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-anexar-material-divulgacao-para-analise
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Como faço para anexar meu material de divulgação para análise?
@@ -1142,6 +1191,7 @@ interactions:
   # PRAZO
   - name: execucao-quando-solicitar-arquivamento-projeto
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Quando devo solicitar o arquivamento do projeto ?
@@ -1157,6 +1207,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-como-fazer-solicitacao-arquivamento-projeto
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - Como fazer a solicitação de arquivamento do projeto ?
@@ -1183,6 +1234,7 @@ interactions:
   # PRAZO
   - name: execucao-encerramento-das-contas-do-projeto
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -1204,6 +1256,7 @@ interactions:
   # LEI ROUANET
   - name: execucao-solicitacao-de-desarquivamento
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -1231,6 +1284,7 @@ interactions:
   # SISTEMA SALIC
   - name: execucao-pedido-de-alteracao-no-novo-salic
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -1256,6 +1310,7 @@ interactions:
   # SISTEMA SALIC
   - name: execucao-pedido-de-prorrogacao-no-novo-salic
     level: execucao
+    context: falar-sobre-execucao
     action: respond
     expect:
       - >
@@ -1284,6 +1339,7 @@ interactions:
           a caso.
   - name: execucao-error-1
     level: execucao
+    context: falar-sobre-execucao
     action: error
     answer:
       - Acho não entendi... Me passa mais detalhes por favor
@@ -1292,6 +1348,7 @@ interactions:
 
   - name: execucao-error-2
     level: execucao
+    context: falar-sobre-execucao
     action: error
     answer:
       - - Acho que ainda não estou treinada para responder esse tipo de assunto =(
@@ -1305,6 +1362,7 @@ interactions:
 
   - name: execucao-error-3
     level: execucao
+    context: falar-sobre-execucao
     action: error
     answer:
       -
