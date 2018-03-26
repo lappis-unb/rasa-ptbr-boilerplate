@@ -42,7 +42,9 @@ services:
 
   hubot-natural:
     # image: diegodorgam/hubot-natural:latest
-    build: .
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
     restart: unless-stopped
     environment:
       - HUBOT_ADAPTER=rocketchat
