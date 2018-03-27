@@ -190,6 +190,56 @@ interactions:
     answer:
       - Obrigado pela nota! Deseja saber mais algumas coisa? Estou aqui para te ajudar
 
+  - name: o-que-eh-rouana
+    action: respond
+    expect:
+      - o que é um chatbot?
+      - o que é uma assistente virtual?
+      - você é um computador?
+      - estou falando com um máquina?
+      - estou falando com um computador?
+    answer:
+      - - >
+          Uma assistente virtual, como eu, é um programa de computador criado
+          para ajudar as pessoas a sanarem suas dúvidas de maneira simples.
+        - >
+          Apesar de eu ser um "computador", eu ainda estou aprendendo várias
+          coisas para poder te ajudar melhor
+        - Conversando comigo você também pode me ajudar a alcançar isso
+
+  - name: rouana-criacao
+    action: respond
+    expect:
+      - gostaria de saber seu nome?
+      - voce tem nome?
+      - qual o seu nome?
+      - quem te criou rouana?
+      - quem criou você?
+    answer:
+      - - >
+          Eu sou a Rouana, uma assistente virtual criada pelo Ministério da
+          Cultura, em parceira com o LAPPIS da UnB-FGA.
+        - >
+          Meu objetivo é sanar suas dúvidas sobre a Lei Rounet, porém ainda
+          estou aprendendo, você pode me ajudar conversando comigo =D
+
+  - name: rouana-menu
+    action: respond
+    context: keep
+    expect:
+      - sobre o que você sabe falar?
+      - menu
+      - quais tópicos você entende?
+      - você sabe falar sobre
+      - o que você pode fazer?
+    answer:
+      - - |
+          Eu posso responder suas dúvidas sobre:
+          - A Lei Rouanet
+          - Preenchimento de proposta no SALIC
+          - A fase admissibilidade do seu projeto
+          - A fase execução do seu projeto
+        - Você quer falar sobre o que?
 
   - name: falar-sobre-lei-rouanet
     context: falar-sobre-lei-rouanet
@@ -211,6 +261,8 @@ interactions:
         - falar-sobre-preenchimento
         - falar-sobre-admissibilidade
         - falar-sobre-execucao
+        - agradecimento
+        - rouana-menu
         - lei-rouanet-definicao
         - lei-rouanet-projetos
         - lei-rouanet-elegibilidade
@@ -243,6 +295,8 @@ interactions:
         - falar-sobre-lei-rouanet
         - falar-sobre-admissibilidade
         - falar-sobre-execucao
+        - agradecimento
+        - rouana-menu
         - preenchimento-vinculo-de-propostas
         - preenchimento-custos-vinculados
         - preenchimento-visualizar-propostas-projetos
@@ -282,6 +336,8 @@ interactions:
         - falar-sobre-lei-rouanet
         - falar-sobre-preenchimento
         - falar-sobre-execucao
+        - agradecimento
+        - rouana-menu
         - admissibilidade-projeto-homologado
         - admissibilidade-fase-de-adequacao-do-projeto
         - admissibilidade-fase-de-adequacao-do-projeto-sem-alteracao
@@ -323,6 +379,8 @@ interactions:
         - falar-sobre-lei-rouanet
         - falar-sobre-preenchimento
         - falar-sobre-admissibilidade
+        - agradecimento
+        - rouana-menu
         - execucao-beneficio-de-incentivo-a-projetos
         - execucao-empresas-que-se-beficiam-de-incentivos-fiscais
         - execucao-parentes-nao-podem-incentivar-projetos

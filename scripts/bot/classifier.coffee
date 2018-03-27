@@ -179,12 +179,13 @@ classifier.processMessage = (res, msg) ->
     clearErrors res
     return console.log 'Invalid interaction [' + node_name + ']'
 
-  if currentInteraction.context == 'clear'
-    setContext(res, undefined)
-  else if currentInteraction.context?
-    setContext(res, currentInteraction.context)
-  else if node_name?
-    setContext(res, node_name)
+  if currentInteraction.context != 'keep'
+    if currentInteraction.context == 'clear'
+      setContext(res, undefined)
+    else if currentInteraction.context?
+      setContext(res, currentInteraction.context)
+    else if node_name?
+      setContext(res, node_name)
 
   return node_name or error_node_name
 
