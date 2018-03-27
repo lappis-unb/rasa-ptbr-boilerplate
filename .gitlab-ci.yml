@@ -1,6 +1,7 @@
 stages:
   - build
-  #- deploy
+  - deploy_to_development
+  - deploy_to_production
 
 variables:
   HUBOT_NATURAL_RELEASE_IMAGE: $CI_REGISTRY_IMAGE/hubot_natural:$CI_BUILD_REF_NAME
@@ -12,7 +13,7 @@ build hubot_natural:
     - docker:dind
   script:
     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
-    - docker build -f Dockerfile -t $HUBOT_NATURAL_RELEASE_IMAGE .
+    - docker build -f docker/Dockerfile -t $HUBOT_NATURAL_RELEASE_IMAGE .
     - docker tag $HUBOT_NATURAL_RELEASE_IMAGE "$CI_REGISTRY_IMAGE/hubot_natural:latest"
     - docker push $HUBOT_NATURAL_RELEASE_IMAGE
     - docker push "$CI_REGISTRY_IMAGE/hubot_natural:latest"
@@ -22,15 +23,28 @@ build hubot_natural:
   tags:
     - docker
 
-#deploy:
-#  image: cdrx/rancher-gitlab-deploy
-#  stage: deploy
-#  services:
-#    - docker:dind
-#  script:
-#    - upgrade --environment Development --stack Rouana --service hubot-natural --new-image $HUBOT_NATURAL_RELEASE_IMAGE --no-finish-upgrade --debug
-#  only:
-#    - /master|develop/
-#  environment: development
-#  tags:
-#    - docker
+deploy_to_development:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy_to_development
+  services:
+    - docker:dind
+  script:
+    - upgrade --environment Development --stack RouanaBot --service hubot-natural --new-image $HUBOT_NATURAL_RELEASE_IMAGE --no-finish-upgrade --debug
+  only:
+    - /develop/
+  environment: development
+  tags:
+    - docker
+
+deploy_to_production:
+  image: cdrx/rancher-gitlab-deploy
+  stage: deploy_to_production
+  services:
+    - docker:dind
+  script:
+    - upgrade --environment Production --stack RouanaBot --service hubot-natural --new-image $HUBOT_NATURAL_RELEASE_IMAGE --no-finish-upgrade --debug
+  only:
+    - /master/
+  environment: production
+  tags:
+    - docker
