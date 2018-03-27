@@ -3,6 +3,7 @@ interactions:
 
   - name: preenchimento-vinculo-de-propostas
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - Como faço para vincular uma proposta ao CPF do responsável?
@@ -22,6 +23,7 @@ interactions:
 
   - name: preenchimento-custos-vinculados
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - >
@@ -47,6 +49,7 @@ interactions:
 
   - name: preenchimento-visualizar-propostas-projetos
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - Não consigo achar minha proposta no sistema, porém a mesma está ativa.
@@ -69,6 +72,7 @@ interactions:
 
   - name: preenchimento-aceitar-vinculo
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - >
@@ -88,6 +92,7 @@ interactions:
 
   - name: preenchimento-apresentar-proposta-cultural
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - Como apresentar uma proposta cultural?
@@ -104,6 +109,7 @@ interactions:
 
   - name: preenchimento-valor-por-beneficiario
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - >
@@ -127,6 +133,7 @@ interactions:
 
   - name: preenchimento-definicao-modal
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - O que é a modal?
@@ -155,6 +162,7 @@ interactions:
 
   - name: preenchimento-close-without-saving-error
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - >
@@ -172,6 +180,7 @@ interactions:
 
   - name: preenchimento-assessoria-contabil-juridica
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - Como faço para cadastrar as rubricas de advogado e contador?
@@ -186,6 +195,7 @@ interactions:
         2- Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
   - name: preenchimento-prazo-envio-cnae
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - Qual é o prazo limite para envio do CNAE?
@@ -201,6 +211,7 @@ interactions:
 
   - name: preenchimento-planilha-sumiu
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - >
@@ -217,6 +228,7 @@ interactions:
 
   - name: preenchimento-novo-fluxo
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - Qual é o novo fluxo do Salic?
@@ -244,6 +256,7 @@ interactions:
 
   - name: preenchimento-custo-auditoria
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: respond
     expect:
       - O que devo preencher no campo Custo de Auditoria?
@@ -253,6 +266,7 @@ interactions:
 
   - name: preenchimento-error-1
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: error
     answer:
       - Acho não entendi... Me passa mais detalhes por favor
@@ -261,6 +275,7 @@ interactions:
 
   - name: preenchimento-error-2
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: error
     answer:
       - - Acho que ainda não estou treinada para responder esse tipo de assunto =(
@@ -274,6 +289,7 @@ interactions:
 
   - name: preenchimento-error-3
     level: preenchimento
+    context: falar-sobre-preenchimento
     action: error
     answer:
       -
