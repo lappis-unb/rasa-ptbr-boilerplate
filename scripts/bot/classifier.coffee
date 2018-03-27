@@ -17,34 +17,38 @@ actionHandler = require './action-handler'
 root_classifier = {}
 error_count = 0
 
+ROOT_LEVEL_NAME = "root"
+
 classifyInteraction = (interaction, classifier) ->
-  if Array.isArray interaction.expect
-    for doc in interaction.expect
-      if interaction.multi == true
-        classifier.addDocument(doc, interaction.name + '|' + doc)
-      else
-        classifier.addDocument(doc, interaction.name)
+  if not interaction.expect?
+    console.warn("\t!! Interaction with no expects: " + interaction.name)
+    return
 
-    if Array.isArray interaction.next?.interactions
-      interaction.next.classifier = new natural.LogisticRegressionClassifier(
-        PorterStemmer
-      )
-      for nextInteractionName in interaction.next.interactions
-        nextInteraction = global.config.interactions.find (n) ->
-          return n.name is nextInteractionName
-        if not nextInteraction?
-          console.log 'No valid interaction for', nextInteractionName
-          continue
-        classifyInteraction nextInteraction, interaction.next.classifier
-      interaction.next.classifier.train()
+  console.log('\tProcessing interaction: ' + interaction.name)
 
-    if interaction.multi == true
-      interaction.classifier = new natural.LogisticRegressionClassifier(
-        PorterStemmer
-      )
-      for doc in interaction.expect
-        interaction.classifier.addDocument(doc, doc)
-      interaction.classifier.train()
+  if not Array.isArray interaction.expect
+    interaction.expect = [interaction.expect]
+
+  for doc in interaction.expect
+    if typeof(doc) != 'string'
+      doc = '' + doc
+    classifier.addDocument(doc, interaction.name)
+
+  if interaction.next?.interactions? and not interaction.next?.classifier?
+    if not Array.isArray interaction.next.interactions
+      interactions.next.interactions = [interactions.next.interactions]
+
+    interaction.next.classifier = new natural.LogisticRegressionClassifier(
+      PorterStemmer
+    )
+    for nextInteractionName in interaction.next.interactions
+      nextInteraction = global.config.interactions.find (n) ->
+        return n.name is nextInteractionName
+      if not nextInteraction?
+        console.log 'No valid interaction for', nextInteractionName
+        continue
+      classifyInteraction nextInteraction, interaction.next.classifier
+    interaction.next.classifier.train()
 
 classifier.train = () ->
   console.log 'Processing interactions'
@@ -53,10 +57,10 @@ classifier.train = () ->
   root_classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
 
   for interaction in global.config.interactions
-    if interaction.level != 'context'
+    if (not interaction.level? or
+        (Array.isArray(interaction.level) and interaction.level.includes(ROOT_LEVEL_NAME)) or
+        interaction.level == ROOT_LEVEL_NAME)
       classifyInteraction interaction, root_classifier
-
-    console.log('\tProcessing interaction: ' + interaction.name)
 
   console.log 'Training Bot (This could be take a while...)'
   root_classifier.train()
@@ -175,10 +179,13 @@ classifier.processMessage = (res, msg) ->
     clearErrors res
     return console.log 'Invalid interaction [' + node_name + ']'
 
-  if currentInteraction.context == 'clear'
-    setContext(res, undefined)
-  else if node_name?
-    setContext(res, node_name)
+  if currentInteraction.context != 'keep'
+    if currentInteraction.context == 'clear'
+      setContext(res, undefined)
+    else if currentInteraction.context?
+      setContext(res, currentInteraction.context)
+    else if node_name?
+      setContext(res, node_name)
 
   return node_name or error_node_name
 

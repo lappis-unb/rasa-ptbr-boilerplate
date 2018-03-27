@@ -1,0 +1,198 @@
+trust: 0.9
+interactions:
+
+  - name: lei-rouanet-definicao
+    level: lei-rouanet
+    context: falar-sobre-lei-rouanet
+    action: respond
+    expect:
+      - O que é Lei Rouanet?
+      - Defina Lei Rouanet
+      - Queria saber o que é a lei
+      - Não sei o que é a lei
+      - Me fale sobre a lei rouanet
+    answer:
+      -
+        - A Lei 8.313/91, conhecida como Lei Rouanet, é o principal mecanismo de fomento à Cultura do Brasil. Ela instituiu o Programa Nacional de Apoio à Cultura (Pronac).
+        - O nome Rouanet remete a seu criador, o então secretário Nacional de Cultura, o diplomata Sérgio Paulo Rouanet.
+        - A Lei estabelece as normativas de como o Governo Federal deve disponibilizar recursos para a realização de projetos artístico-culturais.
+        - "A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de Investimento Cultural e Artístico (Ficart). Este nunca foi implementado, enquanto o Incentivo Fiscal – também chamado de mecenato – prevaleceu e chega ser confundido com a própria Lei."
+
+  - name: lei-rouanet-projetos
+    level: lei-rouanet
+    context: falar-sobre-lei-rouanet
+    action: respond
+    expect:
+      - Quantos projetos já foram agraciados pela lei rouanet?
+      - Quantos projetos usam da lei rouanet?
+      - Quantos projetos existem?
+      - Qual a média de projetos por ano?
+      - o número de projetos
+    answer:
+      -
+        - Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.
+        - Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos.
+        - Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes.
+
+  - name: lei-rouanet-elegibilidade
+    level: lei-rouanet
+    context: falar-sobre-lei-rouanet
+    action: respond
+    expect:
+      - quem pode se inscrever na lei rouanet?
+      - como eu me inscrevo na lei rouanet?
+      - posso me inscrever na lei rouanet?
+      - quero participar da lei
+      - onde eu me inscrevo
+      - eu posso usar a lei?
+      - como se aplicar?
+      - quem pode se aplicar?
+    answer:
+      -
+        - >
+          Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro,
+          pode se beneficiar desta Lei e se candidatar à captação de
+          recursos de renúncia fiscal.
+
+        - >
+          A proponência pode ser feita por Pessoas físicas com atuação comprovada na área cultural,
+          ou Pessoas jurídicas de natureza cultural com, no mínimo, dois anos de atividade,
+          podendo ser:
+
+        - >
+          Pessoas jurídicas públicas da administração indireta
+          (autarquias, fundações culturais etc.)
+
+        - >
+          ou pessoas jurídicas privadas com ou sem fins lucrativos
+          (empresas, cooperativas, fundações, ONGs, organizações culturais etc.)
+
+  - name: lei-rouanet-arrecadamento
+    level: lei-rouanet
+    context: falar-sobre-lei-rouanet
+    action: respond
+    expect:
+      - quanto dinheiro a lei movimenta?
+      - quanto dinheiro a lei rouanet arrecada?
+      - De onde vem o dinheiro da lei rouanet?
+      - o dinheiro da lei rouanet é publico?
+      - Porque os cidadões tem que pagar pelos projetos da lei rouanet?
+      - quem pode contribuir para um projeto da lei rouanet?
+      - eu como cidadao posso contribuir para um projeto
+      - pessoa fisica pode contribuir
+    answer:
+      -
+        - >
+          O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural.
+          Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura.
+
+        - >
+          Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a declaração no modelo completo
+          podem contribuir com a lei Rouanet apoiando projetos.
+
+        - >
+          Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.
+
+  - name: lei-rouanet-denuncia
+    level: lei-rouanet
+    context: falar-sobre-lei-rouanet
+    action: respond
+    expect:
+      - quero denunciar um projeto
+      - como faço uma denuncia
+      - tem um projeto usando o dinheiro da lei de forma indevida
+      - tem um projeto fazendo o uso do dinheiro de forma ilegal
+      - com quem eu falo para denunciar um projeto
+      - posso denunciar um projeto para você
+      - tenho um projeto para denunciar
+      - o que fazer quando alguem utiliza o dinheiro de forma ilegal
+    answer:
+      -
+        - >
+          Para denunciar um projeto suspeito de irregularigades é preciso registrar uma denúncia para o Ministério Público Federal.
+          Sua denúncia pode ser feita no site do ministério público no link:
+
+        - >
+          http://aplicativos.pgr.mpf.mp.br/ouvidoria/portal/cadastro.html?tipoServico=2
+          ,ou pelo aplicativo do MPF na opção de "Registrar denúncia ou solicitação".
+
+  - name: lei-rouanet-papeis
+    level: lei-rouanet
+    context: falar-sobre-lei-rouanet
+    action: respond
+    expect:
+      - Qual o papel do ministério da cultura na lei rouanet?
+      - Qual o papel do MinC na lei rouanet?
+      - O que o MinC faz na lei rouanet?
+      - O que é a SEFIC?
+      - Minstério da cultura tem a alguma interferencia na lei rouanet?
+      - O que a SEFIC faz na lei rouanet?
+      - Secretaria de fomento e incentivo a cultura
+    answer:
+      -
+        - >
+          O Ministério da Cultura é o responsável pela aprovação e monitoramento dos projetos submetidos para captação.
+          Para que um projeto seja aprovado uma proposta deve ser cadastrada junto ao Ministério da Cultura onde a proposta
+          passa por um exame de admissibilidade, que diz respeito à viabilidade técnica da atividade a ser realizada.
+
+        - >
+          Uma vez que a proposta seja aprovada, ela se transformará em um projeto (com um número de Pronac). O projeto,
+          por sua vez, precisa ser aprovado por uma das unidades técnicas vinculadas ao Minitério da Cultura.
+          Após o parecer do Ministério da Cultura, o projeto ainda é submetido à CNIC que irá aprová-lo
+          ou indeferi-lo
+
+        - >
+          A Sefic (Secretaria de Fomento e Incentivo à Cultura) planeja, coordena e supervisiona a operacionalização do
+          Programa Nacional de Apoio à Cultura (Pronac), na aprovação, monitoramento e prestação de contas de projetos culturais.
+
+  - name: lei-rouanet-error-1
+    level: lei-rouanet
+    context: falar-sobre-lei-rouanet
+    action: error
+    answer:
+      - Acho não entendi... Me passa mais detalhes por favor
+      - Não entendi, Como assim?
+      - Desculpe, o que quer dizer com isso?
+
+  - name: lei-rouanet-error-2
+    level: lei-rouanet
+    context: falar-sobre-lei-rouanet
+    action: error
+    answer:
+      - - Acho que ainda não estou treinada para responder esse tipo de assunto =(
+        - tente outro assunto
+        - |
+          Além da Lei Rouanet, eu sei falar sobre:
+          - Preenchimento de proposta no SALIC
+          - A fase admissibilidade do seu projeto
+          - A fase execução do seu projeto
+      - - Desculpa, sou uma assistente virtual em fase experimental
+        - às vezes não entendo certos comentários
+        - use outras palavras na sua mensagem
+      - - Não sei se entendi...
+        - estou em fase experimental, desculpa!
+        - tenta perguntar de outra forma =)
+
+  - name: lei-rouanet-error-3
+    level: lei-rouanet
+    context: falar-sobre-lei-rouanet
+    action: error
+    answer:
+      -
+        - Nossa, desculpa, não sei mesmo como responder isso...
+        - mas a equipe da Ouvidoria do MinC pode te ajudar, você pode entrar em contato por
+        - |
+          Telefone: +55 (61) 2024-2245
+          Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
+      -
+        - Hummm, já sei...
+        - a equipe da nossa Ouvidoria vai poder te ajudar com isso
+        - |
+          Telefone: +55 (61) 2024-2245
+          Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
+      -
+        - Desculpa, não sei
+        - vou deixar os contatos da nossa Ouvidoria para você tirar sua dúvida
+        - |
+          Telefone: +55 (61) 2024-2245
+          Site: http://ouvidoria.cultura.gov.br/ouvidoria/login.jsp
