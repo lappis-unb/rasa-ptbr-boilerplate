@@ -32,6 +32,8 @@ interactions:
       - >
         na planilha orçamentária, por que o sistema não me permite cadastrar as
         rubricas em custos vinculados?
+      - como cadastrar rubricas nos custos
+      - não consigo cadastrar rubricas nos custos
     answer:
       - - >
           Entendi. Vamos lá:
@@ -54,6 +56,7 @@ interactions:
     expect:
       - Não consigo achar minha proposta no sistema, porém a mesma está ativa.
       - Como encontrar a minha proposta no sistema?
+      - Não sei achar minha proposta
     answer:
       - - >
           O procedimento é simples...
@@ -97,6 +100,7 @@ interactions:
     expect:
       - Como apresentar uma proposta cultural?
       - Como fazer uma proposta cultural?
+      - Como eu faço uma proposta?
       - Quero elaborar uma proposta cultura, como fazer?
       - Por onde eu começo minha proposta cultura?
     answer:
@@ -171,6 +175,7 @@ interactions:
       - Alterei minha proposta e a alteração não foi salva após fechar o sistema
       - O SALIC não salvou minhas alterações na proposta
       - O sistema não salvou minhas alterações na proposta
+      - Perdi minhas alterações na proposta
     answer:
     - - >
         Entendi! Esse erro aconteceu por exceder o tempo logado no sistema.
