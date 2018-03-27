@@ -15,15 +15,16 @@ interactions:
     answer:
       -
         - >
-          O principal benefício de incentivar projetos culturais 
-          é dar a chance para sociedade usufruir das mais diversas manifestações culturais 
-          que talvez nunca fossem possíveis sem incentivo. Bacana, né? E tem mais... 
-        - > 
-          as empresas que incentivam projetos culturais podem deduzir do imposto de renda 
-          as quantias que efetivamente despenderam em projetos aprovados pelo Ministério da Cultura 
-        - > 
-          é claro que essa dedução do imposto de renda acontece nas condições 
-          estabelecidas na legislação do imposto de renda vigente e está limitada a 4% do imposto devido
+          O principal benefício de incentivar projetos culturais
+          é dar a chance para sociedade usufruir das mais diversas manifestações culturais
+          que talvez nunca fossem possíveis sem incentivo. Bacana, né? E tem mais...
+        - >
+          as empresas que incentivam projetos culturais podem deduzir do imposto de renda
+          as quantias que despenderam em projetos aprovados pelo Ministério da Cultura
+        - >
+          é claro que essa dedução do imposto de renda acontece nas condições
+          estabelecidas na legislação do imposto de renda vigente
+e está limitada a 4% do imposto devido
   # BENEFICIO
   - name: execucao-empresas-que-se-beficiam-de-incentivos-fiscais
     level: execucao
@@ -41,12 +42,12 @@ interactions:
       -
         - >
             Veja... somente as Pessoas Jurídicas tributadas com base no Lucro Real
-            podem descontar as doações ou patrocínios do imposto de renda 
+            podem descontar as doações ou patrocínios do imposto de renda
             observando sempre o limite máximo de 4% do imposto devido
         - >
-            se você quiser saber mais sobre quais Pessoas Jurídicas são obrigadas a fazer a apuração do lucro real
+            se você quiser saber mais sobre quais Pessoas Jurídicas devem fazer a apuração do lucro real
             confira o artigo 246, do Decreto 3.000 de 26 de março de 1999 que “Regulamenta a tributação, fiscalização, arrecadação e
-            administração do Imposto sobre a Renda e Proventos de Qualquer Natureza”, 
+            administração do Imposto sobre a Renda e Proventos de Qualquer Natureza”,
             (http://www.planalto.gov.br/ccivil_03/decreto/d3000.htm)
   # BENEFICIO
   - name: execucao-parentes-nao-podem-incentivar-projetos
@@ -71,14 +72,14 @@ interactions:
             - o cônjuge
             - os parentes até o terceiro grau, inclusive os afins
             - e os dependentes...
-          - | 
+          - |
             tanto do doador,
             quanto do patrocinador,
-            dos titulares, 
-            administradores, 
-            acionistas ou 
+            dos titulares,
+            administradores,
+            acionistas ou
             sócios de pessoa jurídica vinculada ao doador ou patrocinador,
-            na data da operação, ou nos doze meses anteriores
+            na data da operação, ou nos 12 meses anteriores
   # CUSTO
   - name: execucao-deduzir-impostos-de-renda-incentivador-de-projetos
     level: execucao
@@ -97,14 +98,9 @@ interactions:
     answer:
       -
         - >
-          Atualmente, existem 2 situações descritas na Lei 8313/91: 
-          1) O artigo 26 da Lei indica os percentuais de dedução do IR,
-          limitados aos estabelecidos pela legislação do imposto de renda
-          vigente, que atualmente são 4% do imposto devido para empresas e 6% do
-          imposto devido para pessoa física.
+          Vamos lá… Atualmente, existem 2 situações descritas na Lei 8313/91:
         - >
-          A empresa incentivadora poderá ainda lançar o valor incentivado como
-          despesa operacional. Os percentuais de dedução são os seguintes:
+          1) o artigo 26 da Lei indica que os percentuais de dedução do IR são os seguintes:
         - |
           Empresas:
             até 30% do valor patrocinado;
@@ -112,37 +108,30 @@ interactions:
           Pessoa física:
             até 60% do valor patrocinado;
             até 80% do valor doado.
+    - >
+nesse caso, a empresa incentivadora poderá ainda lançar o valor incentivado como
+          despesa operacional
         - >
           2) Com a modificação implementada pela Lei 9.874/99, quem investe em
           projetos culturais enquadrados nos segmentos indicados pelo artigo 18
           da Lei passou a ter a possibilidade de deduzir até 100% do valor doado
-          ou patrocinado, também dentro dos limites da legislação do imposto de
-          renda vigente (atualmente 4% para empresas e 6% para pessoa física).
-        - >
-          As empresas que investem nesses segmentos não podem lançar o valor
-          incentivado como despesa operacional.
-  # CUSTO
-  - name: execucao-procedimentos-de-captacao-de-recursos
-    level: execucao
-    context: falar-sobre-execucao
-    action: respond
-    expect:
-      - Quais os procedimentos necessários para a captação de recursos?
-      - Qual é o processo apra fazer a captação de recursos?
-      - O que devo fazer para realizar a captação de recursos?
-      - Captação de recursos como fazer?
-      - O que é necessário para fazer a captação de recursos?
-      - Desejo fazer a captação de recursos como devo prosseguir?
-    answer:
-      -
-        - >
-          Antes do início da captação, o proponente deve aguardar a abertura
-          pelo MinC das contas correntes vinculadas ao projeto, pois toda
-          movimentação de recursos captados deverá ser efetuada nelas.
-        - >
-          Após essa etapa, o proponente está habilitado a captar recursos junto
-          aos incentivadores.
-  # LEI ROUANET
+          ou patrocinado
+- >
+as empresas que investem nesses segmentos não podem lançar o valor
+          incentivado como despesa operacional
+    - >
+    agora, IMPORTANTE: 
+- >
+os percentuais de dedução de IR 
+são limitados aos estabelecidos pela legislação do imposto de renda vigente, 
+que atualmente são 4% do imposto devido para empresas e 6% do
+          imposto devido para pessoa física
+    - | 
+    você pode ver os detalhes das leis pelos endereços:
+    Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm
+    Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm
+
+    # LEI ROUANET
   - name: execucao-diferenca-entre-contrato-de-pratocinio-e-carta-de-intencao
     level: execucao
     context: falar-sobre-execucao
@@ -159,18 +148,19 @@ interactions:
     answer:
       -
         - >
-          Sim. Carta de intenção de patrocínio não se iguala ao contrato de
-          patrocínio, uma vez que apenas nesse último há a garantia de que as
+          Carta de intenção de patrocínio é diferente de contrato de patrocínio
+        - >
+    num contrato de patrocínio existe a garantia de que as
           condições firmadas entre patrocinador e patrocinado serão cumpridas,
-          bem como de que o(s) aporte(s) será(ão) realizado(s).
+          bem como de que o aporte será realizado
         - >
-          Nesse documento constam o valor a ser aportado, a(s) data(s) do(s)
-          aporte(s), as condições estabelecidas entre os interessados e as
-          assinaturas dos responsáveis reconhecidas em cartório.
+          no contrato também constam o valor a ser aportado, a data do
+          aporte, as condições estabelecidas entre os interessados e as
+          assinaturas dos responsáveis reconhecidas em cartório
         - >
-          A carta de intenção, diferentemente, apenas informa sobre a
+          agora, a carta de intenção apenas informa sobre a
           possibilidade da ocorrência de patrocínio, não havendo comprometimento
-          do possível patrocinador com o patrocinado. 
+          do possível patrocinador com o patrocinado
   # LEI ROUANET
   - name: execucao-deducao-de-imposto-de-renda
     level: execucao
@@ -192,10 +182,6 @@ interactions:
           apurado e recolhe para a União, por meio de DARF, apenas o imposto
           devido após a dedução do incentivo.
         - >
-          A dedução poderá ser calculada do imposto devido determinado no lucro
-          real. As pessoas jurídicas tributadas com base no lucro real só
-          poderão deduzir o valor da doação e/ou do patrocínio como despesa
-          operacional no caso de projeto enquadrado no Art. 26 da Lei 8313/91.
           No caso de pessoas físicas, a dedução será feita do imposto a pagar
           na declaração anual do Imposto de Renda.
   # CUSTO - ESPERADO INCOMPLETO
@@ -212,11 +198,14 @@ interactions:
         Pessoas Jurídicas tributadas com base no lucro presumido ou arbitrado
         podem deduzir o IR as doações e patrocínios a atividades culturais?
     answer:
+      -
       - >
-        Não. Do imposto apurado com base no lucro presumido ou arbitrado não é
-        permitida qualquer dedução a título de incentivo fiscal. Somente pessoas
-        jurídicas tributadas pelo Lucro Real podem deduzir
-        incentivos fiscais.
+        Não, do imposto apurado com base no lucro presumido ou arbitrado não é
+        permitida qualquer dedução a título de incentivo fiscal
+      - >
+somente pessoas jurídicas tributadas pelo Lucro Real 
+podem deduzir incentivos fiscais
+
   # LEI ROUANET - ESPERADO INCOMPLETO
   - name: execucao-microempresas-podem-deduzir-as-doacoes-e-patrocinios
     level: execucao
@@ -228,9 +217,9 @@ interactions:
         patrocínios?
     answer:
       - >
-        Não. As microempresas (ME) e empresas de pequeno porte (EPP), optantes
+        Não, as microempresas (ME) e empresas de pequeno porte (EPP), optantes
         pelo Simples, estão excluídas de qualquer benefício de dedução de
-        incentivos do IRPJ.
+        incentivos do IRPJ
   # LEI ROUANET
   - name: execucao-doacoes-patrocinios-nao-sofrem-retencao
     level: execucao
@@ -244,8 +233,8 @@ interactions:
       - As doações ou patrocínios a atividades culturais tem retenção de IR?
     answer:
       - >
-        As transferências a título de doações ou patrocínios não estão sujeitas
-        à incidência do imposto de renda na fonte.
+        Não, as transferências a título de doações ou patrocínios não estão sujeitas
+        à incidência do imposto de renda na fonte
   # LEI ROUANET
   - name: execucao-contas-podem-ser-abertas-em-qualquer-banco
     level: execucao
@@ -277,14 +266,16 @@ interactions:
     answer:
       -
         - >
-          Quando do encaminhamento do projeto para análise do Ministério, o
+          Quando cria a proposta de projeto no sistema Salic, o
           proponente deve indicar em qual agência do Banco do Brasil gostaria
-          que as contas fossem abertas. 
+          que as contas fossem abertas
         - >
-          Após a aprovação e publicação do projeto no Diário Oficial da União,
-          o MinC encaminha solicitação de abertura das contas ao banco, com a
-          indicação de agência pelo proponente, e após aberta disponibiliza os
-          dados das contas na página do projeto no sistema Salic.
+          após a aprovação e publicação do projeto no Diário Oficial da União,
+          o MinC encaminha automaticamente a solicitação de abertura das contas ao banco,
+com na agência indicada pelo proponente
+->
+uma vez abertas, o Salic disponibiliza os dados das contas na página do projeto 
+
   # LEI ROUANET
   - name: execucao-procedimentos-para-captacao-de-recursos
     level: execucao
@@ -298,18 +289,25 @@ interactions:
       - Qual o procedimento para fazer a captação de recursos ?
     answer:
       -
+- >
+De acordo com as exigências do MinC e da Secretaria da Receita Federal, 
+a captação de recursos só inicia depois que o MinC abra a conta corrente vinculada ao projeto
+- > 
+essa conta denominada "conta captação", deve ser mantida especialmente
+          para esse fim no Banco do Brasil, já que toda a movimentação de recursos captados 
+deverá ser feita nela
         - >
-          O Ministério da Cultura e a Secretaria da Receita Federal exigem que
-          os recursos financeiros correspondentes a doações ou patrocínios sejam
-          depositados na conta denominada "conta captação" mantida especialmente
-          para esse fim no Banco do Brasil. Os aportes podem ser feitos:
+          depois disso, o proponente está habilitado a captar recursos junto aos incentivadores
+        - >
+Os aportes podem ser feitos de duas formas:
         - >
           a) Depósito identificado, contendo obrigatoriamente o CPF ou o CNPJ
-          do(s) depositante(s);
+          do(s) depositante(s)
         - >
           b) Transferência Eletrônica Disponível (TED) ou Documento de Operação
           de Crédito (DOC), desde que contenham, também, o CPF ou o CNPJ do(s)
-          depositante(s).
+          depositante(s)
+
   # LEI ROUANET
   - name: execucao-aplicacao-financeira-com-os-recursos-do-projeto
     level: execucao
@@ -447,7 +445,7 @@ interactions:
         Não. Os aportes poderão ser realizados durante a inabilitação do
         proponente, entretanto a transferência de recursos entre as contas
         bancárias do projeto (Captação e Movimento), bem como a utilização do
-        saldo só serão permitidas após a habilitação do proponente. 
+        saldo só serão permitidas após a habilitação do proponente.
   # PRAZO
   - name: execucao-prazo-limite-para-pedir-prorrogacao-de-prazo
     level: execucao
@@ -497,7 +495,7 @@ interactions:
         estou apto a captar recursos, eu posso executar o projeto.
         Quando o pedido de prorrogação de prazo de execução, somente, é
         deferido, é indicado que não há interesse em captar mais recursos e há
-        interesse somente em executar o projeto. 
+        interesse somente em executar o projeto.
   # PRAZO
   - name: execucao-diferenca-prazo-de-captacao-e-execucao
     level: execucao
@@ -831,7 +829,7 @@ interactions:
           O pedido deverá ser encaminhado via Salic, após captação de 20% dos
           recursos, ou via papel, anteriormente à captação mínima. Para Plano
           Anual de Atividades, a captação deverá ser, no mínimo, de 1/12 dos
-          recursos. 
+          recursos.
   # LEI ROUANET - IMCOPLETO
   - name: execucao-fontes-de-recurso-para-fazer-pagamento
     level: execucao
@@ -886,7 +884,7 @@ interactions:
           a itens retirados pelo MinC na aprovação inicial.
         - >
           Para Plano Anual de Atividades, a captação deverá ser, no mínimo, de
-          1/12 dos recursos. 
+          1/12 dos recursos.
   # LEI ROUANET
   - name: execucao-valor-total-menor-do-que-o-solicitado
     level: execucao
@@ -945,7 +943,7 @@ interactions:
         - >
           Sim. O saldo da aplicação financeira poderá ser utilizado tanto em
           projetos com captação parcial de recursos, quanto em projetos com
-          captação total. Em ambas as situações: 
+          captação total. Em ambas as situações:
         - >
           a) Caso a readequação dos itens orçamentários fique limitada a 20%,
           para mais ou para menos, do valor da rubrica, não é necessário o envio
@@ -959,7 +957,7 @@ interactions:
           aprovados ou com comprovante de aprovação em seleção pública ou com
           respaldo de contrato de patrocínio, que garanta a captação de 20%.
           Para Plano Anual de Atividades, a captação deverá ser, no mínimo,
-          de 1/12 dos recursos. 
+          de 1/12 dos recursos.
   # LEI ROUANET
   - name: execucao-alteracao-do-plano-de-distribuicao
     level: execucao
@@ -979,16 +977,16 @@ interactions:
           do MinC, somente após a captação de 20% do valor total aprovado ou de
           1/12 dos recursos, para Plano Anual de Atividades. No pedido, deve-se
           indicar claramente quais alterações se pretende fazer, atentando-se
-          para as seguintes condições: 
+          para as seguintes condições:
         - >
           a) Caso o projeto seja inteiramente gratuito, deve-se manter a sua
-          total gratuidade; 
+          total gratuidade;
         - >
           b) Caso o projeto apresente comercialização de produtos, deve-se
           manter preços populares e acessíveis e respeitar as porcentagens de
           distribuição, sobretudo a quantidade destinada à população de baixa
           renda.
-  # PRAZO - IMCOPLETO
+  # PRAZO - INCOMPLETO
   - name: execucao-produto-cultural-do-projeto
     level: execucao
     context: falar-sobre-execucao
@@ -1010,7 +1008,7 @@ interactions:
         - >
           No momento da apresentação da prestação de contas final do projeto,
           deve-se relatar a contribuição das outras fontes de recurso para a
-          realização do produto. 
+          realização do produto.
   # LEI ROUANET - IMCOMPLETO
   - name: execucao-produto-cultural-inicial-do-projeto-sendo-executado
     level: execucao
@@ -1036,13 +1034,13 @@ interactions:
           b) Caso ainda haja a possibilidade de novos patrocínios para o
           projeto: aguarde o término do período de captação, para se certificar
           de que não haverá novos patrocínios e que o valor total do projeto
-          poderá ser reduzido, e encaminhe o pedido ao MinC. 
+          poderá ser reduzido, e encaminhe o pedido ao MinC.
         - >
           O pedido só poderá ser efetuado após a captação de, pelo menos,
           20% dos recursos, ou caso tenha sido contemplado em seleção pública ou
           tenha contrato de patrocínio (que garanta a captação de 20%) e não
           deverá ultrapassar 40% do valor total aprovado. Para Plano Anual de
-          Atividades, a captação deverá ser, no mínimo, 1/12 dos recursos. 
+          Atividades, a captação deverá ser, no mínimo, 1/12 dos recursos.
   # PRAZO - IMCOMPLETO
   - name: execucao-produto-cultural-do-projeto-fontes-de-recursos
     level: execucao
@@ -1092,11 +1090,16 @@ interactions:
       - >
         Sobre os logotipos da Lei Rouanet, MinC e Governo Federal, como faço
         para obter?
+      - >
+    Onde encontro as logomarcas do Governo?
+      - >
+    Como pego as logomarcas do MinC e da Lei Rouanet?
     answer:
       - >
         Os logotipos da Lei Federal de Incentivo à Cultura (Lei Rouanet),
         Ministério da Cultura e Governo Federal estão disponíveis para download
         no endereço eletrônico: http://www.cultura.gov.br/logotipos
+
   # LEI ROUANET
   - name: execucao-identificacao-dos-grupos-de-logomarcas
     level: execucao
@@ -1113,12 +1116,16 @@ interactions:
         Precisa identificar os grupos nos campos de logomarcas?
     answer:
       - >
-        O Manual de Uso das Marcas do Pronac não faz menção à identificação dos
-        grupos no bloco de marcas (como, por exemplo, Patrocinadores, Apoio,
-        etc..). Assim, tal identificação ficará a critério do proponente, desde
-        que observadas as regras de aplicação das logomarcas estipuladas pelo
-        citado manual.
-  # LEI ROUANET - IMCOMPLETO
+        Olha, a identificação fica a critério do proponente, 
+desde que sejam observadas as regras de aplicação dos logotipos
+estipuladas no Manual de Uso das Marcas do Pronac
+      - >
+que você encontra aqui http://www.cultura.gov.br/logotipos
+- >
+ aliás, o Manual não faz menção à identificação dos grupos no bloco de marcas
+ como, por exemplo, Patrocinadores, Apoio, etc.
+
+  # LEI ROUANET - INCOMPLETO
   - name: execucao-material-de-divulgacao-indeferido-pelo-minc
     level: execucao
     context: falar-sobre-execucao
@@ -1130,11 +1137,16 @@ interactions:
         extenso. Como devo proceder nesse caso?
     answer:
       - >
-        A expressão "Ministério da Cultura apresenta" (para projetos enquadrados
-        no artigo 18 da Lei 8.313/1991) e suas variantes (inclusão do(s) nome(s)
-        do(s) patrocinador(es)) deverá ser por extenso,
-        não devendo conter logomarcas em seu corpo.
-        As logomarcas devem ser aplicadas no bloco de marcas.
+        A expressão "Ministério da Cultura apresenta" e suas variantes, 
+como a inclusão do(s) nome(s) do(s) patrocinador(es),
+deverá ser por extenso e não pode conter logotipos em seu corpo
+      - >
+     os logotipos devem ser aplicados no bloco de marcas
+    - >
+lembrando que isso se aplica para projetos enquadrados
+        no artigo 18 da Lei 8.313/1991 (http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm)
+
+
   # LEI ROUANET
   - name: execucao-anexar-arquivo-audio-video-para-analise
     level: execucao
@@ -1142,9 +1154,9 @@ interactions:
     action: respond
     expect:
       - Como faço para anexar um arquivo de áudio / vídeo para a análise?
-      - Tem como anexar um arquivo de aúdio / vídeo? Se sim como posso fazer?
+      - Tem como anexar um arquivo de áudio / vídeo? Se sim como posso fazer?
       - >
-        Possuo um arquivo de áudio/vídeo para a análise, porém o sistema do
+        Possuo um arquivo de áudio / vídeo para a análise, porém o sistema do
         Ministério da Cultura não permite a anexação de tais arquivos.
         O que faço?
       - >
@@ -1154,9 +1166,13 @@ interactions:
       - >
         Para análise do material de divulgação em áudio e/ou vídeo, os arquivos
         devem ser convertidos em documentos no formato PDF e posteriormente
-        anexados ao Novo Salic. Os arquivos de áudio devem ser transcritos e os
-        em vídeo devem ter os frames que contêm as logomarcas capturados e
-        convertidos em um arquivo.
+        anexados ao Salic
+      - >
+    Os arquivos de áudio devem ter o conteúdo transcrito e seu texto transformado em PDF
+      - >
+    já para arquivos de vídeo, capture os frames onde aparecem os logotipos e
+        converta essas imagens em um PDF
+
   # SISTEMA SALIC
   - name: execucao-extensoes-de-arquivos-para-anexacao
     level: execucao
@@ -1171,8 +1187,9 @@ interactions:
         Novo Salic?
     answer:
       - >
-        As extensões são BMP, GIF, JPEG, JPG, PNG, RAW, TIF e PDF, com limite
-        de tamanho de 5MB cada.
+        Você pode anexar arquivos com as extensões BMP, GIF, JPEG, JPG, PNG, RAW, TIF e PDF.
+      - >
+    Importante: Cada arquivo não podem exceder o limite de 5MB.
   # LEI ROUANET
   - name: execucao-anexar-material-divulgacao-para-analise
     level: execucao
@@ -1185,9 +1202,12 @@ interactions:
       - Sobre anexação de arquivos de divulgação, como submeto para análise?
     answer:
       - >
-        A anexação deverá ocorrer no Novo Salic
-        (http://novosalic.cultura.gov.br), mediante link "Marcas", localizado
-        no campo lateral esquerdo da página do projeto.
+    Para anexar o material de divulgação, acesse o Salic (http://salic.cultura.gov.br) e siga os seguintes passos:
+        - clique em Projetos > Listar projetos
+        - selecione o CNPJ do proponente e abra o projeto
+        - clique em "Marcas", localizado na lateral esquerda da página do projeto
+        - envie os arquivos
+
   # PRAZO
   - name: execucao-quando-solicitar-arquivamento-projeto
     level: execucao
@@ -1199,10 +1219,10 @@ interactions:
       - Sobre o arquivamento de projetos, quando devo solicitar ?
     answer:
       - >
-        Primeiramente você precisa concluir que o projeto é inviável, ou não 
+        Primeiramente você precisa concluir que o projeto é inviável, ou não
         obteve êxito na captação de recursos.
-      - > 
-        Havendo essa conclusão você pode formalizar o pedido de arquivamento 
+      - >
+        Havendo essa conclusão você pode formalizar o pedido de arquivamento
         junto à Coordenação Geral de Acompanhamento e Avaliação de Projetos.
   # LEI ROUANET
   - name: execucao-como-fazer-solicitacao-arquivamento-projeto
@@ -1217,7 +1237,7 @@ interactions:
     answer:
       -
         - >
-          Para pedir o arquivamento você envia uma carta simples, assinada 
+          Para pedir o arquivamento você envia uma carta simples, assinada
           pelo proponente ou dirigente cadastrado no SALIC.
         - >
           Além disso, se houve captação de recursos, é necessário encaminhar a
@@ -1248,7 +1268,7 @@ interactions:
       - Quando as contas do projeto se encerram
     answer:
       - >
-        Quando o projeto for arquivado ou se a prestação de contas foi apresentada, 
+        Quando o projeto for arquivado ou se a prestação de contas foi apresentada,
         as contas serão bloqueadas pelo MinC para operações
         financeiras (crédito e débito) e somente serão encerradas pelo Banco do
         Brasil, após 2 anos sem movimentação, conforme Termo de Cooperação
@@ -1271,9 +1291,9 @@ interactions:
         - >
           Sim, você pode desarquivar desde que o pedido obedeça aos seguintes prazos:
         - >
-          a) Se o projeto foi arquivado (ou a proposta foi cancelada automaticamente) 
+          a) Se o projeto foi arquivado (ou a proposta foi cancelada automaticamente)
           e o proponente não desistiu formalmente, o desarquivamento
-          deverá ser feito em até dez dias corridos da data de registro do arquivamento 
+          deverá ser feito em até dez dias corridos da data de registro do arquivamento
           no SALIC e acompanhado de justificativa.
         - >
           b) Agora... se o projeto tiver sido aprovado, mas arquivado antes da
@@ -1300,9 +1320,9 @@ interactions:
     answer:
       -
         - >
-          Hummm, entendi. 
+          Hummm, entendi.
         - >
-          No Salic você só pode solicitar uma alteração se o seu 
+          No Salic você só pode solicitar uma alteração se o seu
           projeto captou pelos menos, 20% do valor total
           aprovado, ou 1/12 se for um Plano Anual de Atividades
         - >
@@ -1326,14 +1346,14 @@ interactions:
       -
         - >
           Após a finalização do prazo de captação/execução vigente não será
-          possível realizar o pedido de prorrogação pelo sistema. 
+          possível realizar o pedido de prorrogação pelo sistema.
         - >
-          Isso acontece pois o módulo de solicitação é bloqueado para 
-          projetos com prazos expirados, cuja solicitação de prorrogação não 
+          Isso acontece pois o módulo de solicitação é bloqueado para
+          projetos com prazos expirados, cuja solicitação de prorrogação não
           foi efetuada com 30 dias de antecedência da data final.
         - >
           Desse modo, orientamos o proponente a
-          encaminhar pedido ao MinC, em meio físico. 
+          encaminhar pedido ao MinC, em meio físico.
         - >
           Essa solicitação de prorrogação, realizada fora do prazo, será analisada caso
           a caso.
