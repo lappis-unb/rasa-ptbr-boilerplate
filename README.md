@@ -32,7 +32,7 @@ Com as configurações padrões, acessando http://localhost:3000/ você terá ac
 Para adicionar o bot ao seu Rocket Chat, você deve criar uma conta de administrador. Logo, na tela inicial do Rocket Chat clique em 
 **Register a new account**, e preencha as informações, não precisa ser utilizado um e-mail real.
 
-![New account example](https://github.com/lappis-unb/minc-rouanet-bot/wikis/1_index.png)
+![New account example](https://github.com/lappis-unb/minc-rouanet-bot/wikis/images/1_index.png)
 
 Após preencher as informações, clique em REGISTER A NEW ACCOUNT, e em seguida, volte ao login e entre utilizando as 
 informações preenchidas anteriormente.
