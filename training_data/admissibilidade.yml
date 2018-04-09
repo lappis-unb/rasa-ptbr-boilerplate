@@ -362,7 +362,7 @@ interactions:
     action: error
     answer:
       - Acho não entendi... Me passa mais detalhes por favor
-      - Não entendi, Como assim?
+      - Não entendi, como assim?
       - Desculpe, o que quer dizer com isso?
 
   - name: admissibilidade-error-2
@@ -373,7 +373,7 @@ interactions:
       - - Acho que ainda não estou treinada para responder esse tipo de assunto =(
         - tente outro assunto
       - - Desculpa, sou uma assistente virtual em fase experimental
-        - às vezes não entendo certos comentários
+        - às vezes não entendo certas mensagens
         - use outras palavras na sua mensagem
       - - Não sei se entendi...
         - estou em fase experimental, desculpa!

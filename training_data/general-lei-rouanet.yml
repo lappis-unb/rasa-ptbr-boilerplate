@@ -151,7 +151,7 @@ interactions:
     action: error
     answer:
       - Acho não entendi... Me passa mais detalhes por favor
-      - Não entendi, Como assim?
+      - Não entendi, como assim?
       - Desculpe, o que quer dizer com isso?
 
   - name: lei-rouanet-error-2
@@ -167,7 +167,7 @@ interactions:
           - A fase admissibilidade do seu projeto
           - A fase execução do seu projeto
       - - Desculpa, sou uma assistente virtual em fase experimental
-        - às vezes não entendo certos comentários
+        - às vezes não entendo certas mensagens
         - use outras palavras na sua mensagem
       - - Não sei se entendi...
         - estou em fase experimental, desculpa!

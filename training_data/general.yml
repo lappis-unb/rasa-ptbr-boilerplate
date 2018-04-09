@@ -164,15 +164,19 @@ interactions:
       - Agradecida
     answer:
       - - Fico feliz em poder ajudar
-        - "queria te pedir um favorzinho. Avalie a nossa conversa dando uma nota de 1-5 (1=péssima, 5=ótima)"
-      - - Sempre que precisar, estarei aqui para ajudar =)
-        - até lá, avalie a nossa conversa dando uma nota de 1 à 5 (1=péssima, 5=ótima)
-      - - Sempre que tiver alguma dúvida sobre a Lei Rouanet ou sobre o SALIC, pode falar comigo!
-        - enquanto isso, avalie a nossa conversa dando uma nota de 1 à 5 (1=péssima, 5=ótima)
+        - "queria te pedir um favorzinho. Avalie a nossa conversa até o momento, dando uma nota de 1-5 (1=péssima, 5=ótima)"
+      - - Estou aqui para ajudar =)
+        - por favor, avalie a nossa conversa até agora me dando uma nota de 1 à 5 (1=péssima, 5=ótima)
+      - - Se tiver mais alguma dúvida sobre a Lei Rouanet ou sobre o SALIC, pode falar comigo!
+        - enquanto isso, avalie como foi a nossa conversa até o momento dando uma nota de 1 à 5 (1=péssima, 5=ótima)
     next:
       trust: .4
       interactions:
         - receber-nota
+      error:
+        - error-1
+        - error-2
+        - error-3
 
   - name: receber-nota
     level: receber-nota-level
@@ -188,7 +192,7 @@ interactions:
       - dou a nota
       - você vale um
     answer:
-      - Obrigado pela nota! Deseja saber mais algumas coisa? Estou aqui para te ajudar
+      - Obrigado pela nota! Deseja saber mais alguma coisa? Estou aqui para te ajudar
 
   - name: o-que-eh-rouana
     action: respond
@@ -251,9 +255,9 @@ interactions:
       - Queria perguntar sobre a lei rouanet
       - Quero saber mais sobre a lei rouanet
     answer:
-      - - Que bom! É meu assunto preferido =)
-        - O que você gostaria de saber sobre ela?
-      - Legal! O que você gostaria de saber sobre ela?
+      - - Que bom! A lei Rouanet é meu assunto preferido =)
+        - O que você gostaria de saber sobre a lei Rouanet?
+      - Legal! O que você gostaria de saber sobre a lei Rouanet?
     next:
       trust: .9
       interactions:
@@ -320,16 +324,16 @@ interactions:
     context: falar-sobre-admissibilidade
     action: respond
     expect:
-      - Adimissibilidade
+      - Admissibilidade
       - fase de admissibilidade
-      - estou na fase de adimissibilidade e gostaria de tirar uma dúvida
-      - estou em duvida quanto a adimissibilidade
+      - estou na fase de admissibilidade e gostaria de tirar uma dúvida
+      - estou em duvida quanto a admissibilidade
       - minha proposta está sendo julgada na admissibilidade
       - estou com duvidas no cadastramento do meu projeto no salic
     answer:
-      - - Então você está na fase de adimissibilidade
+      - - Então você está na fase de admissibilidade
         - Qual sua dúvida sobre ela?
-      - O que você gostaria de saber sobre adimissibilidade?
+      - O que você gostaria de saber sobre admissibilidade?
     next:
       trust: .9
       interactions:
@@ -355,9 +359,9 @@ interactions:
         - admissibilidade-data-de-nascimento-proponente-salic
         - admissibilidade-problemas-no-sistema
       error:
-        - adimissibilidade-error-1
-        - adimissibilidade-error-2
-        - adimissibilidade-error-3
+        - admissibilidade-error-1
+        - admissibilidade-error-2
+        - admissibilidade-error-3
 
   - name: falar-sobre-execucao
     context: falar-sobre-execucao
@@ -446,7 +450,7 @@ interactions:
     action: error
     answer:
       - Acho não entendi... Me passa mais detalhes por favor
-      - Não entendi, Como assim?
+      - Não entendi, como assim?
       - Desculpe, o que quer dizer com isso?
 
   - name: error-2
@@ -455,7 +459,7 @@ interactions:
       - - Acho que ainda não estou treinada para responder esse tipo de assunto =(
         - tente outro assunto
       - - Desculpa, sou uma assistente virtual em fase experimental
-        - às vezes não entendo certos comentários
+        - às vezes não entendo certas mensagens
         - use outras palavras na sua mensagem
       - - Não sei se entendi...
         - estou em fase experimental, desculpa!
