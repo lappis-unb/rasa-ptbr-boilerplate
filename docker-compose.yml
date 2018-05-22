@@ -12,6 +12,8 @@ services:
       - MONGO_URL=mongodb://mongo:27017/rocketchat
       - MONGO_OPLOG_URL=mongodb://mongo:27017/local
       - MAIL_URL=smtp://smtp.email
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASS=admin
 #       - HTTP_PROXY=http://proxy.domain.com
 #       - HTTPS_PROXY=http://proxy.domain.com
     depends_on:
@@ -40,35 +42,14 @@ services:
     depends_on:
       - mongo
 
-  hubot-natural:
-    # image: diegodorgam/hubot-natural:latest
+  rouana:
     build:
       context: .
-      dockerfile: ./docker/Dockerfile
-    restart: unless-stopped
-    environment:
-      - HUBOT_ADAPTER=rocketchat
-      - HUBOT_NAME='Hubot Natural'
-      - HUBOT_OWNER=RocketChat
-      - HUBOT_DESCRIPTION='Hubot natural language processing'
-      - HUBOT_LOG_LEVEL=debug
-      - HUBOT_CORPUS=training_data
-      - HUBOT_LANG=pt
-      - RESPOND_TO_DM=true
-      - RESPOND_TO_LIVECHAT=true
-      - RESPOND_TO_EDITED=true
-      - LISTEN_ON_ALL_PUBLIC=false
-      - ROCKETCHAT_AUTH=password
-      - ROCKETCHAT_URL=rocketchat:3000
-      - ROCKETCHAT_ROOM=GENERAL
-      - ROCKETCHAT_USER=botnat
-      - ROCKETCHAT_PASSWORD=botnatpass
-      - HUBOT_NATURAL_DEBUG_MODE=true
-      - LIVECHAT_DEPARTMENT_ID='<LIVECHAT_DEPARTMENT_ID>'
-    volumes:
-      - ./scripts:/home/hubotnat/bot/scripts
-      - ./training_data:/home/hubotnat/bot/training_data
-    depends_on:
-      - rocketchat
+      dockerfile: docker/Dockerfile
     ports:
-      - 3001:8080
+      - 5005:5005
+    volumes:
+     - .:/app
+    links:
+      - rocketchat
+
