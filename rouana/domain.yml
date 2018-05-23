@@ -1,0 +1,168 @@
+slots:
+  categoria:
+    type: text
+  definição:
+    type: text
+  documento:
+    type: text
+  erro:
+    type: text
+  fluxo:
+    type: text
+  importante:
+    type: text
+  item:
+    type: text
+  pendência:
+    type: text
+  pessoa jurídica:
+    type: text
+  tipo de custo:
+    type: text
+  tipo de pessoa:
+    type: text
+  valor:
+    type: text
+
+entities:
+  - categoria
+  - definição
+  - documento
+  - erro
+  - fluxo
+  - importante
+  - item
+  - pendência
+  - pessoa jurídica
+  - tipo de custo
+  - tipo de pessoa
+  - valor
+
+intents:
+  - cumprimento
+  - sentimento_positivo
+  - sentimento_negativo
+  - projetos
+  - ingressos
+  - vinculo_de_propostas
+  - cadastro_de_rubricas
+  - visualizar_propostas_projetos
+  - vinculo_pendente
+  - elaborar_proposta_cultural
+  - valor_por_beneficiario
+  - definicao_modal
+  - fechando_sem_salvar
+  - assessoria_contabil_juridica
+  - prazo_envio_cnae
+  - planilha_sumiu
+  - novo_fluxo
+  - custo_auditoria
+
+actions:
+  - action_cumprimento
+  - action_sentimento_positivo
+  - action_sentimento_negativo
+  - action_projetos
+  - action_ingressos
+  - action_vinculo_de_propostas
+  - action_cadastro_de_rubricas
+  - action_visualizar_propostas_projetos
+  - action_vinculo_pendente
+  - action_elaborar_proposta_cultural
+  - action_valor_por_beneficiario
+  - action_definicao_modal
+  - action_fechando_sem_salvar
+  - action_assessoria_contabil_juridica
+  - action_prazo_envio_cnae
+  - action_planilha_sumiu
+  - action_novo_fluxo
+  - action_custo_auditoria
+
+templates:
+  action_cumprimento:
+    - "Olá, como você está?"
+    - "Oi humano, você está bem?"
+    - "Oi! como está você?"
+  action_sentimento_negativo:
+    - "Deixa de ser chorão, humano!"
+    - "Agradece por estar vivo, humano!"
+    - "Que dramático você é, humano!"
+  action_sentimento_positivo:
+    - "Que bom que está bem."
+    - "Fico feliz por você."
+  action_projetos:  
+    - "Para a Pessoa Física e para o Empresário Individual – EI com enquadramento em Microempresário Individual – MEI o valor máximo é de R$ 700.000,00 (setecentos mil reais).
+      Para os demais enquadramentos de Empresário Individual – EI o valor máximo é de R$ 5.000.000,00 (cinco milhões de reais).
+      Para a Empresa Individual de Responsabilidade Limitada – EIRELI, Sociedades Limitadas – Ltda. e demais Pessoas Jurídicas o valor máximo é de R$ 10.000.000,00 (dez milhões de reais). Referência inciso II e suas alíneas, da IN 01/17."
+  action_ingressos:
+    - "A comercialização dos ingressos ou outros produtos culturais resultantes do projeto não possui teto de valor unitário, observando que esses valores estarão sempre sujeitos à aprovação do MinC com vistas a assegurar a democratização.
+      O preço médio do produto cultural a ser vendido a critério do proponente referente à cota de 50% da tiragem total de produtos é que deve ser no máximo de três vezes o valor mensal do Vale-Cultura, o que hoje representa R$ 150,00.
+      Rege a matéria o art. 53 da IN 01/17, em especial a alínea “e“ do inciso I e os §s 4º e 5º."
+  action_vinculo_de_propostas:
+    - "O dirigente do projeto deve acessar o sistema e seguir os passos
+      1- Administrativo > Gerenciar responsáveis
+      em seguida...
+      2- Vincular propostas > Clicar na 'bolinha' (Vincular) > Inserir responsável > abaixo terá o número da Proposta/Nome > Nome do responsável selecionado > Clicar na 'bolinha'
+      3- Por último... clica também no botão Vincular"
+  action_cadastro_de_rubricas:
+    - "Entendi. Vamos lá
+      a partir da IN 05/2017 não são necessários o detalhamento
+      das rubricas de custos administrativos nem de divulgação, direitos
+      autorais e remuneração por captação
+      o proponente precisa apenas informar as porcentagens
+      para isso, basta ir na aba Custos vinculados
+      o detalhamento se dará na Prestação de contas :)"
+  action_visualizar_propostas_projetos:
+    - "O procedimento é simples...
+      selecione o CPF ou CNPJ que deseja como proponente e liste a
+      proposta do CPF ou CNPJ selecionado
+      para isso, vá em
+      1- Proposta > Listar proposta
+      2- Clicar em CPF Proponente > Selecionar o CNPJ
+      aparecerão todas as propostas ativas no sistema"
+  action_vinculo_pendente:
+    - "Então, só para explicar...
+      apenas o dirigente da instituição é quem pode vincular uma pessoa física ao CNPJ
+      o dirigente deve entrar com login e senha e aceitar o vínculo"
+  action_elaborar_proposta_cultural:
+    - "Uma proposta cultural tem vários detalhes,
+      você vai encontrar todas as informações aqui':' 'http://rouanet.cultura.gov.br/'
+      já as instruções para preencher uma proposta cultural estão neste endereço':'
+      'http://rouanet.cultura.gov.br/tutoriais/'"
+  action_valor_por_beneficiario:
+    - "Esse valor é usado para conferir a viabilidade do projeto 
+      e não pode ultrapassar R$ 250,00 por beneficiário.
+      por exemplo':' R$ 9.445.076,00 / 22.556 pessoas = R$ 419,18 por
+      beneficiário, ou seja, está acima do limite
+      para sanar esse problema, você pode diminuir o custo do projeto ou aumentar a
+      estimativa de público ;)"
+  action_definicao_modal:
+    - "Vamos lá... A modal é calculada com base na série histórica de todos os projetos  aprovados desde o início da Lei Rouanet  ela leva em consideração a  rubrica, o produto e a região do projeto (estado e município)  normalmente, quando alguma rubrica extrapola a modal é devido ao  preenchimento incorreto do valor unitário do item  o valor unitário representa o Valor Individual de um item e não seu  Valor Global"
+    - "para atingir o valor global desejado o proponente deve alterar os campos Quantidade e/ou Ocorrência"
+    - "agora, caso o preenchimento esteja correto e mesmo assim a rubrica ultrapassar a modal, o proponente precisa justificar tecnicamente no campo “INFORMAÇÕES INICIAS -> OUTRAS INFORMAÇÕES” o motivo do custo elevado :)"
+  action_fechando_sem_salvar:
+    - "Entendi! Esse erro aconteceu por exceder o tempo logado no sistema. O limite de tempo para o preenchimento da proposta é 20 minutos."
+  action_assessoria_contabil_juridica:
+    - "Você deve ir em':' 
+      1- Orçamento do projeto > Custos por produto > Clicar no produto desejado
+      2- Clicar no Local de realização > por último na aba Assessoria contábil e jurídica."
+  action_prazo_envio_cnae:
+    - "O proponente tem o prazo de 40 dias para responder a diligência 20+20 prorrogados automaticamente. Não é necessário fazer solicitação. Caso seja insuficiente, o proponente poderá anexar o protocolo da Receita de inserção do CNAE no Salic."
+  action_planilha_sumiu:
+    - "Entendi.
+      Ao excluir algum produto do plano de distribuição a planilha vai 'zerar'
+      e o proponente deverá refazê-la novamente."
+  action_novo_fluxo:
+    - "Vamos lá':'
+      1- A proposta passa pela análise inicial...
+      2- Após ganhar um Pronac o projeto será enquadrado.
+      3- Depois de enquadrado você terá 10 dias para entrar com recurso.
+      4- ... Vai para a fase de análise documental e depois publicação.
+      5- Após publicado o projeto deve no mínimo captar 10%. 
+      6- Quando captar os 10%, o projeto vai para a adequação...e para a fase de análise técnica.
+      8- Depois de passar pela análise técnica ele vai para a CNIC.
+      São no mínimo 90 dias esse trâmite. 
+      9- Após a CNIC... o projeto será homologado e poderá iniciar a sua execução. =D"
+  action_custo_auditoria:
+    - "Não precisa preencher esse campo no momento. ;)"
+
