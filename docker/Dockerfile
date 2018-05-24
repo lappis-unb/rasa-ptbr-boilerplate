@@ -1,7 +1,7 @@
-from registry.gitlab.com/lappis-unb/services/rouanet-bot/rasa_core
+from registry.gitlab.com/lappis-unb/services/rouana/rasa_core
 
-add . /opt/rouana
+add . /app
 
-workdir /opt/rouana
+workdir /app
 
 cmd bash -c "make train && make run_conversation"

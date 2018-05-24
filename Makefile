@@ -1,5 +1,5 @@
 run_conversation:
-	python -m rasa_core.run -d rouana/models/dialogue -u rouana/models/nlu/current -p 5005 --connector rocketchat --credentials rouana/credentials.yml
+	python -m rasa_core.run -d rouana/models/dialogue -u rouana/models/nlu/current -p 5005 --connector rocketchat --credentials credentials.yml
 
 run_server:
 	python -m rasa_core.server -d models/dialogue -u models/nlu/default/current -o out_server.log

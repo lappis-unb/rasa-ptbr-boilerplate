@@ -2,7 +2,7 @@
 
 O Rouanet Bot é um projeto desenvolvido pelo LAPPIS (Laboratório Avançado de Produção, Pesquisa e Inovação em Software), da Universidade
 de Brasília, em parceria com o Ministério da Cultura, para responder dúvidas dos usuários relacionadas à Lei Rouanet.
-O projeto é desenvolvido com base no Rocket Chat e no Hubot-Natural.
+O projeto é desenvolvido com base no Rocket Chat, e nas ferramentas Rasa NLU e Rasa Core.
 
 ## Ambiente
 
@@ -18,11 +18,8 @@ docker-compose up -d mongo-init-replica
 ```sh
 docker-compose up -d rocketchat
 ```
-```sh
-docker-compose up hubot-natural
-```
 
-O Rocket Chat é executado na porta 3000 e o Hubot-Natural na porta 3001, conforme definido no arquivo docker-compose.yml. Caso alguma dessas porta já estejam sendo utilizadas na sua máquina, altere a configuração neste arquivo.
+O Rocket Chat é executado na porta 3000, conforme definido no arquivo docker-compose.yml. Caso alguma dessas porta já estejam sendo utilizadas na sua máquina, altere a configuração neste arquivo.
 Com as configurações padrões, acessando http://localhost:3000/ você terá acesso ao Rocket Chat.
 
 ## Adicionando o bot
@@ -35,15 +32,38 @@ No menu lateral esquerdo, selecione a opção **Usuários**:
 
 ![admin page](./docs/images/user.png)
 
-Logo em seguida, aparecerá uma barra lateral direita com uma opção com um +. Clique nesta opção e preencha as informações conforme a imagem a seguir. O nome do bot pode ser alterado, mas devem ser usados o usuário e senha que estão definidos nas variáveis ROCKETCHAT_USER e ROCKETCHAT_PASSWORD no arquivo docker-compose.yml. Por padrão, o usuário e senha são, botnat e botnatpass, respectivamente.
+Logo em seguida, aparecerá uma barra lateral direita com uma opção com um +. Clique nesta opção e preencha as informações conforme a imagem a seguir. O nome do bot pode ser alterado, mas devem ser usados o usuário e senha que estão definidos nas variáveis `user` e `password` no arquivo `credential.yml`. Por padrão, o usuário e senha são, "rouana" e "rouanapass", respectivamente.
 
 Para adicionar a role ao bot, clique na opção **Select a Role**, selecione bot e clique na opção ADD ROLE. Por fim, clique em *Salvar*.
 
 ![create bot](./docs/images/create_bot.png)
 
-Agora você já está apto a conversar com o bot diretamente, ou pelos canais usando @botnat antes da mensagem.
+Agora você já está apto a conversar com o bot diretamente, ou pelos canais usando @rouana antes da mensagem.
 
-### Livechat
+## Configurando o WebHook
+
+É necessário configurar um WebHook de saída para redirecionar as mensagens do
+chat para o servidor do Rasa Core. Para isso, vá em **Administração > Integrações > Nova integração > WebHook de Saída**.
+Defina o **Trigger** do evento como sendo **Message Sent**.
+Dentro da configuração do WebHook defina os campos da seguinte forma:
+
+```
+Event Trigger: Message Sent
+Enabled: True
+Channel: @rouana
+URLs: http://rouana:5005/webhook
+Post as: rouana
+```
+
+## Rodando o Bot
+
+Para executar o bot é preciso configurar o arquivo `credentials.yml` com os dados correspondentes.
+Depois disso, execute o container do bot:
+```sh
+docker-compose up -d rouana
+```
+
+### Livechat -  NEEDS UPDATE
 
 O livechat permite que seja criada uma janela de conversa com o bot integrável à outras páginas. Para ativá-lo acesse novamente a opção 
 **Administração**, clicando na seta para baixo, ao lado do nome da sua conta, no meu lateral esquerdo. Em seguida, clique na opção **Livechat**. Na tela seguinte, marque a opção **Livechat habilitado** como *Sim*, e a opção **Mostrar formulário de pré registro** como *Não*, para que não seja mostrado o formulário solicitando e-mail e senha no chat. Clique em *Salvar alterações*.
@@ -66,17 +86,3 @@ Após integrar o código ao seu site, uma janela semelhante a da imagem a seguir
 
 ![Livechat windown](./docs/images/livechat_windown.png)
 
-#### Mensagem de boas vindas no Livechat
-
-Para disparar uma mensagem de boas vindas podem ser usados **Gatilhos**. Um **gatilho** dispara uma ação, de acordo com uma condição. A condição pode ser o usuário acessar uma URL ou o tempo do usuário no site. A ação, neste caso, é o envio da mensagem de boas vindas.
-
-Para adicionar um **gatilho** ao Livechat, no menu lateral esquerdo clique na opção **gatilhos**. Em seguida, selecione a opção **Habilitado** como *Sim*, e preencha o nome e a descrição do **gatilho**. Caso o critério para o disparo seja o usuário entrar numa URL, selecione no campo **Condition** a opção **Visitor page URL**, e no campo ao lado, digite a URL desejada.
-Selecione no campo **Action** a opção **Send a message**, digite o nome do bot (**botnat**) e a mensagem de boas-vindas. Por fim, clique em **Save**.
-
-![Livechat Trigger](./docs/images/trigger.png)
-
-Caso o critério para o disparo seja o tempo do usuário no site, selecione no campo **Condition** a opção **Visitor time on site**, e no campo ao lado, informe o tempo que deve ser aguardado. Por fim, clique em **Save**.
-
-## Alterando o YAML
-
-Para mais informações sobre a estrutura do YAML e como modificá-lo, acesse o [README do Hubot-Natural](https://github.com/RocketChat/hubot-natural/blob/master/README.md).

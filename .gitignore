@@ -1,8 +1,9 @@
 ### Rocketchat ###
 
 # Generated during the docker-compose up
-data
+/data
 uploads
+/rouana/models
 
 # Created by https://www.gitignore.io/api/vim,node,macos,linux
 

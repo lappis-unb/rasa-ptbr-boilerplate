@@ -49,7 +49,7 @@ services:
     ports:
       - 5005:5005
     volumes:
-     - .:/opt/rouana
+     - .:/app
     links:
       - rocketchat
 
