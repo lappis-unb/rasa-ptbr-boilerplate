@@ -14,28 +14,18 @@ services:
       - MAIL_URL=smtp://smtp.email
       - ADMIN_USERNAME=admin
       - ADMIN_PASS=admin
-#       - HTTP_PROXY=http://proxy.domain.com
-#       - HTTPS_PROXY=http://proxy.domain.com
     depends_on:
       - mongo
     ports:
       - 3000:3000
-    # labels:
-    #   - "traefik.backend=rocketchat"
-    #   - "traefik.frontend.rule=Host: your.domain.tld"
 
   mongo:
     image: mongo:3.2
     restart: unless-stopped
     volumes:
      - ./data/db:/data/db
-     #- ./data/dump:/dump
     command: mongod --smallfiles --oplogSize 128 --replSet rs0
-    # labels:
-    #   - "traefik.enable=false"
 
-  # this container's job is just run the command to initialize the replica set.
-  # it will run the command and remove himself (it will not stay running)
   mongo-init-replica:
     image: mongo:3.2
     command: 'mongo mongo/rocketchat --eval "rs.initiate({ _id: ''rs0'', members: [ { _id: 0, host: ''localhost:27017'' } ]})"'
@@ -43,14 +33,12 @@ services:
       - mongo
 
   rouana:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile
+    build: .
+    environment:
+      - ROUANA_TRAINING_EPOCHS=20
+      - ROUANA_PORT=5005
+      - ROUANA_CONNECTOR=rocketchat
     ports:
       - 5005:5005
     volumes:
      - .:/app
-    links:
-      - rocketchat
-    environment:
-      - TRAINING_EPOCHS=20
