@@ -214,6 +214,59 @@ sumido. O que faço?
 - [Custo de Auditoria](tipo de custo)
 - sobre [Custo de Auditoria](tipo de custo)
 
+## intent:lei_rouanet_definicao
+- O que é Lei Rouanet?
+- Defina Lei Rouanet
+- Queria saber o que é a lei
+- Não sei o que é a lei
+- Me fale sobre a lei rouanet
+
+## intent:lei_rouanet_projetos
+- Quantos projetos já foram agraciados pela lei rouanet?
+- Quantos projetos usam da lei rouanet?
+- Quantos projetos existem?
+- Qual a média de projetos por ano?
+- o número de projetos
+
+## intent:lei_rouanet_elegibilidade
+- quem pode se inscrever na lei rouanet?
+- como eu me inscrevo na lei rouanet?
+- posso me inscrever na lei rouanet?
+- quero participar da lei
+- onde eu me inscrevo
+- eu posso usar a lei?
+- como se aplicar?
+- quem pode se aplicar?
+
+## intent:lei_rouanet_arrecadamento
+- quanto dinheiro a lei movimenta?
+- quanto dinheiro a lei rouanet arrecada?
+- De onde vem o dinheiro da lei rouanet?
+- o dinheiro da lei rouanet é publico?
+- Porque os cidadões tem que pagar pelos projetos da lei rouanet?
+- quem pode contribuir para um projeto da lei rouanet?
+- eu como cidadao posso contribuir para um projeto
+- pessoa fisica pode contribuir
+
+## intent:lei_rouanet_denuncia
+- quero denunciar um projeto
+- como faço uma denuncia
+- tem um projeto usando o dinheiro da lei de forma indevida
+- tem um projeto fazendo o uso do dinheiro de forma ilegal
+- com quem eu falo para denunciar um projeto
+- posso denunciar um projeto para você
+- tenho um projeto para denunciar
+- o que fazer quando alguem utiliza o dinheiro de forma ilegal
+
+## intent:lei_rouanet_papeis
+- Qual o papel do ministério da cultura na lei rouanet?
+- Qual o papel do MinC na lei rouanet?
+- O que o MinC faz na lei rouanet?
+- O que é a SEFIC?
+- Minstério da cultura tem a alguma interferencia na lei rouanet?
+- O que a SEFIC faz na lei rouanet?
+- Secretaria de fomento e incentivo a cultura
+
 ## synonym:preco
 + preço
 

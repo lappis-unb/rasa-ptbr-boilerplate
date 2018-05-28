@@ -1,7 +1,6 @@
 stages:
   - build
-  - deploy_to_development
-  - deploy_to_production
+  - deploy
 
 variables:
   ROUANA_RELEASE_IMAGE: $CI_REGISTRY_IMAGE/rouana:$CI_BUILD_REF_NAME
@@ -25,7 +24,7 @@ build rouana:
 
 deploy_to_development:
   image: cdrx/rancher-gitlab-deploy
-  stage: deploy_to_development
+  stage: deploy
   services:
     - docker:dind
   script:
@@ -38,7 +37,7 @@ deploy_to_development:
 
 deploy_to_production:
   image: cdrx/rancher-gitlab-deploy
-  stage: deploy_to_production
+  stage: deploy
   services:
     - docker:dind
   script:
