@@ -17,7 +17,7 @@ services:
     depends_on:
       - mongo
     ports:
-      - 3000:3000
+      - 3001:3000
 
   mongo:
     image: mongo:3.2
@@ -35,7 +35,7 @@ services:
   rouana:
     build: .
     environment:
-      - ROUANA_TRAINING_EPOCHS=20
+      - ROUANA_TRAINING_EPOCHS=300
       - ROUANA_PORT=5005
       - ROUANA_CONNECTOR=rocketchat
     ports:

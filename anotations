@@ -1,0 +1,116 @@
+- As pessoas preferem coisas simples e intuitivas, do que coisas super tecnológicas e complexas.
+
+- Toda interação que for possível tirar do usuário é interessante trazer para o bot. Por exemplo, é melhor dizer para o usuário logo no início quais são as habilidades do seu bot ao invés de deixar ele tentar descobrir. Se possível, também é bom ensinar o usuário a voltar passos no fluxo de conversa, como dizer para ele como voltar para o menu principal e ver sobre o que o bot pode falar; Talvez criar uma intenção chave de dúvidas;
+
+- Se o usuário sair da conversa e depois voltar, e tentar continuar uma conversa. o que rola? É possível identificar que o usuário já conversou com o bot? criar uma custom action para isso?
+
+- Não enviar textos super gigantes. Quebrar a mensagem para dar tempo de leitura ao usuário. Colocar a paradinha de "digitando". O tempo que a paradinha de "digitando" deve ficar na tela deve ser proporcional ao tempo do usuário ler a mensagem anterior, e não proporcional ao tempo de leitura da próxima mensagem.
+
+- Se puder é sempre bom dar mais opções de navegação para o usuário, guiando ele pelos fluxos de conversa.
+
+ref: https://chatbotsmagazine.com/6-tips-for-designing-your-best-chatbot-591aba9c9eff
+
+------------------------------------------------
+
+
+- É importante ser consistente e não querer que o bot faça algo que ele não é capaz de fazer; Não dê ao usuário esperança de um padrão de inteligência que o bot não possui.
+
+- Se preocupar em como voltar ao início da conversa;
+
+- Não fazer o usuário ler demais. Entre 2 e 3 linhas por mensagens(63 a 90 caracteres). Se for mensagem de várias partes, elas somadas não devem dar mais de 140 caracteres;
+
+- Testar o bot em diversos dispositivos, para garantir que o osuário não está precisando rolar a tela para acompanhar as mensagens. Se o user estiver no celular ele também abrirá o teclado para digitar, então o espaço de leitura dele é curto.
+
+- Quando enviar links por exemplo, garantir que o usuário tenha entendido que ele será redirecionado para outra página.
+
+- Utilizar botões e opções é uma prática boa para evitar que os usuário saiam do caminho feliz. Porém o prejuízo é que passa pro usuário a impressão de que ele está muito limitado.
+
+- Identificação de contextos é uma das funcionalidades mais importantes em contextos de conversa. Deve-se portanto tomar um cuidado especial para não acabar gerando contextos de limitação da interação dos usuários por causa dos contextos.
+
+- Use palavras que o usuário entenderá, de acordo com o contexto. Assegure-se de que todo usuário que está em um fluxo técnico conseguirá entender palavras técnicas. Ou seja, nem todos os usuário devem chegar facilmente à este fluxo.
+
+- Os feedbacks devem ser confirmativos ao invés de afirmativos. Confirmando com o usuário que o bot entendeu corretamente, e não afirmando o que entendeu e possivelmente fazendo parecer que o usuário errou.
+
+- Não deixar o usuário esperando, se a resposta for demorar muito. Deve-se deixar o usuário a parte disso, e dar o máximo de feedback possíveis para ele.
+
+- IMPORTANTE: Descobrir como se virar quando o usuário cometer um erro e quiser voltar alguns passos mantendo o contexto em questão.
+
+ref: https://chatbotsmagazine.com/19-best-practices-for-building-chatbots-3c46274501b2
+
+---------------------------------------------
+
+- Criar uma cara pra rouana, e uma personalidade. Não precisa ser uma cara humana, mas algo que o usuário se imagine falando para. Como uma imagem de um robô, ou algo do tipo. 
+
+- Construir respostas espertas para quando a rouana não entender ou caso o usuário digite alguma coisa zuada. **IMPORTANTE**. Criar um caso de resposta genérico e inteligente para qualquer coisa que o usuário diga que possa fugir totalmente do assunto em questão.
+
+- Interfaces conversacionais não devem ser transcrições diretas de interfaces gráficas.
+
+- É preciso ter uma forma do usuário voltar o contato com seu bot quando a interação acaba. Pode ser uma mensagem simples, tipo dizer: "Diga olá novamente se precisar de algo".
+
+ref: https://chatbotsmagazine.com/11-more-best-ux-practices-for-building-chatbots-67362d1104d9
+
+---------------------------------------------
+
+Heurísticas aplicadas em bot
+
+1 - Visibilidade do status do sistema: É a ideia de sempre dar um feedback para o usuário, por exemplo quando está digitando. E a ideia de avisar o usuário sempre que uma ação for demorar mais do que o esperado.
+
+2 - Mapeamento com o mundo real: O bot deve falar a linguagem dos usuários que estão usando-o.
+
+3 - Controle do usuário e liberdade: Esse é bem difícil de se alcançar. È baseado na lógica de que é preciso haver sempre um meio de saída ou de "volta" para o fluxo de conversa do usuário.
+
+4 - Consistência e padrões: É bom haver um jeito do usuário saber quando o bot está falando algo em linguagem natural apenas, ou quando este está indicando um comando que pode ser passado. eg: Utilizar letras maiúsculas, como com: "HELP" e "NEXT".
+
+5 - Prevenção de erros: Colher confirmações do usuário em passos importantes pode ser uma boa ideia.
+
+6 - Reconhecimento melhor que memorização:
+
+7 - Flexibilidade e eficiência: Se der, utilizar de recursos mais avançados para simplificar a interaçõa. Por exemplo usar atalhos, ou enviar conteúdos direto no chat para o usuário, como imagens explicativas e etc.
+
+8 - Estética e design simples: 
+
+9 - Ajudar o usuário a reconhecer erros e se recuperar destes.
+
+10 - Ajuda e documentação pode ajudar: Como mandar link que expliquem melhor algo que o usuário possa estar perguntando.
+
+
+https://chatbotsmagazine.com/usability-heuristics-for-bots-7075132d2c92
+
+---------------------------------------------
+Mensagem de erro:
+Ooo perdão, não consigo falar sobre isso. Para saber os assuntos que eu posso responder basta digitar "Ajuda".
+
+É bom fazer a parada parecer uma conversa e não um command line que só espera comandos
+
+--------------------------------------------
+
+
+Objetivos de Aprendizagem - Grupo 01
+
+Aprenda o que é a Lei Rouanet.
+Descubra quantos projetos já participaram da Lei Rouanet.
+Entenda o papel da SEFIC e MinC na Lei Rouanet.
+
+Objetivos de Aprendizagem - Grupo 02
+
+Imagine que você fez sua proposta de projeto, e quer saber quando você pode começar a captar os recursos para ele, descubra como e quando você estará autorizado para fazer isso.
+Seu projeto está na situação D52, descubra o que isso significa.
+Seu projeto já foi enquadrado, aprenda como desistir do prazo recursal.
+Descubra como recuperar sua senha no SALIC.
+Descubra como fazer o cadastramento de proponentes no SALIC.
+
+Objetivos de Aprendizagem - Grupo 03
+
+Descubra como você pode vincular o seu CPF ao CNPJ.
+Aprenda como fazer sua proposta de projeto.
+O valor do ingresso do seu projeto é maior que 250 reais, descubra como é possível cadastrar um valor maior.
+Você passou a manhã de hoje preenchendo a proposta no SALIC, porém ao retornar ao sistema você notou que ela não tinha sido salva, descubrar como resolver isso.
+
+Objetivos de Aprendizagem - Grupo 04
+
+Descubra a diferença entre contrato de patrocínio e carta de intenção.
+Descubra em qual banco você pode abrir a conta do seu projeto.
+Aprenda se você pode utilizar o dinheiro captado em aplicações financeiras.
+Seu projeto já começou a captar recursos, descubra quando você pode movimentar o recurso captado.
+Você conseguiu captar mais do que o requistado para o seu projeto, descubra o que fazer nesta situação.
+
