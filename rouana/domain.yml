@@ -1,68 +1,25 @@
 slots:
-  categoria:
-    type: text
-  definição:
-    type: text
-  documento:
-    type: text
-  erro:
-    type: text
-  fluxo:
-    type: text
-  importante:
-    type: text
-  item:
-    type: text
-  pendência:
-    type: text
-  pessoa jurídica:
-    type: text
-  tipo de custo:
-    type: text
-  tipo de pessoa:
-    type: text
-  valor:
+  eh_proponente:
     type: text
 
 entities:
   - categoria
-  - definição
-  - documento
-  - erro
-  - fluxo
-  - importante
-  - item
-  - pendência
-  - pessoa jurídica
-  - tipo de custo
-  - tipo de pessoa
-  - valor
 
 intents:
   - cumprimento
   - escolha_de_assunto
-  - sentimento_positivo
-  - sentimento_negativo
-  - lei_rouanet_definicao
-  - lei_rouanet_projetos
-  - lei_rouanet_elegibilidade
-  - lei_rouanet_arrecadamento
-  - lei_rouanet_denuncia
-  - lei_rouanet_papeis
+  - resposta_positiva
+  - resposta_negativa
 
 actions:
   - action_cumprimento
   - action_apresentacao_basica
-  - action_pergunta_de_assunto
-  - action_escolha_de_assunto
-  - action_sentimento_positivo
-  - action_sentimento_negativo
-  - action_lei_rouanet_definicao
-  - action_lei_rouanet_projetos
-  - action_lei_rouanet_elegibilidade
-  - action_lei_rouanet_arrecadamento
-  - action_lei_rouanet_denuncia
-  - action_lei_rouanet_papeis
+  - action_pergunta_de_perfil
+  - action_resposta_positiva
+  - action_resposta_negativa
+  - action_responder
+  - actions.ActionConfirmaProponente
+  - actions.ActionDesconfirmaProponente
 
 templates:
   action_cumprimento:
@@ -72,42 +29,13 @@ templates:
   action_apresentacao_basica:
     - "Olá, sou a Rouana, assistente virtual do Ministério da Cultura. Meu
        objetivo é tentar responder algumas de suas dúvidas."
-  action_pergunta_de_assunto:
-    - "Posso responder suas dúvidas sobre: A Lei Rouanet, preenchimento de
-       proposta no SALIC, sobre a fase de admissibilidade do seu projeto ou
-       sobre a fase execução do seu projeto."
-  action_escolha_de_assunto:
-    - "Legal mané, vamos conversar sobre o que você quer então."
-  action_sentimento_negativo:
-    - "Deixa de ser chorão, humano!"
-    - "Agradece por estar vivo, humano!"
-    - "Que dramático você é, humano!"
-  action_sentimento_positivo:
-    - "Que bom que está bem."
-    - "Fico feliz por você."
-  action_lei_rouanet_definicao:
-    - "A Lei 8.313/91, conhecida como Lei Rouanet, é o principal mecanismo de fomento à Cultura do Brasil. Ela instituiu o Programa Nacional de Apoio à Cultura (Pronac)."
-    - "O nome Rouanet remete a seu criador, o então secretário Nacional de Cultura, o diplomata Sérgio Paulo Rouanet."
-    - "A Lei estabelece as normativas de como o Governo Federal deve disponibilizar recursos para a realização de projetos artístico-culturais."
-    - "A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de Investimento Cultural e Artístico (Ficart). Este nunca foi implementado, enquanto o Incentivo Fiscal – também chamado de mecenato – prevaleceu e chega ser confundido com a própria Lei."
-  action_lei_rouanet_projetos:
-    - "Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos."
-    - "Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos."
-    - "Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes."
-  action_lei_rouanet_elegibilidade:
-    - "Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro, pode se beneficiar desta Lei e se candidatar à captação de recursos de renúncia fiscal."
-    - "A proponência pode ser feita por Pessoas físicas com atuação comprovada na área cultural, ou Pessoas jurídicas de natureza cultural com, no mínimo, dois anos de atividade, podendo ser:"
-    - "Pessoas jurídicas públicas da administração indireta (autarquias, fundações culturais etc.)"
-    - "ou pessoas jurídicas privadas com ou sem fins lucrativos (empresas, cooperativas, fundações, ONGs, organizações culturais etc.)"
-  action_lei_rouanet_arrecadamento:
-    - "O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural. Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura."
-    - "Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a declaração no modelo completo podem contribuir com a lei Rouanet apoiando projetos."
-    - "Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei."
-  action_lei_rouanet_denuncia:
-    - "Para denunciar um projeto suspeito de irregularigades é preciso registrar uma denúncia para o Ministério Público Federal. Sua denúncia pode ser feita no site do ministério público no link:"
-    - "http://aplicativos.pgr.mpf.mp.br/ouvidoria/portal/cadastro.html?tipoServico=2 ,ou pelo aplicativo do MPF na opção de 'Registrar denúncia ou solicitação'."
-  action_lei_rouanet_papeis:
-    - "O Ministério da Cultura é o responsável pela aprovação e monitoramento dos projetos submetidos para captação. Para que um projeto seja aprovado uma proposta deve ser cadastrada junto ao Ministério da Cultura onde a proposta passa por um exame de admissibilidade, que diz respeito à viabilidade técnica da atividade a ser realizada."
-    - "Uma vez que a proposta seja aprovada, ela se transformará em um projeto (com um número de Pronac). O projeto, por sua vez, precisa ser aprovado por uma das unidades técnicas vinculadas ao Minitério da Cultura. Após o parecer do Ministério da Cultura, o projeto ainda é submetido à CNIC que irá aprová-lo ou indeferi-lo"
-    - "A Sefic (Secretaria de Fomento e Incentivo à Cultura) planeja, coordena e supervisiona a operacionalização do Programa Nacional de Apoio à Cultura (Pronac), na aprovação, monitoramento e prestação de contas de projetos culturais."
-
+  action_pergunta_de_perfil:
+    - "Você já é um proponente da Lei Rouanet?"
+  action_resposta_positiva:
+    - "Você tem dúvidas sobre admissibilidade ou sobre a execução do seu 
+       projeto?"
+  action_resposta_negativa:
+    - "Se você tiver alguma dúvida a respeito da Lei Rouanet, eu posso 
+       tentar ajudar. :)"
+  action_responder:
+    - "Então o valor é {eh_proponente}"

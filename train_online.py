@@ -16,8 +16,8 @@ logger = logging.getLogger(__name__)
 
 
 def run_concertbot_online(input_channel, interpreter,
-                          domain_file="rouana_domain.yml",
-                          training_data_file='data/rouana_stories.md'):
+                          domain_file="rouana/domain.yml",
+                          training_data_file='rouana/data/rouana_stories.md'):
     agent = Agent(domain_file,
                   policies=[MemoizationPolicy(), KerasPolicy()],
                   interpreter=interpreter)
@@ -26,7 +26,7 @@ def run_concertbot_online(input_channel, interpreter,
                        input_channel=input_channel,
                        max_history=2,
                        batch_size=50,
-                       epochs=1,
+                       epochs=300,
                        max_training_samples=300)
 
     return agent
