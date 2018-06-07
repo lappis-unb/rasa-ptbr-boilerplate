@@ -80,10 +80,11 @@ https://chatbotsmagazine.com/usability-heuristics-for-bots-7075132d2c92
 Mensagem de erro:
 Ooo perdão, não consigo falar sobre isso. Para saber os assuntos que eu posso responder basta digitar "Ajuda".
 
-É bom fazer a parada parecer uma conversa e não um command line que só espera comandos
+É bom fazer o fluxo parecer uma conversa e não um command line que só espera comandos
+
+Se vão ser usadas perguntas diferentes para um conjunto X de respostas, é importante que todas as perguntas levem àquelas respostas.
 
 --------------------------------------------
-
 
 Objetivos de Aprendizagem - Grupo 01
 

@@ -10,11 +10,16 @@ intents:
   - escolha_de_assunto
   - resposta_positiva
   - resposta_negativa
+  - projeto_ja_submetido
+  - duvida_preenchimento
 
 actions:
   - action_cumprimento
   - action_apresentacao_basica
   - action_pergunta_de_perfil
+  - action_classificacao_de_proponente
+  - action_projeto_submetido
+  - action_duvida_preenchimento
   - action_resposta_positiva
   - action_resposta_negativa
   - action_responder
@@ -31,6 +36,16 @@ templates:
        objetivo é tentar responder algumas de suas dúvidas."
   action_pergunta_de_perfil:
     - "Você já é um proponente da Lei Rouanet?"
+  action_classificacao_de_proponente:
+    - "Legal! você já submeteu um projeto ou tem dúvidas sobre o preenchimento?"
+    - "Interessante! Você já submeteu um projeto ou precisa de ajuda no 
+       preenchimento da proposta?"
+    - "Ok. Você já submeteu um projeto? Ou precisa de ajuda no preenchimento
+       da proposta?"
+  action_projeto_submetido:
+    - "Que bom que já submeteu, tu é o bichão doido mermo em!"
+  action_duvida_preenchimento:
+    - "Maneiro, então vamos pensar sobre preenchimento!"
   action_resposta_positiva:
     - "Você tem dúvidas sobre admissibilidade ou sobre a execução do seu 
        projeto?"

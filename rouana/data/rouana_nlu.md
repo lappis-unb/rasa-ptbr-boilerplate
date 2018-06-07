@@ -15,13 +15,25 @@
 - eai, tudo bom?
 
 ## intent:resposta_positiva
-- sim, eu sou um proponente
 - sim
+- sim, sou um proponente
 
 ## intent:resposta_negativa
-- não sou um proponente
-- não, eu não sou um proponente
 - não
+
+## intent:projeto_ja_submetido
+- projeto
+- eu já submeti um projeto
+- Sim eu já submeti um projeto
+- Já submeti
+
+## intent:duvida_preenchimento
+- Tenho dúvidas sobre preenchimento
+- preenchimento
+- quero perguntar sobre o preenchimento da proposta
+- preenchimento de proposta
+- Dúvidas sobre o preenchimento da proposta
+- falar sobre preenchimento
 
 ## intent:escolha_de_assunto
 - gostaria de falar sobre a [lei rouanet](assunto)
