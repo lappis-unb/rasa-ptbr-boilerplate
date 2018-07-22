@@ -20,6 +20,7 @@
 
 ## intent:resposta_negativa
 - não
+- nao
 
 ## intent:projeto_ja_submetido
 - projeto

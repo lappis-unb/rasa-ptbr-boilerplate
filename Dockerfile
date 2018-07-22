@@ -1,7 +1,9 @@
 from registry.gitlab.com/lappis-unb/services/rouana/rasa_core
 
-add . /app
+add . /opt/rouana
 
-workdir /app
+run python -m spacy download pt
+
+workdir /opt/rouana
 
 cmd bash -c "make train && make run_conversation"
