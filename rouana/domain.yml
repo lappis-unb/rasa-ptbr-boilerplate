@@ -1,26 +1,26 @@
+intents:
+  - cumprimentar
+  - afirmar_proponente
+  - negar_proponente
+  - o_que_eh
+
 slots:
   eh_proponente:
-    type: text
-
-entities:
-  - categoria
-
-intents:
-  - cumprimento
-  - escolha_de_assunto
-  - resposta_positiva
-  - resposta_negativa
-  - projeto_ja_submetido
-  - duvida_preenchimento
-
-actions:
-  - action_cumprimento
-  - action_apresentacao_basica
+    type: bool
 
 templates:
-  action_cumprimento:
-    - "Olá, como você está?"
-    - "Oi humano, você está bem?"
-    - "Oi! como está você?"
-  action_apresentacao_basica:
-    - "Olá, sou a Rouana, assistente virtual do Ministério da Cultura. Meu objetivo é tentar responder algumas de suas dúvidas."
+  utter_cumprimetar:
+    - "Olá, eu sou a Rouana sua assistente virtual da cultura"
+  utter_perguntar_eh_proponente:
+    - "Você é um proponente?"
+  utter_despedir:
+    - "Tchau, até a próxima =)"
+
+actions:
+  - utter_cumprimetar
+  - utter_perguntar_eh_proponente
+  - utter_despedir
+  - rouana.actions.ActionSetSlotTrue
+  - rouana.actions.ActionSetSlotFalse
+  - rouana.actions.ActionWhatIs
+

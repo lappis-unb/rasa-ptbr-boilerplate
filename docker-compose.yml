@@ -35,7 +35,7 @@ services:
   rouana:
     build: .
     environment:
-      - ROUANA_TRAINING_EPOCHS=300
+      - ROUANA_TRAINING_EPOCHS=500
       - ROUANA_PORT=5005
       - ROUANA_CONNECTOR=rocketchat
     ports:
