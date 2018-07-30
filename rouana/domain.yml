@@ -1,7 +1,10 @@
 intents:
   - cumprimentar
-  - afirmar_proponente
-  - negar_proponente
+  - afirmar_curiosidades
+  - afirmar_projeto
+  - lei_rouanet_definicao
+  - lei_rouanet_quantidade_projetos
+  - lei_rouanet_arrecadacao
   - o_que_eh
 
 slots:
@@ -10,17 +13,21 @@ slots:
 
 templates:
   utter_cumprimetar:
-    - "Olá, eu sou a Rouana sua assistente virtual da cultura"
-  utter_perguntar_eh_proponente:
-    - "Você é um proponente?"
+    - "Oi eu sou a Rouana, assistente virtual do minc, e posso te ajudar a esclarecer dúvidas sobre a Lei Rouanet,
+       ou solucionar problemas de proposta e projeto."
+  utter_definir_perfil:
+    - "Você quer conversar sobre criação e andamento de projetos? Ou, podemos falar mais sobre a Lei Rouanet."
   utter_despedir:
     - "Tchau, até a próxima =)"
 
 actions:
   - utter_cumprimetar
-  - utter_perguntar_eh_proponente
+  - utter_definir_perfil
   - utter_despedir
   - rouana.actions.ActionSetSlotTrue
   - rouana.actions.ActionSetSlotFalse
   - rouana.actions.ActionWhatIs
-
+  - rouana.actions.ActionIndicacaoCuriosidades
+  - rouana.actions.ActionDefinicaoLei
+  - rouana.actions.ActionQuantidadeProjetos
+  - rouana.actions.ActionArrecadacaoLei

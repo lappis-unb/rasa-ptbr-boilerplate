@@ -1,25 +1,30 @@
 ## path1
 * cumprimentar
   - utter_cumprimetar
-  - utter_perguntar_eh_proponete
-> check_asked_question
+  - utter_definir_perfil
+* afirmar_curiosidades
+  - action_indicacao_curiosidades
+> identificar_curiosidade
 
-
-## path11
-> check_asked_question
-* afirmar_proponente
-  - action_set_slot_true
+## path2
+* cumprimentar
+  - utter_cumprimetar
+  - utter_definir_perfil
+* afirmar_projeto
   - utter_despedir
 
-## path12
-> check_asked_question
-* negar_proponente
-  - action_set_slot_false
-  - utter_despedir
+## path1_1
+> identificar_curiosidade
+*  lei_rouanet_definicao
+  - action_definicao_lei
 
-## path13
-> check_asked_question
-* o_que_eh
-  - action_what_is
-  - utter_despedir
 
+## path1_2
+> identificar_curiosidade
+* lei_rouanet_quantidade_projetos
+  - action_quantidade_projetos
+
+## path1_3
+> identificar_curiosidade
+* lei_rouanet_arrecadacao
+  - action_arrecadacao_lei

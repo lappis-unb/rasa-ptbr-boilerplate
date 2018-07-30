@@ -43,61 +43,47 @@ class ActionSetSlotFalse(Action):
         dispatcher.utter_message('eh_propenete = False')
         return [SlotSet("eh_propenete", False)]
 
-# print(dir(dispatcher))
-# [
-#  '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__',
-#  '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__',
-#  '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__',
-#  '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',
-#  '__str__', '__subclasshook__', '__weakref__', '_fill_template_text',
-#  '_template_variables', 'domain', 'latest_bot_messages', 'output_channel',
-#  'retrieve_template', 'send_messages', 'sender_id', 'utter_attachment',
-#  'utter_button_message', 'utter_button_template', 'utter_custom_message',
-#  'utter_message', 'utter_response', 'utter_template'
-# ]
-# print(dir(tracker))
-# [
-#  '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__',
-#  '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__',
-#  '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__',
-#  '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',
-#  '__str__', '__subclasshook__', '__weakref__', '_create_events',
-#  '_max_event_history', '_merge_slots', '_paused', '_reset', '_reset_slots',
-#  '_set_slot', '_topic_stack', 'applied_events', 'as_dialogue',
-#  'clear_follow_up_action', 'copy', 'current_slot_values', 'current_state',
-#  'default_topic', 'events', 'events_after_latest_restart', 'export_stories',
-#  'export_stories_to_file', 'follow_up_action', 'from_dict',
-#  'generate_all_prior_trackers', 'get_latest_entity_values', 'get_slot',
-#  'idx_after_latest_restart', 'init_copy', 'is_paused', 'latest_action_name',
-#  'latest_bot_utterance', 'latest_message', 'past_states',
-#  'previous_topic', 'recreate_from_dialogue', 'replay_events',
-#  'sender_id', 'slots', 'topic', 'topics', 'travel_back_in_time',
-#  'trigger_follow_up_action', 'update'
-# ]
-# print(dir(domain))
-# [
-#  'DEFAULT_ACTIONS', '__abstractmethods__', '__class__', '__delattr__',
-#  '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__',
-#  '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__',
-#  '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__',
-#  '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__',
-#  '__subclasshook__', '__weakref__', '_abc_cache', '_abc_negative_cache',
-#  '_abc_negative_cache_version', '_abc_registry', '_action_classes',
-#  '_action_names', '_actions', '_entities', '_factory_name',
-#  '_intents', '_lazy_actions', '_lazy_entities', '_lazy_entity_states',
-#  '_lazy_input_state_map', '_lazy_input_states', '_lazy_intent_states',
-#  '_lazy_intents', '_lazy_num_actions', '_lazy_prev_action_states',
-#  '_lazy_slot_states', '_lazy_slots', '_lazy_templates',
-#  '_raise_action_not_found_exception', '_slot_definitions', '_slots',
-#  '_templates', 'action_for_index', 'action_for_name', 'action_map',
-#  'action_names', 'actions', 'collect_slots', 'collect_templates',
-#  'compare_with_specification', 'default_topic', 'entities', 'entity_states',
-#  'get_active_states', 'get_parsing_states', 'get_prev_action_states',
-#  'index_for_action', 'index_of_state', 'input_state_map', 'input_states',
-#  'instantiate_actions', 'intent_states', 'intents', 'load',
-#  'load_specification', 'num_actions', 'num_states', 'persist',
-#  'persist_specification', 'prev_action_states', 'random_template_for',
-#  'restart_intent', 'slot_states', 'slots', 'slots_for_entities',
-#  'states_for_tracker_history', 'store_entities_as_slots', 'templates',
-#  'topics', 'validate_domain_yaml'
-# ]
+class ActionIndicacaoCuriosidades(Action):
+    def name(self):
+        return 'action_indicacao_curiosidades'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message('Tá bom! A partir de agora, você pode perguntar informações sobre a Lei, dinheiro dos projetos ou o que é necessário fazer para submeter um projeto?')
+        dispatcher.utter_message('Vou tentar responder da melhor maneira possível :smiley:')
+        return []
+
+
+class ActionDefinicaoLei(Action):
+    def name(self):
+        return 'action_definicao_lei'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message('A Lei 8.313/91, conhecida como Lei Rouanet, é o principal mecanismo de fomento à Cultura do Brasil. Ela instituiu o Programa Nacional de Apoio à Cultura (Pronac).')
+        dispatcher.utter_message('O nome Rouanet remete a seu criador, o então secretário Nacional de Cultura, o diplomata Sérgio Paulo Rouanet.')
+        dispatcher.utter_message('A Lei estabelece as normativas de como o Governo Federal deve disponibilizar recursos para a realização de projetos artístico-culturais.')
+        dispatcher.utter_message('"A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de Investimento Cultural e Artístico (Ficart). \
+        Este nunca foi implementado, enquanto o Incentivo Fiscal – também chamado de mecenato – prevaleceu e chega ser confundido com a própria Lei."')
+        return []
+
+
+class ActionQuantidadeProjetos(Action):
+    def name(self):
+        return 'action_quantidade_projetos'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message('Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.')
+        dispatcher.utter_message('Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes.')
+        dispatcher.utter_message('Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos.')
+        return []
+
+class ActionArrecadacaoLei(Action):
+    def name(self):
+        return 'action_arrecadacao_lei'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message(' O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural. \
+         Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura.')
+        dispatcher.utter_message('Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a declaração no modelo completo \
+          podem contribuir com a lei Rouanet apoiando projetos.')
+        dispatcher.utter_message('Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.')
+        return []
