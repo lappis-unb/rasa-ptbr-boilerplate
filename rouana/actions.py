@@ -87,3 +87,39 @@ class ActionArrecadacaoLei(Action):
           podem contribuir com a lei Rouanet apoiando projetos.')
         dispatcher.utter_message('Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.')
         return []
+
+class ActionSubmissaoDeProjetos(Action):
+    def name(self):
+        return 'action_submissao_de_projeto'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message('Tudo bem. Aqui vai um resumo do processo:')
+        dispatcher.utter_message('A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.')
+        dispatcher.utter_message('Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.')
+        dispatcher.utter_message('Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.')
+        dispatcher.utter_message('Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.')
+        dispatcher.utter_message('A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.')
+        return []
+
+class ActionDefinirContexto(Action):
+    def name(self):
+        return 'action_definir_contexto'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message('Entendi.') 
+        dispatcher.utter_message('Então, onde sua pergunta se encaixa melhor:')
+        dispatcher.utter_message('1. Processo e estado do projeto')
+        dispatcher.utter_message('2. Preenchimento do Salic')
+        dispatcher.utter_message('3. Datas e Prazos')
+        dispatcher.utter_message('4. Erros do SALIC')
+        dispatcher.utter_message('5. Não sei bem onde se encaixa')
+        return []
+
+class ActionAviso(Action):
+    def name(self):
+        return 'action_aviso'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message('Tudo bem, para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.')
+        dispatcher.utter_message('Você já preencheu uma proposta?')
+        return []

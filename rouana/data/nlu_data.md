@@ -18,6 +18,9 @@
 - sobre a lei
 - a lei
 - lei
+- lei rouanet
+- Rouanet
+- rouanet
 
 ## intent:afirmar_projeto
 - sim
@@ -30,6 +33,9 @@
 - andamento
 - criação
 - criacao
+- criação de projetos
+- criação de projeto
+- andamento de projetos
 
 <!--- Intenções Curiosidades --->
 
@@ -59,15 +65,56 @@
 
 <!--- Intenções Curiosidades --->
 
+## intent:submissao_de_projeto
+- como submeter um projeto?
+- quero submeter um projeto
+- submissão de projeto
+- como fazer um projeto?
+- enviar um projeto
+- fazer uma proposta
+- submeter uma proposta
+- submeter proposta
+- submeter projeto
 
 ## intent:o_que_eh
 - não sei o que é um
 - o que é um
-- o que é
+G- o que é
 - o que é isso?
 - pode conceituar?
 - pode explicar?
 - o que isso significa?
 
+<!--- Intenções Proposta e Projetos --->
 
+## intent:afirmar_preencheu_proposta
+- sim
+- sim, já preenchi minha proposta
+- já preenchi
+- já
+- sim, eu já preenchi minha proposta
+- estou preenchendo
+- ainda estou preenchendo
 
+## intent:negar_preencheu_proposta
+- não 
+- nao
+- não, ainda não
+- não preenchi
+- nao preenchi
+- nunca preenchi
+- nunca fiz uma proposta
+- nao fiz a minha proposta
+
+## intent:afirmar_nova_proposta
+- sim
+- estou trabalhando em uma nova proposta
+- estou
+
+## intent:negar_nova_proposta
+- não
+- nao estou
+- não estou
+- estou não
+
+<!--- Intenções Proposta e Projetos --->
