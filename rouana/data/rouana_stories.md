@@ -47,10 +47,26 @@
 ## path2.1.1
 > identificar_nova_proposta
 * afirmar_nova_proposta
+  - action_definir_contexto
 
 ## path2.1.2
 > identificar_nova_proposta
 * negar_nova_proposta
+  - utter_duvida_execucao
+> identificar_execucao
+
+<!--- TODO - FLUXO DE EXECUÇÂO --->
+## path 2.1.2.1
+> identificar_execucao
+* afirmar_execucao
+  - action_introduzir_execucao
+
+## path 2.1.2.2
+> identificar_execucao
+* negar_execucao
+  - action_definir_contexto
+
+<!--- TODO - FLUXO DE EXECUÇÂO --->
 
 ## path2.2
 > identificar_preenchimento_de_proposta

@@ -123,3 +123,15 @@ class ActionAviso(Action):
         dispatcher.utter_message('Tudo bem, para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.')
         dispatcher.utter_message('Você já preencheu uma proposta?')
         return []
+
+class ActionIntroduzirExecucao(Action):
+    def name(self):
+        return 'action_introduzir_execucao'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message('Olha, você pode perguntar sobre:')
+        dispatcher.utter_message('Planilha orçamentária')
+        dispatcher.utter_message('Prestação de contas')
+        dispatcher.utter_message('Captação')
+        dispatcher.utter_message('Mas, por enquanto, eu ainda não consigo responder sobre esses assuntos :cry::cry:')
+        return []

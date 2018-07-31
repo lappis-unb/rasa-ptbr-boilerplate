@@ -21,6 +21,8 @@ templates:
     - "Você quer conversar sobre criação e andamento de projetos? Ou, podemos falar mais sobre a Lei Rouanet."
   utter_nova_proposta:
     - "Esta trabalhando em uma nova proposta?"
+  utter_duvida_execucao:
+    - "Sua dúvida está relacionada com captação de verba e execução do projeto?"
   utter_despedir:
     - "Tchau, até a próxima =)"
 
@@ -29,6 +31,7 @@ actions:
   - utter_definir_perfil
   - utter_despedir
   - utter_nova_proposta
+  - utter_duvida_execucao
   - rouana.actions.ActionSetSlotTrue
   - rouana.actions.ActionSetSlotFalse
   - rouana.actions.ActionWhatIs
@@ -39,3 +42,4 @@ actions:
   - rouana.actions.ActionSubmissaoDeProjetos
   - rouana.actions.ActionDefinirContexto
   - rouana.actions.ActionAviso
+  - rouana.actions.ActionIntroduzirExecucao

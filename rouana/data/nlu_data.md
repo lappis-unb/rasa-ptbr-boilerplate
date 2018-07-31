@@ -109,12 +109,37 @@ G- o que é
 ## intent:afirmar_nova_proposta
 - sim
 - estou trabalhando em uma nova proposta
-- estou
+- sim eu estou
 
 ## intent:negar_nova_proposta
 - não
+- nao
 - nao estou
 - não estou
 - estou não
+
+<!--- Fluxo de execução --->
+## intent:afirmar_execucao
+- sim
+- Sim
+- captação
+- está
+- verba
+- captação de verba
+- execução
+- planilha orçamentária
+- sobre execução
+- sobre captação
+- prestação de contas
+- sobre prestação de contas
+
+## intent:negar_execucao
+- não
+- nao
+- não está
+- não tem nada a ver
+- não é nada disso
+
+<!--- Fluxo de execução --->
 
 <!--- Intenções Proposta e Projetos --->
