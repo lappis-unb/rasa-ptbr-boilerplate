@@ -1,8 +1,6 @@
-# Rasa bot test
-
-Small test bots using rasa-core and rasa-nlu
+# Rouana - Assistente Virtual da Cultura
 
 ```
-sudo docker build -t bot-test .
-sudo docker run --rm -it -v $PWD/rouana:/rouana bot-test
+sudo docker build -t rouana:console .
+sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana:console
 ```
