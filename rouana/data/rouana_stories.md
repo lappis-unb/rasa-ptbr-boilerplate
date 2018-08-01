@@ -1,9 +1,13 @@
-<!--- Fluxos Curiosidades --->
-
-## path1
+## path
 * cumprimentar
   - utter_cumprimetar
   - utter_definir_perfil
+> identifica_perfil
+
+<!--- Fluxos Curiosidades --->
+
+## path1
+> identifica_perfil
 * afirmar_curiosidades
   - action_indicacao_curiosidades
 > identificar_curiosidade
@@ -31,9 +35,7 @@
 <!--- Fluxos Propostas e Projetos --->
 
 ## path2
-* cumprimentar
-  - utter_cumprimetar
-  - utter_definir_perfil
+> identifica_perfil
 * afirmar_projeto
   - action_aviso
 > identificar_preenchimento_de_proposta
