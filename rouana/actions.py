@@ -99,6 +99,7 @@ class ActionSubmissaoDeProjetos(Action):
         dispatcher.utter_message('Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.')
         dispatcher.utter_message('Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.')
         dispatcher.utter_message('A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.')
+        dispatcher.utter_message('Você quer saber mais detalhes sobre essas etapas?')
         return []
 
 class ActionDefinirContexto(Action):

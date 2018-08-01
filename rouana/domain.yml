@@ -6,8 +6,18 @@ intents:
   - lei_rouanet_quantidade_projetos
   - lei_rouanet_arrecadacao
   - submissao_de_projeto
-  - preencheu_proposta
   - o_que_eh
+  - afirmar_preencheu_proposta
+  - negar_preencheu_proposta
+  - afirmar_nova_proposta
+  - negar_nova_proposta
+  - afirmar_execucao
+  - negar_execucao
+  - afirmar_conhecimento_processo
+  - negar_conhecimento_processo
+  - afirmar_especificar_processo
+  - negar_especificar_processo
+
 
 slots:
   eh_proponente:
@@ -23,6 +33,13 @@ templates:
     - "Esta trabalhando em uma nova proposta?"
   utter_duvida_execucao:
     - "Sua dúvida está relacionada com captação de verba e execução do projeto?"
+  utter_conhece_processo:
+    - "Você sabe como funciona todo o andamento de um projeto de incentivo a cultura?"
+  utter_especificar_processo:
+    - "Então, eu não consigo responder esta parte agora :confused:"
+  utter_cadastro_salic:
+    - "Tem cadastro no SALIC?"
+  
   utter_despedir:
     - "Tchau, até a próxima =)"
 
@@ -32,6 +49,9 @@ actions:
   - utter_despedir
   - utter_nova_proposta
   - utter_duvida_execucao
+  - utter_conhece_processo
+  - utter_cadastro_salic
+  - utter_especificar_processo
   - rouana.actions.ActionSetSlotTrue
   - rouana.actions.ActionSetSlotFalse
   - rouana.actions.ActionWhatIs

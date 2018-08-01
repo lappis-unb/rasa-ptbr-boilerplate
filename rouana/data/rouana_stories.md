@@ -49,7 +49,7 @@
 ## path2.1.1
 > identificar_nova_proposta
 * afirmar_nova_proposta
-  - action_definir_contexto
+> identificar_contexto
 
 ## path2.1.2
 > identificar_nova_proposta
@@ -58,19 +58,63 @@
 > identificar_execucao
 
 <!--- TODO - FLUXO DE EXECUÇÂO --->
-## path 2.1.2.1
+## path2.1.2.1
 > identificar_execucao
 * afirmar_execucao
   - action_introduzir_execucao
 
-## path 2.1.2.2
+## path2.1.2.2
 > identificar_execucao
 * negar_execucao
-  - action_definir_contexto
+> identificar_contexto
 
 <!--- TODO - FLUXO DE EXECUÇÂO --->
 
 ## path2.2
 > identificar_preenchimento_de_proposta
 * negar_preencheu_proposta
+  - utter_conhece_processo
+> identificar_conhecimento_de_processo
 
+<!--- Conhecimento do Processo --->
+
+## path2.2.1
+> identificar_conhecimento_de_processo
+* afirmar_conhecimento_processo
+
+## path2.2.2
+> identificar_conhecimento_de_processo
+* negar_conhecimento_processo
+  - action_submissao_de_projeto
+> especificar_processo
+
+<!--- Conhecimento do Processo --->
+
+<!---TODO - FLUXO EXPLICAÇÃO DO PROCESSO --->
+
+## path2.2.2.1
+> especificar_processo
+* afirmar_especificar_processo
+  - utter_especificar_processo
+
+## path2.2.2.1
+> especificar_processo
+* negar_especificar_processo
+  - utter_cadastro_salic
+
+
+<!---TODO - FLUXO EXPLICAÇÃO DO PROCESSO --->
+
+
+
+
+
+<!--- Fluxo de Conhecimento do Processo --->
+
+
+## pathContexto
+> identificar_contexto
+- action_definir_contexto
+
+# pathCadastroSalic
+> idenficar_cadastro_no_salic

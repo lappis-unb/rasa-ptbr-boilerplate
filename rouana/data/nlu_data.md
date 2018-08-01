@@ -26,6 +26,10 @@
 - sim
 - quero conversar sobre projetos
 - projetos
+- projeto
+- proposta
+- propostas
+- sobre proposta
 - sobre projetos
 - sobre a criação
 - sobre a criacao
@@ -79,7 +83,7 @@
 ## intent:o_que_eh
 - não sei o que é um
 - o que é um
-G- o que é
+- o que é
 - o que é isso?
 - pode conceituar?
 - pode explicar?
@@ -141,5 +145,57 @@ G- o que é
 - não é nada disso
 
 <!--- Fluxo de execução --->
+
+<!--- Conhecimento do Processo --->
+
+## intent:afirmar_conhecimento_processo
+- sim
+- Sim
+- já conheço
+- ja conheco
+- conheço
+- conheco
+- sei bastante
+- sei
+- já
+
+## intent:negar_conhecimento_processo
+- não
+- nao
+- ainda não
+- já ouvi falar
+- sei mais ou menos
+- não sei
+- não conheço
+- nao conheco
+- mais ou menos
+- um pouco
+
+<!--- Conhecimento do Processo --->
+
+<!--- Explicação do Processo --->
+
+## intent:afirmar_especificar_processo
+- sim
+- Sim
+- quero sim
+- quero
+- por favor
+- se voce puder
+- quero mais detalhes
+- quero mais
+- tudo bem
+- pode falar
+
+## intent:negar_especificar_processo
+- não
+- nao
+- quero nao
+- nao quero
+- não, tudo bem
+
+<!--- Explicação do Processo --->
+
+
 
 <!--- Intenções Proposta e Projetos --->
