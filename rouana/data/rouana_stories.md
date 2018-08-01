@@ -9,35 +9,35 @@
 ## path1
 > identifica_perfil
 * afirmar_curiosidades
-  - action_indicacao_curiosidades
+  - ActionIndicacaoCuriosidades
 > identificar_curiosidade
 
 ## path1.1
 > identificar_curiosidade
 *  lei_rouanet_definicao
-  - action_definicao_lei
+  - ActionDefinicaoLei
 
 ## path1.2
 > identificar_curiosidade
 * lei_rouanet_quantidade_projetos
-  - action_quantidade_projetos
+  - ActionQuantidadeProjetos
 
 ## path1.3
 > identificar_curiosidade
 * lei_rouanet_arrecadacao
-  - action_arrecadacao_lei
+  - ActionArrecadacaoLei
 
 ## path1.4
 > identificar_curiosidade
-* submissao_de_projeto 
-  - action_submissao_de_projeto
+* submissao_de_projeto
+  - ActionSubmissaoDeProjetos
 
 <!--- Fluxos Propostas e Projetos --->
 
 ## path2
 > identifica_perfil
 * afirmar_projeto
-  - action_aviso
+  - ActionAviso
 > identificar_preenchimento_de_proposta
 
 ## path2.1
@@ -61,7 +61,7 @@
 ## path2.1.2.1
 > identificar_execucao
 * afirmar_execucao
-  - action_introduzir_execucao
+  - ActionIntroduzirExecucao
 
 ## path2.1.2.2
 > identificar_execucao
@@ -85,7 +85,7 @@
 ## path2.2.2
 > identificar_conhecimento_de_processo
 * negar_conhecimento_processo
-  - action_submissao_de_projeto
+  - ActionSubmissaoDeProjetos
 > especificar_processo
 
 <!--- Conhecimento do Processo --->
@@ -114,7 +114,7 @@
 
 ## pathContexto
 > identificar_contexto
-- action_definir_contexto
+- ActionDefinirContexto
 
 # pathCadastroSalic
 > idenficar_cadastro_no_salic

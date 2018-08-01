@@ -18,11 +18,6 @@ intents:
   - afirmar_especificar_processo
   - negar_especificar_processo
 
-
-slots:
-  eh_proponente:
-    type: bool
-
 templates:
   utter_cumprimetar:
     - "Oi eu sou a Rouana, assistente virtual do minc, e posso te ajudar a esclarecer dúvidas sobre a Lei Rouanet,
@@ -39,7 +34,6 @@ templates:
     - "Então, eu não consigo responder esta parte agora :confused:"
   utter_cadastro_salic:
     - "Tem cadastro no SALIC?"
-  
   utter_despedir:
     - "Tchau, até a próxima =)"
 
@@ -52,8 +46,6 @@ actions:
   - utter_conhece_processo
   - utter_cadastro_salic
   - utter_especificar_processo
-  - rouana.actions.ActionSetSlotTrue
-  - rouana.actions.ActionSetSlotFalse
   - rouana.actions.ActionWhatIs
   - rouana.actions.ActionIndicacaoCuriosidades
   - rouana.actions.ActionDefinicaoLei
