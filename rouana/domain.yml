@@ -27,33 +27,16 @@ intents:
   - curiosidades_desconto_do_IR_das_doecoes
 
 templates:
-  utter_cumprimetar:
-    - "Oi eu sou a Rouana, assistente virtual do minc, e posso te ajudar a esclarecer dúvidas sobre a Lei Rouanet,
-       ou solucionar problemas de proposta e projeto."
-  utter_definir_perfil:
-    - "Você quer conversar sobre criação e andamento de projetos? Ou, podemos falar mais sobre a Lei Rouanet."
-  utter_nova_proposta:
-    - "Esta trabalhando em uma nova proposta?"
-  utter_duvida_execucao:
-    - "Sua dúvida está relacionada com captação de verba e execução do projeto?"
-  utter_conhece_processo:
-    - "Você sabe como funciona todo o andamento de um projeto de incentivo a cultura?"
-  utter_especificar_processo:
-    - "Então, eu não consigo responder esta parte agora :confused:"
-  utter_cadastro_salic:
-    - "Tem cadastro no SALIC?"
-  utter_despedir:
-    - "Tchau, até a próxima =)"
 
 actions:
-  - utter_cumprimetar
-  - utter_definir_perfil
-  - utter_despedir
-  - utter_nova_proposta
-  - utter_duvida_execucao
-  - utter_conhece_processo
-  - utter_cadastro_salic
-  - utter_especificar_processo
+  - rouana.actions.ActionCumprimentar
+  - rouana.actions.ActionDefinirPerfil
+  - rouana.actions.ActionNovaProposta
+  - rouana.actions.ActionDuvidaExecucao
+  - rouana.actions.ActionConheceProcesso
+  - rouana.actions.ActionEspecificarProcesso
+  - rouana.actions.ActionCadastroSalic
+  - rouana.actions.ActionDespedir
   - rouana.actions.ActionWhatIs
   - rouana.actions.ActionDefinirContexto
   - rouana.actions.ActionAviso

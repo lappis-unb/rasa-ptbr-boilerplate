@@ -1,10 +1,13 @@
 ## path
 * cumprimentar
-  - utter_cumprimetar
-  - utter_definir_perfil
+  - ActionCumprimentar
+  - ActionDefinirPerfil
 > identifica_perfil
 
-<!--- Fluxos Curiosidades --->
+
+
+
+<!--- Fluxo Curiosidades --->
 
 ## path1
 > identifica_perfil
@@ -36,6 +39,9 @@
 * negar
   - ActionCuriosidadesFim
 
+
+
+
 <!--- Fluxos Propostas e Projetos --->
 
 ## path2
@@ -47,7 +53,7 @@
 ## path2.1
 > identificar_preenchimento_de_proposta
 * afirmar_preencheu_proposta
-  - utter_nova_proposta
+  - ActionNovaProposta
 > identificar_nova_proposta
 
 ## path2.1.1
@@ -58,11 +64,15 @@
 ## path2.1.2
 > identificar_nova_proposta
 * negar
-  - utter_duvida_execucao
+  - ActionDuvidaExecucao
 > identificar_execucao
 
-<!--- TODO - FLUXO DE EXECUÇÂO --->
-## path2.1.2.1
+
+
+
+<!--- Fluxo de Execução --->
+
+## path2.1.2.1-fim
 > identificar_execucao
 * afirmar_execucao
   - ActionIntroduzirExecucao
@@ -74,10 +84,13 @@
 
 <!--- TODO - FLUXO DE EXECUÇÂO --->
 
+
+
+
 ## path2.2
 > identificar_preenchimento_de_proposta
 * negar
-  - utter_conhece_processo
+  - ActionConheceProcesso
 > identificar_conhecimento_de_processo
 
 <!--- Conhecimento do Processo --->
@@ -99,12 +112,12 @@
 ## path2.2.2.1
 > especificar_processo
 * afirmar
-  - utter_especificar_processo
+  - ActionEspecificarProcesso
 
 ## path2.2.2.1
 > especificar_processo
 * negar
-  - utter_cadastro_salic
+  - ActionCadastroSalic
 
 
 <!---TODO - FLUXO EXPLICAÇÃO DO PROCESSO --->
@@ -114,7 +127,6 @@
 
 
 <!--- Fluxo de Conhecimento do Processo --->
-
 
 ## pathContexto
 > identificar_contexto
