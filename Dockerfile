@@ -11,12 +11,12 @@ add . /rouana
 
 cmd python -m rasa_nlu.train                   \
            --config /rouana/config.yml         \
-           --data   /rouana/data/nlu_data.md   \
+           --data   /rouana/data/intents       \
            --fixed_model_name current          \
            --path /models                      \
            --project nlu                    && \
     python -m rasa_core.train                  \
-           -s /rouana/data/rouana_stories.md   \
+           -s /rouana/data/stories             \
            -d /rouana/domain.yml               \
            -o /models/dialogue                 \
            --epochs ${TRAINING_EPOCHS}      && \

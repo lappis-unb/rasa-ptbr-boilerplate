@@ -8,15 +8,23 @@ intents:
   - submissao_de_projeto
   - o_que_eh
   - afirmar_preencheu_proposta
-  - negar_preencheu_proposta
   - afirmar_nova_proposta
-  - negar_nova_proposta
   - afirmar_execucao
-  - negar_execucao
   - afirmar_conhecimento_processo
-  - negar_conhecimento_processo
-  - afirmar_especificar_processo
-  - negar_especificar_processo
+  - afirmar
+  - negar
+  - curiosidades_quantidade_projetos
+  - curiosidades_beneficios_incentivo_projetos_culturais
+  - curiosidades_lei_rouanet_elegibilidade
+  - curiosidades_lei_rouanet_arrecadamento
+  - curiosidades_lei_rouanet_denuncia
+  - curiosidades_elegibilidade_de_empresa_para_beneficios
+  - curiosidades_qual_papel_minc
+  - curiosidades_receber_incetivo_de_parentes
+  - curiosidades_papel_minc
+  - curiosidades_deducao_imposto_de_renda_incentivador
+  - curiosidades_como_eh_feita_deducao_imposto_de_renda
+  - curiosidades_desconto_do_IR_das_doecoes
 
 templates:
   utter_cumprimetar:
@@ -47,11 +55,26 @@ actions:
   - utter_cadastro_salic
   - utter_especificar_processo
   - rouana.actions.ActionWhatIs
-  - rouana.actions.ActionIndicacaoCuriosidades
-  - rouana.actions.ActionDefinicaoLei
-  - rouana.actions.ActionQuantidadeProjetos
-  - rouana.actions.ActionArrecadacaoLei
-  - rouana.actions.ActionSubmissaoDeProjetos
   - rouana.actions.ActionDefinirContexto
   - rouana.actions.ActionAviso
   - rouana.actions.ActionIntroduzirExecucao
+  - rouana.actions.ActionSubmissaoDeProjetos
+
+  - rouana.actions_curiosidades.ActionCuriosidadesIndicacao
+  - rouana.actions_curiosidades.ActionCuriosidadesMais
+  - rouana.actions_curiosidades.ActionCuriosidadesMaisSim
+  - rouana.actions_curiosidades.ActionCuriosidadesMaisNao
+  - rouana.actions_curiosidades.ActionCuriosidadesFalarSobreProjetos
+  - rouana.actions_curiosidades.ActionCuriosidadesFim
+  - rouana.actions_curiosidades.ActionCuriosidadesQuantidadeProjetos
+  - rouana.actions_curiosidades.ActionCuriosidadesBeneficiosIncentivoProjetosCulturais
+  - rouana.actions_curiosidades.ActionCuriosidadesLeiRouanetElegibilidade
+  - rouana.actions_curiosidades.ActionCuriosidadesLeiRouanetArrecadamento
+  - rouana.actions_curiosidades.ActionCuriosidadesLeiRouanetDenuncia
+  - rouana.actions_curiosidades.ActionCuriosidadesElegibilidadeDeEmpresaParaBeneficios
+  - rouana.actions_curiosidades.ActionCuriosidadesQualPapelMinc
+  - rouana.actions_curiosidades.ActionCuriosidadesReceberIncetivoDeParentes
+  - rouana.actions_curiosidades.ActionCuriosidadesPapelMinc
+  - rouana.actions_curiosidades.ActionCuriosidadesDeducaoImpostoDeRendaIncentivador
+  - rouana.actions_curiosidades.ActionCuriosidadesComoEhFeitaDeducaoImpostoDeRenda
+  - rouana.actions_curiosidades.ActionCuriosidadesDescontoDoIrDasDoecoes
