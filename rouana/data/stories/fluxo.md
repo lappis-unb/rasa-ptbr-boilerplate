@@ -1,7 +1,7 @@
 ## path
 * cumprimentar
-  - ActionCumprimentar
-  - ActionDefinirPerfil
+  - action_cumprimentar
+  - action_definir_perfil
 > identifica_perfil
 
 
@@ -12,32 +12,32 @@
 ## path1
 > identifica_perfil
 * afirmar_curiosidades
-  - ActionCuriosidadesIndicacao
+  - action_curiosidades_indicacao
 > identificar_curiosidade
 
 ## path1.end.1
 > curiosidade_final
 * afirmar
-  - ActionCuriosidadesMaisSim
+  - action_curiosidades_mais_sim
 > identificar_curiosidade
 
 ## path1.end.2
 > curiosidade_final
 * negar
-  - ActionCuriosidadesMaisNao
+  - action_curiosidades_mais_nao
 > curiosidade_falar_sobre_projetos
 
 ## path1.end.2.1
 > curiosidade_falar_sobre_projetos
 * afirmar
-  - ActionCuriosidadesFalarSobreProjetos
-  - ActionAviso
+  - action_curiosidades_falar_sobre_projetos
+  - action_aviso
 > identificar_preenchimento_de_proposta
 
 ## path1.end.2.2-fim
 > curiosidade_falar_sobre_projetos
 * negar
-  - ActionCuriosidadesFim
+  - action_curiosidades_fim
 
 
 
@@ -47,13 +47,13 @@
 ## path2
 > identifica_perfil
 * afirmar_projeto
-  - ActionAviso
+  - action_aviso
 > identificar_preenchimento_de_proposta
 
 ## path2.1
 > identificar_preenchimento_de_proposta
 * afirmar_preencheu_proposta
-  - ActionNovaProposta
+  - action_nova_proposta
 > identificar_nova_proposta
 
 ## path2.1.1
@@ -64,7 +64,7 @@
 ## path2.1.2
 > identificar_nova_proposta
 * negar
-  - ActionDuvidaExecucao
+  - action_duvida_execucao
 > identificar_execucao
 
 
@@ -75,7 +75,7 @@
 ## path2.1.2.1-fim
 > identificar_execucao
 * afirmar_execucao
-  - ActionIntroduzirExecucao
+  - action_introduzir_execucao
 
 ## path2.1.2.2
 > identificar_execucao
@@ -90,7 +90,7 @@
 ## path2.2
 > identificar_preenchimento_de_proposta
 * negar
-  - ActionConheceProcesso
+  - action_conhece_processo
 > identificar_conhecimento_de_processo
 
 <!--- Conhecimento do Processo --->
@@ -102,7 +102,7 @@
 ## path2.2.2
 > identificar_conhecimento_de_processo
 * negar
-  - ActionSubmissaoDeProjetos
+  - action_submissao_de_projetos
 > especificar_processo
 
 <!--- Conhecimento do Processo --->
@@ -112,12 +112,12 @@
 ## path2.2.2.1
 > especificar_processo
 * afirmar
-  - ActionEspecificarProcesso
+  - action_especificar_processo
 
 ## path2.2.2.1
 > especificar_processo
 * negar
-  - ActionCadastroSalic
+  - action_cadastro_salic
 
 
 <!---TODO - FLUXO EXPLICAÇÃO DO PROCESSO --->
@@ -130,7 +130,7 @@
 
 ## pathContexto
 > identificar_contexto
-- ActionDefinirContexto
+- action_definir_contexto
 
 # pathCadastroSalic
 > idenficar_cadastro_no_salic

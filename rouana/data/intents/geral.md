@@ -21,6 +21,8 @@
 - quero mais
 - tudo bem
 - pode falar
+- já sim
+- já preenchi
 
 ## intent:negar
 - não

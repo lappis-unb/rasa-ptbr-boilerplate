@@ -1,4 +1,5 @@
 from rasa_core.actions.action import Action
+import re
 
 class ActionWhatIs(Action):
     def name(self):
@@ -23,12 +24,16 @@ class ActionMultiline(Action):
     messages = ['']
 
     def name(self):
-        return self.__class__.__name__
+        return self.convert_name_to_snake_case()
 
     def run(self, dispatcher, tracker, domain):
         for message in self.messages:
             dispatcher.utter_message(message)
         return []
+
+    def convert_name_to_snake_case(self):
+        return re.sub('(.)([A-Z]{1})', r'\1_\2',
+                      self.__class__.__name__).lower()
 
 class ActionCumprimentar(ActionMultiline):
     messages = [
