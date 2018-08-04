@@ -26,8 +26,6 @@ intents:
   - curiosidades_como_eh_feita_deducao_imposto_de_renda
   - curiosidades_desconto_do_IR_das_doecoes
 
-templates:
-
 actions:
   - rouana.actions.ActionCumprimentar
   - rouana.actions.ActionDefinirPerfil
