@@ -1,6 +1,7 @@
 import argparse
 import logging
 import warnings
+import os
 
 from rasa_core import utils
 from rasa_core.actions import Action
@@ -15,7 +16,7 @@ from rasa_core.policies.keras_policy import KerasPolicy
 from rasa_core.policies.memoization import MemoizationPolicy
 
 logger = logging.getLogger(__name__)
-
+TRAINING_EPOCHS = os.getenv('TRAINING_EPOCHS', 300)
 
 def train_dialogue(domain_file='/rouana/domain.yml',
                    model_path='/models/dialogue',
@@ -27,7 +28,7 @@ def train_dialogue(domain_file='/rouana/domain.yml',
     training_data = agent.load_data(training_data_file)
     agent.train(
             training_data,
-            epochs=400,
+            epochs=int(TRAINING_EPOCHS),
             batch_size=100,
             validation_split=0.2
     )
@@ -60,7 +61,7 @@ def run(serve_forever=True):
 
 
 if __name__ == '__main__':
-    utils.configure_colored_logging(loglevel='INFO')
+    utils.configure_colored_logging(loglevel='DEBUG')
 
     parser = argparse.ArgumentParser(
             description='starts the bot')

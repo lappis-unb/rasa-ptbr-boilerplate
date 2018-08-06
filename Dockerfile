@@ -7,7 +7,7 @@ run pip install rasa_core rasa_nlu[spacy] && \
     python -m spacy download pt
 
 run mkdir /rouana
-add ./roauna /rouana
+add ./rouana /rouana
 
 workdir /rouana
 
