@@ -23,6 +23,11 @@
 - pode falar
 - já sim
 - já preenchi
+- já conheço
+- ja conheco
+- conheço
+- conheco
+- sei bastante
 
 ## intent:negar
 - não
@@ -83,8 +88,6 @@
 - pode explicar?
 - o que isso significa?
 
-<!--- Intenções Proposta e Projetos --->
-
 ## intent:afirmar_preencheu_proposta
 - já preenchi minha proposta
 - estou preenchendo
@@ -95,7 +98,6 @@
 - quero fazer uma nova proposta
 - estou elaborando um novo projeto
 
-<!--- Fluxo de execução --->
 ## intent:afirmar_execucao
 - captação
 - verba
@@ -106,25 +108,3 @@
 - sobre captação
 - prestação de contas
 - sobre prestação de contas
-
-<!--- Fluxo de execução --->
-
-<!--- Conhecimento do Processo --->
-
-## intent:afirmar_conhecimento_processo
-- já conheço o processo
-- ja conheco o processo
-- conheço
-- conheco
-- sei bastante
-
-<!--- Conhecimento do Processo --->
-
-<!--- Explicação do Processo --->
-
-<!--- Explicação do Processo --->
-
-
-
-<!--- Intenções Proposta e Projetos --->
-

@@ -66,11 +66,6 @@ class ActionConheceProcesso(ActionMultiline):
         ' cultura?'
     ]
 
-class ActionEspecificarProcesso(ActionMultiline):
-    messages = [
-        'Então, eu não consigo responder esta parte agora :confused:'
-    ]
-
 class ActionCadastroSalic(ActionMultiline):
     messages = [
         'Tem cadastro no SALIC?'
@@ -89,12 +84,12 @@ class ActionSubmissaoDeProjetos(ActionMultiline):
         'Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.',
         'Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.',
         'A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.',
+        'O primeiro passo para você particiar deste processo é ter cadastro no SALIC'
     ]
 
 class ActionDefinirContexto(ActionMultiline):
     messages = [
-        'Entendi.',
-        'Então, onde sua pergunta se encaixa melhor:',
+        'Onde sua pergunta se encaixa melhor:',
         '1. Processo e estado do projeto',
         '2. Preenchimento do Salic',
         '3. Datas e Prazos',
@@ -123,3 +118,72 @@ class ActionIntroduzirExecucao(ActionMultiline):
         'Prestação de Contas: prestacaodecontas.incentivo@cultura.gov.br',
     ]
 
+class ActionJaEhProponente(ActionMultiline):
+    messages = [
+        'Você já é um proponente cadastrado?',
+    ]
+
+class ActionCadastroProponenteIntroduzirContexto(ActionMultiline):
+    messages = [
+        'Maravilha!',
+        'Então agora posso tentar esclarer algumas de suas dúvidas',
+    ]
+
+class ActionCadastroSalicVideo(ActionMultiline):
+    messages = [
+        'O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura, e é por '
+        'ele que você cadastra a proposta e a acompanha',
+
+        'Olhe este vídeo para saber como você pode se cadastrar',
+
+        'https://youtu.be/rMGEZyIr1U8',
+
+        'Caso você não possa ver o vídeo, eu posso te explicar',
+
+        'Quer que eu te explique? :smiley:'
+    ]
+
+class ActionExplicarCadastroSalic(ActionMultiline):
+    messages = [
+        'A primeira coisa que você deve fazer é acessar o SALIC, no site http://salic.cultura.gov.br',
+
+        'Então no formulário inicial, onde pede login e senha, você deve '
+        'clicar na opção "Não sou cadastrado", logo abaixo',
+
+        'Preencha todos os campos corretamente, todos eles são obrigatórios. '
+        'E depois clique em "Cadastrar"',
+
+        'Agora aguarde a chegada de um e-mail de confirmação. Este vai conter '
+        'uma senha temporária',
+
+        'É altamente recomendado alterar esta senha, por isso, no seu primeiro '
+        'acesso, vá em "Usuário > Alterar Senha", para mudar a mesma',
+
+        'Agora que você já se cadastrou, o próximo passo é se tornar um proponente'
+    ]
+
+class ActionCadastroSalicAposVideo(ActionMultiline):
+    messages = [
+        'Espero que o vídeo tenha ajudado :smiley:',
+        'Agora que você já se cadastrou, o próximo passo é se tornar um proponente'
+    ]
+
+class ActionInscricaoProponente(ActionMultiline):
+    #TODO
+    messages = [
+        'Para inscrever um proponente, ou se tornar um proponente, você deve:'
+    ]
+
+class ActionIntroduzirContextoNovaProposta(ActionMultiline):
+    messages = [
+        'Que bom! Sempre é bom trabalhar em novos projetos culturais',
+
+        'Posso tirar algumas dúvidas suas para te ajudar neste novo projeto'
+    ]
+
+class ActionIntroduzirContextoNaoExecucao(ActionMultiline):
+    messages = [
+        'Então suas dúvidas devem ser sobre as outras etapas do processo',
+
+        'Posso tentar sanar elas :smiley:'
+    ]

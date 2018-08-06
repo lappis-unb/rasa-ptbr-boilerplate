@@ -10,7 +10,6 @@ intents:
   - afirmar_preencheu_proposta
   - afirmar_nova_proposta
   - afirmar_execucao
-  - afirmar_conhecimento_processo
   - afirmar
   - negar
   - curiosidades_quantidade_projetos
@@ -32,7 +31,6 @@ actions:
   - rouana.actions.ActionNovaProposta
   - rouana.actions.ActionDuvidaExecucao
   - rouana.actions.ActionConheceProcesso
-  - rouana.actions.ActionEspecificarProcesso
   - rouana.actions.ActionCadastroSalic
   - rouana.actions.ActionDespedir
   - rouana.actions.ActionWhatIs
@@ -40,6 +38,14 @@ actions:
   - rouana.actions.ActionAviso
   - rouana.actions.ActionIntroduzirExecucao
   - rouana.actions.ActionSubmissaoDeProjetos
+  - rouana.actions.ActionJaEhProponente
+  - rouana.actions.ActionCadastroProponenteIntroduzirContexto
+  - rouana.actions.ActionCadastroSalicVideo
+  - rouana.actions.ActionExplicarCadastroSalic
+  - rouana.actions.ActionCadastroSalicAposVideo
+  - rouana.actions.ActionInscricaoProponente
+  - rouana.actions.ActionIntroduzirContextoNovaProposta
+  - rouana.actions.ActionIntroduzirContextoNaoExecucao
 
   - rouana.actions_curiosidades.ActionCuriosidadesIndicacao
   - rouana.actions_curiosidades.ActionCuriosidadesMais

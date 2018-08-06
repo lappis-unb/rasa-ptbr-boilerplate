@@ -59,6 +59,8 @@
 ## path2.1.1
 > identificar_nova_proposta
 * afirmar_nova_proposta
+  - action_introduzir_contexto_nova_proposta
+  - action_definir_contexto
 > identificar_contexto
 
 ## path2.1.2
@@ -80,9 +82,9 @@
 ## path2.1.2.2
 > identificar_execucao
 * negar
+  - action_introduzir_contexto_nao_execucao
+  - action_definir_contexto
 > identificar_contexto
-
-<!--- TODO - FLUXO DE EXECUÇÂO --->
 
 
 
@@ -93,44 +95,67 @@
   - action_conhece_processo
 > identificar_conhecimento_de_processo
 
+
+
+
 <!--- Conhecimento do Processo --->
 
 ## path2.2.1
 > identificar_conhecimento_de_processo
-* afirmar_conhecimento_processo
+* afirmar
+  - action_cadastro_salic
+> identificar_cadastro_salic
 
 ## path2.2.2
 > identificar_conhecimento_de_processo
 * negar
   - action_submissao_de_projetos
-> especificar_processo
-
-<!--- Conhecimento do Processo --->
-
-<!---TODO - FLUXO EXPLICAÇÃO DO PROCESSO --->
-
-## path2.2.2.1
-> especificar_processo
-* afirmar
-  - action_especificar_processo
-
-## path2.2.2.1
-> especificar_processo
-* negar
   - action_cadastro_salic
+> identificar_cadastro_salic
 
+## pathCadastroSalic.1
+> identificar_cadastro_salic
+* afirmar
+  - action_ja_eh_proponente
+> identificar_eh_proponente
 
-<!---TODO - FLUXO EXPLICAÇÃO DO PROCESSO --->
+## pathCadastroSalic.2
+> identificar_cadastro_salic
+* negar
+  - action_cadastro_salic_video
+> identificar_explicar_cadastro
 
-
-
-
-
-<!--- Fluxo de Conhecimento do Processo --->
-
-## pathContexto
+## pathCadastroSalic.2.1
+> identificar_explicar_cadastro
+* afirmar
+  - action_explicar_cadastro_salic
+  - action_inscricao_proponente
+  - action_cadastro_proponente_introduzir_contexto
+  - action_definir_contexto
 > identificar_contexto
-- action_definir_contexto
 
-# pathCadastroSalic
-> idenficar_cadastro_no_salic
+
+## pathCadastroSalic.2.2
+> identificar_explicar_cadastro
+* negar
+  - action_cadastro_salic_apos_video
+  - action_inscricao_proponente
+  - action_cadastro_proponente_introduzir_contexto
+  - action_definir_contexto
+> identificar_contexto
+
+## pathCadastroProponente.1
+> identificar_eh_proponente
+* afirmar
+  - action_cadastro_proponente_introduzir_contexto
+  - action_definir_contexto
+> identificar_contexto
+
+## pathCadastroProponente.2
+> identificar_eh_proponente
+* negar
+  - action_inscricao_proponente
+  - action_cadastro_proponente_introduzir_contexto
+  - action_definir_contexto
+> identificar_contexto
+
