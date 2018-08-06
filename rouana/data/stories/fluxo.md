@@ -60,7 +60,6 @@
 > identificar_nova_proposta
 * afirmar_nova_proposta
   - action_introduzir_contexto_nova_proposta
-  - action_definir_contexto
 > identificar_contexto
 
 ## path2.1.2
@@ -83,7 +82,6 @@
 > identificar_execucao
 * negar
   - action_introduzir_contexto_nao_execucao
-  - action_definir_contexto
 > identificar_contexto
 
 
@@ -131,7 +129,6 @@
   - action_explicar_cadastro_salic
   - action_inscricao_proponente
   - action_cadastro_proponente_introduzir_contexto
-  - action_definir_contexto
 > identificar_contexto
 
 
@@ -141,14 +138,12 @@
   - action_cadastro_salic_apos_video
   - action_inscricao_proponente
   - action_cadastro_proponente_introduzir_contexto
-  - action_definir_contexto
 > identificar_contexto
 
 ## pathCadastroProponente.1
 > identificar_eh_proponente
 * afirmar
   - action_cadastro_proponente_introduzir_contexto
-  - action_definir_contexto
 > identificar_contexto
 
 ## pathCadastroProponente.2
@@ -156,6 +151,35 @@
 * negar
   - action_inscricao_proponente
   - action_cadastro_proponente_introduzir_contexto
-  - action_definir_contexto
 > identificar_contexto
+
+## patchContexto.1
+> identificar_contexto
+  - action_definir_contexto
+* escolher_processo
+> opcao_processo
+
+## patchContexto.2
+> identificar_contexto
+  - action_definir_contexto
+* escolher_preenchimento
+> opcao_preenchimento
+
+## patchContexto.3
+> identificar_contexto
+  - action_definir_contexto
+* escolher_prazo
+> opcao_prazo
+
+## patchContexto.4
+> identificar_contexto
+  - action_definir_contexto
+* escolher_correcao
+> opcao_correcao
+
+## patchContexto.5
+> identificar_contexto
+  - action_definir_contexto
+* escolher_erros_salic
+> opcao_erros_salic
 

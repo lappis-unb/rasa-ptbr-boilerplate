@@ -84,7 +84,7 @@
 - Como é feita a dedução do IR ?
 - Qual é o processo de IR ?
 
-## intent:curiosidades_desconto_do_IR_das_doecoes
+## intent:curiosidades_desconto_do_ir_das_doecoes
 - As doações ou patrocínios a atividades culturais sofrem retenção de imposto de renda na Fonte?
 - O que sofre retenção de imposto de renda na Fonte?
 - As doações ou patrocínios a atividades culturais tem retenção de IR?

@@ -1,4 +1,4 @@
-from rouana.actions import ActionMultiline
+from rouana.actions.actions_geral import ActionMultiline
 
 ## Ações de Fluxo
 

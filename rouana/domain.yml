@@ -23,45 +23,62 @@ intents:
   - curiosidades_papel_minc
   - curiosidades_deducao_imposto_de_renda_incentivador
   - curiosidades_como_eh_feita_deducao_imposto_de_renda
-  - curiosidades_desconto_do_IR_das_doecoes
+  - curiosidades_desconto_do_ir_das_doecoes
+  - escolher_processo
+  - escolher_preenchimento
+  - escolher_prazo
+  - escolher_correcao
+  - escolher_erros_salic
+  - duvida_sobre_contexto
+  - negar_nova_proposta
 
 actions:
-  - rouana.actions.ActionCumprimentar
-  - rouana.actions.ActionDefinirPerfil
-  - rouana.actions.ActionNovaProposta
-  - rouana.actions.ActionDuvidaExecucao
-  - rouana.actions.ActionConheceProcesso
-  - rouana.actions.ActionCadastroSalic
-  - rouana.actions.ActionDespedir
-  - rouana.actions.ActionWhatIs
-  - rouana.actions.ActionDefinirContexto
-  - rouana.actions.ActionAviso
-  - rouana.actions.ActionIntroduzirExecucao
-  - rouana.actions.ActionSubmissaoDeProjetos
-  - rouana.actions.ActionJaEhProponente
-  - rouana.actions.ActionCadastroProponenteIntroduzirContexto
-  - rouana.actions.ActionCadastroSalicVideo
-  - rouana.actions.ActionExplicarCadastroSalic
-  - rouana.actions.ActionCadastroSalicAposVideo
-  - rouana.actions.ActionInscricaoProponente
-  - rouana.actions.ActionIntroduzirContextoNovaProposta
-  - rouana.actions.ActionIntroduzirContextoNaoExecucao
+  - rouana.actions.actions_geral.ActionCumprimentar
+  - rouana.actions.actions_geral.ActionDefinirPerfil
+  - rouana.actions.actions_geral.ActionNovaProposta
+  - rouana.actions.actions_geral.ActionDuvidaExecucao
+  - rouana.actions.actions_geral.ActionConheceProcesso
+  - rouana.actions.actions_geral.ActionCadastroSalic
+  - rouana.actions.actions_geral.ActionDespedir
+  - rouana.actions.actions_geral.ActionWhatIs
+  - rouana.actions.actions_geral.ActionDefinirContexto
+  - rouana.actions.actions_geral.ActionAviso
+  - rouana.actions.actions_geral.ActionIntroduzirExecucao
+  - rouana.actions.actions_geral.ActionSubmissaoDeProjetos
+  - rouana.actions.actions_geral.ActionJaEhProponente
+  - rouana.actions.actions_geral.ActionCadastroProponenteIntroduzirContexto
+  - rouana.actions.actions_geral.ActionCadastroSalicVideo
+  - rouana.actions.actions_geral.ActionExplicarCadastroSalic
+  - rouana.actions.actions_geral.ActionCadastroSalicAposVideo
+  - rouana.actions.actions_geral.ActionInscricaoProponente
+  - rouana.actions.actions_geral.ActionIntroduzirContextoNovaProposta
+  - rouana.actions.actions_geral.ActionIntroduzirContextoNaoExecucao
 
-  - rouana.actions_curiosidades.ActionCuriosidadesIndicacao
-  - rouana.actions_curiosidades.ActionCuriosidadesMais
-  - rouana.actions_curiosidades.ActionCuriosidadesMaisSim
-  - rouana.actions_curiosidades.ActionCuriosidadesMaisNao
-  - rouana.actions_curiosidades.ActionCuriosidadesFalarSobreProjetos
-  - rouana.actions_curiosidades.ActionCuriosidadesFim
-  - rouana.actions_curiosidades.ActionCuriosidadesQuantidadeProjetos
-  - rouana.actions_curiosidades.ActionCuriosidadesBeneficiosIncentivoProjetosCulturais
-  - rouana.actions_curiosidades.ActionCuriosidadesLeiRouanetElegibilidade
-  - rouana.actions_curiosidades.ActionCuriosidadesLeiRouanetArrecadamento
-  - rouana.actions_curiosidades.ActionCuriosidadesLeiRouanetDenuncia
-  - rouana.actions_curiosidades.ActionCuriosidadesElegibilidadeDeEmpresaParaBeneficios
-  - rouana.actions_curiosidades.ActionCuriosidadesQualPapelMinc
-  - rouana.actions_curiosidades.ActionCuriosidadesReceberIncetivoDeParentes
-  - rouana.actions_curiosidades.ActionCuriosidadesPapelMinc
-  - rouana.actions_curiosidades.ActionCuriosidadesDeducaoImpostoDeRendaIncentivador
-  - rouana.actions_curiosidades.ActionCuriosidadesComoEhFeitaDeducaoImpostoDeRenda
-  - rouana.actions_curiosidades.ActionCuriosidadesDescontoDoIrDasDoecoes
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesIndicacao
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesMais
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesMaisSim
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesMaisNao
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesFalarSobreProjetos
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesFim
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesQuantidadeProjetos
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesBeneficiosIncentivoProjetosCulturais
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesLeiRouanetElegibilidade
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesLeiRouanetArrecadamento
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesLeiRouanetDenuncia
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesElegibilidadeDeEmpresaParaBeneficios
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesQualPapelMinc
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesReceberIncetivoDeParentes
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesPapelMinc
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesDeducaoImpostoDeRendaIncentivador
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesComoEhFeitaDeducaoImpostoDeRenda
+  - rouana.actions.actions_curiosidades.ActionCuriosidadesDescontoDoIrDasDoecoes
+
+  - rouana.actions.actions_processo.ActionExplicarProcesso
+
+  - rouana.actions.actions_preenchimento.ActionExplicarPreenchimento
+
+  - rouana.actions.actions_prazo.ActionExplicarPrazo
+
+  - rouana.actions.actions_correcao.ActionExplicarCorrecao
+
+  - rouana.actions.actions_erros_salic.ActionExplicarErrosSalic

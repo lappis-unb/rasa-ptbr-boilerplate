@@ -93,8 +93,9 @@ class ActionDefinirContexto(ActionMultiline):
         '1. Processo e estado do projeto',
         '2. Preenchimento do Salic',
         '3. Datas e Prazos',
-        '4. Erros do SALIC',
-        '5. Não sei bem onde se encaixa',
+        '4. Correção de proposta enviada',
+        '5. Erros do SALIC',
+        '6. Não sei bem onde se encaixa',
     ]
 
 class ActionAviso(ActionMultiline):

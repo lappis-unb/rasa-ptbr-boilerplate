@@ -98,6 +98,10 @@
 - quero fazer uma nova proposta
 - estou elaborando um novo projeto
 
+## intent:negar_nova_proposta
+- testando
+- xablau
+
 ## intent:afirmar_execucao
 - captação
 - verba
@@ -108,3 +112,12 @@
 - sobre captação
 - prestação de contas
 - sobre prestação de contas
+
+## intent:duvida_sobre_contexto
+- 6
+- não sei
+- nao sei
+- não sei onde se encaixa
+- não sei dizer
+- não sei bem
+- não tenho certeza
