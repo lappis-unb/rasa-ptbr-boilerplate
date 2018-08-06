@@ -40,7 +40,7 @@ actions:
   - actions.actions_geral.ActionConheceProcesso
   - actions.actions_geral.ActionCadastroSalic
   - actions.actions_geral.ActionDespedir
-  - actions.actions_geral.ActionWhatIs
+  - actions.actions_geral.ActionOQueEh
   - actions.actions_geral.ActionDefinirContexto
   - actions.actions_geral.ActionAviso
   - actions.actions_geral.ActionIntroduzirExecucao

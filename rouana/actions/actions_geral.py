@@ -1,21 +1,23 @@
 from rasa_core.actions.action import Action
 import re
 
-class ActionWhatIs(Action):
+class ActionOQueEh(Action):
+    meaning_map = {
+        'proponente': ['Um proponente é bla bla bla bla bla'],
+        'banana': ['Banana é uma fruta amarela =)'],
+    }
+
     def name(self):
-        return 'action_what_is'
+        return 'action_o_que_eh'
 
     def run(self, dispatcher, tracker, domain):
-        word_template_map = {
-            'proponente': 'Um proponente é bla bla bla bla bla',
-            'banana': 'Banana é uma fruta amarela =)',
-        }
+        user_message = tracker.latest_message.text.to_lower()
 
-        user_message = tracker.latest_message.text
-
-        for word in word_template_map:
+        for word in meaning_map:
             if word in user_message:
-                dispatcher.utter_message(word_template_map[word])
+                for message in meaning_map[word]:
+                    dispatcher.utter_message(message)
+
                 return []
         dispatcher.utter_message('Desculpe, não sei conceituar isso ainda =/')
         return []
