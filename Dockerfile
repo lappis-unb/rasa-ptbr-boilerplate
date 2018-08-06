@@ -7,20 +7,8 @@ run pip install rasa_core rasa_nlu[spacy] && \
     python -m spacy download pt
 
 run mkdir /rouana
-add . /rouana
+add ./roauna /rouana
 
-cmd python -m rasa_nlu.train                   \
-           --config /rouana/config.yml         \
-           --data   /rouana/data/intents       \
-           --fixed_model_name current          \
-           --path /models                      \
-           --project nlu                    && \
-    python -m rasa_core.train                  \
-           -s /rouana/data/stories             \
-           -d /rouana/domain.yml               \
-           -o /models/dialogue                 \
-           --epochs ${TRAINING_EPOCHS}      && \
-    python -m rasa_core.run                    \
-           -d /models/dialogue                 \
-           -u /models/nlu/current              \
-           --debug
+workdir /rouana
+
+cmd python train.py all

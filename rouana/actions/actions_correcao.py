@@ -1,4 +1,4 @@
-from rouana.actions.actions_geral import ActionMultiline
+from actions.actions_geral import ActionMultiline
 
 class ActionExplicarCorrecao(ActionMultiline):
     messages = [

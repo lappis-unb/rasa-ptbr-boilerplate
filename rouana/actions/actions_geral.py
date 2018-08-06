@@ -170,9 +170,15 @@ class ActionCadastroSalicAposVideo(ActionMultiline):
     ]
 
 class ActionInscricaoProponente(ActionMultiline):
-    #TODO
     messages = [
-        'Para inscrever um proponente, ou se tornar um proponente, você deve:'
+        'Para inscrever um proponente, ou se tornar um proponente, você deve:',
+
+        'Acessar o SALIC e efetuar o login;',
+
+        'Clique em Administrativo e depois em cadastrar proponente. OU acesse esse link http://salic.cultura.gov.br/agente/agentes/incluiragente;',
+
+        'Se você for uma pessoa física você precisa atuar na área cultural.'
+        ' Caso você seja uma pessoa jurídica pública tem que atuar na área de administração indireta ou uma pessoa jurídica privada com ou sem fins lucrativos.'
     ]
 
 class ActionIntroduzirContextoNovaProposta(ActionMultiline):
