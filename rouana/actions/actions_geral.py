@@ -169,7 +169,7 @@ class ActionInscricaoProponente(ActionMultiline):
     messages = [
         'Para inscrever um proponente, ou se tornar um proponente, você deve:',
 
-        'Acessar o SALIC e efetuar o login;',
+        'Acessar o SALIC e efetuar o login',
 
         'Clique em Administrativo e depois em cadastrar proponente. OU acesse esse link http://salic.cultura.gov.br/agente/agentes/incluiragente;',
 
