@@ -32,14 +32,6 @@ class ActionCuriosidadesFalarSobreProjetos(ActionMultiline):
         'Maravilha! É bom saber que você quer entender mais sobre propostas e projetos :smiley:',
     ]
 
-class ActionCuriosidadesFim(ActionMultiline):
-    messages = [
-        'Espero que eu tenha sido de grande ajuda',
-        'Ainda estou em fase de teste, a cada dia aprenderei mais com sua ajuda',
-        'Até mais! :wave:'
-    ]
-
-
 
 ## Curiosidades Gerais
 

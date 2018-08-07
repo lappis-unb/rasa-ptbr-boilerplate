@@ -95,7 +95,9 @@ class ActionCadastroSalic(ActionMultiline):
 
 class ActionDespedir(ActionMultiline):
     messages = [
-        'Tchau, até a próxima =)'
+        'Espero que eu tenha sido de grande ajuda',
+        'Ainda estou em fase de teste, a cada dia aprenderei mais com sua ajuda',
+        'Até mais! :wave:'
     ]
 
 class ActionSubmissaoDeProjetos(ActionMultiline):
@@ -215,4 +217,14 @@ class ActionIntroduzirContextoNaoExecucao(ActionMultiline):
         'Então suas dúvidas devem ser sobre as outras etapas do processo',
 
         'Posso tentar sanar elas :smiley:'
+    ]
+
+class ActionMaisAlgumaPergunta(ActionMultiline):
+    messages = [
+        'Você possui mais alguma dúvida?',
+    ]
+
+class ActionMaisPerguntasAfirmativa(ActionMultiline):
+    messages = [
+        'Que bom! Espero estar ajudando :smiley:',
     ]

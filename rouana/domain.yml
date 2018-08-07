@@ -53,13 +53,14 @@ actions:
   - actions.actions_geral.ActionInscricaoProponente
   - actions.actions_geral.ActionIntroduzirContextoNovaProposta
   - actions.actions_geral.ActionIntroduzirContextoNaoExecucao
+  - actions.actions_geral.ActionMaisAlgumaPergunta
+  - actions.actions_geral.ActionMaisPerguntasAfirmativa
 
   - actions.actions_curiosidades.ActionCuriosidadesIndicacao
   - actions.actions_curiosidades.ActionCuriosidadesMais
   - actions.actions_curiosidades.ActionCuriosidadesMaisSim
   - actions.actions_curiosidades.ActionCuriosidadesMaisNao
   - actions.actions_curiosidades.ActionCuriosidadesFalarSobreProjetos
-  - actions.actions_curiosidades.ActionCuriosidadesFim
   - actions.actions_curiosidades.ActionCuriosidadesQuantidadeProjetos
   - actions.actions_curiosidades.ActionCuriosidadesBeneficiosIncentivoProjetosCulturais
   - actions.actions_curiosidades.ActionCuriosidadesLeiRouanetElegibilidade
