@@ -206,7 +206,7 @@
 
 ## pathContexto.6
 > identificar_contexto
-  - action_identificar_contexto
+  - action_definir_contexto
 * duvida_sobre_contexto
   - action_explicar_contextos
 

@@ -37,6 +37,8 @@ templates:
     - text: "Desculpe, não consegui te entender :confused:. Você pode reformular?"
 
 actions:
+  - actions.actions_oqueeh.ActionOQueEh
+
   - actions.actions_geral.ActionCumprimentar
   - actions.actions_geral.ActionDefinirPerfil
   - actions.actions_geral.ActionNovaProposta
@@ -44,7 +46,6 @@ actions:
   - actions.actions_geral.ActionConheceProcesso
   - actions.actions_geral.ActionCadastroSalic
   - actions.actions_geral.ActionDespedir
-  - actions.actions_geral.ActionOQueEh
   - actions.actions_geral.ActionDefinirContexto
   - actions.actions_geral.ActionAviso
   - actions.actions_geral.ActionIntroduzirExecucao

@@ -94,6 +94,7 @@
 ## intent:o_que_eh
 - o que é um
 - o que é
+- o que e
 - o que é isso?
 - pode conceituar?
 - pode explicar?
@@ -101,8 +102,12 @@
 - não faço ideia do que seja isso
 - não sei bem o que você quer dizer
 - pode me dar o conceito
-- não entendo isso
 - o que isso quer dizer?
+- me explique isso
+- me explique melhor
+- qual o conceito
+- qual o significado
+- que?
 
 ## intent:afirmar_preencheu_proposta
 - já preenchi minha proposta
