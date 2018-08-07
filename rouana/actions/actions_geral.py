@@ -65,6 +65,7 @@ class ActionDespedir(ActionMultiline):
         
         'Se surgir alguma dúvida, não hesite, volte aqui',
         
+        
         'Até mais! :wave:'
     ]
 
@@ -93,6 +94,7 @@ class ActionDefinirContexto(ActionMultiline):
 class ActionAviso(ActionMultiline):
     messages = [
         'Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.',
+        
         'Você já preencheu uma proposta?',
     ]
 
@@ -128,7 +130,9 @@ class ActionCadastroSalicVideo(ActionMultiline):
         'O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura, e é por '
         'ele que você cadastra a proposta e a acompanha',
 
-        'Olhe este vídeo para saber como você pode se cadastrar',
+        'Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo',
+        
+        'Nele você pode observar o passo a passo para se cadastrar:'
 
         'https://youtu.be/rMGEZyIr1U8',
 
@@ -139,18 +143,18 @@ class ActionCadastroSalicVideo(ActionMultiline):
 
 class ActionExplicarCadastroSalic(ActionMultiline):
     messages = [
-        'A primeira coisa que você deve fazer é acessar o SALIC, no site http://salic.cultura.gov.br',
+        'A primeira coisa que você deve fazer é acessar o SALIC no site http://salic.cultura.gov.br',
 
-        'Então no formulário inicial, onde pede login e senha, você deve '
+        'Então no formulário inicial, onde pede login e senha, você deve'
         'clicar na opção "Não sou cadastrado", logo abaixo',
 
-        'Preencha todos os campos corretamente, todos eles são obrigatórios. '
+        'Preencha todos os campos corretamente, todos eles são obrigatórios.'
         'E depois clique em "Cadastrar"',
 
-        'Agora aguarde a chegada de um e-mail de confirmação. Este vai conter '
+        'Agora aguarde a chegada de um e-mail de confirmação. Este vai conter'
         'uma senha temporária',
 
-        'É altamente recomendado alterar esta senha, por isso, no seu primeiro '
+        'É interessante você alterar esta senha, por isso, no seu primeiro'
         'acesso, vá em "Usuário > Alterar Senha", para mudar a mesma',
 
         'Agora que você já se cadastrou, o próximo passo é se tornar um proponente'
@@ -176,16 +180,16 @@ class ActionInscricaoProponente(ActionMultiline):
 
 class ActionIntroduzirContextoNovaProposta(ActionMultiline):
     messages = [
-        'Que bom! Sempre é bom trabalhar em novos projetos culturais',
+        'Que bom!É sempre bom trabalhar em novos projetos culturais',
 
-        'Posso tirar algumas dúvidas suas para te ajudar neste novo projeto'
+        'Se você quiser, posso tirar algumas de suas dúvidas para te ajudar neste novo projeto'
     ]
 
 class ActionIntroduzirContextoNaoExecucao(ActionMultiline):
     messages = [
         'Então suas dúvidas devem ser sobre as outras etapas do processo',
 
-        'Posso tentar sanar elas :smiley:'
+        'Vamos saná-las juntos? :smiley:'
     ]
 
 class ActionMaisAlgumaPergunta(ActionMultiline):
