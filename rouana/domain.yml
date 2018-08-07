@@ -30,7 +30,16 @@ intents:
   - escolher_correcao
   - escolher_erros_salic
   - duvida_sobre_contexto
-  - planilha_desapareceu
+  - preenchimento_planilha_desapareceu
+  - preenchimento_campo_custo_auditoria
+  - preenchimento_cadastro_rubrica_advogado_contador 
+  - preenchimento_valor_ingresso
+  - preenchimento_vinculo_cpf_proposta
+  - preenchimento_erro_salvamento
+  - preenchimento_erro_vinculo_cpf_cnpj
+  - preenchimento_erro_achar_proposta
+  - prazo_envio_cnae
+
 
 templates:
   utter_default:
@@ -83,10 +92,16 @@ actions:
   - actions.actions_processo.ActionExplicarProcesso
 
   - actions.actions_preenchimento.ActionExplicarPreenchimento
+  - actions.actions_preenchimento.ActionPreenchimentoCampoCustoAditoria
+  - actions.actions_preenchimento.ActionPreenchimentoPlanilhaDesaparecida
+  - actions.actions_preenchimento.ActionPreenchimentoVinculoDePropostas
+  - actions.actions_preenchimento.ActionPreenchimentoValorIngresso
+  - actions.actions_preenchimento.ActionPreenchimentoVinculoCpfProposta
+  - actions.actions_preenchimento.ActionPreenchimentoErroSalvamento
+  - actions.actions_preenchimento.ActionPreenchimentoErroVinculoCpfCnpj
+  - actions.actions_preenchimento.ActionPreenchimentoErroAcharProposta
 
   - actions.actions_prazo.ActionExplicarPrazo
+  - actions.actions_prazo.ActionPrazoEnvioCnae
 
   - actions.actions_correcao.ActionExplicarCorrecao
-
-  - actions.actions_erros_salic.ActionExplicarErrosSalic
-
