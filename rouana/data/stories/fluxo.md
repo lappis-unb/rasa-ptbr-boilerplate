@@ -143,8 +143,6 @@
 > identificar_explicar_cadastro
 * afirmar
   - action_explicar_cadastro_salic
-  - action_inscricao_proponente
-  - action_cadastro_proponente_introduzir_contexto
 > identificar_contexto
 
 
@@ -205,6 +203,12 @@
   - action_definir_contexto
 * escolher_erros_salic
 > opcao_erros_salic
+
+## pathContexto.6
+> identificar_contexto
+  - action_identificar_contexto
+* duvida_sobre_contexto
+  - action_explicar_contextos
 
 ## pathContexto.x
 > identificar_contexto

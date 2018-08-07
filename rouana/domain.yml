@@ -30,6 +30,7 @@ intents:
   - escolher_correcao
   - escolher_erros_salic
   - duvida_sobre_contexto
+  - planilha_desapareceu
 
 templates:
   utter_default:
@@ -58,6 +59,7 @@ actions:
   - actions.actions_geral.ActionIntroduzirContextoNaoExecucao
   - actions.actions_geral.ActionMaisAlgumaPergunta
   - actions.actions_geral.ActionMaisPerguntasAfirmativa
+  - actions.actions_geral.ActionExplicarContextos
 
   - actions.actions_curiosidades.ActionCuriosidadesIndicacao
   - actions.actions_curiosidades.ActionCuriosidadesMais
@@ -86,3 +88,4 @@ actions:
   - actions.actions_correcao.ActionExplicarCorrecao
 
   - actions.actions_erros_salic.ActionExplicarErrosSalic
+
