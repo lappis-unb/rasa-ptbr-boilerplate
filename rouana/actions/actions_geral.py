@@ -36,7 +36,7 @@ class ActionDefinirPerfil(ActionMultiline):
 
 class ActionNovaProposta(ActionMultiline):
     messages = [
-        'Você já começou a trabalhar em uma proposta de projeto?'
+        'Você já começou a trabalhar em uma nova proposta de projeto?'
     ]
 
 class ActionDuvidaExecucao(ActionMultiline):
