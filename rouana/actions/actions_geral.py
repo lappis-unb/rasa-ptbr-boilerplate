@@ -21,7 +21,7 @@ class ActionMultiline(Action):
 
 class ActionCumprimentar(ActionMultiline):
     messages = [
-        'Oi eu sou a Rouana, assistente virtual do minc, e estou aqui para te ajudar a'
+        'Oi eu sou a Rouana, assistente virtual do minc, e estou aqui para te ajudar a '
         'esclarecer dúvidas sobre a Lei Rouanet',
 
         'e também solucionar problemas de proposta e projeto'
@@ -41,13 +41,13 @@ class ActionNovaProposta(ActionMultiline):
 
 class ActionDuvidaExecucao(ActionMultiline):
     messages = [
-        'Você tem dúvida em relação à captação de verba e execução do'
+        'Você tem dúvida em relação à captação de verba e execução do '
         'projeto?'
     ]
 
 class ActionConheceProcesso(ActionMultiline):
     messages = [
-        'Você sabe como funciona o andamento de um projeto de incentivo a'
+        'Você sabe como funciona o andamento de um projeto de incentivo a '
         'cultura?'
     ]
 
@@ -153,7 +153,7 @@ class ActionExplicarCadastroSalic(ActionMultiline):
         'Agora aguarde a chegada de um e-mail de confirmação. Este vai conter'
         'uma senha temporária',
 
-        'É interessante você alterar esta senha, por isso, no seu primeiro'
+        'É interessante você alterar esta senha, por isso, no seu primeiro '
         'acesso, vá em "Usuário > Alterar Senha", para mudar a mesma',
 
         'Agora que você já se cadastrou, o próximo passo é se tornar um proponente'
