@@ -6,6 +6,7 @@ from rasa_core import utils
 from rasa_core.agent import Agent
 from rasa_core.channels.console import ConsoleInputChannel
 from rasa_core.interpreter import RasaNLUInterpreter
+from rasa_core.policies.fallback import FallbackPolicy
 from rasa_core.policies.keras_policy import KerasPolicy
 from rasa_core.policies.memoization import MemoizationPolicy
 
@@ -15,8 +16,13 @@ TRAINING_EPOCHS = os.getenv('TRAINING_EPOCHS', 300)
 def train_dialogue(domain_file='/rouana/domain.yml',
                    model_path='/models/dialogue',
                    training_data_file='/rouana/data/stories'):
+    fallback = FallbackPolicy(fallback_action_name="action_default_fallback",
+                              core_threshold=0.3,
+                              nlu_threshold=0.3)
+
     agent = Agent(domain_file,
-                  policies=[MemoizationPolicy(max_history=3), KerasPolicy()])
+                  policies=[MemoizationPolicy(max_history=3), KerasPolicy(),
+                            fallback])
 
 
     training_data = agent.load_data(training_data_file)

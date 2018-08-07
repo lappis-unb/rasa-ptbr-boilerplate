@@ -7,6 +7,14 @@
 - boa noite
 - oi, tudo bem?
 - oi, tudo bom?
+- alô
+- eae
+- eai
+- yo
+- com licença
+- tudo bom?
+- posso falar com você?
+- pode me tirar uma dúvida?
 
 ## intent:afirmar
 - sim
@@ -37,8 +45,8 @@
 - não preenchi
 - nao preenchi
 - nunca preenchi
-- nunca fiz uma proposta
-- nao fiz a minha proposta
+- nunca fiz
+- nao fiz
 - não está
 - não tem nada a ver
 - não é nada disso
@@ -61,6 +69,9 @@
 - Rouanet
 - rouanet
 - curiosidades
+- gostaria de falar mais sobre a lei
+- tenho duvidas na lei rouanet
+- possuo curiosidades sobre a lei rouanet
 
 ## intent:afirmar_projeto
 - quero conversar sobre projetos
@@ -87,6 +98,11 @@
 - pode conceituar?
 - pode explicar?
 - o que isso significa?
+- não faço ideia do que seja isso
+- não sei bem o que você quer dizer
+- pode me dar o conceito
+- não entendo isso
+- o que isso quer dizer?
 
 ## intent:afirmar_preencheu_proposta
 - já preenchi minha proposta
@@ -98,10 +114,6 @@
 - quero fazer uma nova proposta
 - estou elaborando um novo projeto
 
-## intent:negar_nova_proposta
-- testando
-- xablau
-
 ## intent:afirmar_execucao
 - captação
 - verba
@@ -112,6 +124,8 @@
 - sobre captação
 - prestação de contas
 - sobre prestação de contas
+- já estou captando
+- finalizei meu projeto
 
 ## intent:duvida_sobre_contexto
 - 6

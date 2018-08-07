@@ -30,7 +30,10 @@ intents:
   - escolher_correcao
   - escolher_erros_salic
   - duvida_sobre_contexto
-  - negar_nova_proposta
+
+templates:
+  utter_default:
+    - text: "Desculpe, não consegui te entender :confused:. Você pode reformular?"
 
 actions:
   - actions.actions_geral.ActionCumprimentar
