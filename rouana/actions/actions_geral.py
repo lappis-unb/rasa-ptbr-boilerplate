@@ -1,25 +1,45 @@
-from rasa_core.actions.action import Action
 import re
+import spacy
+
+from rasa_core.actions.action import Action
 
 class ActionOQueEh(Action):
+    dont_know_message = 'Desculpe, não sei conceituar isso ainda :sad:'
     meaning_map = {
-        'proponente': ['Um proponente é bla bla bla bla bla'],
-        'banana': ['Banana é uma fruta amarela =)'],
+        'lei rouanet': [
+            'A Lei 8.313/91, conhecida como Lei Rouanet, é o principal '
+            'mecanismo de fomento à Cultura do Brasil. Ela instituiu o '
+            'Programa Nacional de Apoio à Cultura (Pronac).',
+
+            'O nome Rouanet remete a seu criador, o então secretário Nacional '
+            'de Cultura, o diplomata Sérgio Paulo Rouanet.',
+
+            'A Lei estabelece as normativas de como o Governo Federal deve '
+            'disponibilizar recursos para a realização de projetos '
+            'artístico-culturais.',
+
+            '"A Lei foi concebida originalmente com três mecanismos: o Fundo '
+            'Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de '
+            'Investimento Cultural e Artístico (Ficart). Este nunca foi '
+            'implementado, enquanto o Incentivo Fiscal – também chamado de '
+            'mecenato – prevaleceu e chega ser confundido com a própria Lei."',
+        ]
     }
 
     def name(self):
         return 'action_o_que_eh'
 
     def run(self, dispatcher, tracker, domain):
-        user_message = tracker.latest_message.text.to_lower()
+        user_message = tracker.latest_message.text.lower()
 
-        for word in meaning_map:
+        for word in self.meaning_map:
             if word in user_message:
-                for message in meaning_map[word]:
+                for message in self.meaning_map[word]:
                     dispatcher.utter_message(message)
 
                 return []
-        dispatcher.utter_message('Desculpe, não sei conceituar isso ainda =/')
+
+        dispatcher.utter_message(self.dont_know_message)
         return []
 
 class ActionMultiline(Action):

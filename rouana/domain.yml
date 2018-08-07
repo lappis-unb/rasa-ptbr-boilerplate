@@ -1,4 +1,5 @@
 intents:
+  - o_que_eh
   - cumprimentar
   - afirmar_curiosidades
   - afirmar_projeto
@@ -6,7 +7,6 @@ intents:
   - lei_rouanet_quantidade_projetos
   - lei_rouanet_arrecadacao
   - submissao_de_projeto
-  - o_que_eh
   - afirmar_preencheu_proposta
   - afirmar_nova_proposta
   - afirmar_execucao

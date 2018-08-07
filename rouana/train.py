@@ -1,16 +1,10 @@
 import argparse
 import logging
-import warnings
 import os
 
 from rasa_core import utils
-from rasa_core.actions import Action
 from rasa_core.agent import Agent
 from rasa_core.channels.console import ConsoleInputChannel
-from rasa_core.events import SlotSet
-from rasa_core.featurizers import (
-    MaxHistoryTrackerFeaturizer,
-    BinarySingleStateFeaturizer)
 from rasa_core.interpreter import RasaNLUInterpreter
 from rasa_core.policies.keras_policy import KerasPolicy
 from rasa_core.policies.memoization import MemoizationPolicy

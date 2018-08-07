@@ -1,0 +1,2 @@
+rasa-core==0.10.3
+rasa-nlu[spacy]==0.13.0
