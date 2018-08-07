@@ -54,13 +54,17 @@ class ActionConheceProcesso(ActionMultiline):
 
 class ActionCadastroSalic(ActionMultiline):
     messages = [
-        'Tem cadastro no SALIC?'
+        'Você já tem cadastro no SALIC?'
     ]
 
 class ActionDespedir(ActionMultiline):
     messages = [
-        'Espero que eu tenha sido de grande ajuda',
-        'Ainda estou em fase de teste, a cada dia aprenderei mais com sua ajuda',
+        'Espero que eu tenha conseguido esclarecer suas dúvidas',
+        
+        'Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocẽs',
+        
+        'Se surgir alguma dúvida, não hesite, volte aqui',
+        
         'Até mais! :wave:'
     ]
 
@@ -97,10 +101,11 @@ class ActionIntroduzirExecucao(ActionMultiline):
         ':disappointed_relieved:',
 
         'Eu ainda não aprendi a falar sobre um projeto que está em Execução ou'
-        ' em Prestação de Contas. Porém eu ainda estou aprendendo, em um futuro'
-        ' próximo eu saberei responder sua dúvida :wink:',
+        'em Prestação de Contas. Ainda estou aprendendo...',
 
-        'Por agora eu recomendo entrar em contato com as equipes da SEFIC',
+        'Em breve eu poderei responder sua dúvida :wink:',
+
+        'Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC:',
 
         'Execução: acompanhamento.incentivo@cultura.gov.br',
 
@@ -115,7 +120,7 @@ class ActionJaEhProponente(ActionMultiline):
 class ActionCadastroProponenteIntroduzirContexto(ActionMultiline):
     messages = [
         'Maravilha!',
-        'Então agora posso tentar esclarer algumas de suas dúvidas',
+        'Agora eu posso tentar esclarer algumas de suas dúvidas',
     ]
 
 class ActionCadastroSalicVideo(ActionMultiline):
