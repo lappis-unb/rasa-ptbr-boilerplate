@@ -41,8 +41,7 @@ class ActionNovaProposta(ActionMultiline):
 
 class ActionDuvidaExecucao(ActionMultiline):
     messages = [
-        'Qual a sua dúvida?'
-        'Sua dúvida está relacionada com captação de verba e execução do'
+        'Você tem dúvida em relação à captação de verba e execução do'
         'projeto?'
     ]
 
@@ -61,7 +60,7 @@ class ActionDespedir(ActionMultiline):
     messages = [
         'Espero que eu tenha conseguido esclarecer suas dúvidas',
         
-        'Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocẽs',
+        'Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês',
         
         'Se surgir alguma dúvida, não hesite, volte aqui',
         
