@@ -1,4 +1,5 @@
 ## intent:curiosidades_quantidade_projetos
+- Qunatos projetos já participaram da lei rouanet?
 - Quantos projetos já foram agraciados pela lei rouanet?
 - Quantos projetos usam da lei rouanet?
 - Quantos projetos existem?
@@ -55,7 +56,8 @@
 ## intent:curiosidades_qual_papel_minc
 - Qual o papel do ministério da cultura na lei rouanet?
 - Qual o papel do MinC na lei rouanet?
-- Ministério da cultura tem a alguma interferência na lei rouanet?
+- Ministério da cultura tem alguma interferência na lei rouanet?
+- O que o MinC faz na lei rouanet?
 
 ## intent:curiosidades_receber_incetivo_de_parentes
 - Meus parentes podem incentivar meu projeto ?
@@ -63,12 +65,6 @@
 - Tenho parentes que desejam incentivar meus projetos, tem alguma restrição ?
 - Parentes incentivando meus projetos. Tem problema ?
 - Tem problema meu irmão ou irmã, tio ou tia, primo ou prima, mãe ou pai incentivar meus projetos ?
-
-## intent:curiosidades_papel_minc
-- Qual o papel do ministério da cultura na lei rouanet?
-- Qual o papel do MinC na lei rouanet?
-- O que o MinC faz na lei rouanet?
-- Ministério da cultura tem a alguma interferência na lei rouanet?
 
 ## intent:curiosidades_deducao_imposto_de_renda_incentivador
 - Quanto o incentivador de projetos culturais pode deduzir de seu imposto de renda?
