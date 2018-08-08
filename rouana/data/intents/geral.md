@@ -7,6 +7,8 @@
 - boa noite
 - oi, tudo bem?
 - oi, tudo bom?
+- oi, como vai você?
+- como vão as coisas?
 - alô
 - eae
 - eai
@@ -74,7 +76,18 @@
 - possuo curiosidades sobre a lei rouanet
 
 ## intent:afirmar_projeto
+- prefiro conversar sobre criação e andamento de projetos
+- prefiro conversar sobre proposta
+- prefiro conversar sobre projetos
+- prefiro falar sobre criação e andamento de projetos
+- prefiro falar sobre proposta
+- prefiro falar sobre projetos
 - quero conversar sobre projetos
+- quero conversar sobre criação e andamento de projetos
+- quero conversar sobre proposta
+- quero conversar sobre projetos
+- quero falar sobre proposta
+- quero falar sobre projetos
 - projetos
 - projeto
 - proposta
@@ -155,11 +168,14 @@
 - 555
 - 5 5 5
 - não sei
-- Nao sei
 - não sei onde se encaixa
 - não sei dizer
 - não sei bem
+- não sei onde a minha pergunta se encaixa
+- a minha pergunta não se encaixa nessas categorias
 - não tenho certeza
+- Não sei
+- Não sei dizer
 - Não sei onde encaixa
 - Não sei bem
 - se encaixa na 5
@@ -168,3 +184,5 @@
 - acho que seria a 5
 - na quinta alternativa
 - alternativa 5
+- Não sei onde a minha pergunta se encaixa
+- A minha pergunta não se encaixa nessas categorias
