@@ -62,14 +62,6 @@
 > curiosidade_final
 
 
-## pathCuriosidade.8
-> identificar_curiosidade
-* curiosidades_papel_minc
-  - action_curiosidades_papel_minc
-  - action_curiosidades_mais
-> curiosidade_final
-
-
 ## pathCuriosidade.9
 > identificar_curiosidade
 * curiosidades_deducao_imposto_de_renda_incentivador

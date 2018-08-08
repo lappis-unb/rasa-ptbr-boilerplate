@@ -29,21 +29,36 @@
 ## intent:preenchimento_campo_custo_auditoria
 - como eu preencho o campo Custo de Auditoria?
 - Custo de Auditoria
-- não sei como preencher o campa Custo de Auditoria
+- não sei como preencher o campo Custo de Auditoria
 - o que devo preencher no campo Custo de Auditoria
+- custo de auditoria
+- não sei preencher custo de auditoria
+- como preencher o campo custo de auditoria
+- preencher Custo de Auditoria
+- o que colocar no Custo de auditoria?
 
 ## intent:preenchimento_cadastro_rubrica_advogado_contador
 - Como faço para cadastrar as rubricas de advogado e contador?
 - Cadastro de rubricas de advogado
 - Cadastro de rubricas de contador
+- cadastrar rubricas
+- rubricas de contador
+- rubricas de advogado
+- cadastrar rúbricas de advogado
+- cadastrar rúbricas de contador
 
 ## intent:preenchimento_valor_ingresso
 - O sistema informa que o custo por beneficiário não pode ultrapassar o valor de 250,00, mas não irei comercializar ingressos ou o ingresso não ultrapassa o valor citado. Como resolver?
 - Não irei comercializar ingressos ou o ingresso não ultrapassa o valor citado. Como resolver?
+- não vou comercializar ingressos
+- ingresso não ultrapassa o valor citado
+- não vou comercializar
 
 ## intent:preenchimento_vinculo_cpf_proposta
 - Como faço para vincular uma proposta ao CPF do responsável?
 - Vincular proposta ao CPF
+- como vincular proposta ao cpf?
+- quero vincular proposta ao CPF
 
 ## intent:preenchimento_erro_salvamento
 - Perdi minhas alterações na proposta
@@ -63,6 +78,9 @@
 - Não consigo achar minha proposta no sistema, porém a mesma está ativa.
 - Como encontrar a minha proposta no sistema?
 - Não sei achar minha proposta
+- não acho minha proposta
+- não consigo achar minha proposta
+- não encontro minha proposta
 
 ## intent:preenchimento_recuperacao_de_senha
 - Me cadastrei a muito tempo no Salic, mas não me recordo da senha de \

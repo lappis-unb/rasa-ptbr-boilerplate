@@ -16,4 +16,12 @@
 - Qual é o prazo limite para envio do CNAE?
 - Até quando posso enviar o CNAE?
 - Tem algum prazo para enviar o CNAE?
-
+- prazo cnae
+- cnae
+- envio do CNAE
+- CNAE
+- prazo para enviar cnae
+- prazo para enviar CNAE
+- prazo de envio de CNAE?
+- prazo CNAE
+- prazo de envio cnae

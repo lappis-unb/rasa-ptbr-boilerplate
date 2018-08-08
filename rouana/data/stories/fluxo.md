@@ -211,16 +211,17 @@
   - action_definir_contexto
 * o_que_eh
   - action_o_que_eh
-  - action_mais_alguma_pergunta
 > identifica_mais_alguma_pergunta
 
 ## pathMaisPergunta.1
 > identifica_mais_alguma_pergunta
+  - action_mais_alguma_pergunta
 * afirmar
   - action_mais_perguntas_afirmativa
 > identificar_contexto
 
 ## pathMaisPergunta.2-fim
 > identifica_mais_alguma_pergunta
+  - action_mais_alguma_pergunta
 * negar
   - action_despedir

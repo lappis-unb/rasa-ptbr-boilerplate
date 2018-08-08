@@ -17,8 +17,8 @@ def train_dialogue(domain_file='/rouana/domain.yml',
                    model_path='/models/dialogue',
                    training_data_file='/rouana/data/stories'):
     fallback = FallbackPolicy(fallback_action_name="action_default_fallback",
-                              core_threshold=0.3,
-                              nlu_threshold=0.3)
+                              core_threshold=0.2,
+                              nlu_threshold=0.2)
 
     agent = Agent(
         domain_file,
