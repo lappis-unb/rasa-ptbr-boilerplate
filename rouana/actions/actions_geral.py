@@ -31,7 +31,7 @@ class ActionDefinirPerfil(ActionMultiline):
     messages = [
         'Você gostaria de saber mais sobre a lei Rouanet?',
         
-        'Ou, se você preferir podemos falar mais sobre criação e andamento de projetos. :smile:'
+        'Você deseja saber mais sobre propostas e projetos? :smile:'
     ]
 
 class ActionNovaProposta(ActionMultiline):
