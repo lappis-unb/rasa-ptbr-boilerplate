@@ -2,7 +2,7 @@ from actions.actions_geral import ActionMultiline
 
 class ActionExplicarPrazo(ActionMultiline):
     messages = [
-        'Nesta etapa posso responder suas dúvidas à respeito de Datas ' 
+        'Nesta etapa posso responder suas dúvidas a respeito de Datas ' 
         'e Prazos do seu projeto.',
 
         'O que você quer saber?'
