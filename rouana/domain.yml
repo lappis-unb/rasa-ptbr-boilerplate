@@ -92,7 +92,7 @@ actions:
   - actions.actions_processo.ActionExplicarProcesso
 
   - actions.actions_preenchimento.ActionExplicarPreenchimento
-  - actions.actions_preenchimento.ActionPreenchimentoCampoCustoAditoria
+  - actions.actions_preenchimento.ActionPreenchimentoCampoCustoAuditoria
   - actions.actions_preenchimento.ActionPreenchimentoPlanilhaDesaparecida
   - actions.actions_preenchimento.ActionPreenchimentoVinculoDePropostas
   - actions.actions_preenchimento.ActionPreenchimentoValorIngresso
