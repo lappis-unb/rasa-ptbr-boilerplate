@@ -64,7 +64,6 @@ class ActionDespedir(ActionMultiline):
         
         'Se surgir alguma dúvida, não hesite, volte aqui',
         
-        
         'Até mais! :wave:'
     ]
 
@@ -218,4 +217,23 @@ class ActionExplicarContextos(ActionMultiline):
         '4. Correção de proposta enviada: '
 
         '5. Erros do Salic: '
+    ]
+
+class ActionExplicarContextos(ActionMultiline):
+    messages = [
+        'Na categoria "Processo" eu responderei a respeito '
+        'do fluxo de submissão do seu projeto, e o sobre o estado dele.',
+
+        'Em "Preenchimento" eu vou tirar dúvidas sobre o '
+        'preenchimento de propostas no Salic, e possíveis erros que possam '
+        'ter lhe ocorrido durante a utilização do sistema.',
+
+        'Agora, em Datas e Prazos, eu consigo falar sobre prazos importantes '
+        'para a aceitação e execução do seu projeto.',
+
+        'Por último, em correção, eu falarei sobre '
+        'campos preenchidos incorretamente ou motivos para sua proposta '
+        'não ser aceita.',
+
+        'Já que te expliquei, vou te dar as opçẽs de novo :smiley: '
     ]

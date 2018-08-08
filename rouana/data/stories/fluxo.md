@@ -201,14 +201,10 @@
 ## pathContexto.5
 > identificar_contexto
   - action_definir_contexto
-* escolher_erros_salic
-> opcao_erros_salic
-
-## pathContexto.6
-> identificar_contexto
-  - action_definir_contexto
 * duvida_sobre_contexto
   - action_explicar_contextos
+  - action_definir_contexto
+> identificar_contexto
 
 ## pathContexto.x
 > identificar_contexto

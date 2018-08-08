@@ -2,7 +2,11 @@ from actions.actions_geral import ActionMultiline
 
 class ActionExplicarPreenchimento(ActionMultiline):
     messages = [
-        'Vamos falar sobre preenchimento. '
+        'Nesta etapa eu posso responder dúvidas sobre o preenchimento de '
+        'propostas no Salic, e possíveis erros que possam ter lhe '
+        'ocorrido durante a utilização do sistema.',
+
+        'O que você gostaria de saber?'
     ]
 
 class ActionPreenchimentoPlanilhaDesaparecida(ActionMultiline):
