@@ -33,22 +33,22 @@ class ActionOQueEh(Action):
              'monitoramento e prestação de contas de projetos culturais.'
         ],
         'projeto': [
-             'Projeto é o termo dado para a proposta aprovada no SALIC'
+             'Projeto é o termo dado para a proposta aprovada no SALIC.'
         ],
         'proposta': [
              'Proposta é o conjunto de formulários que explicam o projeto '
-             'cultural que pode ser incentivado pela Lei Rouanet'
+             'cultural que pode ser incentivado pela Lei Rouanet.'
         ],
         'proponente': [
              'Proponente é o agente responsável por propor e participar '
-             'de projetos culturais'
+             'de projetos culturais.'
         ],
         'preechimento': [
-             'É a primeira fase da proposta, onde você preenche os formulários'
+             'É a primeira fase da proposta, onde você preenche os formulários.'
         ],
         'admissibilidade': [
              'É a fase da proposta em que o MinC e a vinculada irão avaliar a '
-             'proposta, para pedir correções ou aprova-la, gerando um projeto'
+             'proposta, para pedir correções ou aprova-la, gerando um projeto.'
         ],
         'execução': [
              'Execução é a fase referente ao andamento do projeto '
@@ -57,20 +57,20 @@ class ActionOQueEh(Action):
         'prestação de contas': [
              'É a fase realizada no final do projeto, onde o proponente '
              'deve apresentar todas as notas fiscais e contratos realizados '
-             'afim de provar o gasto correto do recurso'
+             'afim de provar o gasto correto do recurso.'
         ],
         'salic': [
              'Sistema de Apoio às Leis de Incentivo à Cultura (SALIC) é o '
              'sistema utilizado para submeter propostas e gerenciar os '
-             'projetos aprovados pela Lei Rouanet',
+             'projetos aprovados pela Lei Rouanet.',
 
              'Você pode acessa-lo aqui: salic.cultura.gov.br'
         ],
         'vinculada': [
              'As vinculadas são órgãos associados ao MinC especialistas nas '
-             'áreas específicas que a Lei Rouanet cobre',
+             'áreas específicas que a Lei Rouanet cobre.',
 
-             'Elas que avaliam o orçamento e adequação do projeto'
+             'Elas que avaliam o orçamento e adequação do projeto.'
         ],
     }
 
