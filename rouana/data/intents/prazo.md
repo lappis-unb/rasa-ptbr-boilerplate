@@ -6,6 +6,11 @@
 - prazo
 - Prazo
 - data
+- escolha 3
+- na 3
+- 333
+- 3 3 3
+- 3.
 
 ## intent:prazo_envio_cnae
 - Qual é o prazo limite para envio do CNAE?

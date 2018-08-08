@@ -151,6 +151,9 @@
 
 ## intent:duvida_sobre_contexto
 - 5
+- 5.
+- 555
+- 5 5 5
 - não sei
 - Nao sei
 - não sei onde se encaixa
@@ -159,3 +162,9 @@
 - não tenho certeza
 - Não sei onde encaixa
 - Não sei bem
+- se encaixa na 5
+- eu não sei
+- Não sei
+- acho que seria a 5
+- na quinta alternativa
+- alternativa 5

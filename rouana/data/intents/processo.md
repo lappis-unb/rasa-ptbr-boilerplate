@@ -1,5 +1,8 @@
 ## intent:escolher_processo
 - 1
+- 111
+- 1 1 1
+- 1.
 - sobre processo
 - processo
 - Processo
@@ -11,6 +14,7 @@
 - estado
 - processo do projeto
 - Estado do projeto
+- se encaixa na 1
 
 ## intent:processo_projeto_homologado
 - estado D52

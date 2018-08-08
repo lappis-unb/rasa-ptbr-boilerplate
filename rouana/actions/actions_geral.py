@@ -202,25 +202,6 @@ class ActionMaisPerguntasAfirmativa(ActionMultiline):
 
 class ActionExplicarContextos(ActionMultiline):
     messages = [
-        'Como você está em dúvidas sobre o contexto, vou lhe explicar '
-        'um pouco sobre o que é cada uma das categorias:',
-
-        '1. Processo e estado do projeto: ',
-
-        '2. Preenchimento do Salic: Dúvidas relacionadas ao preenchimento '
-        'ou submissão de propostas no Salic.'
-        ' Por exemplo, dúvidas no preenchimento de campos e utilização do '
-        'sistema.'
-
-        '3. Datas e prazos: '
-
-        '4. Correção de proposta enviada: '
-
-        '5. Erros do Salic: '
-    ]
-
-class ActionExplicarContextos(ActionMultiline):
-    messages = [
         'Na categoria "Processo" eu responderei a respeito '
         'do fluxo de submissão do seu projeto, e o sobre o estado dele.',
 
