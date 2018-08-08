@@ -11,7 +11,7 @@ from rasa_core.policies.keras_policy import KerasPolicy
 from rasa_core.policies.memoization import MemoizationPolicy
 
 logger = logging.getLogger(__name__)
-TRAINING_EPOCHS = os.getenv('TRAINING_EPOCHS', 300)
+TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 300))
 
 def train_dialogue(domain_file='/rouana/domain.yml',
                    model_path='/models/dialogue',
@@ -20,17 +20,18 @@ def train_dialogue(domain_file='/rouana/domain.yml',
                               core_threshold=0.3,
                               nlu_threshold=0.3)
 
-    agent = Agent(domain_file,
-                  policies=[MemoizationPolicy(max_history=3), KerasPolicy(),
-                            fallback])
+    agent = Agent(
+        domain_file,
+        policies=[MemoizationPolicy(max_history=3), KerasPolicy(), fallback]
+    )
 
 
     training_data = agent.load_data(training_data_file)
     agent.train(
-            training_data,
-            epochs=int(TRAINING_EPOCHS),
-            batch_size=100,
-            validation_split=0.2
+        training_data,
+        epochs=TRAINING_EPOCHS,
+        batch_size=100,
+        validation_split=0.2
     )
 
     agent.persist(model_path)

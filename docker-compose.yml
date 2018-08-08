@@ -2,7 +2,7 @@ version: '2'
 
 services:
   rocketchat:
-    image: rocketchat/rocket.chat:latest
+    image: rocket.chat:0.68.3
     restart: unless-stopped
     volumes:
       - ./uploads:/app/uploads
@@ -23,7 +23,7 @@ services:
     image: mongo:3.2
     restart: unless-stopped
     volumes:
-     - ./data/db:/data/db
+      - ./data/db:/data/db
     command: mongod --smallfiles --oplogSize 128 --replSet rs0
 
   mongo-init-replica:
@@ -33,12 +33,25 @@ services:
       - mongo
 
   rouana:
-    build: .
+    build:
+      context: .
+      dockerfile: ./docker/rocketchat.Dockerfile
     environment:
-      - ROUANA_TRAINING_EPOCHS=500
+      - TRAINING_EPOCHS=300
       - ROUANA_PORT=5005
-      - ROUANA_CONNECTOR=rocketchat
+      - CREDENTIALS=/rouana/credentials.yml
     ports:
       - 5005:5005
     volumes:
-      - .:/opt/rouana
+      - ./rouana:/rouana
+    depends_on:
+      - rocketchat
+
+  rouana-console:
+    build:
+      context: .
+      dockerfile: ./docker/console.Dockerfile
+    environment:
+      - TRAINING_EPOCHS=300
+    volumes:
+      - ./rouana:/rouana
