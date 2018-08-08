@@ -8,8 +8,13 @@
 - Estado
 - primeira opção
 - primeiro tópico
+- estado
+- processo do projeto
+- Estado do projeto
 
 ## intent:processo_projeto_homologado
+- estado D52
+- situação D52
 - Meu projeto está com a situação D52 projeto homologado, o que significa
 - O que significa o estado do projeto d52
 - Projeto homologado o que é ?
@@ -44,3 +49,24 @@
 - Reativar proposta
 - reativar minha proposta
 - reativação de proposta
+
+## intent:processo_projeto_adequacao
+- Meu projeto está com a situação E90 projeto liberado para adequação, \
+- O que significa o estado do projeto e90 ?
+- Projeto liberado para adequação o que é ?
+- e90 o que significa ?
+- Estado de projeto liberado para adequação ?
+- estado liberado para adequação 
+- E90 liberado para adequação
+- estado e90
+- estado E90
+
+## intent:processo_cadastro_proponente
+- Como cadastrar o proponente via Salic ?
+- Como cadastro um proponente no Salic ?
+- O que devo fazer para cadastrar um proponente ?
+- Cadastro de proponente ?
+- Como fazer cadastro de proponente?
+- Cadastro de proponente no Salic 
+- cadastrar proponente
+- cadastrar proponente no Salic

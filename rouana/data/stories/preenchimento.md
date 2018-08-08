@@ -44,4 +44,4 @@
 > opcao_preenchimento
   - action_explicar_preenchimento
 * preenchimento_recuperacao_de_senha
-  - action_recuperacao_de_senha
+  - action_preenchimento_recuperacao_de_senha

@@ -38,10 +38,13 @@ intents:
   - preenchimento_erro_salvamento
   - preenchimento_erro_vinculo_cpf_cnpj
   - preenchimento_erro_achar_proposta
+  - preenchimento_recuperacao_de_senha
   - prazo_envio_cnae
   - processo_projeto_homologado
   - processo_captacao_de_recursos
-
+  - processo_reativacao_de_proposta
+  - processo_projeto_adequacao
+  - processo_cadastro_proponente
 
 templates:
   utter_default:
@@ -95,6 +98,8 @@ actions:
   - actions.actions_processo.ActionProcessoProjetoHomologado
   - actions.actions_processo.ActionProcessoCaptacaoDeRecursos
   - actions.actions_processo.ActionProcessoReativacaoDeProposta
+  - actions.actions_processo.ActionProcessoProjetoAdequacao
+  - actions.actions_processo.ActionProcessoCadastroProponente
 
   - actions.actions_preenchimento.ActionExplicarPreenchimento
   - actions.actions_preenchimento.ActionPreenchimentoCampoCustoAuditoria

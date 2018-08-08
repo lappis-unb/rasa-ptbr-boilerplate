@@ -2,7 +2,13 @@ from actions.actions_geral import ActionMultiline
 
 class ActionExplicarProcesso(ActionMultiline):
     messages = [
-        'Então vamos falar sobre processo.'
+        'Na categoria de processos eu posso responder dúvidas à respeito '
+        'do fluxo de submissão do seu projeto.',
+
+        'Por exemplo, você pode me fazer perguntar à respeito de captação '
+        'de verbas ou sobre o estado do seu projeto.',
+
+        'O que você gostaria de saber?'
     ]
 
 class ActionProcessoProjetoHomologado(ActionMultiline):
@@ -51,4 +57,25 @@ class ActionProcessoReativacaoDeProposta(ActionMultiline):
         'e aí é só aguardar uma resposta =)'
     ]
 
+class ActionProcessoProjetoAdequacao(ActionMultiline):
+    messages = [
+        'Um projeto liberado para adequação (estado E90) '
+        'é um projeto que garantiu o mínimo de 10% do seu valor...',
 
+        'e que agora pode ser adequado conforme a sua realidade',
+
+        'se você quiser saber como dar prosseguimento ao projeto sem fazer '
+        'alterações, escreva “prosseguir com e90”',
+
+        'ou, para entender como fazer alterações e o que pode ser alterado, '
+        'escreva “alterar e90”'
+    ]
+
+class ActionProcessoCadastroProponente(ActionMultiline):
+    messages = [
+        'Basta você entrar no Salic...',
+
+        'clicar em Administrativo > Cadastrar proponente',
+
+        'e preencher todos os dados =)'
+    ]
