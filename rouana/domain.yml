@@ -20,7 +20,6 @@ intents:
   - curiosidades_elegibilidade_de_empresa_para_beneficios
   - curiosidades_qual_papel_minc
   - curiosidades_receber_incetivo_de_parentes
-  - curiosidades_papel_minc
   - curiosidades_deducao_imposto_de_renda_incentivador
   - curiosidades_como_eh_feita_deducao_imposto_de_renda
   - curiosidades_desconto_do_ir_das_doecoes
@@ -89,7 +88,6 @@ actions:
   - actions.actions_curiosidades.ActionCuriosidadesElegibilidadeDeEmpresaParaBeneficios
   - actions.actions_curiosidades.ActionCuriosidadesQualPapelMinc
   - actions.actions_curiosidades.ActionCuriosidadesReceberIncetivoDeParentes
-  - actions.actions_curiosidades.ActionCuriosidadesPapelMinc
   - actions.actions_curiosidades.ActionCuriosidadesDeducaoImpostoDeRendaIncentivador
   - actions.actions_curiosidades.ActionCuriosidadesComoEhFeitaDeducaoImpostoDeRenda
   - actions.actions_curiosidades.ActionCuriosidadesDescontoDoIrDasDoecoes

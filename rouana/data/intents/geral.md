@@ -192,5 +192,3 @@
 - acho que seria a 5
 - na quinta alternativa
 - alternativa 5
-- Não sei onde a minha pergunta se encaixa
-- A minha pergunta não se encaixa nessas categorias

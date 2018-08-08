@@ -94,13 +94,6 @@ class ActionCuriosidadesReceberIncetivoDeParentes(ActionMultiline):
         '- e os dependentes… tanto do doador, quanto do patrocinador, dos titulares, administradores, acionistas ou sócios de pessoa jurídica vinculada ao doador ou patrocinador, na data da operação, ou nos 12 meses anteriores.',
     ]
 
-class ActionCuriosidadesPapelMinc(ActionMultiline):
-    messages = [
-        'Para que um projeto seja aprovado uma proposta deve ser cadastrada junto ao Ministério da Cultura onde a proposta passa por um exame de admissibilidade, que diz respeito à viabilidade técnica da atividade a ser realizada.',
-        'Uma vez que a proposta seja aprovada, ela se transformará em um projeto (com um número de Pronac). O projeto, por sua vez, precisa ser aprovado por uma das unidades técnicas vinculadas ao Ministério da Cultura.',
-        'Após o parecer do Ministério da Cultura, o projeto ainda é submetido à CNIC que irá aprová-lo ou indeferi-lo.',
-    ]
-
 class ActionCuriosidadesDeducaoImpostoDeRendaIncentivador(ActionMultiline):
     messages = [
         'Atualmente, existem 2 situações descritas na Lei 8313/91:',
