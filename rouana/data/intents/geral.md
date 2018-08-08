@@ -61,6 +61,11 @@
 - não, tudo bem
 
 ## intent:afirmar_curiosidades
+- quero aprender mais sobre a lei
+- quero saber mais sobre a lei
+- pretendo saber mais sobre a lei
+- gostaria de aprender mais sobre a lei
+- gostaria de saber mais sobre a lei
 - quero falar sobre a lei
 - mais sobre a lei
 - vamos falar sobre a lei
