@@ -39,3 +39,9 @@
   - action_explicar_preenchimento
 * preenchimento_erro_achar_proposta
   - action_preenchimento_erro_achar_proposta
+
+## pathPreenchimento.7
+> opcao_preenchimento
+  - action_explicar_preenchimento
+* preenchimento_recuperacao_de_senha
+  - action_recuperacao_de_senha

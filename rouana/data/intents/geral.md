@@ -111,13 +111,30 @@
 
 ## intent:afirmar_preencheu_proposta
 - já preenchi minha proposta
-- estou preenchendo
-- ainda estou preenchendo
+- sim
+- Sim
+- sim, já preenchi
+- eu já preenchi
+- já sim
+- já preenchi
+- Já preenchi
+- preenchi sim
+- já preenchi uma proposta
+- sim, preenchi minha proposta
 
 ## intent:afirmar_nova_proposta
 - estou trabalhando em uma nova proposta
 - quero fazer uma nova proposta
 - estou elaborando um novo projeto
+- sim, estou trabalhando
+- já comecei
+- já
+- comecei
+- sim
+- Sim
+- comecei a trabalhar
+- já comecei a trabalhar em uma nova proposta
+- já estou trabalhando
 
 ## intent:afirmar_execucao
 - captação
@@ -135,8 +152,10 @@
 ## intent:duvida_sobre_contexto
 - 5
 - não sei
-- nao sei
+- Nao sei
 - não sei onde se encaixa
 - não sei dizer
 - não sei bem
 - não tenho certeza
+- Não sei onde encaixa
+- Não sei bem

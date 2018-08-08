@@ -59,3 +59,14 @@
 - Não consigo achar minha proposta no sistema, porém a mesma está ativa.
 - Como encontrar a minha proposta no sistema?
 - Não sei achar minha proposta
+
+## intent:preenchimento_recuperacao_de_senha
+- Me cadastrei a muito tempo no Salic, mas não me recordo da senha de \
+  acesso. Como faço para resolver ?
+- Esqueci a senha do Salic, o que faço ?
+- Como recuperar senha do Salic ?
+- O que fazer quando se esquece a senha do Salic ?
+- Esqueci a senha de acesso, e agora ?
+- recuperação de senha
+- perdi minha senha do Salic
+- esqueci minha senha no Salic
