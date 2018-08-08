@@ -29,9 +29,7 @@ class ActionCumprimentar(ActionMultiline):
 
 class ActionDefinirPerfil(ActionMultiline):
     messages = [
-        'Você gostaria de saber mais sobre a lei Rouanet?',
-        
-        'Você deseja saber mais sobre propostas e projetos? :smile:'
+        '
     ]
 
 class ActionNovaProposta(ActionMultiline):
@@ -91,9 +89,9 @@ class ActionDefinirContexto(ActionMultiline):
 
 class ActionAviso(ActionMultiline):
     messages = [
-        'Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.',
+     'Você quer conversar sobre criação e andamento de projetos? ',
         
-        'Você já preencheu uma proposta?',
+     'Ou, podemos falar mais sobre a Lei Rouanet.'
     ]
 
 class ActionIntroduzirExecucao(ActionMultiline):
