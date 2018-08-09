@@ -12,12 +12,12 @@ build rouana:
     - docker:dind
   script:
     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
-    - docker build -f Dockerfile -t $ROUANA_RELEASE_IMAGE .
+    - docker build -f docker/rocketchat.Dockerfile -t $ROUANA_RELEASE_IMAGE .
     - docker tag $ROUANA_RELEASE_IMAGE "$CI_REGISTRY_IMAGE/rouana:latest"
     - docker push $ROUANA_RELEASE_IMAGE
     - docker push "$CI_REGISTRY_IMAGE/rouana:latest"
   only:
-    - /master|develop/
+    - /master|rouana_rasa/
   environment: development
   tags:
     - docker
@@ -28,9 +28,9 @@ deploy_to_development:
   services:
     - docker:dind
   script:
-    - upgrade --environment Development --stack RouanaBot --service rouana --new-image $ROUANA_RELEASE_IMAGE --no-finish-upgrade --debug
+    - upgrade --environment Development --stack Rouana --service rouana --new-image $ROUANA_RELEASE_IMAGE --no-finish-upgrade --debug
   only:
-    - /develop/
+    - /master/rouana_rasa/
   environment: development
   tags:
     - docker
@@ -41,9 +41,10 @@ deploy_to_production:
   services:
     - docker:dind
   script:
-    - upgrade --environment Production --stack RouanaBot --service rouana --new-image $ROUANA_RELEASE_IMAGE --no-finish-upgrade --debug
+    - upgrade --environment Production --stack Rouana --service rouana --new-image $ROUANA_RELEASE_IMAGE --no-finish-upgrade --debug
   only:
-    - /master/
+    - tags
+    - master
   environment: production
   tags:
     - docker
