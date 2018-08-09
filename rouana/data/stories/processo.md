@@ -32,3 +32,10 @@
 * processo_cadastro_proponente
  - action_processo_cadastro_proponente
 > identifica_mais_alguma_pergunta
+
+## pathProcesso.oqueeh
+> opcao_processo
+  - action_explicar_processo
+* o_que_eh
+  - action_o_que_eh
+> identifica_mais_alguma_pergunta

@@ -7,9 +7,6 @@ intents:
   - lei_rouanet_quantidade_projetos
   - lei_rouanet_arrecadacao
   - submissao_de_projeto
-  - afirmar_preencheu_proposta
-  - afirmar_nova_proposta
-  - afirmar_execucao
   - afirmar
   - negar
   - curiosidades_quantidade_projetos
@@ -31,7 +28,7 @@ intents:
   - duvida_sobre_contexto
   - preenchimento_planilha_desapareceu
   - preenchimento_campo_custo_auditoria
-  - preenchimento_cadastro_rubrica_advogado_contador 
+  - preenchimento_cadastro_rubrica_advogado_contador
   - preenchimento_valor_ingresso
   - preenchimento_vinculo_cpf_proposta
   - preenchimento_erro_salvamento

@@ -85,10 +85,15 @@
   - action_curiosidades_mais
 > curiosidade_final
 
-## pathCuriosidade.12
+## pathCuriosidade.oqueeh
 > identificar_curiosidade
 * o_que_eh
   - action_o_que_eh
   - action_curiosidades_mais
 > curiosidade_final
 
+## pathCuriosidade.negar
+> identificar_curiosidade
+* negar
+  - action_curiosidades_mais_nao
+> curiosidade_falar_sobre_projetos

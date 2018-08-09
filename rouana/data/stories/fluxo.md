@@ -52,7 +52,7 @@
 
 ## path2.1
 > identificar_preenchimento_de_proposta
-* afirmar_preencheu_proposta
+* afirmar
   - action_nova_proposta
 > identificar_nova_proposta
 
@@ -70,7 +70,7 @@
 
 ## path2.1.1
 > identificar_nova_proposta
-* afirmar_nova_proposta
+* afirmar
   - action_introduzir_contexto_nova_proposta
 > identificar_contexto
 
@@ -87,7 +87,7 @@
 
 ## path2.1.2.1-fim
 > identificar_execucao
-* afirmar_execucao
+* afirmar
   - action_introduzir_execucao
   - action_despedir
 

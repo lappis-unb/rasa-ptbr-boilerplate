@@ -38,6 +38,9 @@
 - conheço
 - conheco
 - sei bastante
+- preenchi sim
+- já preenchi uma proposta
+- sim, preenchi minha proposta
 
 ## intent:negar
 - não
@@ -59,6 +62,8 @@
 - quero nao
 - nao quero
 - não, tudo bem
+- nada
+- não quero saber de mais nada
 
 ## intent:afirmar_curiosidades
 - quero aprender mais sobre a lei
@@ -110,68 +115,33 @@
 - andamento de projetos
 
 ## intent:o_que_eh
-- o que é um
-- o que é
-- o que e
+- o que é um projeto?
+- o que é a cnic?
+- o que é proposta?
+- o que e proponente?
 - o que é isso?
-- pode conceituar?
-- pode explicar?
-- o que isso significa?
-- não faço ideia do que seja isso
-- não sei bem o que você quer dizer
-- pode me dar o conceito
-- o que isso quer dizer?
-- me explique isso
-- me explique melhor
-- qual o conceito
-- qual o significado
-- que?
-
-## intent:afirmar_preencheu_proposta
-- já preenchi minha proposta
-- sim
-- Sim
-- sim, já preenchi
-- eu já preenchi
-- já sim
-- já preenchi
-- Já preenchi
-- preenchi sim
-- já preenchi uma proposta
-- sim, preenchi minha proposta
-
-## intent:afirmar_nova_proposta
-- estou trabalhando em uma nova proposta
-- quero fazer uma nova proposta
-- estou elaborando um novo projeto
-- sim, estou trabalhando
-- já comecei
-- já
-- comecei
-- sim
-- Sim
-- comecei a trabalhar
-- já comecei a trabalhar em uma nova proposta
-- já estou trabalhando
-
-## intent:afirmar_execucao
-- captação
-- verba
-- captação de verba
-- execução
-- planilha orçamentária
-- sobre execução
-- sobre captação
-- prestação de contas
-- sobre prestação de contas
-- já estou captando
-- finalizei meu projeto
+- pode conceituar salic?
+- pode conceituar o salic?
+- pode explicar execução?
+- pode me explicar a fase de preenchimento?
+- pode me explicar a lei rouanet?
+- o que lei rouanet significa?
+- não faço ideia do que seja proponente
+- não sei bem o que você quer dizer com ministério da cultura
+- pode me dar o conceito do salic
+- o que preenchimento quer dizer?
+- me explique prestação de contas
+- me explica o que é a cnic
+- me explica o que é o salic
+- me explique melhor o conceito de projeto
+- me explique melhor o que é um proponente
+- qual o conceito de salic?
+- qual o significado de sefic?
+- o que significa e90?
+- o que significa o estado e90?
 
 ## intent:duvida_sobre_contexto
 - 5
-- 5.
-- 555
-- 5 5 5
 - não sei
 - não sei onde se encaixa
 - não sei dizer

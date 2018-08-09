@@ -11,10 +11,7 @@
 - Erros no Salic
 - erro
 - Erro
-- 222
-- 2 2 2
 - acho que na 2
-- 2.
 
 ## intent:preenchimento_planilha_desapareceu
 - minha planilha sumiu
@@ -30,7 +27,7 @@
 - como eu preencho o campo Custo de Auditoria?
 - Custo de Auditoria
 - não sei como preencher o campo Custo de Auditoria
-- o que devo preencher no campo Custo de Auditoria
+- come devo preencher no campo Custo de Auditoria
 - custo de auditoria
 - não sei preencher custo de auditoria
 - como preencher o campo custo de auditoria
