@@ -15,11 +15,8 @@ intents:
   - curiosidades_lei_rouanet_arrecadamento
   - curiosidades_lei_rouanet_denuncia
   - curiosidades_elegibilidade_de_empresa_para_beneficios
-  - curiosidades_qual_papel_minc
   - curiosidades_receber_incetivo_de_parentes
   - curiosidades_deducao_imposto_de_renda_incentivador
-  - curiosidades_como_eh_feita_deducao_imposto_de_renda
-  - curiosidades_desconto_do_ir_das_doecoes
   - escolher_processo
   - escolher_preenchimento
   - escolher_prazo
@@ -83,11 +80,8 @@ actions:
   - actions.actions_curiosidades.ActionCuriosidadesLeiRouanetArrecadamento
   - actions.actions_curiosidades.ActionCuriosidadesLeiRouanetDenuncia
   - actions.actions_curiosidades.ActionCuriosidadesElegibilidadeDeEmpresaParaBeneficios
-  - actions.actions_curiosidades.ActionCuriosidadesQualPapelMinc
   - actions.actions_curiosidades.ActionCuriosidadesReceberIncetivoDeParentes
   - actions.actions_curiosidades.ActionCuriosidadesDeducaoImpostoDeRendaIncentivador
-  - actions.actions_curiosidades.ActionCuriosidadesComoEhFeitaDeducaoImpostoDeRenda
-  - actions.actions_curiosidades.ActionCuriosidadesDescontoDoIrDasDoecoes
 
   - actions.actions_processo.ActionExplicarProcesso
   - actions.actions_processo.ActionProcessoProjetoHomologado

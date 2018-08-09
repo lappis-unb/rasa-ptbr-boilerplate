@@ -79,13 +79,6 @@ class ActionCuriosidadesElegibilidadeDeEmpresaParaBeneficios(ActionMultiline):
         'Somente as Pessoas Jurídicas tributadas com base no Lucro Real podem descontar as doações ou patrocínios do imposto de renda observando sempre o limite máximo de 4% do imposto devido se você quiser saber mais sobre quais Pessoas Jurídicas devem fazer a apuração do lucro real confira o artigo 246, do Decreto 3.000 de 26 de março de 1999 que “Regulamenta a tributação, fiscalização, arrecadação e administração do Imposto sobre a Renda e Proventos de Qualquer Natureza”',
     ]
 
-class ActionCuriosidadesQualPapelMinc(ActionMultiline):
-    messages = [
-        'Para que um projeto seja aprovado uma proposta deve ser cadastrada junto ao Ministério da Cultura onde a proposta passa por um exame de admissibilidade, que diz respeito à viabilidade técnica da atividade a ser realizada.',
-        'Uma vez que a proposta seja aprovada, ela se transformará em um projeto (com um número de Pronac). O projeto, por sua vez, precisa ser aprovado por uma das unidades técnicas vinculadas ao Ministério da Cultura.',
-        'Após o parecer do Ministério da Cultura, o projeto ainda é submetido à CNIC que irá aprová-lo ou indeferi-lo',
-    ]
-
 class ActionCuriosidadesReceberIncetivoDeParentes(ActionMultiline):
     messages = [
         'Olha, alguns familiares não podem incentivar projetos:',
@@ -110,15 +103,5 @@ class ActionCuriosidadesDeducaoImpostoDeRendaIncentivador(ActionMultiline):
         'Você pode ver os detalhes das leis pelos endereços:',
         'Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm',
         'Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm',
-    ]
-
-class ActionCuriosidadesComoEhFeitaDeducaoImpostoDeRenda(ActionMultiline):
-    messages = [
-        'A dedução é feita no momento do pagamento do imposto, ao fim do período fiscal do recolhimento. Ou seja, a empresa deixa de pagar à União a parcela da doação ou patrocínio, subtrai o valor do imposto apurado e recolhe para a União, por meio de DARF, apenas o imposto devido após a dedução do incentivo. No caso de pessoas físicas, a dedução será feita do imposto a pagar na declaração anual do Imposto de Renda',
-    ]
-
-class ActionCuriosidadesDescontoDoIrDasDoecoes(ActionMultiline):
-    messages = [
-        'Não, as transferências a título de doações ou patrocínios não estão sujeitas à incidência do imposto de renda na fonte',
     ]
 

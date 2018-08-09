@@ -46,14 +46,6 @@
 > curiosidade_final
 
 
-## pathCuriosidade.6
-> identificar_curiosidade
-* curiosidades_qual_papel_minc
-  - action_curiosidades_qual_papel_minc
-  - action_curiosidades_mais
-> curiosidade_final
-
-
 ## pathCuriosidade.7
 > identificar_curiosidade
 * curiosidades_receber_incetivo_de_parentes
@@ -66,22 +58,6 @@
 > identificar_curiosidade
 * curiosidades_deducao_imposto_de_renda_incentivador
   - action_curiosidades_deducao_imposto_de_renda_incentivador
-  - action_curiosidades_mais
-> curiosidade_final
-
-
-## pathCuriosidade.10
-> identificar_curiosidade
-* curiosidades_como_eh_feita_deducao_imposto_de_renda
-  - action_curiosidades_como_eh_feita_deducao_imposto_de_renda
-  - action_curiosidades_mais
-> curiosidade_final
-
-
-## pathCuriosidade.11
-> identificar_curiosidade
-* curiosidades_desconto_do_ir_das_doecoes
-  - action_curiosidades_desconto_do_ir_das_doecoes
   - action_curiosidades_mais
 > curiosidade_final
 
