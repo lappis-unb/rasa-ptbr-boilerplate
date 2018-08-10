@@ -30,7 +30,7 @@ deploy_to_development:
   script:
     - upgrade --environment Development --stack Rouana --service rouana --new-image $ROUANA_RELEASE_IMAGE --no-finish-upgrade --debug
   only:
-    - /master/rouana_rasa/
+    - /master|rouana_rasa/
   environment: development
   tags:
     - docker
