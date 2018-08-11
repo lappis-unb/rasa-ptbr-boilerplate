@@ -17,7 +17,7 @@ build rouana:
     - docker push $ROUANA_RELEASE_IMAGE
     - docker push "$CI_REGISTRY_IMAGE/rouana:latest"
   only:
-    - /master|rouana_rasa/
+    - /rouana_rasa/
   environment: development
   tags:
     - docker
@@ -30,7 +30,7 @@ deploy_to_development:
   script:
     - upgrade --environment Development --stack Rouana --service rouana --new-image $ROUANA_RELEASE_IMAGE --no-finish-upgrade --debug
   only:
-    - /master|rouana_rasa/
+    - /master/
   environment: development
   tags:
     - docker
