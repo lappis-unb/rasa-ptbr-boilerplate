@@ -44,7 +44,6 @@ deploy_to_production:
     - upgrade --environment Production --stack Rouana --service rouana --new-image $ROUANA_RELEASE_IMAGE --no-finish-upgrade --debug
   only:
     - tags
-    - master
   environment: production
   tags:
     - docker
