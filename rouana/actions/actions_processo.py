@@ -31,7 +31,7 @@ class ActionProcessoReativacaoDeProposta(ActionMultiline):
         'você encaminha o pedido em formato PDF para '
         'reativacao.proposta@cultura.gov.br',
 
-        'e aí é só aguardar uma resposta =)'
+        'e aí é só aguardar uma resposta'
     ]
 
 class ActionProcessoCadastroProponente(ActionMultiline):
@@ -40,13 +40,5 @@ class ActionProcessoCadastroProponente(ActionMultiline):
 
         'clicar em Administrativo > Cadastrar proponente',
 
-        'e preencher todos os dados =)'
-    ]
-
-class ActionProcessoPedidoReativacao(ActionMultiline):
-    messages = [
-        'O pedido de reativação deve ser encaminhado através de PDF e assinado pelo proponente.',
-
-        'O pedido deve conter as devidas justificativas para a reanálise do indeferimento e a resposta'
-        'da diligência. E-mail para encaminhamento: reativacao.proposta@cultura.gov.br'
+        'e preencher todos os dados'
     ]

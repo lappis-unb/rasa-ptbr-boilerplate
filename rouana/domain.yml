@@ -26,18 +26,17 @@ intents:
   - preenchimento_cadastro_rubrica_advogado_contador
   - preenchimento_valor_ingresso
   - preenchimento_vinculo_cpf_proposta
-  - preenchimento_erro_vinculo_cpf_cnpj
-  - preenchimento_erro_achar_proposta
   - preenchimento_cadastro_agencia_bancaria
   - prazo_envio_cnae
   - prazo_desistir_recurso
   - processo_captacao_de_recursos
   - processo_reativacao_de_proposta
   - processo_cadastro_proponente
-  - processo_pedido_reativacao
   - erros_salic_recuperacao_de_senha
   - erros_salic_erro_salvamento
   - erros_salic_planilha_desapareceu
+  - erros_salic_erro_vinculo_cpf_cnpj
+  - erros_salic_erro_achar_proposta
 
 templates:
   utter_default:
@@ -88,15 +87,12 @@ actions:
   - actions.actions_processo.ActionProcessoCaptacaoDeRecursos
   - actions.actions_processo.ActionProcessoReativacaoDeProposta
   - actions.actions_processo.ActionProcessoCadastroProponente
-  - actions.actions_processo.ActionProcessoPedidoReativacao
 
   - actions.actions_preenchimento.ActionExplicarPreenchimento
   - actions.actions_preenchimento.ActionPreenchimentoCampoCustoAuditoria
   - actions.actions_preenchimento.ActionPreenchimentoVinculoDePropostas
   - actions.actions_preenchimento.ActionPreenchimentoValorIngresso
   - actions.actions_preenchimento.ActionPreenchimentoVinculoCpfProposta
-  - actions.actions_preenchimento.ActionPreenchimentoErroVinculoCpfCnpj
-  - actions.actions_preenchimento.ActionPreenchimentoErroAcharProposta
   - actions.actions_preenchimento.ActionPreenchimentoAgenciaBancaria
 
   - actions.actions_prazo.ActionExplicarPrazo
@@ -107,3 +103,5 @@ actions:
   - actions.actions_erros_salic.ActionErroSalicErroSalvamento
   - actions.actions_erros_salic.ActionErroSalicPlanilhaDesaparecida
   - actions.actions_erros_salic.ActionErroSalicRecuperacaoDeSenha
+  - actions.actions_erros_salic.ActionErroSalicErroVinculoCpfCnpj
+  - actions.actions_erros_salic.ActionErroSalicErroAcharProposta

@@ -14,8 +14,11 @@
 
 ## intent:prazo_envio_cnae
 - Qual é o prazo limite para envio do CNAE?
+- Qual é o prazo limite para envio da CNAE?
 - Até quando posso enviar o CNAE?
+- Até quando posso enviar a CNAE?
 - Tem algum prazo para enviar o CNAE?
+- Tem algum prazo para enviar a CNAE?
 - prazo cnae
 - cnae
 - envio do CNAE
@@ -32,3 +35,6 @@
 - Sobre o prazo de ecaminhamento de recurso, como desisto dele?
 - Existem algum jeito de desistir do prazo de recurso?
 - Após o enquadramento, como desisto do prazo de recurso?
+- Qual o prazo para desisitr de entrar com o recurso?
+- não quero entrar com o recurso, como posso desistir?
+- Quero desistir do prazo de recurso

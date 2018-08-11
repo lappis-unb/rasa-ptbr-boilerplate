@@ -19,20 +19,6 @@
   - action_preenchimento_vinculo_cpf_proposta
 > identifica_mais_alguma_pergunta
 
-## pathPreenchimento.6
-> opcao_preenchimento
-  - action_explicar_preenchimento
-* preenchimento_erro_vinculo_cpf_cnpj
-  - action_preenchimento_erro_vinculo_cpf_cnpj
-> identifica_mais_alguma_pergunta
-
-## pathPreenchimento.7
-> opcao_preenchimento
-  - action_explicar_preenchimento
-* preenchimento_erro_achar_proposta
-  - action_preenchimento_erro_achar_proposta
-> identifica_mais_alguma_pergunta
-
 ## pathPreenchimento.9
 > opcao_preenchimento
   - action_explicar_preenchimento

@@ -4,10 +4,10 @@ from actions.actions_geral import ActionMultiline
 
 class ActionCuriosidadesIndicacao(ActionMultiline):
     messages = [
-        'Legal! Meu assunto favorito :wink:',
+        'Legal! Meu assunto favorito',
         'Você pode me perguntar algumas curiosidades sobre a Lei Rouanet',
         'Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei.',
-        'Qual a sua pergunta? Vou tentar responder da melhor maneira possível :smiley:',
+        'Qual a sua pergunta? Vou tentar responder da melhor maneira possível',
     ]
 
 class ActionCuriosidadesMais(ActionMultiline):
@@ -17,7 +17,7 @@ class ActionCuriosidadesMais(ActionMultiline):
 
 class ActionCuriosidadesMaisSim(ActionMultiline):
     messages = [
-        'Que bom! :smiley:',
+        'Que bom!',
         'O que mais você gostaria de saber?',
     ]
 
@@ -29,7 +29,7 @@ class ActionCuriosidadesMaisNao(ActionMultiline):
 
 class ActionCuriosidadesFalarSobreProjetos(ActionMultiline):
     messages = [
-        'Maravilha! É bom saber que você quer entender mais sobre propostas e projetos :smiley:',
+        'Maravilha! É bom saber que você quer entender mais sobre propostas e projetos',
     ]
 
 

@@ -32,7 +32,7 @@ class ActionDefinirPerfil(ActionMultiline):
 
         'Você prefere conversar sobre criação e andamento de projetos, ou '
 
-        'prefere falar mais sobre a Lei Rouanet? :smile:'
+        'prefere falar mais sobre a Lei Rouanet?'
     ]
 
 class ActionNovaProposta(ActionMultiline):
@@ -65,7 +65,7 @@ class ActionDespedir(ActionMultiline):
 
         'Se surgir alguma dúvida, não hesite, volte aqui',
 
-        'Até mais! :wave:'
+        'Até mais!'
     ]
 
 class ActionSubmissaoDeProjetos(ActionMultiline):
@@ -104,7 +104,7 @@ class ActionIntroduzirExecucao(ActionMultiline):
         'Eu ainda não aprendi a falar sobre um projeto que está em Execução ou'
         'em Prestação de Contas. Ainda estou aprendendo...',
 
-        'Em breve eu poderei responder sua dúvida :wink:',
+        'Em breve eu poderei responder sua dúvida',
 
         'Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC:',
 
@@ -137,7 +137,7 @@ class ActionCadastroSalicVideo(ActionMultiline):
 
         'Caso você não possa ver o vídeo, eu posso te explicar',
 
-        'Quer que eu te explique? :smiley:'
+        'Quer que eu te explique?'
     ]
 
 class ActionExplicarCadastroSalic(ActionMultiline):
@@ -161,7 +161,7 @@ class ActionExplicarCadastroSalic(ActionMultiline):
 
 class ActionCadastroSalicAposVideo(ActionMultiline):
     messages = [
-        'Espero que o vídeo tenha ajudado :smiley:',
+        'Espero que o vídeo tenha ajudado',
         'Agora que você já se cadastrou, o próximo passo é se tornar um proponente'
     ]
 
@@ -188,7 +188,7 @@ class ActionIntroduzirContextoNaoExecucao(ActionMultiline):
     messages = [
         'Então suas dúvidas devem ser sobre as outras etapas do processo',
 
-        'Vamos saná-las juntos? :smiley:'
+        'Vamos saná-las juntos?'
     ]
 
 class ActionMaisAlgumaPergunta(ActionMultiline):
@@ -198,12 +198,12 @@ class ActionMaisAlgumaPergunta(ActionMultiline):
 
 class ActionMaisPerguntasAfirmativa(ActionMultiline):
     messages = [
-        'Que bom! Espero estar ajudando :smiley:',
+        'Que bom! Espero estar ajudando',
     ]
 
 class ActionEscolheuContextoErrado(ActionMultiline):
     messages = [
-        'Talvez sua dúvida esteja em alguma das outras áreas :thinking_face:',
+        'Talvez sua dúvida esteja em alguma das outras áreas',
     ]
 
 class ActionExplicarContextos(ActionMultiline):
@@ -221,5 +221,5 @@ class ActionExplicarContextos(ActionMultiline):
         'Por último, em erros do SALIC, posso falar sober eventuais erros que '
         'ocorrem durante a utilização do sistema.',
 
-        'Já que te expliquei, vou te dar as opçẽs de novo :smiley: '
+        'Já que te expliquei, vou te dar as opçẽs de novo '
     ]

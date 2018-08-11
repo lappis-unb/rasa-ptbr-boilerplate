@@ -10,7 +10,7 @@ class ActionExplicarPreenchimento(ActionMultiline):
 
 class ActionPreenchimentoCampoCustoAuditoria(ActionMultiline):
     messages = [
-        'Não precisa preencher esse campo agora :wink:'
+        'Não precisa preencher esse campo agora'
     ]
 
 class ActionPreenchimentoVinculoDePropostas(ActionMultiline):
@@ -47,24 +47,6 @@ class ActionPreenchimentoVinculoCpfProposta(ActionMultiline):
             '> Nome do responsável selecionado > Clicar na "bolinha"',
 
         '3- Por último... clica também no botão Vincular'
-    ]
-
-class ActionPreenchimentoErroVinculoCpfCnpj(ActionMultiline):
-    messages =[
-        'Apenas o dirigente da instituição é quem pode vincular uma '
-        'pessoa física ao CNPJ'
-        'o dirigente deve entrar com login e senha e aceitar o vínculo'
-    ]
-
-class ActionPreenchimentoErroAcharProposta(ActionMultiline):
-    messages = [
-        'Selecione o CPF ou CNPJ que deseja como proponente e liste a proposta'
-        'do CPF ou CNPJ selecionado  para isso, vá em:',
-
-        '1- Proposta > Listar proposta',
-
-        '2- Clicar em CPF Proponente > Selecionar o CNPJ aparecerão todas as'
-        'propostas ativas no sistema'
     ]
 
 class ActionPreenchimentoAgenciaBancaria(ActionMultiline):

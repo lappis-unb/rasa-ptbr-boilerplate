@@ -32,3 +32,21 @@ class ActionErroSalicRecuperacaoDeSenha(ActionMultiline):
         'ou se isso não funcionar, mande uma solicitação para: '
         'senhasalic@cultura.gov.br'
     ]
+
+class ActionErroSalicErroVinculoCpfCnpj(ActionMultiline):
+    messages =[
+        'Apenas o dirigente da instituição é quem pode vincular uma '
+        'pessoa física ao CNPJ'
+        'o dirigente deve entrar com login e senha e aceitar o vínculo'
+    ]
+
+class ActionErroSalicErroAcharProposta(ActionMultiline):
+    messages = [
+        'Selecione o CPF ou CNPJ que deseja como proponente e liste a proposta'
+        'do CPF ou CNPJ selecionado  para isso, vá em:',
+
+        '1- Proposta > Listar proposta',
+
+        '2- Clicar em CPF Proponente > Selecionar o CNPJ aparecerão todas as'
+        'propostas ativas no sistema'
+    ]

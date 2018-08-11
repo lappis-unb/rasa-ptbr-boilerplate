@@ -2,12 +2,12 @@ from rasa_core.actions.action import Action
 
 
 class ActionOQueEh(Action):
-    dont_know_message = 'Desculpe, não sei conceituar isso ainda :sad:'
+    dont_know_message = 'Desculpe, não sei conceituar isso ainda'
     meaning_map = {
         'rouana': [
             'Uma assistente virtual, como eu, é um programa de computador criado para ajudar as pessoas a sanarem suas dúvidas de maneira simples',
-            'Apesar de eu ser um "computador" :robot:, eu ainda estou aprendendo várias coisas para poder te ajudar melhor',
-            'Conversando comigo você também pode me ajudar a alcançar isso :smiley:',
+            'Apesar de eu ser um "computador", eu ainda estou aprendendo várias coisas para poder te ajudar melhor',
+            'Conversando comigo você também pode me ajudar a alcançar isso',
         ],
         'lei rouanet': [
             'A Lei 8.313/91, conhecida como Lei Rouanet, é o principal '

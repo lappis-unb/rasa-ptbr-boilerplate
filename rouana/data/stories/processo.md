@@ -19,13 +19,6 @@
  - action_processo_cadastro_proponente
 > identifica_mais_alguma_pergunta
 
-## pathProcesso6.0
-> opcao_processo
- - action_explicar_processo
-* processo_pedido_reativacao
- - action_processo_pedido_reativacao
-> identifica_mais_alguma_pergunta
-
 ## pathProcesso.oqueeh
 > opcao_processo
   - action_explicar_processo

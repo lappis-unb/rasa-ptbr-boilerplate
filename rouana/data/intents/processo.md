@@ -47,6 +47,14 @@
 - Reativar proposta
 - reativar minha proposta
 - reativação de proposta
+- como reativar proposta?
+- reativação da proposta
+- proposta indeferida, como reativar?
+- eu posso reativar uma proposta indeferida?
+- existe um meio de reativar uma proposta indeferida?
+- minha proposta foi rejeitada, como reativar ela?
+- posso fazer o pedido de reativação?
+- como reativar uma proposta?
 
 ## intent:processo_cadastro_proponente
 - Como cadastrar o proponente via Salic ?
@@ -57,15 +65,3 @@
 - Cadastro de proponente no Salic
 - cadastrar proponente
 - cadastrar proponente no Salic
-
-## intent:processo_pedido_reativacao
-- Minha proposta foi indeferida, porém posso encaminhar pedido de reativação Como proceder?
-- Como devo fazer o pedido de reativação da proposta?
-- como reativar proposta?
-- reativação da proposta
-- proposta indeferida, como reativar?
-- eu posso reativar uma proposta indeferida?
-- existe um meio de reativar uma proposta indeferida?
-- minha proposta foi rejeitada, como reativar ela?
-- posso fazer o pedido de reativação?
-- como reativar uma proposta?
