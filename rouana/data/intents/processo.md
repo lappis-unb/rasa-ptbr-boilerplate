@@ -1,8 +1,5 @@
 ## intent:escolher_processo
 - 1
-- 111
-- 1 1 1
-- 1.
 - sobre processo
 - processo
 - Processo
@@ -15,21 +12,9 @@
 - processo do projeto
 - Estado do projeto
 - se encaixa na 1
-
-## intent:processo_projeto_homologado
-- estado D52
-- situação D52
-- Meu projeto está com a situação D52 projeto homologado, o que significa
-- O que significa o estado do projeto d52
-- Projeto homologado o que é ?
-- d52 o que significa ?
-- Estado de projeto homologado ?
-- Situação de projeto homologado ?
-- como assim homologado
-- Projeto indicado como homologado
-- projeto em situação de homologado
-- projeto em situação de homologação
-- projeto em homologação?
+- um
+- opção um
+- categoriga um
 
 ## intent:processo_captacao_de_recursos
 - Quando poderei efetuar a captação de recursos do meu projeto ?
@@ -42,6 +27,15 @@
 - começar a captar
 - quando a captação estará liberada?
 - captar recursos do projeto
+- quero captar, quando posso iniciar?
+- quando começa a arrecadação de recursos?
+- quando começa a arrecadação de dinheiro?
+- quando eu começo a captar?
+- já enviei meu projeto, já posso captar?
+- quando preciso me preocupar com a captação?
+- Quando se iniciará a fase de captação?
+- a captação já pode ser feita?
+- em quanto tempo posso captar?
 
 ## intent:processo_reativacao_de_proposta
 - Minha proposta foi indeferida, porém posso encaminhar pedido de \
@@ -54,23 +48,24 @@
 - reativar minha proposta
 - reativação de proposta
 
-## intent:processo_projeto_adequacao
-- Meu projeto está com a situação E90 projeto liberado para adequação, \
-- O que significa o estado do projeto e90 ?
-- Projeto liberado para adequação o que é ?
-- e90 o que significa ?
-- Estado de projeto liberado para adequação ?
-- estado liberado para adequação 
-- E90 liberado para adequação
-- estado e90
-- estado E90
-
 ## intent:processo_cadastro_proponente
 - Como cadastrar o proponente via Salic ?
 - Como cadastro um proponente no Salic ?
 - O que devo fazer para cadastrar um proponente ?
 - Cadastro de proponente ?
 - Como fazer cadastro de proponente?
-- Cadastro de proponente no Salic 
+- Cadastro de proponente no Salic
 - cadastrar proponente
 - cadastrar proponente no Salic
+
+## intent:processo_pedido_reativacao
+- Minha proposta foi indeferida, porém posso encaminhar pedido de reativação Como proceder?
+- Como devo fazer o pedido de reativação da proposta?
+- como reativar proposta?
+- reativação da proposta
+- proposta indeferida, como reativar?
+- eu posso reativar uma proposta indeferida?
+- existe um meio de reativar uma proposta indeferida?
+- minha proposta foi rejeitada, como reativar ela?
+- posso fazer o pedido de reativação?
+- como reativar uma proposta?

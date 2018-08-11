@@ -29,9 +29,9 @@ class ActionCumprimentar(ActionMultiline):
 
 class ActionDefinirPerfil(ActionMultiline):
     messages = [
-        
+
         'Você prefere conversar sobre criação e andamento de projetos, ou '
-        
+
         'prefere falar mais sobre a Lei Rouanet? :smile:'
     ]
 
@@ -60,11 +60,11 @@ class ActionCadastroSalic(ActionMultiline):
 class ActionDespedir(ActionMultiline):
     messages = [
         'Espero que eu tenha conseguido esclarecer suas dúvidas',
-        
+
         'Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês',
-        
+
         'Se surgir alguma dúvida, não hesite, volte aqui',
-        
+
         'Até mais! :wave:'
     ]
 
@@ -84,16 +84,16 @@ class ActionDefinirContexto(ActionMultiline):
         'Tá bom!'
         'Onde sua pergunta se encaixa melhor:',
         '1. Processo e estado do projeto',
-        '2. Preenchimento e erros do Salic',
+        '2. Preenchimento de proposta',
         '3. Datas e Prazos',
-        '4. Correção de proposta enviada',
+        '4. Erros do SALIC',
         '5. Não sei bem onde se encaixa',
     ]
 
 class ActionAviso(ActionMultiline):
     messages = [
         'Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.',
-        
+
         'Você já preencheu uma proposta?',
     ]
 
@@ -130,7 +130,7 @@ class ActionCadastroSalicVideo(ActionMultiline):
         'ele que você cadastra a proposta e a acompanha',
 
         'Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo',
-        
+
         'Nele você pode observar o passo a passo para se cadastrar:'
 
         'https://youtu.be/rMGEZyIr1U8',
@@ -201,21 +201,25 @@ class ActionMaisPerguntasAfirmativa(ActionMultiline):
         'Que bom! Espero estar ajudando :smiley:',
     ]
 
+class ActionEscolheuContextoErrado(ActionMultiline):
+    messages = [
+        'Talvez sua dúvida esteja em alguma das outras áreas :thinking_face:',
+    ]
+
 class ActionExplicarContextos(ActionMultiline):
     messages = [
         'Na categoria "Processo" eu responderei a respeito '
         'do fluxo de submissão do seu projeto, e o sobre o estado dele.',
 
         'Em "Preenchimento" eu vou tirar dúvidas sobre o '
-        'preenchimento de propostas no Salic, e possíveis erros que possam '
-        'ter lhe ocorrido durante a utilização do sistema.',
+        'preenchimento de propostas no Salic, campos em que você possa ter '
+        'dúvidas, ou como você pode preencher',
 
         'Agora, em Datas e Prazos, eu consigo falar sobre prazos importantes '
         'para a aceitação e execução do seu projeto.',
 
-        'Por último, em correção, eu falarei sobre '
-        'campos preenchidos incorretamente ou motivos para sua proposta '
-        'não ser aceita.',
+        'Por último, em erros do SALIC, posso falar sober eventuais erros que '
+        'ocorrem durante a utilização do sistema.',
 
         'Já que te expliquei, vou te dar as opçẽs de novo :smiley: '
     ]

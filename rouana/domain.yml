@@ -20,24 +20,24 @@ intents:
   - escolher_processo
   - escolher_preenchimento
   - escolher_prazo
-  - escolher_correcao
   - escolher_erros_salic
   - duvida_sobre_contexto
-  - preenchimento_planilha_desapareceu
   - preenchimento_campo_custo_auditoria
   - preenchimento_cadastro_rubrica_advogado_contador
   - preenchimento_valor_ingresso
   - preenchimento_vinculo_cpf_proposta
-  - preenchimento_erro_salvamento
   - preenchimento_erro_vinculo_cpf_cnpj
   - preenchimento_erro_achar_proposta
-  - preenchimento_recuperacao_de_senha
+  - preenchimento_cadastro_agencia_bancaria
   - prazo_envio_cnae
-  - processo_projeto_homologado
+  - prazo_desistir_recurso
   - processo_captacao_de_recursos
   - processo_reativacao_de_proposta
-  - processo_projeto_adequacao
   - processo_cadastro_proponente
+  - processo_pedido_reativacao
+  - erros_salic_recuperacao_de_senha
+  - erros_salic_erro_salvamento
+  - erros_salic_planilha_desapareceu
 
 templates:
   utter_default:
@@ -68,6 +68,7 @@ actions:
   - actions.actions_geral.ActionMaisAlgumaPergunta
   - actions.actions_geral.ActionMaisPerguntasAfirmativa
   - actions.actions_geral.ActionExplicarContextos
+  - actions.actions_geral.ActionEscolheuContextoErrado
 
   - actions.actions_curiosidades.ActionCuriosidadesIndicacao
   - actions.actions_curiosidades.ActionCuriosidadesMais
@@ -84,24 +85,25 @@ actions:
   - actions.actions_curiosidades.ActionCuriosidadesDeducaoImpostoDeRendaIncentivador
 
   - actions.actions_processo.ActionExplicarProcesso
-  - actions.actions_processo.ActionProcessoProjetoHomologado
   - actions.actions_processo.ActionProcessoCaptacaoDeRecursos
   - actions.actions_processo.ActionProcessoReativacaoDeProposta
-  - actions.actions_processo.ActionProcessoProjetoAdequacao
   - actions.actions_processo.ActionProcessoCadastroProponente
+  - actions.actions_processo.ActionProcessoPedidoReativacao
 
   - actions.actions_preenchimento.ActionExplicarPreenchimento
   - actions.actions_preenchimento.ActionPreenchimentoCampoCustoAuditoria
-  - actions.actions_preenchimento.ActionPreenchimentoPlanilhaDesaparecida
   - actions.actions_preenchimento.ActionPreenchimentoVinculoDePropostas
   - actions.actions_preenchimento.ActionPreenchimentoValorIngresso
   - actions.actions_preenchimento.ActionPreenchimentoVinculoCpfProposta
-  - actions.actions_preenchimento.ActionPreenchimentoErroSalvamento
   - actions.actions_preenchimento.ActionPreenchimentoErroVinculoCpfCnpj
   - actions.actions_preenchimento.ActionPreenchimentoErroAcharProposta
-  - actions.actions_preenchimento.ActionPreenchimentoRecuperacaoDeSenha
+  - actions.actions_preenchimento.ActionPreenchimentoAgenciaBancaria
 
   - actions.actions_prazo.ActionExplicarPrazo
   - actions.actions_prazo.ActionPrazoEnvioCnae
+  - actions.actions_prazo.ActionPrazoDesistirRecurso
 
-  - actions.actions_correcao.ActionExplicarCorrecao
+  - actions.actions_erros_salic.ActionExplicarErrosSalic
+  - actions.actions_erros_salic.ActionErroSalicErroSalvamento
+  - actions.actions_erros_salic.ActionErroSalicPlanilhaDesaparecida
+  - actions.actions_erros_salic.ActionErroSalicRecuperacaoDeSenha

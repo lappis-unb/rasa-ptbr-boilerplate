@@ -1,6 +1,9 @@
 ## intent:cumprimentar
 - oi
 - ola
+- oi Rouana
+- ola Rouana
+- ola Rouana, como vai?
 - como vai?
 - bom dia
 - boa tarde
@@ -64,6 +67,14 @@
 - não, tudo bem
 - nada
 - não quero saber de mais nada
+- não era isso, me enganei
+- não era isso
+- não é nada disso
+- não sei onde se encaixa
+- não sei dizer
+- não sei bem
+- não sei onde a minha pergunta se encaixa
+- não tenho certeza
 
 ## intent:afirmar_curiosidades
 - quero aprender mais sobre a lei
@@ -142,28 +153,12 @@
 
 ## intent:duvida_sobre_contexto
 - 5
-- não sei
-- não sei onde se encaixa
-- não sei dizer
-- não sei bem
-- não sei onde a minha pergunta se encaixa
-- a minha pergunta não se encaixa nessas categorias
-- não tenho certeza
-- Não sei
-- Não sei dizer
-- Não sei onde encaixa
-- Não sei bem
 - se encaixa na 5
-- eu não sei
-- Não sei
 - acho que seria a 5
 - na quinta alternativa
 - alternativa 5
-- Não sei onde a minha pergunta se encaixa
-- A minha pergunta não se encaixa nessas categorias
 - se encaixa na 5
-- eu não sei
-- Não sei
 - acho que seria a 5
-- na quinta alternativa
-- alternativa 5
+- quinta opção
+- opção cinco
+- cinco

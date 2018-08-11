@@ -3,16 +3,9 @@ from actions.actions_geral import ActionMultiline
 class ActionExplicarPreenchimento(ActionMultiline):
     messages = [
         'Nesta etapa eu posso responder dúvidas sobre o preenchimento de '
-        'propostas no Salic, e possíveis erros que possam ter lhe '
-        'ocorrido durante a utilização do sistema.',
+        'propostas no SALIC',
 
         'O que você gostaria de saber?'
-    ]
-
-class ActionPreenchimentoPlanilhaDesaparecida(ActionMultiline):
-    messages = [
-        'Ao excluir um produto do plano de distribuição a planilha vai ser '
-        '"zerada" e o proponente deverá refazê-la.'
     ]
 
 class ActionPreenchimentoCampoCustoAuditoria(ActionMultiline):
@@ -47,20 +40,13 @@ class ActionPreenchimentoVinculoCpfProposta(ActionMultiline):
     messages = [
         'O dirigente do projeto deve acessar o sistema e seguir os passos:'
         '1- Administrativo > Gerenciar responsáveis'
-            'em seguida...', 
+            'em seguida...',
 
         '2- Vincular propostas > Clicar na "bolinha" (Vincular) > Inserir '
-        'responsável > abaixo terá o número da Proposta/Nome ' 
+        'responsável > abaixo terá o número da Proposta/Nome '
             '> Nome do responsável selecionado > Clicar na "bolinha"',
 
         '3- Por último... clica também no botão Vincular'
-    ]
-
-class ActionPreenchimentoErroSalvamento(ActionMultiline):
-    messages = [
-        'Esse erro aconteceu por exceder o tempo logado no sistema.'
-        'O limite de tempo para o preenchimento da proposta é de 20 minutos.'
-        'Não esqueça de ir salvando a cada passo do preenchimento.'
     ]
 
 class ActionPreenchimentoErroVinculoCpfCnpj(ActionMultiline):
@@ -81,13 +67,8 @@ class ActionPreenchimentoErroAcharProposta(ActionMultiline):
         'propostas ativas no sistema'
     ]
 
-class ActionPreenchimentoRecuperacaoDeSenha(ActionMultiline):
+class ActionPreenchimentoAgenciaBancaria(ActionMultiline):
     messages = [
-        'Ah isso acontece com todo mundo ;) ',
-
-        'você pode gerar uma nova senha aqui: '
-        'http://salic.cultura.gov.br/autenticacao/index/solicitarsenha',
-
-        'ou se isso não funcionar, mande uma solicitação para: ' 
-        'senhasalic@cultura.gov.br'
+        'A agência bancária deve ser do banco do Brasil, deve conter 5 '
+        'dígitos, sem hifens, pontos ou letras',
     ]

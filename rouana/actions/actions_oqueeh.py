@@ -55,6 +55,10 @@ class ActionOQueEh(Action):
              'É a fase da proposta em que o MinC e a vinculada irão avaliar a '
              'proposta, para pedir correções ou aprova-la, gerando um projeto.'
         ],
+        'aprovação': [
+             'Aprovação é a fase onde o MinC e a vinculada estão julgando a validade do '
+             'projeto'
+        ],
         'execução': [
              'Execução é a fase referente ao andamento do projeto '
              'que possue atividades como captação de recursos e realização do projeto.'

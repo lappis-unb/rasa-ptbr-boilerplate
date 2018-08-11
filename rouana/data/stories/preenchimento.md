@@ -1,10 +1,3 @@
-## pathPreenchimento.1
-> opcao_preenchimento
-  - action_explicar_preenchimento
-* preenchimento_planilha_desapareceu
-  - action_preenchimento_planilha_desaparecida
-> identifica_mais_alguma_pergunta
-
 ## pathPreenchimento.2
 > opcao_preenchimento
   - action_explicar_preenchimento
@@ -26,13 +19,6 @@
   - action_preenchimento_vinculo_cpf_proposta
 > identifica_mais_alguma_pergunta
 
-## pathPreenchimento.5
-> opcao_preenchimento
-  - action_explicar_preenchimento
-* preenchimento_erro_salvamento
-  - action_preenchimento_erro_salvamento
-> identifica_mais_alguma_pergunta
-
 ## pathPreenchimento.6
 > opcao_preenchimento
   - action_explicar_preenchimento
@@ -47,11 +33,11 @@
   - action_preenchimento_erro_achar_proposta
 > identifica_mais_alguma_pergunta
 
-## pathPreenchimento.8
+## pathPreenchimento.9
 > opcao_preenchimento
   - action_explicar_preenchimento
-* preenchimento_recuperacao_de_senha
-  - action_preenchimento_recuperacao_de_senha
+* preenchimento_cadastro_agencia_bancaria
+  - action_preenchimento_agencia_bancaria
 > identifica_mais_alguma_pergunta
 
 ## pathPreenchimento.oqueeh
@@ -60,3 +46,11 @@
 * o_que_eh
   - action_o_que_eh
 > identifica_mais_alguma_pergunta
+
+## pathPreenchimento.nao
+> opcao_preenchimento
+  - action_explicar_preenchimento
+* negar
+  - action_escolheu_contexto_errado
+  - action_explicar_contextos
+> identificar_contexto

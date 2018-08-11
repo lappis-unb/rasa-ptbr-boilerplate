@@ -12,16 +12,8 @@
 - erro
 - Erro
 - acho que na 2
-
-## intent:preenchimento_planilha_desapareceu
-- minha planilha sumiu
-- minha planilha desapareceu
-- não acho minha planilha
-- não encontro minha planilha
-- não acho mais minha planilha
-- planilha sumiu
-- planilha desapareceu
-- não consigo achar minha planilha
+- opção 2
+- categoria 2
 
 ## intent:preenchimento_campo_custo_auditoria
 - como eu preencho o campo Custo de Auditoria?
@@ -50,20 +42,16 @@
 - não vou comercializar ingressos
 - ingresso não ultrapassa o valor citado
 - não vou comercializar
+- meu ingresso ultrapassa o valor permitido, o que fazer?
+- não vou vender ingresso no meu projeto
+- o sistema acusa que o valor do ingresso excedeu o permitido
+- como calcula o valor do ingresso?
 
 ## intent:preenchimento_vinculo_cpf_proposta
 - Como faço para vincular uma proposta ao CPF do responsável?
 - Vincular proposta ao CPF
 - como vincular proposta ao cpf?
 - quero vincular proposta ao CPF
-
-## intent:preenchimento_erro_salvamento
-- Perdi minhas alterações na proposta
-- O sistema não salvou minhas alterações na proposta
-- Preenchi minha proposta toda e fechei o sistema. Ao retornar percebi \
-  que a mesma não tinha sido salva. O que ocorreu?
-- Alterei minha proposta e a alteração não foi salva após fechar o sistema
-- O SALIC não salvou minhas alterações na proposta
 
 ## intent:preenchimento_erro_vinculo_cpf_cnpj
 - Sou responsável por inserir a proposta no sistema, mas o sistema acusa como solicitação de vínculo pendente. Como resolver?
@@ -79,13 +67,11 @@
 - não consigo achar minha proposta
 - não encontro minha proposta
 
-## intent:preenchimento_recuperacao_de_senha
-- Me cadastrei a muito tempo no Salic, mas não me recordo da senha de \
-  acesso. Como faço para resolver ?
-- Esqueci a senha do Salic, o que faço ?
-- Como recuperar senha do Salic ?
-- O que fazer quando se esquece a senha do Salic ?
-- Esqueci a senha de acesso, e agora ?
-- recuperação de senha
-- perdi minha senha do Salic
-- esqueci minha senha no Salic
+## intent:preenchimento_cadastro_agencia_bancaria
+- Agência bancária inválida
+- O sistema indica agência inválida
+- Não estou conseguindo cadastrar minha agência bancária
+- Como eu cadastro a agência bancária?
+- O campo de agência possui hífen?
+- Qual o formato do campo de agência bancária?
+- Deu erro ao cadastrar a agência

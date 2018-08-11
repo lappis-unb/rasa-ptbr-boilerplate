@@ -174,39 +174,50 @@
   - action_cadastro_proponente_introduzir_contexto
 > identificar_contexto
 
-## pathContexto.1
+
+
+<!--- Contexto --->
+
+
+## pathContexto.processo
 > identificar_contexto
   - action_definir_contexto
 * escolher_processo
 > opcao_processo
 
-## pathContexto.2
+## pathContexto.preenchimento
 > identificar_contexto
   - action_definir_contexto
 * escolher_preenchimento
 > opcao_preenchimento
 
-## pathContexto.3
+## pathContexto.prazo
 > identificar_contexto
   - action_definir_contexto
 * escolher_prazo
 > opcao_prazo
 
-## pathContexto.4
+## pathContexto.errossalic
 > identificar_contexto
   - action_definir_contexto
-* escolher_correcao
-> opcao_correcao
+* escolher_erros_salic
+> opcao_erros_salic
 
 ## pathContexto.5
 > identificar_contexto
   - action_definir_contexto
 * duvida_sobre_contexto
   - action_explicar_contextos
-  - action_definir_contexto
 > identificar_contexto
 
-## pathContexto.x
+## pathContexto.negar
+> identificar_contexto
+  - action_definir_contexto
+* negar
+  - action_explicar_contextos
+> identificar_contexto
+
+## pathContexto.oqueeh
 > identificar_contexto
   - action_definir_contexto
 * o_que_eh
