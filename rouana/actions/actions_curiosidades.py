@@ -39,7 +39,7 @@ class ActionCuriosidadesQuantidadeProjetos(ActionMultiline):
     messages = [
         'Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.',
         'Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos.',
-        '- Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes.',
+        'Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes.',
     ]
 
 class ActionCuriosidadesBeneficiosIncentivoProjetosCulturais(ActionMultiline):

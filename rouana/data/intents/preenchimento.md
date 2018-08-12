@@ -2,17 +2,16 @@
 - 2
 - preenchimento do Salic
 - Preenchimento
+- de preenchimento
+- em preenchimento
+- preenchimento
 - salic
 - segunda opção
 - segundo tópico
-- sobre erros
 - tem um erro
-- erros no salic
-- Erros no Salic
-- erro
-- Erro
 - acho que na 2
 - opção 2
+- na segunda
 - categoria 2
 
 ## intent:preenchimento_campo_custo_auditoria

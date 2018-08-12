@@ -7,6 +7,9 @@
 - erro do salic
 - SALIC
 - errros
+- Erros Salic
+- erros do salic
+- erros salic
 - quarta categoria
 - opção quatro
 - quatro

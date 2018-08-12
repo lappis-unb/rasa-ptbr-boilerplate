@@ -38,7 +38,8 @@ class ActionPreenchimentoValorIngresso(ActionMultiline):
 
 class ActionPreenchimentoVinculoCpfProposta(ActionMultiline):
     messages = [
-        'O dirigente do projeto deve acessar o sistema e seguir os passos:'
+        'O dirigente do projeto deve acessar o sistema e seguir os passos:',
+
         '1- Administrativo > Gerenciar responsáveis'
             'em seguida...',
 
