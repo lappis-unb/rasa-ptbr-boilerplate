@@ -150,7 +150,7 @@ class ActionExplicarCadastroSalic(ActionMultiline):
         'Preencha todos os campos corretamente, todos eles são obrigatórios.'
         'E depois clique em "Cadastrar"',
 
-        'Agora aguarde a chegada de um e-mail de confirmação. Este vai conter'
+        'Agora aguarde a chegada de um e-mail de confirmação. Este vai conter '
         'uma senha temporária',
 
         'É interessante você alterar esta senha, por isso, no seu primeiro '
