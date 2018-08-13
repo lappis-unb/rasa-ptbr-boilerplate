@@ -42,6 +42,13 @@
 - Preenchi minha proposta toda e fechei o sistema. Ao retornar percebi que a mesma não tinha sido salva. O que ocorreu?
 - Alterei minha proposta e a alteração não foi salva após fechar o sistema
 - O SALIC não salvou minhas alterações na proposta
+- Preenchi minha proposta, mas por algum motivo ela não foi salva. Como faço para recuperar meus dados?
+- Como faço para recuperar meus dados?
+- Como faço para recuperar minha proposta?
+- Como fazer para recuperar minha proposta?
+- minha proposta não foi salva
+- houve um erro ao salvar minha proposta
+- Perdi os dados da proposta no Salic, o que aconteceu?
 
 
 ## intent:erros_salic_planilha_desapareceu
@@ -53,6 +60,12 @@
 - planilha sumiu
 - planilha desapareceu
 - não consigo achar minha planilha
+- Minha planilha desapareceu!
+- Como recuperar minha planilha que sumiu?
+- Por que a planilha do meu projeto desapareceu do sistema?
+- Não tenho mais acesso a planilha do meu projeto! Por que?
+- A planilha orçamentária do meu projeto não aparece no Salic! Por que?
+- por que a planilha do meu projeto sumiu?
 
 ## intent:erros_salic_erro_vinculo_cpf_cnpj
 - Sou responsável por inserir a proposta no sistema, mas o sistema acusa como solicitação de vínculo pendente. Como resolver?

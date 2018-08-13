@@ -51,6 +51,7 @@
 - quanto dinheiro a lei movimenta?
 - quanto dinheiro a lei rouanet arrecada?
 - De onde vem o dinheiro da lei rouanet?
+- de onde vem o dinheiro usado na Lei
 - o dinheiro da lei rouanet é público?
 - Porque os cidadãos tem que pagar pelos projetos da lei rouanet?
 - quem pode contribuir para um projeto da lei rouanet?
