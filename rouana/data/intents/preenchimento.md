@@ -34,6 +34,11 @@
 - rubricas de advogado
 - cadastrar rúbricas de advogado
 - cadastrar rúbricas de contador
+- como cadastro rubricas do meu contador?
+- como eu cadastro rubricas do meu contador?
+- como cadastro rubricas do meu advogado?
+- como cadastrar rubricas do meu advogado?
+- como cadastrar rubricas do advogado?
 
 ## intent:preenchimento_valor_ingresso
 - O sistema informa que o custo por beneficiário não pode ultrapassar o valor de 250,00, mas não irei comercializar ingressos ou o ingresso não ultrapassa o valor citado. Como resolver?
@@ -60,3 +65,4 @@
 - O campo de agência possui hífen?
 - Qual o formato do campo de agência bancária?
 - Deu erro ao cadastrar a agência
+- tenho duvidas sobre o formato do campo de agencia bancaria

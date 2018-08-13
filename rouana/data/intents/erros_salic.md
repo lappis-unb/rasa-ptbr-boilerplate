@@ -24,6 +24,16 @@
 - recuperação de senha
 - perdi minha senha do Salic
 - esqueci minha senha no Salic
+- gostaria de saber como mudar minha senha
+- mudança de senha
+- como mudar minha senha?
+- como realizar a mundaça de senha?
+- como realizo a mudança de senha?
+- como mudo minha senha?
+- como mudo a senha?
+- como troco minha senha?
+- como faço para trocar minha senha?
+- como faço para trocar a senha?
 
 
 ## intent:erros_salic_erro_salvamento

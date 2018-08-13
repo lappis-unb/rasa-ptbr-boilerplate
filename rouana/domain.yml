@@ -40,7 +40,7 @@ intents:
 
 templates:
   utter_default:
-    - text: "Desculpe, não consegui te entender :confused:. Você pode reformular?"
+    - text: "Desculpe, não consegui te entender. Você pode reformular?"
 
 actions:
   - actions.actions_oqueeh.ActionOQueEh

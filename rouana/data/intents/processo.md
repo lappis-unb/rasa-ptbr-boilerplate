@@ -36,6 +36,7 @@
 - Quando se iniciará a fase de captação?
 - a captação já pode ser feita?
 - em quanto tempo posso captar?
+- eu submeti um projeto e quero saber quando posso começar a captar dinheiro
 
 ## intent:processo_reativacao_de_proposta
 - Minha proposta foi indeferida, porém posso encaminhar pedido de reativação. Como proceder ?
@@ -57,6 +58,10 @@
 - como faço para reativar uma proposta?
 - como faço a reativação da minha proposta?
 - como reativo minha proposta?
+- qual o processo para a reativação da proposta?
+- como posso reativar minha proposta?
+- como posso reativar a proposta?
+- como posso reativar uma proposta?
 
 ## intent:processo_cadastro_proponente
 - Como cadastrar o proponente via Salic ?

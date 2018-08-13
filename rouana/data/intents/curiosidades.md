@@ -10,6 +10,8 @@
 - Qual a quantidade de projetos que já usou a lei?
 - número de projetos incetivados pela lei até agora
 - quantos projetos já tiveram incentivo da lei?
+- qual a quantidade de projetos a lei rouanet possui?
+- qual a quantidade de projetos que a lei rouanet tem?
 
 ## intent:curiosidades_beneficios_incentivo_projetos_culturais
 - Qual o benefício de incentivar projetos culturais ?
@@ -23,6 +25,7 @@
 - Existem algum incentivo para quem contribui para os projetos culturais
 - Quero contribuir para um projeto, o que ganho com isso?
 - o que eu ganho ao incentivar um projeto?
+- que tipo de benefícios alguém recebe ao incentivar um projeto?
 
 ## intent:curiosidades_lei_rouanet_elegibilidade
 - quem pode se inscrever na lei rouanet?
@@ -53,6 +56,9 @@
 - é o cidadão que paga pelos projetos da lei rouanet
 - porque a lei rouanet usa dinheiro público
 - a lei rouanet usa dinheiro de empresas?
+- quanto a lei rouanet já arrecadou?
+- quanto já foi arrecadado pela lei rouanet?
+- quanto a lei rouanet já consegui arrecadar?
 
 ## intent:curiosidades_lei_rouanet_denuncia
 - quero denunciar um projeto
@@ -70,6 +76,8 @@
 - a lei possui algum mencanismo de denuncia
 - como eu denuncio um projeto?
 - gostaria de saber como faço uma denuncia
+- como funciona a denuncia?
+- qual o processo de denuncia?
 
 ## intent:curiosidades_elegibilidade_de_empresa_para_beneficios
 - Qualquer empresa pode se beneficiar de incentivos fiscais, apoiando projetos culturais?
@@ -97,6 +105,8 @@
 - Possuo um tio que quer me incentivar na cultura
 - Tenho um primo que quer me dar dinheiro pela lei rouanet
 - Algum parente meu pode incentivar meu projeto?
+- Meu projeto pode ser incentivado pela minha família?
+- minha família pode incentivar meu projeto?
 
 ## intent:curiosidades_deducao_imposto_de_renda_incentivador
 - Quanto o incentivador de projetos culturais pode deduzir de seu imposto de renda?
@@ -109,3 +119,4 @@
 - Qual a porcentagem do imposto que vou abater após incentivar projetos?
 - qual é o desconto que recebo no IR ao incentivar um projeto
 - Se eu incentivar eu vou ter dedução no meu imposto de renda
+- qual a dedução de imposto de renda para incentivadores?

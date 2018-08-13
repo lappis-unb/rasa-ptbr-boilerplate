@@ -236,3 +236,4 @@
   - action_mais_alguma_pergunta
 * negar
   - action_despedir
+  - action_restart

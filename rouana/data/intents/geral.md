@@ -77,8 +77,6 @@
 - não tenho certeza
 - escolhi errado
 - falei errado
-- quero trocar
-- quero escolher outra
 
 ## intent:afirmar_curiosidades
 - quero aprender mais sobre a lei
