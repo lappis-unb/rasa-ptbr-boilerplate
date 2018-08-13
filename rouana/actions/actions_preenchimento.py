@@ -10,7 +10,7 @@ class ActionExplicarPreenchimento(ActionMultiline):
 
 class ActionPreenchimentoCampoCustoAuditoria(ActionMultiline):
     messages = [
-        'Este campo não precisa ser preenchido agora.'
+        'Este campo não precisa ser preenchido agora, isso vai ser preenchido na prestação de contas.'
     ]
 
 class ActionPreenchimentoVinculoDePropostas(ActionMultiline):
