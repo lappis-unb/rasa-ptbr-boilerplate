@@ -26,6 +26,10 @@
 - Quero contribuir para um projeto, o que ganho com isso?
 - o que eu ganho ao incentivar um projeto?
 - que tipo de benefícios alguém recebe ao incentivar um projeto?
+- se eu incentivar algum projeto, recebo algum beneficio?
+- ganho algum beneficio por incentivar algum projeto?
+- tem algum beneficio para quem incentiva um projeto?
+- um incentivador pode receber algum beneficio?
 
 ## intent:curiosidades_lei_rouanet_elegibilidade
 - quem pode se inscrever na lei rouanet?
@@ -59,6 +63,8 @@
 - quanto a lei rouanet já arrecadou?
 - quanto já foi arrecadado pela lei rouanet?
 - quanto a lei rouanet já consegui arrecadar?
+- a lei rouanet ja arrecadou algum dinheiro?
+- quanto dinheiro a lei rouanet já arrecadou?
 
 ## intent:curiosidades_lei_rouanet_denuncia
 - quero denunciar um projeto
@@ -78,6 +84,9 @@
 - gostaria de saber como faço uma denuncia
 - como funciona a denuncia?
 - qual o processo de denuncia?
+- da pra fazer uma denuncia?
+- queria saber se é possivel fazer uma denuncia
+- se eu quiser fazer uma denuncia, como faço?
 
 ## intent:curiosidades_elegibilidade_de_empresa_para_beneficios
 - Qualquer empresa pode se beneficiar de incentivos fiscais, apoiando projetos culturais?
@@ -92,6 +101,7 @@
 - quais a regras de elegibilidade no caso de empresas
 - qual a minha elegibilidade como pessoa juridica para participar da lei
 - qual a minha elegibilidade como cnpj para participar da lei
+- qualquer empresa pode participar da lei Rouanet?
 
 ## intent:curiosidades_receber_incetivo_de_parentes
 - Meus parentes podem incentivar meu projeto ?
