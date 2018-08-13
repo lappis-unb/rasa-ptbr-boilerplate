@@ -66,6 +66,7 @@
 - nao preenchi
 - nunca preenchi
 - nunca fiz
+- nunca
 - nao fiz
 - não está
 - não tem nada a ver
@@ -109,6 +110,8 @@
 - gostaria de falar mais sobre a lei
 - tenho duvidas na lei rouanet
 - possuo curiosidades sobre a lei rouanet
+- sobre a Lei eu acho
+- creio que sobre a lei rouanet
 
 ## intent:afirmar_projeto
 - prefiro conversar sobre criação e andamento de projetos
@@ -166,6 +169,7 @@
 - qual o significado de sefic?
 - o que significa e90?
 - o que significa o estado e90?
+- o que eh A12?
 
 ## intent:duvida_sobre_contexto
 - 5

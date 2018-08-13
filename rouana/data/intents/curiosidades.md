@@ -117,6 +117,11 @@
 - Algum parente meu pode incentivar meu projeto?
 - Meu projeto pode ser incentivado pela minha família?
 - minha família pode incentivar meu projeto?
+- Queria saber se a minha família pode ajudar a bancar o meu projeto
+- Quero saber se a minha família pode financiar o meu projeto
+- Quero saber se meus parentes podem ajudar a financiar o meu projeto
+- A minha família pode colocar dinheiro no meu projeto?
+- quero saber se meus parentes podem ser beneficiados
 
 ## intent:curiosidades_deducao_imposto_de_renda_incentivador
 - Quanto o incentivador de projetos culturais pode deduzir de seu imposto de renda?
