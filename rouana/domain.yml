@@ -37,6 +37,7 @@ intents:
   - erros_salic_planilha_desapareceu
   - erros_salic_erro_vinculo_cpf_cnpj
   - erros_salic_erro_achar_proposta
+  - extra
 
 templates:
   utter_default:
@@ -68,6 +69,7 @@ actions:
   - actions.actions_geral.ActionMaisPerguntasAfirmativa
   - actions.actions_geral.ActionExplicarContextos
   - actions.actions_geral.ActionEscolheuContextoErrado
+  - actions.actions_geral.ActionExtra
 
   - actions.actions_curiosidades.ActionCuriosidadesIndicacao
   - actions.actions_curiosidades.ActionCuriosidadesMais

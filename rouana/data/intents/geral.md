@@ -44,6 +44,18 @@
 - preenchi sim
 - já preenchi uma proposta
 - sim, preenchi minha proposta
+- Tá
+- tá
+- Tá bom
+- tá bom
+- Okay
+- okay
+- Ok
+- ok
+- claro
+- por favor
+- se não for incomodo
+
 
 ## intent:negar
 - não
@@ -166,3 +178,36 @@
 - quinta opção
 - opção cinco
 - cinco
+
+##intent:extra
+- Bacana
+- Legal
+- legal
+- Entendi
+- Compreendi
+- Saquei
+- Daora
+- Tá
+- Tá bom
+- Bom
+- Okay
+- Ok
+- Muito bom
+- Muito bem
+- Gostei
+- Massa
+- Maneiro
+- Interessante 
+- Joia
+- Formidável
+- Excelente 
+- Ótimo 
+- Extraordinário 
+- Excepcional 
+- Notável
+- Top
+- Perfeito
+- Certo
+- Então
+- entao
+- então

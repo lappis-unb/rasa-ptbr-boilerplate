@@ -81,8 +81,7 @@ class ActionSubmissaoDeProjetos(ActionMultiline):
 
 class ActionDefinirContexto(ActionMultiline):
     messages = [
-        'Tá bom!'
-        'Onde sua pergunta se encaixa melhor:',
+        'Tá bom! Onde sua pergunta se encaixa melhor:',
         '1. Processo e estado do projeto',
         '2. Preenchimento de proposta',
         '3. Datas e Prazos',
@@ -115,7 +114,7 @@ class ActionIntroduzirExecucao(ActionMultiline):
 
 class ActionJaEhProponente(ActionMultiline):
     messages = [
-        'Você já é um proponente cadastrado?',
+        'Você já tem um proponente cadastrado?',
     ]
 
 class ActionCadastroProponenteIntroduzirContexto(ActionMultiline):
@@ -156,13 +155,13 @@ class ActionExplicarCadastroSalic(ActionMultiline):
         'É interessante você alterar esta senha, por isso, no seu primeiro '
         'acesso, vá em "Usuário > Alterar Senha", para mudar a mesma',
 
-        'Agora que você já se cadastrou, o próximo passo é se tornar um proponente'
+        'Agora que você já se cadastrou, o próximo passo cadastrar um proponente'
     ]
 
 class ActionCadastroSalicAposVideo(ActionMultiline):
     messages = [
         'Espero que o vídeo tenha ajudado',
-        'Agora que você já se cadastrou, o próximo passo é se tornar um proponente'
+        'Agora que você já se cadastrou, o próximo passo cadastrar um proponente'
     ]
 
 class ActionInscricaoProponente(ActionMultiline):
@@ -179,7 +178,7 @@ class ActionInscricaoProponente(ActionMultiline):
 
 class ActionIntroduzirContextoNovaProposta(ActionMultiline):
     messages = [
-        'Que bom!É sempre bom trabalhar em novos projetos culturais',
+        'Que bom! É sempre bom trabalhar em novos projetos culturais',
 
         'Se você quiser, posso tirar algumas de suas dúvidas para te ajudar neste novo projeto'
     ]
@@ -223,3 +222,6 @@ class ActionExplicarContextos(ActionMultiline):
 
         'Já que te expliquei, vou te dar as opçẽs de novo '
     ]
+
+class ActionExtra(ActionMultiline):
+    messages = []
