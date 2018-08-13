@@ -36,7 +36,15 @@ Por fim levante o docker da Rouana
 sudo docker-compose up rouana
 ```
 
-## Ambiente de testes no console
+## Testes
+
+### Teste de confiabilidade de frases
+
+```sh
+sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana:console python confidence.py
+```
+
+### Conversa no console
 
 ```sh
 sudo docker build -t rouana:console .

@@ -16,8 +16,7 @@
 - falha no salic
 
 ## intent:erros_salic_recuperacao_de_senha
-- Me cadastrei a muito tempo no Salic, mas não me recordo da senha de \
-  acesso. Como faço para resolver ?
+- Me cadastrei a muito tempo no Salic, mas não me recordo da senha de acesso. Como faço para resolver ?
 - Esqueci a senha do Salic, o que faço ?
 - Como recuperar senha do Salic ?
 - O que fazer quando se esquece a senha do Salic ?
@@ -30,8 +29,7 @@
 ## intent:erros_salic_erro_salvamento
 - Perdi minhas alterações na proposta
 - O sistema não salvou minhas alterações na proposta
-- Preenchi minha proposta toda e fechei o sistema. Ao retornar percebi \
-  que a mesma não tinha sido salva. O que ocorreu?
+- Preenchi minha proposta toda e fechei o sistema. Ao retornar percebi que a mesma não tinha sido salva. O que ocorreu?
 - Alterei minha proposta e a alteração não foi salva após fechar o sistema
 - O SALIC não salvou minhas alterações na proposta
 

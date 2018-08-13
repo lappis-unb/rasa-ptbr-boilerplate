@@ -135,6 +135,8 @@
 - o que é proposta?
 - o que e proponente?
 - o que é isso?
+- oq é Lei Rouanet?
+- oq é a Lei Rouanet?
 - pode conceituar salic?
 - pode conceituar o salic?
 - pode explicar execução?

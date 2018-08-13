@@ -38,8 +38,7 @@
 - em quanto tempo posso captar?
 
 ## intent:processo_reativacao_de_proposta
-- Minha proposta foi indeferida, porém posso encaminhar pedido de \
-  reativação. Como proceder ?
+- Minha proposta foi indeferida, porém posso encaminhar pedido de reativação. Como proceder ?
 - Como encaminhar pedido de reativação ?
 - Como refazer o a reativação de pedido ?
 - O que fazer para refazer o encaminhamento do pedido de reativação ?
@@ -55,13 +54,28 @@
 - minha proposta foi rejeitada, como reativar ela?
 - posso fazer o pedido de reativação?
 - como reativar uma proposta?
+- como faço para reativar uma proposta?
+- como faço a reativação da minha proposta?
+- como reativo minha proposta?
 
 ## intent:processo_cadastro_proponente
 - Como cadastrar o proponente via Salic ?
+- Como cadastrar a proponente via Salic ?
 - Como cadastro um proponente no Salic ?
+- Como cadastro uma proponente no Salic ?
 - O que devo fazer para cadastrar um proponente ?
+- O que devo fazer para cadastrar uma proponente ?
 - Cadastro de proponente ?
 - Como fazer cadastro de proponente?
+- Como fazer cadastro de um proponente?
+- Como fazer cadastro de uma proponente?
 - Cadastro de proponente no Salic
 - cadastrar proponente
+- cadastro de proponente
+- cadastro de um proponente
+- cadastro de uma proponente
 - cadastrar proponente no Salic
+- Como faço cadastro de proponente?
+- Como faço cadastro de um proponente?
+- Como faço cadastro de uma proponente?
+- Como faço para cadastrar um proponente?
