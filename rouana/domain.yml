@@ -41,7 +41,7 @@ intents:
 
 templates:
   utter_default:
-    - text: "Desculpe, não consegui te entender. Você pode reformular?"
+    - text: "Desculpe, não consegui te entender. Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue? Ex: Você poderia falar mais sobre a Lei Rouanet? Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?"
 
 actions:
   - actions.actions_oqueeh.ActionOQueEh
