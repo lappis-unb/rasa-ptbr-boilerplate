@@ -4,8 +4,15 @@
 - terceiro tópico
 - Data
 - prazo
+- prazos
 - Prazo
+- sobre prazo
 - data
+- sobre data
+- datas
+- prazos e datas
+- sobre prazos e datas
+- datas e prazos
 - escolha 3
 - na 3
 - opção três
@@ -38,3 +45,5 @@
 - Qual o prazo para desisitr de entrar com o recurso?
 - não quero entrar com o recurso, como posso desistir?
 - Quero desistir do prazo de recurso
+- sobre desistência de recurso
+- desistência de recurso
