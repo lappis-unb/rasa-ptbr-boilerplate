@@ -112,6 +112,7 @@
 - possuo curiosidades sobre a lei rouanet
 - sobre a Lei eu acho
 - creio que sobre a lei rouanet
+- o que é a lei
 
 ## intent:afirmar_projeto
 - prefiro conversar sobre criação e andamento de projetos
