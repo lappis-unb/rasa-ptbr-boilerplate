@@ -37,6 +37,8 @@
 - a captação já pode ser feita?
 - em quanto tempo posso captar?
 - eu submeti um projeto e quero saber quando posso começar a captar dinheiro
+- como posso fazer para captar recursos?
+-
 
 ## intent:processo_reativacao_de_proposta
 - Minha proposta foi indeferida, porém posso encaminhar pedido de reativação. Como proceder ?
