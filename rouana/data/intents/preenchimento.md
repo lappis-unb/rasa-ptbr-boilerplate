@@ -39,6 +39,10 @@
 - como cadastro rubricas do meu advogado?
 - como cadastrar rubricas do meu advogado?
 - como cadastrar rubricas do advogado?
+- quero cadastrar rubricas de advogados 
+- cadastro de rubrica de advogados
+- como preencher rubrica de advogados?
+
 
 ## intent:preenchimento_valor_ingresso
 - O sistema informa que o custo por beneficiário não pode ultrapassar o valor de 250,00, mas não irei comercializar ingressos ou o ingresso não ultrapassa o valor citado. Como resolver?
