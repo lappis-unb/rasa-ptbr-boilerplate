@@ -1,6 +1,7 @@
 intents:
   - o_que_eh
   - cumprimentar
+  - duvida_texto_inicial
   - afirmar_curiosidades
   - afirmar_projeto
   - lei_rouanet_definicao
@@ -48,6 +49,7 @@ actions:
 
   - actions.actions_geral.ActionCumprimentar
   - actions.actions_geral.ActionDefinirPerfil
+  - actions.actions_geral.ActionExplicarDefinicaoPerfil
   - actions.actions_geral.ActionNovaProposta
   - actions.actions_geral.ActionDuvidaExecucao
   - actions.actions_geral.ActionConheceProcesso

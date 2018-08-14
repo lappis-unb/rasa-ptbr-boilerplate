@@ -21,6 +21,13 @@
 - posso falar com você?
 - pode me tirar uma dúvida?
 
+## intent:duvida_texto_inicial
+- hmm não sei
+- to meio perdido
+- nao sei minha duvida
+- sobre o que cada um fala
+- gostaria de saber sobre cada um
+
 ## intent:afirmar
 - sim
 - claro que sim

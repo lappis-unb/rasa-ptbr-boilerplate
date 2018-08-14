@@ -35,6 +35,17 @@ class ActionDefinirPerfil(ActionMultiline):
         'prefere falar mais sobre a Lei Rouanet?'
     ]
 
+class ActionExplicarDefinicaoPerfil(ActionMultiline):
+    messages = [
+        'Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada,'
+        'o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.',
+
+        'Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa.' 
+        'Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto, ou como submeter um projeto, entre outras.',
+
+        'Do que você prefere conversar?'
+    ]
+
 class ActionNovaProposta(ActionMultiline):
     messages = [
         'Você já começou a trabalhar em uma nova proposta de projeto?'

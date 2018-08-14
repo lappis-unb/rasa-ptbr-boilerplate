@@ -12,6 +12,24 @@
   - action_extra
 > identifica_perfil
 
+## path-explicar-definicao-perfil
+* cumprimentar
+  - action_cumprimentar
+  - action_definir_perfil
+* duvida_texto_inicial
+  - action_explicar_definicao_perfil
+> identifica_perfil
+
+## path-explicar-definicao-perfil-extra
+* cumprimentar
+  - action_cumprimentar
+  - action_definir_perfil
+* duvida_texto_inicial
+  - action_explicar_definicao_perfil
+* extra
+  - action_extra
+> identifica_perfil
+
 
 <!--- Fluxo Curiosidades --->
 
