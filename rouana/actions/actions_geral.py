@@ -22,9 +22,7 @@ class ActionMultiline(Action):
 class ActionCumprimentar(ActionMultiline):
     messages = [
         'Oi eu sou a Rouana, assistente virtual do minc, e estou aqui para te ajudar a '
-        'esclarecer dúvidas sobre a Lei Rouanet',
-
-        'e também solucionar problemas de proposta e projeto'
+        'esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto'
     ]
 
 class ActionDefinirPerfil(ActionMultiline):
@@ -70,11 +68,9 @@ class ActionCadastroSalic(ActionMultiline):
 
 class ActionDespedir(ActionMultiline):
     messages = [
-        'Espero que eu tenha conseguido esclarecer suas dúvidas',
-
-        'Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês',
-
-        'Se surgir alguma dúvida, não hesite, volte aqui',
+        'Espero que eu tenha conseguido esclarecer suas dúvidas. '
+        'Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês, '
+        'se surgir alguma dúvida, não hesite, volte aqui',
 
         'Até mais!'
     ]
@@ -92,7 +88,7 @@ class ActionSubmissaoDeProjetos(ActionMultiline):
 
 class ActionDefinirContexto(ActionMultiline):
     messages = [
-        'Tá bom! Onde sua pergunta se encaixa melhor:',
+        'Onde sua pergunta se encaixa melhor:',
         '1. Processo e estado do projeto',
         '2. Preenchimento de proposta',
         '3. Datas e Prazos',
@@ -112,10 +108,8 @@ class ActionIntroduzirExecucao(ActionMultiline):
         ':disappointed_relieved:',
 
         'Eu ainda não aprendi a falar sobre um projeto que está em Execução ou'
-        'em Prestação de Contas. Ainda estou aprendendo...',
-
-        'Em breve eu poderei responder sua dúvida',
-
+        'em Prestação de Contas. Ainda estou aprendendo... '
+        'Em breve eu poderei responder sua dúvida. '
         'Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC:',
 
         'Execução: acompanhamento.incentivo@cultura.gov.br',
@@ -139,15 +133,12 @@ class ActionCadastroSalicVideo(ActionMultiline):
         'O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura, e é por '
         'ele que você cadastra a proposta e a acompanha',
 
-        'Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo',
-
-        'Nele você pode observar o passo a passo para se cadastrar:'
+        'Se você encontrar dificuldades no momento do cadastro, pode assistir '
+        'este vídeo, nele você pode observar o passo a passo para se cadastrar:',
 
         'https://youtu.be/rMGEZyIr1U8',
 
-        'Caso você não possa ver o vídeo, eu posso te explicar',
-
-        'Quer que eu te explique?'
+        'Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique?'
     ]
 
 class ActionExplicarCadastroSalic(ActionMultiline):

@@ -47,6 +47,6 @@ sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana:console pyt
 ### Conversa no console
 
 ```sh
-sudo docker build -t rouana:console .
+sudo docker build -t rouana:console -f docker/console.Dockerfile .
 sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana:console
 ```

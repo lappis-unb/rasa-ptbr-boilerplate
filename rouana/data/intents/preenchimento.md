@@ -44,6 +44,7 @@
 - como preencher rubrica de advogados?
 - quero preencher rubricas de contador
 - como preenche o campo rubricas de contador?
+- como enviar rubricas de advogados
 
 ## intent:preenchimento_valor_ingresso
 - O sistema informa que o custo por beneficiário não pode ultrapassar o valor de 250,00, mas não irei comercializar ingressos ou o ingresso não ultrapassa o valor citado. Como resolver?
@@ -73,3 +74,4 @@
 - Qual o formato do campo de agência bancária?
 - Deu erro ao cadastrar a agência
 - tenho duvidas sobre o formato do campo de agencia bancaria
+- Como é o formato do campo da agência bancária?
