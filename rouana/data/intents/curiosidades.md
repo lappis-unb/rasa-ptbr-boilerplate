@@ -32,6 +32,9 @@
 - ganho algum beneficio por incentivar algum projeto?
 - tem algum beneficio para quem incentiva um projeto?
 - um incentivador pode receber algum beneficio?
+- Que tipo de beneficios alguem recebe se incentivar um projeto
+- se eu incentivar o projeto, o que recebo?
+- que benefícios tem pra quem incentivar um projeto?
 
 ## intent:curiosidades_lei_rouanet_elegibilidade
 - quem pode se inscrever na lei rouanet?
@@ -69,6 +72,9 @@
 - quanto a lei rouanet já consegui arrecadar?
 - a lei rouanet ja arrecadou algum dinheiro?
 - quanto dinheiro a lei rouanet já arrecadou?
+- quanto a lei ja arrecadou?
+- qto a lei já arrecadou?
+
 
 ## intent:curiosidades_lei_rouanet_denuncia
 - quero denunciar um projeto
@@ -106,6 +112,9 @@
 - qual a minha elegibilidade como pessoa juridica para participar da lei
 - qual a minha elegibilidade como cnpj para participar da lei
 - qualquer empresa pode participar da lei Rouanet?
+- que empresa pode participar?
+- que tipo de empresa pode participar?
+
 
 ## intent:curiosidades_receber_incetivo_de_parentes
 - Meus parentes podem incentivar meu projeto ?
@@ -126,6 +135,10 @@
 - Quero saber se meus parentes podem ajudar a financiar o meu projeto
 - A minha família pode colocar dinheiro no meu projeto?
 - quero saber se meus parentes podem ser beneficiados
+- meus familiares podem incentivar meu projeto?
+- a família pode incentivar projetos?
+
+
 
 ## intent:curiosidades_deducao_imposto_de_renda_incentivador
 - Quanto o incentivador de projetos culturais pode deduzir de seu imposto de renda?
@@ -139,3 +152,6 @@
 - qual é o desconto que recebo no IR ao incentivar um projeto
 - Se eu incentivar eu vou ter dedução no meu imposto de renda
 - qual a dedução de imposto de renda para incentivadores?
+- qual a dedução de impostos para incentivadores?
+- qual a dedução de imposto de renda para incentivadores?
+- sou incentivador, quanto posso receber como dedução de imposto de renda??
