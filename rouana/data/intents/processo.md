@@ -64,6 +64,7 @@
 - como posso reativar minha proposta?
 - como posso reativar a proposta?
 - como posso reativar uma proposta?
+- como funciona a reativação de uma proposta?
 
 ## intent:processo_cadastro_proponente
 - Como cadastrar o proponente via Salic ?
