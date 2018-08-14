@@ -224,4 +224,6 @@ class ActionExplicarContextos(ActionMultiline):
     ]
 
 class ActionExtra(ActionMultiline):
-    messages = []
+    messages = [
+        '=)'
+    ]

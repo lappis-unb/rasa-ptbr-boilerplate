@@ -284,7 +284,7 @@
 > identificar_contexto
   - action_definir_contexto
 * extra
-  - action_extra  
+  - action_extra
 * duvida_sobre_contexto
   - action_explicar_contextos
 > identificar_contexto
