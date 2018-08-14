@@ -2,6 +2,7 @@ import re
 import spacy
 
 from rasa_core.actions.action import Action
+from rasa_core.events import UserUtteranceReverted
 
 
 class ActionMultiline(Action):
@@ -38,7 +39,7 @@ class ActionExplicarDefinicaoPerfil(ActionMultiline):
         'Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada,'
         'o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.',
 
-        'Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa.' 
+        'Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa.'
         'Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto, ou como submeter um projeto, entre outras.',
 
         'Do que você prefere conversar?'
@@ -46,24 +47,24 @@ class ActionExplicarDefinicaoPerfil(ActionMultiline):
 
 class ActionNovaProposta(ActionMultiline):
     messages = [
-        'Você já começou a trabalhar em uma nova proposta de projeto?'
+        'Você já começou a trabalhar em uma nova proposta de projeto? (Sim ou Não)'
     ]
 
 class ActionDuvidaExecucao(ActionMultiline):
     messages = [
         'Você tem dúvida em relação à captação de verba e execução do '
-        'projeto?'
+        'projeto? (Sim ou Não)'
     ]
 
 class ActionConheceProcesso(ActionMultiline):
     messages = [
         'Você sabe como funciona o andamento de um projeto de incentivo a '
-        'cultura?'
+        'cultura? (Sim ou Não)'
     ]
 
 class ActionCadastroSalic(ActionMultiline):
     messages = [
-        'Você já tem cadastro no SALIC?'
+        'Você já tem cadastro no SALIC? (Sim ou Não)'
     ]
 
 class ActionDespedir(ActionMultiline):
@@ -100,7 +101,7 @@ class ActionAviso(ActionMultiline):
     messages = [
         'Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.',
 
-        'Você já preencheu uma proposta?',
+        'Você já preencheu uma proposta? (Sim ou Não)',
     ]
 
 class ActionIntroduzirExecucao(ActionMultiline):
@@ -119,7 +120,7 @@ class ActionIntroduzirExecucao(ActionMultiline):
 
 class ActionJaEhProponente(ActionMultiline):
     messages = [
-        'Você já tem um proponente cadastrado?',
+        'Você já tem um proponente cadastrado? (Sim ou Não)',
     ]
 
 class ActionCadastroProponenteIntroduzirContexto(ActionMultiline):
@@ -138,7 +139,7 @@ class ActionCadastroSalicVideo(ActionMultiline):
 
         'https://youtu.be/rMGEZyIr1U8',
 
-        'Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique?'
+        'Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)'
     ]
 
 class ActionExplicarCadastroSalic(ActionMultiline):
@@ -189,12 +190,12 @@ class ActionIntroduzirContextoNaoExecucao(ActionMultiline):
     messages = [
         'Então suas dúvidas devem ser sobre as outras etapas do processo',
 
-        'Vamos saná-las juntos?'
+        'Vamos saná-las juntos? (Sim ou Não)'
     ]
 
 class ActionMaisAlgumaPergunta(ActionMultiline):
     messages = [
-        'Você possui mais alguma dúvida?',
+        'Você possui mais alguma dúvida? (Sim ou Não)',
     ]
 
 class ActionMaisPerguntasAfirmativa(ActionMultiline):
@@ -229,3 +230,11 @@ class ActionExtra(ActionMultiline):
     messages = [
         '=)'
     ]
+
+class ActionRevert(Action):
+    def name(self):
+        return "action_revert"
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message("Sorry, didn't get that. Try again.")
+        return [UserUtteranceReverted()]

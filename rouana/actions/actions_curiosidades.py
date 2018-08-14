@@ -12,7 +12,7 @@ class ActionCuriosidadesIndicacao(ActionMultiline):
 
 class ActionCuriosidadesMais(ActionMultiline):
     messages = [
-        'Gostaria de saber mais curiosidades?'
+        'Gostaria de saber mais curiosidades? (Sim ou Não)'
     ]
 
 class ActionCuriosidadesMaisSim(ActionMultiline):
@@ -24,7 +24,7 @@ class ActionCuriosidadesMaisSim(ActionMultiline):
 class ActionCuriosidadesMaisNao(ActionMultiline):
     messages = [
         'Ok, podemos conversar sobre projetos e propostas',
-        'Você quer falar sobre isso?',
+        'Você quer falar sobre isso? (Sim ou Não)',
     ]
 
 class ActionCuriosidadesFalarSobreProjetos(ActionMultiline):

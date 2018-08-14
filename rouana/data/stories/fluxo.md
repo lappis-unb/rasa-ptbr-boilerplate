@@ -4,30 +4,12 @@
   - action_definir_perfil
 > identifica_perfil
 
-## path-extra
-* cumprimentar
-  - action_cumprimentar
-  - action_definir_perfil
-* extra
-  - action_extra
-> identifica_perfil
-
 ## path-explicar-definicao-perfil
 * cumprimentar
   - action_cumprimentar
   - action_definir_perfil
-* duvida_texto_inicial
+* negar
   - action_explicar_definicao_perfil
-> identifica_perfil
-
-## path-explicar-definicao-perfil-extra
-* cumprimentar
-  - action_cumprimentar
-  - action_definir_perfil
-* duvida_texto_inicial
-  - action_explicar_definicao_perfil
-* extra
-  - action_extra
 > identifica_perfil
 
 
@@ -39,26 +21,10 @@
   - action_curiosidades_indicacao
 > identificar_curiosidade
 
-## path1-extra
-> identifica_perfil
-* afirmar_curiosidades
-  - action_curiosidades_indicacao
-* extra
-  - action_extra
-> identificar_curiosidade
-
 ## path1.end.1
 > curiosidade_final
 * afirmar
   - action_curiosidades_mais_sim
-> identificar_curiosidade
-
-## path1.end.1-extra
-> curiosidade_final
-* afirmar
-  - action_curiosidades_mais_sim
-* extra
-  - action_extra
 > identificar_curiosidade
 
 ## path1.end.2
@@ -78,7 +44,7 @@
 > curiosidade_falar_sobre_projetos
 * negar
   - action_despedir
-
+  - action_restart
 
 
 
@@ -114,14 +80,6 @@
   - action_introduzir_contexto_nova_proposta
 > identificar_contexto
 
-## path2.1.1-extra
-> identificar_nova_proposta
-* afirmar
-  - action_introduzir_contexto_nova_proposta
-* extra
-  - action_extra
-> identificar_contexto
-
 ## path2.1.2
 > identificar_nova_proposta
 * negar
@@ -143,14 +101,6 @@
 > identificar_execucao
 * negar
   - action_introduzir_contexto_nao_execucao
-> identificar_contexto
-
-## path2.1.2.2-extra
-> identificar_execucao
-* negar
-  - action_introduzir_contexto_nao_execucao
-* extra
-  - action_extra
 > identificar_contexto
 
 ## path2.1.2.3
@@ -241,25 +191,9 @@
 * escolher_processo
 > opcao_processo
 
-## pathContexto.processo-extra
-> identificar_contexto
-  - action_definir_contexto
-* extra
-  - action_extra
-* escolher_processo
-> opcao_processo
-
 ## pathContexto.preenchimento
 > identificar_contexto
   - action_definir_contexto
-* escolher_preenchimento
-> opcao_preenchimento
-
-## pathContexto.preenchimento
-> identificar_contexto
-  - action_definir_contexto
-* extra
-  - action_extra
 * escolher_preenchimento
 > opcao_preenchimento
 
@@ -269,40 +203,15 @@
 * escolher_prazo
 > opcao_prazo
 
-## pathContexto.prazo
-> identificar_contexto
-  - action_definir_contexto
-* extra
-  - action_extra
-* escolher_prazo
-> opcao_prazo
-
 ## pathContexto.errossalic
 > identificar_contexto
   - action_definir_contexto
 * escolher_erros_salic
 > opcao_erros_salic
 
-## pathContexto.errossalic
-> identificar_contexto
-  - action_definir_contexto
-* escolher_erros_salic
-* extra
-  - action_extra
-> opcao_erros_salic
-
 ## pathContexto.5
 > identificar_contexto
   - action_definir_contexto
-* duvida_sobre_contexto
-  - action_explicar_contextos
-> identificar_contexto
-
-## pathContexto.5
-> identificar_contexto
-  - action_definir_contexto
-* extra
-  - action_extra
 * duvida_sobre_contexto
   - action_explicar_contextos
 > identificar_contexto
