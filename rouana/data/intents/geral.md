@@ -27,6 +27,23 @@
 - nao sei minha duvida
 - sobre o que cada um fala
 - gostaria de saber sobre cada um
+- não sei o que perguntar
+- não sei o que quero saber
+- sei lá
+- tanto faz
+- nao sei o que perguntar
+- nao sei o que questionar
+- nao sei o que quero saber
+- ainda nao sei
+- ainda nao sei escolher um tópico
+- ainda não pensei sobre isso
+- não sei do que quero falar
+- não sei do que quero conversar
+- me explica os dois
+- quero saber um pouco dos dois
+- me conta sobre os dois
+- me fala dos dois
+
 
 ## intent:afirmar
 - sim
