@@ -55,6 +55,7 @@
 - não vou vender ingresso no meu projeto
 - o sistema acusa que o valor do ingresso excedeu o permitido
 - como calcula o valor do ingresso?
+- o ingresso do meu evento pode ser gratuito? 
 
 ## intent:preenchimento_vinculo_cpf_proposta
 - Como faço para vincular uma proposta ao CPF do responsável?
