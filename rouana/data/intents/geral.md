@@ -123,6 +123,7 @@
 - gostaria de saber mais sobre a lei
 - quero falar sobre a lei
 - mais sobre a lei
+- Mais sobre a Lei Rouanet
 - vamos falar sobre a lei
 - sobre a lei
 - a lei
