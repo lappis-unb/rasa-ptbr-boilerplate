@@ -12,6 +12,8 @@
 - quantos projetos já tiveram incentivo da lei?
 - qual a quantidade de projetos a lei rouanet possui?
 - qual a quantidade de projetos que a lei rouanet tem?
+- qtos projetos a lei rouanet tem?
+
 
 ## intent:curiosidades_beneficios_incentivo_projetos_culturais
 - Qual o benefício de incentivar projetos culturais ?
