@@ -35,6 +35,7 @@
 
 ## intent:curiosidades_lei_rouanet_elegibilidade
 - quem pode se inscrever na lei rouanet?
+- quem pode participar?
 - como eu me inscrevo na lei rouanet?
 - posso me inscrever na lei rouanet?
 - quero participar da lei
