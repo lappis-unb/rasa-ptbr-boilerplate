@@ -106,8 +106,6 @@ class ActionAviso(ActionMultiline):
 
 class ActionIntroduzirExecucao(ActionMultiline):
     messages = [
-        ':disappointed_relieved:',
-
         'Eu ainda não aprendi a falar sobre um projeto que está em Execução ou'
         'em Prestação de Contas. Ainda estou aprendendo... '
         'Em breve eu poderei responder sua dúvida. '

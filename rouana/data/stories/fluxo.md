@@ -149,7 +149,8 @@
 > identificar_explicar_cadastro
 * afirmar
   - action_explicar_cadastro_salic
-> identificar_contexto
+  - action_ja_eh_proponente
+> identificar_eh_proponente
 
 
 ## pathCadastroSalic.2.2
