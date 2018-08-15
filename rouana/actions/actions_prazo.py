@@ -5,7 +5,7 @@ class ActionExplicarPrazo(ActionMultiline):
         'Nesta etapa posso responder suas dúvidas a respeito de Datas '
         'e Prazos do seu projeto. Como: envio do CNAE e desistência de recurso',
 
-        'O que você quer saber?'
+        # 'O que você quer saber?'
     ]
 
 class ActionPrazoEnvioCnae(ActionMultiline):

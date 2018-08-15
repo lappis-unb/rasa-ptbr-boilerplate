@@ -189,37 +189,42 @@
 > identificar_contexto
   - action_definir_contexto
 * escolher_processo
-> opcao_processo
+  - action_explicar_processo
+  - action_ainda_nao_aprendi
+  - action_despedir
+  - action_restart
 
 ## pathContexto.preenchimento
 > identificar_contexto
   - action_definir_contexto
 * escolher_preenchimento
-> opcao_preenchimento
+  - action_explicar_preenchimento
+  - action_ainda_nao_aprendi
+  - action_despedir
+  - action_restart
 
 ## pathContexto.prazo
 > identificar_contexto
   - action_definir_contexto
 * escolher_prazo
-> opcao_prazo
+  - action_explicar_prazo
+  - action_ainda_nao_aprendi
+  - action_despedir
+  - action_restart
 
 ## pathContexto.errossalic
 > identificar_contexto
   - action_definir_contexto
 * escolher_erros_salic
-> opcao_erros_salic
+  - action_explicar_erros_salic
+  - action_ainda_nao_aprendi
+  - action_despedir
+  - action_restart
 
 ## pathContexto.5
 > identificar_contexto
   - action_definir_contexto
-* duvida_sobre_contexto
-  - action_explicar_contextos
-> identificar_contexto
-
-## pathContexto.negar
-> identificar_contexto
-  - action_definir_contexto
-* negar
+* duvida_sobre_contexto OR negar
   - action_explicar_contextos
 > identificar_contexto
 

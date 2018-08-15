@@ -6,7 +6,7 @@ class ActionExplicarErrosSalic(ActionMultiline):
         'sistema SALIC. Como: planilha desaparecida, perda dos dados '
         'preenchidos e recuperação de senha',
 
-        'O que você gostaria de saber?'
+        # 'O que você gostaria de saber?'
     ]
 
 class ActionErroSalicPlanilhaDesaparecida(ActionMultiline):

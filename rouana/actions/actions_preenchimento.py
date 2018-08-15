@@ -5,7 +5,7 @@ class ActionExplicarPreenchimento(ActionMultiline):
         'Nesta etapa eu posso responder dúvidas sobre o preenchimento de '
         'propostas no SALIC',
 
-        'O que você gostaria de saber?'
+        # 'O que você gostaria de saber?'
     ]
 
 class ActionPreenchimentoCampoCustoAuditoria(ActionMultiline):

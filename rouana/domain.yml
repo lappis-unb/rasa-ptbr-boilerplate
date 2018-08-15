@@ -20,21 +20,6 @@ intents:
   - escolher_prazo
   - escolher_erros_salic
   - duvida_sobre_contexto
-  - preenchimento_campo_custo_auditoria
-  - preenchimento_cadastro_rubrica_advogado_contador
-  - preenchimento_valor_ingresso
-  - preenchimento_vinculo_cpf_proposta
-  - preenchimento_cadastro_agencia_bancaria
-  - prazo_envio_cnae
-  - prazo_desistir_recurso
-  - processo_captacao_de_recursos
-  - processo_reativacao_de_proposta
-  - processo_cadastro_proponente
-  - erros_salic_recuperacao_de_senha
-  - erros_salic_erro_salvamento
-  - erros_salic_planilha_desapareceu
-  - erros_salic_erro_vinculo_cpf_cnpj
-  - erros_salic_erro_achar_proposta
 
 templates:
   utter_default:
@@ -70,6 +55,7 @@ actions:
   - actions.actions_geral.ActionEscolheuContextoErrado
   - actions.actions_geral.ActionExtra
   - actions.actions_geral.ActionRevert
+  - actions.actions_geral.ActionAindaNaoAprendi
 
   - actions.actions_curiosidades.ActionCuriosidadesIndicacao
   - actions.actions_curiosidades.ActionCuriosidadesMais

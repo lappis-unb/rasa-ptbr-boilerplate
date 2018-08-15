@@ -231,6 +231,15 @@ class ActionExtra(ActionMultiline):
         '=)'
     ]
 
+class ActionAindaNaoAprendi(ActionMultiline):
+    messages = [
+        'Eu ainda não aprendi a falar sobre este tópico...',
+
+        'Em breve eu poderei responder sua dúvida',
+
+        'Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC: http://rouanet.cultura.gov.br/fale-conosco/',
+    ]
+
 class ActionRevert(Action):
     def name(self):
         return "action_revert"

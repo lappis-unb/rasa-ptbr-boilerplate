@@ -8,7 +8,7 @@ class ActionExplicarProcesso(ActionMultiline):
         'Por exemplo, você pode me fazer perguntar à respeito de captação '
         'de verbas ou sobre o estado do seu projeto.',
 
-        'O que você gostaria de saber?'
+        # 'O que você gostaria de saber?'
     ]
 
 class ActionProcessoCaptacaoDeRecursos(ActionMultiline):
