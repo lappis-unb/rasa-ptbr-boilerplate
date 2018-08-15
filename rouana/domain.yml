@@ -23,7 +23,7 @@ intents:
 
 templates:
   utter_default:
-    - text: "Desculpe, não consegui te entender. Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue? Ex: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?"
+    - text: "Desculpe, não consegui te entender. Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue? \nEx: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?"
   utter_restart:
     - text: "=D"
 actions:
