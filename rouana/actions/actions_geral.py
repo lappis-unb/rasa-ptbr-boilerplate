@@ -22,7 +22,7 @@ class ActionMultiline(Action):
 
 class ActionCumprimentar(ActionMultiline):
     messages = [
-        'Oi eu sou a Rouana, assistente virtual do minc, e estou aqui para te ajudar a '
+        'Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a '
         'esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto'
     ]
 

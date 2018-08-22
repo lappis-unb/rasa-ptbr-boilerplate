@@ -1,9 +1,9 @@
 ## intent:cumprimentar
 - oi
 - olá
-- oi Rouana
-- olá Rouana
-- olá Rouana, como vai?
+- oi Taís
+- olá Taís
+- olá Taís, como vai?
 - como vai?
 - bom dia
 - boa tarde
