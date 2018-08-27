@@ -165,6 +165,8 @@
 - o que é proposta?
 - o que e proponente?
 - o que é isso?
+- o que preenchimento quer dizer?
+- o que lei rouanet significa?
 - oq é Lei Rouanet?
 - oq é a Lei Rouanet?
 - pode conceituar salic?
@@ -172,21 +174,29 @@
 - pode explicar execução?
 - pode me explicar a fase de preenchimento?
 - pode me explicar a lei rouanet?
-- o que lei rouanet significa?
-- não faço ideia do que seja proponente
-- não sei bem o que você quer dizer com ministério da cultura
 - pode me dar o conceito do salic
-- o que preenchimento quer dizer?
+- não faço ideia do que seja proponente
+- não sei bem o que você quer dizer com sefic
+- Não sei o que é  e90
 - me explique prestação de contas
 - me explica o que é a cnic
 - me explica o que é o salic
 - me explique melhor o conceito de projeto
 - me explique melhor o que é um proponente
-- qual o conceito de salic?
-- qual o significado de sefic?
+- qual o conceito de sefic?
+- qual o significado de a12?
+- como funciona a prestação de contas
+- como funciona a fase de preenchimento
 - o que significa e90?
 - o que significa o estado e90?
 - o que eh A12?
+- você pode me explicar sobre prestação de contas
+- você pode me explicar o que é e90
+- O que significa cnic?
+- defina cnic
+- explique cnic
+- me explique a fase de preenchimento
+- me explique a fase de prestação de contas
 
 ## intent:duvida_sobre_contexto
 - 5
