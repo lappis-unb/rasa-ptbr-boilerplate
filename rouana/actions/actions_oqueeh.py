@@ -5,41 +5,6 @@ class ActionOQueEh(Action):
     dont_know_message = 'Desculpe, não sei conceituar isso ainda'
     meaning_map = {
 
-        'a14': [
-            'O estado A14 acontece durante a fase de Admissibilidade, e significa indeferido – não enquadramento nos objetivos e fins da Lei 8313/91 ou do Decreto 5761/06',
-            'E quando o MinC utiliza ele? Quando o projeto não se enquadra nos objetivos e fins do Art. 1º da Lei 8313/1991',
-            'Para saber mais você pode consultar a Lei 8.313/1991, Art. 1º Instrução Normativa 05/2017, Art. 23',
-        ],
-        'a20': [
-            'O estado A20 acontece durante a fase de Admissibilidade, e significa indeferido – projeto em duplicidade',
-            'E quando o MinC utiliza ele? Quando se constata que se trata de projeto idêntico a ser realizado no mesmo período',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 23, I, b)',
-        ],
-        'a23': [
-            'O estado A23 acontece durante a fase de Admissibilidade, e significa indeferido – somatório dos projetos apresentados excede o limite permitiddo para pessoa física',
-            'E quando o MinC utiliza ele? Quando o somatório dos projetos apresentados execede os limites trazidos no Art. 20 da Instrução Normativa MinC nº 1/2017',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 4',
-        ],
-        'b01': [
-            'O estado B01 acontece durante a fase de Admissibilidade, e significa proposta transformada em projeto',
-            'E quando o MinC utiliza ele? Após o exame de admissibilidade',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 24 e 25',
-        ],
-        'b02': [
-            'O estado B02 acontece durante a fase de Admissibilidade, e significa projeto enquadrado',
-            'E quando o MinC utiliza ele? Após o exame de admissibilidade o projeto é enquadrado no artigo 18 ou 26 da Lei 8313/91.',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 24',
-        ],
-        'b14': [
-            'O estado B14 acontece durante a fase de Admissibilidade, e significa diligenciado – Parecer técnico',
-            'E quando o MinC utiliza ele? Quando da necessidade de informações adicionais para fins de análise técnica',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69',
-        ],
-        'a13': [
-            'O estado A13 acontece durante a fase de Aprovação, e significa arquivado – solicitação de desistência do proponente',
-            'E quando o MinC utiliza ele? ',
-            'Para saber mais você pode consultar a ',
-        ],
         'a16': [
             'O estado A16 acontece durante a fase de Aprovação, e significa indeferido – Projeto já realizado.',
             'E quando o MinC utiliza ele? ',
