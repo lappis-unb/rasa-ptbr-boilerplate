@@ -28,10 +28,16 @@ templates:
     - text: "=D"
   utter_curiosidadesIndicacao:
     - text:
-        - "Legal! Meu assunto favorito"
-        - "Você pode me perguntar algumas curiosidades sobre a Lei Rouanet"
-        - "Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei."
-        - "Qual a sua pergunta? Vou tentar responder da melhor maneira possível"
+        - - "Legal! Meu assunto favorito"
+          - "Você pode me perguntar algumas curiosidades sobre a Lei Rouanet"
+          - "Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei."
+          - "Qual a sua pergunta? Vou tentar responder da melhor maneira possível"
+  utter_oqueEhSalic_A12:
+    - text:
+        - - "O estado A12 acontece durante a fase de Admissibilidade, e significa aguarda complementação de documentos",
+          - "E quando o MinC utiliza ele? Quando se solicita ao proponente documentação adicional"
+          - "Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69."
+
 actions:
   - actions.actions_oqueeh.ActionOQueEh
   - actions.actions_geral.ActionCumprimentar

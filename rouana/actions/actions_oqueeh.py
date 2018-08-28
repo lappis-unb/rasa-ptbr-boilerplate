@@ -4,11 +4,7 @@ from rasa_core.actions.action import Action
 class ActionOQueEh(Action):
     dont_know_message = 'Desculpe, não sei conceituar isso ainda'
     meaning_map = {
-        'a12': [
-            'O estado A12 acontece durante a fase de Admissibilidade, e significa aguarda complementação de documentos',
-            'E quando o MinC utiliza ele? Quando se solicita ao proponente documentação adicional',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69.',
-        ],
+
         'a14': [
             'O estado A14 acontece durante a fase de Admissibilidade, e significa indeferido – não enquadramento nos objetivos e fins da Lei 8313/91 ou do Decreto 5761/06',
             'E quando o MinC utiliza ele? Quando o projeto não se enquadra nos objetivos e fins do Art. 1º da Lei 8313/1991',
