@@ -55,3 +55,11 @@ services:
       - TRAINING_EPOCHS=300
     volumes:
       - ./rouana:/rouana
+
+  landing-page:
+    image: python:3.6
+    entrypoint: bash -c "cd /app && python -m http.server 8000"
+    ports:
+      - 8000:8000
+    volumes:
+      - ./landing-page:/app
