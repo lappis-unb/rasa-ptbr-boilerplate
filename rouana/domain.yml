@@ -26,9 +26,14 @@ templates:
     - text: "Desculpe, não consegui te entender. Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue? \nEx: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?"
   utter_restart:
     - text: "=D"
+  utter_curiosidadesIndicacao:
+    - text:
+        - "Legal! Meu assunto favorito"
+        - "Você pode me perguntar algumas curiosidades sobre a Lei Rouanet"
+        - "Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei."
+        - "Qual a sua pergunta? Vou tentar responder da melhor maneira possível"
 actions:
   - actions.actions_oqueeh.ActionOQueEh
-
   - actions.actions_geral.ActionCumprimentar
   - actions.actions_geral.ActionDefinirPerfil
   - actions.actions_geral.ActionExplicarDefinicaoPerfil
@@ -57,7 +62,6 @@ actions:
   - actions.actions_geral.ActionRevert
   - actions.actions_geral.ActionAindaNaoAprendi
 
-  - actions.actions_curiosidades.ActionCuriosidadesIndicacao
   - actions.actions_curiosidades.ActionCuriosidadesMais
   - actions.actions_curiosidades.ActionCuriosidadesMaisSim
   - actions.actions_curiosidades.ActionCuriosidadesMaisNao
