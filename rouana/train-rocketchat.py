@@ -4,7 +4,6 @@ import yaml
 
 from rasa_core import utils
 from rasa_core.interpreter import RasaNLUInterpreter
-from rasa_core.channels import HttpInputChannel
 from rasa_core.channels.rocketchat import RocketChatInput
 from rasa_core.agent import Agent
 
@@ -28,7 +27,7 @@ def run():
         ssl=configs['ssl']
     )
 
-    agent.handle_channel(HttpInputChannel(ROUANA_PORT, '', input_channel))
+    agent.handle_channel(input_channel)
 
 
 if __name__ == '__main__':
