@@ -607,7 +607,7 @@ templates:
   utter_geralCuriosidadesDeducaoImpostoDeRendaIncentivador:
     - text:
         - - "Atualmente, existem 2 situações descritas na Lei 8313/91:\n"
-          - "1) o artigo 26 da Lei indica que os percentuais de dedução do IR são os seguintes:",
+          - "1) o artigo 26 da Lei indica que os percentuais de dedução do IR são os seguintes:"
           - "Empresas:\n"
           - "até 30% do valor patrocinado;\n"
           - "até 40% do valor doado\n"
@@ -620,8 +620,41 @@ templates:
           - "Você pode ver os detalhes das leis pelos endereços:\n"
           - "Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm\n"
           - "Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm"
-
-
+  utter_geralExplicarPreenchimento:
+    - text:
+        - - "Nesta etapa eu posso responder dúvidas sobre o preenchimento de "
+          - "propostas no SALIC"
+  utter_geralPreenchimentoCampoCustoAuditoria:
+    - text:
+        - - "Este campo não precisa ser preenchido agora, isso vai ser preenchido na prestação de contas."
+  utter_geralPreenchimentoVinculoDePropostas:
+    - text:
+        - - "Você deve ir em:"
+          - "Orçamento do projeto > Custos por produto > Clicar no produto "
+          - "desejado"
+          - "Clicar no Local de realização > por último na aba Assessoria "
+          - "contábil e jurídica."
+  utter_geralPreenchimentoValorIngresso:
+    - text:
+        - - "Esse valor é usado para conferir a viabilidade do projeto e não "
+          - "pode ultrapassar R$ 250,00 por beneficiário."
+          - "Por exemplo: R$ 9.445.076,00 / 22.556 pessoas = R$ 419,18 por "
+          - "beneficiário, ou seja, está acima do limite para sanar esse problema,"
+          - "você pode diminuir o custo do projeto ou aumentar a estimativa "
+          - "de público."
+  utter_geralPreenchimentoVinculoCpfProposta:
+    - text:
+        - - "O dirigente do projeto deve acessar o sistema e seguir os passos:"
+          - "1- Administrativo > Gerenciar responsáveis"
+          - "em seguida..."
+          - "2- Vincular propostas > Clicar na "bolinha" (Vincular) > Inserir "
+          - "responsável > abaixo terá o número da Proposta/Nome "
+          - "> Nome do responsável selecionado > Clicar na "bolinha""
+          - "3- Por último... clica também no botão Vincular"
+  utter_geralPreenchimentoAgenciaBancaria:
+    - text:
+        - - "A agência bancária deve ser do banco do Brasil, deve conter 5 "
+          - "dígitos, sem hifens, pontos ou letras"
 
 actions:
 
@@ -629,13 +662,6 @@ actions:
   - actions.actions_processo.ActionProcessoCaptacaoDeRecursos
   - actions.actions_processo.ActionProcessoReativacaoDeProposta
   - actions.actions_processo.ActionProcessoCadastroProponente
-
-  - actions.actions_preenchimento.ActionExplicarPreenchimento
-  - actions.actions_preenchimento.ActionPreenchimentoCampoCustoAuditoria
-  - actions.actions_preenchimento.ActionPreenchimentoVinculoDePropostas
-  - actions.actions_preenchimento.ActionPreenchimentoValorIngresso
-  - actions.actions_preenchimento.ActionPreenchimentoVinculoCpfProposta
-  - actions.actions_preenchimento.ActionPreenchimentoAgenciaBancaria
 
   - actions.actions_prazo.ActionExplicarPrazo
   - actions.actions_prazo.ActionPrazoEnvioCnae
