@@ -5,46 +5,7 @@ class ActionOQueEh(Action):
     dont_know_message = 'Desculpe, não sei conceituar isso ainda'
     meaning_map = {
 
-        'a16': [
-            'O estado A16 acontece durante a fase de Aprovação, e significa indeferido – Projeto já realizado.',
-            'E quando o MinC utiliza ele? ',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 23, I, b)',
-        ],
-        'a17': [
-            'O estado A17 acontece durante a fase de Aprovação, e significa indeferido – não atendimento à diligência',
-            'E quando o MinC utiliza ele? Quando o proponente não atende a alguma diligência feita',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69, § 3º',
-        ],
-        'a42': [
-            'O estado A42 acontece durante a fase de Aprovação, e significa projeto arquivado – não atendimento à diligência técnica',
-            'E quando o MinC utiliza ele? Quando o proponente não atende a alguma diligência feita',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69, § 3º',
-        ],
-        'b11': [
-            'O estado B11 acontece durante a fase de Aprovação, e significa encaminhado para análise técnica',
-            'E quando o MinC utiliza ele? Situação em que o projeto é encaminhado para análise na vinculada.',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 26, §2º e Art. 27',
-        ],
-        'b20': [
-            'O estado B20 acontece durante a fase de Aprovação, e significa projeto adequado à realidade de execução',
-            'E quando o MinC utiliza ele? Antes de ser encaminhado para análise técnica, o proponente tem a prerrogativa de promover ajustes, visando adequar o projeto à realidade da execução.',
-            'Para saber mais você pode consultar a Instrução Normativa 05/201, Art. 26',
-        ],
-        'c09': [
-            'O estado C09 acontece durante a fase de Aprovação, e significa projeto fora da pauta – Proponente Inabilitado',
-            'E quando o MinC utiliza ele? Quando o proponente encontra-se inabilitado, seus projetos em fase de aprovação, são tirados de pauta.',
-            'Para saber mais você pode consultar a Instrução Normativa 05/201, Art. 59',
-        ],
-        'c10': [
-            'O estado C10 acontece durante a fase de Aprovação, e significa projeto incluído em pauta para avaliação da CNIC',
-            'E quando o MinC utiliza ele? Após conclusão da análise técnica, o projeto é incluido na pauta da CNIC',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 28',
-        ],
-        'c20': [
-            'O estado C20 acontece durante a fase de Aprovação, e significa parecer técnico emitido',
-            'E quando o MinC utiliza ele? Quando ocorre a conclusão da análise e o parecer técnico é emitido',
-            'Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 27',
-        ],
+
         'c26': [
             'O estado C26 acontece durante a fase de Aprovação, e significa projeto incluído na pauta da CNIC para reanálise/análise complementar',
             'E quando o MinC utiliza ele? Quando autoridade superior entende que algum item pode ser reavaliado ou quando constatado erro material',
