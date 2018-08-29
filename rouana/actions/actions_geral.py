@@ -20,81 +20,9 @@ class ActionMultiline(Action):
         return re.sub('(.)([A-Z]{1})', r'\1_\2',
                       self.__class__.__name__).lower()
 
-class ActionCumprimentar(ActionMultiline):
-    messages = [
-        'Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a '
-        'esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto'
-    ]
 
-class ActionDefinirPerfil(ActionMultiline):
-    messages = [
 
-        'Você prefere conversar sobre criação e andamento de projetos, ou '
-        'prefere falar mais sobre a Lei Rouanet?'
-    ]
 
-class ActionExplicarDefinicaoPerfil(ActionMultiline):
-    messages = [
-        'Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada,'
-        'o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.\n'
-
-        'Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa.'
-        'Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto, ou como submeter um projeto, entre outras.',
-
-        'Do que você prefere conversar?'
-    ]
-
-class ActionNovaProposta(ActionMultiline):
-    messages = [
-        'Você já começou a trabalhar em uma nova proposta de projeto? (Sim ou Não)'
-    ]
-
-class ActionDuvidaExecucao(ActionMultiline):
-    messages = [
-        'Você tem dúvida em relação à captação de verba e execução do '
-        'projeto? (Sim ou Não)'
-    ]
-
-class ActionConheceProcesso(ActionMultiline):
-    messages = [
-        'Você sabe como funciona o andamento de um projeto de incentivo a '
-        'cultura? (Sim ou Não)'
-    ]
-
-class ActionCadastroSalic(ActionMultiline):
-    messages = [
-        'Você já tem cadastro no SALIC? (Sim ou Não)'
-    ]
-
-class ActionDespedir(ActionMultiline):
-    messages = [
-        'Espero que eu tenha conseguido esclarecer suas dúvidas. \n'
-        'Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês, '
-        'se surgir alguma dúvida, não hesite, volte aqui',
-
-        'Até mais!'
-    ]
-
-class ActionSubmissaoDeProjetos(ActionMultiline):
-    messages = [
-        'Tudo bem. Aqui vai um resumo do processo:',
-        'A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.\n'
-        'Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.\n'
-        'Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.\n'
-        'Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.\n'
-        'A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.\n'
-        'O primeiro passo para você particiar deste processo é ter cadastro no SALIC'
-    ]
-
-class ActionDefinirContexto(ActionMultiline):
-    messages = [
-        'Onde sua pergunta se encaixa melhor:\n'
-        '1. Processo e estado do projeto\n'
-        '2. Preenchimento de proposta\n'
-        '3. Datas e Prazos\n'
-        '4. Erros do SALIC\n'
-        '5. Não sei bem onde se encaixa\n'
-    ]
 
 class ActionAviso(ActionMultiline):
     messages = [

@@ -68,20 +68,52 @@ templates:
           - "E quando o MinC utiliza ele? "
           - "Para saber mais você pode consultar a "
 
+  utter_geralCumprimentar:
+    - text: "Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto"
+  utter_geralDefinirPerfil:
+    - text: "Você prefere conversar sobre criação e andamento de projetos, ou prefere falar mais sobre a Lei Rouanet?"
+  utter_geralExplicarDefinicaoPerfil:
+    - text: 
+        - - "Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada, o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins."
+          - "Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa. Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto, ou como submeter um projeto, entre outras."
+          - "Do que você prefere conversar?"    
+  utter_geralNovaProposta:
+    - text: "Você já começou a trabalhar em uma nova proposta de projeto? (Sim ou Não)"
+  utter_geralDuvidaExecucao:
+    - text: "Você tem dúvida em relação à captação de verba e execução do projeto? (Sim ou Não)"  
+  utter_geralConheceProcesso:
+    - text: "Você sabe como funciona o andamento de um projeto de incentivo a cultura? (Sim ou Não)"
+  utter_geralCadastroSalic:
+    - text: "Você já tem cadastro no SALIC? (Sim ou Não)"
+  utter_geralDespedir:
+    - text: 
+        - - "Espero que eu tenha conseguido esclarecer suas dúvidas."
+          - "Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês, se surgir alguma dúvida, não hesite, volte aqui'"
+          - "Até mais!"
+  utter_geralDefinirContexto:
+    - text:
+        - - "Onde sua pergunta se encaixa melhor"
+          - "1. Processo e estado do projeto"
+          - "2. Preenchimento de proposta"
+          - "3. Datas e Prazos"
+          - "4. Erros do SALIC"
+          - "5. Não sei bem onde se encaixa"
+  utter_geralSubmissaoDeProjetos:
+    - text:
+        - - "Tudo bem. Aqui vai um resumo do processo:"
+          - "A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica."
+          - "Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos."
+          - "Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto."
+          - "Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet."
+          - "A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto."
+          - "O primeiro passo para você particiar deste processo é ter cadastro no SALiC"
+    
+
+
 actions:
   - actions.actions_oqueeh.ActionOQueEh
-  - actions.actions_geral.ActionCumprimentar
-  - actions.actions_geral.ActionDefinirPerfil
-  - actions.actions_geral.ActionExplicarDefinicaoPerfil
-  - actions.actions_geral.ActionNovaProposta
-  - actions.actions_geral.ActionDuvidaExecucao
-  - actions.actions_geral.ActionConheceProcesso
-  - actions.actions_geral.ActionCadastroSalic
-  - actions.actions_geral.ActionDespedir
-  - actions.actions_geral.ActionDefinirContexto
   - actions.actions_geral.ActionAviso
   - actions.actions_geral.ActionIntroduzirExecucao
-  - actions.actions_geral.ActionSubmissaoDeProjetos
   - actions.actions_geral.ActionJaEhProponente
   - actions.actions_geral.ActionCadastroProponenteIntroduzirContexto
   - actions.actions_geral.ActionCadastroSalicVideo
