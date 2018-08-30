@@ -688,15 +688,38 @@ templates:
           - "1- Proposta > Listar proposta"
           - "2- Clicar em CPF Proponente > Selecionar o CNPJ aparecerão todas as"
           - "propostas ativas no sistema"
+  utter_processoExplicarProcesso:
+    - text:
+        - - "Na categoria de processos eu posso responder dúvidas à respeito do fluxo de submissão do seu projeto."
+          - "Por exemplo, você pode me fazer perguntar à respeito de captação de verbas ou sobre o estado do seu projeto."
+  utter_processoProcessoCaptacaoDeRecursos:
+    - text:
+        - - "A captação só pode começar depois que o projeto passa pela fase de enquadramento, pela análise documental e pela publicação."
+          - "Assim que o projeto é publicado no Diário Oficial da União você pode começar a captar recursos."
+  utter_processoReativacaoDeProposta:
+    - text: 
+        - - "Pra reativar uma proposta indeferida você deve enviar um pedido de reativação"
+          - "Esse pedido tem que expor as justificativas apropriadas para reanálise e deve ser assinado pelo proponente"
+          - "Você encaminha o pedido em formato PDF para reativacao.proposta@cultura.gov.br"
+          - "E aí é só aguardar uma resposta"
+  utter_processoCadastroProponente:
+    - text:
+        - - "Basta você entrar no Salic..." 
+          - "clicar em Administrativo > Cadastrar proponente e preencher todos os dados"
 
+  utter_prazoExplicarPrazo:
+    - text:
+        - - "Nesta etapa posso responder suas dúvidas a respeito de Datas"
+          - "e Prazos do seu projeto. Como: envio do CNAE e desistência de recurso"
+  utter_prazoEnvioCnae:
+    - text:
+        - - "O proponente tem o prazo de 40 dias para responder a diligência 20+20 prorrogados automaticamente."
+          - "Não é necessário fazer solicitação. "
+          - "Caso seja insuficiente, o proponente poderá anexar o protocolo da Receita de inserção do CNAE no Salic."
+  utter_prazoDesistirRecurso:
+    - text:
+        - - "A partir do momento em que seu projeto foi enquadrado, iniciou-se o prazo de 10 dias corridos para recorrer ao enquadramento proposto para o projeto"
+          - "Caso concorde com o enquadramento dado é possível desistir desse prazo"
+          - "Ambas as manifestações se dão por via da aba "recurso" no Menu ao lado esquerdo da tela do projeto, no Salic"        
 
 actions:
-
-  - actions.actions_processo.ActionExplicarProcesso
-  - actions.actions_processo.ActionProcessoCaptacaoDeRecursos
-  - actions.actions_processo.ActionProcessoReativacaoDeProposta
-  - actions.actions_processo.ActionProcessoCadastroProponente
-
-  - actions.actions_prazo.ActionExplicarPrazo
-  - actions.actions_prazo.ActionPrazoEnvioCnae
-  - actions.actions_prazo.ActionPrazoDesistirRecurso
