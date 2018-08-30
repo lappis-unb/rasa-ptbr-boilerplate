@@ -4,7 +4,7 @@ import yaml
 
 from rasa_core import utils
 from rasa_core.interpreter import RasaNLUInterpreter
-from rasa_core.channels.rocketchat import RocketChatInput
+from connector.rocketchat import RocketChatInput
 from rasa_core.agent import Agent
 
 import train

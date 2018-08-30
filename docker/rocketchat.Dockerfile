@@ -2,24 +2,21 @@ from python:3.6
 
 run apt-get install -y git
 
+add ./requirements.txt /tmp
 
-run git clone https://github.com/lappis-unb/rasa_core.git  && \
-    cd rasa_core                                           && \
-    pip install -r requirements.txt                        && \
-    pip install -e .
-
-run pip install rasa-nlu[spacy]==0.13.0   && \
+run pip install -r /tmp/requirements.txt  && \
     python -m spacy download pt
 
-run pip uninstall -y tensorflow && pip install tensorflow==1.5
+run git clone https://github.com/RocketChat/Rocket.Chat.py.SDK.git -b develop &&\
+		pip install -e Rocket.Chat.py.SDK/
 
-run mkdir /rouana
+run apt-get remove --purge -y git         && \
+    mkdir /rouana
 
 add ./rouana /rouana
 workdir /rouana
 
 env TRAINING_EPOCHS=300                    \
-    CREDENTIALS="/rouana/credentials.yml"  \
-    ROUANA_PORT=5005
+    CREDENTIALS="/rouana/credentials.yml"
 
 cmd python train-rocketchat.py
