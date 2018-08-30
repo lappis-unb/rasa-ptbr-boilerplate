@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+    <title>Tais - Assistente Virtual da Cultura</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta name="description" content="TAIS (Tecnologia de Aprendizado Interativo Salic )">
+
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <style>
+      html, body{
+        height: 100%;
+      }
+    </style>
+</head>
+
+<body>
+
+    <div id="login-form-div" class="container" style="height: 100%;">
+        <div class="row align-items-center justify-content-center" style="height: 100%;">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <form id="login">
+                  <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Nome...">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email...">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Senha</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Senha...">
+                  </div>
+                  <div class="form-check">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </div>
+                </form>
+
+              <div id="error-message" style="text-align: center; padding-top: 2%; color: #00000000;">
+                Login falhou: senha ou email incorretos!
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        users = {
+            'user@mail.com': 'user'
+        }
+
+        jQuery("#login").submit(function(e) {
+            e.preventDefault();
+
+            name = jQuery('#name').val()
+            email = jQuery('#email').val()
+            password = jQuery('#password').val()
+
+            if (users[email] == password) {
+                jQuery('#login-form-div').css({'display': 'none'});
+
+                window.localStorage.setItem(
+                    'user',
+                    JSON.stringify({
+                        name: name,
+                        email: email
+                    })
+                );
+
+                window.location.href = window.location.origin;
+            }
+            else {
+                jQuery('#error-message').css({'color': 'red'});
+            }
+
+        });
+    </script>
+</body>
+
+</html>
+
