@@ -26,12 +26,20 @@ logger.addHandler(ch)
 parser = argparse.ArgumentParser()
 
 parser.add_argument(
-    '--bot-name', '-bn', type=str, default='rouana',
+    '--bot-name', '-bn', type=str, default='Tais',
+    help='Bot username (default: rouana)'
+)
+parser.add_argument(
+    '--bot-username', '-bu', type=str, default='rouana',
     help='Bot username (default: rouana)'
 )
 parser.add_argument(
     '--bot-password', '-bp', type=str, default='rouana',
     help='Bot password (default: rouana)'
+)
+parser.add_argument(
+    '--bot-avatar', '-ba', type=str, default='https://raw.githubusercontent.com/lappis-unb/rouana/master/images/rouana_avatar.jpeg',
+    help='Bot avatar photo link (default: rouana\'s github avatar)'
 )
 parser.add_argument(
     '--admin-name', '-an', type=str, default='admin',
@@ -45,6 +53,10 @@ parser.add_argument(
     '--rocketchat-url', '-r', type=str, default='http://localhost:3000',
     help='Rocket chat URL (default: http://localhost:3000)'
 )
+parser.add_argument(
+    '--rasa-url', '-rasa', type=str, default='http://rouana:5005/webhook',
+    help='Rasa URL (default: http://rouana:5005/webhook)'
+)
 
 args = parser.parse_args()
 
@@ -55,14 +67,20 @@ if host[-1] == '/':
 
 path = '/api/v1/login'
 
-bot_name = args.bot_name
-bot_password = args.bot_password
+bot = {
+    'name': args.bot_name,
+    'username': args.bot_username,
+    'password': args.bot_password,
+    'avatar': args.bot_avatar,
+    'email': args.bot_name + '@email.com',
+}
+
 admin_name = args.admin_name
 admin_password = args.admin_password
 
-bot_email = bot_name + '@email.com'
-user_header = None
+rasa_url = args.rasa_url
 
+user_header = None
 
 def get_authentication_token():
     login_data = {'username': admin_name, 'password': admin_password}
@@ -84,10 +102,10 @@ def get_authentication_token():
 
 def create_bot_user():
     user_info = {
-        'name': bot_name,
-        'email': bot_email,
-        'password': bot_password,
-        'username': bot_name,
+        'name': bot['name'],
+        'email': bot['email'],
+        'password': bot['password'],
+        'username': bot['username'],
         'requirePasswordChange': False,
         'sendWelcomeEmail': True, 'roles': ['bot']
     }
@@ -103,9 +121,18 @@ def create_bot_user():
     else:
         logger.error('Error while creating bot user!')
 
+    requests.post(
+        host + '/api/v1/users.setAvatar',
+        data=json.dumps({
+            'avatarUrl': bot['avatar'],
+            'username': bot['username']
+        }),
+        headers=user_header
+    )
+
 
 def create_livechat_agent():
-    agent_info = {'username': bot_name}
+    agent_info = {'username': bot['username']}
     create_agent_response = requests.post(
         host + '/api/v1/livechat/users/agent',
         data=json.dumps(agent_info),
@@ -135,6 +162,76 @@ def configure_livechat():
         headers=user_header
     )
 
+    # Change Livechat Color
+    requests.post(
+        host + '/api/v1/settings/Livechat_title_color',
+        data=json.dumps({'value': "#039046", 'editor': 'color'}),
+        headers=user_header
+    )
+
+    # Change Livechat Title
+    requests.post(
+        host + '/api/v1/settings/Livechat_title',
+        data=json.dumps({'value': bot['name']}),
+        headers=user_header
+    )
+
+    # Disable Livechat Email display
+    requests.post(
+        host + '/api/v1/settings/Livechat_show_agent_email',
+        data=json.dumps({'value': False}),
+        headers=user_header
+    )
+
+    # Change Livechat Webhook URL
+    requests.post(
+        host + '/api/v1/settings/Livechat_webhookUrl',
+        data=json.dumps({'value': rasa_url}),
+        headers=user_header
+    )
+
+    # Activate Livechat Webhook Send Request on Visitor Message
+    requests.post(
+        host + '/api/v1/settings/Livechat_webhook_on_visitor_message',
+        data=json.dumps({'value': True}),
+        headers=user_header
+    )
+
+    # Activate Livechat Webhook Send Request on Agent Messages
+    requests.post(
+        host + '/api/v1/settings/Livechat_webhook_on_agent_message',
+        data=json.dumps({'value': True}),
+        headers=user_header
+    )
+
+
+def configure_webhooks():
+    webooks = requests.get(
+        host + '/api/v1/integrations.list',
+        headers=user_header
+    ).json()
+
+    name = 'Rasa Webhook'
+
+    for integration in webooks['integrations']:
+        if 'name' in integration and integration['name'] == name:
+            logger.info('Intergration {} already exists!'.format(name))
+            return
+
+    requests.post(
+        host + '/api/v1/integrations.create',
+        data=json.dumps({
+            'name': name,
+            'type': 'webhook-outgoing',
+            'enabled': True,
+            'scriptEnabled': False,
+            'event': 'sendMessage',
+            'urls': [rasa_url],
+            'username': bot['username'],
+            'channel': '@' + bot['username'],
+        }),
+        headers=user_header
+    )
 
 def create_department(bot_agent_id):
     department_info = {
@@ -146,7 +243,7 @@ def create_department(bot_agent_id):
         },
         'agents': [{
             'agentId': bot_agent_id,
-            'username': bot_name,
+            'username': bot['username'],
             'count': 0,
             'order': 0
         }]
@@ -177,6 +274,9 @@ if __name__ == '__main__':
 
         logger.info('>> Configure livechat')
         configure_livechat()
+
+        logger.info('>> Configure webhooks')
+        configure_webhooks()
 
         logger.info('>> Create livechat department')
         create_department(bot_agent_id)

@@ -9,32 +9,29 @@ sudo docker-compose up -d mongo-init-replica
 sudo docker-compose up -d rocketchat
 ```
 
-Entre no rocketchat com o login `admin` e senha `admin`. Execute o script `bot_config.py` no
-terminal
+Entre no rocketchat com o login `admin` e senha `admin`. Execute os comandos
+a seguir para configurar e rodar a rouana
 
 ```sh
 python3 scripts/bot_config.py
-```
-
-Vá no rocketchat e configure o webhook de saída, para isso vá em
-`Administrations > Integrations > New Integration`, escolha `Outgoing WebHook`.
-Preencha com as seguintes informações
-
-```yaml
-Event Trigger: Message Sent
-Enabled: True
-Channel: @rouana
-URLs: http://rouana:5005/webhook
-Post as: rouana
-```
-
-Depois clique em `Save Changes`
-
-Por fim levante o docker da Rouana
-
-```sh
 sudo docker-compose up rouana
 ```
+
+Para que a assistente virtual inicie a conversa você deve criar um `trigger`.
+Para isso, entre no rocketchat como `admin`, e vá no painel do Livechat na
+seção de Triggers, clique em `New Trigger`. Preencha o Trigger da seguinte forma:
+
+```yaml
+Enabled: Yes
+Name: Start Talk
+Description: Start Talk
+Condition: Visitor page URL
+    Value: http://localhost:8000/
+Action: Send Message
+ Value: Impersonate next agent from queue
+ Value: Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a esclarecer dúvidas sobre a Lei Rouanet, posso também solucionar problemas de proposta e projeto
+```
+
 
 ## Testes
 
