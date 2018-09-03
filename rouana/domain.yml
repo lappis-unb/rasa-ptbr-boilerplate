@@ -21,6 +21,79 @@ intents:
   - escolher_erros_salic
   - duvida_sobre_contexto
 
+entities:
+ - estadoSalic
+ 
+slots:
+  estadoSalic:
+    type: categorical
+      values:
+      - A12
+      - A14
+      - A20
+      - A23
+      - B01
+      - B14
+      - A13
+      - A16
+      - A17
+      - A42
+      - B11
+      - B20
+      - C09
+      - C10
+      - C20
+      - C26
+      - C30
+      - D03
+      - D14
+      - D20
+      - D25
+      - D27
+      - E25
+      - E62
+      - E66
+      - E20
+      - E27
+      - E30
+      - E68
+      - E77
+      - L03
+      - L05
+      - L08
+      - L10
+      - L11
+      - D22
+      - D28
+      - D29
+      - E10
+      - E11
+      - E12
+      - E13
+      - E15
+      - E16
+      - E23
+      - E24
+      - E36
+      - E59
+      - E63
+      - E15
+      - E65
+      - E75
+      - E79
+      - E80
+      - E81
+      - E60
+      - E72
+      - E50
+      - L09
+      - D38
+      - E22
+      - E73
+      - E78
+      - E47
+      - L06
+
 templates:
   utter_default:
     - text: "Desculpe, não consegui te entender. Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue? \nEx: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?"
