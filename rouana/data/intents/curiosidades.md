@@ -155,3 +155,9 @@
 - qual a dedução de impostos para incentivadores?
 - qual a dedução de imposto de renda para incentivadores?
 - sou incentivador, quanto posso receber como dedução de imposto de renda??
+
+## intent:oqueeh_estadoSalic
+- o que significa A12
+- tenho dúvida sobre o estado
+- o que é estado
+- onde posso saber mais sobre o estado
