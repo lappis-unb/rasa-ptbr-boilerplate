@@ -13,12 +13,21 @@ build tais:
     - docker:dind
   script:
     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
+<<<<<<< HEAD
     - docker build -f docker/tais/Dockerfile -t $TAIS_LATEST_IMAGE .
     - docker push $TAIS_LATEST_IMAGE
     - docker build -f docker/landing_page/Dockerfile -t $LANDING_PAGE_LATEST_IMAGE .
     - docker push $LANDING_PAGE_LATEST_IMAGE
+=======
+    - docker build -f docker/tais/rocketchat.Dockerfile -t $TAIS_LATEST_IMAGE .
+    - docker push $TAIS_LATEST_IMAGE
+    - docker push "$CI_REGISTRY_IMAGE/tais:latest"
+    - docker build -f docker/landing_page/Dockerfile -t $LANDING_PAGE_LATEST_IMAGE .
+    - docker push $LANDING_PAGE_LATEST_IMAGE
+    - docker push "$CI_REGISTRY_IMAGE/landing_page:latest"
+>>>>>>> 8e83889... Add 'landing_page' to CI pipeline
   only:
-    - /master/
+    - /master|test_ci/
   environment: development
   tags:
     - docker
@@ -32,7 +41,7 @@ deploy_to_development:
     - upgrade --environment Development --stack TAIS --service tais --new-image $TAIS_LATEST_IMAGE --no-finish-upgrade --debug
     - upgrade --environment Development --stack TAIS --service landing-page --new-image $LANDING_PAGE_LATEST_IMAGE --no-finish-upgrade --debug
   only:
-    - /master/
+    - /master|test_ci/
   environment: development
   tags:
     - docker
