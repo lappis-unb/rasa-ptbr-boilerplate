@@ -697,14 +697,14 @@ templates:
         - - "A captação só pode começar depois que o projeto passa pela fase de enquadramento, pela análise documental e pela publicação."
           - "Assim que o projeto é publicado no Diário Oficial da União você pode começar a captar recursos."
   utter_processoReativacaoDeProposta:
-    - text: 
+    - text:
         - - "Pra reativar uma proposta indeferida você deve enviar um pedido de reativação"
           - "Esse pedido tem que expor as justificativas apropriadas para reanálise e deve ser assinado pelo proponente"
           - "Você encaminha o pedido em formato PDF para reativacao.proposta@cultura.gov.br"
           - "E aí é só aguardar uma resposta"
   utter_processoCadastroProponente:
     - text:
-        - - "Basta você entrar no Salic..." 
+        - - "Basta você entrar no Salic..."
           - "clicar em Administrativo > Cadastrar proponente e preencher todos os dados"
 
   utter_prazoExplicarPrazo:
@@ -720,6 +720,6 @@ templates:
     - text:
         - - "A partir do momento em que seu projeto foi enquadrado, iniciou-se o prazo de 10 dias corridos para recorrer ao enquadramento proposto para o projeto"
           - "Caso concorde com o enquadramento dado é possível desistir desse prazo"
-          - "Ambas as manifestações se dão por via da aba "recurso" no Menu ao lado esquerdo da tela do projeto, no Salic"        
+          - "Ambas as manifestações se dão por via da aba "recurso" no Menu ao lado esquerdo da tela do projeto, no Salic"
 
 actions:
