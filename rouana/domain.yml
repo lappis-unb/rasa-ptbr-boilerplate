@@ -745,7 +745,14 @@ templates:
           Elas que avaliam o orçamento e adequação do projeto.
 
   utter_geralCumprimentar:
-    - text: "Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto"
+
+    - text: 
+      - - "Olá, meu  nome é Taís, sou assistente virtual do MinC "
+        - "Estou aqui para te ajudar a sanar dúvidas sobre a lei Rouanet "
+      - - "Oi, eu sou a Taís, assistente virtual do MinC "
+        - "Estou aqui para te ajudar a tirar dúvidas sobre a lei Rouanet "
+      - - "Oi, sou assistente virtual do MinC, me chamo Taís "
+        - "Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet "
 
   utter_geralDefinirPerfil:
     - text: "Você prefere conversar sobre criação e andamento de projetos, ou prefere falar mais sobre a Lei Rouanet?"
