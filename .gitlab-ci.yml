@@ -3,21 +3,24 @@ stages:
   - deploy
 
 variables:
-  ROUANA_RELEASE_IMAGE: $CI_REGISTRY_IMAGE/rouana:$CI_BUILD_REF_NAME
+  TAIS_LATEST_IMAGE: $CI_REGISTRY_IMAGE/tais:latest
+  LANDING_PAGE_LATEST_IMAGE: $CI_REGISTRY_IMAGE/landing_page:latest
 
-build rouana:
+build tais:
   image: docker:latest
   stage: build
   services:
     - docker:dind
   script:
     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
-    - docker build -f docker/rocketchat.Dockerfile -t $ROUANA_RELEASE_IMAGE .
-    - docker tag $ROUANA_RELEASE_IMAGE "$CI_REGISTRY_IMAGE/rouana:latest"
-    - docker push $ROUANA_RELEASE_IMAGE
-    - docker push "$CI_REGISTRY_IMAGE/rouana:latest"
+    - docker build -f docker/tais/rocketchat.Dockerfile -t $TAIS_LATEST_IMAGE .
+    - docker push $TAIS_LATEST_IMAGE
+    - docker push "$CI_REGISTRY_IMAGE/tais:latest"
+    - docker build -f docker/landing_page/Dockerfile -t $LANDING_PAGE_LATEST_IMAGE .
+    - docker push $LANDING_PAGE_LATEST_IMAGE
+    - docker push "$CI_REGISTRY_IMAGE/landing_page:latest"
   only:
-    - /master/
+    - /master|test_ci/
   environment: development
   tags:
     - docker
@@ -28,9 +31,10 @@ deploy_to_development:
   services:
     - docker:dind
   script:
-    - upgrade --environment Development --stack Rouana --service rouana --new-image $ROUANA_RELEASE_IMAGE --no-finish-upgrade --debug
+    - upgrade --environment Development --stack TAIS --service tais --new-image $TAIS_LATEST_IMAGE --no-finish-upgrade --debug
+    - upgrade --environment Development --stack TAIS --service landing-page --new-image $LANDING_PAGE_LATEST_IMAGE --no-finish-upgrade --debug
   only:
-    - /master/
+    - /master|test_ci/
   environment: development
   tags:
     - docker
@@ -41,7 +45,8 @@ deploy_to_production:
   services:
     - docker:dind
   script:
-    - upgrade --environment Production --stack Rouana --service rouana --new-image $ROUANA_RELEASE_IMAGE --no-finish-upgrade --debug
+    - upgrade --environment Production --stack TAIS --service tais --new-image $TAIS_LATEST_IMAGE --no-finish-upgrade --debug
+    - upgrade --environment Production --stack TAIS --service landing-page --new-image $LANDING_PAGE_LATEST_IMAGE --no-finish-upgrade --debug
   only:
     - tags
   environment: production

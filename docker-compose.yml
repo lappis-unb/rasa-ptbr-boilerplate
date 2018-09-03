@@ -27,7 +27,7 @@ services:
   rouana:
     build:
       context: .
-      dockerfile: ./docker/Dockerfile
+      dockerfile: ./docker/tais/Dockerfile
     environment:
       - TRAINING_EPOCHS=300
       - ROUANA_PORT=5005
@@ -40,9 +40,10 @@ services:
       - rocketchat
 
   landing-page:
-    image: python:3.6
-    entrypoint: bash -c "cd /app && python -m http.server 8000"
+    build:
+      context: .
+      dockerfile: ./docker/landing_page/Dockerfile
     ports:
       - 8000:8000
     volumes:
-      - ./landing-page:/app
+      - ./landing_page:/landing_page
