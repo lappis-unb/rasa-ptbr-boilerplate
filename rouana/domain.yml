@@ -21,78 +21,75 @@ intents:
   - escolher_erros_salic
   - duvida_sobre_contexto
 
-entities:
- - estadoSalic
- 
 slots:
   estadoSalic:
-    type: categorical
-      values:
-      - A12
-      - A14
-      - A20
-      - A23
-      - B01
-      - B14
-      - A13
-      - A16
-      - A17
-      - A42
-      - B11
-      - B20
-      - C09
-      - C10
-      - C20
-      - C26
-      - C30
-      - D03
-      - D14
-      - D20
-      - D25
-      - D27
-      - E25
-      - E62
-      - E66
-      - E20
-      - E27
-      - E30
-      - E68
-      - E77
-      - L03
-      - L05
-      - L08
-      - L10
-      - L11
-      - D22
-      - D28
-      - D29
-      - E10
-      - E11
-      - E12
-      - E13
-      - E15
-      - E16
-      - E23
-      - E24
-      - E36
-      - E59
-      - E63
-      - E15
-      - E65
-      - E75
-      - E79
-      - E80
-      - E81
-      - E60
-      - E72
-      - E50
-      - L09
-      - D38
-      - E22
-      - E73
-      - E78
-      - E47
-      - L06
+    type: "categorical"
+    values:
+      - "A12"
+      - "A14"
+      - "A20"
+      - "A23"
+      - "B01"
+      - "B14"
+      - "A13"
+      - "A16"
+      - "A17"
+      - "A42"
+      - "B11"
+      - "B20"
+      - "C09"
+      - "C10"
+      - "C20"
+      - "C26"
+      - "C30"
+      - "D03"
+      - "D14"
+      - "D20"
+      - "D25"
+      - "D27"
+      - "E25"
+      - "E62"
+      - "E66"
+      - "E20"
+      - "E27"
+      - "E30"
+      - "E68"
+      - "E77"
+      - "L03"
+      - "L05"
+      - "L08"
+      - "L10"
+      - "L11"
+      - "D22"
+      - "D28"
+      - "D29"
+      - "E10"
+      - "E11"
+      - "E12"
+      - "E13"
+      - "E15"
+      - "E16"
+      - "E23"
+      - "E24"
+      - "E36"
+      - "E59"
+      - "E63"
+      - "E64"
+      - "E65"
+      - "E75"
+      - "E79"
+      - "E80"
+      - "E81"
+      - "E60"
+      - "E72"
+      - "E50"
+      - "L09"
+      - "D38"
+      - "E22"
+      - "E73"
+      - "E78"
+      - "E47"
+      - "L06"
 
 templates:
   utter_default:
@@ -107,7 +104,7 @@ templates:
           - "Qual a sua pergunta? Vou tentar responder da melhor maneira possível"
   utter_oqueEhSalic_A12:
     - text:
-        - - "O estado A12 acontece durante a fase de Admissibilidade, e significa aguarda complementação de documentos",
+        - - "O estado A12 acontece durante a fase de Admissibilidade, e significa aguarda complementação de documentos"
           - "E quando o MinC utiliza ele? Quando se solicita ao proponente documentação adicional"
           - "Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69."
   utter_oqueEhSalic_A14:
@@ -300,7 +297,6 @@ templates:
       - - "O estado E10 acontece durante a fase de Execução, e significa autorizada a captação total dos recursos"
         - "E quando o MinC utiliza ele? Quando é publicada a autorização para captação de recursos"
         - "Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 33"
-            ],
   utter_oqueEhSalic_E11:
     - text:
       - - "O estado E11 acontece durante a fase de Execução, e significa expirado o prazo de captação total"
@@ -351,7 +347,7 @@ templates:
       - - "O estado E63 acontece durante a fase de Execução, e significa projeto arquivado – por excesso de prazo sem captação"
         - "E quando o MinC utiliza ele? Quando o proponente não solicitou a prorrogação do período de captação de forma tempestiva"
         - "Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 52"
-  utter_oqueEhSalic_E15:
+  utter_oqueEhSalic_E64:
     - text:
       - - "O estado E64 acontece durante a fase de Execução, e significa projeto arquivado – captação/execução encerradas"
         - "E quando o MinC utiliza ele? Quando o pedido de prorrogação é indeferido por se tratar de calendário específico"
@@ -433,7 +429,7 @@ templates:
   utter_oqueEhSalicRouana:
     - text:
       - - "Uma assistente virtual, como eu, é um programa de computador criado para ajudar as pessoas a sanarem suas dúvidas de maneira simples"
-        - "Apesar de eu ser um "computador", eu ainda estou aprendendo várias coisas para poder te ajudar melhor"
+        - "Apesar de eu ser um \"computador\", eu ainda estou aprendendo várias coisas para poder te ajudar melhor"
         - "Conversando comigo você também pode me ajudar a alcançar isso"
   utter_oqueEhSalicLeiRouanet:
     - text:
@@ -502,8 +498,8 @@ templates:
         - "Você pode acessa-lo aqui: salic.cultura.gov.br"
   utter_oqueEhSalicVinculada:
     - text:
-      - - "As vinculadas são órgãos associados ao MinC especialistas nas "
-        - "áreas específicas que a Lei Rouanet cobre.",
+      - - "As vinculadas são órgãos associados ao MinC especialistas nas"
+        - "áreas específicas que a Lei Rouanet cobre."
         - "Elas que avaliam o orçamento e adequação do projeto."
 
   utter_geralCumprimentar:
@@ -526,7 +522,7 @@ templates:
   utter_geralDespedir:
     - text:
         - - "Espero que eu tenha conseguido esclarecer suas dúvidas."
-          - "Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês, se surgir alguma dúvida, não hesite, volte aqui""
+          - "Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês, se surgir alguma dúvida, não hesite, volte aqui"
           - "Até mais!"
   utter_geralDefinirContexto:
     - text:
@@ -566,17 +562,17 @@ templates:
     - text:
         - - "O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura, e é por ele que você cadastra a proposta e a acompanha"
           - "Se você encontrar dificuldades no momento do cadastro, pode assistir"
-          - "este vídeo, nele você pode observar o passo a passo para se cadastrar: "
-          - "https://youtu.be/rMGEZyIr1U8""
+          - "este vídeo, nele você pode observar o passo a passo para se cadastrar:"
+          - "https://youtu.be/rMGEZyIr1U8"
           - "Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)"
   utter_geralExplicarCadastroSalic:
     - text:
         - - "A primeira coisa que você deve fazer é acessar o SALIC no site http://salic.cultura.gov.br"
-          - "Então no formulário inicial, onde pede login e senha, você deve clicar na opção "Não sou cadastrado", logo abaixo"
+          - "Então no formulário inicial, onde pede login e senha, você deve clicar na opção \"Não sou cadastrado\", logo abaixo"
           - "Preencha todos os campos corretamente, todos eles são obrigatórios."
-          - "E depois clique em "Cadastrar""
+          - "E depois clique em \"Cadastrar\""
           - "Agora aguarde a chegada de um e-mail de confirmação. Este vai conter uma senha temporária"
-          - "É interessante você alterar esta senha, por isso, no seu primeiro acesso, vá em "Usuário > Alterar Senha", para mudar a mesma"
+          - "É interessante você alterar esta senha, por isso, no seu primeiro acesso, vá em \"Usuário > Alterar Senha\", para mudar a mesma"
           - "Agora que você já se cadastrou, o próximo passo cadastrar um proponente"
   utter_geralCadastroSalicAposVideo:
     - text:
@@ -586,7 +582,7 @@ templates:
     - text:
         - - "Para inscrever um proponente, ou se tornar um proponente, você deve:"
           - "Acessar o SALIC e efetuar o login"
-          - "Clique em Administrativo e depois em cadastrar proponente. OU acesse esse link http://salic.cultura.gov.br/agente/agentes/incluiragente;""
+          - "Clique em Administrativo e depois em cadastrar proponente. OU acesse esse link http://salic.cultura.gov.br/agente/agentes/incluiragente"
           - "Se você for uma pessoa física você precisa atuar na área cultural."
           - "Caso você seja uma pessoa jurídica pública tem que atuar na área de administração indireta ou uma pessoa jurídica privada com ou sem fins lucrativos."
   utter_geralIntroduzirContextoNovaProposta:
@@ -603,8 +599,8 @@ templates:
     - text: "Que bom! Espero estar ajudando"
   utter_geralExplicarContextos:
     - text:
-        - - "Na categoria "Processo" eu responderei a respeito do fluxo de submissão do seu projeto, e o sobre o estado dele."
-          - "Em "Preenchimento" eu vou tirar dúvidas sobre o preenchimento de propostas no Salic, campos em que você possa ter dúvidas, ou como você pode preencher "
+        - - "Na categoria \"Processo\" eu responderei a respeito do fluxo de submissão do seu projeto, e o sobre o estado dele."
+          - "Em \"Preenchimento\" eu vou tirar dúvidas sobre o preenchimento de propostas no Salic, campos em que você possa ter dúvidas, ou como você pode preencher "
           - "Agora, em Datas e Prazos, eu consigo falar sobre prazos importantes para a aceitação e execução do seu projeto."
           - "Por último, em erros do SALIC, posso falar sober eventuais erros que ocorrem durante a utilização do sistema."
           - "Já que te expliquei, vou te dar as opçẽs de novo"
@@ -618,80 +614,74 @@ templates:
           - "Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC: http://rouanet.cultura.gov.br/fale-conosco/"
   utter_geralExtra:
     - text: "=)"
-  utter_curiosidadesIndicacao:
-    - text:
-        - - "Legal! Meu assunto favorito"
-          - "Você pode me perguntar algumas curiosidades sobre a Lei Rouanet\n"
-          - "Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei.\n"
-          - "Qual a sua pergunta? Vou tentar responder da melhor maneira possível"
   utter_curiosidadesMais:
     - text:
-        - - "Gostaria de saber mais curiosidades? (Sim ou Não)"
+        - "Gostaria de saber mais curiosidades? (Sim ou Não)"
   utter_curiosidadesMaisSim:
     - text:
-        - - "Que bom!"
-        - - "O que mais você gostaria de saber?"
+        - "Que bom!"
+        - "O que mais você gostaria de saber?"
   utter_curiosidadesMaisNao:
     - text:
-        - - "Ok, podemos conversar sobre projetos e propostas\n"
+        - - "Ok, podemos conversar sobre projetos e propostas"
           - "Você quer falar sobre isso? (Sim ou Não)"
   utter_curiosidadesFalarSobreProjetos:
     - text:
-        - - "Maravilha! É bom saber que você quer entender mais sobre propostas e projetos"
+        - "Maravilha! É bom saber que você quer entender mais sobre propostas e projetos"
   utter_curiosidadesQuantidadeProjetos:
     - text:
-        - - "Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.\n"
-          - "Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos.\n"
+        - - "Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos."
+          - "Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos."
           - "Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes."
   utter_curiosidadesBeneficiosIncentivoProjetosCulturais:
     - text:
-        - - "O principal benefício de incentivar projetos culturais é dar a chance para sociedade usufruir das mais diversas manifestações culturais que talvez nunca fossem possíveis sem incentivo.\n"
-          - "E tem mais...as empresas que incentivam projetos culturais podem deduzir do imposto de renda as quantias que despenderam em projetos aprovados pelo Ministério da Cultura\n"
+        - - "O principal benefício de incentivar projetos culturais é dar a chance para sociedade usufruir das mais diversas manifestações culturais que talvez nunca fossem possíveis sem incentivo."
+          - "E tem mais...as empresas que incentivam projetos culturais podem deduzir do imposto de renda as quantias que despenderam em projetos aprovados pelo Ministério da Cultura"
           - "É claro que essa dedução do imposto de renda acontece nas condições estabelecidas na legislação vigente, e está limitada a 4% do imposto devido"
   utter_curiosidadesLeiRouanetElegibilidade:
     - text:
-        - - "Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro, pode se beneficiar desta Lei e se candidatar à captação de recursos de renúncia fiscal.\n"
-          - "A proponência pode ser feita por Pessoas físicas com atuação comprovada na área cultural, ou Pessoas jurídicas de natureza cultural com, no mínimo, dois anos de atividade,\n"
-          - "podendo ser:",
-          - "Pessoas jurídicas públicas da administração indireta\n"
-          - "(autarquias, fundações culturais etc.)\n"
-          - "ou pessoas jurídicas privadas com ou sem fins lucrativos\n"
+        - - "Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro, pode se beneficiar desta Lei e se candidatar à captação de recursos de renúncia fiscal."
+          - "A proponência pode ser feita por Pessoas físicas com atuação comprovada na área cultural, ou Pessoas jurídicas de natureza cultural com, no mínimo, dois anos de atividade,"
+          - "podendo ser:"
+          - "Pessoas jurídicas públicas da administração indireta"
+          - "(autarquias, fundações culturais etc.)"
+          - "ou pessoas jurídicas privadas com ou sem fins lucrativos"
           - "(empresas, cooperativas, fundações, ONGs, organizações culturais etc.)"
   utter_curiosidadesLeiRouanetArrecadamento:
     - text:
-        - - "O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural.\n"
-          - "Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura.\n"
-          - "Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a declaração no modelo completo podem contribuir com a lei Rouanet apoiando projetos.\n"
+        - - "O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural."
+          - "Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura."
+          - "Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a declaração no modelo completo podem contribuir com a lei Rouanet apoiando projetos."
           - "Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei."
   utter_curiosidadesLeiRouanetDenuncia:
     - text:
-        - - "Para denunciar um projeto suspeito de irregularidades é preciso registrar uma denúncia para o Ministério Público Federal.\n"
-          - "Sua denúncia pode ser feita no site do ministério público no link: http://aplicativos.pgr.mpf.mp.br/ouvidoria/portal/cadastro.html?tipoServico=2 ,ou pelo aplicativo do MPF na opção de "Registrar denúncia ou solicitação"."
+        - - "Para denunciar um projeto suspeito de irregularidades é preciso registrar uma denúncia para o Ministério Público Federal."
+          - "Sua denúncia pode ser feita no site do ministério público no link: http://aplicativos.pgr.mpf.mp.br/ouvidoria/portal/cadastro.html?tipoServico=2 ,ou pelo aplicativo do MPF na opção de \"Registrar denúncia ou solicitação\"."
   utter_curiosidadesElegibilidadeDeEmpresaParaBeneficios:
     - text:
-        - - "Somente as Pessoas Jurídicas tributadas com base no Lucro Real podem descontar as doações ou patrocínios do imposto de renda observando sempre o limite máximo de 4% do imposto devido \n"
-          - "Se você quiser saber mais sobre quais Pessoas Jurídicas devem fazer a apuração do lucro real confira o artigo 246, do Decreto 3.000 de 26 de março de 1999 que “Regulamenta a tributação, fiscalização, arrecadação e administração do Imposto sobre a Renda e Proventos de Qualquer Natureza”"
+        - - "Somente as Pessoas Jurídicas tributadas com base no Lucro Real podem descontar as doações ou patrocínios do imposto de renda observando sempre o limite máximo de 4% do imposto devido "
+          - "Se você quiser saber mais sobre quais Pessoas Jurídicas devem fazer a apuração do lucro real confira o artigo 246, do Decreto 3.000 de 26 de março de 1999 que \"Regulamenta a tributação, fiscalização, arrecadação e administração do Imposto sobre a Renda e Proventos de Qualquer Natureza\""
   utter_curiosidadesReceberIncetivoDeParentes:
     - text:
-        - - "Olha, alguns familiares não podem incentivar projetos:\n"
-          - "- o cônjuge\n"
-          - "- os parentes até o terceiro grau, inclusive os afins\n"
+        - - "Olha, alguns familiares não podem incentivar projetos:"
+          - "- o cônjuge"
+          - "- os parentes até o terceiro grau, inclusive os afins"
           - "- e os dependentes… tanto do doador, quanto do patrocinador, dos titulares, administradores, acionistas ou sócios de pessoa jurídica vinculada ao doador ou patrocinador, na data da operação, ou nos 12 meses anteriores."
   utter_curiosidadesDeducaoImpostoDeRendaIncentivador:
     - text:
-        - - "Atualmente, existem 2 situações descritas na Lei 8313/91:\n"
+        - - "Atualmente, existem 2 situações descritas na Lei 8313/91:"
           - "1) o artigo 26 da Lei indica que os percentuais de dedução do IR são os seguintes:"
-          - "Empresas:\n"
-          - "até 30% do valor patrocinado;\n"
-          - "até 40% do valor doado\n"
-          - "Pessoa física:\n"
-          - "até 60% do valor patrocinado;\n"
-          - "até 80% do valor doado.\n"
-          - "nesse caso, a empresa incentivadora poderá ainda lançar o valor incentivado como despesa operacional",
-          - "2) Com a modificação implementada pela Lei 9.874/99, quem investe em projetos culturais enquadrados nos segmentos indicados pelo artigo 18 da Lei passou a ter a possibilidade de deduzir até 100% do valor doado ou patrocinado as empresas que investem nesses segmentos não podem lançar o valor incentivado como despesa operacional agora, IMPORTANTE:\n"
+          - "Empresas:"
+          - "até 30% do valor patrocinado;"
+          - "até 40% do valor doado"
+          - "Pessoa física:"
+          - "até 60% do valor patrocinado;"
+          - "até 80% do valor doado."
+          - "nesse caso, a empresa incentivadora poderá ainda lançar o valor incentivado como despesa operacional"
+          - "2) Com a modificação implementada pela Lei 9.874/99, quem investe em projetos culturais enquadrados nos segmentos indicados pelo artigo 18 da Lei passou a ter a possibilidade de deduzir até 100% do valor doado ou patrocinado as empresas que investem nesses segmentos não podem lançar o valor incentivado como despesa operacional agora, IMPORTANTE:"
           - "os percentuais de dedução de IR são limitados aos estabelecidos pela legislação do imposto de renda vigente, que atualmente são 4% do imposto devido para empresas e 6% do imposto devido para pessoa física"
-          - "Você pode ver os detalhes das leis pelos endereços:\n"
-          - "Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm\n"
+          - "Você pode ver os detalhes das leis pelos endereços:"
+          - "Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm"
           - "Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm"
   utter_geralExplicarPreenchimento:
     - text:
@@ -699,7 +689,7 @@ templates:
           - "propostas no SALIC"
   utter_preenchimentoCampoCustoAuditoria:
     - text:
-        - - "Este campo não precisa ser preenchido agora, isso vai ser preenchido na prestação de contas."
+        - "Este campo não precisa ser preenchido agora, isso vai ser preenchido na prestação de contas."
   utter_preenchimentoVinculoDePropostas:
     - text:
         - - "Você deve ir em:"
@@ -720,9 +710,9 @@ templates:
         - - "O dirigente do projeto deve acessar o sistema e seguir os passos:"
           - "1- Administrativo > Gerenciar responsáveis"
           - "em seguida..."
-          - "2- Vincular propostas > Clicar na "bolinha" (Vincular) > Inserir "
+          - "2- Vincular propostas > Clicar na \"bolinha\" (Vincular) > Inserir "
           - "responsável > abaixo terá o número da Proposta/Nome "
-          - "> Nome do responsável selecionado > Clicar na "bolinha""
+          - "> Nome do responsável selecionado > Clicar na \"bolinha\""
           - "3- Por último... clica também no botão Vincular"
   utter_preenchimentoAgenciaBancaria:
     - text:
@@ -736,7 +726,7 @@ templates:
   utter_erroSalicPlanilhaDesaparecida:
     - text:
         - - "Ao excluir um produto do plano de distribuição a planilha vai ser "
-          - ""zerada" e o proponente deverá refazê-la."
+          - "\"zerada\" e o proponente deverá refazê-la."
   utter_erroSalicErroSalvamento:
     - text:
         - - "Esse erro aconteceu por exceder o tempo logado no sistema."
@@ -779,7 +769,6 @@ templates:
     - text:
         - - "Basta você entrar no Salic..."
           - "clicar em Administrativo > Cadastrar proponente e preencher todos os dados"
-
   utter_prazoExplicarPrazo:
     - text:
         - - "Nesta etapa posso responder suas dúvidas a respeito de Datas"
@@ -793,6 +782,145 @@ templates:
     - text:
         - - "A partir do momento em que seu projeto foi enquadrado, iniciou-se o prazo de 10 dias corridos para recorrer ao enquadramento proposto para o projeto"
           - "Caso concorde com o enquadramento dado é possível desistir desse prazo"
-          - "Ambas as manifestações se dão por via da aba "recurso" no Menu ao lado esquerdo da tela do projeto, no Salic"
+          - "Ambas as manifestações se dão por via da aba \"recurso\" no Menu ao lado esquerdo da tela do projeto, no Salic"
 
 actions:
+  - utter_default
+  - utter_restart
+  - utter_curiosidadesIndicacao
+  - utter_oqueEhSalic_A12
+  - utter_oqueEhSalic_A14
+  - utter_oqueEhSalic_A20
+  - utter_oqueEhSalic_A23
+  - utter_oqueEhSalic_B01
+  - utter_oqueEhSalic_B14
+  - utter_oqueEhSalic_A13
+  - utter_oqueEhSalic_A16
+  - utter_oqueEhSalic_A17
+  - utter_oqueEhSalic_A42
+  - utter_oqueEhSalic_B11
+  - utter_oqueEhSalic_B20
+  - utter_oqueEhSalic_C09
+  - utter_oqueEhSalic_C10
+  - utter_oqueEhSalic_C20
+  - utter_oqueEhSalic_C26
+  - utter_oqueEhSalic_C30
+  - utter_oqueEhSalic_D03
+  - utter_oqueEhSalic_D14
+  - utter_oqueEhSalic_D20
+  - utter_oqueEhSalic_D25
+  - utter_oqueEhSalic_D27
+  - utter_oqueEhSalic_E25
+  - utter_oqueEhSalic_E62
+  - utter_oqueEhSalic_E66
+  - utter_oqueEhSalic_E20
+  - utter_oqueEhSalic_E27
+  - utter_oqueEhSalic_E30
+  - utter_oqueEhSalic_E68
+  - utter_oqueEhSalic_E77
+  - utter_oqueEhSalic_L03
+  - utter_oqueEhSalic_L05
+  - utter_oqueEhSalic_L08
+  - utter_oqueEhSalic_L10
+  - utter_oqueEhSalic_L11
+  - utter_oqueEhSalic_D22
+  - utter_oqueEhSalic_D28
+  - utter_oqueEhSalic_D29
+  - utter_oqueEhSalic_E10
+  - utter_oqueEhSalic_E11
+  - utter_oqueEhSalic_E12
+  - utter_oqueEhSalic_E13
+  - utter_oqueEhSalic_E15
+  - utter_oqueEhSalic_E16
+  - utter_oqueEhSalic_E23
+  - utter_oqueEhSalic_E24
+  - utter_oqueEhSalic_E36
+  - utter_oqueEhSalic_E59
+  - utter_oqueEhSalic_E63
+  - utter_oqueEhSalic_E64
+  - utter_oqueEhSalic_E65
+  - utter_oqueEhSalic_E75
+  - utter_oqueEhSalic_E79
+  - utter_oqueEhSalic_E80
+  - utter_oqueEhSalic_E81
+  - utter_oqueEhSalic_E60
+  - utter_oqueEhSalic_E72
+  - utter_oqueEhSalic_E50
+  - utter_oqueEhSalic_L09
+  - utter_oqueEhSalic_D38
+  - utter_oqueEhSalic_E22
+  - utter_oqueEhSalic_E73
+  - utter_oqueEhSalic_E78
+  - utter_oqueEhSalic_E47
+  - utter_oqueEhSalic_L06
+  - utter_oqueEhSalicRouana
+  - utter_oqueEhSalicLeiRouanet
+  - utter_oqueEhSalicMinc
+  - utter_oqueEhSalicSefic
+  - utter_oqueEhSalicProjeto
+  - utter_oqueEhSalicProposta
+  - utter_oqueEhSalicProponente
+  - utter_oqueEhSalicPreenchimento
+  - utter_oqueEhSalicAdmissibilidade
+  - utter_oqueEhSalicAprovacao
+  - utter_oqueEhSalicExecucao
+  - utter_oqueEhSalicPrestacaoDeContas
+  - utter_oqueEhSalic
+  - utter_oqueEhSalicVinculada
+  - utter_geralCumprimentar
+  - utter_geralDefinirPerfil
+  - utter_geralExplicarDefinicaoPerfil
+  - utter_geralNovaProposta
+  - utter_geralDuvidaExecucao
+  - utter_geralConheceProcesso
+  - utter_geralCadastroSalic
+  - utter_geralDespedir
+  - utter_geralDefinirContexto
+  - utter_geralSubmissaoDeProjetos
+  - utter_geralAviso
+  - utter_geralIntroduzirExecucao
+  - utter_geralJaEhProponente
+  - utter_geralCadastroProponenteIntroduzirContexto
+  - utter_geralCadastroSalicVideo
+  - utter_geralExplicarCadastroSalic
+  - utter_geralCadastroSalicAposVideo
+  - utter_geralInscricaoProponente
+  - utter_geralIntroduzirContextoNovaProposta
+  - utter_geralIntroduzirContextoNaoExecucao
+  - utter_geralMaisAlgumaPergunta
+  - utter_geralMaisPerguntasAfirmativa
+  - utter_geralExplicarContextos
+  - utter_geralEscolheuContextoErrado
+  - utter_geralAindaNaoAprendi
+  - utter_geralExtra
+  - utter_curiosidadesMais
+  - utter_curiosidadesMaisSim
+  - utter_curiosidadesMaisNao
+  - utter_curiosidadesFalarSobreProjetos
+  - utter_curiosidadesQuantidadeProjetos
+  - utter_curiosidadesBeneficiosIncentivoProjetosCulturais
+  - utter_curiosidadesLeiRouanetElegibilidade
+  - utter_curiosidadesLeiRouanetArrecadamento
+  - utter_curiosidadesLeiRouanetDenuncia
+  - utter_curiosidadesElegibilidadeDeEmpresaParaBeneficios
+  - utter_curiosidadesReceberIncetivoDeParentes
+  - utter_curiosidadesDeducaoImpostoDeRendaIncentivador
+  - utter_geralExplicarPreenchimento
+  - utter_preenchimentoCampoCustoAuditoria
+  - utter_preenchimentoVinculoDePropostas
+  - utter_preenchimentoValorIngresso
+  - utter_preenchimentoVinculoCpfProposta
+  - utter_preenchimentoAgenciaBancaria
+  - utter_geralExplicarErrosSalic
+  - utter_erroSalicPlanilhaDesaparecida
+  - utter_erroSalicErroSalvamento
+  - utter_erroSalicRecuperacaoDeSenha
+  - utter_erroSalicErroVinculoCpfCnpj
+  - utter_erroSalicErroAcharProposta
+  - utter_processoExplicarProcesso
+  - utter_processoProcessoCaptacaoDeRecursos
+  - utter_processoReativacaoDeProposta
+  - utter_processoCadastroProponente
+  - utter_prazoExplicarPrazo
+  - utter_prazoEnvioCnae
+  - utter_prazoDesistirRecurso
