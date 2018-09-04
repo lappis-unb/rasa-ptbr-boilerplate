@@ -854,6 +854,50 @@ templates:
 
           Prestação de Contas: prestacaodecontas.incentivo@cultura.gov.br
 
+  utter_geralCadastroSalic:
+    - text: |
+        Você já tem cadastro no SALIC?
+    
+    - text: | 
+        Você já fez seu cadastro no SALIC?
+    
+    - text: |
+        você já se inscreveu no SALIC?
+        
+  utter_geralDespedir:
+    - text:
+        - - "Espero que eu tenha conseguido esclarecer suas dúvidas."
+          - "Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês, se surgir alguma dúvida, não hesite, volte aqui"
+          - "Até mais!"
+  utter_geralDefinirContexto:
+    - text:
+        - - "Onde sua pergunta se encaixa melhor"
+          - "1. Processo e estado do projeto"
+          - "2. Preenchimento de proposta"
+          - "3. Datas e Prazos"
+          - "4. Erros do SALIC"
+          - "5. Não sei bem onde se encaixa"
+  utter_geralSubmissaoDeProjetos:
+    - text:
+        - - "Tudo bem. Aqui vai um resumo do processo:"
+          - "A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica."
+          - "Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos."
+          - "Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto."
+          - "Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet."
+          - "A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto."
+          - "O primeiro passo para você particiar deste processo é ter cadastro no SALIC"
+  utter_geralAviso:
+    - text:
+        - - "Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas."
+          - "Você já preencheu uma proposta? (Sim ou Não)"
+  utter_geralIntroduzirExecucao:
+    - text:
+        - - "Eu ainda não aprendi a falar sobre um projeto que está em Execução em Prestação de Contas. Ainda estou aprendendo.."
+          - "Em breve eu poderei responder sua dúvida"
+          - "Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC"
+          - "Execução: acompanhamento.incentivo@cultura.gov.br"
+          - "Prestação de Contas: prestacaodecontas.incentivo@cultura.gov.br"
+
   utter_geralJaEhProponente:
     - text: "Você já tem um proponente cadastrado? (Sim ou Não)"
 
