@@ -94,7 +94,7 @@ slots:
 templates:
   utter_default:
     - text: "Desculpe, não consegui te entender. Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue? \nEx: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?"
-  utter_restart:
+  'utter_restart':
     - text: "=D"
   utter_curiosidadesIndicacao:
     - text:
@@ -783,6 +783,106 @@ templates:
         - - "A partir do momento em que seu projeto foi enquadrado, iniciou-se o prazo de 10 dias corridos para recorrer ao enquadramento proposto para o projeto"
           - "Caso concorde com o enquadramento dado é possível desistir desse prazo"
           - "Ambas as manifestações se dão por via da aba \"recurso\" no Menu ao lado esquerdo da tela do projeto, no Salic"
+  utter_cumprimentar:
+    - text:
+        - - 'Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a '
+          - 'esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto'
+  utter_definir_perfil:
+    - text:
+        - "falta preencher"
+  utter_explicar_definicao_perfil:
+    - text:
+        - "falta preencher"
+  utter_curiosidades_indicacao:
+    - text:
+        - "falta preencher"
+  utter_curiosidades_mais_sim:
+    - text:
+        - "falta preencher"
+  utter_curiosidades_mais_nao:
+    - text:
+        - "falta preencher"
+  utter_curiosidades_falar_sobre_projetos:
+    - text:
+        - "falta preencher"
+  utter_aviso:
+    - text:
+        - "falta preencher"
+  utter_despedir:
+    - text:
+        - "falta preencher"
+  utter_nova_proposta:
+    - text:
+        - "falta preencher"
+  utter_conhece_processo:
+    - text:
+        - "falta preencher"
+  utter_o_que_eh:
+    - text:
+        - "falta preencher"
+  utter_introduzir_contexto_nova_proposta:
+    - text:
+        - "falta preencher"
+  utter_duvida_execucao:
+    - text:
+        - "falta preencher"
+  utter_introduzir_execucao:
+    - text:
+        - "falta preencher"
+  utter_introduzir_contexto_nao_execucao:
+    - text:
+        - "falta preencher"
+  utter_cadastro_salic:
+    - text:
+        - "falta preencher"
+  utter_submissao_de_projetos:
+    - text:
+        - "falta preencher"
+  utter_ja_eh_proponente:
+    - text:
+        - "falta preencher"
+  utter_cadastro_salic_video:
+    - text:
+        - "falta preencher"
+  utter_explicar_cadastro_salic:
+    - text:
+        - "falta preencher"
+  utter_cadastro_salic_apos_video:
+    - text:
+        - "falta preencher"
+  utter_inscricao_proponente:
+    - text:
+        - "falta preencher"
+  utter_cadastro_proponente_introduzir_contexto:
+    - text:
+        - "falta preencher"
+  utter_definir_contexto:
+    - text:
+        - "falta preencher"
+  utter_explicar_processo:
+    - text:
+        - "falta preencher"
+  utter_ainda_nao_aprendi:
+    - text:
+        - "falta preencher"
+  utter_explicar_preenchimento:
+    - text:
+        - "falta preencher"
+  utter_explicar_prazo:
+    - text:
+        - "falta preencher"
+  utter_explicar_erros_salic:
+    - text:
+        - "falta preencher"
+  utter_explicar_contextos:
+    - text:
+        - "falta preencher"
+  utter_mais_alguma_pergunta:
+    - text:
+        - "falta preencher"
+  utter_mais_perguntas_afirmativa:
+    - text:
+        - "falta preencher"
 
 actions:
   - utter_default
@@ -924,3 +1024,36 @@ actions:
   - utter_prazoExplicarPrazo
   - utter_prazoEnvioCnae
   - utter_prazoDesistirRecurso
+  - utter_cumprimentar
+  - utter_definir_perfil
+  - utter_explicar_definicao_perfil
+  - utter_curiosidades_indicacao
+  - utter_curiosidades_mais_sim
+  - utter_curiosidades_mais_nao
+  - utter_curiosidades_falar_sobre_projetos
+  - utter_aviso
+  - utter_despedir
+  - utter_nova_proposta
+  - utter_conhece_processo
+  - utter_o_que_eh
+  - utter_introduzir_contexto_nova_proposta
+  - utter_duvida_execucao
+  - utter_introduzir_execucao
+  - utter_introduzir_contexto_nao_execucao
+  - utter_cadastro_salic
+  - utter_submissao_de_projetos
+  - utter_ja_eh_proponente
+  - utter_cadastro_salic_video
+  - utter_explicar_cadastro_salic
+  - utter_cadastro_salic_apos_video
+  - utter_inscricao_proponente
+  - utter_cadastro_proponente_introduzir_contexto
+  - utter_definir_contexto
+  - utter_explicar_processo
+  - utter_ainda_nao_aprendi
+  - utter_explicar_preenchimento
+  - utter_explicar_prazo
+  - utter_explicar_erros_salic
+  - utter_explicar_contextos
+  - utter_mais_alguma_pergunta
+  - utter_mais_perguntas_afirmativa
