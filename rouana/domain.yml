@@ -787,7 +787,7 @@ templates:
         Você já fez uma *proposta de projeto*?
     
     - text: |
-        Você já criou uma *proposta de projeto*?
+        Você já criou uma *proposta de projeto*?  
 
   utter_geralDuvidaExecucao:
     - text: "Você tem dúvida em relação à captação de verba e execução do projeto? (Sim ou Não)"
