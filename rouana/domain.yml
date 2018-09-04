@@ -745,18 +745,32 @@ templates:
           Elas que avaliam o orçamento e adequação do projeto.
 
   utter_geralCumprimentar:
+    - text: |
+        Olá, meu  nome é Taís, sou assistente virtual do MinC
 
-    - text: 
-      - - "Olá, meu  nome é Taís, sou assistente virtual do MinC "
-        - "Estou aqui para te ajudar a sanar dúvidas sobre a lei Rouanet "
-      - - "Oi, eu sou a Taís, assistente virtual do MinC "
-        - "Estou aqui para te ajudar a tirar dúvidas sobre a lei Rouanet "
-      - - "Oi, sou assistente virtual do MinC, me chamo Taís "
-        - "Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet "
+        Estou aqui para te ajudar a sanar dúvidas sobre a lei Rouanet
+    
+    - text: |
+        Oi, eu sou a Taís, assistente virtual do MinC
+
+        Estou aqui para te ajudar a tirar dúvidas sobre a lei Rouanet
+      
+    - text: |
+        Oi, sou assistente virtual do MinC, me chamo Taís
+
+        Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
+      
 
   utter_geralDefinirPerfil:
-    - text: "Você prefere conversar sobre criação e andamento de projetos, ou prefere falar mais sobre a Lei Rouanet?"
+    - text: |
+        Suas dúvidas são sobre a *lei Rouanet* ou estão relacionadas à *propostas e projetos*?
 
+    - text: |
+        Você quer tirar dúvidas sobre a *lei Rouanet* ou sobre *propostas e projetos*?
+
+    - text: |
+        Você quer se informar sobre a *lei Rouanet* ou sobre *propostas e projetos*?
+        
   utter_geralExplicarDefinicaoPerfil:
     - text: |
           Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada, o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.
