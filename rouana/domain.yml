@@ -923,7 +923,7 @@ templates:
 
     - text: |
         Você já se tornou um proponente?   
-        
+
   utter_geralCadastroProponenteIntroduzirContexto:
     - text: |
           Maravilha!
@@ -978,9 +978,16 @@ templates:
 
   utter_geralIntroduzirContextoNovaProposta:
     - text: |
-          Que bom! É sempre bom trabalhar em novos projetos culturais
+        Que bom! Vamos focar no seu projeto!
+        Você tem dúvidas sobre ele?
 
-          Se você quiser, posso tirar algumas de suas dúvidas para te ajudar neste novo projeto
+    - text: | 
+        Que ótimo! Vamos focar no seu projeto!
+        Que tal tirar dúvidas sobre ele?
+
+    - text: |
+        Que maravilha! Vamos focar no seu projeto!
+        Quer sanar alguma dúvida sobre ele?
 
   utter_geralIntroduzirContextoNaoExecucao:
     - text: |
