@@ -1030,19 +1030,37 @@ templates:
 
   utter_curiosidadesMais:
     - text: |
-          Gostaria de saber mais curiosidades? (Sim ou Não)
+        Você quer saber mais curiosidades?
 
+    - text: |
+        Você tem interesse de saber mais curiosidades?
+
+    - text: |
+        Você gostaria de saber mais curiosidades?
   utter_curiosidadesMaisSim:
     - text: |
-          Que bom!
+        EBA!
 
-          O que mais você gostaria de saber?
+        O que você quer saber?
 
-  utter_curiosidadesMaisNao:
     - text: |
-          Ok, podemos conversar sobre projetos e propostas
+        EBA!
 
-          Você quer falar sobre isso? (Sim ou Não)
+        Do que você quer saber?
+
+    - text: |
+        EBA!
+
+        De qual assunto você quer saber?
+  utter_curiosidadesMaisNao:
+    - text:
+        Tudo bem, então você quer saber sobre *projetos e propostas*?
+
+    - text: 
+        Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
+
+    - text: 
+        Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?        
 
   utter_curiosidadesFalarSobreProjetos:
     - text: |
