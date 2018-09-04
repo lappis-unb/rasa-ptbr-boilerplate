@@ -770,7 +770,7 @@ templates:
 
     - text: |
         Você quer se informar sobre a *lei Rouanet* ou sobre *propostas e projetos*?
-        
+
   utter_geralExplicarDefinicaoPerfil:
     - text: |
           Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada, o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.
@@ -780,7 +780,14 @@ templates:
           Do que você prefere conversar?
 
   utter_geralNovaProposta:
-    - text: "Você já começou a trabalhar em uma nova proposta de projeto? (Sim ou Não)"
+    - text: |
+        Você já tem uma *proposta de projeto*?
+
+    - text: |
+        Você já fez uma *proposta de projeto*?
+    
+    - text: |
+        Você já criou uma *proposta de projeto*?
 
   utter_geralDuvidaExecucao:
     - text: "Você tem dúvida em relação à captação de verba e execução do projeto? (Sim ou Não)"
