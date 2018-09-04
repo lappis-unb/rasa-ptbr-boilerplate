@@ -863,12 +863,29 @@ templates:
     
     - text: |
         você já se inscreveu no SALIC?
-        
+
   utter_geralDespedir:
-    - text:
-        - - "Espero que eu tenha conseguido esclarecer suas dúvidas."
-          - "Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês, se surgir alguma dúvida, não hesite, volte aqui"
-          - "Até mais!"
+    - text: |
+        Foi um prazer te ajudar! 
+
+        Sempre que tiver alguma dúvida, volte aqui!
+
+        Até logo!
+
+    - text: |
+       Foi um prazer te ajudar!
+       
+       Sempre que precisar, volte aqui!
+       
+       Até a próxima!
+
+    - text: |
+      Foi um prazer te ajudar!
+
+      Quando surgir alguma dúvida, volte aqui!
+
+      Até mais!
+      
   utter_geralDefinirContexto:
     - text:
         - - "Onde sua pergunta se encaixa melhor"
