@@ -979,14 +979,17 @@ templates:
   utter_geralIntroduzirContextoNovaProposta:
     - text: |
         Que bom! Vamos focar no seu projeto!
+        
         Você tem dúvidas sobre ele?
 
     - text: | 
         Que ótimo! Vamos focar no seu projeto!
+
         Que tal tirar dúvidas sobre ele?
 
     - text: |
         Que maravilha! Vamos focar no seu projeto!
+
         Quer sanar alguma dúvida sobre ele?
 
   utter_geralIntroduzirContextoNaoExecucao:
@@ -1327,6 +1330,10 @@ templates:
         Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a
 
         esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto
+    - text:
+        - - "A partir do momento em que seu projeto foi enquadrado, iniciou-se o prazo de 10 dias corridos para recorrer ao enquadramento proposto para o projeto"
+          - "Caso concorde com o enquadramento dado é possível desistir desse prazo"
+          - "Ambas as manifestações se dão por via da aba \"recurso\" no Menu ao lado esquerdo da tela do projeto, no Salic"
 
   utter_definir_perfil:
     - text: |
