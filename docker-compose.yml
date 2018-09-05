@@ -10,8 +10,6 @@ services:
       - PORT=3000
       - ROOT_URL=http://localhost:3000
       - MONGO_URL=mongodb://mongo:27017/rocketchat
-      - MONGO_OPLOG_URL=mongodb://mongo:27017/local
-      - MAIL_URL=smtp://smtp.email
       - ADMIN_USERNAME=admin
       - ADMIN_PASS=admin
     depends_on:
@@ -24,18 +22,12 @@ services:
     restart: unless-stopped
     volumes:
       - ./data/db:/data/db
-    command: mongod --smallfiles --oplogSize 128 --replSet rs0
-
-  mongo-init-replica:
-    image: mongo:3.2
-    command: 'mongo mongo/rocketchat --eval "rs.initiate({ _id: ''rs0'', members: [ { _id: 0, host: ''localhost:27017'' } ]})"'
-    depends_on:
-      - mongo
+    command: mongod --smallfiles --oplogSize 128
 
   rouana:
     build:
       context: .
-      dockerfile: ./docker/rocketchat.Dockerfile
+      dockerfile: ./docker/Dockerfile
     environment:
       - TRAINING_EPOCHS=300
       - ROUANA_PORT=5005
@@ -46,15 +38,6 @@ services:
       - ./rouana:/rouana
     depends_on:
       - rocketchat
-
-  rouana-console:
-    build:
-      context: .
-      dockerfile: ./docker/console.Dockerfile
-    environment:
-      - TRAINING_EPOCHS=300
-    volumes:
-      - ./rouana:/rouana
 
   landing-page:
     image: python:3.6
