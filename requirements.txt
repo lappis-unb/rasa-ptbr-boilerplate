@@ -1,2 +1,3 @@
 rasa-core==0.10.3
 rasa-nlu[spacy]==0.13.0
+rocketchat-py-sdk==0.0.8

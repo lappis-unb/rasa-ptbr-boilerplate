@@ -4,8 +4,6 @@
 ## Ambiente RocketChat
 
 ```sh
-sudo docker-compose up -d mongo
-sudo docker-compose up -d mongo-init-replica
 sudo docker-compose up -d rocketchat
 ```
 
@@ -35,15 +33,16 @@ Action: Send Message
 
 ## Testes
 
-### Teste de confiabilidade de frases
-
-```sh
-sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana:console python confidence.py
-```
-
 ### Conversa no console
 
 ```sh
-sudo docker build -t rouana:console -f docker/console.Dockerfile .
-sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana:console
+sudo docker build -t rouana -f docker/Dockerfile .
+sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana python train.py
 ```
+
+### Teste de confiabilidade de frases
+
+```sh
+sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana python confidence.py
+```
+
