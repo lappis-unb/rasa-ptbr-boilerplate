@@ -157,7 +157,7 @@
 - sou incentivador, quanto posso receber como dedução de imposto de renda??
 
 ## intent:oqueeh_estadoSalic
-- o que significa A12
+- o que significa [A12](estadoSalic)
 - tenho dúvida sobre o estado
 - o que é estado
 - onde posso saber mais sobre o estado
