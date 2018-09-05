@@ -745,6 +745,7 @@ templates:
           Elas que avaliam o orçamento e adequação do projeto.
 
   utter_geralCumprimentar:
+  
     - text: |
         Olá, meu  nome é Taís, sou assistente virtual do MinC
 
@@ -768,6 +769,7 @@ templates:
 
     - text: |
         Você quer se informar sobre a *lei Rouanet* ou sobre *propostas e projetos*?
+
   utter_geralExplicarDefinicaoPerfil:
     - text: |
           Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada, o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.
@@ -776,7 +778,7 @@ templates:
 
           Do que você prefere conversar?
 
-  utter_geralNovaProposta:
+  utter_geralNovaProposta:ss
     - text: |
         Você já tem uma *proposta de projeto*?
 
@@ -884,34 +886,54 @@ templates:
       Quando surgir alguma dúvida, volte aqui!
 
       Até mais!   
+
   utter_geralDefinirContexto:
-    - text:
-        - - "Onde sua pergunta se encaixa melhor"
-          - "1. Processo e estado do projeto"
-          - "2. Preenchimento de proposta"
-          - "3. Datas e Prazos"
-          - "4. Erros do SALIC"
-          - "5. Não sei bem onde se encaixa"
+    - text: |
+          Onde sua pergunta se encaixa melhor
+
+          1. Processo e estado do projeto
+
+          2. Preenchimento de proposta
+
+          3. Datas e Prazos
+
+          4. Erros do SALIC
+
+          5. Não sei bem onde se encaixa
+
   utter_geralSubmissaoDeProjetos:
-    - text:
-        - - "Tudo bem. Aqui vai um resumo do processo:"
-          - "A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica."
-          - "Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos."
-          - "Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto."
-          - "Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet."
-          - "A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto."
-          - "O primeiro passo para você particiar deste processo é ter cadastro no SALIC"
+    - text: |
+          Tudo bem. Aqui vai um resumo do processo:
+
+          A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
+
+          Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
+
+          Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
+
+          Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
+
+          A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
+
+          O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+
   utter_geralAviso:
-    - text:
-        - - "Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas."
-          - "Você já preencheu uma proposta? (Sim ou Não)"
+    - text: |
+          Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.
+
+          Você já preencheu uma proposta? (Sim ou Não)
+
   utter_geralIntroduzirExecucao:
-    - text:
-        - - "Eu ainda não aprendi a falar sobre um projeto que está em Execução em Prestação de Contas. Ainda estou aprendendo.."
-          - "Em breve eu poderei responder sua dúvida"
-          - "Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC"
-          - "Execução: acompanhamento.incentivo@cultura.gov.br"
-          - "Prestação de Contas: prestacaodecontas.incentivo@cultura.gov.br"
+    - text: |
+          Eu ainda não aprendi a falar sobre um projeto que está em Execução em Prestação de Contas. Ainda estou aprendendo..
+
+          Em breve eu poderei responder sua dúvida
+
+          Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC
+
+          Execução: acompanhamento.incentivo@cultura.gov.br
+
+          Prestação de Contas: prestacaodecontas.incentivo@cultura.gov.br
 
   utter_geralJaEhProponente:
 
@@ -978,6 +1000,7 @@ templates:
 
   utter_geralIntroduzirContextoNovaProposta:
     - text: |
+
         Que bom! Vamos focar no seu projeto!
         
         Você tem dúvidas sobre ele?
@@ -1033,6 +1056,7 @@ templates:
 
   utter_curiosidadesMais:
     - text: |
+
         Você quer saber mais curiosidades?
 
     - text: |
