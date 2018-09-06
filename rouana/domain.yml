@@ -724,11 +724,11 @@ templates:
 
   utter_oqueEhSalicPrestacaoDeContas:
     - text: |
-          É a fase realizada no final do projeto, onde o proponente
+          É a fase do final do projeto, onde o proponente
 
           deve apresentar todas as notas fiscais e contratos realizados
 
-          afim de provar o gasto correto do recurso.
+          a fim de provar os gastos do projeto.
 
   utter_oqueEhSalic:
     - text: |
