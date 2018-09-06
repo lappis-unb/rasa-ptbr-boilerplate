@@ -93,7 +93,18 @@ slots:
 
 templates:
   utter_default:
-    - text: "Desculpe, não consegui te entender. Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue? \nEx: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?"
+    - text: |
+        Desculpe, não consegui te entender.
+
+        Você pode perguntar de novo de outro jeito?
+    - text: |
+        Desculpe, não consegui te compreender.
+
+        Você pode perguntar de novo de outro modo?
+    - text: |
+        Desculpe, não entendi.
+
+        Você pode perguntar de novo de outra maneira?
   utter_restart:
     - text: "reiniciando =D"
 
