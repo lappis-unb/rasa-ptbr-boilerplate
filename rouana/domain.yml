@@ -110,14 +110,14 @@ templates:
 
   utter_curiosidadesIndicacao:
     - text: |
-          Legal! Meu assunto favorito
+          Você quer saber algumas curiosidades sobre a *Lei Rouanet*?
 
-          Você pode me perguntar algumas curiosidades sobre a Lei Rouanet
+    - text: |
+          Você quer saber mais sobre a *Lei Rouanet*?
 
-          Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei.
-
-          Qual a sua pergunta? Vou tentar responder da melhor maneira possível
-
+    - text: |
+          Você quer aprender mais sobre a *Lei Rouanet*?  
+              
   utter_oqueEhSalic_A12:
     - text: |
           O estado A12 acontece durante a fase de Admissibilidade, e significa aguarda complementação de documentos
