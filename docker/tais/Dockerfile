@@ -7,6 +7,8 @@ add ./requirements.txt /tmp
 run pip install -r /tmp/requirements.txt  && \
     python -m spacy download pt
 
+run pip uninstall -y tensorflow && pip install tensorflow==1.5
+
 run apt-get remove --purge -y git         && \
     mkdir /rouana
 
