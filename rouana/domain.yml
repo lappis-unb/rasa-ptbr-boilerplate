@@ -646,7 +646,7 @@ templates:
 
   utter_oqueEhSalicLeiRouanet:
     - text: |
-          A Lei 8.313/91, conhecida como Lei Rouanet, é o principal
+          A Lei 8.313/91, Lei Rouanet, é o principal
 
           mecanismo de fomento à Cultura do Brasil. Ela instituiu o
 
@@ -658,23 +658,12 @@ templates:
           de Cultura, o diplomata Sérgio Paulo Rouanet.
 
     - text: |
-          A Lei estabelece as normativas de como o Governo Federal deve
+          A Lei estabelece as normativas de como o GDF deve
 
           disponibilizar recursos para a realização de projetos
 
           artístico-culturais.
-
-    - text: |
-          A Lei foi concebida originalmente com três mecanismos: o Fundo
-
-          Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de
-
-          Investimento Cultural e Artístico (Ficart). Este nunca foi
-
-          implementado, enquanto o Incentivo Fiscal – também chamado de
-
-          mecenato – prevaleceu e chega ser confundido com a própria Lei.
-
+          
   utter_oqueEhSalicMinc:
     - text: |
           O Ministério da Cultura (MinC) é o responsável pela aprovação e
@@ -1117,6 +1106,7 @@ templates:
 
     - text: |
         Você gostaria de saber mais curiosidades?
+
   utter_curiosidadesMaisSim:
     - text: |
         EBA!
@@ -1132,6 +1122,7 @@ templates:
         EBA!
 
         De qual assunto você quer saber?
+        
   utter_curiosidadesMaisNao:
     - text:
         Tudo bem, então você quer saber sobre *projetos e propostas*?
