@@ -785,7 +785,7 @@ templates:
           
           como funciona projeto,como submeter um projeto, etc.
 
-          Onde a sua dúvida se encaixa?
+          Do que você prefere falar?
 
   utter_geralNovaProposta: 
     - text: |
@@ -856,7 +856,7 @@ templates:
 
   utter_geralDefinirContexto:
     - text: |
-          Onde sua pergunta se encaixa melhor
+          A sua pergunta faz parte de qual categoria?
 
           1. Processo e estado do projeto
 
@@ -866,7 +866,7 @@ templates:
 
           4. Erros do SALIC
 
-          5. Não sei bem onde se encaixa
+          5. Em nenhuma das opções
 
   utter_geralSubmissaoDeProjetos:
         Você quer esclarecer dúvidas sobre *captação de verba*
