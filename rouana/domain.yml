@@ -762,6 +762,7 @@ templates:
         Oi, sou assistente virtual do MinC, me chamo Taís
 
         Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
+
   utter_geralDefinirPerfil:
     - text: |
         Suas dúvidas são sobre a *lei Rouanet* ou estão relacionadas à *propostas e projetos*?
@@ -774,11 +775,17 @@ templates:
 
   utter_geralExplicarDefinicaoPerfil:
     - text: |
-          Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada, o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.
+          O que você pode saber sobre a *lei Rounet*:
+          
+          como ela foi criada, o que ela proporciona, 
+          
+          de onde vem o dinheiro usado na lei, etc.
 
-          Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa. Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto, ou como submeter um projeto, entre outras.
+          o que você pode saber sobre *projetos*:
+          
+          como funciona projeto,como submeter um projeto, etc.
 
-          Do que você prefere conversar?
+          Onde a sua dúvida se encaixa?
 
   utter_geralNovaProposta: 
     - text: |
