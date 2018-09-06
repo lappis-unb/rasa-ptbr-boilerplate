@@ -155,6 +155,7 @@
 - qual a dedução de impostos para incentivadores?
 - qual a dedução de imposto de renda para incentivadores?
 - sou incentivador, quanto posso receber como dedução de imposto de renda??
+
 ## intent:oqueeh_estadoSalic
 - o que significa [A12](estadoSalic)
 - tenho dúvida sobre o estado
@@ -931,3 +932,188 @@
 - como cadastrar um proponente
 - quero cadastrar um proponente
 - cadastrar proponente
+
+## intent:oqueeh_cadastro_salic_video
+- estou com dificuldades para me cadastrar
+- não consigo me cadastrar
+- preciso de ajuda para me cadastrar
+- ajuda cadastro
+- como faço para me cadastrar
+- cadastro salic
+
+## intent:oqueeh_explicar_cadastro_salic
+- estou com dificuldades para me cadastrar
+- não consigo me cadastrar
+- preciso de ajuda para me cadastrar
+- ajuda cadastro
+- como faço para me cadastrar
+- cadastro salic
+
+## intent:oqueeh_inscricao_proponente
+- como inscrever um proponente
+- como me tornar um proponente
+- como cadastrar um proponente
+- como me inscrever como proponente
+- como me cadastrar como proponente
+
+## intent:oqueeh_introduzir_contexto_nova_proposta
+- tenho duvidas sobre inserir nova proposta
+- como inserir nova proposta
+- quero inserir nova proposta
+- preciso de ajuda para inserir nova proposta
+
+## intent:oqueeh_introduzir_contexto_nao_execucao
+- não quero executar um projeto
+- etapas do processo
+- tenho duvidas quanto as etapas do projeto
+
+## intent:oqueeh_explicar_contextos
+- gostaria de saber sobre as categorias existentes
+- quais as categorias existentes
+- quais são as opções de categorias
+- categorias
+
+## intent:oqueeh_escolheu_contexto_errado
+- não respondeu minha duvida
+- não obtive a resposta solicitada
+- não respondeu a pergunta
+- resposta não condizente
+- não respondeu
+
+## intent:oqueeh_curiosidades_mais
+- ainda tenho duvidas
+- duvida
+
+## intent:oqueeh_curiosidades_falar_sobre_projetos
+- quero saber sobre projetos
+- me fale sobre projetos
+- gostaria de saber mais sobre projetos
+- o que mais devo saber sobre projetos
+
+## intent:oqueeh_explicar_preenchimento
+- como posso fazer o preenchimento
+- preciso de ajuda no preenchimento
+- como realizar o preenchimento
+- tenho duvidas quanto ao preenchimento
+
+## intent:oqueeh_preenchimento_campo_custo_auditoria
+- como devo preencher o campo custo auditoria
+- campo custo auditoria
+- prenchimento custo auditoria
+- preenchimento campo custo auditoria
+- custo auditoria
+
+## intent:oqueeh_preenchimento_vinculo_de_propostas
+- como devo preencher o campo vinculo de proposta
+- campo vinculo de proposta
+- preenchimento vinculo proposta
+- preenchimento campo vinculo proposta
+- vinculo de proposta
+
+
+## intent:oqueeh_preenchimento_valor_ingresso
+- como devo preencher o campo valor ingresso
+- campo valor ingresso
+- preenchimento valor ingresso
+- preenchimento campo valor ingresso
+- valor ingresso
+
+## intent:oqueeh_preenchimento_vinculo_cpf_proposta
+- como devo preencher o campo vinculo proposta com responsável
+- campo vinculo proposta com responsável
+- preenchimento vinculo proposta adicionando o responsável
+- preenchimento do campo vinculo proposta adicionando o responsável
+- adicionar responsável na proposta
+
+## intent:oqueeh_preenchimento_agencia_bancaria
+- como devo preencher o campo agencia bancária
+- como preencher agencia bancária
+- qual deve ser a agencia bancária
+- agencia bancária
+
+## intent:oqueeh_explicar_erros_salic
+- estou com problemas no salic
+- perdi meus dados no salic
+- recuperar senha salic
+- problema com dados
+- erros salic
+- problemas com dados preenchidos
+
+## intent:oqueeh_erro_salic_planilha_desaparecida
+- perdi minha planilha
+- planilha desapareceu
+- perdi meus dados da planilha
+- o que devo fazer ao perder a planilha
+- como recuperar planilha
+
+## intent:oqueeh_erro_salic_erro_salvamento
+- por que perdi minha planilha
+- por que os dados da minha planilha desapareceu
+- meus dados não foram salvos
+- o que fazer quando dados não são salvos
+
+## intent:oqueeh_erro_salic_recuperacao_de_senha
+- perdi minha senha
+- como recuperar minha senha
+- preciso recuperar minha senha
+- como posso recuperar minha senha
+- preciso de uma nova senha
+- recuperar senha
+
+## intent:oqueeh_erro_salic_erro_vinculo_cpf_cnpj
+- como posso vincular pessoa física ao cnpj
+- quem pode vincular uma pessoa física ao cnpj
+- vinculo de pessoa física ao cnpj
+
+## intent:oqueeh_erro_salic_erro_achar_proposta
+- como faço para achar propostas
+- desejo listar propostas
+- como listar propostas
+- como achar propostas
+
+## intent:oqueeh_processo_explicar_processo
+- gostaria de saber como funciona o processo
+- como funciona o processo de submissão de projeto
+- como funciona o processo de captação de verbas
+
+## intent:oqueeh_processo_processo_captacao_de_recursos
+- como funciona o processo de captação de recursos
+- captação de recursos
+- processo de captação de recursos
+- gostaria de saber sobre o processo de captação de recursos
+- quero saber sobre a forma de captar recursos
+- como posso captar recursos
+- como captar recursos para meu projeto
+
+## intent:oqueeh_processo_reativacao_de_proposta
+- como reativar uma proposta
+- gostaria de saber como reativar minha proposta
+- como fazer um pedido de reativação de proposta
+- reativar proposta
+- reativação de proposta
+
+##  intent:oqueeh_processo_cadastro_proponente
+- como cadastrar proponente
+- desejo cadastrar proponente
+- como fazer para cadastrar um proponente
+- cadastrar proponente
+
+## intent:oqueeh_prazo_explicar_prazo
+- gostaria de saber sobre datas
+- gostaria de saber sobre prazos
+- prazos
+- datas
+
+## intent:oqueeh_prazo_envio_cnae
+- qual o prazo de envio do cnae
+- prazo de envio cnae  
+- prazo de resposta cnae
+- solicitação de envio cnae
+
+## intent:oqueeh_prazo_desistir_recurso
+- como recusar recurso
+- como fazer quando houver desistência do recurso
+- desistência
+- como desistir de recurso
+- recusar recurso
+- desistir de recurso
