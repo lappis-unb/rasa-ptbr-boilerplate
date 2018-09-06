@@ -1,5 +1,6 @@
 intents:
   - o_que_eh
+  - oqueeh_estadoSalic
   - cumprimentar
   - afirmar_curiosidades
   - afirmar_projeto
