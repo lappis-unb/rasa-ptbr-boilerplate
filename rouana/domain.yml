@@ -738,15 +738,13 @@ templates:
 
           projetos aprovados pela Lei Rouanet.
 
-          Para mais informações: *salic.cultura.gov.br*
+          Acesse: *salic.cultura.gov.br*
 
   utter_oqueEhSalicVinculada:
     - text: |
-          As vinculadas são órgãos associados ao MinC especialistas nas
-
-          áreas específicas que a Lei Rouanet cobre.
-
-          Elas que avaliam o orçamento e adequação do projeto.
+          As vinculadas são órgãos associados ao MinC
+          
+          que avaliam o orçamento e adequação do projeto.
 
   utter_geralCumprimentar:
   
