@@ -734,11 +734,11 @@ templates:
     - text: |
           Sistema de Apoio às Leis de Incentivo à Cultura (SALIC) é o
 
-          sistema utilizado para submeter propostas e gerenciar os
+          sistema utilizado para submeter propostas e gerenciar
 
           projetos aprovados pela Lei Rouanet.
 
-          Você pode acessa-lo aqui: salic.cultura.gov.br
+          Para mais informações: *salic.cultura.gov.br*
 
   utter_oqueEhSalicVinculada:
     - text: |
