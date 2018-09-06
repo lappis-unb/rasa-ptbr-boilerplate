@@ -810,7 +810,7 @@ templates:
         para execução de um projeto?
      - text: |
         Você quer esclarecer dúvidas sobre *captação de verba*
-        
+
         para execução de um projeto?
 
   utter_geralConheceProcesso:
@@ -825,8 +825,15 @@ templates:
         para execução de um projeto?
 
   utter_geralCadastroSalic:
-    - text: "Você já tem cadastro no SALIC? (Sim ou Não)"
-
+    - text: |
+        Você já tem cadastro no SALIC?
+    
+    - text: | 
+        Você já fez seu cadastro no SALIC?
+    
+    - text: |
+        você já se inscreveu no SALIC?
+        
   utter_geralDespedir:
     - text: |
           Espero que eu tenha conseguido esclarecer suas dúvidas.
