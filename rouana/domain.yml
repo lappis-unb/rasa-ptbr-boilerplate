@@ -638,11 +638,17 @@ templates:
 
   utter_oqueEhSalicRouana:
     - text: |
-          Uma assistente virtual, como eu, é um programa de computador criado para ajudar as pessoas a sanarem suas dúvidas de maneira simples
+          Uma assistente virtual é um programa de computador 
+          
+          criado para interagir com as pessoas. 
+          
+          Meu objetivo é sanar dúvidas sobre a lei Rouanet.
 
-          Apesar de eu ser um \"computador\", eu ainda estou aprendendo várias coisas para poder te ajudar melhor
+          Em cada interação que temos aqui, eu aprendendo mais 
+          
+          para que a gente se comunique melhor.
 
-          Conversando comigo você também pode me ajudar a alcançar isso
+          Obrigada por conversar comigo!
 
   utter_oqueEhSalicLeiRouanet:
     - text: |
@@ -663,7 +669,7 @@ templates:
           disponibilizar recursos para a realização de projetos
 
           artístico-culturais.
-          
+
   utter_oqueEhSalicMinc:
     - text: |
           O Ministério da Cultura (MinC) é o responsável pela aprovação e
