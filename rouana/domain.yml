@@ -898,7 +898,7 @@ templates:
 
     - text: |
           Você já possui uma proposta preenchida?
-          
+
 
   utter_geralIntroduzirExecucao:
     - text: |
@@ -972,12 +972,6 @@ templates:
           A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
 
           O primeiro passo para você particiar deste processo é ter cadastro no SALIC
-
-  utter_geralAviso:
-    - text: |
-          Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.
-
-          Você já preencheu uma proposta? (Sim ou Não)
 
   utter_geralIntroduzirExecucao:
     - text: |
@@ -1078,7 +1072,12 @@ templates:
           Vamos saná-las juntos? (Sim ou Não)
 
   utter_geralMaisAlgumaPergunta:
-    - text: "Você possui mais alguma dúvida? (Sim ou Não)"
+    - text: 
+          Você possui mais alguma dúvida?
+
+          Você tem mais alguma dúvida?
+
+          Você tem mais alguma pergunta?
 
   utter_geralMaisPerguntasAfirmativa:
     - text: "Que bom! Espero estar ajudando"
