@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+    <title>Tais - Assistente Virtual da Cultura</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta name="description" content="TAIS (Tecnologia de Aprendizado Interativo Salic )">
+
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+</head>
+
+<body>
+    <script type="text/javascript">
+        // XXX: Hard coded URLs
+        var host = 'http://localhost:3000';
+
+        if (window.location.origin.includes('dev.lappis.rocks')) {
+            host = 'https://taischat.dev.lappis.rocks';
+        }
+        else if (window.location.origin.includes('lappis.rocks')) {
+            host = 'https://taischat.lappis.rocks';
+        }
+
+        (function(w, d, s, u) {
+            w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+            var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true; j.src = host + '/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js';
+            h.parentNode.insertBefore(j, h);
+        })(window, document, 'script', host + '/livechat');
+    </script>
+</body>
+
+</html>
+

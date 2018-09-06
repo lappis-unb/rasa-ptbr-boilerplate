@@ -44,6 +44,7 @@
         }
         else {
             console.log('User not found');
+            if (requires_login) window.location.href = window.location.origin + '/login.html';
         }
 
         if (!requires_login || user != null) {
