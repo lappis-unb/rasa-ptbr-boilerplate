@@ -165,6 +165,6 @@
 - para que serve esse estado [B14](estadoSalic)
 - no que é usado o estado [A16](estadoSalic)
 - o que é estado [A42](estadoSalic)
-]- o que significa [B11](estadoSalic)
+- o que significa [B11](estadoSalic)
 - tenho dúvida sobre o estado [B20](estadoSalic)
 - me explique o que é o estado [C09](estadoSalic)
