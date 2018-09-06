@@ -802,7 +802,15 @@ templates:
     - text: "Você tem dúvida em relação à captação de verba e execução do projeto? (Sim ou Não)"
 
   utter_geralConheceProcesso:
-    - text: "Você sabe como funciona o andamento de um projeto de incentivo a cultura? (Sim ou Não)"
+    - text: |
+        Sua dúvida é sobre *captação de verba* 
+
+        para execução de um projeto?
+
+    - text: |
+        Você quer saber como funciona a *captação de verba* 
+
+        para execução de um projeto?
 
   utter_geralCadastroSalic:
     - text: "Você já tem cadastro no SALIC? (Sim ou Não)"
@@ -831,6 +839,7 @@ templates:
 
   utter_geralSubmissaoDeProjetos:
         Você quer esclarecer dúvidas sobre *captação de verba*
+        
         para execução de um projeto?
   
   utter_geralConheceProcesso:
@@ -1359,6 +1368,7 @@ templates:
           Caso concorde com o enquadramento dado é possível desistir desse prazo
 
           Ambas as manifestações se dão por via da aba \"recurso\" no Menu ao lado esquerdo da tela do projeto, no Salic
+
 
   utter_cumprimentar:
     - text: |
