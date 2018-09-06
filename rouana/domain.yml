@@ -117,7 +117,7 @@ templates:
 
     - text: |
           Você quer aprender mais sobre a *Lei Rouanet*?  
-              
+
   utter_oqueEhSalic_A12:
     - text: |
           O estado A12 acontece durante a fase de Admissibilidade, e significa aguarda complementação de documentos
@@ -1372,13 +1372,19 @@ templates:
 
   utter_cumprimentar:
     - text: |
-        Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a
+        Olá, meu  nome é Taís, sou assistente virtual do MinC
 
-        esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto
-    - text:
-        - - "A partir do momento em que seu projeto foi enquadrado, iniciou-se o prazo de 10 dias corridos para recorrer ao enquadramento proposto para o projeto"
-          - "Caso concorde com o enquadramento dado é possível desistir desse prazo"
-          - "Ambas as manifestações se dão por via da aba \"recurso\" no Menu ao lado esquerdo da tela do projeto, no Salic"
+         Estou aqui para te ajudar a sanar dúvidas sobre a lei Rouanet
+    
+    - text: |
+        Oi, eu sou a Taís, assistente virtual do MinC
+
+         Estou aqui para te ajudar a tirar dúvidas sobre a lei Rouanet
+      
+    - text: |
+        Oi, sou assistente virtual do MinC, me chamo Taís
+        
+         Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
 
   utter_definir_perfil:
     - text: |
