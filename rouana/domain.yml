@@ -674,7 +674,7 @@ templates:
     - text: |
           O Ministério da Cultura (MinC) é o responsável pela aprovação e
 
-          monitoramento dos projetos submetidos para captação.
+          monitoramento dos projetos submetidos.
 
   utter_oqueEhSalicSefic:
     - text: |
