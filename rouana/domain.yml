@@ -891,9 +891,14 @@ templates:
 
   utter_geralAviso:
     - text: |
-          Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.
+          Você já preencheu uma proposta?
+    
+    - text: |
+          Você já tem uma proposta preenchida?
 
-          Você já preencheu uma proposta? (Sim ou Não)
+    - text: |
+          Você já possui uma proposta preenchida?
+          
 
   utter_geralIntroduzirExecucao:
     - text: |
