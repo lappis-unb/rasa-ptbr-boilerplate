@@ -740,3 +740,194 @@
 - para que serve esse estado
 - no que é usado o estado
 
+## intent:oqueeh_salic_rouana
+- o que é rouana
+- me explique o que é rouana
+- para que serve a rouana
+- pelo que a rouana é responsável
+- rouana
+
+## intent:oqueeh_salic_lei_rouanet
+- o que é lei rouanet
+- por que o nome lei rouanet
+- pelo que a lei é responsável
+- tenho duvida sobre a lei rouanet
+- quando a lei foi criada
+- quando a lei foi concebida
+- lei rouanet
+
+## intent:oqueeh_salic_minc
+- o que é o minc
+- tenho duvida sobre o minc
+- pelo que o minc é responsável
+- minc
+
+## intent:oqueeh_salic_sefic
+- o que é sefic
+- tenho duvida sobre o sefic
+- pelo que o sefic é responsável
+- sefic
+
+## intent:oqueeh_salic_projeto
+- o que é projeto
+- projeto
+
+## intent:oqueeh_salic_proposta
+- o que é proposta
+- como fazer uma proposta
+- proposta
+
+## intent:oqueeh_salic_proponente
+- o que é proponente
+- quem pode ser um proponente
+- o que faz um proponente
+- pelo que um proponente é responsável
+- proponente
+
+## intent:oqueeh_salic_preenchimento
+- o que é preenchimento
+- como realizar o preenchimento
+- o que fazer no preenchimento
+- preenchimento
+
+## intent:oqueeh_salic_admissibilidade
+- o que é admissibilidade
+- para que serve a admissibilidade
+- como acontece a admissibilidade
+- o que é gerado na fase de admissibilidade
+- o que acontece na admissibilidade
+- admissibilidade
+
+## intent:oqueeh_salic_aprovacao
+- o que é aprovação
+- para que serve a aprovação
+- como acontece a admissibilidade
+- o que é gerado na fase de aprovação
+- o que acontece na aprovação
+- aprovação
+
+## intent:oqueeh_salic_execucao
+- o que é execução
+- o que faz parte da execução
+- o que ocorre na execução
+- o que é gerado na fase de execução
+- execução
+
+## intent:oqueeh_salic_prestacao_de_contas
+- o que é prestaçãod de contas
+- para que serve a prestação de contas
+- como acontece a prestação de contas
+- o que é gerado na fase de prestação de contas
+- o que acontece na prestação de contas
+- o que o proponente deve apresentar na prestação de contas
+- o que o proponente deve provar na prestação de contas
+- prestação de contas
+
+## intent:oqueeh_salic
+- o que é salic
+- para que é utilizado o salic
+- para que serve o salic
+- como posso acessar o salic
+- acessar salic
+- salic
+
+## intent:oqueeh_salic_vinculada
+- o que são vinculadas
+- em que é utilizado a vinculada
+- qual a função da vinculada
+- para que serve as vinculadas
+- o que é feito pela vinculada
+- vinculada
+- vinculadas
+
+## intent:oqueeh_cumprimentar
+- oi
+- olá
+- Boa dia
+- Boa tarde
+- Boa noite
+
+## intent:oqueeh_definir_perfil
+- tenho duvidas
+- preciso de ajuda
+- duvida
+- ajuda
+
+## intent:oqueeh_explicar_definicao_perfil
+- quero saber mais
+- não sei sobre o que quero falar
+- o que devo perguntar
+- não sei o que falar
+- estou perdido
+
+## intent:oqueeh_nova_proposta
+- tenho uma proposta
+- como criar uma proposta
+- quero gerar uma proposta
+- quero iniciar uma proposta
+- o que fazer com minha proposta
+- nova proposta
+
+## intent:oqueeh_duvida_execucao
+- como executar um projeto
+- como conseguir verba
+- captação de verba
+- executar projeto
+- verba
+
+## intent:oqueeh_conhece_processo
+- projeto de incentivo a cultura
+- como funciona o processo de andamento de projeto
+- como funciona o processo de projeto
+
+## intent:oqueeh_cadastro_salic
+- cadastro salic
+- como funciona o cadastro no salic
+- quero me cadastrar
+- como me cadastro no salic
+- cadastro salic
+
+## intent:oqueeh_despedir
+- obrigado
+- ok
+
+## intent:oqueeh_definir_contexto
+- tenho perguntas
+- gostaria de fazer perguntas
+- como funciona os processos
+- como funciona os projetos
+- como fazer preenchimento
+- como fazer proposta
+- gostaria de saber sobre datas
+- como funciona os prazos
+- erros salic
+- não sei no que tenho duvidas
+
+## intent:oqueeh_submissao_de_projetos
+- como submeter um projeto
+- o que significa submeter um projeto
+- o que preciso para submeter um projeto
+- quero submeter um projeto
+- como funciona a submissão de um projeto
+- submeter projeto
+
+## intent:oqueeh_aviso
+- como pode me ajudar
+- tenho duvidas
+- por onde devo começar
+- como começar
+- poderia me ajudar
+
+## intent:oqueeh_introduzir_execucao
+- projeto em execução em prestação de contas
+- introduzir execução
+- projeto em prestação de contas
+
+## intent:oqueeh_ja_eh_proponente
+- sou um proponente
+- cadastro proponente
+
+## intent:oqueeh_cadastro_proponente_introduzir_contexto
+- como cadastrar um proponente
+- quero cadastrar um proponente
+- cadastrar proponente
