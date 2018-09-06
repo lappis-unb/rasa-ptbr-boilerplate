@@ -713,14 +713,14 @@ templates:
   utter_oqueEhSalicAprovacao:
     - text: |
           Aprovação é a fase onde o MinC e a vinculada
-          
+
           estão julgando a validade do projeto
 
   utter_oqueEhSalicExecucao:
     - text: |
-          Execução é a fase referente ao andamento do projeto
-
-          que possue atividades como captação de recursos e realização do projeto.
+          Execução é a fase do projeto que possui atividades 
+          
+          como captação de recursos e realização do projeto.
 
   utter_oqueEhSalicPrestacaoDeContas:
     - text: |
