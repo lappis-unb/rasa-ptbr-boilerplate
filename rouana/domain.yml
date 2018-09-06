@@ -878,13 +878,13 @@ templates:
 
   utter_geralCadastroSalic:
     - text: |
-        Você já tem cadastro no SALIC?
+        Você já tem cadastro no *SALIC*?
     
     - text: | 
-        Você já fez seu cadastro no SALIC?
+        Você já fez seu cadastro no *SALIC*?
     
     - text: |
-        você já se inscreveu no SALIC?
+        você já se inscreveu no *SALIC*?
   utter_geralDespedir:
     - text: |
         Foi um prazer te ajudar! 
