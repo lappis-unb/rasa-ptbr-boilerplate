@@ -94,19 +94,30 @@ slots:
 
 templates:
   utter_default:
-    - text: "Desculpe, não consegui te entender. Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue? \nEx: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?"
+    - text: |
+        Desculpe, não consegui te entender.
+
+        Você pode perguntar de novo de outro jeito?
+    - text: |
+        Desculpe, não consegui te compreender.
+
+        Você pode perguntar de novo de outro modo?
+    - text: |
+        Desculpe, não entendi.
+
+        Você pode perguntar de novo de outra maneira?
   utter_restart:
     - text: "reiniciando =D"
 
   utter_curiosidadesIndicacao:
     - text: |
-          Legal! Meu assunto favorito
+          Você quer saber algumas curiosidades sobre a *Lei Rouanet*?
 
-          Você pode me perguntar algumas curiosidades sobre a Lei Rouanet
+    - text: |
+          Você quer saber mais sobre a *Lei Rouanet*?
 
-          Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei.
-
-          Qual a sua pergunta? Vou tentar responder da melhor maneira possível
+    - text: |
+          Você quer aprender mais sobre a *Lei Rouanet*?  
 
   utter_oqueEhSalic_A12:
     - text: |
@@ -628,15 +639,21 @@ templates:
 
   utter_oqueEhSalicRouana:
     - text: |
-          Uma assistente virtual, como eu, é um programa de computador criado para ajudar as pessoas a sanarem suas dúvidas de maneira simples
+          Uma assistente virtual é um programa de computador 
+          
+          criado para interagir com as pessoas. 
+          
+          Meu objetivo é sanar dúvidas sobre a lei Rouanet.
 
-          Apesar de eu ser um \"computador\", eu ainda estou aprendendo várias coisas para poder te ajudar melhor
+          Em cada interação que temos aqui, eu aprendendo mais 
+          
+          para que a gente se comunique melhor.
 
-          Conversando comigo você também pode me ajudar a alcançar isso
+          Obrigada por conversar comigo!
 
   utter_oqueEhSalicLeiRouanet:
     - text: |
-          A Lei 8.313/91, conhecida como Lei Rouanet, é o principal
+          A Lei 8.313/91, Lei Rouanet, é o principal
 
           mecanismo de fomento à Cultura do Brasil. Ela instituiu o
 
@@ -648,36 +665,23 @@ templates:
           de Cultura, o diplomata Sérgio Paulo Rouanet.
 
     - text: |
-          A Lei estabelece as normativas de como o Governo Federal deve
+          A Lei estabelece as normativas de como o GDF deve
 
           disponibilizar recursos para a realização de projetos
 
           artístico-culturais.
 
-    - text: |
-          A Lei foi concebida originalmente com três mecanismos: o Fundo
-
-          Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de
-
-          Investimento Cultural e Artístico (Ficart). Este nunca foi
-
-          implementado, enquanto o Incentivo Fiscal – também chamado de
-
-          mecenato – prevaleceu e chega ser confundido com a própria Lei.
-
   utter_oqueEhSalicMinc:
     - text: |
           O Ministério da Cultura (MinC) é o responsável pela aprovação e
 
-          monitoramento dos projetos submetidos para captação.
+          monitoramento dos projetos submetidos.
 
   utter_oqueEhSalicSefic:
     - text: |
           A (Secretaria de Fomento e Incentivo à Cultura) planeja,
 
-          coordena e supervisiona a operacionalização do Programa
-
-          Nacional de Apoio à Cultura (Pronac), na aprovação,
+          coordena e supervisiona a operacionalização Pronac, na aprovação,
 
           monitoramento e prestação de contas de projetos culturais.
 
@@ -709,75 +713,236 @@ templates:
 
   utter_oqueEhSalicAprovacao:
     - text: |
-          Aprovação é a fase onde o MinC e a vinculada estão julgando a validade do
+          Aprovação é a fase onde o MinC e a vinculada
 
-          projeto
+          estão julgando a validade do projeto
 
   utter_oqueEhSalicExecucao:
     - text: |
-          Execução é a fase referente ao andamento do projeto
-
-          que possue atividades como captação de recursos e realização do projeto.
+          Execução é a fase do projeto que possui atividades 
+          
+          como captação de recursos e realização do projeto.
 
   utter_oqueEhSalicPrestacaoDeContas:
     - text: |
-          É a fase realizada no final do projeto, onde o proponente
+          É a fase do final do projeto, onde o proponente
 
           deve apresentar todas as notas fiscais e contratos realizados
 
-          afim de provar o gasto correto do recurso.
+          a fim de provar os gastos do projeto.
 
   utter_oqueEhSalic:
     - text: |
           Sistema de Apoio às Leis de Incentivo à Cultura (SALIC) é o
 
-          sistema utilizado para submeter propostas e gerenciar os
+          sistema utilizado para submeter propostas e gerenciar
 
           projetos aprovados pela Lei Rouanet.
 
-          Você pode acessa-lo aqui: salic.cultura.gov.br
+          Acesse: *salic.cultura.gov.br*
 
   utter_oqueEhSalicVinculada:
     - text: |
-          As vinculadas são órgãos associados ao MinC especialistas nas
-
-          áreas específicas que a Lei Rouanet cobre.
-
-          Elas que avaliam o orçamento e adequação do projeto.
+          As vinculadas são órgãos associados ao MinC
+          
+          que avaliam o orçamento e adequação do projeto.
 
   utter_geralCumprimentar:
-    - text: "Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto"
+  
+    - text: |
+        Olá, meu  nome é Taís, sou assistente virtual do MinC
+
+        Estou aqui para te ajudar a sanar dúvidas sobre a lei Rouanet
+    
+    - text: |
+        Oi, eu sou a Taís, assistente virtual do MinC
+
+        Estou aqui para te ajudar a tirar dúvidas sobre a lei Rouanet
+      
+    - text: |
+        Oi, sou assistente virtual do MinC, me chamo Taís
+
+        Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
 
   utter_geralDefinirPerfil:
-    - text: "Você prefere conversar sobre criação e andamento de projetos, ou prefere falar mais sobre a Lei Rouanet?"
+    - text: |
+        Suas dúvidas são sobre a *lei Rouanet* ou estão relacionadas à *propostas e projetos*?
+
+    - text: |
+        Você quer tirar dúvidas sobre a *lei Rouanet* ou sobre *propostas e projetos*?
+
+    - text: |
+        Você quer se informar sobre a *lei Rouanet* ou sobre *propostas e projetos*?
 
   utter_geralExplicarDefinicaoPerfil:
     - text: |
-          Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada, o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.
+          O que você pode saber sobre a *lei Rounet*:
+          
+          como ela foi criada, o que ela proporciona, 
+          
+          de onde vem o dinheiro usado na lei, etc.
 
-          Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa. Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto, ou como submeter um projeto, entre outras.
+          o que você pode saber sobre *projetos*:
+          
+          como funciona projeto,como submeter um projeto, etc.
 
-          Do que você prefere conversar?
+          Do que você prefere falar?
 
-  utter_geralNovaProposta:
-    - text: "Você já começou a trabalhar em uma nova proposta de projeto? (Sim ou Não)"
+  utter_geralNovaProposta: 
+    - text: |
+        Você já tem uma *proposta de projeto*?
+
+    - text: |
+        Você já fez uma *proposta de projeto*?
+    
+    - text: |
+        Você já criou uma *proposta de projeto*?
 
   utter_geralDuvidaExecucao:
-    - text: "Você tem dúvida em relação à captação de verba e execução do projeto? (Sim ou Não)"
+    - text: |
+        Sua dúvida é sobre *captação de verba* 
+
+        para execução de um projeto?
+     - text: |
+        Você quer saber como funciona a *captação de verba* 
+
+        para execução de um projeto?
+     - text: |
+        Você quer esclarecer dúvidas sobre *captação de verba*
+
+        para execução de um projeto?
 
   utter_geralConheceProcesso:
-    - text: "Você sabe como funciona o andamento de um projeto de incentivo a cultura? (Sim ou Não)"
+    - text: |
+        Sua dúvida é sobre *captação de verba* 
+
+        para execução de um projeto?
+
+    - text: |
+        Você quer saber como funciona a *captação de verba* 
+
+        para execução de um projeto?
 
   utter_geralCadastroSalic:
-    - text: "Você já tem cadastro no SALIC? (Sim ou Não)"
+    - text: |
+        Você já tem cadastro no SALIC?
+    
+    - text: | 
+        Você já fez seu cadastro no SALIC?
+    
+    - text: |
+        você já se inscreveu no SALIC?
 
   utter_geralDespedir:
     - text: |
-          Espero que eu tenha conseguido esclarecer suas dúvidas.
+        Foi um prazer te ajudar! 
 
-          Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês, se surgir alguma dúvida, não hesite, volte aqui
+        Sempre que tiver alguma dúvida, volte aqui!
 
-          Até mais!
+        Até logo!
+
+     - text: |
+        Foi um prazer te ajudar!
+       
+        Sempre que precisar, volte aqui!
+       
+        Até a próxima!
+
+     - text: |
+        Foi um prazer te ajudar!
+
+        Quando surgir alguma dúvida, volte aqui!
+
+        Até mais!   
+
+  utter_geralDefinirContexto:
+    - text: |
+          A sua pergunta faz parte de qual categoria?
+
+          1. Processo e estado do projeto
+
+          2. Preenchimento de proposta
+
+          3. Datas e Prazos
+
+          4. Erros do SALIC
+
+          5. Em nenhuma das opções
+
+  utter_geralSubmissaoDeProjetos:
+        Você quer esclarecer dúvidas sobre *captação de verba*
+        
+        para execução de um projeto?
+  
+  utter_geralConheceProcesso:
+    - text: |
+          Tudo bem. Aqui vai um resumo do processo:
+
+          A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
+
+          Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
+
+          Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
+
+          Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
+
+          A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
+
+          O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+
+  utter_geralAviso:
+    - text: |
+          Você já preencheu uma proposta?
+    
+    - text: |
+          Você já tem uma proposta preenchida?
+
+    - text: |
+          Você já possui uma proposta preenchida?
+
+
+  utter_geralIntroduzirExecucao:
+    - text: |
+          Eu ainda não aprendi a falar sobre um projeto que está em Execução em Prestação de Contas. Ainda estou aprendendo..
+
+          Em breve eu poderei responder sua dúvida
+
+          Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC
+
+          Execução: acompanhamento.incentivo@cultura.gov.br
+
+          Prestação de Contas: prestacaodecontas.incentivo@cultura.gov.br
+
+  utter_geralCadastroSalic:
+    - text: |
+        Você já tem cadastro no *SALIC*?
+    
+    - text: | 
+        Você já fez seu cadastro no *SALIC*?
+    
+    - text: |
+        você já se inscreveu no *SALIC*?
+  utter_geralDespedir:
+    - text: |
+        Foi um prazer te ajudar! 
+
+        Sempre que tiver alguma dúvida, volte aqui!
+
+        Até logo!
+
+    - text: |
+       Foi um prazer te ajudar!
+       
+       Sempre que precisar, volte aqui!
+       
+       Até a próxima!
+
+    - text: |
+      Foi um prazer te ajudar!
+
+      Quando surgir alguma dúvida, volte aqui!
+
+      Até mais!   
 
   utter_geralDefinirContexto:
     - text: |
@@ -809,12 +974,6 @@ templates:
 
           O primeiro passo para você particiar deste processo é ter cadastro no SALIC
 
-  utter_geralAviso:
-    - text: |
-          Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.
-
-          Você já preencheu uma proposta? (Sim ou Não)
-
   utter_geralIntroduzirExecucao:
     - text: |
           Eu ainda não aprendi a falar sobre um projeto que está em Execução em Prestação de Contas. Ainda estou aprendendo..
@@ -828,7 +987,15 @@ templates:
           Prestação de Contas: prestacaodecontas.incentivo@cultura.gov.br
 
   utter_geralJaEhProponente:
-    - text: "Você já tem um proponente cadastrado? (Sim ou Não)"
+
+    - text: |
+        Você já é um proponente? 
+    
+    - text: | 
+        Você já se cadastrou como proponente?
+
+    - text: |
+        Você já se tornou um proponente?   
 
   utter_geralCadastroProponenteIntroduzirContexto:
     - text: |
@@ -884,9 +1051,20 @@ templates:
 
   utter_geralIntroduzirContextoNovaProposta:
     - text: |
-          Que bom! É sempre bom trabalhar em novos projetos culturais
 
-          Se você quiser, posso tirar algumas de suas dúvidas para te ajudar neste novo projeto
+        Que bom! Vamos focar no seu projeto!
+        
+        Você tem dúvidas sobre ele?
+
+    - text: | 
+        Que ótimo! Vamos focar no seu projeto!
+
+        Que tal tirar dúvidas sobre ele?
+
+    - text: |
+        Que maravilha! Vamos focar no seu projeto!
+
+        Quer sanar alguma dúvida sobre ele?
 
   utter_geralIntroduzirContextoNaoExecucao:
     - text: |
@@ -895,7 +1073,12 @@ templates:
           Vamos saná-las juntos? (Sim ou Não)
 
   utter_geralMaisAlgumaPergunta:
-    - text: "Você possui mais alguma dúvida? (Sim ou Não)"
+    - text: 
+          Você possui mais alguma dúvida?
+
+          Você tem mais alguma dúvida?
+
+          Você tem mais alguma pergunta?
 
   utter_geralMaisPerguntasAfirmativa:
     - text: "Que bom! Espero estar ajudando"
@@ -929,19 +1112,40 @@ templates:
 
   utter_curiosidadesMais:
     - text: |
-          Gostaria de saber mais curiosidades? (Sim ou Não)
+
+        Você quer saber mais curiosidades?
+
+    - text: |
+        Você tem interesse de saber mais curiosidades?
+
+    - text: |
+        Você gostaria de saber mais curiosidades?
 
   utter_curiosidadesMaisSim:
     - text: |
-          Que bom!
+        EBA!
 
-          O que mais você gostaria de saber?
+        O que você quer saber?
 
-  utter_curiosidadesMaisNao:
     - text: |
-          Ok, podemos conversar sobre projetos e propostas
+        EBA!
 
-          Você quer falar sobre isso? (Sim ou Não)
+        Do que você quer saber?
+
+    - text: |
+        EBA!
+
+        De qual assunto você quer saber?
+        
+  utter_curiosidadesMaisNao:
+    - text:
+        Tudo bem, então você quer saber sobre *projetos e propostas*?
+
+    - text: 
+        Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
+
+    - text: 
+        Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?        
 
   utter_curiosidadesFalarSobreProjetos:
     - text: |
@@ -1203,11 +1407,22 @@ templates:
 
           Ambas as manifestações se dão por via da aba \"recurso\" no Menu ao lado esquerdo da tela do projeto, no Salic
 
+
   utter_cumprimentar:
     - text: |
-        Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a
+        Olá, meu  nome é Taís, sou assistente virtual do MinC
 
-        esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto
+         Estou aqui para te ajudar a sanar dúvidas sobre a lei Rouanet
+    
+    - text: |
+        Oi, eu sou a Taís, assistente virtual do MinC
+
+         Estou aqui para te ajudar a tirar dúvidas sobre a lei Rouanet
+      
+    - text: |
+        Oi, sou assistente virtual do MinC, me chamo Taís
+
+         Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
 
   utter_definir_perfil:
     - text: |
