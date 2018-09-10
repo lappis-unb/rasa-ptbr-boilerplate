@@ -1413,7 +1413,13 @@ templates:
 
   utter_nova_proposta:
     - text: |
-        Você já começou a trabalhar em uma nova proposta de projeto? (Sim ou Não)
+        Você já tem uma *proposta de projeto*?
+        
+     - text: |
+        Você já fez uma *proposta de projeto*?
+    
+    - text: |
+        Você já criou uma *proposta de projeto*?
 
   utter_conhece_processo:
     - text: |
