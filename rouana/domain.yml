@@ -1038,7 +1038,6 @@ templates:
 
   utter_curiosidadesMais:
     - text: |
-
         Você quer saber mais curiosidades?
 
     - text: |
@@ -1414,17 +1413,19 @@ templates:
         Sempre que tiver alguma dúvida, volte aqui!
 
         Até logo!
+
      - text: |
         Foi um prazer te ajudar!
        
         Sempre que precisar, volte aqui!
        
         Até a próxima!
+        
      - text: |
         Foi um prazer te ajudar!
 
         Quando surgir alguma dúvida, volte aqui!
-        
+
         Até mais!   
 
 
@@ -1459,11 +1460,20 @@ templates:
         Se você quiser, posso tirar algumas de suas dúvidas para te ajudar neste novo projeto
 
   utter_duvida_execucao:
-    - text: |
-        Você tem dúvida em relação à captação de verba e execução do projeto? 
-        
-        (Sim ou Não)
+  - text: |
+      Sua dúvida é sobre *captação de verba* 
 
+      para execução de um projeto?
+
+  - text: |
+      Você quer saber como funciona a *captação de verba* 
+
+        para execução de um projeto?
+  - text: |
+      Você quer esclarecer dúvidas sobre *captação de verba*
+
+      para execução de um projeto?
+      
   utter_introduzir_execucao:
     - text: |
         Eu ainda não aprendi a falar sobre um projeto que está em Execução ou
