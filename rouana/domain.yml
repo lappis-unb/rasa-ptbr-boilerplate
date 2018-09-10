@@ -1376,25 +1376,39 @@ templates:
 
   utter_curiosidades_indicacao:
     - text: |
-        Legal! Meu assunto favorito
+          Você quer saber algumas curiosidades sobre a *Lei Rouanet*?
 
-        Você pode me perguntar algumas curiosidades sobre a Lei Rouanet
+    - text: |
+          Você quer saber mais sobre a *Lei Rouanet*?
 
-        Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei.
-
-        Qual a sua pergunta? Vou tentar responder da melhor maneira possível
+    - text: |
+          Você quer aprender mais sobre a *Lei Rouanet*?  
 
   utter_curiosidades_mais_sim:
     - text: |
-        Que bom!
+        EBA!
 
-        O que mais você gostaria de saber?
+        O que você quer saber?
+
+    - text: |
+        EBA!
+
+        Do que você quer saber?
+
+    - text: |
+        EBA!
+
+        De qual assunto você quer saber?
 
   utter_curiosidades_mais_nao:
-    - text: |
-        Ok, podemos conversar sobre projetos e propostas
+    - text:
+        Tudo bem, então você quer saber sobre *projetos e propostas*?
 
-        Você quer falar sobre isso? (Sim ou Não)
+    - text: 
+        Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
+
+    - text: 
+        Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?
 
   utter_curiosidades_falar_sobre_projetos:
     - text: |
