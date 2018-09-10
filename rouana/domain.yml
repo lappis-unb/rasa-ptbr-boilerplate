@@ -1423,7 +1423,7 @@ templates:
 
     - text: |
           Você já possui uma proposta preenchida?
-          
+
   utter_despedir:
     - text: |
         Foi um prazer te ajudar! 
@@ -1507,10 +1507,20 @@ templates:
         Prestação de Contas > prestacaodecontas.incentivo@cultura.gov.br
 
   utter_introduzir_contexto_nao_execucao:
-    - text: |
-        Então suas dúvidas devem ser sobre as outras etapas do processo
+   - text: |
+        Então suas dúvidas devem ser sobre outros assuntos
 
-        Vamos saná-las juntos? (Sim ou Não)
+        Vamos sana-las juntos?
+
+    - text: |
+        Então suas perguntas devem ser sobre outros tópicos
+
+        Vamos sana-las juntos?
+
+    - text: |
+        Então suas dúvids devem se encaixar em outra categoria
+
+        vamos sana-las juntos?
 
   utter_cadastro_salic:
     - text: |
