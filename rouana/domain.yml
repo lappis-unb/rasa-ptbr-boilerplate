@@ -1349,15 +1349,17 @@ templates:
 
   utter_explicar_definicao_perfil:
     - text: |
-        Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada,
-        
-        o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.
+         O que você pode saber sobre a *lei Rounet*:
+          
+        como ela foi criada, o que ela proporciona, 
+          
+        de onde vem o dinheiro usado na lei, etc.
 
-        Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa.
-        
-        Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto, ou como submeter um projeto, entre outras.
+        o que você pode saber sobre *projetos*:
+          
+        como funciona projeto,como submeter um projeto, etc.
 
-        Sobre o que você prefere conversar?
+        Do que você prefere falar?
 
   utter_curiosidades_indicacao:
     - text: |
