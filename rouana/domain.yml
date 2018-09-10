@@ -138,7 +138,7 @@ templates:
 
   utter_oqueEhSalic_A12:
     - text: |
-          O estado A12 acontece durante a fase de Admissibilidade, e significa aguarda complementação de documentos
+          O estado A12 acontece durante a fase de Admissibilidade, e significa aguardando complementação de documentos
 
           E quando o MinC utiliza ele? Quando se solicita ao proponente documentação adicional
 
@@ -746,7 +746,7 @@ templates:
 
           deve apresentar todas as notas fiscais e contratos realizados
 
-          a fim de provar os gastos do projeto.
+                                     a fim de provar os gastos do projeto.
 
   utter_oqueEhSalic:
     - text: |
@@ -1388,13 +1388,21 @@ templates:
 
   utter_despedir:
     - text: |
-        Espero que eu tenha conseguido esclarecer suas dúvidas.
+        - text: |
+        Foi um prazer te ajudar! 
+         Sempre que tiver alguma dúvida, volte aqui!
+         Até logo!
+     - text: |
+       Foi um prazer te ajudar!
+       
+       Sempre que precisar, volte aqui!
+       
+       Até a próxima!
+     - text: |
+      Foi um prazer te ajudar!
+       Quando surgir alguma dúvida, volte aqui!
+       Até mais!   
 
-        Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês,
-
-        se surgir alguma dúvida, não hesite, volte aqui
-
-        Até mais!
 
   utter_nova_proposta:
     - text: |
