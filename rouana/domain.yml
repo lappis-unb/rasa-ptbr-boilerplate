@@ -1473,10 +1473,21 @@ templates:
 
   utter_introduzir_contexto_nova_proposta:
     - text: |
-        Que bom! É sempre bom trabalhar em novos projetos culturais
 
-        Se você quiser, posso tirar algumas de suas dúvidas para te ajudar neste novo projeto
+        Que bom! Vamos focar no seu projeto!
+        
+        Você tem dúvidas sobre ele?
 
+    - text: | 
+        Que ótimo! Vamos focar no seu projeto!
+
+        Que tal tirar dúvidas sobre ele?
+
+    - text: |
+        Que maravilha! Vamos focar no seu projeto!
+
+        Quer sanar alguma dúvida sobre ele?
+        
   utter_duvida_execucao:
   - text: |
       Sua dúvida é sobre *captação de verba* 
