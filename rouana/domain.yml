@@ -983,18 +983,27 @@ templates:
 
   utter_geralIntroduzirContextoNaoExecucao:
     - text: |
-          Então suas dúvidas devem ser sobre as outras etapas do processo
+        Então suas dúvidas devem ser sobre outros assuntos
 
-          Vamos saná-las juntos? (Sim ou Não)
+        Vamos sana-las juntos?
 
+    - text: |
+        Então suas perguntas devem ser sobre outros tópicos
+
+        Vamos sana-las juntos?
+
+    - text: |
+        Então suas dúvids devem se encaixar em outra categoria
+
+        vamos sana-las juntos?
   utter_geralMaisAlgumaPergunta:
-    - text: 
+    - text: |
         Você possui mais alguma dúvida?
 
-    - text: 
+    - text: |
         Você tem mais alguma dúvida?
 
-    - text:  
+    - text: |
       Você tem mais alguma pergunta?
 
   utter_geralMaisPerguntasAfirmativa:
@@ -1400,20 +1409,23 @@ templates:
 
   utter_despedir:
     - text: |
-        - text: |
         Foi um prazer te ajudar! 
-         Sempre que tiver alguma dúvida, volte aqui!
-         Até logo!
+
+        Sempre que tiver alguma dúvida, volte aqui!
+
+        Até logo!
      - text: |
-       Foi um prazer te ajudar!
+        Foi um prazer te ajudar!
        
-       Sempre que precisar, volte aqui!
+        Sempre que precisar, volte aqui!
        
-       Até a próxima!
+        Até a próxima!
      - text: |
-      Foi um prazer te ajudar!
-       Quando surgir alguma dúvida, volte aqui!
-       Até mais!   
+        Foi um prazer te ajudar!
+
+        Quando surgir alguma dúvida, volte aqui!
+        
+        Até mais!   
 
 
   utter_nova_proposta:
