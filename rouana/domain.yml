@@ -867,6 +867,7 @@ templates:
         A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
 
         O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+
   utter_geralAviso:
     - text: |
           Você já preencheu uma proposta?
@@ -988,11 +989,13 @@ templates:
 
   utter_geralMaisAlgumaPergunta:
     - text: 
-          Você possui mais alguma dúvida?
+        Você possui mais alguma dúvida?
 
-          Você tem mais alguma dúvida?
+    - text: 
+        Você tem mais alguma dúvida?
 
-          Você tem mais alguma pergunta?
+    - text:  
+      Você tem mais alguma pergunta?
 
   utter_geralMaisPerguntasAfirmativa:
     - text: "Que bom! Espero estar ajudando"
