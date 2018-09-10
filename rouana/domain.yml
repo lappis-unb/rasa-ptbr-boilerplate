@@ -109,22 +109,13 @@ slots:
 templates:
   utter_default:
     - text: |
-        Desculpe, não consegui te entender.
+        Desculpe, não consegui te entender
 
         Você pode perguntar de novo de outro jeito?
 
-    - text: |
-        Desculpe, não consegui te compreender.
-
-        Você pode perguntar de novo de outro modo?
-
-    - text: |
-        Desculpe, não entendi.
-
-        Você pode perguntar de novo de outra maneira?
-
   utter_restart:
-    - text: "reiniciando =D"
+    - text: | 
+        reiniciando =D
 
   utter_curiosidadesIndicacao:
     - text: |
@@ -996,15 +987,10 @@ templates:
         Então suas dúvids devem se encaixar em outra categoria
 
         vamos sana-las juntos?
+
   utter_geralMaisAlgumaPergunta:
     - text: |
         Você possui mais alguma dúvida?
-
-    - text: |
-        Você tem mais alguma dúvida?
-
-    - text: |
-      Você tem mais alguma pergunta?
 
   utter_geralMaisPerguntasAfirmativa:
     - text: "Que bom! Espero estar ajudando"
@@ -1362,15 +1348,15 @@ templates:
 
   utter_explicar_definicao_perfil:
     - text: |
-         O que você pode saber sobre a *lei Rounet*:
+        O que você pode saber sobre a *lei Rounet*
           
         como ela foi criada, o que ela proporciona, 
           
         de onde vem o dinheiro usado na lei, etc.
 
-        o que você pode saber sobre *projetos*:
+        o que você pode saber sobre *projetos*
           
-        como funciona projeto,como submeter um projeto, etc.
+        como funciona projeto, como submeter um projeto, etc.
 
         Do que você prefere falar?
 
@@ -1382,7 +1368,7 @@ templates:
           Você quer saber mais sobre a *Lei Rouanet*?
 
     - text: |
-          Você quer aprender mais sobre a *Lei Rouanet*?  
+          Você quer aprender mais sobre a *Lei Rouanet*?
 
   utter_curiosidades_mais_sim:
     - text: |
@@ -1415,11 +1401,11 @@ templates:
         Maravilha! É bom saber que você quer entender mais sobre propostas e projetos
 
   utter_aviso:
-     - text: |
-          Você já preencheu uma proposta?
-    
     - text: |
-          Você já tem uma proposta preenchida?
+          Você já preencheu uma proposta?
+
+    - text: |
+        Você já tem uma proposta preenchida?
 
     - text: |
           Você já possui uma proposta preenchida?
@@ -1432,14 +1418,14 @@ templates:
 
         Até logo!
 
-     - text: |
+    - text: |
         Foi um prazer te ajudar!
        
         Sempre que precisar, volte aqui!
        
         Até a próxima!
         
-     - text: |
+    - text: |
         Foi um prazer te ajudar!
 
         Quando surgir alguma dúvida, volte aqui!
@@ -1451,7 +1437,7 @@ templates:
     - text: |
         Você já tem uma *proposta de projeto*?
 
-     - text: |
+    - text: |
         Você já fez uma *proposta de projeto*?
     
     - text: |
@@ -1489,19 +1475,20 @@ templates:
         Quer sanar alguma dúvida sobre ele?
         
   utter_duvida_execucao:
-  - text: |
-      Sua dúvida é sobre *captação de verba* 
-
-      para execução de um projeto?
-
-  - text: |
-      Você quer saber como funciona a *captação de verba* 
+    - text: |
+        Sua dúvida é sobre *captação de verba*
 
         para execução de um projeto?
-  - text: |
-      Você quer esclarecer dúvidas sobre *captação de verba*
 
-      para execução de um projeto?
+    - text: |
+        Você quer saber como funciona a *captação de verba* 
+
+        para execução de um projeto?
+
+    - text: |
+        Você quer esclarecer dúvidas sobre *captação de verba*
+
+        para execução de um projeto?
 
   utter_introduzir_execucao:
     - text: |
@@ -1518,7 +1505,7 @@ templates:
         Prestação de Contas > prestacaodecontas.incentivo@cultura.gov.br
 
   utter_introduzir_contexto_nao_execucao:
-   - text: |
+    - text: |
         Então suas dúvidas devem ser sobre outros assuntos
 
         Vamos sana-las juntos?
@@ -1709,7 +1696,7 @@ templates:
         Você tem mais alguma dúvida?
 
     - text: |
-      Você tem mais alguma pergunta?
+        Você tem mais alguma pergunta?
 
   utter_mais_perguntas_afirmativa:
     - text: |
@@ -1803,7 +1790,6 @@ actions:
   - utter_geralExplicarDefinicaoPerfil
   - utter_geralNovaProposta
   - utter_geralDuvidaExecucao
-  - utter_geralConheceProcesso
   - utter_geralCadastroSalic
   - utter_geralDespedir
   - utter_geralDefinirContexto
