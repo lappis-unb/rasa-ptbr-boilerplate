@@ -1692,7 +1692,13 @@ templates:
         
   utter_mais_alguma_pergunta:
     - text: |
-        Você possui mais alguma dúvida? (Sim ou Não)
+        Você possui mais alguma dúvida?
+
+    - text: |
+        Você tem mais alguma dúvida?
+
+    - text: |
+      Você tem mais alguma pergunta?
 
   utter_mais_perguntas_afirmativa:
     - text: |
