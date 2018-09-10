@@ -1415,11 +1415,15 @@ templates:
         Maravilha! É bom saber que você quer entender mais sobre propostas e projetos
 
   utter_aviso:
+     - text: |
+          Você já preencheu uma proposta?
+    
     - text: |
-        Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.
+          Você já tem uma proposta preenchida?
 
-        Você já preencheu uma proposta? (Sim ou Não)
-
+    - text: |
+          Você já possui uma proposta preenchida?
+          
   utter_despedir:
     - text: |
         Foi um prazer te ajudar! 
