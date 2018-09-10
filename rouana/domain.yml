@@ -1414,7 +1414,7 @@ templates:
   utter_nova_proposta:
     - text: |
         Você já tem uma *proposta de projeto*?
-        
+
      - text: |
         Você já fez uma *proposta de projeto*?
     
@@ -1423,9 +1423,13 @@ templates:
 
   utter_conhece_processo:
     - text: |
-        Você sabe como funciona o andamento de um projeto de incentivo a cultura? 
-        
-        (Sim ou Não)
+        Você já conhece as *etapas de um projeto* pela lei Rouanet?
+    
+    - text: |
+        Você já conhece *as fases de um projeto* pela lei Rouanet?
+    
+    - text: |
+        Você já conhece *o passo a passo de um projeto* pela lei Rouanet?
 
   utter_o_que_eh:
     - text: |
