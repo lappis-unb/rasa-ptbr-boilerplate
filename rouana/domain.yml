@@ -1337,10 +1337,15 @@ templates:
          Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
 
   utter_definir_perfil:
+    
     - text: |
-        Você prefere conversar sobre criação e andamento de `projetos`, ou 
+        Suas dúvidas são sobre a *lei Rouanet* ou estão relacionadas à *propostas e projetos*?
 
-        prefere falar mais sobre a `Lei Rouanet`?
+    - text: |
+        Você quer tirar dúvidas sobre a *lei Rouanet* ou sobre *propostas e projetos*?
+        
+    - text: |
+        Você quer se informar sobre a *lei Rouanet* ou sobre *propostas e projetos*?
 
   utter_explicar_definicao_perfil:
     - text: |
