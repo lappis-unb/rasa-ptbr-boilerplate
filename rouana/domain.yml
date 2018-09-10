@@ -1473,7 +1473,7 @@ templates:
       Você quer esclarecer dúvidas sobre *captação de verba*
 
       para execução de um projeto?
-      
+
   utter_introduzir_execucao:
     - text: |
         Eu ainda não aprendi a falar sobre um projeto que está em Execução ou
@@ -1496,9 +1496,13 @@ templates:
 
   utter_cadastro_salic:
     - text: |
-        Você já tem cadastro no SALIC? 
-        
-        (Sim ou Não)
+        Você já tem cadastro no *SALIC*?
+    
+    - text: | 
+        Você já fez seu cadastro no *SALIC*?
+    
+    - text: |
+        você já se inscreveu no *SALIC*?
 
   utter_submissao_de_projetos:
     - text: |
