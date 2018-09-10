@@ -1,4 +1,4 @@
-# Rouana - Assistente Virtual da Cultura
+# Tais - Assistente Virtual da Cultura
 
 
 ## Ambiente RocketChat
