@@ -1522,7 +1522,14 @@ templates:
 
   utter_ja_eh_proponente:
     - text: |
-        Você já tem um proponente cadastrado? (Sim ou Não)
+        Você já é um proponente? 
+    
+    - text: | 
+        Você já se cadastrou como proponente?
+
+    - text: |
+        Você já se tornou um proponente?   
+
   utter_cadastro_salic_video:
     - text: |
         O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura, e é por 
