@@ -11,7 +11,7 @@ from rasa_core.policies.keras_policy import KerasPolicy
 from rasa_core.policies.memoization import MemoizationPolicy
 
 logger = logging.getLogger(__name__)
-TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 300))
+TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 400))
 
 def train_dialogue(domain_file='domain.yml',
                    model_path='models/dialogue',
@@ -30,8 +30,8 @@ def train_dialogue(domain_file='domain.yml',
     agent.train(
         training_data,
         epochs=TRAINING_EPOCHS,
-        batch_size=100,
-        validation_split=0.2
+        batch_size=120,
+        validation_split=0.25
     )
 
     agent.persist(model_path)

@@ -1024,7 +1024,6 @@ templates:
 
   utter_curiosidadesMais:
     - text: |
-
         Você quer saber mais curiosidades?
 
     - text: |
