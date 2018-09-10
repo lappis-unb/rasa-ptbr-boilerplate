@@ -138,7 +138,7 @@ templates:
 
   utter_oqueEhSalic_A12:
     - text: |
-          O estado A12 acontece durante a fase de Admissibilidade, e significa aguarda complementação de documentos
+          O estado A12 acontece durante a fase de Admissibilidade, e significa aguardando complementação de documentos
 
           E quando o MinC utiliza ele? Quando se solicita ao proponente documentação adicional
 
@@ -746,7 +746,7 @@ templates:
 
           deve apresentar todas as notas fiscais e contratos realizados
 
-          a fim de provar os gastos do projeto.
+                                     a fim de provar os gastos do projeto.
 
   utter_oqueEhSalic:
     - text: |
@@ -816,8 +816,16 @@ templates:
         Você já criou uma *proposta de projeto*?
 
   utter_geralDuvidaExecucao:
-    - text: |
+     - text: |
         Sua dúvida é sobre *captação de verba* 
+
+        para execução de um projeto?
+     - text: |
+        Você quer saber como funciona a *captação de verba* 
+
+        para execução de um projeto?
+     - text: |
+        Você quer esclarecer dúvidas sobre *captação de verba*
 
         para execução de um projeto?
 
@@ -845,12 +853,7 @@ templates:
 
   utter_geralSubmissaoDeProjetos:
     - text: |
-        Você quer esclarecer dúvidas sobre *captação de verba*
-        
-        para execução de um projeto?
-
-  utter_geralConheceProcesso:
-    - text: |
+       - text: |
         Tudo bem. Aqui vai um resumo do processo
 
         A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
@@ -980,17 +983,28 @@ templates:
 
   utter_geralIntroduzirContextoNaoExecucao:
     - text: |
-          Então suas dúvidas devem ser sobre as outras etapas do processo
+        Então suas dúvidas devem ser sobre outros assuntos
 
-          Vamos saná-las juntos? (Sim ou Não)
+        Vamos sana-las juntos?
 
+    - text: |
+        Então suas perguntas devem ser sobre outros tópicos
+
+        Vamos sana-las juntos?
+
+    - text: |
+        Então suas dúvids devem se encaixar em outra categoria
+
+        vamos sana-las juntos?
   utter_geralMaisAlgumaPergunta:
-    - text: 
-          Você possui mais alguma dúvida?
+    - text: |
+        Você possui mais alguma dúvida?
 
-          Você tem mais alguma dúvida?
+    - text: |
+        Você tem mais alguma dúvida?
 
-          Você tem mais alguma pergunta?
+    - text: |
+      Você tem mais alguma pergunta?
 
   utter_geralMaisPerguntasAfirmativa:
     - text: "Que bom! Espero estar ajudando"
@@ -1336,74 +1350,122 @@ templates:
          Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
 
   utter_definir_perfil:
+    
     - text: |
-        Você prefere conversar sobre criação e andamento de `projetos`, ou 
+        Suas dúvidas são sobre a *lei Rouanet* ou estão relacionadas à *propostas e projetos*?
 
-        prefere falar mais sobre a `Lei Rouanet`?
+    - text: |
+        Você quer tirar dúvidas sobre a *lei Rouanet* ou sobre *propostas e projetos*?
+        
+    - text: |
+        Você quer se informar sobre a *lei Rouanet* ou sobre *propostas e projetos*?
 
   utter_explicar_definicao_perfil:
     - text: |
-        Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada,
-        
-        o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.
+         O que você pode saber sobre a *lei Rounet*:
+          
+        como ela foi criada, o que ela proporciona, 
+          
+        de onde vem o dinheiro usado na lei, etc.
 
-        Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa.
-        
-        Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto, ou como submeter um projeto, entre outras.
+        o que você pode saber sobre *projetos*:
+          
+        como funciona projeto,como submeter um projeto, etc.
 
-        Sobre o que você prefere conversar?
+        Do que você prefere falar?
 
   utter_curiosidades_indicacao:
     - text: |
-        Legal! Meu assunto favorito
+          Você quer saber algumas curiosidades sobre a *Lei Rouanet*?
 
-        Você pode me perguntar algumas curiosidades sobre a Lei Rouanet
+    - text: |
+          Você quer saber mais sobre a *Lei Rouanet*?
 
-        Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei.
-
-        Qual a sua pergunta? Vou tentar responder da melhor maneira possível
+    - text: |
+          Você quer aprender mais sobre a *Lei Rouanet*?  
 
   utter_curiosidades_mais_sim:
     - text: |
-        Que bom!
+        EBA!
 
-        O que mais você gostaria de saber?
+        O que você quer saber?
+
+    - text: |
+        EBA!
+
+        Do que você quer saber?
+
+    - text: |
+        EBA!
+
+        De qual assunto você quer saber?
 
   utter_curiosidades_mais_nao:
-    - text: |
-        Ok, podemos conversar sobre projetos e propostas
+    - text:
+        Tudo bem, então você quer saber sobre *projetos e propostas*?
 
-        Você quer falar sobre isso? (Sim ou Não)
+    - text: 
+        Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
+
+    - text: 
+        Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?
 
   utter_curiosidades_falar_sobre_projetos:
     - text: |
         Maravilha! É bom saber que você quer entender mais sobre propostas e projetos
 
   utter_aviso:
+     - text: |
+          Você já preencheu uma proposta?
+    
     - text: |
-        Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.
+          Você já tem uma proposta preenchida?
 
-        Você já preencheu uma proposta? (Sim ou Não)
+    - text: |
+          Você já possui uma proposta preenchida?
 
   utter_despedir:
     - text: |
-        Espero que eu tenha conseguido esclarecer suas dúvidas.
+        Foi um prazer te ajudar! 
 
-        Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês,
+        Sempre que tiver alguma dúvida, volte aqui!
 
-        se surgir alguma dúvida, não hesite, volte aqui
+        Até logo!
 
-        Até mais!
+     - text: |
+        Foi um prazer te ajudar!
+       
+        Sempre que precisar, volte aqui!
+       
+        Até a próxima!
+        
+     - text: |
+        Foi um prazer te ajudar!
+
+        Quando surgir alguma dúvida, volte aqui!
+
+        Até mais!   
+
 
   utter_nova_proposta:
     - text: |
-        Você já começou a trabalhar em uma nova proposta de projeto? (Sim ou Não)
+        Você já tem uma *proposta de projeto*?
+
+     - text: |
+        Você já fez uma *proposta de projeto*?
+    
+    - text: |
+        Você já criou uma *proposta de projeto*?
 
   utter_conhece_processo:
     - text: |
-        Você sabe como funciona o andamento de um projeto de incentivo a cultura? 
-        
-        (Sim ou Não)
+        Você já conhece as *etapas de um projeto* pela lei Rouanet?
+    
+    - text: |
+        Você já conhece *as fases de um projeto* pela lei Rouanet?
+    
+    - text: |
+        Você já conhece *o passo a passo de um projeto* pela lei Rouanet?
 
   utter_o_que_eh:
     - text: |
@@ -1411,15 +1473,35 @@ templates:
 
   utter_introduzir_contexto_nova_proposta:
     - text: |
-        Que bom! É sempre bom trabalhar em novos projetos culturais
 
-        Se você quiser, posso tirar algumas de suas dúvidas para te ajudar neste novo projeto
-
-  utter_duvida_execucao:
-    - text: |
-        Você tem dúvida em relação à captação de verba e execução do projeto? 
+        Que bom! Vamos focar no seu projeto!
         
-        (Sim ou Não)
+        Você tem dúvidas sobre ele?
+
+    - text: | 
+        Que ótimo! Vamos focar no seu projeto!
+
+        Que tal tirar dúvidas sobre ele?
+
+    - text: |
+        Que maravilha! Vamos focar no seu projeto!
+
+        Quer sanar alguma dúvida sobre ele?
+        
+  utter_duvida_execucao:
+  - text: |
+      Sua dúvida é sobre *captação de verba* 
+
+      para execução de um projeto?
+
+  - text: |
+      Você quer saber como funciona a *captação de verba* 
+
+        para execução de um projeto?
+  - text: |
+      Você quer esclarecer dúvidas sobre *captação de verba*
+
+      para execução de um projeto?
 
   utter_introduzir_execucao:
     - text: |
@@ -1436,16 +1518,30 @@ templates:
         Prestação de Contas > prestacaodecontas.incentivo@cultura.gov.br
 
   utter_introduzir_contexto_nao_execucao:
-    - text: |
-        Então suas dúvidas devem ser sobre as outras etapas do processo
+   - text: |
+        Então suas dúvidas devem ser sobre outros assuntos
 
-        Vamos saná-las juntos? (Sim ou Não)
+        Vamos sana-las juntos?
+
+    - text: |
+        Então suas perguntas devem ser sobre outros tópicos
+
+        Vamos sana-las juntos?
+
+    - text: |
+        Então suas dúvids devem se encaixar em outra categoria
+
+        vamos sana-las juntos?
 
   utter_cadastro_salic:
     - text: |
-        Você já tem cadastro no SALIC? 
-        
-        (Sim ou Não)
+        Você já tem cadastro no *SALIC*?
+    
+    - text: | 
+        Você já fez seu cadastro no *SALIC*?
+    
+    - text: |
+        você já se inscreveu no *SALIC*?
 
   utter_submissao_de_projetos:
     - text: |
@@ -1465,7 +1561,14 @@ templates:
 
   utter_ja_eh_proponente:
     - text: |
-        Você já tem um proponente cadastrado? (Sim ou Não)
+        Você já é um proponente? 
+    
+    - text: | 
+        Você já se cadastrou como proponente?
+
+    - text: |
+        Você já se tornou um proponente?   
+
   utter_cadastro_salic_video:
     - text: |
         O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura, e é por 
@@ -1600,7 +1703,13 @@ templates:
         
   utter_mais_alguma_pergunta:
     - text: |
-        Você possui mais alguma dúvida? (Sim ou Não)
+        Você possui mais alguma dúvida?
+
+    - text: |
+        Você tem mais alguma dúvida?
+
+    - text: |
+      Você tem mais alguma pergunta?
 
   utter_mais_perguntas_afirmativa:
     - text: |
