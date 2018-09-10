@@ -409,6 +409,49 @@
 - tenho dúvida sobre o estado [B20](estadoSalic)
 - me explique o que é o estado [C09](estadoSalic)
 
+## intent:oqueEhSalicRouana
+- oque é Rouana
+- o que significa Rouana
+## intent:oqueEhSalicLeiRouanet
+- oque é LeiRouanet
+- o que significa LeiRouanet
+## intent:oqueEhSalicMinc
+- oque é Minc
+- o que significa Minc
+## intent:oqueEhSalicSefic
+- oque é Sefic
+- o que significa Sefic
+## intent:oqueEhSalicProjeto
+- oque é Projeto
+- o que significa Projeto
+## intent:oqueEhSalicProposta
+- oque é Proposta
+- o que significa Proposta
+## intent:oqueEhSalicProponente
+- oque é Proponente
+- o que significa Proponente
+## intent:oqueEhSalicPreenchimento
+- oque é Preenchimento
+- o que significa Preenchimento
+## intent:oqueEhSalicAdmissibilidade
+- oque é Admissibilidade
+- o que significa Admissibilidade
+## intent:oqueEhSalicAprovacao
+- oque é Aprovacao
+- o que significa Aprovacao
+## intent:oqueEhSalicExecucao
+- oque é Execucao
+- o que significa Execucao
+## intent:oqueEhSalicPrestacaoDeContas
+- oque é PrestacaoDeContas
+- o que significa PrestacaoDeContas
+## intent:oqueEhSalic
+- oque é SALIC
+- o que significa Salic
+## intent:oqueEhSalicVinculada
+- oque é Vinculada
+- o que significa Vinculada
+
 ## intent:escolher_erros_salic
 - 4
 - quarta opção

@@ -21,6 +21,20 @@ intents:
   - escolher_prazo
   - escolher_erros_salic
   - duvida_sobre_contexto
+  - oqueEhSalicRouana
+  - oqueEhSalicLeiRouanet
+  - oqueEhSalicMinc
+  - oqueEhSalicSefic
+  - oqueEhSalicProjeto
+  - oqueEhSalicProposta
+  - oqueEhSalicProponente
+  - oqueEhSalicPreenchimento
+  - oqueEhSalicAdmissibilidade
+  - oqueEhSalicAprovacao
+  - oqueEhSalicExecucao
+  - oqueEhSalicPrestacaoDeContas
+  - oqueEhSalic
+  - oqueEhSalicVinculada
 
 slots:
   estadoSalic:
@@ -98,14 +112,17 @@ templates:
         Desculpe, não consegui te entender.
 
         Você pode perguntar de novo de outro jeito?
+
     - text: |
         Desculpe, não consegui te compreender.
 
         Você pode perguntar de novo de outro modo?
+
     - text: |
         Desculpe, não entendi.
 
         Você pode perguntar de novo de outra maneira?
+
   utter_restart:
     - text: "reiniciando =D"
 
@@ -803,35 +820,6 @@ templates:
         Sua dúvida é sobre *captação de verba* 
 
         para execução de um projeto?
-     - text: |
-        Você quer saber como funciona a *captação de verba* 
-
-        para execução de um projeto?
-     - text: |
-        Você quer esclarecer dúvidas sobre *captação de verba*
-
-        para execução de um projeto?
-
-  utter_geralConheceProcesso:
-    - text: |
-        Sua dúvida é sobre *captação de verba* 
-
-        para execução de um projeto?
-
-    - text: |
-        Você quer saber como funciona a *captação de verba* 
-
-        para execução de um projeto?
-
-  utter_geralCadastroSalic:
-    - text: |
-        Você já tem cadastro no SALIC?
-    
-    - text: | 
-        Você já fez seu cadastro no SALIC?
-    
-    - text: |
-        você já se inscreveu no SALIC?
 
   utter_geralDespedir:
     - text: |
@@ -840,20 +828,6 @@ templates:
         Sempre que tiver alguma dúvida, volte aqui!
 
         Até logo!
-
-     - text: |
-        Foi um prazer te ajudar!
-       
-        Sempre que precisar, volte aqui!
-       
-        Até a próxima!
-
-     - text: |
-        Foi um prazer te ajudar!
-
-        Quando surgir alguma dúvida, volte aqui!
-
-        Até mais!   
 
   utter_geralDefinirContexto:
     - text: |
@@ -870,25 +844,26 @@ templates:
           5. Em nenhuma das opções
 
   utter_geralSubmissaoDeProjetos:
+    - text: |
         Você quer esclarecer dúvidas sobre *captação de verba*
         
         para execução de um projeto?
-  
+
   utter_geralConheceProcesso:
     - text: |
-          Tudo bem. Aqui vai um resumo do processo:
+        Tudo bem. Aqui vai um resumo do processo
 
-          A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
+        A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
 
-          Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
+        Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
 
-          Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
+        Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
 
-          Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
+        Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
 
-          A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
+        A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
 
-          O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+        O primeiro passo para você particiar deste processo é ter cadastro no SALIC
 
   utter_geralAviso:
     - text: |
@@ -922,69 +897,6 @@ templates:
     
     - text: |
         você já se inscreveu no *SALIC*?
-  utter_geralDespedir:
-    - text: |
-        Foi um prazer te ajudar! 
-
-        Sempre que tiver alguma dúvida, volte aqui!
-
-        Até logo!
-
-    - text: |
-       Foi um prazer te ajudar!
-       
-       Sempre que precisar, volte aqui!
-       
-       Até a próxima!
-
-    - text: |
-      Foi um prazer te ajudar!
-
-      Quando surgir alguma dúvida, volte aqui!
-
-      Até mais!   
-
-  utter_geralDefinirContexto:
-    - text: |
-          Onde sua pergunta se encaixa melhor
-
-          1. Processo e estado do projeto
-
-          2. Preenchimento de proposta
-
-          3. Datas e Prazos
-
-          4. Erros do SALIC
-
-          5. Não sei bem onde se encaixa
-
-  utter_geralSubmissaoDeProjetos:
-    - text: |
-          Tudo bem. Aqui vai um resumo do processo:
-
-          A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
-
-          Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
-
-          Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
-
-          Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
-
-          A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
-
-          O primeiro passo para você particiar deste processo é ter cadastro no SALIC
-
-  utter_geralIntroduzirExecucao:
-    - text: |
-          Eu ainda não aprendi a falar sobre um projeto que está em Execução em Prestação de Contas. Ainda estou aprendendo..
-
-          Em breve eu poderei responder sua dúvida
-
-          Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC
-
-          Execução: acompanhamento.incentivo@cultura.gov.br
-
-          Prestação de Contas: prestacaodecontas.incentivo@cultura.gov.br
 
   utter_geralJaEhProponente:
 
@@ -1009,7 +921,7 @@ templates:
 
           Se você encontrar dificuldades no momento do cadastro, pode assistir
 
-          este vídeo, nele você pode observar o passo a passo para se cadastrar:
+          este vídeo, nele você pode observar o passo a passo para se cadastrar
 
           https://youtu.be/rMGEZyIr1U8
 
@@ -1497,7 +1409,7 @@ templates:
   utter_o_que_eh:
     - text: |
           o que é o que?
-          
+
   utter_introduzir_contexto_nova_proposta:
     - text: |
         Que bom! É sempre bom trabalhar em novos projetos culturais
