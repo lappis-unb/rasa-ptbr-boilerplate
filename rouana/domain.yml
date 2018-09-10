@@ -816,9 +816,17 @@ templates:
         Você já criou uma *proposta de projeto*?
 
   utter_geralDuvidaExecucao:
-    - text: |
+     - text: |
         Sua dúvida é sobre *captação de verba* 
 
+        para execução de um projeto?
+     - text: |
+        Você quer saber como funciona a *captação de verba* 
+
+        para execução de um projeto?
+     - text: |
+        Você quer esclarecer dúvidas sobre *captação de verba*
+        
         para execução de um projeto?
 
   utter_geralDespedir:
