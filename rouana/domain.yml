@@ -1293,7 +1293,7 @@ templates:
 
           responsável > abaixo terá o número da Proposta/Nome
 
-          > Nome do responsável selecionado > Clicar na \"bolinha\"
+          Nome do responsável selecionado > Clicar na \"bolinha\"
 
           3- Por último... clica também no botão Vincular
 
@@ -1426,10 +1426,22 @@ templates:
 
   utter_definir_perfil:
     - text: |
-          falta preencher
+        Você prefere conversar sobre criação e andamento de `projetos`, ou 
+
+        prefere falar mais sobre a `Lei Rouanet`?
+
   utter_explicar_definicao_perfil:
     - text: |
-          falta preencher
+        Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada,
+        
+        o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.
+
+        Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa.
+        
+        Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto, ou como submeter um projeto, entre outras.
+
+        Sobre o que você prefere conversar?
+
   utter_curiosidades_indicacao:
     - text: |
           falta preencher
@@ -1450,79 +1462,223 @@ templates:
           falta preencher
   utter_despedir:
     - text: |
-          falta preencher
+        Espero que eu tenha conseguido esclarecer suas dúvidas.
+
+        Ainda estou em fase de teste, a cada dia aprendo mais com as conversas que tenho com vocês,
+
+        se surgir alguma dúvida, não hesite, volte aqui
+
+        Até mais!
+
   utter_nova_proposta:
     - text: |
-          falta preencher
+        Você já começou a trabalhar em uma nova proposta de projeto? (Sim ou Não)
+
   utter_conhece_processo:
     - text: |
-          falta preencher
+        Você sabe como funciona o andamento de um projeto de incentivo a cultura? 
+        
+        (Sim ou Não)
+
   utter_o_que_eh:
     - text: |
           falta preencher
   utter_introduzir_contexto_nova_proposta:
     - text: |
-          falta preencher
+        Que bom! É sempre bom trabalhar em novos projetos culturais
+
+        Se você quiser, posso tirar algumas de suas dúvidas para te ajudar neste novo projeto
+
   utter_duvida_execucao:
     - text: |
-          falta preencher
+        Você tem dúvida em relação à captação de verba e execução do projeto? 
+        
+        (Sim ou Não)
+
   utter_introduzir_execucao:
     - text: |
-          falta preencher
+        Eu ainda não aprendi a falar sobre um projeto que está em Execução ou
+
+        em Prestação de Contas. Ainda estou aprendendo...
+
+        Em breve eu poderei responder sua dúvida.
+
+        Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC
+
+        Execução > acompanhamento.incentivo@cultura.gov.br
+
+        Prestação de Contas > prestacaodecontas.incentivo@cultura.gov.br
+
   utter_introduzir_contexto_nao_execucao:
     - text: |
-          falta preencher
+        Então suas dúvidas devem ser sobre as outras etapas do processo
+
+        Vamos saná-las juntos? (Sim ou Não)
+
   utter_cadastro_salic:
     - text: |
-          falta preencher
+        Você já tem cadastro no SALIC? 
+        
+        (Sim ou Não)
+
   utter_submissao_de_projetos:
     - text: |
-          falta preencher
+        Tudo bem. Aqui vai um resumo do processo
+
+        A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
+
+        Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
+
+        Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
+
+        Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
+
+        A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
+
+        O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+
   utter_ja_eh_proponente:
     - text: |
-          falta preencher
+        Você já tem um proponente cadastrado? (Sim ou Não)
   utter_cadastro_salic_video:
     - text: |
-          falta preencher
+        O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura, e é por 
+
+        ele que você cadastra a proposta e a acompanha
+
+        Se você encontrar dificuldades no momento do cadastro, pode assistir 
+
+        este vídeo, nele você pode observar o passo a passo para se cadastrar
+
+        https://youtu.be/rMGEZyIr1U8
+
+        Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)
+
   utter_explicar_cadastro_salic:
     - text: |
-          falta preencher
+        A primeira coisa que você deve fazer é acessar o SALIC no site http://salic.cultura.gov.br
+
+        Então no formulário inicial, onde pede login e senha, você deve
+
+        clicar na opção "Não sou cadastrado", logo abaixo
+
+        Preencha todos os campos corretamente, todos eles são obrigatórios.
+
+        E depois clique em "Cadastrar"
+
+        Agora aguarde a chegada de um e-mail de confirmação. 
+        
+        Este vai conter uma senha temporária
+
+        É interessante você alterar esta senha, por isso, no seu primeiro 
+
+        acesso, vá em "Usuário > Alterar Senha", para mudar a mesma,
+
+        Agora que você já se cadastrou, o próximo passo cadastrar um proponente
+
   utter_cadastro_salic_apos_video:
     - text: |
-          falta preencher
+        Espero que o vídeo tenha ajudado
+
+        Agora que você já se cadastrou, o próximo passo cadastrar um proponente
+
   utter_inscricao_proponente:
     - text: |
-          falta preencher
+        Para inscrever um proponente, ou se tornar um proponente, você deve
+
+        Acessar o SALIC e efetuar o login
+
+        Clique em Administrativo e depois em cadastrar proponente. OU acesse esse link http://salic.cultura.gov.br/agente/agentes/incluiragente
+
+        Se você for uma pessoa física você precisa atuar na área cultural
+        
+        Caso você seja uma pessoa jurídica pública tem que atuar na área de administração indireta ou uma pessoa jurídica privada com ou sem fins lucrativos
+
   utter_cadastro_proponente_introduzir_contexto:
     - text: |
-          falta preencher
+        Maravilha!
+
+        Agora eu posso tentar esclarer algumas de suas dúvidas
+
   utter_definir_contexto:
     - text: |
-          falta preencher
+        Onde sua pergunta se encaixa melhor
+
+        1. Processo e estado do projeto
+
+        2. Preenchimento de proposta
+
+        3. Datas e Prazos
+
+        4. Erros do SALIC
+
+        5. Não sei bem onde se encaixa
+
   utter_explicar_processo:
     - text: |
-          falta preencher
+        Na categoria de processos eu posso responder dúvidas à respeito 
+
+        do fluxo de submissão do seu projeto.
+
+        Por exemplo, você pode me fazer perguntar à respeito de captação 
+
+        de verbas ou sobre o estado do seu projeto.
+
   utter_ainda_nao_aprendi:
     - text: |
-          falta preencher
+        Eu ainda não aprendi a falar sobre este tópico...
+
+        Em breve eu poderei responder sua dúvida
+
+        Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC > http://rouanet.cultura.gov.br/fale-conosco/
+
   utter_explicar_preenchimento:
     - text: |
-          falta preencher
+        Nesta etapa eu posso responder dúvidas sobre o preenchimento de propostas no SALIC
+
   utter_explicar_prazo:
     - text: |
-          falta preencher
+        Nesta etapa posso responder suas dúvidas a respeito de Datas
+
+        e Prazos do seu projeto. Como envio do CNAE e desistência de recurso
+
   utter_explicar_erros_salic:
     - text: |
-          falta preencher
+        Nesta etapa eu posso responder dúvidas sobre eventuais erros do
+
+        sistema SALIC. Como planilha desaparecida, perda dos dados
+
+        preenchidos e recuperação de senha
+
   utter_explicar_contextos:
     - text: |
-          falta preencher
+        Na categoria "Processo" eu responderei a respeito
+
+        do fluxo de submissão do seu projeto, e o sobre o estado dele.
+
+        Em "Preenchimento" eu vou tirar dúvidas sobre o 
+
+        preenchimento de propostas no Salic, campos em que você possa ter 
+
+        dúvidas, ou como você pode preencher
+
+        Agora, em Datas e Prazos, eu consigo falar sobre prazos importantes 
+
+        para a aceitação e execução do seu projeto.
+
+        Por último, em erros do SALIC, posso falar sober eventuais erros que 
+
+        ocorrem durante a utilização do sistema
+
+        Já que te expliquei, vou te dar as opçẽs de novo
+        
   utter_mais_alguma_pergunta:
     - text: |
-          falta preencher
+          Você possui mais alguma dúvida? (Sim ou Não)
+
   utter_mais_perguntas_afirmativa:
     - text: |
-          falta preencher
+          Que bom! Espero estar ajudando
 
 actions:
   - utter_default
