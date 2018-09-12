@@ -4,13 +4,13 @@ from rasa_nlu.training_data import load_data
 from rasa_nlu.model import Trainer, Interpreter
 from rasa_nlu import config
 
-intents_directory = './rouana/data/intents/'
+intents_directory = '/rouana/data/intents/'
 
 training_data = load_data(intents_directory)
-trainer = Trainer(config.load('./rouana/config.yml'))
+trainer = Trainer(config.load('/rouana/config.yml'))
 trainer.train(training_data)
 
-model_directory = trainer.persist('./rouana/models/dialogue')
+model_directory = trainer.persist('/models/dialogue')
 interpreter = Interpreter.load(model_directory)
 
 

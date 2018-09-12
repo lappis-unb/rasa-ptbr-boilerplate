@@ -1,0 +1,21 @@
+## intent:escolher_prazo
+- 3
+- terceira opção
+- terceiro tópico
+- Data
+- prazo
+- prazos
+- Prazo
+- sobre prazo
+- data
+- sobre data
+- datas
+- prazos e datas
+- sobre prazos e datas
+- datas e prazos
+- escolha 3
+- na 3
+- opção três
+- três
+- categoria 3
+
