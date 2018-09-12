@@ -38,16 +38,14 @@ services:
     depends_on:
       - rocketchat
 
-  auth:
-    image: beevelop/nginx-basic-auth
-    environment:
-      - HTPASSWD=./.htpasswd
-      - FORWARD_PORT=8000
-      - PORT=80
-    links:
-      - landing-page:web
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
     ports:
       - 8080:80
+    volumes:
+      - ./nginx/htpasswd:/etc/nginx/.htpasswd
   
   landing-page:
     build:
