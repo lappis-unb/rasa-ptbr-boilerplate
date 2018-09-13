@@ -30,12 +30,11 @@ services:
       dockerfile: ./docker/tais/Dockerfile
     environment:
       - TRAINING_EPOCHS=300
-      - ROUANA_PORT=5005
       - CREDENTIALS=/rouana/credentials.yml
-    ports:
-      - 5005:5005
+      - ROCKETCHAT_URL=http://rocketchat:3000
     volumes:
       - ./rouana:/rouana
+      - ./scripts:/scripts
     depends_on:
       - rocketchat
 

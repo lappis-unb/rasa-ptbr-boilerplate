@@ -27,15 +27,15 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument(
     '--bot-name', '-bn', type=str, default='Tais',
-    help='Bot username (default: rouana)'
+    help='Bot username (default: Tais)'
 )
 parser.add_argument(
-    '--bot-username', '-bu', type=str, default='rouana',
-    help='Bot username (default: rouana)'
+    '--bot-username', '-bu', type=str, default='tais',
+    help='Bot username (default: tais)'
 )
 parser.add_argument(
-    '--bot-password', '-bp', type=str, default='rouana',
-    help='Bot password (default: rouana)'
+    '--bot-password', '-bp', type=str, default='tais',
+    help='Bot password (default: tais)'
 )
 parser.add_argument(
     '--bot-avatar', '-ba', type=str, default='https://raw.githubusercontent.com/lappis-unb/rouana/master/images/rouana_avatar.jpeg',
@@ -47,15 +47,11 @@ parser.add_argument(
 )
 parser.add_argument(
     '--admin-password', '-ap', type=str, default='admin',
-    help='Admin password (default: rouana)'
+    help='Admin password (default: admin)'
 )
 parser.add_argument(
     '--rocketchat-url', '-r', type=str, default='http://localhost:3000',
     help='Rocket chat URL (default: http://localhost:3000)'
-)
-parser.add_argument(
-    '--rasa-url', '-rasa', type=str, default='http://rouana:5005/webhook',
-    help='Rasa URL (default: http://rouana:5005/webhook)'
 )
 
 args = parser.parse_args()
@@ -78,9 +74,27 @@ bot = {
 admin_name = args.admin_name
 admin_password = args.admin_password
 
-rasa_url = args.rasa_url
-
 user_header = None
+
+def api_post(endpoint, values):
+    if endpoint[0] == '/':
+        endpoint = endpoint[1:]
+
+    url = host + '/api/v1/' + endpoint
+
+    response = requests.post(
+        url,
+        data=json.dumps(values),
+        headers=user_header
+    )
+
+    if response.json()['success'] is True:
+        logger.info('Success {} :: {}'.format(url, response.json()))
+    else:
+        logger.error('ERROR {} :: {}'.format(url, response.json()))
+
+    return response.json()
+
 
 def get_authentication_token():
     login_data = {'username': admin_name, 'password': admin_password}
@@ -101,140 +115,66 @@ def get_authentication_token():
 
 
 def create_bot_user():
-    user_info = {
+    api_post('users.create', {
         'name': bot['name'],
         'email': bot['email'],
         'password': bot['password'],
         'username': bot['username'],
         'requirePasswordChange': False,
         'sendWelcomeEmail': True, 'roles': ['bot']
-    }
+    })
 
-    create_user_response = requests.post(
-        host + '/api/v1/users.create',
-        data=json.dumps(user_info),
-        headers=user_header
-    )
-
-    if create_user_response.json()['success'] is True:
-        logger.info('User has been sucessfully created!')
-    else:
-        logger.error('Error while creating bot user!')
-
-    requests.post(
-        host + '/api/v1/users.setAvatar',
-        data=json.dumps({
-            'avatarUrl': bot['avatar'],
-            'username': bot['username']
-        }),
-        headers=user_header
-    )
+    api_post('users.setAvatar', {
+        'avatarUrl': bot['avatar'],
+        'username': bot['username']
+    })
 
 
 def create_livechat_agent():
-    agent_info = {'username': bot['username']}
-    create_agent_response = requests.post(
-        host + '/api/v1/livechat/users/agent',
-        data=json.dumps(agent_info),
-        headers=user_header
-    )
-
-    if create_agent_response.json()['success'] is True:
-        logger.info('Bot agent has been sucessfully created!')
-    else:
-        logger.error('Error while creating bot agent!')
-
-    return create_agent_response.json()['user']['_id']
+    response = api_post('livechat/users/agent', {'username': bot['username']})
+    return response['user']['_id']
 
 
 def configure_livechat():
     # Enable Livechat
-    requests.post(
-        host + '/api/v1/settings/Livechat_enabled',
-        data=json.dumps({'value': True}),
-        headers=user_header
-    )
+    api_post('settings/Livechat_enabled', {'value': True})
 
     # Disable show pre-registration form
-    requests.post(
-        host + '/api/v1/settings/Livechat_registration_form',
-        data=json.dumps({'value': False}),
-        headers=user_header
-    )
+    api_post('settings/Livechat_registration_form', {'value': False})
 
     # Change Livechat Color
-    requests.post(
-        host + '/api/v1/settings/Livechat_title_color',
-        data=json.dumps({'value': "#039046", 'editor': 'color'}),
-        headers=user_header
-    )
+    api_post('settings/Livechat_title_color', {
+        'value': "#039046",
+        'editor': 'color'
+    })
 
     # Change Livechat Title
-    requests.post(
-        host + '/api/v1/settings/Livechat_title',
-        data=json.dumps({'value': bot['name']}),
-        headers=user_header
-    )
+    api_post('settings/Livechat_title', {'value': bot['name']})
 
     # Disable Livechat Email display
-    requests.post(
-        host + '/api/v1/settings/Livechat_show_agent_email',
-        data=json.dumps({'value': False}),
-        headers=user_header
-    )
-
-    # Change Livechat Webhook URL
-    requests.post(
-        host + '/api/v1/settings/Livechat_webhookUrl',
-        data=json.dumps({'value': rasa_url}),
-        headers=user_header
-    )
+    api_post('settings/Livechat_show_agent_email', {'value': False})
 
     # Activate Livechat Webhook Send Request on Visitor Message
-    requests.post(
-        host + '/api/v1/settings/Livechat_webhook_on_visitor_message',
-        data=json.dumps({'value': True}),
-        headers=user_header
-    )
+    api_post('settings/Livechat_webhook_on_visitor_message', {'value': True})
 
     # Activate Livechat Webhook Send Request on Agent Messages
-    requests.post(
-        host + '/api/v1/settings/Livechat_webhook_on_agent_message',
-        data=json.dumps({'value': True}),
-        headers=user_header
-    )
+    api_post('settings/Livechat_webhook_on_agent_message', {'value': True})
 
 
-def configure_webhooks():
-    webooks = requests.get(
-        host + '/api/v1/integrations.list',
-        headers=user_header
-    ).json()
+def configure_rocketchat():
+    api_post('settings/Language', {'value': 'pt_BR'})
 
-    name = 'Rasa Webhook'
+    api_post('settings/Accounts_RegistrationForm', {'value': 'Disable'})
 
-    for integration in webooks['integrations']:
-        if 'name' in integration and integration['name'] == name:
-            logger.info('Intergration {} already exists!'.format(name))
-            return
+    api_post('settings/Iframe_Integration_send_enable', {'value': True})
 
-    requests.post(
-        host + '/api/v1/integrations.create',
-        data=json.dumps({
-            'name': name,
-            'type': 'webhook-outgoing',
-            'enabled': True,
-            'scriptEnabled': False,
-            'event': 'sendMessage',
-            'urls': [rasa_url],
-            'username': bot['username'],
-            'channel': '@' + bot['username'],
-        }),
-        headers=user_header
-    )
+    api_post('settings/Iframe_Integration_receive_enable', {'value': True})
+
+    api_post('settings/API_Enable_CORS', {'value': True})
+
 
 def create_department(bot_agent_id):
-    department_info = {
+    api_post('livechat/department', {
         'department': {
             'enabled': True,
             'showOnRegistration': True,
@@ -247,17 +187,7 @@ def create_department(bot_agent_id):
             'count': 0,
             'order': 0
         }]
-    }
-    create_department_response = requests.post(
-        host + '/api/v1/livechat/department',
-        data=json.dumps(department_info),
-        headers=user_header
-    )
-
-    if create_department_response.json()['success'] is True:
-        logger.info('Default department has been sucessfully created!')
-    else:
-        logger.error('Error while creating department!')
+    })
 
 
 if __name__ == '__main__':
@@ -272,11 +202,11 @@ if __name__ == '__main__':
         logger.info('>> Create livechat agent')
         bot_agent_id = create_livechat_agent()
 
+        logger.info('>> Configure Rocketchat')
+        configure_rocketchat()
+
         logger.info('>> Configure livechat')
         configure_livechat()
-
-        logger.info('>> Configure webhooks')
-        configure_webhooks()
 
         logger.info('>> Create livechat department')
         create_department(bot_agent_id)
