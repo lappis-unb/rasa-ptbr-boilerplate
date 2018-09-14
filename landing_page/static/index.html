@@ -10,21 +10,10 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-    <style>
-      html, body{
-        height: 100%;
-      }
-    </style>
 </head>
 
 <body>
     <script type="text/javascript">
-
         // XXX: Hard coded URLs
         var host = 'http://localhost:3000';
 
@@ -35,45 +24,14 @@
             host = 'https://taischat.lappis.rocks';
         }
 
-        var requires_login = true;
-        var user_str = window.localStorage.getItem('user');
-        var user = null;
-
-        if(user_str != null) {
-            window.localStorage.removeItem('user');
-            user = JSON.parse(user_str);
-        }
-        else {
-            console.log('User not found');
-            if (requires_login) window.location.href = window.location.origin + '/login.html';
-        }
-
-        if (!requires_login || user != null) {
-            console.log('Create livechat');
-
-            (function(w, d, s, u) {
-                w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
-                var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-                j.async = true; j.src = host + '/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js';
-                h.parentNode.insertBefore(j, h);
-            })(window, document, 'script', host + '/livechat');
-        }
-
-        if (user != null) {
-            window.RocketChat(function() {
-                var rc = this;
-
-                this.onChatMaximized(function() {
-                    console.log('Register guest on livechat');
-                    console.log(user);
-
-                    rc.setGuestName(user.name);
-                    rc.setGuestEmail(user.email);
-                });
-            });
-        }
-
+        (function(w, d, s, u) {
+            w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+            var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true; j.src = host + '/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js';
+            h.parentNode.insertBefore(j, h);
+        })(window, document, 'script', host + '/livechat');
     </script>
 </body>
 
 </html>
+
