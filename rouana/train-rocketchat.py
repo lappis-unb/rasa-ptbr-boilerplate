@@ -12,11 +12,10 @@ import train
 logger = logging.getLogger(__name__)
 
 CREDENTIALS = os.getenv('CREDENTIALS', 'credentials.yml')
-ROUANA_PORT = int(os.getenv('ROUANA_PORT', 5005))
 
 def run():
-    interpreter = RasaNLUInterpreter('models/nlu/default/current')
-    agent = Agent.load('models/dialogue', interpreter=interpreter)
+    interpreter = RasaNLUInterpreter('/models/nlu/default/current')
+    agent = Agent.load('/models/dialogue', interpreter=interpreter)
 
     configs = yaml.load(open(CREDENTIALS))
 

@@ -18,10 +18,18 @@ class RocketChatBot(OutputChannel):
         self.username = user
         self.connector = Driver(url=server , ssl=ssl)
         self.users = {}
+        self.user = user
+        self.password = password
+
+        self.logged_in = False
 
         self.connector.connect()
-        self.connector.login(user=user, password=password,
-                             callback=self._login_callback)
+        self.login()
+
+    def login(self):
+        if not self.logged_in:
+            self.connector.login(user=self.user, password=self.password,
+                                 callback=self._login_callback)
 
     """
     Internal callback handlers
@@ -31,6 +39,7 @@ class RocketChatBot(OutputChannel):
             logger.error('[-] callback error:')
             logger.error(error)
         else:
+            self.logged_in = True
             logger.info("[+] callback success")
             logger.debug(data)
             self.connector.subscribe_to_messages()
@@ -71,13 +80,16 @@ class RocketChatInput(InputChannel):
         self._record_messages(message_handler)
 
     def _record_messages(self, on_message):
-        while self.rocketchat_bot.connector.connect:
-            if not self.message_queue.empty():
+        while True:
+            if self.rocketchat_bot.logged_in and not self.message_queue.empty():
                 msg = self.message_queue.get()
 
                 on_message(
                     UserMessage(msg['msg'], self.rocketchat_bot, msg['rid'])
                 )
+            else:
+                self.rocketchat_bot.login()
+
 
     def register_message(self, bot, message):
         self.message_queue.put(message)
