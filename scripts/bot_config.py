@@ -174,21 +174,30 @@ def configure_rocketchat():
 
 
 def create_department(bot_agent_id):
-    api_post('livechat/department', {
-        'department': {
-            'enabled': True,
-            'showOnRegistration': True,
-            'name': 'department',
-            'description': 'default department'
-        },
-        'agents': [{
-            'agentId': bot_agent_id,
-            'username': bot['username'],
-            'count': 0,
-            'order': 0
-        }]
-    })
+    get_departments_url = host + '/api/v1/livechat/department'
 
+    get_departments_response = requests.get(
+        get_departments_url,
+        headers=user_header
+    )
+
+    number_of_departments = len(get_departments_response.json()['departments'])
+
+    if number_of_departments == 0:
+        api_post('livechat/department', {
+            'department': {
+                'enabled': True,
+                'showOnRegistration': True,
+                'name': 'department',
+                'description': 'default department'
+            },
+            'agents': [{
+                'agentId': bot_agent_id,
+                'username': bot['username'],
+                'count': 0,
+                'order': 0
+            }]
+        })
 
 if __name__ == '__main__':
     logger.info('===== Automatic env configuration =====')
