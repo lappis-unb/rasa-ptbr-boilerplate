@@ -211,11 +211,11 @@ if __name__ == '__main__':
         logger.info('>> Create livechat agent')
         bot_agent_id = create_livechat_agent()
 
-        logger.info('>> Configure Rocketchat')
-        configure_rocketchat()
-
         logger.info('>> Configure livechat')
         configure_livechat()
+
+        logger.info('>> Configure Rocketchat')
+        configure_rocketchat()
 
         logger.info('>> Create livechat department')
         create_department(bot_agent_id)
