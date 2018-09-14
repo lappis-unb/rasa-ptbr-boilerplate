@@ -1,11 +1,5 @@
-from python:3.6
+from nginx:1.14-alpine
 
-run mkdir /landing_page
-add ./landing_page /landing_page
-
-expose 8000
-
-workdir /landing_page
-
-cmd ["python", "-m", "http.server", "8000"]
-
+add ./landing_page/static/ /var/www/
+add ./landing_page/nginx/default.conf /etc/nginx/conf.d/default.conf
+add ./landing_page/nginx/htpasswd /etc/nginx/.htpasswd

@@ -43,6 +43,7 @@ services:
       context: .
       dockerfile: ./docker/landing_page/Dockerfile
     ports:
-      - 8000:8000
+      - 8080:80
     volumes:
-      - ./landing_page:/landing_page
+      - ./landing_page/nginx/htpasswd:/etc/nginx/.htpasswd
+  
