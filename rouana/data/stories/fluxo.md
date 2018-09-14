@@ -1,19 +1,21 @@
-## path
+## path0.1
 * cumprimentar
-  - action_cumprimentar
   - action_definir_perfil
 > identifica_perfil
 
-## path-explicar-definicao-perfil
-* cumprimentar
-  - action_cumprimentar
+## path0.2
+* afirmar
   - action_definir_perfil
-* negar
-  - action_explicar_definicao_perfil
 > identifica_perfil
 
 
 <!--- Fluxo Curiosidades --->
+
+## path1-negar
+> identifica_perfil
+* negar
+  - action_explicar_definicao_perfil
+> identifica_perfil
 
 ## path1
 > identifica_perfil
