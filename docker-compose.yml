@@ -46,4 +46,4 @@ services:
       - 8080:80
     volumes:
       - ./landing_page/nginx/htpasswd:/etc/nginx/.htpasswd
-  
+
