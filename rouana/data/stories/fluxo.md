@@ -98,6 +98,7 @@
 * afirmar
   - action_introduzir_execucao
   - action_despedir
+  - action_restart
 
 ## path2.1.2.2
 > identificar_execucao
@@ -194,8 +195,7 @@
 * escolher_processo
   - action_explicar_processo
   - action_ainda_nao_aprendi
-  - action_despedir
-  - action_restart
+> identifica_mais_alguma_pergunta
 
 ## pathContexto.preenchimento
 > identificar_contexto
@@ -203,8 +203,7 @@
 * escolher_preenchimento
   - action_explicar_preenchimento
   - action_ainda_nao_aprendi
-  - action_despedir
-  - action_restart
+> identifica_mais_alguma_pergunta
 
 ## pathContexto.prazo
 > identificar_contexto
@@ -212,8 +211,7 @@
 * escolher_prazo
   - action_explicar_prazo
   - action_ainda_nao_aprendi
-  - action_despedir
-  - action_restart
+> identifica_mais_alguma_pergunta
 
 ## pathContexto.errossalic
 > identificar_contexto
@@ -221,8 +219,7 @@
 * escolher_erros_salic
   - action_explicar_erros_salic
   - action_ainda_nao_aprendi
-  - action_despedir
-  - action_restart
+> identifica_mais_alguma_pergunta
 
 ## pathContexto.5
 > identificar_contexto

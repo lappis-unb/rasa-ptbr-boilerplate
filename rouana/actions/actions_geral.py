@@ -230,11 +230,11 @@ class ActionExtra(ActionMultiline):
 
 class ActionAindaNaoAprendi(ActionMultiline):
     messages = [
-        'Eu ainda não aprendi a falar sobre este tópico...\n'
+        'Eu ainda não aprendi a falar sobre este tópico =/\n'
+        'Em breve eu poderei responder sua dúvida',
 
-        'Em breve eu poderei responder sua dúvida\n'
-
-        'Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC: http://rouanet.cultura.gov.br/fale-conosco/',
+        'Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC: \n'
+        'http://rouanet.cultura.gov.br/fale-conosco/',
     ]
 
 class ActionRevert(Action):

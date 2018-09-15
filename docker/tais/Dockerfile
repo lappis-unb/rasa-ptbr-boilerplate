@@ -22,4 +22,4 @@ env TRAINING_EPOCHS=300                    \
     ROCKETCHAT_URL="http://rocketchat:3000"
 
 cmd python /scripts/bot_config.py -r $ROCKETCHAT_URL && \
-		python train-rocketchat.py
+    python train-rocketchat.py
