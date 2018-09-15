@@ -197,58 +197,24 @@
 			</div>
 		</div>
 
-		<script type="text/javascript">
+      <script type="text/javascript">
+         // XXX: Hard coded URLs
+          var host = 'http://localhost:3000';
 
-			// XXX: Hard coded URLs
-			var host = 'http://localhost:3000';
+          if (window.location.origin.includes('dev.lappis.rocks')) {
+              host = 'https://taischat.dev.lappis.rocks';
+          }
+          else if (window.location.origin.includes('lappis.rocks')) {
+              host = 'https://taischat.lappis.rocks';
+          }
 
-			if (window.location.origin.includes('dev.lappis.rocks')) {
-				host = 'https://taischat.dev.lappis.rocks';
-			}
-			else if (window.location.origin.includes('lappis.rocks')) {
-				host = 'https://taischat.lappis.rocks';
-			}
-
-
-			var requires_login = true;
-			var user_str = window.localStorage.getItem('user');
-			var user = null;
-
-			if(user_str != null) {
-				window.localStorage.removeItem('user');
-				user = JSON.parse(user_str);
-			}
-			else {
-				console.log('User not found');
-				if (requires_login) window.location.href = window.location.origin + '/login.html';
-			}
-
-			if (!requires_login || user != null) {
-				console.log('Create livechat');
-
-				(function(w, d, s, u) {
-					w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
-					var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-					j.async = true; j.src = host + '/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js';
-					h.parentNode.insertBefore(j, h);
-				})(window, document, 'script', host + '/livechat');
-			}
-
-			if (user != null) {
-				window.RocketChat(function() {
-					var rc = this;
-
-					this.onChatMaximized(function() {
-						console.log('Register guest on livechat');
-						console.log(user);
-
-						rc.setGuestName(user.name);
-						rc.setGuestEmail(user.email);
-					});
-				});
-			}
-
-		</script>
+          (function(w, d, s, u) {
+            w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+            var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true; j.src = host + '/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js';
+            h.parentNode.insertBefore(j, h);
+          })(window, document, 'script', host + '/livechat');
+      </script>
 	</body>
 
 </html>
