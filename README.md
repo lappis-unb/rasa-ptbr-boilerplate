@@ -24,11 +24,13 @@ Enabled: Yes
 Name: Start Talk
 Description: Start Talk
 Condition: Visitor page URL
-    Value: http://localhost:8000/
+    Value: http://localhost:8080/
 Action: Send Message
  Value: Impersonate next agent from queue
- Value: Oi eu sou a Taís, assistente virtual do minc, e estou aqui para te ajudar a esclarecer dúvidas sobre a Lei Rouanet, posso também solucionar problemas de proposta e projeto
+ Value: Oi eu sou a Taís, assistente virtual do MinC, e estou aqui para te ajudar a esclarecer dúvidas sobre a Lei Rouanet. Tudo bom?
 ```
+
+O valor `http://localhost:8080/` deve ser a URL de acesso da Taís.
 
 
 ## Testes

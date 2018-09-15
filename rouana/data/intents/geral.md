@@ -20,6 +20,12 @@
 - tudo bom?
 - posso falar com você?
 - pode me tirar uma dúvida?
+- estou bem, e você?
+- tô bem
+- estou otimo
+- estou bem, obrigado
+- muito bem
+- muito bom
 
 ## intent:afirmar
 - sim
