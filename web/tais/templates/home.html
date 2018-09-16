@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<p id="betaWarning">Versão BETA</p>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <img src="{% static 'img/avatar.jpg' %}" />
+    <h1 class="display-3">Taís</h1>
+    <h2>Assistente Virtual do MinC</h2>
+  </div>
+
+</div>
+<div class="container" id="mainContainer">
+  <div class="row">
+
+    <div class="col-lg-10 offset-lg-1">
+<div  class="float-right">
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout'  %}">
+            <button class="btn btn-outline-secondary">Sair</button>
+        </a>
+    {% else %}
+        <a href="{% url 'login'  %}">
+            <button class="btn btn-outline-primary">Entrar</button>
+        </a>
+    {% endif %}
+</div>
+
+    <div style="height: 15%;"></div>
+
+      <header>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+        <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+
+      </header>
+      <nav class="nav-justified">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <!--              <a class="nav-item nav-link active" id="pop1-tab" data-toggle="tab" href="#pop1" role="tab" aria-controls="pop1" aria-selected="true">Novidades</a>-->
+          <a class="nav-item nav-link active" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab" aria-controls="pop2" aria-selected="true">Como testar</a>
+          <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">O que ela sabe responder</a>
+          <a class="nav-item nav-link" id="pop4-tab" data-toggle="tab" href="#pop4" role="tab" aria-controls="pop4" aria-selected="false">Criação da Taís</a>
+
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <!--
+<div class="tab-pane fade" id="pop1" role="tabpanel" aria-labelledby="pop1-tab">
+<h5>Novidades em 15/08/2018:</h5>
+<ul>
+<li>Lançamento inicial da versão beta</li>
+</ul>
+</div>
+-->
+        <div class="tab-pane fade show active" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
+          <p>Comece se colocando no lugar de alguém que não conhece nada sobre o universo do incentivo cultural e que tem curiosidade sobre o assunto.</p>
+          <p>Depois disso, é só inicar o diálogo com a Taís, como se você estivesse conversando com uma pessoa. Ou seja, leia o que ela tem para dizer e responda em função disso. Evite saltar etapas ou fazer perguntas fora do contexto do que a Taís disse por último.</p>
+        </div>
+        <div class="tab-pane fade" id="pop3" role="tabpanel" aria-labelledby="pop3-tab">
+          <p>A Taís ainda está em uma fase extremamente inicial. As conversas que você tem com ela são a melhor forma de identificarmos os pontos a melhorar e os novos conteúdos que ela precisa aprender.</p>
+          <p>No momento, ela consegue falar sobre:</p>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <h5>Definições:</h5>
+                <ul>
+                  <li>Lei Rouanet</li>
+                  <li>MinC</li>
+                  <li>SEFIC</li>
+                  <li>SALIC</li>
+                  <li>CNIC</li>
+                  <li>vinculadas</li>
+                  <li>proposta</li>
+                  <li>projeto</li>
+                  <li>preenchimento</li>
+                  <li>admissibilidade</li>
+                  <li>aprovação</li>
+                  <li>execução</li>
+                  <li>prestação de contas</li>
+                </ul>
+              </div>
+              <div class="col-lg-4">
+                <h5>"Curiosidades":</h5>
+                <ul>
+                  <li>Quantidade de projetos</li>
+                  <li>Benefícios para quem incentiva </li>
+                  <li>Quem pode submeter projetos</li>
+                  <li>Origem do dinheiro</li>
+                  <li>Denúncia de projetos</li>
+                  <li>Quais empresas podem se beneficiar ao apoiar projetos culturais</li>
+                  <li>Possibilidade de incentivo por familiares</li>
+                  <li>Redução dos Impostos para incentivadores</li>
+                </ul>
+              </div>
+              <div class="col-lg-4">
+                <h5>Processo:</h5>
+                <ul>
+                  <li>Apresentação das etapas</li>
+                  <li>Cadastro de usuários</li>
+                  <li>Cadastro de proponentes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pop4" role="tabpanel" aria-labelledby="pop4-tab">
+          <p>A Taís é uma assistente virtual desenvolvida pelo <a href="https://fga.unb.br/profile/lappis" target="_blank">LAPPIS - Laboratório Avançado de Produção, Pesquisa e Inovação em Software</a> (FGA/UnB), em parceria com o Ministério da Cultura.</p>
+          <p>O nome é uma sigla para Tecnologia de Aprendizado Interativo do Salic. Ela tem como objetivo ajudar cidadãs e cidadãos a tirar dúvidas sobre a lei Rouanet e sobre o incentivo a projetos culturais.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if user.is_authenticated %}
+    <script type="text/javascript">
+          var host = '{{ ROCKETCHAT_URL }}';
+
+          (function(w, d, s, u) {
+
+            w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+
+            w.RocketChat(function() {
+                var rc = this;
+                this.onChatMaximized(function() {
+                    rc.setGuestName("{{ user.username }}");
+                    rc.setGuestEmail("{{ user.email }}");
+                });
+            });
+
+            var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true; j.src = host + '/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js';
+            h.parentNode.insertBefore(j, h);
+          })(window, document, 'script', host + '/livechat');
+    </script>
+{% endif %}
+
+{% endblock %}
