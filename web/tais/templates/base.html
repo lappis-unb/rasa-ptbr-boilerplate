@@ -23,13 +23,18 @@
 	<body>
 		<main>
 			<p id="betaWarning">Versão BETA</p>
+            {% if user.is_authenticated %}
+                <button type="button" class="btn btn-outline-dark" id="btLogout" onclick="location.href='{% url 'logout'  %}'">Sair</button>
+            {% endif %}
 
 			<div class="jumbotron jumbotron-fluid">
 				<div class="container">
 					<div id="avatar">
 						<img src="{% static 'img/avatar.jpg' %}" />
 						{% if user.is_authenticated %}
-							<button type="button" class="btn btn-danger btn-lg" id="btFeedback" onclick="location.href='mailto:tais.betateste@gmail.com">Enviar feedback</button>
+                        <a href="mailto:tais.betateste@gmail.com?subject='Feedback sobre a Taís'">
+							<button type="button" class="btn btn-danger btn-lg" id="btFeedback">Enviar feedback</button>
+                            </a>
 						{% endif %}
 					</div>
 					<h1 class="display-3">Taís</h1>

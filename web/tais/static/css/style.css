@@ -42,7 +42,7 @@ H1, H2{font-weight: bold;}
   background: linear-gradient(to bottom, #11998e, #38ef7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #FFF;
   max-height: 27%;
-  margin-bottom: 80px;
+  margin-bottom: 150px;
   padding: 2% 20%;
 }
 .jumbotron .display-3{
@@ -64,6 +64,7 @@ H1, H2{font-weight: bold;}
 
 #mainContainer{
   margin-bottom: 400px;/* to compensate for live chat area */
+  clear: both;
 }
 
 HEADER P{
