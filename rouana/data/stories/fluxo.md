@@ -93,12 +93,11 @@
 
 <!--- Fluxo de Execução --->
 
-## path2.1.2.1-fim
+## path2.1.2.1-mais_alguma_pergunta
 > identificar_execucao
 * afirmar
   - action_introduzir_execucao
-  - action_despedir
-  - action_restart
+> identifica_mais_alguma_pergunta
 
 ## path2.1.2.2
 > identificar_execucao
@@ -239,12 +238,22 @@
 > identifica_mais_alguma_pergunta
   - action_mais_alguma_pergunta
 * afirmar
-  - action_mais_perguntas_afirmativa
 > identificar_contexto
 
 ## pathMaisPergunta.2-fim
 > identifica_mais_alguma_pergunta
   - action_mais_alguma_pergunta
+* negar
+  - action_curiosidades_mais
+* afirmar
+  - action_curiosidades_mais_sim
+> identificar_curiosidade
+
+## pathMaisPergunta.3-fim
+> identifica_mais_alguma_pergunta
+  - action_mais_alguma_pergunta
+* negar
+  - action_curiosidades_mais
 * negar
   - action_despedir
   - action_restart

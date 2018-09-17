@@ -50,7 +50,6 @@ actions:
   - actions.actions_geral.ActionIntroduzirContextoNovaProposta
   - actions.actions_geral.ActionIntroduzirContextoNaoExecucao
   - actions.actions_geral.ActionMaisAlgumaPergunta
-  - actions.actions_geral.ActionMaisPerguntasAfirmativa
   - actions.actions_geral.ActionExplicarContextos
   - actions.actions_geral.ActionEscolheuContextoErrado
   - actions.actions_geral.ActionExtra

@@ -105,9 +105,10 @@ class ActionAviso(ActionMultiline):
 
 class ActionIntroduzirExecucao(ActionMultiline):
     messages = [
-        'Eu ainda não aprendi a falar sobre um projeto que está em Execução ou'
-        'em Prestação de Contas. Ainda estou aprendendo... '
-        'Em breve eu poderei responder sua dúvida. '
+        'Eu ainda não aprendi a falar sobre um projeto que está em Execução ou '
+        'em Prestação de Contas. Ainda estou aprendendo :|\n'
+        'Em breve eu poderei responder sua dúvida. ',
+
         'Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC:\n'
 
         'Execução: acompanhamento.incentivo@cultura.gov.br\n'
@@ -193,11 +194,6 @@ class ActionIntroduzirContextoNaoExecucao(ActionMultiline):
 class ActionMaisAlgumaPergunta(ActionMultiline):
     messages = [
         'Você possui mais alguma dúvida? (Sim ou Não)',
-    ]
-
-class ActionMaisPerguntasAfirmativa(ActionMultiline):
-    messages = [
-        'Que bom! Espero estar ajudando',
     ]
 
 class ActionEscolheuContextoErrado(ActionMultiline):
