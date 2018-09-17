@@ -2,7 +2,7 @@ version: '2'
 
 services:
   rocketchat:
-    image: rocket.chat:0.68.3
+    image: rocket.chat:0.69.2
     restart: unless-stopped
     volumes:
       - ./uploads:/app/uploads
@@ -38,12 +38,24 @@ services:
     depends_on:
       - rocketchat
 
-  landing-page:
+  web:
     build:
       context: .
-      dockerfile: ./docker/landing_page/Dockerfile
-    ports:
-      - 8080:80
+      dockerfile: ./docker/web/Dockerfile
+    restart: unless-stopped
+    environment:
+      - PORT=8000
+      - ROCKETCHAT_URL=http://localhost:3000
+      - ALLOWED_HOSTS=localhost
     volumes:
-      - ./landing_page/nginx/htpasswd:/etc/nginx/.htpasswd
+      - ./web:/web
+    ports:
+      - 8000:8000
+    depends_on:
+      - webdb
 
+  webdb:
+    image: postgres:10.5
+    restart: unless-stopped
+    volumes:
+      - ./web/postgres-data:/var/lib/postgresql/data

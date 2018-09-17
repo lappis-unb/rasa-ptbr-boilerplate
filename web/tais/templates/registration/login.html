@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Login</h2>
+
+            <form role="form" method="post">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% buttons submit='OK' %}{% endbuttons %}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

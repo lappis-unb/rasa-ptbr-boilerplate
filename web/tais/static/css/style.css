@@ -1,0 +1,82 @@
+HTML, BODY{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+
+H1, H2{font-weight: bold;}
+#liveChatPlaceholder{
+  background-color: #2e5743;
+  position: fixed;
+  bottom: 0;
+  right:60px;
+  height: 350px;
+  width: 300px;
+  z-index: 1000;
+}
+#betaWarning{
+  background-color: #ffeb00;
+  color: #be5e0d;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 8px 16px;
+  position: fixed;
+  top: 16px;
+  right: 0;
+  width: 15%;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 2px 4px #888;
+  -moz-box-shadow: 0px 2px 4px #888;
+  box-shadow: 0px 2px 4px #888;
+}
+
+.jumbotron{
+  background: #11998e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #11998e, #38ef7d);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #11998e, #38ef7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  max-height: 27%;
+  margin-bottom: 80px;
+  padding: 2% 20%;
+}
+.jumbotron .display-3{
+  font-weight: bold;
+}
+.jumbotron H2{
+  color: #222;
+}
+.jumbotron IMG{
+  float: left;
+  margin-right: 48px;
+  max-width: 200px;
+}
+
+
+#mainContainer{
+  margin-bottom: 400px;/* to compensate for live chat area */
+}
+
+HEADER P{
+  font-size: 1.1em;
+}
+
+.nav-tabs{
+  margin-top: 40px;
+}
+.nav-tabs .nav-link{
+  font-size: 1em;
+  color: #666;
+}
+.nav-tabs .nav-link.active {
+  color: #11998e;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: transparent;
+  border-bottom:3px solid #11998e;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+.tab-pane{
+  padding-top: 1em;
+}

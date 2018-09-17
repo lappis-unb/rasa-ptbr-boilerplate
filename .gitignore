@@ -4,10 +4,11 @@ rasa_core.log
 
 ### Rocketchat ###
 
-/data
+data
 uploads
 
 
+web/postegres-data
 
 
 # Created by https://www.gitignore.io/api/vim,linux,macos,python

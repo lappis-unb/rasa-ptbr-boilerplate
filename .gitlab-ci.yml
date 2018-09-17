@@ -4,10 +4,10 @@ stages:
 
 variables:
   TAIS_LATEST_IMAGE: $CI_REGISTRY_IMAGE/tais:latest
-  LANDING_PAGE_LATEST_IMAGE: $CI_REGISTRY_IMAGE/landing_page:latest
+  WEB_LATEST_IMAGE: $CI_REGISTRY_IMAGE/web:latest
 
   TAIS_STABLE_IMAGE: $CI_REGISTRY_IMAGE/tais:stable
-  LANDING_PAGE_STABLE_IMAGE: $CI_REGISTRY_IMAGE/landing_page:stable
+  WEB_STABLE_IMAGE: $CI_REGISTRY_IMAGE/web:stable
 
 build stable:
   image: docker:latest
@@ -18,8 +18,8 @@ build stable:
     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
     - docker build -f docker/tais/Dockerfile -t $TAIS_STABLE_IMAGE .
     - docker push $TAIS_STABLE_IMAGE
-    - docker build -f docker/landing_page/Dockerfile -t $LANDING_PAGE_STABLE_IMAGE .
-    - docker push $LANDING_PAGE_STABLE_IMAGE
+    - docker build -f docker/web/Dockerfile -t $WEB_STABLE_IMAGE .
+    - docker push $WEB_STABLE_IMAGE
   only:
     - tags
   environment: development
@@ -32,8 +32,8 @@ deploy_to_production:
   services:
     - docker:dind
   script:
-    - upgrade --environment Production --stack TAIS --service tais --new-image $TAIS_LATEST_IMAGE --no-finish-upgrade --debug
-    - upgrade --environment Production --stack TAIS --service landing-page --new-image $LANDING_PAGE_LATEST_IMAGE --no-finish-upgrade --debug
+    - upgrade --environment Production --stack TAIS --service tais --new-image $TAIS_STABLE_IMAGE --no-finish-upgrade --debug
+    - upgrade --environment Production --stack TAIS --service web --new-image $WEB_STABLE_IMAGE --no-finish-upgrade --debug
   only:
     - tags
   environment: production
@@ -50,8 +50,8 @@ build latest:
     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
     - docker build -f docker/tais/Dockerfile -t $TAIS_LATEST_IMAGE .
     - docker push $TAIS_LATEST_IMAGE
-    - docker build -f docker/landing_page/Dockerfile -t $LANDING_PAGE_LATEST_IMAGE .
-    - docker push $LANDING_PAGE_LATEST_IMAGE
+    - docker build -f docker/web/Dockerfile -t $WEB_LATEST_IMAGE .
+    - docker push $WEB_LATEST_IMAGE
   only:
     - /master/
   environment: development
@@ -65,7 +65,7 @@ deploy_to_development:
     - docker:dind
   script:
     - upgrade --environment Development --stack TAIS --service tais --new-image $TAIS_LATEST_IMAGE --debug
-    - upgrade --environment Development --stack TAIS --service landing-page --new-image $LANDING_PAGE_LATEST_IMAGE --debug
+    - upgrade --environment Development --stack TAIS --service web --new-image $WEB_LATEST_IMAGE --debug
   only:
     - /master/
   environment: development
