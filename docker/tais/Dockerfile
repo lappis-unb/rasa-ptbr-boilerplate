@@ -17,9 +17,12 @@ workdir /rouana
 
 add ./scripts /scripts
 
-env TRAINING_EPOCHS=300                    \
-    CREDENTIALS="/rouana/credentials.yml"  \
-    ROCKETCHAT_URL="http://rocketchat:3000"
+env TRAINING_EPOCHS=300                     \
+    CREDENTIALS="/rouana/credentials.yml"   \
+    ROCKETCHAT_URL="http://rocketchat:3000" \
+    MAX_TYPING_TIME=10                      \
+    MIN_TYPING_TIME=1                       \
+    WORDS_PER_SECOND_TYPING=5
 
 cmd python /scripts/bot_config.py -r $ROCKETCHAT_URL && \
     python train-rocketchat.py

@@ -1,6 +1,7 @@
 import logging
 import threading
 import queue
+import os
 
 
 from rasa_core.channels.channel import InputChannel, UserMessage, OutputChannel
@@ -101,6 +102,7 @@ class RocketchatHandleMessages:
         self.messages = []
         self.message_index = 0
         self.bot = bot
+        self.is_typing = False
 
     def send_message(self):
         msg = self.messages[self.message_index]
@@ -111,33 +113,49 @@ class RocketchatHandleMessages:
         self.bot.connector.send_message(self.rid, msg['message'])
 
         if self.message_index == len(self.messages):
-            logger.info('deactivate typing for {}'.format(self.rid))
+            if self.is_typing:
+                logger.info('deactivate typing for {}'.format(self.rid))
 
-            self.bot.connector.call(
-                'stream-notify-room',
-                [self.rid + '/typing', self.bot.username, False]
-            )
+                self.bot.connector.call(
+                    'stream-notify-room',
+                    [self.rid + '/typing', self.bot.username, False],
+                    self.deactivate_typing
+                )
 
             self.messages = []
             self.message_index = 0
 
     def add_message(self, message):
-        logger.info('activate typing for {}'.format(self.rid))
-        self.bot.connector.call(
-            'stream-notify-room',
-            [self.rid + '/typing', self.bot.username, True]
-        )
+        if not self.is_typing:
+            logger.info('activate typing for {}'.format(self.rid))
 
-        wait_time = 1
+            self.bot.connector.call(
+                'stream-notify-room',
+                [self.rid + '/typing', self.bot.username, True],
+                self.activate_typing
+            )
+
+        wait_time = int(os.getenv('MIN_TYPING_TIME', 1))
+        max_time = int(os.getenv('MAX_TYPING_TIME', 10))
 
         if len(self.messages) != 0:
             last_msg = self.messages[-1]
             n_words = len(last_msg['message'].split(' '))
 
-            words_per_sec = 5
-            wait_time = max(1, n_words // words_per_sec) + last_msg['time']
+            words_per_sec = int(os.getenv('WORDS_PER_SECOND_TYPING', 5))
+            wait_time = min(max_time,
+                max(1, n_words // words_per_sec)
+            ) + last_msg['time']
 
         threading.Timer(wait_time, self.send_message).start()
 
         logger.info('[ ] schedule message {}: {}'.format(self.rid, message))
         self.messages.append({'message': message, 'time': wait_time})
+
+    def activate_typing(self, error, data):
+        if not error:
+            self.is_typing = True
+
+    def deactivate_typing(self, error, data):
+        if not error:
+            self.is_typing = False

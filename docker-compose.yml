@@ -28,10 +28,14 @@ services:
     build:
       context: .
       dockerfile: ./docker/tais/Dockerfile
+    restart: unless-stopped
     environment:
       - TRAINING_EPOCHS=300
       - CREDENTIALS=/rouana/credentials.yml
       - ROCKETCHAT_URL=http://rocketchat:3000
+      - MAX_TYPING_TIME=8
+      - MIN_TYPING_TIME=1
+      - WORDS_PER_SECOND_TYPING=10
     volumes:
       - ./rouana:/rouana
       - ./scripts:/scripts
