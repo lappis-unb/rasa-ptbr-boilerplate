@@ -3,6 +3,31 @@
 {% load bootstrap4 %}
 
 {% block content %}
+{% if not user.is_authenticated %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+ <form action="/accounts/login/" method="post">{% csrf_token %}
+
+  <div class="form-group">
+    <label for="username">E-mail</label>
+    <input type="text" class="form-control" name="username" value="" id="username">
+  </div>
+  <div class="form-group">
+    <label for="password">Senha</label>
+    <input type="password" class="form-control" name="password" value="" id="password">
+  </div>
+
+  <div >
+        <button type="submit" value="login" class="btn btn-outline-primary">Entrar</button>
+  </div>
+
+        </form>
+        </div>
+    </div>
+</div>
+{% else %}
 
 <div class="container" id="mainContainer">
 <div class="row">
@@ -110,6 +135,7 @@
             h.parentNode.insertBefore(j, h);
           })(window, document, 'script', host + '/livechat');
     </script>
+{% endif %}
 {% endif %}
 
 {% endblock %}
