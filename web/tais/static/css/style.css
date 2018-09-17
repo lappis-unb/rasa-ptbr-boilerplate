@@ -30,6 +30,12 @@ H1, H2{font-weight: bold;}
   box-shadow: 0px 2px 4px #888;
 }
 
+#btLogout{
+	position: absolute;
+	right: 24px;
+	top:120px;
+}
+
 .jumbotron{
   background: #11998e;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #11998e, #38ef7d);  /* Chrome 10-25, Safari 5.1-6 */
@@ -45,12 +51,16 @@ H1, H2{font-weight: bold;}
 .jumbotron H2{
   color: #222;
 }
-.jumbotron IMG{
+.jumbotron #avatar{
   float: left;
   margin-right: 48px;
   max-width: 200px;
 }
 
+#btFeedback{
+	margin-top: 24px;
+	width: 200px;
+}
 
 #mainContainer{
   margin-bottom: 400px;/* to compensate for live chat area */

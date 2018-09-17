@@ -11,11 +11,7 @@
 <div  class="float-right">
     {% if user.is_authenticated %}
         <a href="{% url 'logout'  %}">
-            <button class="btn btn-outline-secondary">Sair</button>
-        </a>
-    {% else %}
-        <a href="{% url 'login'  %}">
-            <button class="btn btn-outline-primary">Entrar</button>
+			<button type="button" class="btn btn-outline-dark" id="btLogout">Sair</button>
         </a>
     {% endif %}
 </div>
