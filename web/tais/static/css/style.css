@@ -5,6 +5,8 @@ HTML, BODY{
 }
 
 H1, H2{font-weight: bold;}
+
+
 #liveChatPlaceholder{
   background-color: #2e5743;
   position: fixed;
@@ -55,6 +57,9 @@ H1, H2{font-weight: bold;}
   float: left;
   margin-right: 48px;
   max-width: 200px;
+}
+.btn-subtitle{
+	font-size:0.6em;
 }
 
 #btFeedback{
