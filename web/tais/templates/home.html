@@ -7,16 +7,17 @@
 <div class="container" id="mainContainer">
   <div class="row">
 
+<!--
     <div class="col-lg-10 offset-lg-1">
 <div  class="float-right">
+-->
     {% if user.is_authenticated %}
-        <a href="{% url 'logout'  %}">
-			<button type="button" class="btn btn-outline-dark" id="btLogout">Sair</button>
-        </a>
+<!--        <a href="{% url 'logout'  %}">-->
+			<button type="button" class="btn btn-outline-dark" id="btLogout" onclick="location.href='{% url 'logout'  %}'">Sair</button>
+<!--        </a>-->
     {% endif %}
-</div>
+<!--</div>-->
 
-    <div style="height: 15%;"></div>
 
       <header>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
@@ -42,12 +43,12 @@
 </div>
 -->
         <div class="tab-pane fade show active" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
-          <p>Comece se colocando no lugar de alguém que não conhece nada sobre o universo do incentivo cultural e que tem curiosidade sobre o assunto.</p>
-          <p>Depois disso, é só inicar o diálogo com a Taís, como se você estivesse conversando com uma pessoa. Ou seja, leia o que ela tem para dizer e responda em função disso. Evite saltar etapas ou fazer perguntas fora do contexto do que a Taís disse por último.</p>
+			<p>Comece se colocando no lugar de <strong>alguém que não conhece nadasobre o universo do incentivo cultural</strong> e que tem curiosidade sobre o assunto.</p>
+			<p>Depois disso, é só inicar o diálogo com a Taís, como se você estivesse conversando com uma pessoa. Ou seja, leia o que ela tem para dizer e responda em função disso. Evite saltar etapas ou fazer perguntas fora do contexto do que a Taís disse por último.</p>
         </div>
         <div class="tab-pane fade" id="pop3" role="tabpanel" aria-labelledby="pop3-tab">
-          <p>A Taís ainda está em uma fase extremamente inicial. As conversas que você tem com ela são a melhor forma de identificarmos os pontos a melhorar e os novos conteúdos que ela precisa aprender.</p>
-          <p>No momento, ela consegue falar sobre:</p>
+			<p>No momento, a Taís procura tirar dúvidas das pessoas que estão dando os primeiros passos no incentivo de projetos culturais. As conversas que você tem com ela são a melhor forma de identificarmos os pontos a melhorar e os novos conteúdos que ela precisa aprender.</p>
+			<p>Ela consegue falar sobre:</p>
           <div class="container">
             <div class="row">
               <div class="col-lg-4">
@@ -57,7 +58,6 @@
                   <li>MinC</li>
                   <li>SEFIC</li>
                   <li>SALIC</li>
-                  <li>CNIC</li>
                   <li>vinculadas</li>
                   <li>proposta</li>
                   <li>projeto</li>
