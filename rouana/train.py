@@ -12,10 +12,17 @@ from rasa_core.policies.memoization import MemoizationPolicy
 
 logger = logging.getLogger(__name__)
 TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 300))
+TRAINED_DATA_FOLDER = int(os.getenv('TRAINED_DATA_FOLDER', '/'))
 
-def train_dialogue(domain_file='/rouana/domain.yml',
-                   model_path='/models/dialogue',
-                   training_data_file='/rouana/data/stories'):
+def path_to_training_files(filename):
+    return os.path.join(os.path.realpath(__file__), filename)
+
+def path_to_trained_files(filename):
+    return os.path.join(TRAINED_DATA_FOLDER, filename)
+
+def train_dialogue(domain_file=path_to_training_files('domain.yml'),
+                   model_path=path_to_trained_files('models/dialogue'),
+                   training_data_file=path_to_training_files('data/stories')):
     fallback = FallbackPolicy(fallback_action_name="action_default_fallback",
                               core_threshold=0.12,
                               nlu_threshold=0.12)
@@ -43,18 +50,21 @@ def train_nlu():
     from rasa_nlu import config
     from rasa_nlu.model import Trainer
 
-    training_data = load_data('/rouana/data/intents/')
-    trainer = Trainer(config.load('/rouana/config.yml'))
+    training_data = load_data(path_to_training_files('data/intents/'))
+    trainer = Trainer(config.load(path_to_training_files('config.yml')))
     trainer.train(training_data)
-    model_directory = trainer.persist('/models/nlu/',
+    model_directory = trainer.persist(path_to_trained_files('models/nlu/'),
                                       fixed_model_name='current')
 
     return model_directory
 
 
 def run(serve_forever=True):
-    interpreter = RasaNLUInterpreter('/models/nlu/default/current')
-    agent = Agent.load('/models/dialogue', interpreter=interpreter)
+    interpreter = RasaNLUInterpreter(
+        path_to_trained_files('models/nlu/default/current')
+    )
+    agent = Agent.load(path_to_trained_files('models/dialogue'),
+                       interpreter=interpreter)
 
     if serve_forever:
         agent.handle_channel(ConsoleInputChannel())
