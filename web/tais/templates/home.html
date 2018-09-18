@@ -3,39 +3,41 @@
 {% load bootstrap4 %}
 
 {% block content %}
+{% if not user.is_authenticated %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
 
-<p id="betaWarning">Versão BETA</p>
+ <form action="/accounts/login/" method="post">{% csrf_token %}
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <img src="{% static 'img/avatar.jpg' %}" />
-    <h1 class="display-3">Taís</h1>
-    <h2>Assistente Virtual do MinC</h2>
+  <div class="form-group">
+    <label for="username">E-mail</label>
+    <input type="text" class="form-control" name="username" value="" id="username">
+  </div>
+  <div class="form-group">
+    <label for="password">Senha</label>
+    <input type="password" class="form-control" name="password" value="" id="password">
   </div>
 
+  <div >
+        <button type="submit" value="login" class="btn btn-outline-primary">Entrar</button>
+  </div>
+
+        </form>
+        </div>
+    </div>
 </div>
+{% else %}
+
 <div class="container" id="mainContainer">
-  <div class="row">
-
+<div class="row">
     <div class="col-lg-10 offset-lg-1">
-<div  class="float-right">
-    {% if user.is_authenticated %}
-        <a href="{% url 'logout'  %}">
-            <button class="btn btn-outline-secondary">Sair</button>
-        </a>
-    {% else %}
-        <a href="{% url 'login'  %}">
-            <button class="btn btn-outline-primary">Entrar</button>
-        </a>
-    {% endif %}
-</div>
 
-    <div style="height: 15%;"></div>
 
       <header>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-        <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-
+		  <p>Agradecemos a sua disponibilidade para participar da avaliação da versão de teste (beta) da Taís, a assistente virtual do Ministério da Cultura.</p>
+		  <p>A sua participação é fundamental para a evolução da assistente virtual. No momento, a Taís procura tirar dúvidas das <strong>pessoas que estão dando os primeiros passos no incentivo de projetos culturais</strong>. As conversas que você tem com ela são a melhor forma de identificarmos os pontos a melhorar e os novos conteúdos que ela precisa aprender.</p>
+		  <p>O seu feedback é precioso. Clique no botão vermelho para enviar sugestões, críticas e comentários para tais.betateste@gmail.com</p>
       </header>
       <nav class="nav-justified">
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -56,12 +58,10 @@
 </div>
 -->
         <div class="tab-pane fade show active" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
-          <p>Comece se colocando no lugar de alguém que não conhece nada sobre o universo do incentivo cultural e que tem curiosidade sobre o assunto.</p>
-          <p>Depois disso, é só inicar o diálogo com a Taís, como se você estivesse conversando com uma pessoa. Ou seja, leia o que ela tem para dizer e responda em função disso. Evite saltar etapas ou fazer perguntas fora do contexto do que a Taís disse por último.</p>
+			<p>Comece se colocando no lugar de <strong>alguém que não conhece nada sobre o universo do incentivo cultural</strong> e que tem curiosidade sobre o assunto.</p>
+			<p>Depois disso, é só inicar o diálogo com a Taís, como se você estivesse conversando com uma pessoa. Ou seja, leia o que ela tem para dizer e responda em função disso. Evite saltar etapas ou fazer perguntas fora do contexto do que a Taís disse por último.</p>
         </div>
         <div class="tab-pane fade" id="pop3" role="tabpanel" aria-labelledby="pop3-tab">
-          <p>A Taís ainda está em uma fase extremamente inicial. As conversas que você tem com ela são a melhor forma de identificarmos os pontos a melhorar e os novos conteúdos que ela precisa aprender.</p>
-          <p>No momento, ela consegue falar sobre:</p>
           <div class="container">
             <div class="row">
               <div class="col-lg-4">
@@ -71,7 +71,6 @@
                   <li>MinC</li>
                   <li>SEFIC</li>
                   <li>SALIC</li>
-                  <li>CNIC</li>
                   <li>vinculadas</li>
                   <li>proposta</li>
                   <li>projeto</li>
@@ -136,6 +135,7 @@
             h.parentNode.insertBefore(j, h);
           })(window, document, 'script', host + '/livechat');
     </script>
+{% endif %}
 {% endif %}
 
 {% endblock %}
