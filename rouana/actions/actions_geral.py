@@ -26,11 +26,15 @@ class ActionCumprimentar(ActionMultiline):
         'esclarecer dúvidas sobre a Lei Rouanet, Posso também solucionar problemas de proposta e projeto'
     ]
 
+class ActionFaseDeTestes(ActionMultiline):
+    messages = [
+        'Ainda não consigo falar sobre outros assuntos. Estou em fase de testes e a cada dia aprendo mais com vocês.'
+    ]    
+
 class ActionDefinirPerfil(ActionMultiline):
     messages = [
 
-        'Você prefere conversar sobre criação e andamento de projetos, ou '
-        'prefere falar mais sobre a Lei Rouanet?'
+        'Você quer tirar dúvidas sobre a Lei Rouanet ou sobre propostas e projetos?'
     ]
 
 class ActionExplicarDefinicaoPerfil(ActionMultiline):

@@ -36,7 +36,7 @@ Condition: Visitor time on site
     Value: 3
 Action: Send Message
  Value: Impersonate next agent from queue
- Value: Oi eu sou a Taís, assistente virtual do MinC, e estou aqui para te ajudar a esclarecer dúvidas sobre a Lei Rouanet. Tudo bom?
+ Value: Olá, meu nome é Taís, sou assistente virtual do MinC! Você quer conversar sobre incentivo à cultura? 
 ```
 
 O valor `http://localhost:8080/` deve ser a URL de acesso da Taís.
