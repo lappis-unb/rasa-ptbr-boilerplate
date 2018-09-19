@@ -30,6 +30,7 @@ actions:
   - actions.actions_oqueeh.ActionOQueEh
 
   - actions.actions_geral.ActionCumprimentar
+  - actions.actions_geral.ActionFaseDeTestes
   - actions.actions_geral.ActionDefinirPerfil
   - actions.actions_geral.ActionExplicarDefinicaoPerfil
   - actions.actions_geral.ActionNovaProposta
