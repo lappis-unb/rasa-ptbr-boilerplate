@@ -97,12 +97,11 @@
 > identificar_execucao
 * afirmar
   - action_introduzir_execucao
-> identifica_mais_alguma_pergunta
+> mais_alguma_pergunta
 
 ## path2.1.2.2
 > identificar_execucao
 * negar
-  - action_introduzir_contexto_nao_execucao
 > identificar_contexto
 
 ## path2.1.2.3
@@ -215,16 +214,13 @@
 ## pathMaisPergunta.4-fim
 > mais_alguma_pergunta
   - action_mais_alguma_pergunta
+* afirmar
+> oque_eh
+
+##pathMaisPergunta.5-fim
+> oque_eh
+- action_curiosidades_mais_sim
 * o_que_eh
   - action_o_que_eh
 > mais_alguma_pergunta
 
-## pathMaisPergunta.5-fim
-> mais_alguma_pergunta
-  - action_mais_alguma_pergunta 
-* o_que_eh
-  - action_o_que_eh
-  - action_curiosidades_mais
-* negar
-  - action_despedir
-  - action_restart
