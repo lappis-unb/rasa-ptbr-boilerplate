@@ -237,6 +237,17 @@ class ActionAindaNaoAprendi(ActionMultiline):
         'http://rouanet.cultura.gov.br/fale-conosco/',
     ]
 
+class ActionNaoAprendiContexto(ActionMultiline):
+    messages = [
+        'Então, sei que agora, você gostaria de tirar dúvidas mais específicas do seu projeto. \n'
+        'Estou em fase de testes e não consigo responder. Mas, em breve vou poder te ajudar com esses temas.'
+    ]
+
+class ActionProponenteCadastrado(ActionMultiline):
+    messages = [
+        'Okay! Agora que você tem um proponente cadastrado, é só preencher sua proposta!'
+    ]
+
 class ActionRevert(Action):
     def name(self):
         return "action_revert"

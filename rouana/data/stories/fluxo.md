@@ -80,7 +80,6 @@
 ## path2.1.1
 > identificar_nova_proposta
 * afirmar
-  - action_introduzir_contexto_nova_proposta
 > identificar_contexto
 
 ## path2.1.2
@@ -98,12 +97,11 @@
 > identificar_execucao
 * afirmar
   - action_introduzir_execucao
-> identifica_mais_alguma_pergunta
+> mais_alguma_pergunta
 
 ## path2.1.2.2
 > identificar_execucao
 * negar
-  - action_introduzir_contexto_nao_execucao
 > identificar_contexto
 
 ## path2.1.2.3
@@ -161,88 +159,42 @@
 * negar
   - action_cadastro_salic_apos_video
   - action_inscricao_proponente
-  - action_cadastro_proponente_introduzir_contexto
-> identificar_contexto
+  - action_proponente_cadastrado
+> mais_alguma_pergunta
 
 ## pathCadastroProponente.1
 > identificar_eh_proponente
 * afirmar
-  - action_cadastro_proponente_introduzir_contexto
-> identificar_contexto
+  - action_proponente_cadastrado
+> mais_alguma_pergunta
 
 ## pathCadastroProponente.2
 > identificar_eh_proponente
 * negar
   - action_inscricao_proponente
-  - action_cadastro_proponente_introduzir_contexto
-> identificar_contexto
+  - action_proponente_cadastrado
+> mais_alguma_pergunta
 
 ## pathCadastroProponente.3
 > identificar_eh_proponente
 * o_que_eh
   - action_o_que_eh
-  - action_cadastro_proponente_introduzir_contexto
-> identificar_contexto
+  - action_proponente_cadastrado
+> mais_alguma_pergunta
 
 
 
 <!--- Contexto --->
 
 
-## pathContexto.processo
+## pathContexto
 > identificar_contexto
-  - action_definir_contexto
-* escolher_processo
-  - action_explicar_processo
-  - action_ainda_nao_aprendi
-> identifica_mais_alguma_pergunta
+  - action_nao_aprendi_contexto
+> mais_alguma_pergunta
 
-## pathContexto.preenchimento
-> identificar_contexto
-  - action_definir_contexto
-* escolher_preenchimento
-  - action_explicar_preenchimento
-  - action_ainda_nao_aprendi
-> identifica_mais_alguma_pergunta
 
-## pathContexto.prazo
-> identificar_contexto
-  - action_definir_contexto
-* escolher_prazo
-  - action_explicar_prazo
-  - action_ainda_nao_aprendi
-> identifica_mais_alguma_pergunta
-
-## pathContexto.errossalic
-> identificar_contexto
-  - action_definir_contexto
-* escolher_erros_salic
-  - action_explicar_erros_salic
-  - action_ainda_nao_aprendi
-> identifica_mais_alguma_pergunta
-
-## pathContexto.5
-> identificar_contexto
-  - action_definir_contexto
-* duvida_sobre_contexto OR negar
-  - action_explicar_contextos
-> identificar_contexto
-
-## pathContexto.oqueeh
-> identificar_contexto
-  - action_definir_contexto
-* o_que_eh
-  - action_o_que_eh
-> identifica_mais_alguma_pergunta
-
-## pathMaisPergunta.1
-> identifica_mais_alguma_pergunta
-  - action_mais_alguma_pergunta
-* afirmar
-> identificar_contexto
-
-## pathMaisPergunta.2-fim
-> identifica_mais_alguma_pergunta
+## pathMaisPergunta.2
+> mais_alguma_pergunta
   - action_mais_alguma_pergunta
 * negar
   - action_curiosidades_mais
@@ -251,10 +203,24 @@
 > identificar_curiosidade
 
 ## pathMaisPergunta.3-fim
-> identifica_mais_alguma_pergunta
+> mais_alguma_pergunta
   - action_mais_alguma_pergunta
 * negar
   - action_curiosidades_mais
 * negar
   - action_despedir
   - action_restart
+
+## pathMaisPergunta.4-fim
+> mais_alguma_pergunta
+  - action_mais_alguma_pergunta
+* afirmar
+> oque_eh
+
+##pathMaisPergunta.5-fim
+> oque_eh
+- action_curiosidades_mais_sim
+* o_que_eh
+  - action_o_que_eh
+> mais_alguma_pergunta
+

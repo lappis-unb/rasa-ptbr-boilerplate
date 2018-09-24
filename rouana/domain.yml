@@ -56,6 +56,8 @@ actions:
   - actions.actions_geral.ActionExtra
   - actions.actions_geral.ActionRevert
   - actions.actions_geral.ActionAindaNaoAprendi
+  - actions.actions_geral.ActionNaoAprendiContexto
+  - actions.actions_geral.ActionProponenteCadastrado
 
   - actions.actions_curiosidades.ActionCuriosidadesIndicacao
   - actions.actions_curiosidades.ActionCuriosidadesMais
