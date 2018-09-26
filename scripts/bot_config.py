@@ -61,6 +61,9 @@ host = args.rocketchat_url
 if host[-1] == '/':
     host = host[:-1]
 
+if not host.startswith('http://'):
+    host = 'http://' + host
+
 path = '/api/v1/login'
 
 bot = {

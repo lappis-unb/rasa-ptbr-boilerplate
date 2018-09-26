@@ -11,8 +11,9 @@ run pip install -r requirements.txt
 
 add ./web /web/
 
-env PORT=8000                               \
-    ROCKETCHAT_URL="http://localhost:3000"  \
-    ALLOWED_HOSTS="localhost"
+env PORT=8000                             \
+    ROCKETCHAT_URL=http://localhost:3000  \
+    ALLOWED_HOSTS=localhost               \
+    PREFIX_URL=
 
 cmd python manage.py runserver 0.0.0.0:$PORT

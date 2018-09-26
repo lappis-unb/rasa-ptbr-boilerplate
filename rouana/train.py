@@ -12,10 +12,10 @@ from rasa_core.policies.memoization import MemoizationPolicy
 
 logger = logging.getLogger(__name__)
 TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 300))
-TRAINED_DATA_FOLDER = int(os.getenv('TRAINED_DATA_FOLDER', '/'))
+TRAINED_DATA_FOLDER = os.getenv('TRAINED_DATA_FOLDER', '/')
 
 def path_to_training_files(filename):
-    return os.path.join(os.path.realpath(__file__), filename)
+    return os.path.join(os.path.split(os.path.realpath(__file__))[0], filename)
 
 def path_to_trained_files(filename):
     return os.path.join(TRAINED_DATA_FOLDER, filename)
