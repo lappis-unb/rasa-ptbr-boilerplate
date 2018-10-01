@@ -61,6 +61,9 @@ host = args.rocketchat_url
 if host[-1] == '/':
     host = host[:-1]
 
+if not host.startswith('http://'):
+    host = 'http://' + host
+
 path = '/api/v1/login'
 
 bot = {
@@ -154,11 +157,8 @@ def configure_livechat():
     # Disable Livechat Email display
     api_post('settings/Livechat_show_agent_email', {'value': False})
 
-    # Activate Livechat Webhook Send Request on Visitor Message
-    api_post('settings/Livechat_webhook_on_visitor_message', {'value': True})
-
-    # Activate Livechat Webhook Send Request on Agent Messages
-    api_post('settings/Livechat_webhook_on_agent_message', {'value': True})
+    # Disable file upload
+    api_post('settings/Livechat_fileupload_enabled', {'value': False})
 
 
 def configure_rocketchat():

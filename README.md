@@ -73,7 +73,7 @@ sudo docker build -t rouana -f docker/tais/Dockerfile .
 sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana python train.py
 ```
 
-## Site
+## Site do Beta
 
 ### Ambiente de Desenvolvimento
 
@@ -87,16 +87,7 @@ sudo docker-compose run --rm web python manage.py createsuperuser
 #### Execução
 
 ```
-sudo docker-compose up web
+sudo docker-compose up -d web
 ```
 
 Você pode acessar o site por padrão na url `localhost:8000`
-
-## Testes
-
-### Teste de confiabilidade de frases
-
-```sh
-sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana python confidence.py
-```
-
