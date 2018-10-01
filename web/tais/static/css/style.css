@@ -72,6 +72,10 @@ H1, H2{font-weight: bold;}
   clear: both;
 }
 
+#maintenance{
+	text-align: center;
+}
+
 HEADER P{
   font-size: 1.1em;
 }
