@@ -1,7 +1,12 @@
 from django.db import models
 
-# Create your models here.
-
 class Maintainance(models.Model):
-    maintainance_start = models.DateField()
-    maintainance_end = models.DateField()
+    set_maintainance_page = models.BooleanField()
+
+    def save(self, *args, **kwargs):
+      self.clean_fields()
+      super(Maintainance, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return 'Maintainance Period'
+
