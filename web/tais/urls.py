@@ -18,9 +18,10 @@ from django.urls import path, include
 from django.views.generic.base import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
+from tais.views import index
 
 urlpatterns = [
-    path(settings.PREFIX_URL + '', TemplateView.as_view(template_name='home.html'), name='home'),
+    path(settings.PREFIX_URL + '', index, name='home'),
     path(settings.PREFIX_URL + 'admin/', admin.site.urls),
     path(settings.PREFIX_URL + 'accounts/', include('django.contrib.auth.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
