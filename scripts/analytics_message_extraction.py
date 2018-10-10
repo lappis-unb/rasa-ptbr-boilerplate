@@ -6,6 +6,10 @@ import time
 
 from rocketchat_py_sdk.driver import Driver
 
+from rasa_nlu.training_data import load_data
+from rasa_nlu.model import Trainer, Interpreter
+from rasa_nlu import config
+
 # == Log Config ==
 
 logger = logging.getLogger('Parse Chats History')
@@ -42,6 +46,18 @@ parser.add_argument(
     '--ssl', '-s', type=bool, default=False,
     help='Web Socker SSL config (default: False)'
 )
+parser.add_argument(
+    '--intents-directory', '-id', type=str, default='/rouana/data/intents/',
+    help='Directory where the intents are (default: /rouana/data/intents/)'
+)
+parser.add_argument(
+    '--rasa-config', '-rc', type=str, default='/rouana/config.yml',
+    help='Rasa configuration file (default: /rouana/config.yml)'
+)
+parser.add_argument(
+    '--model-directory', '-md', type=str, default='/models/dialogue',
+    help='Directory where the training data will persist (default: /models/dialogue)'
+)
 
 args = parser.parse_args()
 
@@ -57,7 +73,7 @@ bot = {
 
 ssl_config = args.ssl
 
-channels_ids = []
+interpreter = None
 
 
 def connect_bot():
@@ -120,6 +136,11 @@ def enrich_data(error, data):
         data['messages']
     )
 
+    for message in messages:
+        if message['username'] != 'tais':
+            print(message)
+            print(interpreter.parse(message['text']))
+
     room = {'id': room_id, 'messages': list(messages)}
     logger.info('Got {} messages for room {}'.format(
         len(room['messages']), room_id)
@@ -127,6 +148,18 @@ def enrich_data(error, data):
 
 
 if __name__ == '__main__':
+
+    intents_directory = '/rouana/data/intents/'
+
+    training_data = load_data(intents_directory)
+    trainer = Trainer(config.load('/rouana/config.yml'))
+    trainer.train(training_data)
+    
+    logger.info('Ending training')
+
+    model_directory = trainer.persist('/models/dialogue')
+    interpreter = Interpreter.load(model_directory)
+    
     connect_bot()
 
     while True:
