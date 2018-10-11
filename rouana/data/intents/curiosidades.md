@@ -78,25 +78,28 @@
 
 ## intent:curiosidades_lei_rouanet_denuncia
 - quero denunciar um projeto
-- como faço uma denúncia
-- tem um projeto usando o dinheiro da lei de forma indevida
-- tem um projeto fazendo o uso do dinheiro de forma ilegal
-- com quem eu falo para denunciar um projeto
-- posso denunciar um projeto para você
+- uso do dinheiro da lei de forma indevida
+- uso do dinheiro de forma ilegal
+- com quem eu falo para denunciar
+- posso denunciar
 - tenho um projeto para denunciar
-- o que fazer quando alguém utiliza o dinheiro de forma ilegal
-- como faço pra denunciar um projeto?
-- identifiquei uma irregularidade em um projeto, como eu denuncio?
-- tem algo errado no projeto do Roberto, há algum jeito de eu denunciar?
-- tem algo errado no projeto Pintura e Bordado, há algum jeito de eu denunciar?
-- a lei possui algum mencanismo de denuncia
-- como eu denuncio um projeto?
-- gostaria de saber como faço uma denuncia
-- como funciona a denuncia?
+- utiliza o dinheiro de forma ilegal
+- identifiquei uma irregularidade 
+- tem algo errado no projeto 
+- como eu denuncio
 - qual o processo de denuncia?
 - da pra fazer uma denuncia?
-- queria saber se é possivel fazer uma denuncia
-- se eu quiser fazer uma denuncia, como faço?
+- e possivel fazer uma denuncia
+- denunciar
+- denuncia
+- dinheiro ilegal
+- dinheiro indevido
+- processo de denuncia
+- mecanismo de denuncia
+- dinheiro de forma ilegal
+- dinheiro de forma indevida
+- fazer uma denuncia
+- uma irregularidade
 
 ## intent:curiosidades_elegibilidade_de_empresa_para_beneficios
 - Qualquer empresa pode se beneficiar de incentivos fiscais, apoiando projetos culturais?
