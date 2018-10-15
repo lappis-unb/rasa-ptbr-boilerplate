@@ -128,24 +128,30 @@ def enrich_data(error, data):
     
     room_id = data['messages'][0]['rid']
 
-    messages = map(lambda message: {
+    messages = list(map(lambda message: {
             'username': message['u']['username'],
             'text': message['msg'],
             'timestamp': message['ts'], 
         },
         data['messages']
-    )
+    ))
 
     for message in messages:
         if message['username'] != 'tais':
-            print(message)
-            print(interpreter.parse(message['text']))
+            nlu_data = interpreter.parse(message['text'])
+            message['entities'] = nlu_data['entities']
+            message['intents']  = nlu_data['intent_ranking']
+        else:
+            message['entities'] = []
+            message['intents']  = []    
 
-    room = {'id': room_id, 'messages': list(messages)}
+    room = {'id': room_id, 'messages': list(messages), 
+            'updated_at': time.time()}
+    
     logger.info('Got {} messages for room {}'.format(
         len(room['messages']), room_id)
     )
-
+    logger.debug(room)
 
 if __name__ == '__main__':
 
