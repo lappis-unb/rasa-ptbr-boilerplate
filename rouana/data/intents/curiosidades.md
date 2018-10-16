@@ -76,30 +76,43 @@
 - qto a lei já arrecadou?
 
 
-## intent:curiosidades_lei_rouanet_denuncia
+## intent:lei_rouanet_denuncia
+
 - quero denunciar um projeto
+- quero registrar uma denuncia
+- como faço uma denuncia
+- como funciona a denuncia
 - uso do dinheiro da lei de forma indevida
 - uso do dinheiro de forma ilegal
 - com quem eu falo para denunciar
-- posso denunciar
 - tenho um projeto para denunciar
 - utiliza o dinheiro de forma ilegal
-- identifiquei uma irregularidade 
-- tem algo errado no projeto 
-- como eu denuncio
-- qual o processo de denuncia?
-- da pra fazer uma denuncia?
+- identifiquei uma irregularidade
+- tem algo errado no projeto
+- gostaria de saber como denunciar
+- qual o processo de denuncia
 - e possivel fazer uma denuncia
-- denunciar
+- dinheiro do projeto ilegal
 - denuncia
+- denunciar
+- denuncia via ouvidoria
+- denunciar fraude
+- denunciar dirigente
+- denunciar projeto
+- denuncia de projeto ilegal
 - dinheiro ilegal
 - dinheiro indevido
-- processo de denuncia
-- mecanismo de denuncia
 - dinheiro de forma ilegal
 - dinheiro de forma indevida
+- denuncias anonimas
+- processo de denuncia
+- mecanismo de denuncia
 - fazer uma denuncia
-- uma irregularidade
+- registrar denuncia
+- projeto ilegal
+- posso denunciar
+- cometer irregularidade
+- roubo
 
 ## intent:curiosidades_elegibilidade_de_empresa_para_beneficios
 - Qualquer empresa pode se beneficiar de incentivos fiscais, apoiando projetos culturais?
