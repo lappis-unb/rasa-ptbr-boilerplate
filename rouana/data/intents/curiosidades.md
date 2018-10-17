@@ -1,18 +1,35 @@
 ## intent:curiosidades_quantidade_projetos
-- Quantos projetos já participaram da lei rouanet?
-- Quantos projetos já foram agraciados pela lei rouanet?
-- Quantos projetos usam da lei rouanet?
-- Quantos são os projetos usam da lei rouanet?
-- Quantos projetos existem?
-- Qual a média de projetos por ano?
-- Qual o número de projetos?
-- Você tem a estatistica sobre projetos participantes?
-- Qual a quantidade de projetos que já usou a lei?
-- número de projetos incetivados pela lei até agora
-- quantos projetos já tiveram incentivo da lei?
-- qual a quantidade de projetos a lei rouanet possui?
-- qual a quantidade de projetos que a lei rouanet tem?
-- qtos projetos a lei rouanet tem?
+
+- quantos projetos foram aprovados
+- quantos projetos foram agraciados
+- quantos projetos foram incentivados
+- quantos projetos participam da lei
+- quantos projetos participaram
+- quantos projetos passaram pela lei
+- quantos projetos captaram recursos
+- quantos projetos usam a lei rouanet
+- quantos projetos ja tiveram incentivo
+- quantos projetos a lei rouanet aprovou
+- quantos projetos a lei rouanet tem
+- quantos projetos existem
+- quantidade de projetos que a lei rouanet possui
+- quantidade de projetos que a lei rouanet tem
+- quantidade de projetos incentivados
+- quantidade de projetos aprovados
+- quantidade de projetos
+- estatistica de projetos participantes
+- estatistica de projetos
+- estatistica sobre projetos
+- projetos que captaram recursos
+- projetos participantes
+- projetos incentivados
+- projetos aprovados
+- projetos agraciados
+- projetos em execução
+- media de projetos por ano
+- media de projetos
+- numero de projetos incentivados
+- numero de projetos
 
 
 ## intent:curiosidades_beneficios_incentivo_projetos_culturais
