@@ -76,27 +76,43 @@
 - qto a lei já arrecadou?
 
 
-## intent:curiosidades_lei_rouanet_denuncia
+## intent:lei_rouanet_denuncia
+
 - quero denunciar um projeto
-- como faço uma denúncia
-- tem um projeto usando o dinheiro da lei de forma indevida
-- tem um projeto fazendo o uso do dinheiro de forma ilegal
-- com quem eu falo para denunciar um projeto
-- posso denunciar um projeto para você
+- quero registrar uma denuncia
+- como faço uma denuncia
+- como funciona a denuncia
+- uso do dinheiro da lei de forma indevida
+- uso do dinheiro de forma ilegal
+- com quem eu falo para denunciar
 - tenho um projeto para denunciar
-- o que fazer quando alguém utiliza o dinheiro de forma ilegal
-- como faço pra denunciar um projeto?
-- identifiquei uma irregularidade em um projeto, como eu denuncio?
-- tem algo errado no projeto do Roberto, há algum jeito de eu denunciar?
-- tem algo errado no projeto Pintura e Bordado, há algum jeito de eu denunciar?
-- a lei possui algum mencanismo de denuncia
-- como eu denuncio um projeto?
-- gostaria de saber como faço uma denuncia
-- como funciona a denuncia?
-- qual o processo de denuncia?
-- da pra fazer uma denuncia?
-- queria saber se é possivel fazer uma denuncia
-- se eu quiser fazer uma denuncia, como faço?
+- utiliza o dinheiro de forma ilegal
+- identifiquei uma irregularidade
+- tem algo errado no projeto
+- gostaria de saber como denunciar
+- qual o processo de denuncia
+- e possivel fazer uma denuncia
+- dinheiro do projeto ilegal
+- denuncia
+- denunciar
+- denuncia via ouvidoria
+- denunciar fraude
+- denunciar dirigente
+- denunciar projeto
+- denuncia de projeto ilegal
+- dinheiro ilegal
+- dinheiro indevido
+- dinheiro de forma ilegal
+- dinheiro de forma indevida
+- denuncias anonimas
+- processo de denuncia
+- mecanismo de denuncia
+- fazer uma denuncia
+- registrar denuncia
+- projeto ilegal
+- posso denunciar
+- cometer irregularidade
+- roubo
 
 ## intent:curiosidades_elegibilidade_de_empresa_para_beneficios
 - Qualquer empresa pode se beneficiar de incentivos fiscais, apoiando projetos culturais?
