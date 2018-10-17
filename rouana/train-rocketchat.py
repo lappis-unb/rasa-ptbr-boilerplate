@@ -22,8 +22,8 @@ def run_rocket():
 
     configs = yaml.load(open(CREDENTIALS))
 
-    username = os.getenv('TAIS_USERNAME', configs['user'])
-    password = os.getenv('TAIS_PASSWORD', configs['password'])
+    username = os.getenv('ROCKETCHAT_TAIS_USERNAME', configs['user'])
+    password = os.getenv('ROCKETCHAT_TAIS_PASSWORD', configs['password'])
     url = os.getenv('ROCKETCHAT_URL', configs['server_url'])
 
     input_channel = RocketChatInput(
