@@ -33,25 +33,51 @@
 
 
 ## intent:curiosidades_beneficios_incentivo_projetos_culturais
-- Qual o benefício de incentivar projetos culturais ?
-- Há benefício para incentivar projetos culturais ?
-- O que ganho investindo em projetos culturais ?
-- Investimento e projetos culturais, tem benefícios?
-- O que se ganha ao incentivar projetos culturais ?
-- Incentivo a projetos culturais há benefícios ?
-- Tem algum beneficio para incetivar projetos?
-- Tem algum beneficio em incentivar projetos?
-- Existem algum incentivo para quem contribui para os projetos culturais
-- Quero contribuir para um projeto, o que ganho com isso?
-- o que eu ganho ao incentivar um projeto?
-- que tipo de benefícios alguém recebe ao incentivar um projeto?
-- se eu incentivar algum projeto, recebo algum beneficio?
-- ganho algum beneficio por incentivar algum projeto?
-- tem algum beneficio para quem incentiva um projeto?
-- um incentivador pode receber algum beneficio?
-- Que tipo de beneficios alguem recebe se incentivar um projeto
-- se eu incentivar o projeto, o que recebo?
-- que benefícios tem pra quem incentivar um projeto?
+
+- tem beneficio para quem incentiva projeto
+- tem algum beneficio em incentivar projetos
+- que tipo de beneficios recebe ao incentivar
+- que beneficios tem para quem incentiva
+- se eu incentivar o que recebo
+- se eu incentivar recebo algum beneficio
+- um incentivador pode receber beneficio
+- qual e a vantagem de incentivar
+- quais as vantagens de ser incentivador
+- quais as vantagens para o patrocinador
+- quais são as vantagens de ser incentivador
+- quais os beneficios de ser incentivador
+- quais os beneficios de um incentivador
+- como funciona o incentivo fiscal federal
+- como e o incentivo fiscal
+- qual o beneficio de incentivar
+- ha beneficio para incentivar
+- existe beneficio ao incentivar
+- o que ganho investindo
+- o que se ganha ao incentivar
+- o que eu ganho ao incentivar
+- incentivo ha beneficios
+- patrocinio ha beneficios
+- vantagem incentivador
+- vantagem patrocinador
+- vantagem de ser incentivador
+- vantagem de ser patrocinador
+- vantagem de incentivar
+- vantagem de patrocinar
+- vantagem pessoa juridica
+- beneficios de ser incentivador
+- beneficios de ser patrocinador
+- beneficios de patrocinar
+- beneficios de incentivar
+- beneficios de patrocinar
+- beneficios incentivador
+- beneficios patrocinador
+- beneficios pessoa juridica
+- ganho beneficio por incentivar
+- ganho incentivando
+- ganho ao incentivar
+- ganho ao patrocinar
+- o processo de incentivo
+- funciona o incentivo
 
 ## intent:curiosidades_lei_rouanet_elegibilidade
 - quem pode se inscrever na lei rouanet?
