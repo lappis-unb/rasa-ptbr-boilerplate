@@ -106,7 +106,7 @@
 - qto a lei já arrecadou?
 
 
-## intent:lei_rouanet_denuncia
+## intent:curiosidades_lei_rouanet_denuncia
 - quero denunciar um projeto
 - quero registrar uma denuncia
 - como faço uma denuncia

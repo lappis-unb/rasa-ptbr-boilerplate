@@ -24,8 +24,8 @@ def train_dialogue(domain_file=path_to_training_files('domain.yml'),
                    model_path=path_to_trained_files('models/dialogue'),
                    training_data_file=path_to_training_files('data/stories')):
     fallback = FallbackPolicy(fallback_action_name="action_default_fallback",
-                              core_threshold=0.7,
-                              nlu_threshold=0.7)
+                              core_threshold=0.5,
+                              nlu_threshold=0.5)
 
     agent = Agent(
         domain_file,
@@ -94,4 +94,3 @@ if __name__ == '__main__':
         train_nlu()
         train_dialogue()
         run()
-
