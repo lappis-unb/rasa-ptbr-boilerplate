@@ -22,7 +22,7 @@ build stable:
     - docker push $WEB_STABLE_IMAGE
   only:
     - tags
-  environment: development
+  environment: production
   tags:
     - docker
 
