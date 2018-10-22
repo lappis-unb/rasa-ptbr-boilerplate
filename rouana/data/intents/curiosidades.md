@@ -1,33 +1,22 @@
 ## intent:curiosidades_quantidade_projetos
 - quantos projetos foram aprovados
-- quantos projetos foram agraciados
 - quantos projetos foram incentivados
-- quantos projetos participam da lei
 - quantos projetos participaram
 - quantos projetos passaram pela lei
-- quantos projetos captaram recursos
 - quantos projetos usam a lei rouanet
 - quantos projetos ja tiveram incentivo
 - quantos projetos a lei rouanet aprovou
-- quantos projetos a lei rouanet tem
-- quantos projetos existem
-- quantidade de projetos que a lei rouanet possui
-- quantidade de projetos que a lei rouanet tem
 - quantidade de projetos incentivados
 - quantidade de projetos aprovados
-- quantidade de projetos
-- estatistica de projetos participantes
+- qual estatistica de projetos participantes
 - estatistica de projetos
-- estatistica sobre projetos
 - projetos que captaram recursos
 - projetos participantes
 - projetos incentivados
 - projetos aprovados
 - projetos agraciados
 - projetos em execução
-- media de projetos por ano
 - media de projetos
-- numero de projetos incentivados
 - numero de projetos
 
 
