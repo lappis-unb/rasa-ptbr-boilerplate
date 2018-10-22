@@ -1,5 +1,4 @@
 ## intent:curiosidades_quantidade_projetos
-
 - quantos projetos foram aprovados
 - quantos projetos foram agraciados
 - quantos projetos foram incentivados
@@ -33,7 +32,6 @@
 
 
 ## intent:curiosidades_beneficios_incentivo_projetos_culturais
-
 - tem beneficio para quem incentiva projeto
 - tem algum beneficio em incentivar projetos
 - que tipo de beneficios recebe ao incentivar
@@ -120,7 +118,6 @@
 
 
 ## intent:lei_rouanet_denuncia
-
 - quero denunciar um projeto
 - quero registrar uma denuncia
 - como faço uma denuncia
