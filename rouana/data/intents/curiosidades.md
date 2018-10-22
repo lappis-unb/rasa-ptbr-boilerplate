@@ -1,14 +1,14 @@
 ## intent:curiosidades_quantidade_projetos
-- quantos projetos foram aprovados
-- quantos projetos foram incentivados
-- quantos projetos participaram
-- quantos projetos passaram pela lei
-- quantos projetos usam a lei rouanet
-- quantos projetos ja tiveram incentivo
-- quantos projetos a lei rouanet aprovou
-- quantidade de projetos incentivados
-- quantidade de projetos aprovados
-- qual estatistica de projetos participantes
+- quantos projetos foram aprovados?
+- quantos projetos foram incentivados?
+- quantos projetos participaram?
+- quantos projetos passaram pela lei?
+- quantos projetos usam a lei rouanet?
+- quantos projetos ja tiveram incentivo?
+- quantos projetos a lei rouanet aprovou?
+- quantidade de projetos incentivados?
+- quantidade de projetos aprovados?
+- qual estatistica de projetos participantes?
 - estatistica de projetos
 - projetos que captaram recursos
 - projetos participantes
@@ -107,15 +107,15 @@
 
 
 ## intent:lei_rouanet_denuncia
-- quero denunciar um projeto
-- quero registrar uma denuncia
-- como faço uma denuncia
-- como funciona a denuncia
-- qual o processo de denuncia
-- uso do dinheiro de forma ilegal
-- tenho um projeto para denuncia
-- identifiquei uma irregularidade
-- tem algo errado no projeto
+- quero denunciar um projeto?
+- quero registrar uma denuncia?
+- como faço uma denuncia?
+- como funciona a denuncia?
+- qual o processo de denuncia?
+- uso do dinheiro de forma ilegal?
+- tenho um projeto para denuncia?
+- identifiquei uma irregularidade?
+- tem algo errado no projeto?
 - gostaria de saber como denunciar
 - denuncia via ouvidoria
 - denunciar fraude
