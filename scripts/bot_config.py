@@ -27,27 +27,27 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument(
     '--bot-name', '-bn', type=str, default='Tais',
-    help='Bot username (default: Tais)'
+    help='Bot username at RocketChat(default: Tais)'
 )
 parser.add_argument(
     '--bot-username', '-bu', type=str, default='tais',
-    help='Bot username (default: tais)'
+    help='Bot username at RocketChat(default: tais)'
 )
 parser.add_argument(
     '--bot-password', '-bp', type=str, default='tais',
-    help='Bot password (default: tais)'
+    help='Bot password at RocketChat(default: tais)'
 )
 parser.add_argument(
     '--bot-avatar', '-ba', type=str, default='https://raw.githubusercontent.com/lappis-unb/rouana/master/images/rouana_avatar.jpeg',
-    help='Bot avatar photo link (default: rouana\'s github avatar)'
+    help='Bot avatar photo link (default: tais\'s github avatar)'
 )
 parser.add_argument(
     '--admin-name', '-an', type=str, default='admin',
-    help='Admin username (default: admin)'
+    help='Admin username at RocketChat(default: admin)'
 )
 parser.add_argument(
     '--admin-password', '-ap', type=str, default='admin',
-    help='Admin password (default: admin)'
+    help='Admin password at RocketChat(default: admin)'
 )
 parser.add_argument(
     '--rocketchat-url', '-r', type=str, default='http://localhost:3000',
