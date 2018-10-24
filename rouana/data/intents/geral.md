@@ -133,8 +133,6 @@
 - possuo curiosidades sobre a lei rouanet
 - sobre a Lei eu acho
 - creio que sobre a lei rouanet
-- o que é a lei
-- O que é a lei
 
 ## intent:afirmar_projeto
 - prefiro conversar sobre criação e andamento de projetos
@@ -175,6 +173,7 @@
 - o que lei rouanet significa?
 - oq é Lei Rouanet?
 - oq é a Lei Rouanet?
+- o que é a lei
 - pode conceituar salic?
 - pode conceituar o salic?
 - pode explicar execução?

@@ -216,11 +216,3 @@
   - action_mais_alguma_pergunta
 * afirmar
 > oque_eh
-
-##pathMaisPergunta.5-fim
-> oque_eh
-- action_curiosidades_mais_sim
-* o_que_eh
-  - action_o_que_eh
-> mais_alguma_pergunta
-
