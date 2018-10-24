@@ -70,7 +70,7 @@ o seu Rocket.Chat.
 
 ```sh
 sudo docker build -t rouana -f docker/tais/Dockerfile .
-sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana python train.py
+sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana python train.py all
 ```
 
 ## Site do Beta
