@@ -91,3 +91,11 @@ sudo docker-compose up -d web
 ```
 
 Você pode acessar o site por padrão na url `localhost:8000`
+
+## Analytics
+
+Para extrair as conversas de um chat execute
+
+```
+sudo docker-compose run --rm rouana python /scripts/analytics_message_extraction.py -r rocketchat:3000
+```

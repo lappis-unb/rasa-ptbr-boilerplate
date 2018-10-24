@@ -74,17 +74,21 @@ bot = {
 ssl_config = args.ssl
 
 interpreter = None
-
+logged_in = False
 
 def connect_bot():
-
     def login_callback(error, data):
+        global logged_in
+
         if error:
             logger.error('Could not login as {}'.format(bot))
             logger.error(error)
             return
 
-        get_user_rooms()
+        if not logged_in:
+            logger.info('Login succesful')
+            logged_in = True
+            get_user_rooms()
 
     logger.info('Trying to login as {}'.format(bot))
     bot['driver'] = Driver(url=host, ssl=ssl_config)
@@ -94,14 +98,15 @@ def connect_bot():
 
 def get_user_rooms():
     def rooms_callback(error, data):
-        
         if error:
             logger.error('Could not get rooms as {}'.format(bot))
             logger.error(error)
-            return 
+            return
 
         rooms = list(filter(lambda room: room['t'] == 'l', data))
-        
+
+        logger.info('Found {} rooms, and {} of '
+                    'them are from the livechat'.format(len(data), len(rooms)))
         get_rooms_history(rooms)
 
     logger.info('Getting rooms from ' + bot['username'])
@@ -110,7 +115,6 @@ def get_user_rooms():
 
 def get_rooms_history(rooms):
     for room in rooms:
-
         room_id = room['_id']
         logger.info('Get messages for room {}'.format(room_id))
 
@@ -125,13 +129,13 @@ def enrich_data(error, data):
     if error:
         logger.error(error)
         return
-    
+
     room_id = data['messages'][0]['rid']
 
     messages = list(map(lambda message: {
             'username': message['u']['username'],
             'text': message['msg'],
-            'timestamp': message['ts'], 
+            'timestamp': message['ts'],
         },
         data['messages']
     ))
@@ -143,11 +147,11 @@ def enrich_data(error, data):
             message['intents']  = nlu_data['intent_ranking']
         else:
             message['entities'] = []
-            message['intents']  = []    
+            message['intents']  = []
 
-    room = {'id': room_id, 'messages': list(messages), 
+    room = {'id': room_id, 'messages': list(messages),
             'updated_at': time.time()}
-    
+
     logger.info('Got {} messages for room {}'.format(
         len(room['messages']), room_id)
     )
@@ -160,13 +164,15 @@ if __name__ == '__main__':
     training_data = load_data(intents_directory)
     trainer = Trainer(config.load('/rouana/config.yml'))
     trainer.train(training_data)
-    
+
     logger.info('Ending training')
 
     model_directory = trainer.persist('/models/dialogue')
     interpreter = Interpreter.load(model_directory)
-    
-    connect_bot()
+
+    while not logged_in:
+        connect_bot()
+        time.sleep(10)
 
     while True:
         time.sleep(10)
