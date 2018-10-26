@@ -70,8 +70,7 @@ class ActionCuriosidadesLeiRouanetArrecadamento(ActionMultiline):
 
 class ActionCuriosidadesLeiRouanetDenuncia(ActionMultiline):
     messages = [
-        'Para denunciar um projeto suspeito de irregularidades é preciso registrar uma denúncia para o Ministério Público Federal.\n'
-        'Sua denúncia pode ser feita no site do ministério público no link: http://aplicativos.pgr.mpf.mp.br/ouvidoria/portal/cadastro.html?tipoServico=2 ,ou pelo aplicativo do MPF na opção de "Registrar denúncia ou solicitação".',
+        'Em caso de dúvida, entrar em contato com as áreas do MinC, http://rouanet.cultura.gov.br/fale-conosco/ .\n',
     ]
 
 class ActionCuriosidadesElegibilidadeDeEmpresaParaBeneficios(ActionMultiline):
