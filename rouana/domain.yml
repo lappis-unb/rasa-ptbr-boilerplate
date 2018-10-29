@@ -56,6 +56,10 @@ actions:
 - utter_curiosidades_elegibilidade_de_empresa_para_beneficios
 - utter_curiosidades_receber_incetivo_de_parentes
 - utter_curiosidades_deducao_imposto_de_renda_incentivador
+- utter_curiosidades_valor_maximo_projeto
+- utter_curiosidades_valor_maximo_pessoa_fisica
+- utter_curiosidades_valor_maximo_pessoa_juridica
+- utter_curiosidades_valor_maximo_regiao
 
 - actions.actions_oqueeh.ActionOQueEh
 
@@ -185,7 +189,7 @@ templates:
           OU acesse esse link http://salic.cultura.gov.br/agente/agentes/incluiragente;
         Se você for uma pessoa física você precisa atuar na área cultural.
         Caso você seja uma pessoa jurídica pública tem que atuar na área de
-        administração indireta ou uma pessoa jurídica privada com ou sem fins lucrativos."
+        administração indireta ou uma pessoa jurídica privada com ou sem fins lucrativos.
 
   utter_mais_alguma_pergunta:
     - text: |
@@ -223,7 +227,7 @@ templates:
 
   utter_curiosidades_falar_sobre_projetos:
     - text: |
-        Maravilha! É bom saber que você quer entender mais sobre propostas e projetos"
+        Maravilha! É bom saber que você quer entender mais sobre propostas e projetos
 
   utter_curiosidades_quantidade_projetos:
     - text: |
@@ -238,7 +242,7 @@ templates:
         E tem mais...as empresas que incentivam projetos culturais podem deduzir do imposto de renda as
         quantias que despenderam em projetos aprovados pelo Ministério da Cultura
         É claro que essa dedução do imposto de renda acontece nas condições estabelecidas na legislação vigente, e está limitada a
-        4% do imposto devido"
+        4% do imposto devido
 
   utter_curiosidades_lei_rouanet_elegibilidade:
     - text: |
@@ -277,7 +281,7 @@ templates:
           - o cônjuge
           - os parentes até o terceiro grau, inclusive os afins
           - e os dependentes… tanto do doador, quanto do patrocinador, dos titulares, administradores, acionistas ou sócios de pessoa jurídica vinculada ao doador ou patrocinador,
-            na data da operação, ou nos 12 meses anteriores."
+            na data da operação, ou nos 12 meses anteriores.
 
   utter_curiosidades_deducao_imposto_de_renda_incentivador:
     - text: |
@@ -296,5 +300,38 @@ templates:
         IMPORTANTE: os percentuais de dedução de IR são limitados aos estabelecidos pela legislação do imposto de renda vigente,
         que atualmente são 4% do imposto devido para empresas e 6% do imposto devido para pessoa física.
         Você pode ver os detalhes das leis pelos endereços:
-        Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm
-        Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm"
+        Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.html
+        Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.html
+
+  utter_curiosidades_valor_maximo_projeto:
+    - text: |
+        Isto depende do seu perfil de proponente.
+        Sobre qual perfil você quer saber:
+          - Pessoa Física e Microempresário Individual(MEI)
+          - Demais Pessoas Jurídicas
+          - Quero saber de todos
+
+  utter_curiosidades_valor_maximo_pessoa_fisica:
+    - text: |
+        Para a Pessoa Física e para o Empresário Individual com enquadramento em Microempresário Individual (MEI), o valor máximo é de R$ 1,5 milhão para até quatro projetos por ano.
+
+        Estes limites podem ser ultrapassados dependendo do espaço em que o projeto cultural será realizado e a região:
+        Ocorrendo em espaço público, estes perfis tem a quantidade de projetos acrescido em 2, mas o valor máximo não muda.
+
+  utter_curiosidades_valor_maximo_pessoa_juridica:
+    - text: |
+        Em realção aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,5 milhões para até oito projetos por ano;
+        Para a Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, o valor máximo é de R$ 60 milhões para até 16 projetos por ano.
+
+        Se o projeto cultural ocorrer em espaço público, o Empresário Individual tem a quantidade de projetos acrescido em 3, mas o valor máximo não muda.
+        Ássim como as Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, quem podem somar mais 4 projetos, se realizados em espaço público, mantendo os limites orçamentários.
+
+  utter_curiosidades_valor_maximo_regiao:
+    - text: |
+        Se o seu projeto for aplicado na Região Sul, ou no Espírito Santo ou Minas Gerais, pode ter um aumento de até 25%.Nas Regiões Norte, Nordeste ou Centro-Oeste, o aumento pode ser de até 50%.
+
+        Lembrando que essa exceção não pode ser aplicada em projetos com:
+        - planos anuais e plurianuais;
+        - conservação e restauração de imóveis, monumentos, espaços e objetos tombados.
+
+        Quem autoriza os limites desses projetos, de reservação de acervo, exposições com acervos museológicos, de construção e implantação de equipamentos culturais, é a área técnica do MinC.

@@ -64,32 +64,32 @@
 ## pathCuriosidade.10
 > identificar_curiosidade
 * curiosidades_valor_maximo_projeto
-  - action_curiosidades_valor_maximo_projeto
+  - utter_curiosidades_valor_maximo_projeto
 * curiosidades_valor_maximo_pessoa_fisica
-  - action_curiosidades_valor_maximo_pessoa_fisica
-  - action_curiosidades_valor_maximo_regiao
-  - action_curiosidades_mais
+  - utter_curiosidades_valor_maximo_pessoa_fisica
+  - utter_curiosidades_valor_maximo_regiao
+  - utter_curiosidades_mais
 > curiosidade_final
 
 ## pathCuriosidade.11
 > identificar_curiosidade
 * curiosidades_valor_maximo_projeto
-  - action_curiosidades_valor_maximo_projeto
+  - utter_curiosidades_valor_maximo_projeto
 * curiosidades_valor_maximo_pessoa_juridica
-  - action_curiosidades_valor_maximo_pessoa_juridica
-  - action_curiosidades_valor_maximo_regiao
-  - action_curiosidades_mais
+  - utter_curiosidades_valor_maximo_pessoa_juridica
+  - utter_curiosidades_valor_maximo_regiao
+  - utter_curiosidades_mais
 > curiosidade_final
 
 ## pathCuriosidade.12
 > identificar_curiosidade
 * curiosidades_valor_maximo_projeto
-  - action_curiosidades_valor_maximo_projeto
+  - utter_curiosidades_valor_maximo_projeto
 * curiosidades_valor_maximo_geral
-  - action_curiosidades_valor_maximo_pessoa_fisica
-  - action_curiosidades_valor_maximo_pessoa_juridica
-  - action_curiosidades_valor_maximo_regiao
-  - action_curiosidades_mais
+  - utter_curiosidades_valor_maximo_pessoa_fisica
+  - utter_curiosidades_valor_maximo_pessoa_juridica
+  - utter_curiosidades_valor_maximo_regiao
+  - utter_curiosidades_mais
 > curiosidade_final
 
 ## pathCuriosidade.oqueeh
