@@ -15,83 +15,284 @@ intents:
   - curiosidades_elegibilidade_de_empresa_para_beneficios
   - curiosidades_receber_incetivo_de_parentes
   - curiosidades_deducao_imposto_de_renda_incentivador
-  - escolher_processo
-  - escolher_preenchimento
-  - escolher_prazo
-  - escolher_erros_salic
-  - duvida_sobre_contexto
+
+actions:
+- utter_definir_perfil
+- utter_default
+- utter_restart
+- utter_cumprimentar
+- utter_despedir
+- utter_fase_de_testes
+- utter_explicar_definicao_perfil
+- utter_nova_proposta
+- utter_duvida_execucao
+- utter_conhece_processo
+- utter_cadastro_salic
+- utter_aviso
+- utter_introduzir_execucao
+- utter_submissao_de_projetos
+- utter_ja_eh_proponente
+- utter_cadastro_salic_video
+- utter_explicar_cadastro_salic
+- utter_cadastro_salic_apos_video
+- utter_inscricao_proponente
+- utter_mais_alguma_pergunta
+- utter_nao_aprendi_contexto
+- utter_proponente_cadastrado
+- utter_curiosidades_indicacao
+- utter_curiosidades_mais
+- utter_curiosidades_mais_sim
+- utter_curiosidades_mais_nao
+- utter_curiosidades_falar_sobre_projetos
+- utter_curiosidades_quantidade_projetos
+- utter_curiosidades_beneficios_incentivo_projetos_culturais
+- utter_curiosidades_lei_rouanet_elegibilidade
+- utter_curiosidades_lei_rouanet_arrecadamento
+- utter_curiosidades_lei_rouanet_denuncia
+- utter_curiosidades_elegibilidade_de_empresa_para_beneficios
+- utter_curiosidades_receber_incetivo_de_parentes
+- utter_curiosidades_deducao_imposto_de_renda_incentivador
+
+- actions.actions_oqueeh.ActionOQueEh
 
 templates:
+  utter_definir_perfil:
+    - text: |
+        Você quer tirar dúvidas sobre a Lei Rouanet ou sobre propostas e projetos?
   utter_default:
-    - text: "Desculpe, não consegui te entender. Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue? \nEx: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?"
+    - text: |
+        Desculpe, não consegui te entender.
+        Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue?
+        Ex: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?
   utter_restart:
-    - text: "=D"
-actions:
-  - actions.actions_oqueeh.ActionOQueEh
+    - text: |
+        =D
+  utter_cumprimentar:
+    - text: |
+        Olá, meu  nome é Taís, sou assistente virtual do MinC.
+        Estou aqui para te ajudar a sanar dúvidas sobre a lei Rouanet
 
-  - actions.actions_geral.ActionCumprimentar
-  - actions.actions_geral.ActionFaseDeTestes
-  - actions.actions_geral.ActionDefinirPerfil
-  - actions.actions_geral.ActionExplicarDefinicaoPerfil
-  - actions.actions_geral.ActionNovaProposta
-  - actions.actions_geral.ActionDuvidaExecucao
-  - actions.actions_geral.ActionConheceProcesso
-  - actions.actions_geral.ActionCadastroSalic
-  - actions.actions_geral.ActionDespedir
-  - actions.actions_geral.ActionDefinirContexto
-  - actions.actions_geral.ActionAviso
-  - actions.actions_geral.ActionIntroduzirExecucao
-  - actions.actions_geral.ActionSubmissaoDeProjetos
-  - actions.actions_geral.ActionJaEhProponente
-  - actions.actions_geral.ActionCadastroProponenteIntroduzirContexto
-  - actions.actions_geral.ActionCadastroSalicVideo
-  - actions.actions_geral.ActionExplicarCadastroSalic
-  - actions.actions_geral.ActionCadastroSalicAposVideo
-  - actions.actions_geral.ActionInscricaoProponente
-  - actions.actions_geral.ActionIntroduzirContextoNovaProposta
-  - actions.actions_geral.ActionIntroduzirContextoNaoExecucao
-  - actions.actions_geral.ActionMaisAlgumaPergunta
-  - actions.actions_geral.ActionExplicarContextos
-  - actions.actions_geral.ActionEscolheuContextoErrado
-  - actions.actions_geral.ActionExtra
-  - actions.actions_geral.ActionRevert
-  - actions.actions_geral.ActionAindaNaoAprendi
-  - actions.actions_geral.ActionNaoAprendiContexto
-  - actions.actions_geral.ActionProponenteCadastrado
+    - text: |
+        Oi, eu sou a Taís, assistente virtual do MinC.
+        Estou aqui para te ajudar a tirar dúvidas sobre a lei Rouanet
 
-  - actions.actions_curiosidades.ActionCuriosidadesIndicacao
-  - actions.actions_curiosidades.ActionCuriosidadesMais
-  - actions.actions_curiosidades.ActionCuriosidadesMaisSim
-  - actions.actions_curiosidades.ActionCuriosidadesMaisNao
-  - actions.actions_curiosidades.ActionCuriosidadesFalarSobreProjetos
-  - actions.actions_curiosidades.ActionCuriosidadesQuantidadeProjetos
-  - actions.actions_curiosidades.ActionCuriosidadesBeneficiosIncentivoProjetosCulturais
-  - actions.actions_curiosidades.ActionCuriosidadesLeiRouanetElegibilidade
-  - actions.actions_curiosidades.ActionCuriosidadesLeiRouanetArrecadamento
-  - actions.actions_curiosidades.ActionCuriosidadesLeiRouanetDenuncia
-  - actions.actions_curiosidades.ActionCuriosidadesElegibilidadeDeEmpresaParaBeneficios
-  - actions.actions_curiosidades.ActionCuriosidadesReceberIncetivoDeParentes
-  - actions.actions_curiosidades.ActionCuriosidadesDeducaoImpostoDeRendaIncentivador
+    - text: |
+        Oi, sou assistente virtual do MinC, me chamo Taís.
+        Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
 
-  - actions.actions_processo.ActionExplicarProcesso
-  - actions.actions_processo.ActionProcessoCaptacaoDeRecursos
-  - actions.actions_processo.ActionProcessoReativacaoDeProposta
-  - actions.actions_processo.ActionProcessoCadastroProponente
+  utter_despedir:
+    - text: |
+        Foi um prazer te ajudar!
+        Sempre que tiver alguma dúvida, volte aqui! Até logo!
 
-  - actions.actions_preenchimento.ActionExplicarPreenchimento
-  - actions.actions_preenchimento.ActionPreenchimentoCampoCustoAuditoria
-  - actions.actions_preenchimento.ActionPreenchimentoVinculoDePropostas
-  - actions.actions_preenchimento.ActionPreenchimentoValorIngresso
-  - actions.actions_preenchimento.ActionPreenchimentoVinculoCpfProposta
-  - actions.actions_preenchimento.ActionPreenchimentoAgenciaBancaria
+    - text: |
+        Foi um prazer te ajudar!
+        Sempre que precisar, volte aqui! Até a próxima!
 
-  - actions.actions_prazo.ActionExplicarPrazo
-  - actions.actions_prazo.ActionPrazoEnvioCnae
-  - actions.actions_prazo.ActionPrazoDesistirRecurso
+    - text: |
+        Foi um prazer te ajudar!
+        Quando surgir alguma dúvida, volte aqui! Até mais!
 
-  - actions.actions_erros_salic.ActionExplicarErrosSalic
-  - actions.actions_erros_salic.ActionErroSalicErroSalvamento
-  - actions.actions_erros_salic.ActionErroSalicPlanilhaDesaparecida
-  - actions.actions_erros_salic.ActionErroSalicRecuperacaoDeSenha
-  - actions.actions_erros_salic.ActionErroSalicErroVinculoCpfCnpj
-  - actions.actions_erros_salic.ActionErroSalicErroAcharProposta
+  utter_fase_de_testes:
+    - text: |
+        Ainda não consigo falar sobre outros assuntos.
+        Estou em fase de testes e a cada dia aprendo mais com vocês.
+
+  utter_explicar_definicao_perfil:
+    - text: |
+        Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada,
+        o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.
+        Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa.
+        Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto,
+        ou como submeter um projeto, entre outras. Do que você prefere conversar?"
+
+  utter_nova_proposta:
+    - text: |
+        Você já começou a trabalhar em uma nova proposta de projeto? (Sim ou Não)
+
+  utter_duvida_execucao:
+    - text: |
+        Você tem dúvida em relação à captação de verba e execução do projeto? (Sim ou Não)
+
+  utter_conhece_processo:
+    - text: |
+        Você sabe como funciona o andamento de um projeto de incentivo a cultura? (Sim ou Não)
+
+  utter_cadastro_salic:
+    - text: |
+        Você já tem cadastro no SALIC? (Sim ou Não)
+
+  utter_aviso:
+    - text: |
+        Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.
+        Você já preencheu uma proposta? (Sim ou Não)
+
+  utter_introduzir_execucao:
+    - text: |
+        Eu ainda não aprendi a falar sobre um projeto que está em Execução ou em Prestação de Contas.
+        Ainda estou aprendendo =| Em breve eu poderei responder sua dúvida.
+        Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC:
+          Execução: acompanhamento.incentivo@cultura.gov.br
+          Prestação de Contas: prestacaodecontas.incentivo@cultura.gov.br
+
+  utter_submissao_de_projetos:
+    - text: |
+        Tudo bem. Aqui vai um resumo do processo: A pessoa responsável, chamada de proponente,
+        insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
+        Essa proposta é analisada pelo MinC.
+        Se for aprovada, autoriza o proponente a captar recursos.
+        Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
+        Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
+        A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
+        O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+
+  utter_ja_eh_proponente:
+    - text: |
+        Você já tem um proponente cadastrado? (Sim ou Não)
+
+  utter_cadastro_salic_video:
+    - text: |
+        O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura,
+        e é por ele que você cadastra a proposta e a acompanha.
+        Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
+        nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
+        Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)
+
+  utter_explicar_cadastro_salic:
+    - text: |
+        A primeira coisa que você deve fazer é acessar o SALIC no site http://salic.cultura.gov.br
+        Então no formulário inicial, onde pede login e senha, você deve clicar na opção 'Não sou cadastrado',
+        logo abaixo Preencha todos os campos corretamente, todos eles são obrigatórios.
+        E depois clique em 'Cadastrar' Agora aguarde a chegada de um e-mail de confirmação.
+        Este vai conter uma senha temporária.
+        É interessante você alterar esta senha, por isso, no seu primeiro acesso,
+        vá em 'Usuário > Alterar Senha', para mudar a mesma Agora que você já se cadastrou,
+        o próximo passo cadastrar um proponente
+
+  utter_cadastro_salic_apos_video:
+    - text: |
+        Espero que o vídeo tenha ajudado.
+        Agora que você já se cadastrou, o próximo passo cadastrar um proponente
+
+  utter_inscricao_proponente:
+    - text: |
+        Para inscrever um proponente, ou se tornar um proponente, você deve:
+          Acessar o SALIC e efetuar o login Clique em Administrativo e depois em cadastrar proponente.
+          OU acesse esse link http://salic.cultura.gov.br/agente/agentes/incluiragente;
+        Se você for uma pessoa física você precisa atuar na área cultural.
+        Caso você seja uma pessoa jurídica pública tem que atuar na área de
+        administração indireta ou uma pessoa jurídica privada com ou sem fins lucrativos."
+
+  utter_mais_alguma_pergunta:
+    - text: |
+        Você possui mais alguma dúvida? (Sim ou Não)
+
+  utter_nao_aprendi_contexto:
+    - text: |
+        Então, sei que agora, você gostaria de tirar dúvidas mais específicas do seu projeto.
+        Estou em fase de testes e não consigo responder. Mas, em breve vou poder te ajudar com esses temas.
+
+  utter_proponente_cadastrado:
+    - text: |
+        Okay! Agora que você tem um proponente cadastrado, é só preencher sua proposta!
+
+  utter_curiosidades_indicacao:
+    - text: |
+        Legal! Meu assunto favorito
+        Você pode me perguntar algumas curiosidades sobre a Lei Rouanet
+        Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei.
+        Qual a sua pergunta? Vou tentar responder da melhor maneira possível
+
+  utter_curiosidades_mais:
+    - text: |
+        Gostaria de saber mais curiosidades? (Sim ou Não)
+
+  utter_curiosidades_mais_sim:
+    - text: |
+        Que bom!
+        O que mais você gostaria de saber?
+
+  utter_curiosidades_mais_nao:
+    - text: |
+        Ok, podemos conversar sobre projetos e propostas
+        Você quer falar sobre isso? (Sim ou Não)
+
+  utter_curiosidades_falar_sobre_projetos:
+    - text: |
+        Maravilha! É bom saber que você quer entender mais sobre propostas e projetos"
+
+  utter_curiosidades_quantidade_projetos:
+    - text: |
+        Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.
+        Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos.
+        Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes.
+
+  utter_curiosidades_beneficios_incentivo_projetos_culturais:
+    - text: |
+        O principal benefício de incentivar projetos culturais é dar a chance para sociedade
+        usufruir das mais diversas manifestações culturais que talvez nunca fossem possíveis sem incentivo.
+        E tem mais...as empresas que incentivam projetos culturais podem deduzir do imposto de renda as
+        quantias que despenderam em projetos aprovados pelo Ministério da Cultura
+        É claro que essa dedução do imposto de renda acontece nas condições estabelecidas na legislação vigente, e está limitada a
+        4% do imposto devido"
+
+  utter_curiosidades_lei_rouanet_elegibilidade:
+    - text: |
+        Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro, pode se beneficiar
+        desta Lei e se candidatar à captação de recursos de renúncia fiscal.
+        A proponência pode ser feita por Pessoas físicas com atuação comprovada na área cultural,
+        ou Pessoas jurídicas de natureza cultural com, no mínimo, dois anos de atividade,
+        podendo ser:
+          Pessoas jurídicas públicas da administração indireta
+          (autarquias, fundações culturais etc.)
+          ou pessoas jurídicas privadas com ou sem fins lucrativos
+          (empresas, cooperativas, fundações, ONGs, organizações culturais etc.)
+
+  utter_curiosidades_lei_rouanet_arrecadamento:
+    - text: |
+        O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural.
+        Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura.
+        Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a
+        declaração no modelo completo podem contribuir com a lei Rouanet apoiando projetos.
+        Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.
+
+  utter_curiosidades_lei_rouanet_denuncia:
+    - text: |
+        Para denunciar um projeto suspeito de irregularidades é preciso registrar uma denúncia para o Ministério Público Federal.
+        Sua denúncia pode ser feita no site do ministério público no link: http://aplicativos.pgr.mpf.mp.br/ouvidoria/portal/cadastro.html?tipoServico=2 ,
+        ou pelo aplicativo do MPF na opção de Registrar denúncia ou solicitação
+
+  utter_curiosidades_elegibilidade_de_empresa_para_beneficios:
+    - text: |
+        Somente as Pessoas Jurídicas tributadas com base no Lucro Real podem descontar as doações ou patrocínios do imposto de renda observando
+        sempre o limite máximo de 4% do imposto devido.
+        Se você quiser saber mais sobre quais Pessoas Jurídicas devem fazer a apuração do lucro real confira o artigo 246, do Decreto 3.000 de
+        26 de março de 1999 que Regulamenta a tributação, fiscalização, arrecadação e administração do Imposto sobre a Renda e Proventos de Qualquer Natureza
+
+  utter_curiosidades_receber_incetivo_de_parentes:
+    - text: |
+        Olha, alguns familiares não podem incentivar projetos:
+          - o cônjuge
+          - os parentes até o terceiro grau, inclusive os afins
+          - e os dependentes… tanto do doador, quanto do patrocinador, dos titulares, administradores, acionistas ou sócios de pessoa jurídica vinculada ao doador ou patrocinador,
+            na data da operação, ou nos 12 meses anteriores."
+
+  utter_curiosidades_deducao_imposto_de_renda_incentivador:
+    - text: |
+        Atualmente, existem 2 situações descritas na Lei 8313/91:
+          1) o artigo 26 da Lei indica que os percentuais de dedução do IR são os seguintes:
+            Empresas:
+              até 30% do valor patrocinado;
+              até 40% do valor doado
+            Pessoa física:
+              até 60% do valor patrocinado;
+              até 80% do valor doado.
+              nesse caso, a empresa incentivadora poderá ainda lançar o valor incentivado como despesa operacional
+          2) Com a modificação implementada pela Lei 9.874/99, quem investe em projetos culturais enquadrados nos segmentos
+          indicados pelo artigo 18 da Lei passou a ter a possibilidade de deduzir até 100% do valor doado ou patrocinado as
+          empresas que investem nesses segmentos não podem lançar o valor incentivado como despesa operacional agora,
+        IMPORTANTE: os percentuais de dedução de IR são limitados aos estabelecidos pela legislação do imposto de renda vigente,
+        que atualmente são 4% do imposto devido para empresas e 6% do imposto devido para pessoa física.
+        Você pode ver os detalhes das leis pelos endereços:
+        Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm
+        Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm"
