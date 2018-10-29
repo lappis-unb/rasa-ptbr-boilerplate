@@ -15,11 +15,6 @@ intents:
   - curiosidades_elegibilidade_de_empresa_para_beneficios
   - curiosidades_receber_incetivo_de_parentes
   - curiosidades_deducao_imposto_de_renda_incentivador
-  - escolher_processo
-  - escolher_preenchimento
-  - escolher_prazo
-  - escolher_erros_salic
-  - duvida_sobre_contexto
 
 templates:
   utter_default:
@@ -72,26 +67,3 @@ actions:
   - actions.actions_curiosidades.ActionCuriosidadesElegibilidadeDeEmpresaParaBeneficios
   - actions.actions_curiosidades.ActionCuriosidadesReceberIncetivoDeParentes
   - actions.actions_curiosidades.ActionCuriosidadesDeducaoImpostoDeRendaIncentivador
-
-  - actions.actions_processo.ActionExplicarProcesso
-  - actions.actions_processo.ActionProcessoCaptacaoDeRecursos
-  - actions.actions_processo.ActionProcessoReativacaoDeProposta
-  - actions.actions_processo.ActionProcessoCadastroProponente
-
-  - actions.actions_preenchimento.ActionExplicarPreenchimento
-  - actions.actions_preenchimento.ActionPreenchimentoCampoCustoAuditoria
-  - actions.actions_preenchimento.ActionPreenchimentoVinculoDePropostas
-  - actions.actions_preenchimento.ActionPreenchimentoValorIngresso
-  - actions.actions_preenchimento.ActionPreenchimentoVinculoCpfProposta
-  - actions.actions_preenchimento.ActionPreenchimentoAgenciaBancaria
-
-  - actions.actions_prazo.ActionExplicarPrazo
-  - actions.actions_prazo.ActionPrazoEnvioCnae
-  - actions.actions_prazo.ActionPrazoDesistirRecurso
-
-  - actions.actions_erros_salic.ActionExplicarErrosSalic
-  - actions.actions_erros_salic.ActionErroSalicErroSalvamento
-  - actions.actions_erros_salic.ActionErroSalicPlanilhaDesaparecida
-  - actions.actions_erros_salic.ActionErroSalicRecuperacaoDeSenha
-  - actions.actions_erros_salic.ActionErroSalicErroVinculoCpfCnpj
-  - actions.actions_erros_salic.ActionErroSalicErroAcharProposta
