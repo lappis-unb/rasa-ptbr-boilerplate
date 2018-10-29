@@ -107,11 +107,11 @@ class ActionCuriosidadesDeducaoImpostoDeRendaIncentivador(ActionMultiline):
 
 class ActionCuriosidadesValorMaximoProjeto(ActionMultiline):
     messages = [
-        'O valor máximo do projeto pode atingir o valor total permitido por ano conforme o seu perfil.\n',
-        'Qual desse você quer saber:\n'
-        '1. Pessoa Física e Microempresário Individual(MEI)\n'
-        '2. Demais Pessoas Jurídicas\n'
-        '3. Quero saber de todos'
+        'Isto depende do seu perfil de proponente.\n',
+        'Sobre qual perfil você quer saber:\n'
+        '- Pessoa Física e Microempresário Individual(MEI)\n'
+        '- Demais Pessoas Jurídicas\n'
+        '- Quero saber de todos'
     ]
 
 class ActionCuriosidadesValorMaximoPessoaFisica(ActionMultiline):

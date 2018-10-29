@@ -61,6 +61,24 @@
   - utter_curiosidades_mais
 > curiosidade_final
 
+## pathCuriosidade.10
+> identificar_curiosidade
+* curiosidades_valor_maximo_projeto
+  - action_curiosidades_valor_maximo_projeto
+* curiosidades_valor_maximo_pessoa_fisica
+  - action_curiosidades_valor_maximo_pessoa_fisica
+  - action_curiosidades_mais
+> curiosidade_final
+
+## pathCuriosidade.11
+> identificar_curiosidade
+* curiosidades_valor_maximo_projeto
+  - action_curiosidades_valor_maximo_projeto
+* curiosidades_valor_maximo_pessoa_juridica
+  - action_curiosidades_valor_maximo_pessoa_juridica
+  - action_curiosidades_mais
+> curiosidade_final
+
 ## pathCuriosidade.oqueeh
 > identificar_curiosidade
 * o_que_eh

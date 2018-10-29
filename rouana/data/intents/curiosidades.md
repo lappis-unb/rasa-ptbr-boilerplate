@@ -207,9 +207,15 @@
 - valor maximo
 - valor por ano
 - quantidade por ano
+- limite de projetos por ano
+- limite de projetos por proponente
+- ultrapassar o limite
+- limite pode ser ultrapassado
+- quantidade máxima de projetos pode ser ultrapassada
+- ultrapassar limite de projetos
+- aumentar limite de projetos
 
 ## intent:curiosidades_valor_maximo_pessoa_fisica
-- 1
 - pessoa fisica
 - MEI
 - sou uma pessoa fisica
@@ -224,7 +230,6 @@
 
 
 ## intent:curiosidades_valor_maximo_pessoa_juridica
-- 2
 - pessoa juridica
 - sou uma pessoa juridica
 - sou empresario individual
@@ -240,7 +245,6 @@
 - categoria 2
 
 ## intent:curiosidades_valor_maximo_geral
-- 3
 - terceira opção
 - terceiro tópico
 - todas as opcoes
