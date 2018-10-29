@@ -67,6 +67,7 @@
   - action_curiosidades_valor_maximo_projeto
 * curiosidades_valor_maximo_pessoa_fisica
   - action_curiosidades_valor_maximo_pessoa_fisica
+  - action_curiosidades_valor_maximo_regiao
   - action_curiosidades_mais
 > curiosidade_final
 
@@ -76,6 +77,18 @@
   - action_curiosidades_valor_maximo_projeto
 * curiosidades_valor_maximo_pessoa_juridica
   - action_curiosidades_valor_maximo_pessoa_juridica
+  - action_curiosidades_valor_maximo_regiao
+  - action_curiosidades_mais
+> curiosidade_final
+
+## pathCuriosidade.12
+> identificar_curiosidade
+* curiosidades_valor_maximo_projeto
+  - action_curiosidades_valor_maximo_projeto
+* curiosidades_valor_maximo_geral
+  - action_curiosidades_valor_maximo_pessoa_fisica
+  - action_curiosidades_valor_maximo_pessoa_juridica
+  - action_curiosidades_valor_maximo_regiao
   - action_curiosidades_mais
 > curiosidade_final
 

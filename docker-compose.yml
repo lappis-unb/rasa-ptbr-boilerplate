@@ -30,7 +30,7 @@ services:
       dockerfile: ./docker/tais/Dockerfile
     restart: unless-stopped
     environment:
-      - TRAINING_EPOCHS=300
+      - TRAINING_EPOCHS=400
       - CREDENTIALS=/rouana/credentials.yml
       - ROCKETCHAT_URL=rocketchat:3000
       - MAX_TYPING_TIME=8

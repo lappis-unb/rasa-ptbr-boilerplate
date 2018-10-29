@@ -123,8 +123,17 @@ class ActionCuriosidadesValorMaximoPessoaFisica(ActionMultiline):
 
 class ActionCuriosidadesValorMaximoPessoaJuridica(ActionMultiline):
     messages = [
-        'Em realção aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,\5 milhões para até oito projetos por ano;'
+        'Em realção aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,5 milhões para até oito projetos por ano;'
         'Para a Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, o valor máximo é de R$ 60 milhões para até 16 projetos por ano.\n'
         'Se o projeto cultural ocorrer em espaço público, o Empresário Individual tem a quantidade de projetos acrescido em 3, mas o valor máximo não muda.\n'
         'Ássim como as Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, quem podem somar mais 4 projetos, se realizados em espaço público, mantendo os limites orçamentários.'
+    ]
+
+class ActionCuriosidadesValorMaximoRegiao(ActionMultiline):
+    messages = [
+        "Se o seu projeto for aplicado na Região Sul, ou no Espírito Santo ou Minas Gerais, pode ter um aumento de até 25%.Nas Regiões Norte, Nordeste ou Centro-Oeste, o aumento pode ser de até 50%.",
+        "Lembrando que essa exceção não pode ser aplicada em projetos com:",
+        "- planos anuais e plurianuais;\n"
+        "- conservação e restauração de imóveis, monumentos, espaços e objetos tombados.",
+        "Quem autoriza os limites desses projetos, de reservação de acervo, exposições com acervos museológicos, de construção e implantação de equipamentos culturais, é a área técnica do MinC."
     ]

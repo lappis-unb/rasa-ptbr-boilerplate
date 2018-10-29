@@ -190,6 +190,8 @@
 - tem valor maximo de projetos
 - qual e o valor maximo de projetos
 - minha proposta pode atingir qual valor
+- maior valor para um projeto
+- maior valor de um projeto
 - posso ter quantas propostas apresentadas
 - quantos projetos posso ter
 - tem limite de abertura de projetos
@@ -219,15 +221,16 @@
 - pessoa fisica
 - MEI
 - sou uma pessoa fisica
+- sobre pessoa fisica
 - sou um artista
 - microempresario individual
 - primeira opção
 - primeiro tópico
 - se encaixa na 1
 - um
+- de pessoa fisica
 - opção um
 - categoriga um
-
 
 ## intent:curiosidades_valor_maximo_pessoa_juridica
 - pessoa juridica
@@ -252,8 +255,10 @@
 - quero saber de tudo
 - todas as empresas
 - todos os perfis
+- sobre os dois perfis
 - escolha 3
 - na 3
 - opção três
 - três
 - categoria 3
+
