@@ -15,6 +15,10 @@ intents:
   - curiosidades_elegibilidade_de_empresa_para_beneficios
   - curiosidades_receber_incetivo_de_parentes
   - curiosidades_deducao_imposto_de_renda_incentivador
+  - curiosidades_valor_maximo_projeto
+  - curiosidades_valor_maximo_pessoa_fisica
+  - curiosidades_valor_maximo_pessoa_juridica
+  - curiosidades_valor_maximo_geral
 
 actions:
 - utter_definir_perfil

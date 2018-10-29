@@ -105,3 +105,26 @@ class ActionCuriosidadesDeducaoImpostoDeRendaIncentivador(ActionMultiline):
         'Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm',
     ]
 
+class ActionCuriosidadesValorMaximoProjeto(ActionMultiline):
+    messages = [
+        'O valor máximo do projeto pode atingir o valor total permitido por ano conforme o seu perfil.\n',
+        'Qual desse você quer saber:\n'
+        '1. Pessoa Física e Microempresário Individual(MEI)\n'
+        '2. Demais Pessoas Jurídicas\n'
+        '3. Quero saber de todos'
+    ]
+
+class ActionCuriosidadesValorMaximoPessoaFisica(ActionMultiline):
+    messages = [
+        'Para a Pessoa Física e para o Empresário Individual com enquadramento em Microempresário Individual (MEI), o valor máximo é de R$ 1,5 milhão para até quatro projetos por ano.\n',
+        'Estes limites podem ser ultrapassados dependendo do espaço em que o projeto cultural será realizado e a região:\n'
+        'Ocorrendo em espaço público, estes perfis tem a quantidade de projetos acrescido em 2, mas o valor máximo não muda.'
+    ]
+
+class ActionCuriosidadesValorMaximoPessoaJuridica(ActionMultiline):
+    messages = [
+        'Em realção aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,\5 milhões para até oito projetos por ano;'
+        'Para a Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, o valor máximo é de R$ 60 milhões para até 16 projetos por ano.\n'
+        'Se o projeto cultural ocorrer em espaço público, o Empresário Individual tem a quantidade de projetos acrescido em 3, mas o valor máximo não muda.\n'
+        'Ássim como as Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, quem podem somar mais 4 projetos, se realizados em espaço público, mantendo os limites orçamentários.'
+    ]

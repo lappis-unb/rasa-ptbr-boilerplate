@@ -185,3 +185,71 @@
 - qual a dedução de impostos para incentivadores?
 - qual a dedução de imposto de renda para incentivadores?
 - sou incentivador, quanto posso receber como dedução de imposto de renda??
+
+## intent:curiosidades_valor_maximo_projeto
+- tem valor maximo de projetos
+- qual e o valor maximo de projetos
+- minha proposta pode atingir qual valor
+- posso ter quantas propostas apresentadas
+- quantos projetos posso ter
+- tem limite de abertura de projetos
+- quantos projetos posso ter em meu nome
+- ha um valor maximo por projeto
+- existe valor maximo para minha proposta
+- meu projeto pode chegar a que valor
+- valor maximo de projeto
+- valor maximo de proposta
+- quantidade maxima de projetos
+- quantidade maxima de propostas
+- total de projetos em meu nome 
+- valor maximo por ano
+- quantidade maxima
+- valor maximo
+- valor por ano
+- quantidade por ano
+
+## intent:curiosidades_valor_maximo_pessoa_fisica
+- 1
+- pessoa fisica
+- MEI
+- sou uma pessoa fisica
+- sou um artista
+- microempresario individual
+- primeira opção
+- primeiro tópico
+- se encaixa na 1
+- um
+- opção um
+- categoriga um
+
+
+## intent:curiosidades_valor_maximo_pessoa_juridica
+- 2
+- pessoa juridica
+- sou uma pessoa juridica
+- sou empresario individual
+- empresario individual
+- empresa individual de responsabilidade limitada 
+- EIRELI
+- segunda opção
+- segundo tópico
+- sociedade limitada
+- acho que na 2
+- opção 2
+- na segunda
+- categoria 2
+
+## intent:curiosidades_valor_maximo_geral
+- 3
+- terceira opção
+- terceiro tópico
+- todas as opcoes
+- geral
+- quero saber de tudo
+- todas as empresas
+- todos os perfis
+- escolha 3
+- na 3
+- opção três
+- três
+- categoria 3
