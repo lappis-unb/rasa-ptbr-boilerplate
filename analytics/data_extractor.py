@@ -3,8 +3,14 @@
 import argparse
 import logging
 import time
+import datetime
+import os
+import json
+import pprint
 
 from rocketchat_py_sdk.driver import Driver
+
+from elasticsearch import Elasticsearch
 
 from rasa_nlu.training_data import load_data
 from rasa_nlu.model import Trainer, Interpreter
@@ -31,7 +37,7 @@ logger.addHandler(ch)
 parser = argparse.ArgumentParser()
 
 parser.add_argument(
-    '--user-name', '-un', type=str, default='tais',
+    '--username', '-un', type=str, default='tais',
     help='Bot username (default: tais)'
 )
 parser.add_argument(
@@ -58,6 +64,10 @@ parser.add_argument(
     '--model-directory', '-md', type=str, default='/models/dialogue',
     help='Directory where the training data will persist (default: /models/dialogue)'
 )
+parser.add_argument(
+    '--environment-name', '-e', type=str, default='localhost',
+    help='Environment\'s name where the data will be extracted (default: localhost)'
+)
 
 args = parser.parse_args()
 
@@ -66,15 +76,18 @@ if host[-1] == '/':
     host = host[:-1]
 
 bot = {
-    'username': args.user_name,
+    'username': args.username,
     'password': args.user_password,
     'driver': None,
 }
 
 ssl_config = args.ssl
 
+environment_name = args.environment_name.replace(' ', '_')
 interpreter = None
 logged_in = False
+
+es = Elasticsearch([os.getenv('ELASTICSEARCH_URL', 'elasticsearch:9200')])
 
 def connect_bot():
     def login_callback(error, data):
@@ -124,7 +137,6 @@ def get_rooms_history(rooms):
             enrich_data
         )
 
-
 def enrich_data(error, data):
     if error:
         logger.error(error)
@@ -132,42 +144,43 @@ def enrich_data(error, data):
 
     room_id = data['messages'][0]['rid']
 
-    messages = list(map(lambda message: {
-            'username': message['u']['username'],
-            'text': message['msg'],
-            'timestamp': message['ts'],
-        },
-        data['messages']
-    ))
+    for message in data['messages']:
+        message_id = environment_name + '::' + message['_id']
 
-    for message in messages:
-        if message['username'] != 'tais':
+        message = {
+            'environment': environment_name,
+            'room_id': room_id,
+
+            'username': message['u']['username'],
+            'is_bot': message['u']['username'] == args.username,
+
+            'text': message['msg'],
+            'timestamp': str(message['ts'].strftime('%Y-%m-%d %H:%M:%S')),
+
+            'entities': [],
+            'intents': [],
+        }
+
+        if not message['is_bot']:
             nlu_data = interpreter.parse(message['text'])
             message['entities'] = nlu_data['entities']
             message['intents']  = nlu_data['intent_ranking']
-        else:
-            message['entities'] = []
-            message['intents']  = []
 
-    room = {'id': room_id, 'messages': list(messages),
-            'updated_at': time.time()}
+        logger.info('Indexing message {} {}'.format(message_id,
+                                                    message['text']))
 
-    logger.info('Got {} messages for room {}'.format(
-        len(room['messages']), room_id)
-    )
-    logger.debug(room)
+        es.index(index='messages', doc_type='message',
+                 id=message_id, body=json.dumps(message))
+
 
 if __name__ == '__main__':
-
-    intents_directory = '/rouana/data/intents/'
-
-    training_data = load_data(intents_directory)
-    trainer = Trainer(config.load('/rouana/config.yml'))
+    training_data = load_data(args.intents_directory)
+    trainer = Trainer(config.load(args.rasa_config))
     trainer.train(training_data)
 
-    logger.info('Ending training')
+    logger.info('Model training ended')
 
-    model_directory = trainer.persist('/models/dialogue')
+    model_directory = trainer.persist(args.model_directory)
     interpreter = Interpreter.load(model_directory)
 
     while not logged_in:

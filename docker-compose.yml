@@ -40,11 +40,19 @@ services:
       - ROCKETCHAT_ADMIN_PASSWORD=admin
       - ROCKETCHAT_TAIS_USERNAME=tais
       - ROCKETCHAT_TAIS_PASSWORD=tais
+
+      # Should be set to 'production' or 'beta' or 'dev'
+      - ENVIRONMENT_NAME=localhost
+      # Last commit hash using this command: git rev-parse HEAD
+      - TAIS_VERSION=last-commit-hash
+      - ELASTICSEARCH_URL=elasticsearch:9200
     volumes:
       - ./rouana:/rouana
       - ./scripts:/scripts
+      - ./analytics:/analytics
     depends_on:
       - rocketchat
+      - elasticsearch
 
   web:
     build:
@@ -69,6 +77,29 @@ services:
     volumes:
       - ./web/postgres-data:/var/lib/postgresql/data
 
+  # ==== Analytics ====
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.2
+    restart: unless-stopped
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.4.2
+    restart: unless-stopped
+    ports:
+      - 5601:5601
+    environment:
+      - SERVER_PORT=5601
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+
   evaluation:
     build:
       context: .
@@ -78,3 +109,7 @@ services:
       - ./evaluation:/work/evaluation
     ports:
       - 8888:8888
+
+volumes:
+  esdata:
+    driver: local

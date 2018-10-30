@@ -13,9 +13,10 @@ run apt-get remove --purge -y git         && \
     mkdir /rouana
 
 add ./rouana /rouana
-workdir /rouana
-
 add ./scripts /scripts
+add ./analytics /analytics
+
+workdir /rouana
 
 env TRAINING_EPOCHS=300                     \
     CREDENTIALS=credentials.yml             \
@@ -23,13 +24,16 @@ env TRAINING_EPOCHS=300                     \
     MAX_TYPING_TIME=10                      \
     MIN_TYPING_TIME=1                       \
     WORDS_PER_SECOND_TYPING=5               \
-    ROCKETCHAT_ADMIN_USERNAME=admin                    \
-    ROCKETCHAT_ADMIN_PASSWORD=admin                    \
-    ROCKETCHAT_TAIS_USERNAME=tais                      \
-    ROCKETCHAT_TAIS_PASSWORD=tais                      \
-    TRAINED_DATA_FOLDER=/
+    ROCKETCHAT_ADMIN_USERNAME=admin         \
+    ROCKETCHAT_ADMIN_PASSWORD=admin         \
+    ROCKETCHAT_TAIS_USERNAME=tais           \
+    ROCKETCHAT_TAIS_PASSWORD=tais           \
+    TRAINED_DATA_FOLDER=/                   \
+    ENVIRONMENT_NAME=localhost              \
+    TAIS_VERSION=last-commit-hash           \
+    ELASTICSEARCH_URL=elasticsearch:9200
 
 cmd python /scripts/bot_config.py -r $ROCKETCHAT_URL    \
            -an $ROCKETCHAT_ADMIN_USERNAME -ap $ROCKETCHAT_ADMIN_PASSWORD      \
            -bu $ROCKETCHAT_TAIS_USERNAME -bp $ROCKETCHAT_TAIS_PASSWORD     && \
-    python train-rocketchat.py
+    python train-rocketchat.py all

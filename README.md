@@ -14,13 +14,7 @@ Rouanet e sobre o incentivo a projetos culturais.
 
 ```sh
 sudo docker-compose up -d rocketchat
-```
-
-Entre no rocketchat com o login `admin` e senha `admin`. Execute os comandos
-a seguir para configurar e rodar a rouana
-
-```sh
-python3 scripts/bot_config.py
+# aguarde 3 minutos para o rocketchat terminar de levantar
 sudo docker-compose up rouana
 ```
 
@@ -94,11 +88,26 @@ Você pode acessar o site por padrão na url `localhost:8000`
 
 ## Analytics
 
-Para extrair as conversas de um chat execute
+### Setup
 
 ```
-sudo docker-compose run --rm rouana python /scripts/analytics_message_extraction.py -r rocketchat:3000
+sudo docker-compose run --rm rouana python /analytics/setup_elastic.py setup
 ```
+
+Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`
+
+```
+ENVIRONMENT_NAME=localhost
+TAIS_VERSION=last-commit-hash
+```
+
+#### Execução
+
+```
+sudo docker-compose up -d kibana
+```
+
+Você pode acessar o kibana no `locahost:5601`
 
 ## Análise do bot
 
