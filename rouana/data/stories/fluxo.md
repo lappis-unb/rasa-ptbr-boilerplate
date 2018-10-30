@@ -217,9 +217,12 @@
 * afirmar
 > oque_eh
 
-##pathMaisPergunta.5-fim
+## pathMaisPergunta.5-fim
 > oque_eh
 - utter_curiosidades_mais_sim
 * o_que_eh
   - action_o_que_eh
 > mais_alguma_pergunta
+
+## fallback
+- action_default_fallback
