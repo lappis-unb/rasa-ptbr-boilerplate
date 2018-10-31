@@ -214,7 +214,7 @@ templates:
 
   utter_curiosidades_mais:
     - text: |
-        Gostaria de saber mais curiosidades? (Sim ou Não)
+        Gostaria de saber mais sobre outras curiosidades? (Sim ou Não)
 
   utter_curiosidades_mais_sim:
     - text: |
@@ -267,7 +267,7 @@ templates:
 
   utter_curiosidades_lei_rouanet_denuncia:
     - text: |
-        Em caso de dúvida, entrar em contato com as áreas do MinC, http://rouanet.cultura.gov.br/fale-conosco/ .
+        Para entender como fazer uma denúncia, entre em contato com as áreas do MinC: http://rouanet.cultura.gov.br/fale-conosco/ .
 
   utter_curiosidades_elegibilidade_de_empresa_para_beneficios:
     - text: |
