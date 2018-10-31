@@ -185,3 +185,80 @@
 - qual a dedução de impostos para incentivadores?
 - qual a dedução de imposto de renda para incentivadores?
 - sou incentivador, quanto posso receber como dedução de imposto de renda??
+
+## intent:curiosidades_valor_maximo_projeto
+- tem valor maximo de projetos
+- qual e o valor maximo de projetos
+- minha proposta pode atingir qual valor
+- maior valor para um projeto
+- maior valor de um projeto
+- posso ter quantas propostas apresentadas
+- quantos projetos posso ter
+- tem limite de abertura de projetos
+- quantos projetos posso ter em meu nome
+- ha um valor maximo por projeto
+- existe valor maximo para minha proposta
+- meu projeto pode chegar a que valor
+- valor maximo de projeto
+- valor maximo de proposta
+- quantidade maxima de projetos
+- quantidade maxima de propostas
+- total de projetos em meu nome 
+- valor maximo por ano
+- quantidade maxima
+- valor maximo
+- valor por ano
+- quantidade por ano
+- limite de projetos por ano
+- limite de projetos por proponente
+- ultrapassar o limite
+- limite pode ser ultrapassado
+- quantidade máxima de projetos pode ser ultrapassada
+- ultrapassar limite de projetos
+- aumentar limite de projetos
+
+## intent:curiosidades_valor_maximo_pessoa_fisica
+- pessoa fisica
+- MEI
+- sou uma pessoa fisica
+- sobre pessoa fisica
+- sou um artista
+- microempresario individual
+- primeira opção
+- primeiro tópico
+- se encaixa na 1
+- um
+- de pessoa fisica
+- opção um
+- categoriga um
+
+## intent:curiosidades_valor_maximo_pessoa_juridica
+- pessoa juridica
+- sou uma pessoa juridica
+- sou empresario individual
+- empresario individual
+- empresa individual de responsabilidade limitada 
+- EIRELI
+- segunda opção
+- segundo tópico
+- sociedade limitada
+- acho que na 2
+- opção 2
+- na segunda
+- categoria 2
+
+## intent:curiosidades_valor_maximo_geral
+- terceira opção
+- terceiro tópico
+- todas as opcoes
+- geral
+- quero saber de tudo
+- todas as empresas
+- todos os perfis
+- sobre os dois perfis
+- escolha 3
+- na 3
+- opção três
+- três
+- categoria 3
+
