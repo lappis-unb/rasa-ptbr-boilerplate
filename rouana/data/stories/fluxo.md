@@ -88,12 +88,6 @@
   - utter_duvida_execucao
 > identificar_execucao
 
-## path2.4
-> identificar_contexto
-- utter_mais_alguma_pergunta
-* processo_periodo
-  - utter_processo_periodo
-  - utter_mais_alguma_pergunta
 
 
 <!--- Fluxo de Execução --->
