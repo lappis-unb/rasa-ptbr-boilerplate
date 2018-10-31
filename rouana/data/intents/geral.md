@@ -4,7 +4,7 @@
 - como vai?
 - oi, como vai voce?
 - como vao as coisas?
-- com licença
+- com licenca
 - tudo bom?
 - posso falar com voce?
 - pode me tirar uma duvida?
@@ -29,41 +29,41 @@
 - preenchi sim
 - quero saber mais
 - quero mais detalhes
-- já preenchi uma proposta
+- ja preenchi uma proposta
 - sim, preenchi minha proposta
 - quero
 - por favor
 - tudo bem
 - ja
-- conheço
+- conheco
 - sim
 - ta
 - ok
 - claro
-- claro
+- confirmo
 
 
 ## intent:negar
 - não sei onde a minha pergunta se encaixa
 - nao quero saber mais
 - quero falar sobre outra coisa
-- nao quero saber de mais nada
+- não quero saber de mais nada
 - nao era isso, me enganei
-- nao quero falar sobre isso
+- não quero falar sobre isso
 - ainda nao sei escolher um tópico
 - ainda não pensei sobre isso
-- não sei do que quero falar
+- nao sei do que quero falar
 - não sei do que quero conversar
 - nunca
 - nao
-- nao sei
-- nao conheço
-- nao quero
-- não tenho certeza
+- não sei
+- nao conheco
+- não quero
+- nao tenho certeza
 - escolhi errado
 - falei errado
 - duvida
-- ainda nao sei
+- ainda não sei
 
 ## intent:afirmar_curiosidades
 - quero aprender mais sobre a lei
@@ -88,10 +88,10 @@
 - a lei
 
 ## intent:afirmar_projeto
-- prefiro conversar sobre criação e andamento de projetos
-- gostaria de saber sobre criação e andamento de projetos
-- sobre criação e andamento de projetos
-- criação e andamento de projetos
+- prefiro conversar sobre criacao e andamento de projetos
+- gostaria de saber sobre criacao e andamento de projetos
+- sobre criacao e andamento de projetos
+- criacao e andamento de projetos
 - conversar sobre proposta
 - conversar sobre projetos
 - prefiro falar sobre proposta
@@ -100,24 +100,24 @@
 - quero conversar sobre proposta
 - projeto
 - proposta
-- criaçao
+- criacao
 - andamento
-- criaçao de projeto
+- criacao de projeto
 - andamento de projeto
-- criaçao e andamento
+- criacao e andamento
 - sobre proposta
 - sobre projeto
-- sobre criaçao
+- sobre criacao
 
 ## intent:o_que_eh
-- como funciona a prestação de contas
+- como funciona a prestacao de contas
 - como funciona a fase de preenchimento
 - me explique melhor o conceito de projeto
-- me explique melhor o que é um proponente
+- me explique melhor o que e um proponente
 - pode me explicar a fase de preenchimento?
 - o que preenchimento quer dizer?
 - o que lei rouanet significa?
-- não faço ideia do que seja proponente
+- não faco ideia do que seja proponente
 - não sei bem o que você quer dizer com sefic
 - pode me dar o conceito do salic
 - cnic
@@ -126,41 +126,7 @@
 - execucao
 - sefic
 - preenchimento
-- prestaçao de contas
+- prestacao de contas
 - lei rouanet
 - e90
 - A12
-
-## intent:duvida_sobre_contexto
-- 5
-- se encaixa na 5
-- acho que seria a 5
-- na quinta alternativa
-- alternativa 5
-- se encaixa na 5
-- acho que seria a 5
-- quinta opção
-- opção cinco
-- cinco
-
-##intent:extra
-- que legal
-- consegui entender
-- compreendi corretamente
-- achei interessante
-- gostei muito
-- excelente resposta
-- otimo, obrigado
-- muito bom o conteudo apresentado
-- perfeito, muito obrigado
-- bacana, obrigado por esclarecer
-- legal
-- entendi
-- ok
-- muito bom
-- gostei
-- interessante
-- excelente
-- otimo
-- perfeito
-- certo
