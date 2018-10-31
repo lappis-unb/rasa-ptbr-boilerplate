@@ -61,6 +61,13 @@
   - utter_curiosidades_mais
 > curiosidade_final
 
+## pathCuriosidade.9
+> identificar_curiosidade
+* curiosidades_captacao_de_recursos
+  - utter_curiosidades_captacao_de_recursos
+  - utter_curiosidades_mais
+> curiosidade_final
+
 ## pathCuriosidade.oqueeh
 > identificar_curiosidade
 * o_que_eh

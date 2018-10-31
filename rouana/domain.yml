@@ -15,7 +15,7 @@ intents:
   - curiosidades_elegibilidade_de_empresa_para_beneficios
   - curiosidades_receber_incetivo_de_parentes
   - curiosidades_deducao_imposto_de_renda_incentivador
-
+  - curiosidades_captacao_de_recursos
 actions:
 - utter_definir_perfil
 - utter_default
@@ -52,6 +52,7 @@ actions:
 - utter_curiosidades_elegibilidade_de_empresa_para_beneficios
 - utter_curiosidades_receber_incetivo_de_parentes
 - utter_curiosidades_deducao_imposto_de_renda_incentivador
+- utter_curiosidades_captacao_de_recursos
 
 - actions.actions_oqueeh.ActionOQueEh
 
@@ -296,3 +297,11 @@ templates:
         Você pode ver os detalhes das leis pelos endereços:
         Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm
         Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm"
+
+  utter_curiosidades_captacao_de_recursos:
+    - text: |
+        O profissional que captar os recursos para o projeto – seja ele o próprio proponente ou alguém contratado exclusivamente com este objetivo – poderá ser remunerado até o limite de 10% do valor do Custo do Projeto, sendo o teto do valor da remuneração de R$ 150 mil.
+        Este percentual pode ser expandido quando o projeto é realizado fora do eixo Rio-São Paulo, nas seguintes regiões do País:
+            15% do valor total do custo do projeto para projetos executados nas Regiões Norte, Nordeste e Centro-Oeste;
+            12,5% para os projetos realizados na Região Sul e nos estados de Minas Gerais e Espírito Santo.
+        Os valores destinados à remuneração para captação de recursos somente poderão ser pagos proporcionalmente às parcelas já captadas."

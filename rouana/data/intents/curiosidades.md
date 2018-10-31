@@ -185,3 +185,6 @@
 - qual a dedução de impostos para incentivadores?
 - qual a dedução de imposto de renda para incentivadores?
 - sou incentivador, quanto posso receber como dedução de imposto de renda??
+
+## intent:curiosidades_captacao_de_recursos
+- O próprio proponente do projeto pode captar os recursos para a sua execução?

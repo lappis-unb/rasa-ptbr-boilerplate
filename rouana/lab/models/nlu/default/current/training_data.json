@@ -1,0 +1,1597 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "quantos projetos foram aprovados"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "quantos projetos foram incentivados"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "quantos projetos participaram"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "quantos projetos passaram pela lei"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "quantos projetos usam a lei rouanet"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "quantos projetos ja tiveram incentivo"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "quantos projetos a lei rouanet aprovou"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "quantidade de projetos incentivados"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "quantidade de projetos aprovados"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "qual estatistica de projetos participantes"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "estatistica de projetos"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "projetos que captaram recursos"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "projetos participantes"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "projetos incentivados"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "projetos aprovados"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "projetos agraciados"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "projetos em execução"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "media de projetos"
+      },
+      {
+        "intent": "curiosidades_quantidade_projetos",
+        "text": "numero de projetos"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "tem beneficio para quem incentiva projeto"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "tem algum beneficio em incentivar projetos"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "que tipo de beneficios recebe ao incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "que beneficios tem para quem incentiva"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "se eu incentivar o que recebo"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "se eu incentivar recebo algum beneficio"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "um incentivador pode receber beneficio"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "qual e a vantagem de incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "quais as vantagens de ser incentivador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "quais as vantagens para o patrocinador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "quais são as vantagens de ser incentivador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "quais os beneficios de ser incentivador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "quais os beneficios de um incentivador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "como funciona o incentivo fiscal federal"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "como e o incentivo fiscal"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "qual o beneficio de incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "ha beneficio para incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "existe beneficio ao incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "o que ganho investindo"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "o que se ganha ao incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "o que eu ganho ao incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "incentivo ha beneficios"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "patrocinio ha beneficios"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "vantagem incentivador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "vantagem patrocinador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "vantagem de ser incentivador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "vantagem de ser patrocinador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "vantagem de incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "vantagem de patrocinar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "vantagem pessoa juridica"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "beneficios de ser incentivador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "beneficios de ser patrocinador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "beneficios de patrocinar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "beneficios de incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "beneficios de patrocinar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "beneficios incentivador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "beneficios patrocinador"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "beneficios pessoa juridica"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "ganho beneficio por incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "ganho incentivando"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "ganho ao incentivar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "ganho ao patrocinar"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "o processo de incentivo"
+      },
+      {
+        "intent": "curiosidades_beneficios_incentivo_projetos_culturais",
+        "text": "funciona o incentivo"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "quem pode se inscrever na lei rouanet?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "quem pode participar?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "como eu me inscrevo na lei rouanet?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "posso me inscrever na lei rouanet?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "quero participar da lei"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "onde eu me inscrevo"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "eu posso usar a lei?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "como se aplicar?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "quem pode se aplicar?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "o que preciso para virar proponente?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "eu posso participar da lei rouanet?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "eu posso ser proponente?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "como eu posso usar a lei para o meu projeto?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "quais são os critérios de elegibilidade?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_elegibilidade",
+        "text": "quais as regras para pariticipar?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "quanto dinheiro a lei movimenta?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "quanto dinheiro a lei rouanet arrecada?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "De onde vem o dinheiro da lei rouanet?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "de onde vem o dinheiro usado na Lei"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "o dinheiro da lei rouanet é público?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "Porque os cidadãos tem que pagar pelos projetos da lei rouanet?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "quem pode contribuir para um projeto da lei rouanet?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "eu como cidadão posso contribuir para um projeto"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "pessoa física pode contribuir"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "o dinheiro da lei é privado ou público"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "é o cidadão que paga pelos projetos da lei rouanet"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "porque a lei rouanet usa dinheiro público"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "a lei rouanet usa dinheiro de empresas?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "quanto a lei rouanet já arrecadou?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "quanto já foi arrecadado pela lei rouanet?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "quanto a lei rouanet já consegui arrecadar?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "a lei rouanet ja arrecadou algum dinheiro?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "quanto dinheiro a lei rouanet já arrecadou?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "quanto a lei ja arrecadou?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_arrecadamento",
+        "text": "qto a lei já arrecadou?"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "quero denunciar um projeto"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "quero registrar uma denuncia"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "como faço uma denuncia"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "como funciona a denuncia"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "qual o processo de denuncia"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "uso do dinheiro de forma ilegal"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "tenho um projeto para denuncia"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "identifiquei uma irregularidade"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "tem algo errado no projeto"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "gostaria de saber como denunciar"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "denuncia via ouvidoria"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "denunciar fraude"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "denunciar dirigente"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "denunciar projeto"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "dinheiro ilegal"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "dinheiro indevido"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "processo de denuncia"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "mecanismo de denuncia"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "registrar denuncia"
+      },
+      {
+        "intent": "curiosidades_lei_rouanet_denuncia",
+        "text": "projeto ilegal"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "Qualquer empresa pode se beneficiar de incentivos fiscais, apoiando projetos culturais?"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "Quais empresas podem se beneficiar ao apoiar projetos culturais?"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "Que tipos de empresas podem se beneficiar ao apoiar projetos culturais?"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "Apoiando projetos culturais, qualquer empresa se beneficia?"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "Empresas que se beneficiam ao apoiar projeto culturais?"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "Tenho uma empresa e quero particiar da lei rouanet, como eu sei se posso?"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "qual o critério de elegibilidade para pessoas jurídicas"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "toda empresa pode usar a lei rouanet?"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "tem alguma execeção para uma empresa não utilizar a lei rouanet"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "quais a regras de elegibilidade no caso de empresas"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "qual a minha elegibilidade como pessoa juridica para participar da lei"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "qual a minha elegibilidade como cnpj para participar da lei"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "qualquer empresa pode participar da lei Rouanet?"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "que empresa pode participar?"
+      },
+      {
+        "intent": "curiosidades_elegibilidade_de_empresa_para_beneficios",
+        "text": "que tipo de empresa pode participar?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Meus parentes podem incentivar meu projeto ?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Meus pais e tios podem incentivar meu projeto ?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Tem problema parentes incentivarem projetos ?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Tenho parentes que desejam incentivar meus projetos, tem alguma restrição ?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Parentes incentivando meus projetos. Tem problema ?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Tem problema meu irmão ou irmã, tio ou tia, primo ou prima, mãe ou pai incentivar meus projetos ?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Minha irmã quer incetivar meu projeto, tem problema?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Minha filha possui uma empresa e quer incentivar um dos meus projetos"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Possuo um tio que quer me incentivar na cultura"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Tenho um primo que quer me dar dinheiro pela lei rouanet"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Algum parente meu pode incentivar meu projeto?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Meu projeto pode ser incentivado pela minha família?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "minha família pode incentivar meu projeto?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Queria saber se a minha família pode ajudar a bancar o meu projeto"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Quero saber se a minha família pode financiar o meu projeto"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "Quero saber se meus parentes podem ajudar a financiar o meu projeto"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "A minha família pode colocar dinheiro no meu projeto?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "quero saber se meus parentes podem ser beneficiados"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "meus familiares podem incentivar meu projeto?"
+      },
+      {
+        "intent": "curiosidades_receber_incetivo_de_parentes",
+        "text": "a família pode incentivar projetos?"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "Quanto o incentivador de projetos culturais pode deduzir de seu imposto de renda?"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "Incentivadores de projetos podem deduzir quanto de impostos de renda ?"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "Quanto de imposto de renda incentivadores conseguem deduzir de impostos ?"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "Qual valor um incentivador consegue deduzir de imposto de renda ?"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "Caso eu incentive um projeto quanto eu vou abater do meu IR"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "Quanto é o abatimento no IR caso haja algum incentivo"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "Quanto eu ganho de desconto no imposto de renda incentivando projeto culturais"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "Qual a porcentagem do imposto que vou abater após incentivar projetos?"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "qual é o desconto que recebo no IR ao incentivar um projeto"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "Se eu incentivar eu vou ter dedução no meu imposto de renda"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "qual a dedução de imposto de renda para incentivadores?"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "qual a dedução de impostos para incentivadores?"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "qual a dedução de imposto de renda para incentivadores?"
+      },
+      {
+        "intent": "curiosidades_deducao_imposto_de_renda_incentivador",
+        "text": "sou incentivador, quanto posso receber como dedução de imposto de renda??"
+      },
+      {
+        "intent": "curiosidades_captacao_de_recursos",
+        "text": "O próprio proponente do projeto pode captar os recursos para a sua execução?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "oi"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "olá"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "oi Taís"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "olá Taís"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "olá Taís, como vai?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "como vai?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "bom dia"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "boa tarde"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "boa noite"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "oi, tudo bem?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "oi, tudo bom?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "oi, como vai você?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "como vão as coisas?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "alô"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "eae"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "eai"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "yo"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "com licença"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "tudo bom?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "posso falar com você?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "pode me tirar uma dúvida?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "estou bem, e você?"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "tô bem"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "estou otimo"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "estou bem, obrigado"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "muito bem"
+      },
+      {
+        "intent": "cumprimentar",
+        "text": "muito bom"
+      },
+      {
+        "intent": "afirmar",
+        "text": "sim"
+      },
+      {
+        "intent": "afirmar",
+        "text": "claro que sim"
+      },
+      {
+        "intent": "afirmar",
+        "text": "posso sim"
+      },
+      {
+        "intent": "afirmar",
+        "text": "quero saber mais"
+      },
+      {
+        "intent": "afirmar",
+        "text": "quero sim"
+      },
+      {
+        "intent": "afirmar",
+        "text": "quero"
+      },
+      {
+        "intent": "afirmar",
+        "text": "por favor"
+      },
+      {
+        "intent": "afirmar",
+        "text": "se voce puder"
+      },
+      {
+        "intent": "afirmar",
+        "text": "quero mais detalhes"
+      },
+      {
+        "intent": "afirmar",
+        "text": "quero mais"
+      },
+      {
+        "intent": "afirmar",
+        "text": "tudo bem"
+      },
+      {
+        "intent": "afirmar",
+        "text": "pode falar"
+      },
+      {
+        "intent": "afirmar",
+        "text": "já sim"
+      },
+      {
+        "intent": "afirmar",
+        "text": "já preenchi"
+      },
+      {
+        "intent": "afirmar",
+        "text": "já conheço"
+      },
+      {
+        "intent": "afirmar",
+        "text": "ja conheco"
+      },
+      {
+        "intent": "afirmar",
+        "text": "conheço"
+      },
+      {
+        "intent": "afirmar",
+        "text": "conheco"
+      },
+      {
+        "intent": "afirmar",
+        "text": "sei bastante"
+      },
+      {
+        "intent": "afirmar",
+        "text": "preenchi sim"
+      },
+      {
+        "intent": "afirmar",
+        "text": "já preenchi uma proposta"
+      },
+      {
+        "intent": "afirmar",
+        "text": "sim, preenchi minha proposta"
+      },
+      {
+        "intent": "afirmar",
+        "text": "Tá"
+      },
+      {
+        "intent": "afirmar",
+        "text": "tá"
+      },
+      {
+        "intent": "afirmar",
+        "text": "Tá bom"
+      },
+      {
+        "intent": "afirmar",
+        "text": "tá bom"
+      },
+      {
+        "intent": "afirmar",
+        "text": "Okay"
+      },
+      {
+        "intent": "afirmar",
+        "text": "okay"
+      },
+      {
+        "intent": "afirmar",
+        "text": "Ok"
+      },
+      {
+        "intent": "afirmar",
+        "text": "ok"
+      },
+      {
+        "intent": "afirmar",
+        "text": "claro"
+      },
+      {
+        "intent": "afirmar",
+        "text": "por favor"
+      },
+      {
+        "intent": "afirmar",
+        "text": "se não for incomodo"
+      },
+      {
+        "intent": "negar",
+        "text": "não"
+      },
+      {
+        "intent": "negar",
+        "text": "não quero saber mais"
+      },
+      {
+        "intent": "negar",
+        "text": "quero falar sobre outra coisa"
+      },
+      {
+        "intent": "negar",
+        "text": "não, ainda não"
+      },
+      {
+        "intent": "negar",
+        "text": "não preenchi"
+      },
+      {
+        "intent": "negar",
+        "text": "nao preenchi"
+      },
+      {
+        "intent": "negar",
+        "text": "nunca preenchi"
+      },
+      {
+        "intent": "negar",
+        "text": "nunca fiz"
+      },
+      {
+        "intent": "negar",
+        "text": "nunca"
+      },
+      {
+        "intent": "negar",
+        "text": "nao fiz"
+      },
+      {
+        "intent": "negar",
+        "text": "não está"
+      },
+      {
+        "intent": "negar",
+        "text": "não tem nada a ver"
+      },
+      {
+        "intent": "negar",
+        "text": "não é nada disso"
+      },
+      {
+        "intent": "negar",
+        "text": "ainda não"
+      },
+      {
+        "intent": "negar",
+        "text": "não sei"
+      },
+      {
+        "intent": "negar",
+        "text": "não conheço"
+      },
+      {
+        "intent": "negar",
+        "text": "nao conheco"
+      },
+      {
+        "intent": "negar",
+        "text": "quero nao"
+      },
+      {
+        "intent": "negar",
+        "text": "nao quero"
+      },
+      {
+        "intent": "negar",
+        "text": "não, tudo bem"
+      },
+      {
+        "intent": "negar",
+        "text": "nada"
+      },
+      {
+        "intent": "negar",
+        "text": "não quero saber de mais nada"
+      },
+      {
+        "intent": "negar",
+        "text": "não era isso, me enganei"
+      },
+      {
+        "intent": "negar",
+        "text": "não era isso"
+      },
+      {
+        "intent": "negar",
+        "text": "não é nada disso"
+      },
+      {
+        "intent": "negar",
+        "text": "não sei onde se encaixa"
+      },
+      {
+        "intent": "negar",
+        "text": "não sei dizer"
+      },
+      {
+        "intent": "negar",
+        "text": "não sei bem"
+      },
+      {
+        "intent": "negar",
+        "text": "não sei onde a minha pergunta se encaixa"
+      },
+      {
+        "intent": "negar",
+        "text": "não tenho certeza"
+      },
+      {
+        "intent": "negar",
+        "text": "escolhi errado"
+      },
+      {
+        "intent": "negar",
+        "text": "falei errado"
+      },
+      {
+        "intent": "negar",
+        "text": "hmm não sei"
+      },
+      {
+        "intent": "negar",
+        "text": "nao sei minha duvida"
+      },
+      {
+        "intent": "negar",
+        "text": "não sei o que perguntar"
+      },
+      {
+        "intent": "negar",
+        "text": "não sei o que quero saber"
+      },
+      {
+        "intent": "negar",
+        "text": "sei lá"
+      },
+      {
+        "intent": "negar",
+        "text": "tanto faz"
+      },
+      {
+        "intent": "negar",
+        "text": "nao sei o que perguntar"
+      },
+      {
+        "intent": "negar",
+        "text": "nao sei o que questionar"
+      },
+      {
+        "intent": "negar",
+        "text": "nao sei o que quero saber"
+      },
+      {
+        "intent": "negar",
+        "text": "ainda nao sei"
+      },
+      {
+        "intent": "negar",
+        "text": "ainda nao sei escolher um tópico"
+      },
+      {
+        "intent": "negar",
+        "text": "ainda não pensei sobre isso"
+      },
+      {
+        "intent": "negar",
+        "text": "não sei do que quero falar"
+      },
+      {
+        "intent": "negar",
+        "text": "não sei do que quero conversar"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "quero aprender mais sobre a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "quero saber mais sobre a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "pretendo saber mais sobre a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "gostaria de aprender mais sobre a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "gostaria de saber mais sobre a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "quero falar sobre a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "mais sobre a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "Mais sobre a Lei Rouanet"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "vamos falar sobre a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "sobre a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "lei rouanet"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "Rouanet"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "rouanet"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "curiosidades"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "gostaria de falar mais sobre a lei"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "tenho duvidas na lei rouanet"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "possuo curiosidades sobre a lei rouanet"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "sobre a Lei eu acho"
+      },
+      {
+        "intent": "afirmar_curiosidades",
+        "text": "creio que sobre a lei rouanet"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "prefiro conversar sobre criação e andamento de projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "prefiro conversar sobre proposta"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "prefiro conversar sobre projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "prefiro falar sobre criação e andamento de projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "prefiro falar sobre proposta"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "prefiro falar sobre projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "quero conversar sobre projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "quero conversar sobre criação e andamento de projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "quero conversar sobre proposta"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "quero conversar sobre projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "quero falar sobre proposta"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "quero falar sobre projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "projeto"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "proposta"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "propostas"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "sobre proposta"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "sobre projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "sobre a criação"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "sobre a criacao"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "sobre o andamento"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "andamento"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "criação"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "criacao"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "criação de projetos"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "criação de projeto"
+      },
+      {
+        "intent": "afirmar_projeto",
+        "text": "andamento de projetos"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que é um projeto?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que é a cnic?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que é proposta?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que e proponente?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que é isso?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que preenchimento quer dizer?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que lei rouanet significa?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "oq é Lei Rouanet?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "oq é a Lei Rouanet?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que é a lei"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "pode conceituar salic?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "pode conceituar o salic?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "pode explicar execução?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "pode me explicar a fase de preenchimento?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "pode me explicar a lei rouanet?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "pode me dar o conceito do salic"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "não faço ideia do que seja proponente"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "não sei bem o que você quer dizer com sefic"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "Não sei o que é  e90"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "me explique prestação de contas"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "me explica o que é a cnic"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "me explica o que é o salic"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "me explique melhor o conceito de projeto"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "me explique melhor o que é um proponente"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "qual o conceito de sefic?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "qual o significado de a12?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "como funciona a prestação de contas"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "como funciona a fase de preenchimento"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que significa e90?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que significa o estado e90?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "o que eh A12?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "você pode me explicar sobre prestação de contas"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "você pode me explicar o que é e90"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "O que significa cnic?"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "defina cnic"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "explique cnic"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "me explique a fase de preenchimento"
+      },
+      {
+        "intent": "o_que_eh",
+        "text": "me explique a fase de prestação de contas"
+      },
+      {
+        "intent": "duvida_sobre_contexto",
+        "text": "5"
+      },
+      {
+        "intent": "duvida_sobre_contexto",
+        "text": "se encaixa na 5"
+      },
+      {
+        "intent": "duvida_sobre_contexto",
+        "text": "acho que seria a 5"
+      },
+      {
+        "intent": "duvida_sobre_contexto",
+        "text": "na quinta alternativa"
+      },
+      {
+        "intent": "duvida_sobre_contexto",
+        "text": "alternativa 5"
+      },
+      {
+        "intent": "duvida_sobre_contexto",
+        "text": "se encaixa na 5"
+      },
+      {
+        "intent": "duvida_sobre_contexto",
+        "text": "acho que seria a 5"
+      },
+      {
+        "intent": "duvida_sobre_contexto",
+        "text": "quinta opção"
+      },
+      {
+        "intent": "duvida_sobre_contexto",
+        "text": "opção cinco"
+      },
+      {
+        "intent": "duvida_sobre_contexto",
+        "text": "cinco"
+      },
+      {
+        "intent": "extra",
+        "text": "Bacana"
+      },
+      {
+        "intent": "extra",
+        "text": "legal"
+      },
+      {
+        "intent": "extra",
+        "text": "Entendi"
+      },
+      {
+        "intent": "extra",
+        "text": "Compreendi"
+      },
+      {
+        "intent": "extra",
+        "text": "Saquei"
+      },
+      {
+        "intent": "extra",
+        "text": "Daora"
+      },
+      {
+        "intent": "extra",
+        "text": "Tá"
+      },
+      {
+        "intent": "extra",
+        "text": "Tá bom"
+      },
+      {
+        "intent": "extra",
+        "text": "Bom"
+      },
+      {
+        "intent": "extra",
+        "text": "Okay"
+      },
+      {
+        "intent": "extra",
+        "text": "Ok"
+      },
+      {
+        "intent": "extra",
+        "text": "Muito bom"
+      },
+      {
+        "intent": "extra",
+        "text": "Muito bem"
+      },
+      {
+        "intent": "extra",
+        "text": "Gostei"
+      },
+      {
+        "intent": "extra",
+        "text": "Massa"
+      },
+      {
+        "intent": "extra",
+        "text": "Maneiro"
+      },
+      {
+        "intent": "extra",
+        "text": "Interessante"
+      },
+      {
+        "intent": "extra",
+        "text": "Joia"
+      },
+      {
+        "intent": "extra",
+        "text": "Formidável"
+      },
+      {
+        "intent": "extra",
+        "text": "Excelente"
+      },
+      {
+        "intent": "extra",
+        "text": "Ótimo"
+      },
+      {
+        "intent": "extra",
+        "text": "Extraordinário"
+      },
+      {
+        "intent": "extra",
+        "text": "Excepcional"
+      },
+      {
+        "intent": "extra",
+        "text": "Notável"
+      },
+      {
+        "intent": "extra",
+        "text": "Top"
+      },
+      {
+        "intent": "extra",
+        "text": "Perfeito"
+      },
+      {
+        "intent": "extra",
+        "text": "Certo"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}
