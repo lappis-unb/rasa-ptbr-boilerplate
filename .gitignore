@@ -1,13 +1,15 @@
 ### Rasa ###
 /rouana/models
 rasa_core.log
+errors.json
+rouana/lab/models/
 
 ### Rocketchat ###
-
 /data
 uploads
 
 
+### database
 web/postegres-data
 
 
