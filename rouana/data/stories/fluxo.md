@@ -89,9 +89,12 @@
 > identificar_execucao
 
 ## path2.4
-> mais_alguma_pergunta
+> identificar_contexto
+- utter_mais_alguma_pergunta
 * processo_periodo
-  - utter_alguma_pergunta
+  - utter_processo_periodo
+  - utter_mais_alguma_pergunta
+
 
 <!--- Fluxo de Execução --->
 
@@ -112,7 +115,6 @@
   - action_o_que_eh
   - utter_duvida_execucao
 > identificar_execucao
-
 
 
 <!--- Conhecimento do Processo --->

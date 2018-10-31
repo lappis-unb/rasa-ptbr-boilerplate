@@ -151,9 +151,9 @@ templates:
 
   utter_processo_periodo:
     - text: |
-    'As propostas devem ser apresentadas todos os anos entre 1º de fevereiro a 30 de novembro',
-    'com 90 dias de antecedência do evento para garantir a aprovação e captação de recursos',
-    'Fique de olho no prazo, não perca essa oportunidade!'
+        As propostas devem ser apresentadas todos os anos entre 1º de fevereiro a 30 de novembro
+        com 90 dias de antecedência do evento para garantir a aprovação e captação de recursos
+        Fique de olho no prazo, não perca essa oportunidade!
 
   utter_ja_eh_proponente:
     - text: |
