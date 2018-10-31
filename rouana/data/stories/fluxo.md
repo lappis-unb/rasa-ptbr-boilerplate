@@ -91,8 +91,7 @@
 ## path2.4
 > mais_alguma_pergunta
 * processo_periodo
-  - action_processo_periodo
-> mais_alguma_pergunta
+  - utter_alguma_pergunta
 
 <!--- Fluxo de Execução --->
 
