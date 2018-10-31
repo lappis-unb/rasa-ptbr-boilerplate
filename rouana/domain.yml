@@ -4,6 +4,7 @@ intents:
   - afirmar_curiosidades
   - afirmar_projeto
   - submissao_de_projeto
+  - processo_periodo
   - afirmar
   - negar
   - extra
@@ -20,6 +21,7 @@ intents:
   - escolher_prazo
   - escolher_erros_salic
   - duvida_sobre_contexto
+
 
 templates:
   utter_default:
@@ -42,6 +44,7 @@ actions:
   - actions.actions_geral.ActionAviso
   - actions.actions_geral.ActionIntroduzirExecucao
   - actions.actions_geral.ActionSubmissaoDeProjetos
+  - actions.actions_geral.ActionProcessoPeriodo
   - actions.actions_geral.ActionJaEhProponente
   - actions.actions_geral.ActionCadastroProponenteIntroduzirContexto
   - actions.actions_geral.ActionCadastroSalicVideo

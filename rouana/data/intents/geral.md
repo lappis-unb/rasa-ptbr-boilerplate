@@ -163,6 +163,29 @@
 - criação de projeto
 - andamento de projetos
 
+## intent:processo_periodo
+
+- que data devo apresentar proposta
+- qual data devo me inscrever
+- que época devo enviar proposta
+- quando posso apresentar proposta
+- qual periodo para apresentar proposta
+- qual periodo para apresentar projeto
+- quando posso enviar projeto
+- periodo para submissao de proposta
+- periodo do ano para apresentar
+- periodo do ano para apresentar
+- periodo para inscrever
+- inscrever proposta
+- inscrever projeto
+- data inscriçao
+- data para enviar
+- epoca inscriçao
+- prazo inscriçao
+- prazo submissao
+- prazo enviar
+- prazo envio
+
 ## intent:o_que_eh
 - o que é um projeto?
 - o que é a cnic?

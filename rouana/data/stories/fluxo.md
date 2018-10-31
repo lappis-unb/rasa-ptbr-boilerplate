@@ -88,7 +88,11 @@
   - action_duvida_execucao
 > identificar_execucao
 
-
+## path2.4
+> mais_alguma_pergunta
+* processo_periodo
+  - action_processo_periodo
+> mais_alguma_pergunta
 
 
 <!--- Fluxo de Execução --->
@@ -223,4 +227,3 @@
 * o_que_eh
   - action_o_que_eh
 > mais_alguma_pergunta
-

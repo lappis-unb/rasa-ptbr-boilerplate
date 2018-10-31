@@ -29,7 +29,7 @@ class ActionCumprimentar(ActionMultiline):
 class ActionFaseDeTestes(ActionMultiline):
     messages = [
         'Ainda não consigo falar sobre outros assuntos. Estou em fase de testes e a cada dia aprendo mais com vocês.'
-    ]    
+    ]
 
 class ActionDefinirPerfil(ActionMultiline):
     messages = [
@@ -89,7 +89,13 @@ class ActionSubmissaoDeProjetos(ActionMultiline):
         'A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.\n'
         'O primeiro passo para você particiar deste processo é ter cadastro no SALIC'
     ]
-
+class ActionProcessoPeriodo(ActionMultiline):
+    messages = [
+    'As propostas devem ser apresentadas todos os anos entre 1º de fevereiro a 30 de novembro',
+    'com 90 dias de antecedência do evento para garantir a aprovação e captação de recursos',
+    'Fique de olho no prazo, não perca essa oportunidade!'
+    ]
+    
 class ActionDefinirContexto(ActionMultiline):
     messages = [
         'Onde sua pergunta se encaixa melhor:\n'
