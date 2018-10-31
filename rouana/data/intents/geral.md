@@ -171,11 +171,14 @@
 - quando posso apresentar proposta
 - qual periodo para apresentar proposta
 - qual periodo para apresentar projeto
+- qual o periodo de submissao
 - quando posso enviar projeto
+- quando posso submeter uma proposta
 - periodo para submissao de proposta
 - periodo do ano para apresentar
 - periodo do ano para apresentar
 - periodo para inscrever
+- periodo de submissao
 - inscrever proposta
 - inscrever projeto
 - data inscriçao
