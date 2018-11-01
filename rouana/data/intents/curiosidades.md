@@ -187,4 +187,23 @@
 - sou incentivador, quanto posso receber como dedução de imposto de renda??
 
 ## intent:curiosidades_captacao_de_recursos
-- O próprio proponente do projeto pode captar os recursos para a sua execução?
+- o próprio proponente do projeto pode captar os recursos para a sua execução
+- o proponente pode captar o dinheiro para execucao
+- quem pode ir captar o dinheiro para fazer o projeto
+- pode contratar alguém pra captar dinheiro
+- depois de aprovado quem vai pegar o dinheiro liberado
+- posso contratar alguém pra captar pra mim
+- quero contratar alguem pra captar recurso
+- posso terceirizar a captacao de recursos
+- o proponente pode receber dinheiro
+- quanto o proponete pode ser pago
+- proponente captação
+- proponente dinheiro
+- terceirizar captacao
+- proponente pagamento
+- pagamento proponente
+- proponente recebimento
+- proponente captar
+- contratar captação
+- proponente receber
+- proponente ser pago

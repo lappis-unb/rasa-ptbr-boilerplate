@@ -16,6 +16,7 @@ intents:
   - curiosidades_receber_incetivo_de_parentes
   - curiosidades_deducao_imposto_de_renda_incentivador
   - curiosidades_captacao_de_recursos
+
 actions:
 - utter_definir_perfil
 - utter_default
@@ -300,8 +301,11 @@ templates:
 
   utter_curiosidades_captacao_de_recursos:
     - text: |
-        O profissional que captar os recursos para o projeto – seja ele o próprio proponente ou alguém contratado exclusivamente com este objetivo – poderá ser remunerado até o limite de 10% do valor do Custo do Projeto, sendo o teto do valor da remuneração de R$ 150 mil.
-        Este percentual pode ser expandido quando o projeto é realizado fora do eixo Rio-São Paulo, nas seguintes regiões do País:
-            15% do valor total do custo do projeto para projetos executados nas Regiões Norte, Nordeste e Centro-Oeste;
-            12,5% para os projetos realizados na Região Sul e nos estados de Minas Gerais e Espírito Santo.
-        Os valores destinados à remuneração para captação de recursos somente poderão ser pagos proporcionalmente às parcelas já captadas."
+        O próprio proponente ou alguém contratado pode captar os recursos para a execucao do projeto,
+        além disso, ele pode ser remunerado até o limite de 10% do valor do Custo do Projeto, sendo o teto do valor da remuneração de R$ 150 mil.
+
+        Ah, e este percentual pode ser expandido quando o projeto é realizado fora do eixo Rio-São Paulo:
+            15% do valor total do custo do projeto nas Regiões Norte, Nordeste e Centro-Oeste;
+            12,5% na Região Sul e nos estados de Minas Gerais e Espírito Santo.
+
+        Mas os valores destinados à remuneração somente poderão ser pagos proporcionalmente às parcelas já captadas!
