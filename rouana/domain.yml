@@ -6,7 +6,6 @@ intents:
   - submissao_de_projeto
   - afirmar
   - negar
-  - extra
   - curiosidades_quantidade_projetos
   - curiosidades_beneficios_incentivo_projetos_culturais
   - curiosidades_lei_rouanet_elegibilidade
