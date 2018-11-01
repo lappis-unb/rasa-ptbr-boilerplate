@@ -89,8 +89,6 @@
 > identificar_execucao
 
 
-
-
 <!--- Fluxo de Execução --->
 
 ## path2.1.2.1-mais_alguma_pergunta
@@ -110,7 +108,6 @@
   - action_o_que_eh
   - utter_duvida_execucao
 > identificar_execucao
-
 
 
 <!--- Conhecimento do Processo --->

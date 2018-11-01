@@ -109,6 +109,31 @@
 - sobre projeto
 - sobre criacao
 
+## intent:processo_periodo
+- que data devo apresentar proposta
+- qual data devo me inscrever
+- que época devo enviar proposta
+- quando posso apresentar proposta
+- qual periodo para apresentar proposta
+- qual periodo para apresentar projeto
+- qual o periodo de submissao
+- quando posso enviar projeto
+- quando posso submeter uma proposta
+- periodo para submissao de proposta
+- periodo do ano para apresentar
+- periodo do ano para apresentar
+- periodo para inscrever
+- periodo de submissao
+- inscrever proposta
+- inscrever projeto
+- data inscriçao
+- data para enviar
+- epoca inscriçao
+- prazo inscriçao
+- prazo submissao
+- prazo enviar
+- prazo envio
+
 ## intent:o_que_eh
 - como funciona a prestacao de contas
 - como funciona a fase de preenchimento
