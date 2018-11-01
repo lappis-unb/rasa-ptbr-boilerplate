@@ -1,13 +1,12 @@
 ## intent:cumprimentar
-- ola tais, como vai?
-- oi, tudo bem?
-- como vai?
-- oi, como vai voce?
-- como vao as coisas?
+- olá Taís, como vai
+- oi, tudo bem
+- oi, como vai voce
+- como vao as coisas
 - com licenca
-- tudo bom?
-- posso falar com voce?
-- pode me tirar uma duvida?
+- tudo bom
+- posso falar com voce
+- pode me tirar uma duvida
 - gostaria de tirar uma duvida
 - oi tais
 - ola tais
@@ -19,6 +18,7 @@
 - bom dia
 - boa tarde
 - boa noite
+- olá
 
 ## intent:afirmar
 - se não for incomodo
@@ -35,6 +35,7 @@
 - por favor
 - tudo bem
 - ja
+- já
 - conheco
 - sim
 - ta
@@ -83,13 +84,10 @@
 - sobre a Lei eu acho
 - aprender mais
 - saber mais
-- mais
-- quero
-- a lei
+- lei
 
 ## intent:afirmar_projeto
 - prefiro conversar sobre criacao e andamento de projetos
-- gostaria de saber sobre criacao e andamento de projetos
 - sobre criacao e andamento de projetos
 - criacao e andamento de projetos
 - conversar sobre proposta
@@ -100,7 +98,7 @@
 - quero conversar sobre proposta
 - projeto
 - proposta
-- criacao
+- criação
 - andamento
 - criacao de projeto
 - andamento de projeto
