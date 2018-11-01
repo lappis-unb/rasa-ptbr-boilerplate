@@ -61,7 +61,6 @@
   - utter_curiosidades_mais
 
 ## pathCuriosidade.10
-
 > identificar_curiosidade
   * processo_periodo
     - utter_processo_periodo

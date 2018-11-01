@@ -164,7 +164,6 @@
 - andamento de projetos
 
 ## intent:processo_periodo
-
 - que data devo apresentar proposta
 - qual data devo me inscrever
 - que época devo enviar proposta
