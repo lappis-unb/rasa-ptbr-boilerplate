@@ -7,7 +7,6 @@ intents:
   - processo_periodo
   - afirmar
   - negar
-  - extra
   - curiosidades_quantidade_projetos
   - curiosidades_beneficios_incentivo_projetos_culturais
   - curiosidades_lei_rouanet_elegibilidade
@@ -16,6 +15,7 @@ intents:
   - curiosidades_elegibilidade_de_empresa_para_beneficios
   - curiosidades_receber_incetivo_de_parentes
   - curiosidades_deducao_imposto_de_renda_incentivador
+  - curiosidades_captacao_de_recursos
   - curiosidades_valor_maximo_projeto
   - curiosidades_valor_maximo_pessoa_fisica
   - curiosidades_valor_maximo_pessoa_juridica
@@ -58,6 +58,7 @@ actions:
 - utter_curiosidades_elegibilidade_de_empresa_para_beneficios
 - utter_curiosidades_receber_incetivo_de_parentes
 - utter_curiosidades_deducao_imposto_de_renda_incentivador
+- utter_curiosidades_captacao_de_recursos
 - utter_curiosidades_valor_maximo_projeto
 - utter_curiosidades_valor_maximo_pessoa_fisica
 - utter_curiosidades_valor_maximo_pessoa_juridica
@@ -310,8 +311,19 @@ templates:
         IMPORTANTE: os percentuais de dedução de IR são limitados aos estabelecidos pela legislação do imposto de renda vigente,
         que atualmente são 4% do imposto devido para empresas e 6% do imposto devido para pessoa física.
         Você pode ver os detalhes das leis pelos endereços:
-        Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.html
-        Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.html
+        Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm
+        Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm"
+
+  utter_curiosidades_captacao_de_recursos:
+    - text: |
+        O próprio proponente ou alguém contratado pode captar os recursos para a execucao do projeto,
+        além disso, ele pode ser remunerado até o limite de 10% do valor do Custo do Projeto, sendo o teto do valor da remuneração de R$ 150 mil.
+
+        Ah, e este percentual pode ser expandido quando o projeto é realizado fora do eixo Rio-São Paulo:
+            15% do valor total do custo do projeto nas Regiões Norte, Nordeste e Centro-Oeste;
+            12,5% na Região Sul e nos estados de Minas Gerais e Espírito Santo.
+
+        Mas os valores destinados à remuneração somente poderão ser pagos proporcionalmente às parcelas já captadas!
 
   utter_curiosidades_valor_maximo_projeto:
     - text: |
