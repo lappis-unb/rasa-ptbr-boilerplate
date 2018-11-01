@@ -3,6 +3,7 @@
 rasa_core.log
 errors.json
 rouana/lab/models/
+rouana/lab/errors.json
 
 ### Rocketchat ###
 /data
