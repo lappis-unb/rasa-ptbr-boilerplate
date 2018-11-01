@@ -39,7 +39,6 @@
 - incentivador
 - patrocinador
 - vantagem
-- pessoa juridica
 - ganha
 
 
