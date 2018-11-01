@@ -1,13 +1,13 @@
 ## intent:cumprimentar
-- ola tais, como vai?
-- oi, tudo bem?
-- como vai?
-- oi, como vai voce?
-- como vao as coisas?
+- ola tais, como vai
+- oi, tudo bem
+- como vai
+- oi, como vai voce
+- como vao as coisas
 - com licenca
-- tudo bom?
-- posso falar com voce?
-- pode me tirar uma duvida?
+- tudo bom
+- posso falar com voce
+- pode me tirar uma duvida
 - gostaria de tirar uma duvida
 - oi tais
 - ola tais
@@ -27,8 +27,8 @@
 - gostaria sim
 - sei bastante
 - preenchi sim
-- quero saber mais
-- quero mais detalhes
+- gostaria de saber mais
+- gostaria de mais detalhes
 - ja preenchi uma proposta
 - sim, preenchi minha proposta
 - quero
@@ -88,7 +88,7 @@
 - a lei
 
 ## intent:afirmar_projeto
-- prefiro conversar sobre criacao e andamento de projetos
+- prefiro conversar sobre criaçao e andamento de projetos
 - gostaria de saber sobre criacao e andamento de projetos
 - sobre criacao e andamento de projetos
 - criacao e andamento de projetos
@@ -96,15 +96,15 @@
 - conversar sobre projetos
 - prefiro falar sobre proposta
 - prefiro falar sobre projetos
-- quero conversar sobre projetos
-- quero conversar sobre proposta
+- conversar sobre projetos
+- conversar sobre proposta
 - projeto
 - proposta
 - criacao
 - andamento
 - criacao de projeto
 - andamento de projeto
-- criacao e andamento
+- criaçao e andamento
 - sobre proposta
 - sobre projeto
 - sobre criacao
@@ -114,9 +114,9 @@
 - como funciona a fase de preenchimento
 - me explique melhor o conceito de projeto
 - me explique melhor o que e um proponente
-- pode me explicar a fase de preenchimento?
-- o que preenchimento quer dizer?
-- o que lei rouanet significa?
+- pode me explicar a fase de preenchimento
+- o que preenchimento quer dizer
+- o que lei rouanet significa
 - não faco ideia do que seja proponente
 - não sei bem o que você quer dizer com sefic
 - pode me dar o conceito do salic
