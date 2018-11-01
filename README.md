@@ -99,3 +99,17 @@ Para extrair as conversas de um chat execute
 ```
 sudo docker-compose run --rm rouana python /scripts/analytics_message_extraction.py -r rocketchat:3000
 ```
+
+## Análise do bot
+
+### Uso
+
+* Levante o container do `bot notebook`
+
+```sh
+docker-compose up
+```
+
+* Acesse o notebook em `localhost:8888`
+
+* Utilize o `token` mostrado no log do `jupyter-notebook` para acessar o notebook.

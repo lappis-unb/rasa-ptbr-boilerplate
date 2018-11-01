@@ -1,0 +1,7 @@
+matplotlib==3.0.1
+rasa-nlu==0.13.7
+pygraphviz==1.5
+spacy==2.0.16
+sklearn==0.0
+sklearn-crfsuite==0.3.6
+tensorflow==1.8.0
