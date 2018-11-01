@@ -13,5 +13,3 @@ USER jovyan
 RUN pip install -r /tmp/intent-requirements.txt
 
 RUN python -m spacy download pt
-
-ADD ./bot-intent-lab.ipynb /home/jovyan/work/

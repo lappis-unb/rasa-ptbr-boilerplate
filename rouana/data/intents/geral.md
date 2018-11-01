@@ -9,7 +9,6 @@
 - posso falar com voce
 - pode me tirar uma duvida
 - gostaria de tirar uma duvida
-- oi tais
 - ola tais
 - to bem
 - tranquilo
@@ -37,7 +36,6 @@
 - tudo bem
 - ja
 - já
-- conheco
 - sim
 - ta
 - ok
@@ -77,15 +75,17 @@
 - creio que sobre a lei rouanet
 - quero falar sobre a lei
 - vamos falar sobre a lei
+- me fale da lei rouanet
 - mais sobre a lei
+- aprender sobre a lei rouanet
 - sobre a lei
-- lei rouanet
+- lei
 - rouanet
 - curiosidades
 - sobre a Lei eu acho
 - aprender mais
 - saber mais
-- lei
+- aprender mais
 
 ## intent:afirmar_projeto
 - prefiro conversar sobre criaçao e andamento de projetos

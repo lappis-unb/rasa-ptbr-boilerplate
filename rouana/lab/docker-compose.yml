@@ -5,6 +5,6 @@ services:
     build:
       context: .
     volumes:
-      - ../:/home/jovyan/work
+      - ../:/home/jovyan/
     ports:
       - 8888:8888
