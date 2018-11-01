@@ -65,6 +65,8 @@
 > identificar_curiosidade
 * curiosidades_captacao_de_recursos
   - utter_curiosidades_captacao_de_recursos
+  - utter_curiosidades_mais
+> curiosidade_final
 
 ## pathCuriosidade.10.1.1
 > identificar_curiosidade
