@@ -2,8 +2,10 @@
 /rouana/models
 rasa_core.log
 errors.json
+### Rasa evaluate ###
 rouana/lab/models/
 rouana/lab/errors.json
+rouana/lab/lab/
 
 ### Rocketchat ###
 /data
