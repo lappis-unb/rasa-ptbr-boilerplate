@@ -19,6 +19,7 @@
 - bom dia
 - boa tarde
 - boa noite
+- olá
 
 ## intent:afirmar
 - se não for incomodo
@@ -35,6 +36,7 @@
 - por favor
 - tudo bem
 - ja
+- já
 - conheco
 - sim
 - ta
@@ -83,9 +85,7 @@
 - sobre a Lei eu acho
 - aprender mais
 - saber mais
-- mais
-- quero
-- a lei
+- lei
 
 ## intent:afirmar_projeto
 - prefiro conversar sobre criaçao e andamento de projetos
@@ -100,7 +100,7 @@
 - conversar sobre proposta
 - projeto
 - proposta
-- criacao
+- criação
 - andamento
 - criacao de projeto
 - andamento de projeto
