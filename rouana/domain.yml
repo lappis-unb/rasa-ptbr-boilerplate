@@ -4,6 +4,7 @@ intents:
   - afirmar_curiosidades
   - afirmar_projeto
   - submissao_de_projeto
+  - processo_periodo
   - afirmar
   - negar
   - curiosidades_quantidade_projetos
@@ -35,6 +36,7 @@ actions:
 - utter_aviso
 - utter_introduzir_execucao
 - utter_submissao_de_projetos
+- utter_processo_periodo
 - utter_ja_eh_proponente
 - utter_cadastro_salic_video
 - utter_explicar_cadastro_salic
@@ -64,6 +66,7 @@ actions:
 - utter_curiosidades_valor_maximo_outro_perfil
 
 - actions.actions_oqueeh.ActionOQueEh
+
 
 templates:
   utter_definir_perfil:
@@ -155,6 +158,12 @@ templates:
         Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
         A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
         O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+
+  utter_processo_periodo:
+    - text: |
+        As propostas devem ser apresentadas todos os anos entre 1º de fevereiro a 30 de novembro
+        com 90 dias de antecedência do evento para garantir a aprovação e captação de recursos
+        Fique de olho no prazo, não perca essa oportunidade!
 
   utter_ja_eh_proponente:
     - text: |
