@@ -59,6 +59,13 @@
 * curiosidades_deducao_imposto_de_renda_incentivador
   - utter_curiosidades_deducao_imposto_de_renda_incentivador
   - utter_curiosidades_mais
+
+## pathCuriosidade.10
+
+> identificar_curiosidade
+  * processo_periodo
+    - utter_processo_periodo
+    - utter_curiosidades_mais
 > curiosidade_final
 
 ## pathCuriosidade.oqueeh
