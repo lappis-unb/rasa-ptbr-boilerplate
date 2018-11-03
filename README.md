@@ -8,14 +8,18 @@ O nome é uma sigla para Tecnologia de Aprendizado Interativo do Salic.
 Ela tem como objetivo ajudar cidadãs e cidadãos a tirar dúvidas sobre a lei
 Rouanet e sobre o incentivo a projetos culturais.
 
-## Ambiente
+
+
+
+
+## Bot
 
 ### RocketChat
 
 ```sh
 sudo docker-compose up -d rocketchat
 # aguarde 3 minutos para o rocketchat terminar de levantar
-sudo docker-compose up rouana
+sudo docker-compose up bot
 ```
 
 Para que a assistente virtual inicie a conversa você deve criar um `trigger`.
@@ -63,22 +67,20 @@ o seu Rocket.Chat.
 ### Console
 
 ```sh
-sudo docker build -t rouana -f docker/tais/Dockerfile .
-sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana python train.py all
+sudo docker-compose run --rm bot make train
+sudo docker-compose run --rm bot make all-console
 ```
 
 ## Site do Beta
 
-### Ambiente de Desenvolvimento
-
-#### Setup
+### Setup
 
 ```
 sudo docker-compose run --rm web python manage.py migrate
 sudo docker-compose run --rm web python manage.py createsuperuser
 ```
 
-#### Execução
+### Execução
 
 ```
 sudo docker-compose up -d web
@@ -86,28 +88,34 @@ sudo docker-compose up -d web
 
 Você pode acessar o site por padrão na url `localhost:8000`
 
+
+
+
 ## Analytics
 
 ### Setup
 
 ```
-sudo docker-compose run --rm rouana python /analytics/setup_elastic.py setup
+sudo docker-compose up -d elasticsearch
 ```
 
-Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`
+Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
 
 ```
 ENVIRONMENT_NAME=localhost
-TAIS_VERSION=last-commit-hash
+BOT_VERSION=last-commit-hash
 ```
 
-#### Execução
+### Vizualização
 
 ```
 sudo docker-compose up -d kibana
 ```
 
 Você pode acessar o kibana no `locahost:5601`
+
+
+
 
 ## Análise do bot
 

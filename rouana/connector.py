@@ -1,19 +1,21 @@
 import logging
 import threading
-import queue
 import os
+from typing import Text
 
+from flask import Blueprint, request, jsonify, make_response
 
-from rasa_core.channels.channel import InputChannel, UserMessage, OutputChannel
+from rasa_core.channels.channel import UserMessage, OutputChannel, InputChannel
 
 logger = logging.getLogger(__name__)
+
 
 class RocketChatBot(OutputChannel):
     @classmethod
     def name(cls):
         return "rocketchat"
 
-    def __init__(self, user, password, server, ssl):
+    def __init__(self, user, password, server, ssl=False):
         from rocketchat_py_sdk.driver import Driver
 
         self.username = user
@@ -29,6 +31,7 @@ class RocketChatBot(OutputChannel):
 
     def login(self):
         if not self.logged_in:
+            logger.info('Trying to login to rocketchat as {}'.format(self.user))
             self.connector.login(user=self.user, password=self.password,
                                  callback=self._login_callback)
 
@@ -43,7 +46,7 @@ class RocketChatBot(OutputChannel):
             self.logged_in = True
             logger.info("[+] callback success")
             logger.debug(data)
-            self.connector.subscribe_to_messages()
+            # self.connector.subscribe_to_messages()
 
     """
     Messages handlers
@@ -54,47 +57,69 @@ class RocketChatBot(OutputChannel):
                                                                 self)
         self.users[recipient_id].add_message(message)
 
-class RocketChatInput(InputChannel):
 
+
+class RocketChatInput(InputChannel):
     """RocketChat input channel implementation."""
 
-    def __init__(self, user=None, password=None,
-                 server_url='open.rocket.chat', ssl=True):
+    @classmethod
+    def name(cls):
+        return "rocketchat"
+
+    @classmethod
+    def from_credentials(cls, credentials):
+        if not credentials:
+            cls.raise_missing_credentials_exception()
+
+        return cls(credentials.get("user"),
+                   credentials.get("password"),
+                   credentials.get("server_url"))
+
+    def __init__(self, user, password, server_url):
+        # type: (Text, Text, Text) -> None
 
         self.user = user
         self.password = password
         self.server_url = server_url
-        self.ssl = ssl
 
-        self.rocketchat_bot = RocketChatBot(self.user, self.password,
-                                            server=self.server_url,
-                                            ssl=self.ssl)
+        self.output_channel = RocketChatBot(
+            self.user, self.password, self.server_url)
 
-        self.rocketchat_bot.connector.add_prefix_handler('', self.register_message)
+    def send_message(self, text, sender_name, recipient_id, on_new_message):
+        if sender_name != self.user:
+            user_msg = UserMessage(text, self.output_channel, recipient_id,
+                                   input_channel=self.name())
+            on_new_message(user_msg)
 
-        self.message_queue = queue.Queue()
+    def blueprint(self, on_new_message):
+        rocketchat_webhook = Blueprint('rocketchat_webhook', __name__)
 
-    def start_async_listening(self, message_queue):
-        self._record_messages(message_queue.enqueue)
+        @rocketchat_webhook.route("/", methods=['GET'])
+        def health():
+            return jsonify({"status": "ok"})
 
-    def start_sync_listening(self, message_handler):
-        self._record_messages(message_handler)
+        @rocketchat_webhook.route("/webhook", methods=['GET', 'POST'])
+        def webhook():
+            request.get_data()
+            if request.json:
+                output = request.json
 
-    def _record_messages(self, on_message):
-        while True:
-            if self.rocketchat_bot.logged_in and not self.message_queue.empty():
-                msg = self.message_queue.get()
+                if "visitor" not in output:
+                    sender_name = output.get("user_name", None)
+                    text = output.get("text", None)
+                    recipient_id = output.get("channel_id", None)
+                else:
+                    messages_list = output.get("messages", None)
+                    text = messages_list[0].get("msg", None)
+                    sender_name = messages_list[0].get("username", None)
+                    recipient_id = output.get("_id")
 
-                on_message(
-                    UserMessage(msg['msg'], self.rocketchat_bot, msg['rid'])
-                )
-            else:
-                self.rocketchat_bot.login()
+                self.send_message(text, sender_name, recipient_id,
+                                  on_new_message)
 
+            return make_response()
 
-    def register_message(self, bot, message):
-        self.message_queue.put(message)
-
+        return rocketchat_webhook
 
 class RocketchatHandleMessages:
     def __init__(self, rid, bot):
@@ -159,3 +184,4 @@ class RocketchatHandleMessages:
     def deactivate_typing(self, error, data):
         if not error:
             self.is_typing = False
+

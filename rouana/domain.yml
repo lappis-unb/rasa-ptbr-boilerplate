@@ -22,50 +22,49 @@ intents:
   - curiosidades_valor_maximo_geral
 
 actions:
-- utter_definir_perfil
-- utter_default
-- utter_restart
-- utter_cumprimentar
-- utter_despedir
-- utter_fase_de_testes
-- utter_explicar_definicao_perfil
-- utter_nova_proposta
-- utter_duvida_execucao
-- utter_conhece_processo
-- utter_cadastro_salic
-- utter_aviso
-- utter_introduzir_execucao
-- utter_submissao_de_projetos
-- utter_processo_periodo
-- utter_ja_eh_proponente
-- utter_cadastro_salic_video
-- utter_explicar_cadastro_salic
-- utter_cadastro_salic_apos_video
-- utter_inscricao_proponente
-- utter_mais_alguma_pergunta
-- utter_nao_aprendi_contexto
-- utter_proponente_cadastrado
-- utter_curiosidades_indicacao
-- utter_curiosidades_mais
-- utter_curiosidades_mais_sim
-- utter_curiosidades_mais_nao
-- utter_curiosidades_falar_sobre_projetos
-- utter_curiosidades_quantidade_projetos
-- utter_curiosidades_beneficios_incentivo_projetos_culturais
-- utter_curiosidades_lei_rouanet_elegibilidade
-- utter_curiosidades_lei_rouanet_arrecadamento
-- utter_curiosidades_lei_rouanet_denuncia
-- utter_curiosidades_elegibilidade_de_empresa_para_beneficios
-- utter_curiosidades_receber_incetivo_de_parentes
-- utter_curiosidades_deducao_imposto_de_renda_incentivador
-- utter_curiosidades_captacao_de_recursos
-- utter_curiosidades_valor_maximo_projeto
-- utter_curiosidades_valor_maximo_pessoa_fisica
-- utter_curiosidades_valor_maximo_pessoa_juridica
-- utter_curiosidades_valor_maximo_regiao
-- utter_curiosidades_valor_maximo_outro_perfil
-
-- actions.actions_oqueeh.ActionOQueEh
+  - utter_definir_perfil
+  - utter_default
+  - utter_restart
+  - utter_cumprimentar
+  - utter_despedir
+  - utter_fase_de_testes
+  - utter_explicar_definicao_perfil
+  - utter_nova_proposta
+  - utter_duvida_execucao
+  - utter_conhece_processo
+  - utter_cadastro_salic
+  - utter_aviso
+  - utter_introduzir_execucao
+  - utter_submissao_de_projetos
+  - utter_processo_periodo
+  - utter_ja_eh_proponente
+  - utter_cadastro_salic_video
+  - utter_explicar_cadastro_salic
+  - utter_cadastro_salic_apos_video
+  - utter_inscricao_proponente
+  - utter_mais_alguma_pergunta
+  - utter_nao_aprendi_contexto
+  - utter_proponente_cadastrado
+  - utter_curiosidades_indicacao
+  - utter_curiosidades_mais
+  - utter_curiosidades_mais_sim
+  - utter_curiosidades_mais_nao
+  - utter_curiosidades_falar_sobre_projetos
+  - utter_curiosidades_quantidade_projetos
+  - utter_curiosidades_beneficios_incentivo_projetos_culturais
+  - utter_curiosidades_lei_rouanet_elegibilidade
+  - utter_curiosidades_lei_rouanet_arrecadamento
+  - utter_curiosidades_lei_rouanet_denuncia
+  - utter_curiosidades_elegibilidade_de_empresa_para_beneficios
+  - utter_curiosidades_receber_incetivo_de_parentes
+  - utter_curiosidades_deducao_imposto_de_renda_incentivador
+  - utter_curiosidades_captacao_de_recursos
+  - utter_curiosidades_valor_maximo_projeto
+  - utter_curiosidades_valor_maximo_pessoa_fisica
+  - utter_curiosidades_valor_maximo_pessoa_juridica
+  - utter_curiosidades_valor_maximo_regiao
+  - utter_curiosidades_valor_maximo_outro_perfil
+  - action_o_que_eh
 
 
 templates:

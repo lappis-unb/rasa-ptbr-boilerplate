@@ -14,25 +14,33 @@ logger = logging.getLogger(__name__)
 
 es = Elasticsearch([os.getenv('ELASTICSEARCH_URL', 'elasticsearch:9200')])
 
+ENABLE_ANALYTICS = os.getenv('ENABLE_ANALYTICS', 'False').lower() == 'true'
 ENVIRONMENT_NAME = os.getenv('ENVIRONMENT_NAME', 'locahost')
-TAIS_VERSION = os.getenv('TAIS_VERSION', 'notdefined')
+BOT_VERSION = os.getenv('BOT_VERSION', 'notdefined')
 HASH_GEN = hashlib.md5()
 
+def gen_id(timestamp):
+    HASH_GEN.update(str(timestamp).encode('utf-8'))
+    _id = HASH_GEN.hexdigest()[10:]
+    return _id
+
 class ElasticTrackerStore(InMemoryTrackerStore):
-    def __init__(self, domain):
+    def __init__(self, domain=None):
         super(ElasticTrackerStore, self).__init__(domain)
 
-    def save_user_message(self, tracker, _id):
+    def save_user_message(self, tracker):
         if not tracker.latest_message.text:
             return
 
+        timestamp = time.time()
+
         message = {
             'environment': ENVIRONMENT_NAME,
-            'version': TAIS_VERSION,
+            'version': BOT_VERSION,
 
             'user_id': tracker.sender_id,
             'is_bot': False,
-            'timestamp': time.time(),
+            'timestamp': timestamp,
 
             'text': tracker.latest_message.text,
 
@@ -45,10 +53,10 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         }
 
         es.index(index='messages', doc_type='message',
-                 id='{}_user_{}'.format(ENVIRONMENT_NAME, _id),
+                 id='{}_user_{}'.format(ENVIRONMENT_NAME, gen_id(timestamp)),
                  body=json.dumps(message))
 
-    def save_bot_message(self, tracker, _id):
+    def save_bot_message(self, tracker):
         if not tracker.latest_message.text:
             return
 
@@ -59,8 +67,10 @@ class ElasticTrackerStore(InMemoryTrackerStore):
             if isinstance(evt, UserUttered):
                 break
             elif isinstance(evt, BotUttered):
-                index -= 1
-                utters.append(tracker.events[index].action_name)
+                while not isinstance(evt, ActionExecuted):
+                    index -= 1
+                    evt = tracker.events[index]
+                utters.append(evt.action_name)
             index -= 1
 
 
@@ -68,15 +78,20 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         for utter in utters[::-1]:
             time_offset += 100
 
+            timestamp = (
+                datetime.datetime.now() +
+                datetime.timedelta(milliseconds=time_offset)
+            ).timestamp()
+
             message = {
                 'environment': ENVIRONMENT_NAME,
-                'version': TAIS_VERSION,
+                'version': BOT_VERSION,
                 'user_id': tracker.sender_id,
 
                 'is_bot': True,
 
                 'text': '',
-                'timestamp': (datetime.datetime.now() + datetime.timedelta(milliseconds=time_offset)).timestamp(),
+                'timestamp': timestamp,
 
                 'entities': [],
                 'intent_name': '',
@@ -87,19 +102,17 @@ class ElasticTrackerStore(InMemoryTrackerStore):
             }
 
             es.index(index='messages', doc_type='message',
-                     id='{}_bot_{}'.format(ENVIRONMENT_NAME, _id),
+                     id='{}_bot_{}'.format(ENVIRONMENT_NAME, gen_id(timestamp)),
                      body=json.dumps(message))
 
     def save(self, tracker):
-        try:
-            HASH_GEN.update(str(time.time()).encode('utf-8'))
-            _id = HASH_GEN.hexdigest()[10:]
-
-            self.save_user_message(tracker, _id)
-            self.save_bot_message(tracker, _id)
-        except Exception as ex:
-            logger.error('Could not track messages '
-                         'for user {}'.format(tracker.sender_id))
-            logger.error(str(ex))
+        if ENABLE_ANALYTICS:
+            try:
+                self.save_user_message(tracker)
+                self.save_bot_message(tracker)
+            except Exception as ex:
+                logger.error('Could not track messages '
+                             'for user {}'.format(tracker.sender_id))
+                logger.error(str(ex))
 
         super(ElasticTrackerStore, self).save(tracker)

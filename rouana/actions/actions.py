@@ -1,5 +1,4 @@
-from rasa_core.actions.action import Action
-
+from rasa_core_sdk import Action
 
 class ActionOQueEh(Action):
     dont_know_message = 'Desculpe, não sei conceituar isso ainda'
@@ -417,7 +416,7 @@ class ActionOQueEh(Action):
         return 'action_o_que_eh'
 
     def run(self, dispatcher, tracker, domain):
-        user_message = tracker.latest_message.text.lower()
+        user_message = tracker.latest_message['text'].lower()
 
         for word in self.meaning_map:
             if word in user_message:

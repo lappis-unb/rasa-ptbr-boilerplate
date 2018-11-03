@@ -50,8 +50,12 @@ parser.add_argument(
     help='Admin password at RocketChat(default: admin)'
 )
 parser.add_argument(
-    '--rocketchat-url', '-r', type=str, default='http://localhost:3000',
-    help='Rocket chat URL (default: http://localhost:3000)'
+    '--rocketchat-url', '-r', type=str, default='http://rocketchat:3000',
+    help='Rocket chat URL (default: http://rocketchat:3000)'
+)
+parser.add_argument(
+    '--rasa-url', '-rasa', type=str, default='http://bot:5005/webhooks/rocketchat/webhook',
+    help='Rasa URL (default: http://bot:5005/webhooks/rocketchat/webhook)'
 )
 
 args = parser.parse_args()
@@ -77,19 +81,23 @@ bot = {
 admin_name = args.admin_name
 admin_password = args.admin_password
 
+rasa_url = args.rasa_url
 user_header = None
 
-def api_post(endpoint, values):
+def api(endpoint, values=None, is_post=True):
     if endpoint[0] == '/':
         endpoint = endpoint[1:]
 
     url = host + '/api/v1/' + endpoint
 
-    response = requests.post(
-        url,
-        data=json.dumps(values),
-        headers=user_header
-    )
+    data = None
+    if values:
+        data = json.dumps(values)
+
+    if is_post:
+        response = requests.post(url, data=data, headers=user_header)
+    else:
+        response = requests.get(url, data=data, headers=user_header)
 
     if response.json()['success'] is True:
         logger.info('Success {} :: {}'.format(url, response.json()))
@@ -97,6 +105,12 @@ def api_post(endpoint, values):
         logger.error('ERROR {} :: {}'.format(url, response.json()))
 
     return response.json()
+
+def api_post(endpoint, values=None):
+    return api(endpoint, values)
+
+def api_get(endpoint, values=None):
+    return api(endpoint, values, False)
 
 
 def get_authentication_token():
@@ -160,6 +174,39 @@ def configure_livechat():
     # Disable file upload
     api_post('settings/Livechat_fileupload_enabled', {'value': False})
 
+    # Change Livechat Webhook URL
+    api_post('settings/Livechat_webhookUrl', {'value': rasa_url})
+
+    # Activate Livechat Webhook Send Request on Visitor Message
+    api_post('settings/Livechat_webhook_on_visitor_message', {'value': True})
+
+    # Activate Livechat Webhook Send Request on Agent Messages
+    api_post('settings/Livechat_webhook_on_agent_message', {'value': True})
+
+
+def configure_webhooks():
+    webooks = api_get('integrations.list')
+
+    name = 'Rasa Webhook'
+
+    for integration in webooks['integrations']:
+        if integration.get('name') == name:
+            logger.info('Intergration {} already exists!'.format(name))
+            return
+
+    api_post('integrations.create',
+        {
+            'name': name,
+            'type': 'webhook-outgoing',
+            'enabled': True,
+            'scriptEnabled': False,
+            'event': 'sendMessage',
+            'urls': [rasa_url],
+            'username': bot['username'],
+            'channel': '@' + bot['username'],
+        }
+    )
+
 
 def configure_rocketchat():
     api_post('settings/Language', {'value': 'pt_BR'})
@@ -216,6 +263,9 @@ if __name__ == '__main__':
 
         logger.info('>> Configure Rocketchat')
         configure_rocketchat()
+
+        logger.info('>> Configure Webhooks')
+        configure_webhooks()
 
         logger.info('>> Create livechat department')
         create_department(bot_agent_id)
