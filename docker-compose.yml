@@ -68,3 +68,13 @@ services:
     restart: unless-stopped
     volumes:
       - ./web/postgres-data:/var/lib/postgresql/data
+
+  evaluation:
+    build:
+      context: .
+      dockerfile: ./docker/evaluation/Dockerfile
+    volumes:
+      - ./rouana:/work/rouana
+      - ./evaluation:/work/evaluation
+    ports:
+      - 8888:8888

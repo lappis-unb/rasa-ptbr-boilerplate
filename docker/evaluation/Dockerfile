@@ -1,15 +1,16 @@
 FROM jupyter/minimal-notebook
 
-ADD ./intent-requirements.txt /tmp/
-
 USER root
 
 RUN apt-get update         \
-    && apt-get upgrade -yq \
-    && apt-get install -yq graphviz libgraphviz-dev pkg-config
+    && apt-get upgrade -yq
 
-USER jovyan
+RUN apt-get install -yq graphviz libgraphviz-dev pkg-config
+
+ADD ./evaluation/intent-requirements.txt /tmp/
 
 RUN pip install -r /tmp/intent-requirements.txt
+
+WORKDIR /work/
 
 RUN python -m spacy download pt

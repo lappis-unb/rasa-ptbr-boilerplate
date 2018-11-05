@@ -3,15 +3,15 @@
 rasa_core.log
 errors.json
 
-### Rasa evaluate ###
-rouana/lab/models/
-rouana/lab/errors.json
-rouana/lab/lab/
+### Rasa evaluation ###
+evaluation/models/
+evaluation/errors.json
+evaluation/lab/
+evaluation/bot-intent-lab.ipynb
 rouana/.ipython/
 rouana/.keras/
 rouana/.local/
 rouana/work
-rouana/lab/bot-intent-lab.ipynb
 
 ### Rocketchat ###
 /data
