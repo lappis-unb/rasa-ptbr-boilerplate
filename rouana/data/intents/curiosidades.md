@@ -39,7 +39,6 @@
 - incentivador
 - patrocinador
 - vantagem
-- pessoa juridica
 - ganha
 
 
@@ -58,7 +57,7 @@
 - como ser proponente
 - quem pode propor
 - como me inscrever
-- proponente
+- como me tornar proponente
 - elegibilidade
 - inscrever
 - participar
