@@ -5,7 +5,7 @@ import argparse
 from elasticsearch import Elasticsearch
 
 parser = argparse.ArgumentParser(description='configures elastic')
-parser.add_argument('task', choices=['setup', 'delete'],)
+parser.add_argument('--task', '-t', default='setup', choices=['setup', 'delete'],)
 args = parser.parse_args()
 
 logging.basicConfig(level=logging.DEBUG)

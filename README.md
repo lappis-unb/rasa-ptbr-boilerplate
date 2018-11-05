@@ -68,8 +68,11 @@ o seu Rocket.Chat.
 
 ```sh
 sudo docker-compose run --rm bot make train
-sudo docker-compose run --rm bot make all-console
+sudo docker-compose run --rm bot make run-console
 ```
+
+
+
 
 ## Site do Beta
 
