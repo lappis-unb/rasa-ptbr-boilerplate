@@ -8,20 +8,18 @@ O nome é uma sigla para Tecnologia de Aprendizado Interativo do Salic.
 Ela tem como objetivo ajudar cidadãs e cidadãos a tirar dúvidas sobre a lei
 Rouanet e sobre o incentivo a projetos culturais.
 
-## Ambiente
+
+
+
+
+## Bot
 
 ### RocketChat
 
 ```sh
 sudo docker-compose up -d rocketchat
-```
-
-Entre no rocketchat com o login `admin` e senha `admin`. Execute os comandos
-a seguir para configurar e rodar a rouana
-
-```sh
-python3 scripts/bot_config.py
-sudo docker-compose up rouana
+# aguarde 3 minutos para o rocketchat terminar de levantar
+sudo docker-compose up bot
 ```
 
 Para que a assistente virtual inicie a conversa você deve criar um `trigger`.
@@ -69,22 +67,23 @@ o seu Rocket.Chat.
 ### Console
 
 ```sh
-sudo docker build -t rouana -f docker/tais/Dockerfile .
-sudo docker run --rm --name rouana -it -v $PWD/rouana:/rouana rouana python train.py all
+sudo docker-compose run --rm bot make train
+sudo docker-compose run --rm bot make run-console
 ```
+
+
+
 
 ## Site do Beta
 
-### Ambiente de Desenvolvimento
-
-#### Setup
+### Setup
 
 ```
 sudo docker-compose run --rm web python manage.py migrate
 sudo docker-compose run --rm web python manage.py createsuperuser
 ```
 
-#### Execução
+### Execução
 
 ```
 sudo docker-compose up -d web
@@ -92,24 +91,62 @@ sudo docker-compose up -d web
 
 Você pode acessar o site por padrão na url `localhost:8000`
 
+
+
+
 ## Analytics
 
-Para extrair as conversas de um chat execute
+### Setup
 
 ```
-sudo docker-compose run --rm rouana python /scripts/analytics_message_extraction.py -r rocketchat:3000
+sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
+sudo docker-compose up -d elasticsearch
 ```
 
-## Análise do bot
+Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
 
-### Uso
+```
+ENVIRONMENT_NAME=localhost
+BOT_VERSION=last-commit-hash
+```
 
-* Levante o container do `bot notebook`
+### Vizualização
+
+```
+sudo docker-compose up -d kibana
+```
+
+Você pode acessar o kibana no `locahost:5601`
+
+
+
+
+## Notebooks - Análise de dados
+
+### Setup
+
+Levante o container `notebooks`
 
 ```sh
-docker-compose up
+docker-compose up -d notebooks
 ```
 
-* Acesse o notebook em `localhost:8888`
+Acesse o notebook em `localhost:8888`
 
-* Utilize o `token` mostrado no log do `jupyter-notebook` para acessar o notebook.
+
+
+## Tutorial para levantar toda a stack
+
+```sh
+sudo docker-compose up -d rocketchat
+
+sudo docker-compose run --rm web python manage.py migrate
+sudo docker-compose run --rm web python manage.py createsuperuser
+sudo docker-compose up -d web
+
+sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
+sudo docker-compose up -d kibana
+
+# aguarde 3 minutos para o rocketchat terminar de levantar
+sudo docker-compose up -d bot
+```

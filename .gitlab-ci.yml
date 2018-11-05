@@ -3,10 +3,12 @@ stages:
   - deploy
 
 variables:
-  TAIS_LATEST_IMAGE: $CI_REGISTRY_IMAGE/tais:latest
+  BOT_LATEST_IMAGE: $CI_REGISTRY_IMAGE/bot:latest
+  ACTIONS_LATEST_IMAGE: $CI_REGISTRY_IMAGE/actions:latest
   WEB_LATEST_IMAGE: $CI_REGISTRY_IMAGE/web:latest
 
-  TAIS_STABLE_IMAGE: $CI_REGISTRY_IMAGE/tais:stable
+  BOT_STABLE_IMAGE: $CI_REGISTRY_IMAGE/bot:stable
+  BOT_LATEST_IMAGE: $CI_REGISTRY_IMAGE/actions:latest
   WEB_STABLE_IMAGE: $CI_REGISTRY_IMAGE/web:stable
 
 build stable:
@@ -16,8 +18,13 @@ build stable:
     - docker:dind
   script:
     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
-    - docker build -f docker/tais/Dockerfile -t $TAIS_STABLE_IMAGE .
-    - docker push $TAIS_STABLE_IMAGE
+
+    - docker build -f docker/bot.Dockerfile -t $BOT_STABLE_IMAGE .
+    - docker push $BOT_STABLE_IMAGE
+
+    - docker build -f docker/actions.Dockerfile -t $ACTIONS_STABLE_IMAGE .
+    - docker push $ACTIONS_STABLE_IMAGE
+
     - docker build -f docker/web/Dockerfile -t $WEB_STABLE_IMAGE .
     - docker push $WEB_STABLE_IMAGE
   only:
@@ -32,7 +39,8 @@ deploy_to_production:
   services:
     - docker:dind
   script:
-    - upgrade --environment Production --stack TAIS --service tais --new-image $TAIS_STABLE_IMAGE --no-finish-upgrade --debug
+    - upgrade --environment Production --stack TAIS --service bot --new-image $BOT_STABLE_IMAGE --no-finish-upgrade --debug
+    - upgrade --environment Production --stack TAIS --service actions --new-image $ACTIONS_STABLE_IMAGE --no-finish-upgrade --debug
     - upgrade --environment Production --stack TAIS --service web --new-image $WEB_STABLE_IMAGE --no-finish-upgrade --debug
   only:
     - tags
@@ -48,8 +56,13 @@ build latest:
     - docker:dind
   script:
     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
-    - docker build -f docker/tais/Dockerfile -t $TAIS_LATEST_IMAGE .
-    - docker push $TAIS_LATEST_IMAGE
+
+    - docker build -f docker/bot.Dockerfile -t $BOT_LATEST_IMAGE .
+    - docker push $BOT_LATEST_IMAGE
+
+    - docker build -f docker/actions.Dockerfile -t $ACTIONS_LATEST_IMAGE .
+    - docker push $ACTIONS_LATEST_IMAGE
+
     - docker build -f docker/web/Dockerfile -t $WEB_LATEST_IMAGE .
     - docker push $WEB_LATEST_IMAGE
   only:
@@ -64,7 +77,8 @@ deploy_to_development:
   services:
     - docker:dind
   script:
-    - upgrade --environment Development --stack TAIS --service tais --new-image $TAIS_LATEST_IMAGE --debug
+    - upgrade --environment Development --stack TAIS --service bot --new-image $BOT_LATEST_IMAGE --debug
+    - upgrade --environment Development --stack TAIS --service actions --new-image $actions_LATEST_IMAGE --debug
     - upgrade --environment Development --stack TAIS --service web --new-image $WEB_LATEST_IMAGE --debug
   only:
     - /master/

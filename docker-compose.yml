@@ -1,6 +1,7 @@
 version: '2'
 
 services:
+  # ============================= Rocketchat ==================================
   rocketchat:
     image: rocket.chat:0.69.2
     restart: unless-stopped
@@ -12,10 +13,10 @@ services:
       - MONGO_URL=mongodb://mongo:27017/rocketchat
       - ADMIN_USERNAME=admin
       - ADMIN_PASS=admin
-    depends_on:
-      - mongo
     ports:
       - 3000:3000
+    depends_on:
+      - mongo
 
   mongo:
     image: mongo:3.2
@@ -24,32 +25,58 @@ services:
       - ./data/db:/data/db
     command: mongod --smallfiles --oplogSize 128
 
-  rouana:
+
+
+  # ================================= Bot =====================================
+  bot:
     build:
       context: .
-      dockerfile: ./docker/tais/Dockerfile
+      dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
     environment:
-      - TRAINING_EPOCHS=400
-      - CREDENTIALS=/rouana/credentials.yml
+      - TRAINING_EPOCHS=300
       - ROCKETCHAT_URL=rocketchat:3000
       - MAX_TYPING_TIME=8
       - MIN_TYPING_TIME=1
       - WORDS_PER_SECOND_TYPING=10
       - ROCKETCHAT_ADMIN_USERNAME=admin
       - ROCKETCHAT_ADMIN_PASSWORD=admin
-      - ROCKETCHAT_TAIS_USERNAME=tais
-      - ROCKETCHAT_TAIS_PASSWORD=tais
+      - ROCKETCHAT_BOT_USERNAME=tais
+      - ROCKETCHAT_BOT_PASSWORD=tais
+
+      # Should be set to 'production' or 'beta' or 'dev'
+      - ENVIRONMENT_NAME=localhost
+      # Last commit hash using this command: git rev-parse HEAD
+      - BOT_VERSION=last-commit-hash
+
+      # Analytics config
+      - ENABLE_ANALYTICS=True
+      - ELASTICSEARCH_URL=elasticsearch:9200
+    ports:
+      - 5005:5005
     volumes:
-      - ./rouana:/rouana
+      - ./bot:/bot
       - ./scripts:/scripts
     depends_on:
+      - actions
       - rocketchat
 
+  actions:
+    build:
+      context: .
+      dockerfile: ./docker/actions.Dockerfile
+    ports:
+      - 5055:5055
+    volumes:
+      - ./bot/actions:/bot/actions
+
+
+
+  # =================================== Web ===================================
   web:
     build:
       context: .
-      dockerfile: ./docker/web/Dockerfile
+      dockerfile: ./docker/web.Dockerfile
     restart: unless-stopped
     environment:
       - PORT=8000
@@ -69,12 +96,59 @@ services:
     volumes:
       - ./web/postgres-data:/var/lib/postgresql/data
 
-  evaluation:
+
+
+  # =============================== Analytics =================================
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.2
+    restart: unless-stopped
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.4.2
+    restart: unless-stopped
+    ports:
+      - 5601:5601
+    environment:
+      - SERVER_PORT=5601
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+
+  replay:
     build:
       context: .
-      dockerfile: ./docker/evaluation/Dockerfile
+      dockerfile: ./analytics/replay.Dockerfile
+    restart: unless-stopped
+    environment:
+      - ROCKETCHAT_URL=rocketchat:3000
+      - ROCKETCHAT_BOT_USERNAME=tais
+      - ROCKETCHAT_BOT_PASSWORD=tais
+      - BOT_URL=http://bot:5005/webhooks/rest/webhook
     volumes:
-      - ./rouana:/work/rouana
-      - ./evaluation:/work/evaluation
+      - ./analytics:/analytics
+    depends_on:
+      - bot
+
+
+
+  # =============================== Notebooks =================================
+  notebooks:
+    build:
+      context: .
+      dockerfile: ./docker/notebooks.Dockerfile
+    volumes:
+      - ./bot:/work/bot
+      - ./notebooks:/work/notebooks
     ports:
       - 8888:8888
+
+volumes:
+  esdata:
+    driver: local
