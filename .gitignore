@@ -7,7 +7,7 @@ errors.json
 notebooks/models/
 notebooks/errors.json
 notebooks/lab/
-notebooks/bot-intent-lab.ipynb
+notebooks/evaluate-intents.ipynb
 bot/.ipython/
 bot/.keras/
 bot/.local/
