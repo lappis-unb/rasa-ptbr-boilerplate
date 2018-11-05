@@ -139,13 +139,13 @@ services:
 
 
   # =============================== Notebooks =================================
-  evaluation:
+  notebooks:
     build:
       context: .
-      dockerfile: ./docker/evaluation/Dockerfile
+      dockerfile: ./docker/notebooks.Dockerfile
     volumes:
       - ./rouana:/work/rouana
-      - ./evaluation:/work/evaluation
+      - ./notebooks:/work/notebooks
     ports:
       - 8888:8888
 

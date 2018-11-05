@@ -117,16 +117,14 @@ Você pode acessar o kibana no `locahost:5601`
 
 
 
-## Análise do bot
+## Notebooks - Análise de dados
 
-### Uso
+### Setup
 
-* Levante o container do `bot notebook`
+Levante o container `notebooks`
 
 ```sh
-docker-compose up
+docker-compose up -d notebooks
 ```
 
-* Acesse o notebook em `localhost:8888`
-
-* Utilize o `token` mostrado no log do `jupyter-notebook` para acessar o notebook.
+Acesse o notebook em `localhost:8888`
