@@ -99,7 +99,7 @@ Você pode acessar o site por padrão na url `localhost:8000`
 ### Setup
 
 ```
-sudo docker-compose run --rm replay python setup_elastic.py
+sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
 sudo docker-compose up -d elasticsearch
 ```
 
@@ -132,3 +132,21 @@ docker-compose up -d notebooks
 ```
 
 Acesse o notebook em `localhost:8888`
+
+
+
+## Tutorial para levantar toda a stack
+
+```sh
+sudo docker-compose up -d rocketchat
+
+sudo docker-compose run --rm web python manage.py migrate
+sudo docker-compose run --rm web python manage.py createsuperuser
+sudo docker-compose up -d web
+
+sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
+sudo docker-compose up -d kibana
+
+# aguarde 3 minutos para o rocketchat terminar de levantar
+sudo docker-compose up -d bot
+```
