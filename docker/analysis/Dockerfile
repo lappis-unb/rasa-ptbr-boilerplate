@@ -14,3 +14,5 @@ RUN pip install -r /tmp/intent-requirements.txt
 WORKDIR /work/
 
 RUN python -m spacy download pt
+
+CMD jupyter-notebook --allow-root --NotebookApp.token='' --NotebookApp.password=''
