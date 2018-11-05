@@ -12,7 +12,7 @@ run pip install --no-cache-dir -r /tmp/bot.requirements.txt  && \
 run apt-get remove --purge -y git && \
     mkdir /bot
 
-add ./rouana /bot
+add ./bot /bot
 add ./scripts /scripts
 
 workdir /bot

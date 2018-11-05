@@ -55,7 +55,7 @@ services:
     ports:
       - 5005:5005
     volumes:
-      - ./rouana:/bot
+      - ./bot:/bot
       - ./scripts:/scripts
     depends_on:
       - actions
@@ -68,7 +68,7 @@ services:
     ports:
       - 5055:5055
     volumes:
-      - ./rouana/actions:/bot/actions
+      - ./bot/actions:/bot/actions
 
 
 
@@ -144,7 +144,7 @@ services:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
     volumes:
-      - ./rouana:/work/rouana
+      - ./bot:/work/bot
       - ./notebooks:/work/notebooks
     ports:
       - 8888:8888

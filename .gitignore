@@ -1,17 +1,17 @@
 ### Rasa ###
-/rouana/models
+bot/models
 rasa_core.log
 errors.json
 
 ### Rasa evaluation ###
-evaluation/models/
-evaluation/errors.json
-evaluation/lab/
-evaluation/bot-intent-lab.ipynb
-rouana/.ipython/
-rouana/.keras/
-rouana/.local/
-rouana/work
+notebooks/models/
+notebooks/errors.json
+notebooks/lab/
+notebooks/bot-intent-lab.ipynb
+bot/.ipython/
+bot/.keras/
+bot/.local/
+bot/work
 
 ### Rocketchat ###
 /data

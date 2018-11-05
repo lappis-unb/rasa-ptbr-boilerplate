@@ -7,8 +7,8 @@ run python -m pip install --upgrade pip
 add ./actions.requirements.txt /tmp
 run pip install --no-cache-dir -r /tmp/actions.requirements.txt
 
-add ./rouana/actions /bot/actions
-add ./rouana/Makefile /bot
+add ./bot/actions /bot/actions
+add ./bot/Makefile /bot
 
 workdir /bot
 

@@ -96,6 +96,7 @@ Você pode acessar o site por padrão na url `localhost:8000`
 ### Setup
 
 ```
+sudo docker-compose run --rm replay python setup_elastic.py
 sudo docker-compose up -d elasticsearch
 ```
 
