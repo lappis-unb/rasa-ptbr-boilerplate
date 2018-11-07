@@ -5,6 +5,28 @@
 - processo
 - acho que é processo
 
+## intent:processo_periodo
+- que data devo apresentar proposta
+- qual data devo me inscrever
+- que época devo enviar proposta
+- quando posso apresentar proposta
+- qual periodo para apresentar proposta
+- qual periodo para apresentar projeto
+- qual o periodo de submissao
+- quando posso enviar projeto
+- quando posso submeter uma proposta
+- periodo para submissao de proposta
+- periodo de submissao
+- inscrever proposta
+- inscrever projeto
+- data inscriçao
+- data para enviar
+- epoca inscriçao
+- prazo inscriçao
+- prazo submissao
+- prazo enviar
+- prazo envio
+
 ## intent:processo_como_funciona
 - como funciona o processo
 - como funciona a lei rouanet
