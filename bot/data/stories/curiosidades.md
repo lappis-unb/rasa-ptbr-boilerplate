@@ -161,6 +161,13 @@
   - utter_curiosidades_mais
 > curiosidade_final
 
+## pathCuriosidade.13
+> identificar_curiosidade
+* curiosidade_comercializacao_de_ingressos_
+  - utter_curiosidades_comercializacao_de_ingressos
+  - utter_curiosidades_mais
+> curiosidade_final 
+
 ## pathCuriosidade.oqueeh
 > identificar_curiosidade
 * o_que_eh
