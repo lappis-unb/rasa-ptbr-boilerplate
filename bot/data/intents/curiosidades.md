@@ -299,7 +299,6 @@
 - honorário
 - salário
 - pagamento
-- shablaw
 - valor
 - recebe
 - ordenado
@@ -326,3 +325,25 @@
 - prazo submissao
 - prazo enviar
 - prazo envio
+
+## intent:curiosidades_comercializacao_de_ingressos
+- os produtos culturais podem ser comercializados
+- os ingressos podem ser comercializados
+- há um limite de preço a ser executado por produto realizado com apoio de incentivo fiscal
+- por quanto devo vender os ingressos do meu projeto
+- como funciona a comercialização de ingressos
+- qual deve ser o preço dos ingressos
+- por qunto devo cobrar meus ingressos
+- venda de ingresso
+- valor da entrada
+- comercialização da entrada
+- comercialização do ingresso
+- como vender a entrada
+- qual deve ser o preço da entrada
+- como estabelecer preços de ingressos
+- por qual valor devo vender a entrada
+- pode ter entradas gratuitas
+- como devo distribuir os ingressos
+- quantos ingressos podem ser de graça
+- há um limite de preço das entradas
+- qual o limite de valor das entradas
