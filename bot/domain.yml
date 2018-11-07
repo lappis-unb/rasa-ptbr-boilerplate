@@ -20,6 +20,7 @@ intents:
   - curiosidades_valor_maximo_pessoa_fisica
   - curiosidades_valor_maximo_pessoa_juridica
   - curiosidades_valor_maximo_geral
+  - curiosidades_comercializacao_de_ingressos
 
 actions:
   - utter_definir_perfil
@@ -64,6 +65,7 @@ actions:
   - utter_curiosidades_valor_maximo_pessoa_juridica
   - utter_curiosidades_valor_maximo_regiao
   - utter_curiosidades_valor_maximo_outro_perfil
+  - utter_curiosidades_comercializacao_de_ingressos
   - action_o_que_eh
 
 
@@ -315,7 +317,7 @@ templates:
 
   utter_curiosidades_captacao_de_recursos:
     - text: |
-        O próprio proponente ou alguém contratado pode captar os recursos para a execucao do projeto,
+        O próprio proponente ou alguém contratado pode captar os recursos para a execução do projeto,
         além disso, ele pode ser remunerado até o limite de 10% do valor do Custo do Projeto, sendo o teto do valor da remuneração de R$ 150 mil.
 
         Ah, e este percentual pode ser expandido quando o projeto é realizado fora do eixo Rio-São Paulo:
@@ -360,3 +362,12 @@ templates:
   utter_curiosidades_valor_maximo_outro_perfil:
     - text: |
         Você gostaria de saber a respeito dos limites para outro perfil?
+
+  utter_curiosidades_comercializacao_de_ingressos:
+    - text: |
+        Do total de ingressos de um projeto cultural, a Lei Rouanet estabelece que a venda deve ser feita da seguinte forma:
+            50% dos ingressos devem ser comercializadosa uma média de preço de R$225,00;
+            Minimo de 10% deve ser vendido gratuitamente, com caráter social, educativo ou formação artística;
+            Até 10% deve ser disponnibilizado gratuitamente pelos patrocinadores;
+            Até 10% deve ser distribuido gratuitamente pelo proponente de forma a divulgar o projeto;
+            Minimo de 20% dos ingressos deve ser comercializado em valores que não utrapassem R$75,00.
