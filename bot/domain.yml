@@ -27,6 +27,13 @@ intents:
   - lei_rouanet_quantidade_de_projetos
   - lei_rouanet_quem_pode_incentivar
   - lei_rouanet_denuncia
+  - lei_rouanet_receber_incetivo_de_parentes
+  - lei_rouanet_valor_maximo_projeto
+  - lei_rouanet_valor_maximo_pessoa_fisica
+  - lei_rouanet_valor_maximo_pessoa_juridica
+  - lei_rouanet_valor_maximo_geral
+  - lei_rouanet_remuneracao_proponente
+  - lei_rouanet_comercializacao_de_ingressos
 
   - processo
   - processo_como_funciona
@@ -41,6 +48,7 @@ intents:
   - processo_prazo_envio_cnae
   - processo_prazo_desistir_recurso
   - processo_situacao_processo
+  - processo_periodo
 
   - salic
   - salic_cadastro_usuario
