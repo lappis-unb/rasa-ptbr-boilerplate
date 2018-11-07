@@ -63,7 +63,7 @@ build latest:
     - docker build -f docker/actions.Dockerfile -t $ACTIONS_LATEST_IMAGE .
     - docker push $ACTIONS_LATEST_IMAGE
 
-    - docker build -f docker/web/Dockerfile -t $WEB_LATEST_IMAGE .
+    - docker build -f docker/web.Dockerfile -t $WEB_LATEST_IMAGE .
     - docker push $WEB_LATEST_IMAGE
   only:
     - /master/
