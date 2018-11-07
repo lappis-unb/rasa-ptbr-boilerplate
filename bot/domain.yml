@@ -1,362 +1,1362 @@
 intents:
-  - o_que_eh
   - cumprimentar
-  - afirmar_curiosidades
-  - afirmar_projeto
-  - submissao_de_projeto
-  - processo_periodo
-  - afirmar
-  - negar
-  - curiosidades_quantidade_projetos
-  - curiosidades_beneficios_incentivo_projetos_culturais
-  - curiosidades_lei_rouanet_elegibilidade
-  - curiosidades_lei_rouanet_arrecadamento
-  - curiosidades_lei_rouanet_denuncia
-  - curiosidades_elegibilidade_de_empresa_para_beneficios
-  - curiosidades_receber_incetivo_de_parentes
-  - curiosidades_deducao_imposto_de_renda_incentivador
-  - curiosidades_captacao_de_recursos
-  - curiosidades_valor_maximo_projeto
-  - curiosidades_valor_maximo_pessoa_fisica
-  - curiosidades_valor_maximo_pessoa_juridica
-  - curiosidades_valor_maximo_geral
+  - despedir
+  - out_of_scope
 
-actions:
-  - utter_definir_perfil
-  - utter_default
-  - utter_restart
-  - utter_cumprimentar
-  - utter_despedir
-  - utter_fase_de_testes
-  - utter_explicar_definicao_perfil
-  - utter_nova_proposta
-  - utter_duvida_execucao
-  - utter_conhece_processo
-  - utter_cadastro_salic
-  - utter_aviso
-  - utter_introduzir_execucao
-  - utter_submissao_de_projetos
-  - utter_processo_periodo
-  - utter_ja_eh_proponente
-  - utter_cadastro_salic_video
-  - utter_explicar_cadastro_salic
-  - utter_cadastro_salic_apos_video
-  - utter_inscricao_proponente
-  - utter_mais_alguma_pergunta
-  - utter_nao_aprendi_contexto
-  - utter_proponente_cadastrado
-  - utter_curiosidades_indicacao
-  - utter_curiosidades_mais
-  - utter_curiosidades_mais_sim
-  - utter_curiosidades_mais_nao
-  - utter_curiosidades_falar_sobre_projetos
-  - utter_curiosidades_quantidade_projetos
-  - utter_curiosidades_beneficios_incentivo_projetos_culturais
-  - utter_curiosidades_lei_rouanet_elegibilidade
-  - utter_curiosidades_lei_rouanet_arrecadamento
-  - utter_curiosidades_lei_rouanet_denuncia
-  - utter_curiosidades_elegibilidade_de_empresa_para_beneficios
-  - utter_curiosidades_receber_incetivo_de_parentes
-  - utter_curiosidades_deducao_imposto_de_renda_incentivador
-  - utter_curiosidades_captacao_de_recursos
-  - utter_curiosidades_valor_maximo_projeto
-  - utter_curiosidades_valor_maximo_pessoa_fisica
-  - utter_curiosidades_valor_maximo_pessoa_juridica
-  - utter_curiosidades_valor_maximo_regiao
-  - utter_curiosidades_valor_maximo_outro_perfil
-  - action_o_que_eh
+  - captacao
+  - captacao_quando_captar
+  - captacao_como_captar
 
+  - definicao
+  - definicao_tais
+  - definicao_minc
+  - definicao_cnic
+  - definicao_sefic
+  - definicao_projeto
+  - definicao_proposta
+  - definicao_proponente
+  - definicao_salic
+  - definicao_vinculada
+
+  - lei_rouanet
+  - lei_rouanet_o_que_eh
+  - lei_rouanet_quem_pode_ser_proponente
+  - lei_rouanet_origem_do_dinheiro
+  - lei_rouanet_beneficios_incentivo_projetos_culturais
+  - lei_rouanet_porcentagem_de_deducao_do_imposto
+  - lei_rouanet_quantidade_de_projetos
+  - lei_rouanet_quem_pode_incentivar
+  - lei_rouanet_denuncia
+
+  - processo
+  - processo_como_funciona
+  - processo_definicao_etapas
+  - processo_preenchimento
+  - processo_admissibilidade
+  - processo_aprovacao
+  - processo_execucao
+  - processo_analise_de_resultados
+  - processo_reativacao_de_proposta
+  - processo_prazo
+  - processo_prazo_envio_cnae
+  - processo_prazo_desistir_recurso
+  - processo_situacao_processo
+
+  - salic
+  - salic_cadastro_usuario
+  - salic_cadastro_proponente
+  - salic_recuperacao_de_senha
+  - salic_erros
+  - salic_erros_salvamento_de_proposta
+  - salic_erros_planilha_desapareceu
+  - salic_erros_vinculo_cpf_cnpj
+  - salic_erros_achar_proposta
+  - salic_preenchimento
+  - salic_preenchimento_campo_custo_auditoria
+  - salic_preenchimento_cadastro_rubrica_advogado_contador
+  - salic_preenchimento_valor_ingresso
+  - salic_preenchimento_vinculo_cpf_proposta
+  - salic_preenchimento_cadastro_agencia_bancaria
+
+entities:
+ - situacao_processo
+ - lei_rouanet
+
+slots:
+  lei_rouanet:
+    type: text
+  situacao_processo:
+    type: "categorical"
+    values:
+      - "A12"
+      - "A14"
+      - "A20"
+      - "A23"
+      - "B01"
+      - "B14"
+      - "A13"
+      - "A16"
+      - "A17"
+      - "A42"
+      - "B11"
+      - "B20"
+      - "C09"
+      - "C10"
+      - "C20"
+      - "C26"
+      - "C30"
+      - "D03"
+      - "D14"
+      - "D20"
+      - "D25"
+      - "D27"
+      - "E25"
+      - "E62"
+      - "E66"
+      - "E20"
+      - "E27"
+      - "E30"
+      - "E68"
+      - "E77"
+      - "L03"
+      - "L05"
+      - "L08"
+      - "L10"
+      - "L11"
+      - "D22"
+      - "D28"
+      - "D29"
+      - "E10"
+      - "E11"
+      - "E12"
+      - "E13"
+      - "E15"
+      - "E16"
+      - "E23"
+      - "E24"
+      - "E36"
+      - "E59"
+      - "E63"
+      - "E64"
+      - "E65"
+      - "E75"
+      - "E79"
+      - "E80"
+      - "E81"
+      - "E60"
+      - "E72"
+      - "E50"
+      - "L09"
+      - "D38"
+      - "E22"
+      - "E73"
+      - "E78"
+      - "E47"
+      - "L06"
 
 templates:
-  utter_definir_perfil:
-    - text: |
-        Você quer tirar dúvidas sobre a Lei Rouanet ou sobre propostas e projetos?
   utter_default:
     - text: |
-        Desculpe, não consegui te entender.
-        Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue?
-        Ex: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?
+        Desculpe, não consegui te entender
+
+        Você pode perguntar de novo de outro jeito?
+
   utter_restart:
     - text: |
-        =D
+        reiniciando =D
+
+  utter_processo_situacao_processo_A12:
+    - text: |
+          O estado A12 acontece durante a fase de Admissibilidade, e significa aguardando complementação de documentos
+
+          E quando o MinC utiliza ele? Quando se solicita ao proponente documentação adicional
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69.
+
+  utter_processo_situacao_processo_A14:
+    - text: |
+          O estado A14 acontece durante a fase de Admissibilidade, e significa indeferido – não enquadramento nos objetivos e fins da Lei 8313/91 ou do Decreto 5761/06
+
+          E quando o MinC utiliza ele? Quando o projeto não se enquadra nos objetivos e fins do Art. 1º da Lei 8313/1991
+
+          Para saber mais você pode consultar a Lei 8.313/1991, Art. 1º Instrução Normativa 05/2017, Art. 23
+
+  utter_processo_situacao_processo_A20:
+    - text: |
+          O estado A20 acontece durante a fase de Admissibilidade, e significa indeferido – projeto em duplicidade
+
+          E quando o MinC utiliza ele? Quando se constata que se trata de projeto idêntico a ser realizado no mesmo período
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 23, I, b)
+
+  utter_processo_situacao_processo_A23:
+    - text: |
+          O estado A23 acontece durante a fase de Admissibilidade, e significa indeferido – somatório dos projetos apresentados excede o limite permitiddo para pessoa física
+
+          E quando o MinC utiliza ele? Quando o somatório dos projetos apresentados execede os limites trazidos no Art. 20 da Instrução Normativa MinC nº 1/2017
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 4
+
+  utter_processo_situacao_processo_B01:
+    - text: |
+          O estado B01 acontece durante a fase de Admissibilidade, e significa proposta transformada em projeto
+
+          E quando o MinC utiliza ele? Após o exame de admissibilidade
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 24 e 25
+
+  utter_processo_situacao_processo_B14:
+    - text: |
+          O estado B14 acontece durante a fase de Admissibilidade, e significa diligenciado – Parecer técnico
+
+          E quando o MinC utiliza ele? Quando da necessidade de informações adicionais para fins de análise técnica
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69
+
+  utter_processo_situacao_processo_A13:
+    - text: |
+          O estado A13 acontece durante a fase de Aprovação, e significa arquivado – solicitação de desistência do proponente
+
+          E quando o MinC utiliza ele?
+
+          Para saber mais você pode consultar a
+
+  utter_processo_situacao_processo_A16:
+    - text: |
+          O estado A16 acontece durante a fase de Aprovação, e significa indeferido – Projeto já realizado.
+
+          E quando o MinC utiliza ele?
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 23, I, b)
+
+  utter_processo_situacao_processo_A17:
+    - text: |
+          O estado A17 acontece durante a fase de Aprovação, e significa indeferido – não atendimento à diligência
+
+          E quando o MinC utiliza ele? Quando o proponente não atende a alguma diligência feita
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69, § 3º
+
+  utter_processo_situacao_processo_A42:
+    - text: |
+          O estado A42 acontece durante a fase de Aprovação, e significa projeto arquivado – não atendimento à diligência técnica
+
+          E quando o MinC utiliza ele? Quando o proponente não atende a alguma diligência feita
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69, § 3º
+
+  utter_processo_situacao_processo_B11:
+    - text: |
+          O estado B11 acontece durante a fase de Aprovação, e significa encaminhado para análise técnica
+
+          E quando o MinC utiliza ele? Situação em que o projeto é encaminhado para análise na vinculada.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 26, §2º e Art. 27
+
+  utter_processo_situacao_processo_B20:
+    - text: |
+          O estado B20 acontece durante a fase de Aprovação, e significa projeto adequado à realidade de execução
+
+          E quando o MinC utiliza ele? Antes de ser encaminhado para análise técnica, o proponente tem a prerrogativa de promover ajustes, visando adequar o projeto à realidade da execução.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/201, Art. 26
+
+  utter_processo_situacao_processo_C09:
+    - text: |
+          O estado C09 acontece durante a fase de Aprovação, e significa projeto fora da pauta – Proponente Inabilitado
+
+          E quando o MinC utiliza ele? Quando o proponente encontra-se inabilitado, seus projetos em fase de aprovação, são tirados de pauta.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/201, Art. 59
+
+  utter_processo_situacao_processo_C10:
+    - text: |
+          O estado C10 acontece durante a fase de Aprovação, e significa projeto incluído em pauta para avaliação da CNIC
+
+          E quando o MinC utiliza ele? Após conclusão da análise técnica, o projeto é incluido na pauta da CNIC
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 28
+
+  utter_processo_situacao_processo_C20:
+    - text: |
+          O estado C20 acontece durante a fase de Aprovação, e significa parecer técnico emitido
+
+          E quando o MinC utiliza ele? Quando ocorre a conclusão da análise e o parecer técnico é emitido
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 27
+
+  utter_processo_situacao_processo_C26:
+    - text: |
+          O estado C26 acontece durante a fase de Aprovação, e significa projeto incluído na pauta da CNIC para reanálise/análise complementar
+
+          E quando o MinC utiliza ele? Quando autoridade superior entende que algum item pode ser reavaliado ou quando constatado erro material
+
+          Para saber mais você pode consultar a STF, Súmula nº 346/1963 (autotutela)
+
+  utter_processo_situacao_processo_C30:
+    - text: |
+          O estado C30 acontece durante a fase de Aprovação, e significa diligenciado – Comissão Nacional de Incentivo à Cultura – CNIC
+
+          E quando o MinC utiliza ele? Quando da necessidade de informações adicionais para fins de análise técnica
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69
+
+  utter_processo_situacao_processo_D03:
+    - text: |
+          O estado D03 acontece durante a fase de Aprovação, e significa projeto aprovado – aguardando análise documental
+
+          E quando o MinC utiliza ele? Após análise da CNIC.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 28
+
+  utter_processo_situacao_processo_D14:
+    - text: |
+          O estado D14 acontece durante a fase de Aprovação, e significa indeferido
+
+          E quando o MinC utiliza ele? Quando o projeto é indeferido
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017
+
+  utter_processo_situacao_processo_D20:
+    - text: |
+          O estado D20 acontece durante a fase de Aprovação, e significa recurso
+
+          E quando o MinC utiliza ele? Quando o proponente interpõe recurso contra resultado da análise
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 67
+
+  utter_processo_situacao_processo_D25:
+    - text: |
+          O estado D25 acontece durante a fase de Aprovação, e significa diligenciado – Projeto aprovado – (Solicitação de Documentos)
+
+          E quando o MinC utiliza ele? Quando da necessidade de informações adicionais para fins de aprovação
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69
+
+  utter_processo_situacao_processo_D27:
+    - text: |
+          O estado D27 acontece durante a fase de Aprovação, e significa encaminhado para inclusão em portaria
+
+          E quando o MinC utiliza ele? Quando o projeto é encaminhado para publicação em portaria no Diário Oficial da União
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 25
+
+  utter_processo_situacao_processo_E25:
+    - text: |
+          O estado E25 acontece durante a fase de Avaliação do objeto, e significa análise de resposta de diligência – Objeto
+
+          E quando o MinC utiliza ele? O proponente respodeu à diligência enviada e a resposta aguarda análise do técnico
+
+          Para saber mais você pode consultar a Portaria Interministerial nº 424/2016, art. 59, III
+
+  utter_processo_situacao_processo_E62:
+    - text: |
+          O estado E62 acontece durante a fase de Avaliação do objeto, e significa diligenciado – na avaliação do relatório cumprimento de objeto
+
+          E quando o MinC utiliza ele? Proponente foi diligenciado na análise do objeto.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 47, §3º
+
+  utter_processo_situacao_processo_E66:
+    - text: |
+          O estado E66 acontece durante a fase de Avaliação do objeto, e significa inadimplente – por não responder diligência na avaliação do relatório cumprimento de objeto
+
+          E quando o MinC utiliza ele? O proponente foi diligenciado na análise do objeto e não apresentou resposta no prazo correto.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 58, I
+
+  utter_processo_situacao_processo_E20:
+    - text: |
+          O estado E20 acontece durante a fase de Avaliação financeira, e significa inadimplente – não respondeu a diligência da Prestação de Contas
+
+          E quando o MinC utiliza ele? Quando o proponente é omisso em responder à diligência.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 69, § 3º, inc. III
+
+  utter_processo_situacao_processo_E27:
+    - text: |
+          O estado E27 acontece durante a fase de Avaliação financeira, e significa análise Financeira da Prestação de Contas
+
+          E quando o MinC utiliza ele? Quando se inicia a análise financeira da prestação de contas.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 50
+
+  utter_processo_situacao_processo_E30:
+    - text: |
+          O estado E30 acontece durante a fase de Avaliação financeira, e significa análise de resposta de diligência
+
+          E quando o MinC utiliza ele? Quando se inicia a análise financeira da resposta à diligência.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 69
+
+  utter_processo_situacao_processo_E68:
+    - text: |
+          O estado E68 acontece durante a fase de Avaliação financeira, e significa aguarda análise financeira
+
+          E quando o MinC utiliza ele? Quando o projeto aguarda o início da análise financeira da prestação de contas.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 50
+
+  utter_processo_situacao_processo_E77:
+    - text: |
+          O estado E77 acontece durante a fase de Avaliação financeira, e significa aguarda laudo final
+
+          E quando o MinC utiliza ele? Quando a avaliação de resultados está finalizada e aguarda a produção do laudo final.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 53
+
+  utter_processo_situacao_processo_L03:
+    - text: |
+          O estado L03 acontece durante a fase de Avaliação financeira, e significa prestação de contas aprovada com ressalva formal e sem prejuízo
+
+          E quando o MinC utiliza ele? Quando a prestação de contas é aprovada com ressalva.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 51, inc. II e art. 53
+
+  utter_processo_situacao_processo_L05:
+    - text: |
+          O estado L05 acontece durante a fase de Avaliação financeira, e significa prestação de contas desaprovada com notificação de cobrança
+
+          E quando o MinC utiliza ele? Quando a prestação de contas é reprovada, é dada a ciência ao proponente por intimação.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 54, § 5°
+
+  utter_processo_situacao_processo_L08:
+    - text: |
+          O estado L08 acontece durante a fase de Avaliação financeira, e significa prestação de contas aprovada após ressarcimento ao erário.
+
+          E quando o MinC utiliza ele? Quando a prestação de contas é reprovada, mas o proponente reverte com o ressarcimento do débito ao FNC.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 59, § 3°
+
+  utter_processo_situacao_processo_L10:
+    - text: |
+          O estado L10 acontece durante a fase de Avaliação financeira, e significa prestação de contas reprovada – Inabilitação Prescrita
+
+          E quando o MinC utiliza ele? Quando são transcorridos cinco anos após a prestação de contas do projeto, a inabilitação prescreve.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 57
+
+  utter_processo_situacao_processo_L11:
+    - text: |
+          O estado L11 acontece durante a fase de Avaliação financeira, e significa prestação de contas reprovada – Inabilitação suspensa
+
+          E quando o MinC utiliza ele? Quando a justiça manda suspender a inabilitação do proponente.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 59
+
+  utter_processo_situacao_processo_D22:
+    - text: |
+          O estado D22 acontece durante a fase de Execução, e significa aguardando elaboração de portaria de Prorrogação
+
+          E quando o MinC utiliza ele? Quando há prorrogação automática ou proponente solicita prorrogação de prazo
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 33
+
+  utter_processo_situacao_processo_D28:
+    - text: |
+          O estado D28 acontece durante a fase de Execução, e significa encaminhado p/inclusão em portaria/complementação
+
+          E quando o MinC utiliza ele? Quando o projeto atinge o percentual de 50% de captação, pode solicitar complementação orçamentária
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 38
+
+  utter_processo_situacao_processo_D29:
+    - text: |
+          O estado D29 acontece durante a fase de Execução, e significa encaminhado p/inclusão em portaria/redução.
+
+          E quando o MinC utiliza ele? Quando o projeto atinge o percentual de 20% de captação, pode solicitar redução orçamentária
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 39
+
+  utter_processo_situacao_processo_E10:
+    - text: |
+          O estado E10 acontece durante a fase de Execução, e significa autorizada a captação total dos recursos
+
+          E quando o MinC utiliza ele? Quando é publicada a autorização para captação de recursos
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 33
+
+  utter_processo_situacao_processo_E11:
+    - text: |
+          O estado E11 acontece durante a fase de Execução, e significa expirado o prazo de captação total
+
+          E quando o MinC utiliza ele? Quando expira o prazo de captação
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 33
+
+  utter_processo_situacao_processo_E12:
+    - text: |
+          O estado E12 acontece durante a fase de Execução, e significa autorizada a captação residual dos recursos
+
+          E quando o MinC utiliza ele? Quando o projeto já obteve alguma captação e ainda se encontra com prazo vigente
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 33
+
+  utter_processo_situacao_processo_E13:
+    - text: |
+          O estado E13 acontece durante a fase de Execução, e significa projeto em execução – Encerrado prazo de captação
+
+          E quando o MinC utiliza ele? Quando o prazo de captação expirou, mas o prazo de execução continua vigente.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, arts. 33 e 34
+
+  utter_processo_situacao_processo_E15:
+    - text: |
+          O estado E15 acontece durante a fase de Execução, e significa expirado o prazo de captação parcial
+
+          E quando o MinC utiliza ele? Quando o projeto atingiu captação suficiente para movimentar e o prazo de captação expira.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 33
+
+  utter_processo_situacao_processo_E16:
+    - text: |
+          O estado E16 acontece durante a fase de Execução, e significa projeto encerrado por excesso de prazo sem captação
+
+          E quando o MinC utiliza ele? Situação automática: quando o projeto não consegue captar recursos suficientes para liberação das contas e o prazo expira
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 52
+
+  utter_processo_situacao_processo_E23:
+    - text: |
+          O estado E23 acontece durante a fase de Execução, e significa inadimplente
+
+          E quando o MinC utiliza ele? Situação que gira automaticamente quando o proponente não apresenta a prestação de contas final dentro do prazo regular
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 48, §1°
+
+  utter_processo_situacao_processo_E24:
+    - text: |
+          O estado E24 acontece durante a fase de Execução, e significa apresentou prestação de contas
+
+          E quando o MinC utiliza ele? Quando a prestação de contas é apresentada, é recebida pela GCEFI e o projeto é, posteriormente, tramitado para a CGARE
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 49
+
+  utter_processo_situacao_processo_E36:
+    - text: |
+          O estado E36 acontece durante a fase de Execução, e significa arquivado por ter 24 meses aprovação sem captação de recursos
+
+          E quando o MinC utiliza ele? Quando ocoore o arquivamento porque o projeto atingiu 24 meses sem captação nenhuma
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 52
+
+  utter_processo_situacao_processo_E59:
+    - text: |
+          O estado E59 acontece durante a fase de Execução, e significa diligenciado – Readequação
+
+          E quando o MinC utiliza ele? Quando o proponente pleitea alterações e é diligenciado para apresentar documentos/informações complementares
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Arts. 29 a 31
+
+  utter_processo_situacao_processo_E63:
+    - text: |
+          O estado E63 acontece durante a fase de Execução, e significa projeto arquivado – por excesso de prazo sem captação
+
+          E quando o MinC utiliza ele? Quando o proponente não solicitou a prorrogação do período de captação de forma tempestiva
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 52
+
+  utter_processo_situacao_processo_E64:
+    - text: |
+          O estado E64 acontece durante a fase de Execução, e significa projeto arquivado – captação/execução encerradas
+
+          E quando o MinC utiliza ele? Quando o pedido de prorrogação é indeferido por se tratar de calendário específico
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 52
+
+  utter_processo_situacao_processo_E65:
+    - text: |
+          O estado E65 acontece durante a fase de Execução, e significa projeto arquivado – solicitação de arquivamento, de projeto de incentivo fiscal, feito pelo proponente
+
+          E quando o MinC utiliza ele? Quando o arquivamento ocorre a pedido do proponente
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 52
+
+  utter_processo_situacao_processo_E75:
+    - text: |
+          O estado E75 acontece durante a fase de Execução, e significa expirado o prazo de execução do projeto
+
+          E quando o MinC utiliza ele? Quando expira o prazo de execução e inicia-se o prazo para entrega da prestação de contas final
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Arts. 48 e 49
+
+  utter_processo_situacao_processo_E79:
+    - text: |
+          O estado E79 acontece durante a fase de Execução, e significa projeto não executado por insuficiência de captação de recursos
+
+          E quando o MinC utiliza ele? Situação automática: criada para projetos que não captaram recursos suficientes para iniciar a execução
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 52
+
+  utter_processo_situacao_processo_E80:
+    - text: |
+          O estado E80 acontece durante a fase de Execução, e significa inadimplente – Proponente notificado a apresentar prestação de contas
+
+          E quando o MinC utiliza ele? Situação criada para diligenciar automaticamente o proponente que não entregou a prestação de contas final dentro do prazo regular
+
+  utter_processo_situacao_processo_E81:
+    - text: |
+          O estado E81 acontece durante a fase de Execução, e significa inadimplente – Não atendeu a notificação para apresentar prestação de contas
+
+          E quando o MinC utiliza ele? Situação automática: criada para que os projetos, cujos proponentes não apresentaram a prestação de contas final depois de terem sido notificados, sejam encaminhados para TCE.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 48, §1º
+
+  utter_processo_situacao_processo_E60:
+    - text: |
+          O estado E60 acontece durante a fase de Fiscalização, e significa diligenciado – fiscalização
+
+          E quando o MinC utiliza ele? Quando é necessário que o proponente apresente documentos ou informações para a Coordenação de Fiscalização.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69
+
+  utter_processo_situacao_processo_E72:
+    - text: |
+          O estado E72 acontece durante a fase de Fiscalização, e significa execução Suspensa de Forma Cautelar
+
+          E quando o MinC utiliza ele? Após decisão da autoridade máxima da Secretaria em casos que são detectados indícios de irregularidades no projeto
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 58, II
+
+  utter_processo_situacao_processo_E50:
+    - text: |
+          O estado E50 acontece durante a fase de Movimentação Financeira, e significa diligenciado – movimentação da conta corrente
+
+          E quando o MinC utiliza ele? Quando constata-se alguma inconsistência bancária ou na transferência de recursos e o proponente é diligenciado para prestar esclarecimentos.
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, arts. 80 a 83
+
+  utter_processo_situacao_processo_L09:
+    - text: |
+          O estado L09 acontece durante a fase de Parcelamento, e significa débito Parcelado
+
+          E quando o MinC utiliza ele? Quando o proponente realiza o pagamento da primeira parcela do parcelamento solicitado, independentemente da situação em que o processo se encontre
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 64
+
+  utter_processo_situacao_processo_D38:
+    - text: |
+          O estado D38 acontece durante a fase de Recomposição de dano ao erário, e significa cADIN – Inadimplente
+
+          E quando o MinC utiliza ele? Após a situação E78, quando a inscrição no Cadin é realizada
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
+
+  utter_processo_situacao_processo_E22:
+    - text: |
+          O estado E22 acontece durante a fase de Recomposição de dano ao erário, e significa instaurada Tomada de Contas Especial
+
+          E quando o MinC utiliza ele? Após a situação G47, quando a tomada de contas especial é instaurada
+
+          Para saber mais você pode consultar a IN TCU 71/2012, art. 4º
+
+  utter_processo_situacao_processo_E73:
+    - text: |
+          O estado E73 acontece durante a fase de Recomposição de dano ao erário, e significa tCE julgada pelo TCU
+
+          E quando o MinC utiliza ele? Atualização dos autos e do Salic após o julgamento das contas pelo TCU
+
+          Para saber mais você pode consultar a
+
+  utter_processo_situacao_processo_E78:
+    - text: |
+          O estado E78 acontece durante a fase de Recomposição de dano ao erário, e significa débito inferior ao valor mínimo para TCE
+
+          E quando o MinC utiliza ele? Após asituação L06, quando o processo segue para análise e instrução à tomada de contas simplificada
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
+
+  utter_processo_situacao_processo_E47:
+    - text: |
+          O estado G47 acontece durante a fase de Recomposição de dano ao erário, e significa em processo de instauração de Tomada de Contas Especial
+
+          E quando o MinC utiliza ele? Após asituação L06, quando o processo segue para análise e instrução à tomada de contas especial
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
+
+  utter_processo_situacao_processo_L06:
+    - text: |
+          O estado L06 acontece durante a fase de Recomposição de dano ao erário, e significa prestação de contas desaprovada com INDICATIVO para Tomada de Contas Especial
+
+          E quando o MinC utiliza ele? Após a situação L05
+
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
+
+  utter_definicao_tais:
+    - text: |
+          Uma assistente virtual é um programa de computador
+
+          criado para interagir com as pessoas.
+
+          Meu objetivo é sanar dúvidas sobre a lei Rouanet.
+
+          Em cada interação que temos aqui, eu aprendendo mais
+
+          para que a gente se comunique melhor.
+
+          Obrigada por conversar comigo!
+
+  utter_lei_rouanet:
+    - text: |
+          Sobre a lei Rouanet eu sei explicar:
+
+          O que é a lei
+
+          Quem pode ser proponente
+
+          Origem do Dinheiro
+
+          Benefícios de Incentivar
+
+          Quantidade de Projetos
+
+          Quem pode incentivar
+
+          Denúncia
+
+  utter_lei_rouanet_mais:
+    - text: |
+          Deseja saber mais sobre a lei Rouanet?
+
+  utter_lei_rouanet_o_que_eh:
+    - text: |
+          A Lei 8.313/91, Lei Rouanet, é o principal
+
+          mecanismo de fomento à Cultura do Brasil. Ela instituiu o
+
+          Programa Nacional de Apoio à Cultura (Pronac).
+
+    - text: |
+          O nome Rouanet remete a seu criador, o então secretário Nacional
+
+          de Cultura, o diplomata Sérgio Paulo Rouanet.
+
+    - text: |
+          A Lei estabelece as normativas de como o GDF deve
+
+          disponibilizar recursos para a realização de projetos
+
+          artístico-culturais.
+
+  # TO DO
+  utter_definicao:
+    - text: |
+          Sei conceituar sobre o que é o MinC, Salic, Sefic, proposta, projeto e proponente,
+
+          assim como falar sobre mim.
+
+  utter_definicao_minc:
+    - text: |
+          O Ministério da Cultura (MinC) é o responsável pela aprovação e
+
+          monitoramento dos projetos submetidos.
+
+  utter_definicao_cnic:
+    - text: |
+          O Conselho Nacional de Incentivo à Cultura (CNIC) é responsável por 
+
+          selecionar e aprovar os projetos para captação.
+
+  utter_definicao_sefic:
+    - text: |
+          A (Secretaria de Fomento e Incentivo à Cultura) planeja,
+
+          coordena e supervisiona a operacionalização Pronac, na aprovação,
+
+          monitoramento e prestação de contas de projetos culturais.
+
+  utter_definicao_projeto:
+    - text: |
+          Projeto é o termo dado para a proposta aprovada no SALIC.
+
+  utter_definicao_proposta:
+    - text: |
+          Proposta é o conjunto de formulários que explicam o projeto
+
+          cultural que pode ser incentivado pela Lei Rouanet.
+
+  utter_definicao_proponente:
+    - text: |
+          Proponente é o agente responsável por propor e participar
+
+          de projetos culturais.
+
+  utter_processo_preenchimento:
+    - text: |
+          É a primeira fase da proposta, onde você preenche os formulários.
+
+  utter_processo_admissibilidade:
+    - text: |
+          É a fase da proposta em que o MinC e a vinculada irão avaliar a
+
+          proposta, para pedir correções ou aprova-la, gerando um projeto.
+
+  utter_processo_aprovacao:
+    - text: |
+          Aprovação é a fase onde o MinC e a vinculada
+
+          estão julgando a validade do projeto
+
+  utter_processo_execucao:
+    - text: |
+          Execução é a fase do projeto que possui atividades
+
+          como captação de recursos e realização do projeto.
+
+  utter_processo_analise_de_resultados:
+    - text: |
+          É a fase do final do projeto, onde o proponente
+
+          deve apresentar todas as notas fiscais e contratos realizados
+
+                                     a fim de provar os gastos do projeto.
+
+  utter_definicao_salic:
+    - text: |
+          Sistema de Apoio às Leis de Incentivo à Cultura (SALIC) é o
+
+          sistema utilizado para submeter propostas e gerenciar
+
+          projetos aprovados pela Lei Rouanet.
+
+          Acesse: *salic.cultura.gov.br*
+
+  utter_definicao_vinculada:
+    - text: |
+          As vinculadas são órgãos associados ao MinC
+
+          que avaliam o orçamento e adequação do projeto.
+
+  utter_processo_como_funciona:
+    - text: |
+        Tudo bem. Aqui vai um resumo do processo
+
+        A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
+
+        Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
+
+        Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
+
+        Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
+
+        A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
+
+        O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+
+  utter_salic_cadastro_usuario:
+    - text: |
+          A primeira coisa que você deve fazer é acessar o SALIC no site http://salic.cultura.gov.br
+
+          Então no formulário inicial, onde pede login e senha, você deve clicar na opção \"Não sou cadastrado\", logo abaixo
+
+          Preencha todos os campos corretamente, todos eles são obrigatórios.
+
+          E depois clique em \"Cadastrar\"
+
+          Agora aguarde a chegada de um e-mail de confirmação. Este vai conter uma senha temporária
+
+          É interessante você alterar esta senha, por isso, no seu primeiro acesso, vá em \"Usuário > Alterar Senha\", para mudar a mesma
+
+          Agora que você já se cadastrou, o próximo passo cadastrar um proponente
+
+  utter_curiosidadesMais:
+    - text: |
+        Você quer saber mais curiosidades?
+
+    - text: |
+        Você tem interesse de saber mais curiosidades?
+
+    - text: |
+        Você gostaria de saber mais curiosidades?
+
+  utter_curiosidadesMaisSim:
+    - text: |
+        EBA!
+
+        O que você quer saber?
+
+    - text: |
+        EBA!
+
+        Do que você quer saber?
+
+    - text: |
+        EBA!
+
+        De qual assunto você quer saber?
+
+  utter_curiosidadesMaisNao:
+    - text:
+        Tudo bem, então você quer saber sobre *projetos e propostas*?
+
+    - text:
+        Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
+
+    - text:
+        Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?
+
+  utter_curiosidadesFalarSobreProjetos:
+    - text: |
+          Maravilha! É bom saber que você quer entender mais sobre propostas e projetos
+
+  utter_lei_rouanet_quantidade_de_projetos:
+    - text: |
+          Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.
+
+          Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos.
+
+          Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes.
+
+  utter_lei_rouanet_beneficios_incentivo_projetos_culturais:
+    - text: |
+          O principal benefício de incentivar projetos culturais é dar a chance para sociedade usufruir das mais diversas manifestações culturais que talvez nunca fossem possíveis sem incentivo.
+
+          E tem mais...as empresas que incentivam projetos culturais podem deduzir do imposto de renda as quantias que despenderam em projetos aprovados pelo Ministério da Cultura
+
+          É claro que essa dedução do imposto de renda acontece nas condições estabelecidas na legislação vigente, e está limitada a 4% do imposto devido
+
+  utter_lei_rouanet_quem_pode_ser_proponente:
+    - text: |
+          Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro, pode se beneficiar desta Lei e se candidatar à captação de recursos de renúncia fiscal.
+
+          A proponência pode ser feita por Pessoas físicas com atuação comprovada na área cultural, ou Pessoas jurídicas de natureza cultural com, no mínimo, dois anos de atividade,
+
+          podendo ser:
+
+          Pessoas jurídicas públicas da administração indireta
+
+          (autarquias, fundações culturais etc.)
+
+          ou pessoas jurídicas privadas com ou sem fins lucrativos
+
+          (empresas, cooperativas, fundações, ONGs, organizações culturais etc.)
+
+  utter_lei_rouanet_origem_do_dinheiro:
+    - text: |
+          O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural.
+
+          Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura.
+
+          Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a declaração no modelo completo podem contribuir com a lei Rouanet apoiando projetos.
+
+          Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.
+
+  utter_lei_rouanet_denuncia:
+    - text: |
+          Para denunciar um projeto suspeito de irregularidades é preciso registrar uma denúncia para o Ministério Público Federal.
+
+          Sua denúncia pode ser feita no site do ministério público no link: http://aplicativos.pgr.mpf.mp.br/ouvidoria/portal/cadastro.html?tipoServico=2 ,ou pelo aplicativo do MPF na opção de \"Registrar denúncia ou solicitação\".
+
+  utter_lei_rouanet_quem_pode_incentivar:
+    - text: |
+          Somente as Pessoas Jurídicas tributadas com base no Lucro Real podem descontar as doações ou patrocínios do imposto de renda observando sempre o limite máximo de 4% do imposto devido
+
+          Se você quiser saber mais sobre quais Pessoas Jurídicas devem fazer a apuração do lucro real confira o artigo 246, do Decreto 3.000 de 26 de março de 1999 que \"Regulamenta a tributação, fiscalização, arrecadação e administração do Imposto sobre a Renda e Proventos de Qualquer Natureza\"
+
+          Olha, alguns familiares não podem incentivar projetos:
+
+          - o cônjuge
+
+          - os parentes até o terceiro grau, inclusive os afins
+
+          - e os dependentes… tanto do doador, quanto do patrocinador, dos titulares, administradores, acionistas ou sócios de pessoa jurídica vinculada ao doador ou patrocinador, na data da operação, ou nos 12 meses anteriores.
+
+  utter_lei_rouanet_porcentagem_de_deducao_do_imposto:
+    - text: |
+          Atualmente, existem 2 situações descritas na Lei 8313/91:
+
+          1) o artigo 26 da Lei indica que os percentuais de dedução do IR são os seguintes:
+
+          Empresas:
+
+          até 30% do valor patrocinado;
+
+          até 40% do valor doado
+
+          Pessoa física:
+
+          até 60% do valor patrocinado;
+
+          até 80% do valor doado.
+
+          nesse caso, a empresa incentivadora poderá ainda lançar o valor incentivado como despesa operacional
+
+          2) Com a modificação implementada pela Lei 9.874/99, quem investe em projetos culturais enquadrados nos segmentos indicados pelo artigo 18 da Lei passou a ter a possibilidade de deduzir até 100% do valor doado ou patrocinado as empresas que investem nesses segmentos não podem lançar o valor incentivado como despesa operacional agora, IMPORTANTE:
+
+          os percentuais de dedução de IR são limitados aos estabelecidos pela legislação do imposto de renda vigente, que atualmente são 4% do imposto devido para empresas e 6% do imposto devido para pessoa física
+
+          Você pode ver os detalhes das leis pelos endereços:
+
+          Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm
+
+          Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm
+
+  #TODO
+  utter_salic_preenchimento:
+    - text: |
+          Nesta etapa eu posso responder dúvidas sobre o preenchimento de
+
+          propostas no SALIC
+
+  utter_salic_preenchimento_campo_custo_auditoria:
+    - text: |
+          Este campo não precisa ser preenchido agora, isso vai ser preenchido na prestação de contas.
+
+  utter_preenchimentoVinculoDePropostas:
+    - text: |
+          Você deve ir em:
+
+          Orçamento do projeto > Custos por produto > Clicar no produto
+
+          desejado
+
+          Clicar no Local de realização > por último na aba Assessoria
+
+          contábil e jurídica.
+
+  utter_salic_preenchimento_valor_ingresso:
+    - text: |
+          Esse valor é usado para conferir a viabilidade do projeto e não
+
+          pode ultrapassar R$ 250,00 por beneficiário.
+
+          Por exemplo: R$ 9.445.076,00 / 22.556 pessoas = R$ 419,18 por
+
+          beneficiário, ou seja, está acima do limite para sanar esse problema,
+
+          você pode diminuir o custo do projeto ou aumentar a estimativa
+
+          de público.
+
+  utter_salic_preenchimento_vinculo_cpf_proposta:
+    - text: |
+          O dirigente do projeto deve acessar o sistema e seguir os passos:
+
+          1- Administrativo > Gerenciar responsáveis
+
+          em seguida...
+
+          2- Vincular propostas > Clicar na \"bolinha\" (Vincular) > Inserir
+
+          responsável > abaixo terá o número da Proposta/Nome
+
+          Nome do responsável selecionado > Clicar na \"bolinha\"
+
+          3- Por último... clica também no botão Vincular
+
+  utter_salic_preenchimento_cadastro_agencia_bancaria:
+    - text: |
+          A agência bancária deve ser do banco do Brasil, deve conter 5
+
+          dígitos, sem hifens, pontos ou letras
+
+  #TODO
+  utter_salic_erros:
+    - text: |
+          Nesta etapa eu posso responder dúvidas sobre eventuais erros do
+
+          sistema SALIC. Como: planilha desaparecida, perda dos dados
+
+          preenchidos e recuperação de senha
+
+  utter_salic_erros_planilha_desapareceu:
+    - text: |
+          Ao excluir um produto do plano de distribuição a planilha vai ser
+
+          \"zerada\" e o proponente deverá refazê-la.
+
+  utter_salic_erros_salvamento_de_proposta:
+    - text: |
+          Esse erro aconteceu por exceder o tempo logado no sistema.
+
+          O limite de tempo para o preenchimento da proposta é de 20 minutos.
+
+          Não esqueça de ir salvando a cada passo do preenchimento.
+
+  utter_salic_recuperacao_de_senha:
+    - text: |
+          Ah isso acontece com todo mundo ;)
+
+          você pode gerar uma nova senha aqui:
+
+          http://salic.cultura.gov.br/autenticacao/index/solicitarsenha
+
+          ou se isso não funcionar, mande uma solicitação para:
+
+          senhasalic@cultura.gov.br
+
+  utter_salic_erros_vinculo_cpf_cnpj:
+    - text: |
+          Apenas o dirigente da instituição é quem pode vincular uma
+
+          pessoa física ao CNPJ
+
+          o dirigente deve entrar com login e senha e aceitar o vínculo
+
+  utter_salic_erros_achar_proposta:
+    - text: |
+          Selecione o CPF ou CNPJ que deseja como proponente e liste a proposta
+
+          do CPF ou CNPJ selecionado  para isso, vá em:
+
+          1- Proposta > Listar proposta
+
+          2- Clicar em CPF Proponente > Selecionar o CNPJ aparecerão todas as
+
+          propostas ativas no sistema
+
+  utter_processo:
+    - text: |
+          Na categoria de processos eu posso responder dúvidas sobre:
+
+          Como Funciona
+
+          Situação do Processo
+
+          Definição das Etapas
+
+          Prazos
+
+          Reativação da proposta
+
+  utter_processoProcessoCaptacaoDeRecursos:
+    - text: |
+          A captação só pode começar depois que o projeto passa pela fase de enquadramento, pela análise documental e pela publicação.
+
+          Assim que o projeto é publicado no Diário Oficial da União você pode começar a captar recursos.
+
+  utter_processo_reativacao_de_proposta:
+    - text: |
+          Pra reativar uma proposta indeferida você deve enviar um pedido de reativação
+
+          Esse pedido tem que expor as justificativas apropriadas para reanálise e deve ser assinado pelo proponente
+
+          Você encaminha o pedido em formato PDF para reativacao.proposta@cultura.gov.br
+
+          E aí é só aguardar uma resposta
+
+  utter_salic_cadastro_proponente:
+    - text: |
+          Basta você entrar no Salic...
+
+          clicar em Administrativo > Cadastrar proponente e preencher todos os dados
+
+  #TODO
+  utter_processo_prazo:
+    - text: |
+          Posso responder suas dúvidas a respeito de Datas
+
+          e Prazos do seu projeto. Como: envio do CNAE e desistência de recurso
+
+  utter_processo_prazo_envio_cnae:
+    - text: |
+          O proponente tem o prazo de 40 dias para responder a diligência 20+20 prorrogados automaticamente.
+
+          Não é necessário fazer solicitação.
+
+          Caso seja insuficiente, o proponente poderá anexar o protocolo da Receita de inserção do CNAE no Salic.
+
+  utter_processo_prazo_desistir_recurso:
+    - text: |
+          A partir do momento em que seu projeto foi enquadrado, iniciou-se o prazo de 10 dias corridos para recorrer ao enquadramento proposto para o projeto
+
+          Caso concorde com o enquadramento dado é possível desistir desse prazo
+
+          Ambas as manifestações se dão por via da aba \"recurso\" no Menu ao lado esquerdo da tela do projeto, no Salic
+
+
   utter_cumprimentar:
     - text: |
-        Olá, meu  nome é Taís, sou assistente virtual do MinC.
-        Estou aqui para te ajudar a sanar dúvidas sobre a lei Rouanet
+        Olá, meu  nome é Taís, sou assistente virtual do MinC
+
+         Estou aqui para te ajudar a sanar dúvidas sobre a lei Rouanet
 
     - text: |
-        Oi, eu sou a Taís, assistente virtual do MinC.
-        Estou aqui para te ajudar a tirar dúvidas sobre a lei Rouanet
+        Oi, eu sou a Taís, assistente virtual do MinC
+
+         Estou aqui para te ajudar a tirar dúvidas sobre a lei Rouanet
 
     - text: |
-        Oi, sou assistente virtual do MinC, me chamo Taís.
-        Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
+        Oi, sou assistente virtual do MinC, me chamo Taís
+
+         Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
 
   utter_despedir:
     - text: |
         Foi um prazer te ajudar!
-        Sempre que tiver alguma dúvida, volte aqui! Até logo!
+
+        Sempre que tiver alguma dúvida, volte aqui!
+
+        Até logo!
 
     - text: |
         Foi um prazer te ajudar!
-        Sempre que precisar, volte aqui! Até a próxima!
+
+        Sempre que precisar, volte aqui!
+
+        Até a próxima!
 
     - text: |
         Foi um prazer te ajudar!
-        Quando surgir alguma dúvida, volte aqui! Até mais!
 
-  utter_fase_de_testes:
+        Quando surgir alguma dúvida, volte aqui!
+
+        Até mais!
+
+  utter_captacao:
     - text: |
-        Ainda não consigo falar sobre outros assuntos.
-        Estou em fase de testes e a cada dia aprendo mais com vocês.
+        Em captação, eu sei falar sobre quando captar e sobre como captar
 
-  utter_explicar_definicao_perfil:
+        O que você deseja saber?
+
+  utter_captacao_quando_captar:
     - text: |
-        Se você quiser saber mais sobre a lei Rounet, nós podemos descobrir juntos sobre como ela foi criada,
-        o que ela proporciona, de onde vem o dinheiro usado na lei, e coisas afins.
-        Se você preferir falar sobre criação e andamento de projetos, podemos analisar onde a sua dúvida se encaixa.
-        Por exemplo, talvez você queira saber mais sobre como funciona um andamento de projeto,
-        ou como submeter um projeto, entre outras. Do que você prefere conversar?"
+        A captação só pode começar depois que o projeto passa pela fase de
+        enquadramento, pela análise documental e pela publicação.
 
-  utter_nova_proposta:
+        Assim que o projeto é publicado no Diário Oficial da União você pode
+        começar a captar recursos.
+
+  #TODO
+  utter_captacao_como_captar:
     - text: |
-        Você já começou a trabalhar em uma nova proposta de projeto? (Sim ou Não)
+        Para captar os recursos você deve achar incetivadores
 
-  utter_duvida_execucao:
+  #TODO
+  utter_processo_definicao_etapas:
     - text: |
-        Você tem dúvida em relação à captação de verba e execução do projeto? (Sim ou Não)
+        O processo possui cinco etapas:
+        - Preenchimento
+        - Aprovação
+        - Admissibilidade
+        - Execução
+        - Análise de Resultados
 
-  utter_conhece_processo:
+        Você tem alguma dúvida sobre elas?
+  utter_menu:
+    - text: | 
+        Podemos falar sobre:
+        - A Lei Rouanet
+        - O SALIC
+        - O Processo
+        - Definições
+        - Captação
+  #TODO
+  utter_salic:
     - text: |
-        Você sabe como funciona o andamento de um projeto de incentivo a cultura? (Sim ou Não)
+        Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
 
-  utter_cadastro_salic:
+  utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
     - text: |
-        Você já tem cadastro no SALIC? (Sim ou Não)
+        Você deve ir em:
+        Orçamento do projeto > Custos por produto > Clicar no produto desejado
+        Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
 
-  utter_aviso:
-    - text: |
-        Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.
-        Você já preencheu uma proposta? (Sim ou Não)
 
-  utter_introduzir_execucao:
-    - text: |
-        Eu ainda não aprendi a falar sobre um projeto que está em Execução ou em Prestação de Contas.
-        Ainda estou aprendendo =| Em breve eu poderei responder sua dúvida.
-        Neste momento, eu recomendo que vocẽ entre em contato com as equipes da SEFIC:
-          Execução: acompanhamento.incentivo@cultura.gov.br
-          Prestação de Contas: prestacaodecontas.incentivo@cultura.gov.br
+actions:
+  - utter_default
+  - utter_restart
+  - utter_cumprimentar
+  - utter_despedir
+  - utter_menu
+  
+  - utter_captacao
+  - utter_captacao_quando_captar
+  - utter_captacao_como_captar
 
-  utter_submissao_de_projetos:
-    - text: |
-        Tudo bem. Aqui vai um resumo do processo: A pessoa responsável, chamada de proponente,
-        insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
-        Essa proposta é analisada pelo MinC.
-        Se for aprovada, autoriza o proponente a captar recursos.
-        Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
-        Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
-        A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
-        O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+  - utter_definicao
+  - utter_definicao_tais
+  - utter_definicao_minc
+  - utter_definicao_cnic
+  - utter_definicao_sefic
+  - utter_definicao_projeto
+  - utter_definicao_proposta
+  - utter_definicao_proponente
+  - utter_definicao_salic
+  - utter_definicao_vinculada
 
-  utter_processo_periodo:
-    - text: |
-        As propostas devem ser apresentadas todos os anos entre 1º de fevereiro a 30 de novembro
-        com 90 dias de antecedência do evento para garantir a aprovação e captação de recursos
-        Fique de olho no prazo, não perca essa oportunidade!
+  - utter_lei_rouanet
+  - utter_lei_rouanet_mais
+  - utter_lei_rouanet_o_que_eh
+  - utter_lei_rouanet_quantidade_de_projetos
+  - utter_lei_rouanet_beneficios_incentivo_projetos_culturais
+  - utter_lei_rouanet_quem_pode_ser_proponente
+  - utter_lei_rouanet_origem_do_dinheiro
+  - utter_lei_rouanet_denuncia
+  - utter_lei_rouanet_quem_pode_incentivar
+  - utter_lei_rouanet_porcentagem_de_deducao_do_imposto
 
-  utter_ja_eh_proponente:
-    - text: |
-        Você já tem um proponente cadastrado? (Sim ou Não)
+  - utter_processo
+  - utter_processo_reativacao_de_proposta
+  - utter_processo_prazo
+  - utter_processo_prazo_envio_cnae
+  - utter_processo_prazo_desistir_recurso
+  - utter_processo_definicao_etapas
+  - utter_processo_preenchimento
+  - utter_processo_admissibilidade
+  - utter_processo_aprovacao
+  - utter_processo_execucao
+  - utter_processo_analise_de_resultados
+  - utter_processo_como_funciona
+  - utter_processo_situacao_processo_A12
+  - utter_processo_situacao_processo_A14
+  - utter_processo_situacao_processo_A20
+  - utter_processo_situacao_processo_A23
+  - utter_processo_situacao_processo_B01
+  - utter_processo_situacao_processo_B14
+  - utter_processo_situacao_processo_A13
+  - utter_processo_situacao_processo_A16
+  - utter_processo_situacao_processo_A17
+  - utter_processo_situacao_processo_A42
+  - utter_processo_situacao_processo_B11
+  - utter_processo_situacao_processo_B20
+  - utter_processo_situacao_processo_C09
+  - utter_processo_situacao_processo_C10
+  - utter_processo_situacao_processo_C20
+  - utter_processo_situacao_processo_C26
+  - utter_processo_situacao_processo_C30
+  - utter_processo_situacao_processo_D03
+  - utter_processo_situacao_processo_D14
+  - utter_processo_situacao_processo_D20
+  - utter_processo_situacao_processo_D25
+  - utter_processo_situacao_processo_D27
+  - utter_processo_situacao_processo_E25
+  - utter_processo_situacao_processo_E62
+  - utter_processo_situacao_processo_E66
+  - utter_processo_situacao_processo_E20
+  - utter_processo_situacao_processo_E27
+  - utter_processo_situacao_processo_E30
+  - utter_processo_situacao_processo_E68
+  - utter_processo_situacao_processo_E77
+  - utter_processo_situacao_processo_L03
+  - utter_processo_situacao_processo_L05
+  - utter_processo_situacao_processo_L08
+  - utter_processo_situacao_processo_L10
+  - utter_processo_situacao_processo_L11
+  - utter_processo_situacao_processo_D22
+  - utter_processo_situacao_processo_D28
+  - utter_processo_situacao_processo_D29
+  - utter_processo_situacao_processo_E10
+  - utter_processo_situacao_processo_E11
+  - utter_processo_situacao_processo_E12
+  - utter_processo_situacao_processo_E13
+  - utter_processo_situacao_processo_E15
+  - utter_processo_situacao_processo_E16
+  - utter_processo_situacao_processo_E23
+  - utter_processo_situacao_processo_E24
+  - utter_processo_situacao_processo_E36
+  - utter_processo_situacao_processo_E59
+  - utter_processo_situacao_processo_E63
+  - utter_processo_situacao_processo_E64
+  - utter_processo_situacao_processo_E65
+  - utter_processo_situacao_processo_E75
+  - utter_processo_situacao_processo_E79
+  - utter_processo_situacao_processo_E80
+  - utter_processo_situacao_processo_E81
+  - utter_processo_situacao_processo_E60
+  - utter_processo_situacao_processo_E72
+  - utter_processo_situacao_processo_E50
+  - utter_processo_situacao_processo_L09
+  - utter_processo_situacao_processo_D38
+  - utter_processo_situacao_processo_E22
+  - utter_processo_situacao_processo_E73
+  - utter_processo_situacao_processo_E78
+  - utter_processo_situacao_processo_E47
+  - utter_processo_situacao_processo_L06
 
-  utter_cadastro_salic_video:
-    - text: |
-        O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura,
-        e é por ele que você cadastra a proposta e a acompanha.
-        Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
-        nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
-        Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)
-
-  utter_explicar_cadastro_salic:
-    - text: |
-        A primeira coisa que você deve fazer é acessar o SALIC no site http://salic.cultura.gov.br
-        Então no formulário inicial, onde pede login e senha, você deve clicar na opção 'Não sou cadastrado',
-        logo abaixo Preencha todos os campos corretamente, todos eles são obrigatórios.
-        E depois clique em 'Cadastrar' Agora aguarde a chegada de um e-mail de confirmação.
-        Este vai conter uma senha temporária.
-        É interessante você alterar esta senha, por isso, no seu primeiro acesso,
-        vá em 'Usuário > Alterar Senha', para mudar a mesma Agora que você já se cadastrou,
-        o próximo passo cadastrar um proponente
-
-  utter_cadastro_salic_apos_video:
-    - text: |
-        Espero que o vídeo tenha ajudado.
-        Agora que você já se cadastrou, o próximo passo cadastrar um proponente
-
-  utter_inscricao_proponente:
-    - text: |
-        Para inscrever um proponente, ou se tornar um proponente, você deve:
-          Acessar o SALIC e efetuar o login Clique em Administrativo e depois em cadastrar proponente.
-          OU acesse esse link http://salic.cultura.gov.br/agente/agentes/incluiragente;
-        Se você for uma pessoa física você precisa atuar na área cultural.
-        Caso você seja uma pessoa jurídica pública tem que atuar na área de
-        administração indireta ou uma pessoa jurídica privada com ou sem fins lucrativos.
-
-  utter_mais_alguma_pergunta:
-    - text: |
-        Você possui mais alguma dúvida? (Sim ou Não)
-
-  utter_nao_aprendi_contexto:
-    - text: |
-        Então, sei que agora, você gostaria de tirar dúvidas mais específicas do seu projeto.
-        Estou em fase de testes e não consigo responder. Mas, em breve vou poder te ajudar com esses temas.
-
-  utter_proponente_cadastrado:
-    - text: |
-        Okay! Agora que você tem um proponente cadastrado, é só preencher sua proposta!
-
-  utter_curiosidades_indicacao:
-    - text: |
-        Legal! Meu assunto favorito
-        Você pode me perguntar algumas curiosidades sobre a Lei Rouanet
-        Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei.
-        Qual a sua pergunta? Vou tentar responder da melhor maneira possível
-
-  utter_curiosidades_mais:
-    - text: |
-        Gostaria de saber mais sobre outras curiosidades? (Sim ou Não)
-
-  utter_curiosidades_mais_sim:
-    - text: |
-        Que bom!
-        O que mais você gostaria de saber?
-
-  utter_curiosidades_mais_nao:
-    - text: |
-        Ok, podemos conversar sobre projetos e propostas
-        Você quer falar sobre isso? (Sim ou Não)
-
-  utter_curiosidades_falar_sobre_projetos:
-    - text: |
-        Maravilha! É bom saber que você quer entender mais sobre propostas e projetos
-
-  utter_curiosidades_quantidade_projetos:
-    - text: |
-        Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.
-        Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos.
-        Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes.
-
-  utter_curiosidades_beneficios_incentivo_projetos_culturais:
-    - text: |
-        O principal benefício de incentivar projetos culturais é dar a chance para sociedade
-        usufruir das mais diversas manifestações culturais que talvez nunca fossem possíveis sem incentivo.
-        E tem mais...as empresas que incentivam projetos culturais podem deduzir do imposto de renda as
-        quantias que despenderam em projetos aprovados pelo Ministério da Cultura
-        É claro que essa dedução do imposto de renda acontece nas condições estabelecidas na legislação vigente, e está limitada a
-        4% do imposto devido
-
-  utter_curiosidades_lei_rouanet_elegibilidade:
-    - text: |
-        Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro, pode se beneficiar
-        desta Lei e se candidatar à captação de recursos de renúncia fiscal.
-        A proponência pode ser feita por Pessoas físicas com atuação comprovada na área cultural,
-        ou Pessoas jurídicas de natureza cultural com, no mínimo, dois anos de atividade,
-        podendo ser:
-          Pessoas jurídicas públicas da administração indireta
-          (autarquias, fundações culturais etc.)
-          ou pessoas jurídicas privadas com ou sem fins lucrativos
-          (empresas, cooperativas, fundações, ONGs, organizações culturais etc.)
-
-  utter_curiosidades_lei_rouanet_arrecadamento:
-    - text: |
-        O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural.
-        Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura.
-        Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a
-        declaração no modelo completo podem contribuir com a lei Rouanet apoiando projetos.
-        Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.
-
-  utter_curiosidades_lei_rouanet_denuncia:
-    - text: |
-        Para entender como fazer uma denúncia, entre em contato com as áreas do MinC: http://rouanet.cultura.gov.br/fale-conosco/ .
-
-  utter_curiosidades_elegibilidade_de_empresa_para_beneficios:
-    - text: |
-        Somente as Pessoas Jurídicas tributadas com base no Lucro Real podem descontar as doações ou patrocínios do imposto de renda observando
-        sempre o limite máximo de 4% do imposto devido.
-        Se você quiser saber mais sobre quais Pessoas Jurídicas devem fazer a apuração do lucro real confira o artigo 246, do Decreto 3.000 de
-        26 de março de 1999 que Regulamenta a tributação, fiscalização, arrecadação e administração do Imposto sobre a Renda e Proventos de Qualquer Natureza
-
-  utter_curiosidades_receber_incetivo_de_parentes:
-    - text: |
-        Olha, alguns familiares não podem incentivar projetos:
-          - o cônjuge
-          - os parentes até o terceiro grau, inclusive os afins
-          - e os dependentes… tanto do doador, quanto do patrocinador, dos titulares, administradores, acionistas ou sócios de pessoa jurídica vinculada ao doador ou patrocinador,
-            na data da operação, ou nos 12 meses anteriores.
-
-  utter_curiosidades_deducao_imposto_de_renda_incentivador:
-    - text: |
-        Atualmente, existem 2 situações descritas na Lei 8313/91:
-          1) o artigo 26 da Lei indica que os percentuais de dedução do IR são os seguintes:
-            Empresas:
-              até 30% do valor patrocinado;
-              até 40% do valor doado
-            Pessoa física:
-              até 60% do valor patrocinado;
-              até 80% do valor doado.
-              nesse caso, a empresa incentivadora poderá ainda lançar o valor incentivado como despesa operacional
-          2) Com a modificação implementada pela Lei 9.874/99, quem investe em projetos culturais enquadrados nos segmentos
-          indicados pelo artigo 18 da Lei passou a ter a possibilidade de deduzir até 100% do valor doado ou patrocinado as
-          empresas que investem nesses segmentos não podem lançar o valor incentivado como despesa operacional agora,
-        IMPORTANTE: os percentuais de dedução de IR são limitados aos estabelecidos pela legislação do imposto de renda vigente,
-        que atualmente são 4% do imposto devido para empresas e 6% do imposto devido para pessoa física.
-        Você pode ver os detalhes das leis pelos endereços:
-        Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm
-        Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm"
-
-  utter_curiosidades_captacao_de_recursos:
-    - text: |
-        O próprio proponente ou alguém contratado pode captar os recursos para a execucao do projeto,
-        além disso, ele pode ser remunerado até o limite de 10% do valor do Custo do Projeto, sendo o teto do valor da remuneração de R$ 150 mil.
-
-        Ah, e este percentual pode ser expandido quando o projeto é realizado fora do eixo Rio-São Paulo:
-            15% do valor total do custo do projeto nas Regiões Norte, Nordeste e Centro-Oeste;
-            12,5% na Região Sul e nos estados de Minas Gerais e Espírito Santo.
-
-        Mas os valores destinados à remuneração somente poderão ser pagos proporcionalmente às parcelas já captadas!
-
-  utter_curiosidades_valor_maximo_projeto:
-    - text: |
-        Isto depende do seu perfil de proponente.
-        Sobre qual perfil você quer saber:
-          - Pessoa Física e Microempresário Individual(MEI)
-          - Demais Pessoas Jurídicas
-          - Quero saber de todos
-
-  utter_curiosidades_valor_maximo_pessoa_fisica:
-    - text: |
-        Para a Pessoa Física e para o Empresário Individual com enquadramento em Microempresário Individual (MEI), o valor máximo é de R$ 1,5 milhão para até quatro projetos por ano.
-
-        Estes limites podem ser ultrapassados dependendo do espaço em que o projeto cultural será realizado e a região:
-        Ocorrendo em espaço público, estes perfis tem a quantidade de projetos acrescido em 2, mas o valor máximo não muda.
-
-  utter_curiosidades_valor_maximo_pessoa_juridica:
-    - text: |
-        Então, em relação aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,5 milhões para até oito projetos por ano;
-        Para a Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, o valor máximo é de R$ 60 milhões para até 16 projetos por ano.
-
-        Se o projeto cultural ocorrer em espaço público, o Empresário Individual tem a quantidade de projetos acrescido em 3, mas o valor máximo não muda.
-        Ássim como as Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, quem podem somar mais 4 projetos, se realizados em espaço público, mantendo os limites orçamentários.
-
-  utter_curiosidades_valor_maximo_regiao:
-    - text: |
-        Se o seu projeto for aplicado na Região Sul, ou no Espírito Santo ou Minas Gerais, pode ter um aumento de até 25%.Nas Regiões Norte, Nordeste ou Centro-Oeste, o aumento pode ser de até 50%.
-
-        Lembrando que essa exceção não pode ser aplicada em projetos com:
-        - planos anuais e plurianuais;
-        - conservação e restauração de imóveis, monumentos, espaços e objetos tombados.
-
-        Quem autoriza os limites desses projetos, de reservação de acervo, exposições com acervos museológicos, de construção e implantação de equipamentos culturais, é a área técnica do MinC.
-
-  utter_curiosidades_valor_maximo_outro_perfil:
-    - text: |
-        Você gostaria de saber a respeito dos limites para outro perfil?
+  - utter_salic
+  - utter_salic_preenchimento_cadastro_rubrica_advogado_contador
+  - utter_salic_preenchimento
+  - utter_salic_preenchimento_campo_custo_auditoria
+  - utter_salic_preenchimento_valor_ingresso
+  - utter_salic_preenchimento_vinculo_cpf_proposta
+  - utter_salic_preenchimento_cadastro_agencia_bancaria
+  - utter_salic_erros
+  - utter_salic_erros_planilha_desapareceu
+  - utter_salic_erros_salvamento_de_proposta
+  - utter_salic_recuperacao_de_senha
+  - utter_salic_erros_vinculo_cpf_cnpj
+  - utter_salic_erros_achar_proposta
+  - utter_salic_cadastro_proponente
+  - utter_salic_cadastro_usuario

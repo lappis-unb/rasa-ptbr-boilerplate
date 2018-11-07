@@ -6,8 +6,7 @@ run python -m pip install --upgrade pip
 
 add ./bot.requirements.txt /tmp
 
-run pip install --no-cache-dir -r /tmp/bot.requirements.txt  && \
-    python -m spacy download pt
+run pip install --no-cache-dir -r /tmp/bot.requirements.txt
 
 run apt-get remove --purge -y git && \
     mkdir /bot
@@ -17,7 +16,7 @@ add ./scripts /scripts
 
 workdir /bot
 
-env TRAINING_EPOCHS=300                    \
+env TRAINING_EPOCHS=20                    \
     ROCKETCHAT_URL=rocketchat:3000         \
     MAX_TYPING_TIME=10                     \
     MIN_TYPING_TIME=1                      \
