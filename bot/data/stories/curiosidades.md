@@ -163,10 +163,17 @@
 
 ## pathCuriosidade.13
 > identificar_curiosidade
+* curiosidades_remuneracao_proponente
+  - utter_curiosidades_remuneracao_proponente
+  - utter_curiosidades_mais
+> curiosidade_final
+
+## pathCuriosidade.14
+> identificar_curiosidade
 * curiosidade_comercializacao_de_ingressos_
   - utter_curiosidades_comercializacao_de_ingressos
   - utter_curiosidades_mais
-> curiosidade_final 
+> curiosidade_final
 
 ## pathCuriosidade.oqueeh
 > identificar_curiosidade

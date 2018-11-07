@@ -45,7 +45,7 @@
 ## intent:curiosidades_lei_rouanet_elegibilidade
 - quem pode se inscrever na lei rouanet
 - quem pode participar
-- quero eu me inscrevo na lei rouanet
+- quero me inscrever na lei rouanet
 - posso me inscrever na lei rouanet
 - quero participar da lei
 - quero me inscrever
@@ -197,7 +197,7 @@
 - proponente ser pago
 
 ## intent:curiosidades_valor_maximo_projeto
-- tem valor maximo de projetos
+- existe valor maximo para minha proposta
 - qual e o valor maximo de projetos
 - minha proposta pode atingir qual valor
 - maior valor para um projeto
@@ -207,70 +207,124 @@
 - tem limite de abertura de projetos
 - quantos projetos posso ter em meu nome
 - ha um valor maximo por projeto
-- existe valor maximo para minha proposta
-- meu projeto pode chegar a que valor
 - valor maximo de projeto
 - valor maximo de proposta
-- quantidade maxima de projetos
-- quantidade maxima de propostas
-- total de projetos em meu nome 
+- maxima de projetos
+- quantidade de propostas
 - valor maximo por ano
 - quantidade maxima
 - valor maximo
 - valor por ano
 - quantidade por ano
-- limite de projetos por ano
-- limite de projetos por proponente
 - ultrapassar o limite
-- limite pode ser ultrapassado
-- quantidade máxima de projetos pode ser ultrapassada
-- ultrapassar limite de projetos
-- aumentar limite de projetos
 
 ## intent:curiosidades_valor_maximo_pessoa_fisica
 - pessoa fisica
-- MEI
-- sou uma pessoa fisica
+- uma pessoa fisica
 - sobre pessoa fisica
-- sou um artista
-- microempresario individual
+- um artista
+- microempresario
+- sobre os dois perfis
 - primeira opção
 - primeiro tópico
 - se encaixa na 1
-- um
-- de pessoa fisica
-- opção um
-- categoriga um
-
-## intent:curiosidades_valor_maximo_pessoa_juridica
-- pessoa juridica
-- sou uma pessoa juridica
-- sou empresario individual
-- empresario individual
-- empresa individual de responsabilidade limitada 
-- EIRELI
-- segunda opção
-- segundo tópico
-- sociedade limitada
-- acho que na 2
-- opção 2
-- na segunda
-- categoria 2
-
-## intent:curiosidades_valor_maximo_geral
-- terceira opção
-- terceiro tópico
-- todas as opcoes
+- saber de tudo
+- empresas em geral
+- perfis em geral
+- MEI
 - geral
-- quero saber de tudo
-- todas as empresas
-- todos os perfis
-- sobre os dois perfis
 - escolha 3
-- na 3
+- vai na 3
 - opção três
 - três
 - categoria 3
+
+## intent:curiosidades_valor_maximo_pessoa_juridica
+- sou uma pessoa juridica
+- tenho uma empresa
+- sou empresario individual
+- empresario individual
+- empresa individual de responsabilidade limitada
+- pessoa juridica
+- EIRELI
+- segunda opção
+- segundo
+- sociedade limitada
+- juridica
+- empresa individual
+- acho que na 2
+- opção 2
+- opcao dois
+- na segunda
+- na 2
+- quero a 2
+- dois
+
+## intent:curiosidades_valor_maximo_geral
+- saber sobre todos os perfis
+- ver todos os perfis
+- quero todas as opções
+- quero saber tudo
+- sobre os dois tópicos
+- terceira opção
+- terceiro tópico
+- todas as opcoes
+- todas as empresas
+- todos os perfis
+- mostrar opções
+- mostrar perfis
+- mostrar tópicos
+- todas
+- perfis
+- opções
+- tudo
+- tópico
+- perfil
+- todas
+
+
+## intent:curiosidades_remuneracao_proponente
+- o proponente (autor do projeto) é remunerado
+- ha limite para remuneração do proponente
+- existe remuneração para o proponente
+- quanto e a remuneraçao do proponente
+- o proponente recebe algo
+- o proponente ganha alguma coisa
+- qual o valor que recebe o proponente
+- o proponente tem remuneracao
+- o proponente recebe um salario
+- o proponente tem direito a honorários
+- remuneração
+- remunerado
+- honorário
+- salário
+- pagamento
+- valor
+- recebe
+- ordenado
+- rendimento
+
+## intent:processo_periodo
+- que data devo apresentar proposta
+- qual data devo me inscrever
+- que época devo enviar proposta
+- quando posso apresentar proposta
+- qual periodo para apresentar proposta
+- qual periodo para apresentar projeto
+- qual o periodo de submissao
+- quando posso enviar projeto
+- quando posso submeter uma proposta
+- periodo para submissao de proposta
+- periodo de submissao
+- inscrever proposta
+- inscrever projeto
+- data inscriçao
+- data para enviar
+- epoca inscriçao
+- prazo inscriçao
+- prazo submissao
+- prazo enviar
+- prazo envio
 
 ## intent:curiosidades_comercializacao_de_ingressos
 - os produtos culturais podem ser comercializados
