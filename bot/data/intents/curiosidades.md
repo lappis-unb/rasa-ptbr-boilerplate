@@ -347,3 +347,25 @@
 - quantos ingressos podem ser de graça
 - há um limite de preço das entradas
 - qual o limite de valor das entradas
+
+## intent:curiosidades_comprovacao_experiencia
+- é preciso comprovar experiência na área para apresentar uma proposta ao MinC?
+- tenho que ter experiencia para apresentar proposta
+- e necessario ter experiencia
+- deve se ter prática
+- tenho que apresentar prática para levantar proposta
+- é exigido capacitação para expor uma proposta
+- e cobrado conhecimento especifico para exibir proposta
+- tem se necessário experiencia para apresentar proposta
+- e obrigado ter qualificação
+- e prescrito a experiencia na area em que se deseja levantar proposta
+- ter experiencia
+- comprovar experiencia
+- levantar proposta
+- prática
+- qualificação na area
+- capacidade
+- conhecimento
+- técnica no assunto
+- vivencia 
+- capacitação
