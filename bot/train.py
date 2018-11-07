@@ -10,8 +10,13 @@ from rasa_core.policies.fallback import FallbackPolicy
 from fallback import CustomFallbackPolicy
 
 logger = logging.getLogger(__name__)
-TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 20))
 NLU_THRESHOLD = float(os.getenv('NLU_THRESHOLD', 0.6))
+
+TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 20))
+BATCH_SIZE = int(os.getenv('BATCH_SIZE', 10))
+VALIDATION_SPLIT = float(os.getenv('VALIDATION_SPLIT', 0.2))
+
+
 CORE_THRESHOLD = float(os.getenv('CORE_THRESHOLD', 0.6))
 MAX_HISTORY = int(os.getenv('MAX_HISTORY', 2))
 FALLBACK_ACTION_NAME = str(os.getenv('FALLBACK_ACTION_NAME', 'utter_default'))
@@ -41,7 +46,9 @@ def train_dialogue(domain_file, model_path, training_folder):
 
     training_data = agent.load_data(training_folder,augmentation_factor=20)
 
-    agent.train(training_data, epochs=TRAINING_EPOCHS)
+    agent.train(training_data, epochs=TRAINING_EPOCHS, 
+                                batch_size=BATCH_SIZE,
+                                validation_split=VALIDATION_SPLIT)
     agent.persist(model_path)
 
 
