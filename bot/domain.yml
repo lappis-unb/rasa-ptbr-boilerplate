@@ -20,6 +20,7 @@ intents:
   - curiosidades_valor_maximo_pessoa_fisica
   - curiosidades_valor_maximo_pessoa_juridica
   - curiosidades_valor_maximo_geral
+  - curiosidades_remuneracao_proponente
 
 actions:
   - utter_definir_perfil
@@ -64,6 +65,7 @@ actions:
   - utter_curiosidades_valor_maximo_pessoa_juridica
   - utter_curiosidades_valor_maximo_regiao
   - utter_curiosidades_valor_maximo_outro_perfil
+  - utter_curiosidades_remuneracao_proponente
   - action_o_que_eh
 
 
@@ -360,3 +362,11 @@ templates:
   utter_curiosidades_valor_maximo_outro_perfil:
     - text: |
         Você gostaria de saber a respeito dos limites para outro perfil?
+
+  utter_curiosidades_remuneracao_proponente:
+    - text: |
+        O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, conforme previsto no orçamento apresentado.
+        O valor desta remuneração, ainda que por diversos serviços, não pode ultrapassar 50% do custo do projeto.
+        O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e
+        em benefício de empresa coligada ou que tenha sócio em comum.
+        O limite pode ser ultrapassado quando a remuneração é feita a grupos artísticos familiares que atuem na execução do projeto ou quando se tratar de pagamento a um mesmo fornecedor em projetos de execução de obras e restauros.
