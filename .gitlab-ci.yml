@@ -25,7 +25,7 @@ build stable:
     - docker build -f docker/actions.Dockerfile -t $ACTIONS_STABLE_IMAGE .
     - docker push $ACTIONS_STABLE_IMAGE
 
-    - docker build -f docker/web/Dockerfile -t $WEB_STABLE_IMAGE .
+    - docker build -f docker/web.Dockerfile -t $WEB_STABLE_IMAGE .
     - docker push $WEB_STABLE_IMAGE
   only:
     - tags
