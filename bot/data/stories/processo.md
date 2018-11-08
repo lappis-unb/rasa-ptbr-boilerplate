@@ -6,7 +6,7 @@
       - utter_processo
 * processo_como_funciona
       - utter_processo_como_funciona
-      - utter_processo
+      - utter_manter_conversa
 
 ## Processo 2
 * cumprimentar
@@ -16,7 +16,7 @@
       - utter_processo
 * processo_reativacao_de_proposta
       - utter_processo_reativacao_de_proposta
-       - utter_processo
+       - utter_manter_conversa
 
 ## Processo 3
 * cumprimentar
