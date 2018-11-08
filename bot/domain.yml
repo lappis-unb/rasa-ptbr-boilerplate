@@ -22,6 +22,7 @@ intents:
   - curiosidades_valor_maximo_geral
   - curiosidades_remuneracao_proponente
   - curiosidades_comercializacao_de_ingressos
+  - curiosidades_comprovacao_experiencia
 
 actions:
   - utter_definir_perfil
@@ -68,6 +69,7 @@ actions:
   - utter_curiosidades_valor_maximo_outro_perfil
   - utter_curiosidades_remuneracao_proponente
   - utter_curiosidades_comercializacao_de_ingressos
+  - utter_curiosidades_comprovacao_experiencia
   - action_o_que_eh
 
 
@@ -381,3 +383,10 @@ templates:
         Até 10% deve ser disponnibilizado gratuitamente pelos patrocinadores;
         Até 10% deve ser distribuido gratuitamente pelo proponente de forma a divulgar o projeto;
         Minimo de 20% dos ingressos deve ser comercializado em valores que não utrapassem R$75,00.
+
+  utter_curiosidades_comprovacao_experiencia:
+    - text: |
+        A comprovação de experiência não é necessária para a admissão do primeiro projeto de realizadores culturais recém-inseridos no mercado.
+        Com esta regra, o MinC busca apoiar novos empreendedores com bons projetos para que se consolidem. Apoiar o jovem empreendedor gera maiores possibilidades de atuação no campo da inovação.
+        No caso de proponentes experientes, a experiência em atividades culturais deve ser comprovada no ato de inscrição da proposta.
+        No caso de pessoa jurídica, a comprovação é realizada por meio do código de Classificação Nacional de Atividades Econômicas (CNAE), referente à área cultural nos registros do CNPJ da instituição.

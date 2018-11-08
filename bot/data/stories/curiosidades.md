@@ -175,6 +175,13 @@
   - utter_curiosidades_mais
 > curiosidade_final
 
+## pathCuriosidade.15
+> identificar_curiosidade
+* curiosidades_comprovacao_experiencia_
+  - utter_curiosidades_comprovacao_experiencia
+  - utter_curiosidades_mais
+> curiosidade_final
+
 ## pathCuriosidade.oqueeh
 > identificar_curiosidade
 * o_que_eh

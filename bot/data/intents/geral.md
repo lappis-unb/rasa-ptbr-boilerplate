@@ -99,7 +99,7 @@
 - conversar sobre projetos
 - conversar sobre proposta
 - projeto
-- proposta
+- propostas e projetos
 - criação
 - andamento
 - criacao de projeto
