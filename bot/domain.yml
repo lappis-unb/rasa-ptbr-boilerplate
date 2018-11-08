@@ -146,9 +146,9 @@ templates:
   utter_default:
     - text: |
         Desculpe, não consegui te entender.
-        
+
         Você pode fazer uma pergunta mais objetiva para que a nossa conversa continue?
-        
+
         Ex: Quem pode se inscrever na lei rouanet? Como eu me inscrevo na lei rouanet?
 
   utter_restart:
@@ -738,19 +738,19 @@ templates:
 
   utter_definicao_cnic:
     - text: |
-          O Conselho Nacional de Incentivo à Cultura (CNIC) é responsável por 
+          O Conselho Nacional de Incentivo à Cultura (CNIC) é responsável por
 
           selecionar e aprovar os projetos para captação.
 
   utter_definicao_sefic:
     - text: |
-          A (Secretaria de Fomento e Incentivo à Cultura) planeja, 
+          A (Secretaria de Fomento e Incentivo à Cultura) planeja,
 
-          coordena e supervisiona a operacionalização do Programa 
+          coordena e supervisiona a operacionalização do Programa
 
-          Nacional de Apoio à Cultura (Pronac), na aprovação, 
+          Nacional de Apoio à Cultura (Pronac), na aprovação,
 
-          monitoramento e prestação de contas de projetos culturais.  
+          monitoramento e prestação de contas de projetos culturais.
 
   utter_definicao_projeto:
     - text: |
@@ -861,26 +861,26 @@ templates:
 utter_salic_cadastro_usuario_video:
     - text: |
         O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura,
-       
+
         e é por ele que você cadastra a proposta e a acompanha.
-       
+
         Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
-       
+
         nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
-       
+
         Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)
 
-  utter_salic_cadastro_apos_video:
+utter_salic_cadastro_apos_video:
     - text: |
         Espero que o vídeo tenha ajudado.
-        
+
         Agora que você já se cadastrou, o próximo passo cadastrar um proponente
 
 utter_salic_proponente_cadastrado:
     - text: |
         Okay! Agora que você tem um proponente cadastrado, é só preencher sua proposta!
 
-  utter_salic_inscricao_proponente:
+utter_salic_inscricao_proponente:
     - text: |
         Para inscrever um proponente, ou se tornar um proponente, você deve:
 
@@ -897,25 +897,25 @@ utter_salic_proponente_cadastrado:
 utter_curiosidades_indicacao:
     - text: |
         Legal! Meu assunto favorito
- 
+
         Você pode me perguntar algumas curiosidades sobre a Lei Rouanet
- 
+
         Por exemplo, o que é a Lei Rouanet, ou de onde vem o dinheiro usado na Lei.
- 
+
         Qual a sua pergunta? Vou tentar responder da melhor maneira possível
 
 
-   utter_mais_alguma_pergunta:
+utter_mais_alguma_pergunta:
     - text: |
         Você possui mais alguma dúvida? (Sim ou Não)
 
-  utter_nao_aprendi_contexto:
+utter_nao_aprendi_contexto:
     - text: |
         Então, sei que agora, você gostaria de tirar dúvidas mais específicas do seu projeto.
 
         Estou em fase de testes e não consigo responder. Mas, em breve vou poder te ajudar com esses temas.
-      
-  utter_curiosidadesMais:
+
+utter_curiosidadesMais:
     - text: |
         Você quer saber mais curiosidades?
 
@@ -925,7 +925,7 @@ utter_curiosidades_indicacao:
     - text: |
         Você gostaria de saber mais curiosidades?
 
-  utter_curiosidadesMaisSim:
+utter_curiosidadesMaisSim:
     - text: |
         EBA!
 
@@ -941,7 +941,7 @@ utter_curiosidades_indicacao:
 
         De qual assunto você quer saber?
 
-  utter_curiosidadesMaisNao:
+utter_curiosidadesMaisNao:
     - text:
         Tudo bem, então você quer saber sobre *projetos e propostas*?
 
@@ -951,11 +951,11 @@ utter_curiosidades_indicacao:
     - text:
         Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?
 
-  utter_curiosidadesFalarSobreProjetos:
+utter_curiosidadesFalarSobreProjetos:
     - text: |
           Maravilha! É bom saber que você quer entender mais sobre propostas e projetos
 
-  utter_lei_rouanet_quantidade_de_projetos:
+utter_lei_rouanet_quantidade_de_projetos:
     - text: |
           Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.
 
@@ -963,7 +963,7 @@ utter_curiosidades_indicacao:
 
           Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes.
 
-  utter_lei_rouanet_beneficios_incentivo_projetos_culturais:
+utter_lei_rouanet_beneficios_incentivo_projetos_culturais:
     - text: |
           O principal benefício de incentivar projetos culturais é dar a chance para sociedade usufruir das mais diversas manifestações culturais que talvez nunca fossem possíveis sem incentivo.
 
@@ -971,7 +971,7 @@ utter_curiosidades_indicacao:
 
           É claro que essa dedução do imposto de renda acontece nas condições estabelecidas na legislação vigente, e está limitada a 4% do imposto devido
 
-  utter_lei_rouanet_quem_pode_ser_proponente:
+utter_lei_rouanet_quem_pode_ser_proponente:
     - text: |
           Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro, pode se beneficiar desta Lei e se candidatar à captação de recursos de renúncia fiscal.
 
@@ -987,7 +987,7 @@ utter_curiosidades_indicacao:
 
           (empresas, cooperativas, fundações, ONGs, organizações culturais etc.)
 
-  utter_lei_rouanet_origem_do_dinheiro:
+utter_lei_rouanet_origem_do_dinheiro:
     - text: |
           O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural.
 
@@ -997,32 +997,32 @@ utter_curiosidades_indicacao:
 
           Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.
 
-  utter_lei_rouanet_denuncia:
+utter_lei_rouanet_denuncia:
     - text: |
         Para entender como fazer uma denúncia, reclamações, ou tirar dúvidas, entre em contato com as áreas do MinC: http://rouanet.cultura.gov.br/fale-conosco/ .
 
-  utter_lei_rouanet_quem_pode_incentivar:
+utter_lei_rouanet_quem_pode_incentivar:
     - text: |
         Somente as Pessoas Jurídicas tributadas com base no Lucro Real podem descontar as doações ou patrocínios do imposto de renda observando
-        
+
         sempre o limite máximo de 4% do imposto devido.
-        
+
         Se você quiser saber mais sobre quais Pessoas Jurídicas devem fazer a apuração do lucro real confira o artigo 246, do Decreto 3.000 de
-        
+
         26 de março de 1999 que Regulamenta a tributação, fiscalização, arrecadação e administração do Imposto sobre a Renda e Proventos de Qualquer Natureza
 
 utter_lei_rouanet_receber_incetivo_de_parentes:
     - text: |
         Olha, alguns familiares não podem incentivar projetos:
-        
+
           - o cônjuge
-        
+
           - os parentes até o terceiro grau, inclusive os afins
-        
+
           - e os dependentes… tanto do doador, quanto do patrocinador, dos titulares, administradores, acionistas ou sócios de pessoa jurídica vinculada ao doador ou patrocinador,
             na data da operação, ou nos 12 meses anteriores.
 
-  utter_lei_rouanet_porcentagem_de_deducao_do_imposto:
+utter_lei_rouanet_porcentagem_de_deducao_do_imposto:
     - text: |
           Atualmente, existem 2 situações descritas na Lei 8313/91:
 
@@ -1052,14 +1052,14 @@ utter_lei_rouanet_receber_incetivo_de_parentes:
 
           Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm
 
-  utter_lei_rouanet_captacao_de_recursos:
+utter_lei_rouanet_captacao_de_recursos:
     - text: |
         O próprio proponente ou alguém contratado pode captar os recursos para a execução do projeto,
-        
+
         além disso, ele pode ser remunerado até o limite de 10% do valor do Custo do Projeto, sendo o teto do valor da remuneração de R$ 150 mil.
 
         Ah, e este percentual pode ser expandido quando o projeto é realizado fora do eixo Rio-São Paulo:
-           
+
             15% do valor total do custo do projeto nas Regiões Norte, Nordeste e Centro-Oeste;
 
             12,5% na Região Sul e nos estados de Minas Gerais e Espírito Santo.
@@ -1067,16 +1067,16 @@ utter_lei_rouanet_receber_incetivo_de_parentes:
 
         Mas os valores destinados à remuneração somente poderão ser pagos proporcionalmente às parcelas já captadas!
 
- utter_lei_rouanet_valor_maximo_projeto:
+utter_lei_rouanet_valor_maximo_projeto:
     - text: |
         Isto depende do seu perfil de proponente.
-       
+
         Sobre qual perfil você quer saber:
-       
+
           - Pessoa Física e Microempresário Individual(MEI)
-       
+
           - Demais Pessoas Jurídicas
-       
+
           - Quero saber de todos
 
 utter_lei_rouanet_valor_maximo_pessoa_fisica:
@@ -1084,7 +1084,7 @@ utter_lei_rouanet_valor_maximo_pessoa_fisica:
         Para a Pessoa Física e para o Empresário Individual com enquadramento em Microempresário Individual (MEI), o valor máximo é de R$ 1,5 milhão para até quatro projetos por ano.
 
         Estes limites podem ser ultrapassados dependendo do espaço em que o projeto cultural será realizado e a região:
-     
+
         Ocorrendo em espaço público, estes perfis tem a quantidade de projetos acrescido em 2, mas o valor máximo não muda.
 
 utter_lei_rouanet_valor_maximo_pessoa_juridica:
@@ -1097,7 +1097,7 @@ utter_lei_rouanet_valor_maximo_pessoa_juridica:
 
         Ássim como as Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, quem podem somar mais 4 projetos, se realizados em espaço público, mantendo os limites orçamentários.
 
-  utter_lei_rouanet_valor_maximo_regiao:
+utter_lei_rouanet_valor_maximo_regiao:
     - text: |
         Se o seu projeto for aplicado na Região Sul, ou no Espírito Santo ou Minas Gerais, pode ter um aumento de até 25%.Nas Regiões Norte, Nordeste ou Centro-Oeste, o aumento pode ser de até 50%.
 
@@ -1109,11 +1109,11 @@ utter_lei_rouanet_valor_maximo_pessoa_juridica:
 
         Quem autoriza os limites desses projetos, de reservação de acervo, exposições com acervos museológicos, de construção e implantação de equipamentos culturais, é a área técnica do MinC.
 
-  utter_lei_rouanet_valor_maximo_outro_perfil:
+utter_lei_rouanet_valor_maximo_outro_perfil:
     - text: |
         Você gostaria de saber a respeito dos limites para outro perfil?
 
-  utter_lei_rouanet_remuneracao_proponente:
+utter_lei_rouanet_remuneracao_proponente:
     - text: |
         O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, conforme previsto no orçamento apresentado.
 
@@ -1140,27 +1140,27 @@ utter_lei_rouanet_comercializacao_de_ingressos:
         Minimo de 20% dos ingressos deve ser comercializado em valores que não utrapassem R$75,00.
   #TODO
 
-  utter_salic_cadastro:
+utter_salic_cadastro:
     - text: |
         Você já tem cadastro no SALIC? (Sim ou Não)
 
-  utter_salic_aviso:
+utter_salic_aviso:
     - text: |
         Para eu ser mais eficiente na solução da sua dúvida vou fazer algumas perguntas.
 
         Você já preencheu uma proposta? (Sim ou Não)
 
-  utter_salic_preenchimento:
+utter_salic_preenchimento:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre o preenchimento de
 
           propostas no SALIC
 
-  utter_salic_preenchimento_campo_custo_auditoria:
+utter_salic_preenchimento_campo_custo_auditoria:
     - text: |
           Este campo não precisa ser preenchido agora, isso vai ser preenchido na prestação de contas.
 
-  utter_preenchimentoVinculoDePropostas:
+utter_preenchimentoVinculoDePropostas:
     - text: |
           Você deve ir em:
 
@@ -1172,7 +1172,7 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           contábil e jurídica.
 
-  utter_salic_preenchimento_valor_ingresso:
+utter_salic_preenchimento_valor_ingresso:
     - text: |
           Esse valor é usado para conferir a viabilidade do projeto e não
 
@@ -1186,7 +1186,7 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           de público.
 
-  utter_salic_preenchimento_vinculo_cpf_proposta:
+utter_salic_preenchimento_vinculo_cpf_proposta:
     - text: |
           O dirigente do projeto deve acessar o sistema e seguir os passos:
 
@@ -1202,14 +1202,14 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           3- Por último... clica também no botão Vincular
 
-  utter_salic_preenchimento_cadastro_agencia_bancaria:
+utter_salic_preenchimento_cadastro_agencia_bancaria:
     - text: |
           A agência bancária deve ser do banco do Brasil, deve conter 5
 
           dígitos, sem hifens, pontos ou letras
 
   #TODO
-  utter_salic_erros:
+utter_salic_erros:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre eventuais erros do
 
@@ -1217,13 +1217,13 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           preenchidos e recuperação de senha
 
-  utter_salic_erros_planilha_desapareceu:
+utter_salic_erros_planilha_desapareceu:
     - text: |
           Ao excluir um produto do plano de distribuição a planilha vai ser
 
           \"zerada\" e o proponente deverá refazê-la.
 
-  utter_salic_erros_salvamento_de_proposta:
+utter_salic_erros_salvamento_de_proposta:
     - text: |
           Esse erro aconteceu por exceder o tempo logado no sistema.
 
@@ -1231,7 +1231,7 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           Não esqueça de ir salvando a cada passo do preenchimento.
 
-  utter_salic_recuperacao_de_senha:
+utter_salic_recuperacao_de_senha:
     - text: |
           Ah isso acontece com todo mundo ;)
 
@@ -1243,7 +1243,7 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           senhasalic@cultura.gov.br
 
-  utter_salic_erros_vinculo_cpf_cnpj:
+utter_salic_erros_vinculo_cpf_cnpj:
     - text: |
           Apenas o dirigente da instituição é quem pode vincular uma
 
@@ -1251,7 +1251,7 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           o dirigente deve entrar com login e senha e aceitar o vínculo
 
-  utter_salic_erros_achar_proposta:
+utter_salic_erros_achar_proposta:
     - text: |
           Selecione o CPF ou CNPJ que deseja como proponente e liste a proposta
 
@@ -1263,7 +1263,7 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           propostas ativas no sistema
 
-  utter_processo:
+utter_processo:
     - text: |
           Na categoria de processos eu posso responder dúvidas sobre:
 
@@ -1277,13 +1277,13 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           Reativação da proposta
 
-  utter_processoProcessoCaptacaoDeRecursos:
+utter_processoProcessoCaptacaoDeRecursos:
     - text: |
           A captação só pode começar depois que o projeto passa pela fase de enquadramento, pela análise documental e pela publicação.
 
           Assim que o projeto é publicado no Diário Oficial da União você pode começar a captar recursos.
 
-  utter_processo_reativacao_de_proposta:
+utter_processo_reativacao_de_proposta:
     - text: |
           Pra reativar uma proposta indeferida você deve enviar um pedido de reativação
 
@@ -1293,20 +1293,20 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           E aí é só aguardar uma resposta
 
-  utter_salic_cadastro_proponente:
+utter_salic_cadastro_proponente:
     - text: |
           Basta você entrar no Salic...
 
           clicar em Administrativo > Cadastrar proponente e preencher todos os dados
 
   #TODO
-  utter_processo_prazo:
+utter_processo_prazo:
     - text: |
           Posso responder suas dúvidas a respeito de Datas
 
           e Prazos do seu projeto. Como: envio do CNAE e desistência de recurso
 
-  utter_processo_prazo_envio_cnae:
+utter_processo_prazo_envio_cnae:
     - text: |
           O proponente tem o prazo de 40 dias para responder a diligência 20+20 prorrogados automaticamente.
 
@@ -1314,7 +1314,7 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           Caso seja insuficiente, o proponente poderá anexar o protocolo da Receita de inserção do CNAE no Salic.
 
-  utter_processo_prazo_desistir_recurso:
+utter_processo_prazo_desistir_recurso:
     - text: |
           A partir do momento em que seu projeto foi enquadrado, iniciou-se o prazo de 10 dias corridos para recorrer ao enquadramento proposto para o projeto
 
@@ -1322,7 +1322,7 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
           Ambas as manifestações se dão por via da aba \"recurso\" no Menu ao lado esquerdo da tela do projeto, no Salic
 
- utter_processo_periodo:
+utter_processo_periodo:
     - text: |
         As propostas devem ser apresentadas todos os anos entre 1º de fevereiro a 30 de novembro
 
@@ -1331,7 +1331,7 @@ utter_lei_rouanet_comercializacao_de_ingressos:
         Fique de olho no prazo, não perca essa oportunidade!
 
 
-  utter_cumprimentar:
+utter_cumprimentar:
     - text: |
         Olá, meu  nome é Taís, sou assistente virtual do MinC
 
@@ -1347,7 +1347,7 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 
          Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
 
-  utter_despedir:
+utter_despedir:
     - text: |
         Foi um prazer te ajudar!
 
@@ -1368,19 +1368,19 @@ utter_lei_rouanet_comercializacao_de_ingressos:
         Quando surgir alguma dúvida, volte aqui!
 
         Até mais!
-  utter_fase_de_testes:
+utter_fase_de_testes:
     - text: |
         Ainda não consigo falar sobre outros assuntos.
 
         Estou em fase de testes e a cada dia aprendo mais com vocês.
 
-  utter_captacao:
+utter_captacao:
     - text: |
         Em captação, eu sei falar sobre quando captar e sobre como captar
 
         O que você deseja saber?
 
-  utter_captacao_quando_captar:
+utter_captacao_quando_captar:
     - text: |
         A captação só pode começar depois que o projeto passa pela fase de
         enquadramento, pela análise documental e pela publicação.
@@ -1389,12 +1389,12 @@ utter_lei_rouanet_comercializacao_de_ingressos:
         começar a captar recursos.
 
   #TODO
-  utter_captacao_como_captar:
+utter_captacao_como_captar:
     - text: |
         Para captar os recursos você deve achar incetivadores
 
   #TODO
-  utter_processo_definicao_etapas:
+utter_processo_definicao_etapas:
     - text: |
         O processo possui cinco etapas:
         - Preenchimento
@@ -1404,8 +1404,8 @@ utter_lei_rouanet_comercializacao_de_ingressos:
         - Análise de Resultados
 
         Você tem alguma dúvida sobre elas?
-  utter_menu:
-    - text: | 
+utter_menu:
+    - text: |
         Podemos falar sobre:
         - A Lei Rouanet
         - O SALIC
@@ -1413,14 +1413,15 @@ utter_lei_rouanet_comercializacao_de_ingressos:
         - Definições
         - Captação
   #TODO
-  utter_salic:
+utter_salic:
     - text: |
         Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
 
-  utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
+utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
     - text: |
         Você deve ir em:
         Orçamento do projeto > Custos por produto > Clicar no produto desejado
+
         Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
 
 
@@ -1430,7 +1431,7 @@ actions:
   - utter_cumprimentar
   - utter_despedir
   - utter_menu
-  
+
   - utter_captacao
   - utter_captacao_quando_captar
   - utter_captacao_como_captar
@@ -1451,7 +1452,6 @@ actions:
   - utter_mais_alguma_pergunta
   - utter_nao_aprendi_contexto
   - utter_curiosidades_indicacao
-
 
 
   - utter_lei_rouanet

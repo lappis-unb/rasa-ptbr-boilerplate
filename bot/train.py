@@ -44,7 +44,7 @@ def train_dialogue(domain_file, model_path, training_folder):
                         nlu_threshold=NLU_THRESHOLD,
                         core_threshold=CORE_THRESHOLD)])
 
-    training_data = agent.load_data(training_folder,augmentation_factor=50)
+    training_data = agent.load_data(training_folder,augmentation_factor=20)
 
     agent.train(training_data, epochs=TRAINING_EPOCHS, 
                                 batch_size=BATCH_SIZE,
