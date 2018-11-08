@@ -67,13 +67,13 @@
 ## intent:curiosidades_lei_rouanet_arrecadamento
 - quanto dinheiro a lei movimenta
 - quanto dinheiro a lei rouanet arrecada
-- De onde vem o dinheiro da lei rouanet
-- de onde vem o dinheiro usado na Lei
+- de onde vem o dinheiro da lei rouanet
+- de onde vem o dinheiro usado na lei
 - o dinheiro da lei rouanet é público
-- Porque os cidadãos tem que pagar pelos projetos da lei rouanet
-- a lei rouanet usa dinheiro de empresas?
+- porque os cidadãos tem que pagar pelos projetos da lei rouanet
+- a lei rouanet usa dinheiro de empresas
 - eu como cidadão posso contribuir para um projeto
-- quanto a lei ja arrecadou?
+- quanto a lei ja arrecadou
 - o dinheiro da lei é privado ou público
 - dinheiro
 - arrecadou
@@ -109,12 +109,12 @@
 - projeto ilegal
 
 ## intent:curiosidades_elegibilidade_de_empresa_para_beneficios
-- Qualquer empresa pode se beneficiar de incentivos fiscais, apoiando projetos culturais
-- Quais empresas podem se beneficiar ao apoiar projetos culturais
-- Que tipos de empresas podem se beneficiar ao apoiar projetos culturais
-- Apoiando projetos culturais, qualquer empresa se beneficia
-- Empresas que se beneficiam ao apoiar projeto culturais
-- Tenho uma empresa e quero particiar da lei rouanet, como eu sei se posso
+- qualquer empresa pode se beneficiar de incentivos fiscais, apoiando projetos culturais
+- quais empresas podem se beneficiar ao apoiar projetos culturais
+- que tipos de empresas podem se beneficiar ao apoiar projetos culturais
+- apoiando projetos culturais, qualquer empresa se beneficia
+- empresas que se beneficiam ao apoiar projeto culturais
+- tenho uma empresa e quero particiar da lei rouanet, como eu sei se posso
 - qual o critério de elegibilidade para pessoas jurídicas
 - toda empresa pode usar a lei rouanet
 - tem alguma execeção para uma empresa não utilizar a lei rouanet
@@ -135,11 +135,11 @@
 - meus pais e tios podem incentivar meu projeto
 - tem problema parentes incentivarem projetos
 - tenho parentes que desejam incentivar meus projetos, tem alguma restrição
-- parentes incentivando meus projetos. Tem problema
+- parentes incentivando meus projetos. tem problema
 - tem problema meu irmão ou irmã, tio ou tia, primo ou prima, mãe ou pai incentivar meus projetos
 - minha irmã quer incetivar meu projeto, tem problema
-- meu projeto pode ser incentivado pela minha família?
-- meus familiares podem incentivar meu projeto?
+- meu projeto pode ser incentivado pela minha família
+- meus familiares podem incentivar meu projeto
 - quero saber se meus parentes podem ajudar a financiar o meu projeto
 - incentivar
 - incentivado
@@ -156,13 +156,13 @@
 - incentivadores de projetos podem deduzir quanto de impostos de renda
 - quanto de imposto de renda incentivadores conseguem deduzir de impostos
 - qual valor um incentivador consegue deduzir de imposto de renda
-- caso eu incentive um projeto quanto eu vou abater do meu IR
-- quanto é o abatimento no IR caso haja algum incentivo
+- caso eu incentive um projeto quanto eu vou abater do meu ir
+- quanto é o abatimento no ir caso haja algum incentivo
 - qual a porcentagem do imposto que vou abater após incentivar projetos
-- qual é o desconto que recebo no IR ao incentivar um projeto
+- qual é o desconto que recebo no ir ao incentivar um projeto
 - qual a dedução de imposto de renda para incentivadores
-- Se eu incentivar eu vou ter dedução no meu imposto de renda
-- sou incentivador, quanto posso receber como dedução de imposto de renda??
+- se eu incentivar eu vou ter dedução no meu imposto de renda
+- sou incentivador, quanto posso receber como dedução de imposto de renda
 - imposto de renda
 - imposto
 - dedução
@@ -231,7 +231,7 @@
 - saber de tudo
 - empresas em geral
 - perfis em geral
-- MEI
+- mei
 - geral
 - escolha 3
 - vai na 3
@@ -246,7 +246,7 @@
 - empresario individual
 - empresa individual de responsabilidade limitada
 - pessoa juridica
-- EIRELI
+- eireli
 - segunda opção
 - segundo
 - sociedade limitada
@@ -349,7 +349,7 @@
 - qual o limite de valor das entradas
 
 ## intent:curiosidades_comprovacao_experiencia
-- é preciso comprovar experiência na área para apresentar uma proposta ao MinC?
+- é preciso comprovar experiência na área para apresentar uma proposta ao minc
 - tenho que ter experiencia para apresentar proposta
 - e necessario ter experiencia
 - deve se ter prática
@@ -369,3 +369,25 @@
 - técnica no assunto
 - vivencia 
 - capacitação
+
+## intent:curiosidades_valores_pagamento_caches
+- quais os valores para pagamento de cachês em projetos realizados com incentivo fiscal
+- há limites nos valores de pagamentos de cachês
+- existe limite de pagamento de cachê
+- qual o limite de pagamento de cachês
+- quanto posso dar de cache para os artitas
+- posso dar quanto de cache para meus funcionarios
+- como funciona o pagamento de cache
+- pagamento de cache para artista solo
+- quanto cada artista do grupo pode receber de cache
+- existe limite de pagamento para artistas
+- valor de pagamento para artista solo e grupos artisticos
+- quanto cada artista da peça pode receber
+- valor cache
+- pagamento cachê
+- limite de cache
+- cache artista
+- cachê projeto
+- pagamento artista solo
+- cache orquestra
+- limite cache artista solo

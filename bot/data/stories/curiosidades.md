@@ -182,6 +182,13 @@
   - utter_curiosidades_mais
 > curiosidade_final
 
+## pathCuriosidade.16
+> identificar_curiosidade
+* curiosidades_valores_pagamento_caches
+  - utter_curiosidades_valores_pagamento_caches
+  - utter_curiosidades_mais
+> curiosidade_final
+
 ## pathCuriosidade.oqueeh
 > identificar_curiosidade
 * o_que_eh
