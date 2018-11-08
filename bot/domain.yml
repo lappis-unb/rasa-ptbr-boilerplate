@@ -1170,6 +1170,19 @@ templates:
 
          Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
 
+  utter_manter_conversa:
+    - text: |
+         Em que mais posso te ajudar?
+
+    - text: |
+         Nossa conversa está ótima! Me pergunte mais :P
+
+    - text: |
+         Quero tirar mais dúvidas tuas :) 
+
+    - text: |
+         Me pergunte mais sobre a Lei de Incentivo à Cultura :) 
+
   utter_despedir:
     - text: |
         Foi um prazer te ajudar!
@@ -1232,7 +1245,7 @@ templates:
         - Definições
         - Captação
   #TODO
-  
+
   utter_salic:
     - text: |
         Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
@@ -1250,6 +1263,7 @@ actions:
   - utter_cumprimentar
   - utter_despedir
   - utter_menu
+  - utter_manter_conversa
   
   - utter_captacao
   - utter_captacao_quando_captar
