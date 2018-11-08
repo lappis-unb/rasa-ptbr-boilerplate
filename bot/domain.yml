@@ -2,6 +2,11 @@ intents:
   - cumprimentar
   - despedir
   - out_of_scope
+  - o_que_eh
+  - afirmar
+  - negar
+  - afirmar_curiosidades
+  - afirmar_projeto
 
   - captacao
   - captacao_quando_captar
@@ -1181,7 +1186,7 @@ templates:
          Quero tirar mais dúvidas tuas :) 
 
     - text: |
-         Me pergunte mais sobre a Lei de Incentivo à Cultura :) 
+         Me pergunte mais sobre a lei de incentivo cultural :) 
 
   utter_despedir:
     - text: |
@@ -1238,12 +1243,17 @@ templates:
           
   utter_menu:
     - text: | 
-        Podemos falar sobre:
-        - A Lei Rouanet
-        - O SALIC
-        - O Processo
-        - Definições
-        - Captação
+        Ainda estou estudando e aprendendo sobre a Lei de Incentivo a Cultura, mas já consigo compartilhar 
+        dos meus conhecimentos contigo :)
+
+        Hoje, já entendo bastante sobre os conceitos que norteiam a Lei de Incentivo a Cultura, também conhecida
+        como Lei Rouanet.
+
+        Sei também como faz para submeter o um projeto, as etapas, os objetivos, algumas duvidas operacionais..
+
+        E estou comecando a sacar de duvidas e erros encontrados quando você ja tem um projeto no sistema.
+
+        E ai, como posso te ajudar?
   #TODO
 
   utter_salic:
@@ -1264,7 +1274,7 @@ actions:
   - utter_despedir
   - utter_menu
   - utter_manter_conversa
-  
+
   - utter_captacao
   - utter_captacao_quando_captar
   - utter_captacao_como_captar
