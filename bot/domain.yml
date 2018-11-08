@@ -2,7 +2,6 @@ intents:
   - cumprimentar
   - despedir
   - out_of_scope
-  - o_que_eh
   - afirmar
   - negar
   - afirmar_curiosidades
