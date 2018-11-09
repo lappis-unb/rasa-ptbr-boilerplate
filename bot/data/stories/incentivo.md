@@ -90,6 +90,13 @@
 	- utter_lei_rouanet_origem_do_dinheiro
 	- utter_manter_conversa
 
+## Incentivo Intermediario 6
+* lei_rouanet_quantidade_de_projetos
+	- utter_lei_rouanet_quantidade_de_projetos
+* diga_mais
+	- utter_lei_rouanet_origem_do_dinheiro
+	- utter_manter_conversa
+
 ## Incentivo Avancado 1
 * cumprimentar
     - utter_cumprimentar
@@ -117,17 +124,34 @@
 ## Incentivo Avancado 4
 * lei_rouanet_quem_pode_ser_proponente
 	- utter_lei_rouanet_quem_pode_ser_proponente
-* lei_rouanet_quem_pode_incentivar
+* diga_mais
 	- utter_lei_rouanet_quem_pode_incentivar
 * lei_rouanet_denuncia
 	- utter_lei_rouanet_denuncia
 	- utter_manter_conversa
 
 ## Incentivo Avancado 5
-* lei_rouanet_quem_pode_ser_proponente
-	- utter_lei_rouanet_quem_pode_ser_proponente
-* lei_rouanet_quem_pode_incentivar
-	- utter_lei_rouanet_quem_pode_incentivar
 * lei_rouanet_denuncia
 	- utter_lei_rouanet_denuncia
 	- utter_manter_conversa
+
+
+## Incentivo Base 6
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* lei_rouanet_o_que_eh
+	- utter_lei_rouanet_o_que_eh
+* diga_mais
+	- utter_processo_como_funciona
+
+
+## Incentivo Base 7
+* lei_rouanet_origem_do_dinheiro
+	- utter_lei_rouanet_origem_do_dinheiro
+* lei_rouanet_quem_pode_ser_proponente
+	- utter_lei_rouanet_quem_pode_ser_proponente
+* diga_mais
+	- utter_lei_rouanet_quem_pode_incentivar
+	- utter_manter_conversa
+

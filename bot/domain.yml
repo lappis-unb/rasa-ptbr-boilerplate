@@ -1,11 +1,12 @@
 intents:
   - cumprimentar
   - despedir
-  - out_of_scope
+  - out_of_scope  
   - afirmar
   - negar
   - afirmar_curiosidades
   - afirmar_projeto
+  - diga_mais
 
   - captacao
   - captacao_quando_captar
@@ -725,11 +726,12 @@ templates:
           de Cultura, o diplomata Sérgio Paulo Rouanet.
 
     - text: |
-          A Lei estabelece as normativas de como o GDF deve
+         A Lei foi concebida originalmente com três mecanismos: o Fundo 
 
-          disponibilizar recursos para a realização de projetos
-
-          artístico-culturais.
+            'Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de '
+            'Investimento Cultural e Artístico (Ficart). Este nunca foi '
+            'implementado, enquanto o Incentivo Fiscal – também chamado de '
+            'mecenato – prevaleceu e chega ser confundido com a própria Lei."
 
   # TO DO
   utter_definicao:

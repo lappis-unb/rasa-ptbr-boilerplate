@@ -135,3 +135,17 @@
 - sobre proposta
 - sobre projeto
 - sobre criacao
+
+
+
+## intent:diga_mais
+- como funciona
+- me diga mais
+- como
+- não entendi
+- nao entendi
+- não é isso
+- nao eh isso
+- como assim
+- e como funciona
+- e como faco isso
