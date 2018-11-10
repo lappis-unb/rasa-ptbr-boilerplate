@@ -1304,17 +1304,15 @@ templates:
 
   utter_menu:
     - text: |
-        Ainda estou estudando e aprendendo sobre a Lei de Incentivo a Cultura, mas já consigo compartilhar
-        dos meus conhecimentos contigo :)
+        Eu adoro bater-papo com vocês.
+        Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
 
-        Hoje, já entendo bastante sobre os conceitos que norteiam a Lei de Incentivo a Cultura, também conhecida
-        como Lei Rouanet.
-
-        Sei também como faz para submeter o um projeto, as etapas, os objetivos, algumas duvidas operacionais..
-
-        E estou comecando a sacar de duvidas e erros encontrados quando você ja tem um projeto no sistema.
-
+        Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
         E ai, como posso te ajudar?
+
+Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :smile:
+Use e Abuse da #
+
   #TODO
 
   utter_salic:
