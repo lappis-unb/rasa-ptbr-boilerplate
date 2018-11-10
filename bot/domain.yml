@@ -158,6 +158,13 @@ templates:
     - text: |
         reiniciando =D
 
+  utter_retorno:
+    - text: |
+        Olá, que bom que você voltou!
+        Estou ansiosa para tirar suas novas dúvidas sobre a Lei Rouanet!
+
+        Como posso te ajudar?
+
   utter_processo_situacao_processo_A12:
     - text: |
           O estado A12 acontece durante a fase de Admissibilidade, e significa aguardando complementação de documentos
@@ -1333,6 +1340,7 @@ actions:
   - utter_despedir
   - utter_menu
   - utter_manter_conversa
+  - utter_retorno
 
   - utter_captacao
   - utter_captacao_quando_captar
