@@ -1196,14 +1196,17 @@ templates:
         É ótimo conversar com pessoas interessadas em incentivo à Cultura!
 
         Sobre qual assunto você quer conversar agora?
+
     - text: |
         Todos os dias eu aprendo algo novo com as perguntas de vocês,
 
         se tiver outra dúvida, aproveite para perguntar
+
     - text: |
         Acabei de aprender mais com Você sobre este tópico...
 
         Sobre o que mais podemos conversar?
+
     - text: |
         Obrigada por me distrair com as suas perguntas, pergunta mais!
 
@@ -1211,34 +1214,43 @@ templates:
         Eu posso continuar conversando sobre outros assuntos...
 
         manda aí outra pergunta!
+
     - text: |
         Que bom que você tem interesse na lei Rouanet,
 
         minha intuição me diz que você ainda tem mais alguma dúvida.
+
     - text: |
         Fico animada sempre que converso com alguém interessado na lei Rouanet,
 
         de qual outro assunto você gostaria de conversar?
+
     - text: |
         É um prazer te ajudar,
 
         qual o próximo assunto te interessa?
+
     - text: |
          A Lei Rouanet tem muitas informações importantes,
 
         fique à vontade para perguntar mais (:
+
     - text: |
          Me pergunte mais sobre a lei de incentivo cultural :)
+
     - text: |
          Me conta um segredo... qual é a sua próxima curiosidade sobre a lei ?
+
     - text: |
         Eu adoro falar sobre a Lei Rouanet,
 
         o que mais você gostaria de saber ?
+
     - text: |
         Tomara que você esteja aprendendo junto comigo,
 
         estou a disposição para você tirar novas dúvidas.
+        
     - text: |
         Eu amo falar sobre incentivo à Cultura.
 
