@@ -1162,15 +1162,9 @@ templates:
 
   utter_cumprimentar:
     - text: |
-        Oi, sou assistente virtual do MinC, me chamo Tais. Seja bem-vindo!
-        O meu trabalho é te ajudar a esclarecer dúvidas sobre a lei Rouanet.
-        Eu adoro bater-papo com vocês. Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais… 
+      Oi, sou assistente virtual do MinC, me chamo Tais. Seja bem-vindo!
 
-        Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
-        E ai, como posso te ajudar?
-
-        Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :smile:
-        Use e Abuse da #
+      O meu trabalho é te ajudar a esclarecer dúvidas sobre a lei Rouanet.
 
   utter_manter_conversa:
     - text: |
