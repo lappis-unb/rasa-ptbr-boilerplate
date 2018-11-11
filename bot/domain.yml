@@ -1,7 +1,7 @@
 intents:
   - cumprimentar
   - despedir
-  - out_of_scope  
+  - out_of_scope
   - afirmar
   - negar
   - afirmar_curiosidades
@@ -157,6 +157,13 @@ templates:
   utter_restart:
     - text: |
         reiniciando =D
+
+  utter_retorno:
+    - text: |
+        Olá, que bom que você voltou!
+        Estou ansiosa para tirar suas novas dúvidas sobre a Lei Rouanet!
+
+        Como posso te ajudar?
 
   utter_processo_situacao_processo_A12:
     - text: |
@@ -726,7 +733,7 @@ templates:
           de Cultura, o diplomata Sérgio Paulo Rouanet.
 
     - text: |
-         A Lei foi concebida originalmente com três mecanismos: o Fundo 
+         A Lei foi concebida originalmente com três mecanismos: o Fundo
 
             'Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de '
             'Investimento Cultural e Artístico (Ficart). Este nunca foi '
@@ -748,7 +755,7 @@ templates:
 
   utter_definicao_cnic:
     - text: |
-          O Conselho Nacional de Incentivo à Cultura (CNIC) é responsável por 
+          O Conselho Nacional de Incentivo à Cultura (CNIC) é responsável por
 
           selecionar e aprovar os projetos para captação.
 
@@ -1162,32 +1169,92 @@ templates:
 
   utter_cumprimentar:
     - text: |
-         Olá, meu  nome é Taís, sou assistente virtual do MinC
+      Oi, sou assistente virtual do MinC, me chamo Tais. Seja bem-vindo!
 
-         Estou aqui para te ajudar a sanar dúvidas sobre a lei Rouanet
-
-    - text: |
-         Oi, eu sou a Taís, assistente virtual do MinC
-
-         Estou aqui para te ajudar a tirar dúvidas sobre a lei Rouanet
-
-    - text: |
-         Oi, sou assistente virtual do MinC, me chamo Taís
-
-         Estou aqui para te ajudar a esclarecer dúvidas sobre a lei Rouanet
+      O meu trabalho é te ajudar a esclarecer dúvidas sobre a lei Rouanet.
 
   utter_manter_conversa:
     - text: |
-         Em que mais posso te ajudar?
+         Vamos dar continuidade ao nosso bate-papo,
+
+         em que mais posso te ajudar?
 
     - text: |
-         Nossa conversa está ótima! Me pergunte mais :P
+        É sempre bom aprender algo novo. Que bacana!
+
+        O que mais você gostaria de saber?
+
+    - text:
+        Busquei essas informações fresquinhas pra você... Espero que tenha sido útil,
+
+        mais alguma pergunta?
 
     - text: |
-         Quero tirar mais dúvidas tuas :) 
+        É ótimo conversar com pessoas interessadas em incentivo à Cultura!
+
+        Sobre qual assunto você quer conversar agora?
 
     - text: |
-         Me pergunte mais sobre a lei de incentivo cultural :) 
+        Todos os dias eu aprendo algo novo com as perguntas de vocês,
+
+        se tiver outra dúvida, aproveite para perguntar
+
+    - text: |
+        Acabei de aprender mais com Você sobre este tópico...
+
+        Sobre o que mais podemos conversar?
+
+    - text: |
+        Obrigada por me distrair com as suas perguntas, pergunta mais!
+
+    - text: |
+        Eu posso continuar conversando sobre outros assuntos...
+
+        manda aí outra pergunta!
+
+    - text: |
+        Que bom que você tem interesse na lei Rouanet,
+
+        minha intuição me diz que você ainda tem mais alguma dúvida.
+
+    - text: |
+        Fico animada sempre que converso com alguém interessado na lei Rouanet,
+
+        de qual outro assunto você gostaria de conversar?
+
+    - text: |
+        É um prazer te ajudar,
+
+        qual o próximo assunto te interessa?
+
+    - text: |
+         A Lei Rouanet tem muitas informações importantes,
+
+        fique à vontade para perguntar mais (:
+
+    - text: |
+         Me pergunte mais sobre a lei de incentivo cultural :)
+
+    - text: |
+         Me conta um segredo... qual é a sua próxima curiosidade sobre a lei ?
+
+    - text: |
+        Eu adoro falar sobre a Lei Rouanet,
+
+        o que mais você gostaria de saber ?
+
+    - text: |
+        Tomara que você esteja aprendendo junto comigo,
+
+        estou a disposição para você tirar novas dúvidas.
+
+    - text: |
+        Eu amo falar sobre incentivo à Cultura.
+
+        fique à vontade para perguntar sobre outros assuntos!
+
+    - text: |
+        Olha, estou adorando tirar suas dúvidas, me pergunte mais :P
 
   utter_despedir:
     - text: |
@@ -1241,20 +1308,18 @@ templates:
         - Análise de Resultados
 
         Você tem alguma dúvida sobre elas?
-          
+
   utter_menu:
-    - text: | 
-        Ainda estou estudando e aprendendo sobre a Lei de Incentivo a Cultura, mas já consigo compartilhar 
-        dos meus conhecimentos contigo :)
+    - text: |
+        Eu adoro bater-papo com vocês.
+        Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
 
-        Hoje, já entendo bastante sobre os conceitos que norteiam a Lei de Incentivo a Cultura, também conhecida
-        como Lei Rouanet.
-
-        Sei também como faz para submeter o um projeto, as etapas, os objetivos, algumas duvidas operacionais..
-
-        E estou comecando a sacar de duvidas e erros encontrados quando você ja tem um projeto no sistema.
-
+        Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
         E ai, como posso te ajudar?
+
+        Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :smile:
+        Use e Abuse da #
+
   #TODO
 
   utter_salic:
@@ -1275,6 +1340,7 @@ actions:
   - utter_despedir
   - utter_menu
   - utter_manter_conversa
+  - utter_retorno
 
   - utter_captacao
   - utter_captacao_quando_captar
