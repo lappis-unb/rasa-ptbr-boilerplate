@@ -34,7 +34,7 @@ services:
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
     environment:
-      - TRAINING_EPOCHS=300
+      - TRAINING_EPOCHS=130
       - ROCKETCHAT_URL=rocketchat:3000
       - MAX_TYPING_TIME=8
       - MIN_TYPING_TIME=1

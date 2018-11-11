@@ -23,6 +23,7 @@ intents:
   - curiosidades_remuneracao_proponente
   - curiosidades_comercializacao_de_ingressos
   - curiosidades_comprovacao_experiencia
+  - curiosidades_valores_pagamento_caches
 
 actions:
   - utter_definir_perfil
@@ -70,6 +71,7 @@ actions:
   - utter_curiosidades_remuneracao_proponente
   - utter_curiosidades_comercializacao_de_ingressos
   - utter_curiosidades_comprovacao_experiencia
+  - utter_curiosidades_valores_pagamento_caches
   - action_o_que_eh
 
 
@@ -390,3 +392,12 @@ templates:
         Com esta regra, o MinC busca apoiar novos empreendedores com bons projetos para que se consolidem. Apoiar o jovem empreendedor gera maiores possibilidades de atuação no campo da inovação.
         No caso de proponentes experientes, a experiência em atividades culturais deve ser comprovada no ato de inscrição da proposta.
         No caso de pessoa jurídica, a comprovação é realizada por meio do código de Classificação Nacional de Atividades Econômicas (CNAE), referente à área cultural nos registros do CNPJ da instituição.
+
+  utter_curiosidades_valores_pagamento_caches:
+    - text: |
+        O limite para pagamento de cachês artísticos por apresentação é:
+
+        R$ 45 mil para artista ou modelo solo;
+        R$ 90 mil para grupos artísticos e para grupos de modelos de desfiles de moda;
+
+        No caso de orquestras, os valores são: R$ 2.250 mil por músico e R$ 45 mil para o maestro; A aprovação de valores superiores aos definidos acima poderá ser feita pelo plenário da Comissão Nacional de Incentivo à Cultura (CNIC), a depender das justificativas apresentadas pelo proponente e pela área técnica.
