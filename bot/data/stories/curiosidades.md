@@ -170,7 +170,7 @@
 
 ## pathCuriosidade.14
 > identificar_curiosidade
-* curiosidade_comercializacao_de_ingressos
+* curiosidades_comercializacao_de_ingressos
   - utter_curiosidades_comercializacao_de_ingressos
   - utter_curiosidades_mais
 > curiosidade_final
