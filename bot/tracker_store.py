@@ -32,7 +32,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         if not tracker.latest_message.text:
             return
 
-        timestamp = time.time()
+        timestamp = datetime.datetime.strftime(time.time(),'%Y/%m/%d %H:%M:%S')
 
         message = {
             'environment': ENVIRONMENT_NAME,
@@ -78,10 +78,12 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         for utter in utters[::-1]:
             time_offset += 100
 
-            timestamp = (
+            ts = (
                 datetime.datetime.now() +
                 datetime.timedelta(milliseconds=time_offset)
             ).timestamp()
+            
+            timestamp = datetime.datetime.strftime(ts,'%Y/%m/%d %H:%M:%S')
 
             message = {
                 'environment': ENVIRONMENT_NAME,
@@ -102,7 +104,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
             }
 
             es.index(index='messages', doc_type='message',
-                     id='{}_bot_{}'.format(ENVIRONMENT_NAME, gen_id(timestamp)),
+                     id='{}_bot_{}'.format(ENVIRONMENT_NAME, gen_id(ts)),
                      body=json.dumps(message))
 
     def save(self, tracker):
