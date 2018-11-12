@@ -2,12 +2,10 @@ intents:
   - cumprimentar
   - despedir
   - out_of_scope
-  - afirmar
-  - negar
-  - afirmar_curiosidades
-  - afirmar_projeto
   - o_que_sei_falar
   - erro_resposta_utter
+  - tudo_bem
+  - diga_mais
 
   - captacao
   - captacao_quando_captar
@@ -1197,86 +1195,25 @@ templates:
          
   utter_manter_conversa:
     - text: |
-         Vamos dar continuidade ao nosso bate-papo,
-
-         em que mais posso te ajudar?
+          Espero estar te ajudando, você possui mais alguma pergunta?
 
     - text: |
-         É sempre bom aprender algo novo. Que bacana!
-
-         O que mais você gostaria de saber?
+          Em que mais posso te ajudar?
 
     - text: |
-         Busquei essas informações fresquinhas pra você... Espero que tenha sido útil,
-
-         mais alguma pergunta?
+          Você tem mais alguma dúvida?
 
     - text: |
-        É ótimo conversar com pessoas interessadas em incentivo à Cultura!
-
-        Sobre qual assunto você quer conversar agora?
+          Qual o próximo tema te interessa?
 
     - text: |
-        Todos os dias eu aprendo algo novo com as perguntas de vocês,
-
-        se tiver outra dúvida, aproveite para perguntar
+          O que mais você deseja saber?
 
     - text: |
-        Acabei de aprender mais com Você sobre este tópico...
-
-        Sobre o que mais podemos conversar?
+          Gostaria te retirar mais alguma dúvida?
 
     - text: |
-        Obrigada por me distrair com as suas perguntas, pergunta mais!
-
-    - text: |
-        Eu posso continuar conversando sobre outros assuntos...
-
-        manda aí outra pergunta!
-
-    - text: |
-        Que bom que você tem interesse na lei Rouanet,
-
-        minha intuição me diz que você ainda tem mais alguma dúvida.
-
-    - text: |
-        Fico animada sempre que converso com alguém interessado na lei Rouanet,
-
-        de qual outro assunto você gostaria de conversar?
-
-    - text: |
-        É um prazer te ajudar,
-
-        qual o próximo assunto te interessa?
-
-    - text: |
-         A Lei Rouanet tem muitas informações importantes,
-
-         fique à vontade para perguntar mais (:
-
-    - text: |
-         Me pergunte mais sobre a lei de incentivo cultural :)
-
-    - text: |
-         Me conta um segredo... qual é a sua próxima curiosidade sobre a lei ?
-
-    - text: |
-        Eu adoro falar sobre a Lei Rouanet,
-
-        o que mais você gostaria de saber ?
-
-    - text: |
-        Tomara que você esteja aprendendo junto comigo,
-
-        estou a disposição para você tirar novas dúvidas.
-
-    - text: |
-        Eu amo falar sobre incentivo à Cultura.
-
-        fique à vontade para perguntar sobre outros assuntos!
-
-    - text: |
-        Olha, estou adorando tirar suas dúvidas, me pergunte mais :P
+            Espero ter solucionado a sua dúvida, tem mais alguma dúvida?
 
   utter_despedir:
     - text: |
@@ -1341,14 +1278,19 @@ templates:
 
         Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :smile:
         Use e Abuse da #
+  
+  utter_tudo_bem:
+    - text: |
+        Tudo bem, obrigada! Em que posso te ajudar?
+
 
   #TODO
 
-utter_salic:
+  utter_salic:
     - text: |
         Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
 
-utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
+  utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
     - text: |
         Você deve ir em:
         Orçamento do projeto > Custos por produto > Clicar no produto desejado
@@ -1361,6 +1303,7 @@ actions:
   - utter_cumprimentar
   - utter_despedir
   - utter_menu
+  - utter_tudo_bem
   - utter_manter_conversa
   - utter_retorno
   - utter_o_que_sei_falar
