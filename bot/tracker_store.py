@@ -42,7 +42,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
             'is_bot': False,
             'timestamp': timestamp,
 
-            'text': tracker.latest_message.text,
+            'text': tracker.latest_message.text.split(),
 
             'entities': tracker.latest_message.entities,
             'intent_name': tracker.latest_message.intent['name'],
@@ -82,7 +82,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
                 datetime.datetime.now() +
                 datetime.timedelta(milliseconds=time_offset)
             ).timestamp()
-            
+
             timestamp = datetime.datetime.strftime(ts,'%Y/%m/%d %H:%M:%S')
 
             message = {

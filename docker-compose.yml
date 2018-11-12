@@ -58,19 +58,7 @@ services:
       - ./bot:/bot
       - ./scripts:/scripts
     depends_on:
-      - actions
       - rocketchat
-
-  actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
-    ports:
-      - 5055:5055
-    volumes:
-      - ./bot/actions:/bot/actions
-
-
 
   # =================================== Web ===================================
   web:
