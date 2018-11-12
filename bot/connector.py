@@ -1,6 +1,7 @@
 import logging
 import threading
 import os
+import time
 from typing import Text
 
 from flask import Blueprint, request, jsonify, make_response
@@ -30,10 +31,11 @@ class RocketChatBot(OutputChannel):
         self.login()
 
     def login(self):
-        if not self.logged_in:
+        whike not self.logged_in:
             logger.info('Trying to login to rocketchat as {}'.format(self.user))
             self.connector.login(user=self.user, password=self.password,
                                  callback=self._login_callback)
+            time.sleep(10)
 
     """
     Internal callback handlers
@@ -46,7 +48,6 @@ class RocketChatBot(OutputChannel):
             self.logged_in = True
             logger.info("[+] callback success")
             logger.debug(data)
-            # self.connector.subscribe_to_messages()
 
     """
     Messages handlers
