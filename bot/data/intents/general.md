@@ -47,6 +47,14 @@
 - até breve
 - falou, valeu
 - flw vlw
+- blza
+- blz
+- valeu
+- massa
+- de boa
+- obrigada
+- obrigado
+- obj
 
 ## intent:afirmar
 - se não for incomodo
@@ -166,4 +174,9 @@
 - errou
 - erro
 - #erou
-- problema
+- #errado
+- a tais errou
+- bot burro
+- burro
+- burra
+
