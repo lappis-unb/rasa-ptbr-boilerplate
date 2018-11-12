@@ -23,7 +23,7 @@ FALLBACK_ACTION_NAME = str(os.getenv('FALLBACK_ACTION_NAME', 'utter_default'))
 
 utils.configure_colored_logging(loglevel='DEBUG')
 
-def train_dialogue(domain_file, model_path, training_folder):
+def train_core(domain_file, model_path, training_folder):
     MemoizationPolicy.USE_NLU_CONFIDENCE_AS_SCORE = True
     #keras_1 = KerasPolicy(
     #             MaxHistoryTrackerFeaturizer(
