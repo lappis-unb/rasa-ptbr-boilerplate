@@ -137,7 +137,6 @@
 - sobre criacao
 
 
-
 ## intent:diga_mais
 - como funciona
 - me diga mais
@@ -150,6 +149,7 @@
 - e como funciona
 - e como faco isso
 
+
 ## intent:o_que_sei_falar
 - #MEAJUDA
 - sobre o que você sabe falar
@@ -160,3 +160,10 @@
 - quais as perguntas vc responde
 - quais as perquisar você responde
 
+## intent:erro_resposta_utter
+- #errou
+- #erro
+- errou
+- erro
+- #erou
+- problema

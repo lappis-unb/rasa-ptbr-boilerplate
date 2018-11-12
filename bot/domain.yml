@@ -7,6 +7,7 @@ intents:
   - afirmar_curiosidades
   - afirmar_projeto
   - o_que_sei_falar
+  - erro_resposta_utter
 
   - captacao
   - captacao_quando_captar
@@ -1185,8 +1186,16 @@ templates:
          Duvidas sobre Definições, nomenclaturas, e informacoes relacionadas a lei e ao ministério
 
          Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o Minitério da Cultura
+         
+utter_erro_resposta_utter:
+    - text: |
+         
+          Obrigada pelo feedback. Espero que na próxima vez vou conseguir responder a tua pergunta corretamente
 
-  utter_manter_conversa:
+          Gostaria de fazer uma nova pergunta?
+
+         
+utter_manter_conversa:
     - text: |
          Vamos dar continuidade ao nosso bate-papo,
 
@@ -1269,7 +1278,7 @@ templates:
     - text: |
         Olha, estou adorando tirar suas dúvidas, me pergunte mais :P
 
-  utter_despedir:
+utter_despedir:
     - text: |
         Foi um prazer te ajudar!
 
@@ -1291,13 +1300,13 @@ templates:
 
         Até mais!
 
-  utter_captacao:
+utter_captacao:
     - text: |
         Em captação, eu sei falar sobre quando captar e sobre como captar
 
         O que você deseja saber?
 
-  utter_captacao_quando_captar:
+utter_captacao_quando_captar:
     - text: |
         A captação só pode começar depois que o projeto passa pela fase de
         enquadramento, pela análise documental e pela publicação.
@@ -1306,12 +1315,12 @@ templates:
         começar a captar recursos.
 
   #TODO
-  utter_captacao_como_captar:
+utter_captacao_como_captar:
     - text: |
         Para captar os recursos você deve achar incetivadores
 
   #TODO
-  utter_processo_definicao_etapas:
+utter_processo_definicao_etapas:
     - text: |
         O processo possui cinco etapas:
         - Preenchimento
@@ -1322,7 +1331,7 @@ templates:
 
         Você tem alguma dúvida sobre elas?
 
-  utter_menu:
+utter_menu:
     - text: |
         Eu adoro bater-papo com vocês.
         Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
@@ -1335,11 +1344,11 @@ templates:
 
   #TODO
 
-  utter_salic:
+utter_salic:
     - text: |
         Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
 
-  utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
+utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
     - text: |
         Você deve ir em:
         Orçamento do projeto > Custos por produto > Clicar no produto desejado
@@ -1355,6 +1364,7 @@ actions:
   - utter_manter_conversa
   - utter_retorno
   - utter_o_que_sei_falar
+  - utter_erro_resposta_utter
 
   - utter_captacao
   - utter_captacao_quando_captar
