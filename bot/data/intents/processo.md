@@ -115,6 +115,51 @@
 - não quero entrar com o recurso
 - Quero desistir do prazo de recurso
 
+
+## intent:processo_comprovacao_experiencia
+- é preciso comprovar experiência na área para apresentar uma proposta ao minc
+- tenho que ter experiencia para apresentar proposta
+- e necessario ter experiencia
+- deve se ter prática
+- tenho que apresentar prática para levantar proposta
+- é exigido capacitação para expor uma proposta
+- e cobrado conhecimento especifico para exibir proposta
+- tem se necessário experiencia para apresentar proposta
+- e obrigado ter qualificação
+- e prescrito a experiencia na area em que se deseja levantar proposta
+- ter experiencia
+- comprovar experiencia
+- levantar proposta
+- prática
+- qualificação na area
+- capacidade
+- conhecimento
+- técnica no assunto
+- vivencia
+- capacitação
+
+## intent:processo_valores_pagamento_caches
+- quais os valores para pagamento de cachês em projetos realizados com incentivo fiscal
+- há limites nos valores de pagamentos de cachês
+- existe limite de pagamento de cachê
+- qual o limite de pagamento de cachês
+- quanto posso dar de cache para os artitas
+- posso dar quanto de cache para meus funcionarios
+- como funciona o pagamento de cache
+- pagamento de cache para artista solo
+- quanto cada artista do grupo pode receber de cache
+- existe limite de pagamento para artistas
+- valor de pagamento para artista solo e grupos artisticos
+- quanto cada artista da peça pode receber
+- valor cache
+- pagamento cachê
+- limite de cache
+- cache artista
+- cachê projeto
+- pagamento artista solo
+- cache orquestra
+- limite cache artista solo
+
 ## intent:processo_situacao_processo
 - o que significa [A12](situacao_processo)
 - o que significa [A14](situacao_processo)

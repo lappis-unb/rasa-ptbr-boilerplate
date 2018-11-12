@@ -3,7 +3,6 @@
     - utter_cumprimentar
     - utter_menu
 
-
 ## LeiRouanet 2
 * cumprimentar
     - utter_cumprimentar
@@ -66,4 +65,3 @@
     - utter_manter_conversa
 * despedir
     - utter_despedir
-

@@ -6,12 +6,10 @@
     - utter_definicao_proposta
     - utter_manter_conversa
 
-
 ## Definicao 111
 * definicao_proposta
     - utter_definicao_proposta
     - utter_manter_conversa
-
 
 ## Definicao 2
 * cumprimentar
@@ -89,13 +87,9 @@
 * o_que_sei_falar
     - utter_o_que_sei_falar
 
-
 ## Definicao 13
 * o_que_sei_falar
     - utter_o_que_sei_falar
-
-
-
 
 ## Definicao 15
 * erro_resposta_utter

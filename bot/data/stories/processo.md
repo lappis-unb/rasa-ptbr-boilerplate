@@ -60,6 +60,22 @@
     - utter_processo_prazo_desistir_recurso
     - utter_manter_conversa
 
+## Processo 9
+* cumprimentar
+      - utter_cumprimentar
+      - utter_menu
+* processo_valores_pagamento_caches
+      - utter_processo_valores_pagamento_caches
+      - utter_manter_conversa
+
+## Processo 10
+* cumprimentar
+      - utter_cumprimentar
+            - utter_menu
+* processo_comprovacao_experiencia
+      - utter_processo_comprovacao_experiencia
+      - utter_manter_conversa
+
 ## Processo_situacao_A12
   * cumprimentar
       - utter_cumprimentar

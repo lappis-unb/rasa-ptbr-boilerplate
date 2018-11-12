@@ -53,6 +53,8 @@ intents:
   - processo_prazo_desistir_recurso
   - processo_situacao_processo
   - processo_periodo
+  - processo_valores_pagamento_caches
+  - processo_comprovacao_experiencia
 
   - salic
   - salic_cadastro_usuario
@@ -992,7 +994,6 @@ templates:
 
           Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm
 
-  #TODO
   utter_salic_preenchimento:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre o preenchimento de
@@ -1051,7 +1052,6 @@ templates:
 
           dígitos, sem hifens, pontos ou letras
 
-  #TODO
   utter_salic_erros:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre eventuais erros do
@@ -1142,7 +1142,6 @@ templates:
 
           clicar em Administrativo > Cadastrar proponente e preencher todos os dados
 
-  #TODO
   utter_processo_prazo:
     - text: |
           Posso responder suas dúvidas a respeito de Datas
@@ -1184,15 +1183,13 @@ templates:
          Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o Minitério da Cultura
 
          Agora pode me fazer tua pergunta!
-         
+
   utter_erro_resposta_utter:
     - text: |
-         
           Obrigada pelo feedback. Espero que na próxima vez vou conseguir responder a tua pergunta corretamente
 
           Gostaria de fazer uma nova pergunta?
 
-         
   utter_manter_conversa:
     - text: |
           Espero estar te ajudando, você possui mais alguma pergunta?
@@ -1251,12 +1248,10 @@ templates:
         Assim que o projeto é publicado no Diário Oficial da União você pode
         começar a captar recursos.
 
-  #TODO
   utter_captacao_como_captar:
     - text: |
         Para captar os recursos você deve achar incetivadores
 
-  #TODO
   utter_processo_definicao_etapas:
     - text: |
         O processo possui cinco etapas:
@@ -1284,8 +1279,6 @@ templates:
         Tudo bem, obrigada! Em que posso te ajudar?
 
 
-  #TODO
-
   utter_salic:
     - text: |
         Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
@@ -1295,6 +1288,20 @@ templates:
         Você deve ir em:
         Orçamento do projeto > Custos por produto > Clicar no produto desejado
         Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
+
+  utter_processo_valores_pagamento_caches:
+    - text: |
+        O limite para pagamento de cachês artísticos por apresentação é:
+        R$ 45 mil para artista ou modelo solo;
+        R$ 90 mil para grupos artísticos e para grupos de modelos de desfiles de moda;
+        No caso de orquestras, os valores são: R$ 2.250 mil por músico e R$ 45 mil para o maestro; A aprovação de valores superiores aos definidos acima poderá ser feita pelo plenário da Comissão Nacional de Incentivo à Cultura (CNIC), a depender das justificativas apresentadas pelo proponente e pela área técnica.
+
+  utter_processo_comprovacao_experiencia:
+    - text: |
+        A comprovação de experiência não é necessária para a admissão do primeiro projeto de realizadores culturais recém-inseridos no mercado.
+        Com esta regra, o MinC busca apoiar novos empreendedores com bons projetos para que se consolidem. Apoiar o jovem empreendedor gera maiores possibilidades de atuação no campo da inovação.
+        No caso de proponentes experientes, a experiência em atividades culturais deve ser comprovada no ato de inscrição da proposta.
+        No caso de pessoa jurídica, a comprovação é realizada por meio do código de Classificação Nacional de Atividades Econômicas (CNAE), referente à área cultural nos registros do CNPJ da instituição.
 
 
 actions:
@@ -1347,6 +1354,8 @@ actions:
   - utter_processo_execucao
   - utter_processo_analise_de_resultados
   - utter_processo_como_funciona
+  - utter_processo_valores_pagamento_caches
+  - utter_processo_comprovacao_experiencia
   - utter_processo_situacao_processo_A12
   - utter_processo_situacao_processo_A14
   - utter_processo_situacao_processo_A20
