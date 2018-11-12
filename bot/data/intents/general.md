@@ -149,3 +149,14 @@
 - como assim
 - e como funciona
 - e como faco isso
+
+## intent:o_que_sei_falar
+- #MEAJUDA
+- sobre o que você sabe falar
+- quais assuntos você fala
+- o que você sabe 
+- menu
+- lista de assuntos possiveis
+- quais as perguntas vc responde
+- quais as perquisar você responde
+

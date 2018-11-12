@@ -6,6 +6,7 @@
     - utter_definicao_proposta
     - utter_manter_conversa
 
+
 ## Definicao 2
 * cumprimentar
     - utter_cumprimentar
@@ -75,4 +76,14 @@
 * despedir
   - utter_despedir  
 
+## Definicao 12
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* o_que_sei_falar
+    - utter_o_que_sei_falar
 
+
+## Definicao 13
+* o_que_sei_falar
+    - utter_o_que_sei_falar

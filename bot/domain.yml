@@ -6,7 +6,7 @@ intents:
   - negar
   - afirmar_curiosidades
   - afirmar_projeto
-  - diga_mais
+  - o_que_sei_falar
 
   - captacao
   - captacao_quando_captar
@@ -1164,14 +1164,27 @@ templates:
 
           Caso concorde com o enquadramento dado é possível desistir desse prazo
 
-          Ambas as manifestações se dão por via da aba \"recurso\" no Menu ao lado esquerdo da tela do projeto, no Salic
-
+          Ambas as manifestações se dão por via da aba "recurso" no Menu ao lado esquerdo da tela do projeto, no Salic
 
   utter_cumprimentar:
     - text: |
-      Oi, sou assistente virtual do MinC, me chamo Tais. Seja bem-vindo!
+         Oi, sou assistente virtual do MinC, me chamo Tais. Seja bem-vindo!
 
-      O meu trabalho é te ajudar a esclarecer dúvidas sobre a lei Rouanet.
+         O meu trabalho é te ajudar a esclarecer dúvidas sobre a lei Rouanet.
+
+  utter_o_que_sei_falar:
+    - text: |
+         Veja alguns dos assuntos que eu posso te ajudar:
+
+         Informacoes gerais sobre a Lei de Incentivo Culturais
+
+         Dúvidas gerais sobre a execução de projetos culturais na Lei Rouanet
+
+         Dúvidas operacionais encontradas durante a execução do projeto cultural
+
+         Duvidas sobre Definições, nomenclaturas, e informacoes relacionadas a lei e ao ministério
+
+         Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o Minitério da Cultura
 
   utter_manter_conversa:
     - text: |
@@ -1180,14 +1193,14 @@ templates:
          em que mais posso te ajudar?
 
     - text: |
-        É sempre bom aprender algo novo. Que bacana!
+         É sempre bom aprender algo novo. Que bacana!
 
-        O que mais você gostaria de saber?
+         O que mais você gostaria de saber?
 
-    - text:
-        Busquei essas informações fresquinhas pra você... Espero que tenha sido útil,
+    - text: |
+         Busquei essas informações fresquinhas pra você... Espero que tenha sido útil,
 
-        mais alguma pergunta?
+         mais alguma pergunta?
 
     - text: |
         É ótimo conversar com pessoas interessadas em incentivo à Cultura!
@@ -1230,7 +1243,7 @@ templates:
     - text: |
          A Lei Rouanet tem muitas informações importantes,
 
-        fique à vontade para perguntar mais (:
+         fique à vontade para perguntar mais (:
 
     - text: |
          Me pergunte mais sobre a lei de incentivo cultural :)
@@ -1341,6 +1354,7 @@ actions:
   - utter_menu
   - utter_manter_conversa
   - utter_retorno
+  - utter_o_que_sei_falar
 
   - utter_captacao
   - utter_captacao_quando_captar
