@@ -6,11 +6,7 @@ run python -m pip install --upgrade pip
 
 add ./bot.requirements.txt /tmp
 
-run pip install --no-cache-dir -r /tmp/bot.requirements.txt  && \
-    python -m spacy download pt
-
-run apt-get remove --purge -y git && \
-    mkdir /bot
+run pip install --no-cache-dir -r /tmp/bot.requirements.txt
 
 add ./bot /bot
 add ./scripts /scripts
@@ -34,4 +30,4 @@ env TRAINING_EPOCHS=300                    \
 cmd python /scripts/bot_config.py -r $ROCKETCHAT_URL                        \
            -an $ROCKETCHAT_ADMIN_USERNAME -ap $ROCKETCHAT_ADMIN_PASSWORD    \
            -bu $ROCKETCHAT_BOT_USERNAME -bp $ROCKETCHAT_BOT_PASSWORD     && \
-    make train-nlu && make train-core && make run-rocketchat
+    make train && make run-rocketchat

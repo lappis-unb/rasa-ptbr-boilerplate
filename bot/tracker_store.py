@@ -42,7 +42,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
             'is_bot': False,
             'timestamp': timestamp,
 
-            'text': tracker.latest_message.text,
+            'text': tracker.latest_message.text.split(),
 
             'entities': tracker.latest_message.entities,
             'intent_name': tracker.latest_message.intent['name'],
