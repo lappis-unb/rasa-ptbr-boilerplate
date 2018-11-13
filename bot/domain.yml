@@ -6,6 +6,10 @@ intents:
   - erro_resposta_utter
   - tudo_bem
   - diga_mais
+  - negar
+  - afirmar
+  - lei_rouanet
+  - quem_eh_a_tais
 
   - captacao
   - captacao_quando_captar
@@ -22,7 +26,6 @@ intents:
   - definicao_salic
   - definicao_vinculada
 
-  - lei_rouanet
   - lei_rouanet_o_que_eh
   - lei_rouanet_quem_pode_ser_proponente
   - lei_rouanet_origem_do_dinheiro
@@ -696,6 +699,20 @@ templates:
 
           Obrigada por conversar comigo!
 
+
+  utter_quem_eh_a_tais:
+    - text: |
+          Eu sou uma assistente virtual do MinC
+
+          Fui desenvolvida pelo excelente e magnífico LAPPIS (Laboratório Avançado de Produção Pesquisa e Inovação em Software)
+          na Universidade de Brasilia
+
+          Utilizo algoritmos de aprendizagem de maquina profundo (deep learning) e sou toda desenvolvida em software livre :P
+
+          Se quiser me conhecer mais, entre no nosso projeto :P e entre em contato conosco do LAPPIS ;) 
+
+          https://github.com/lappis-unb/rouana
+
   utter_lei_rouanet:
     - text: |
           Sobre a lei Rouanet eu sei explicar:
@@ -844,19 +861,31 @@ templates:
 
         O primeiro passo para você particiar deste processo é ter cadastro no SALIC
 
+  utter_cadastro_salic_video:
+    - text: |
+         O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura,
+         
+         e é por ele que você cadastra a proposta e a acompanha.
+         
+         Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
+         
+         nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
+         
+         Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)
+
   utter_salic_cadastro_usuario:
     - text: |
           A primeira coisa que você deve fazer é acessar o SALIC no site http://salic.cultura.gov.br
 
-          Então no formulário inicial, onde pede login e senha, você deve clicar na opção \"Não sou cadastrado\", logo abaixo
+          Então no formulário inicial, onde pede login e senha, você deve clicar na opção "Não sou cadastrado", logo abaixo
 
           Preencha todos os campos corretamente, todos eles são obrigatórios.
 
-          E depois clique em \"Cadastrar\"
+          E depois clique em "Cadastrar"
 
           Agora aguarde a chegada de um e-mail de confirmação. Este vai conter uma senha temporária
 
-          É interessante você alterar esta senha, por isso, no seu primeiro acesso, vá em \"Usuário > Alterar Senha\", para mudar a mesma
+          É interessante você alterar esta senha, por isso, no seu primeiro acesso, vá em "Usuário > Alterar Senha", para mudar a mesma
 
           Agora que você já se cadastrou, o próximo passo cadastrar um proponente
 
@@ -1167,9 +1196,9 @@ templates:
 
   utter_cumprimentar:
     - text: |
-         Oi, sou assistente virtual do MinC, me chamo Tais. Seja bem-vindo!
+         Oi, sou assistente virtual do MinC, me chamo Tais. 
 
-         O meu trabalho é te ajudar a esclarecer dúvidas sobre a lei Rouanet.
+         Estou aqui para te ajudar a esclarecer dúvidas sobre a lei de Incentivo à Cultura, conhecida como lei Rouanet.
 
   utter_o_que_sei_falar:
     - text: |
@@ -1270,14 +1299,13 @@ templates:
 
   utter_menu:
     - text: |
-        Eu adoro bater-papo com vocês.
         Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
 
         Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
         E ai, como posso te ajudar?
 
-        Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :smile:
-        Use e Abuse da #
+        Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :)
+        Use e Abuse da #meajuda
   
   utter_tudo_bem:
     - text: |
@@ -1308,6 +1336,7 @@ actions:
   - utter_retorno
   - utter_o_que_sei_falar
   - utter_erro_resposta_utter
+  - utter_quem_eh_a_tais
 
   - utter_captacao
   - utter_captacao_quando_captar
@@ -1428,3 +1457,4 @@ actions:
   - utter_salic_erros_achar_proposta
   - utter_salic_cadastro_proponente
   - utter_salic_cadastro_usuario
+  - utter_cadastro_salic_video

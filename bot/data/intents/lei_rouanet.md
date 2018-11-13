@@ -1,11 +1,5 @@
 <!-- Lei Rouanet -->
 
-## intent:lei_rouanet
-- quero falar sobre a lei rouanet
-- lei rouanet
-- me fale sobre a lei rouanet
-
-
 ## intent:lei_rouanet_o_que_eh
 - o que é [lei rouanet](lei_rouanet)
 - o que significa [ruane](lei_rouanet)
@@ -57,10 +51,10 @@
 - quero ser proponente
 - como ser proponente
 - quem pode propor
-- como me inscrever
+- como me inscrevo
 - como me tornar proponente
 - elegibilidade
-- inscrever
+- inscreve
 - participar
 - aplicar
 - usar a lei

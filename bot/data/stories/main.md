@@ -13,6 +13,17 @@
 * tudo_bem
     - utter_tudo_bem
 
+## Oi Quem e tais 1
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* quem_eh_a_tais
+    - utter_quem_eh_a_tais
+
+## Oi Quem e tais 2
+* quem_eh_a_tais
+    - utter_quem_eh_a_tais    
+
 ## Nao entendi
 * diga_mais
     - utter_manter_conversa

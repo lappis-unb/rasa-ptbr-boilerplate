@@ -9,6 +9,50 @@
 - você esta aonde?
 - voce torce pra qual time
 - como esta o tempo
+- e a claudia leitte
+
+## intent:afirmar
+- se não for incomodo
+- claro que sim
+- posso sim
+- gostaria sim
+- preenchi sim
+- gostaria de saber mais
+- gostaria de mais detalhes
+- quero
+- por favor
+- tudo bem
+- ja
+- já
+- sim
+- ta
+- ok
+- claro
+- confirmo
+- sim
+
+
+## intent:negar
+- não sei onde a minha pergunta se encaixa
+- nao quero saber mais
+- quero falar sobre outra coisa
+- não quero saber de mais nada
+- nao era isso, me enganei
+- não quero falar sobre isso
+- ainda nao sei escolher um tópico
+- ainda não pensei sobre isso
+- nao sei do que quero falar
+- não sei do que quero conversar
+- nunca
+- nao
+- não sei
+- nao conheco
+- não quero
+- nao tenho certeza
+- escolhi errado
+- falei errado
+- duvida
+- ainda não sei
 
 <!-- Saudação -->
 ## intent:cumprimentar
@@ -96,6 +140,7 @@
 - bot burro
 - burro
 - burra
+- tais burra
 
 
 ## intent:tudo_bem
@@ -107,5 +152,22 @@
 - joinha
 - tudo bom
 - bom dia flor do dia
+
+
+## intent:quem_eh_a_tais
+- Quem te criou? 
+- Quem te desenvolveu? 
+- quem é voce
+- quem e vc
+- Como faço pra ter um chatbot maneiro assim?
+- me conte mais sobre voce
+- o que significa uma assistente virtual
+- assistente virtual
+- chatbot
+- o que e um chatbot
+- o que um chatbot faz
+- qual o seu papel no ministerio da cultura
+- qual o seu papel no ministerio
+- o que faz para o minc
 
 

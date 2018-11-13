@@ -3,7 +3,31 @@
     - utter_cumprimentar
     - utter_menu
 * salic_cadastro_usuario
+    - utter_cadastro_salic_video
+* afirmar
     - utter_salic_cadastro_usuario
+
+## salic 16
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* salic_cadastro_usuario
+    - utter_cadastro_salic_video
+* negar
+    - utter_manter_conversa
+
+
+## salic 17
+* salic_cadastro_usuario
+    - utter_cadastro_salic_video
+* afirmar
+    - utter_salic_cadastro_usuario
+
+
+## salic 18
+* salic_cadastro_usuario
+    - utter_cadastro_salic_video
+* negar
     - utter_manter_conversa
 
 ## salic 2
