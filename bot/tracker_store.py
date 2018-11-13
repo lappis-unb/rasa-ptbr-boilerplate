@@ -17,7 +17,7 @@ except Exception as e:
     nltk.download('stopwords')
     from nltk.corpus import stopwords
     pass
-    
+
 logger = logging.getLogger(__name__)
 
 es = Elasticsearch([os.getenv('ELASTICSEARCH_URL', 'elasticsearch:9200')])
@@ -40,15 +40,18 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         if not tracker.latest_message.text:
             return
 
-        timestamp = datetime.datetime.strftime(time.time(),'%Y/%m/%d %H:%M:%S')
+        ts = time.time()
+        timestamp = datetime.datetime.strftime(
+            datetime.datetime.fromtimestamp(ts),
+            '%Y/%m/%d %H:%M:%S'
+        )
 
         #Bag of words
         tags = []
-        
         for word in tracker.latest_message.text.replace('. ',' ').replace(',',' ').replace('"','').replace("'",'').replace('*','').replace('(','').replace(')','').split(' '):
             if word.lower() not in stopwords.words('portuguese') and len(word) > 1:
                 tags.append(word)
-    
+
         message = {
             'environment': ENVIRONMENT_NAME,
             'version': BOT_VERSION,
@@ -69,7 +72,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         }
 
         es.index(index='messages', doc_type='message',
-                 id='{}_user_{}'.format(ENVIRONMENT_NAME, gen_id(timestamp)),
+                 id='{}_user_{}'.format(ENVIRONMENT_NAME, gen_id(ts)),
                  body=json.dumps(message))
 
     def save_bot_message(self, tracker):
@@ -98,8 +101,11 @@ class ElasticTrackerStore(InMemoryTrackerStore):
                 datetime.datetime.now() +
                 datetime.timedelta(milliseconds=time_offset)
             ).timestamp()
-            
-            timestamp = datetime.datetime.strftime(ts,'%Y/%m/%d %H:%M:%S')
+
+            timestamp = datetime.datetime.strftime(
+                datetime.datetime.fromtimestamp(ts),
+                '%Y/%m/%d %H:%M:%S'
+            )
 
             message = {
                 'environment': ENVIRONMENT_NAME,

@@ -27,7 +27,7 @@ settings = {
                 "is_bot":            { "type": "boolean" },
                 "text":              { "type": "text" },
                 "tags":              { "type": "keyword" },
-                "timestamp":         { "type": "date" },
+                "timestamp":         { "type": "date", "format": "yyyy/MM/dd HH:mm:ss" },
                 "intent_name":       { "type": "keyword" },
                 "intent_confidence": { "type": "double" },
                 "entities" :         { "type": "keyword" },
