@@ -36,9 +36,9 @@ intents:
   - lei_rouanet_denuncia
   - lei_rouanet_receber_incetivo_de_parentes
   - lei_rouanet_valor_maximo_projeto
+  - lei_rouanet_valor_maximo_geral
   - lei_rouanet_valor_maximo_pessoa_fisica
   - lei_rouanet_valor_maximo_pessoa_juridica
-  - lei_rouanet_valor_maximo_geral
   - lei_rouanet_remuneracao_proponente
   - lei_rouanet_comercializacao_de_ingressos
 
@@ -1046,6 +1046,10 @@ utter_lei_rouanet_valor_maximo_projeto:
 
         Ocorrendo em espaço público, estes perfis tem a quantidade de projetos acrescido em 2, mas o valor máximo não muda.
 
+  utter_lei_rouanet_valor_maximo_outro_perfil:
+    - text: |
+        Você gostaria de saber a respeito dos limites para outro perfil?
+
   utter_lei_rouanet_valor_maximo_pessoa_juridica:
     - text: |
         Então, em relação aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,5 milhões para até oito projetos por ano;
@@ -1426,6 +1430,7 @@ actions:
   - utter_lei_rouanet_porcentagem_de_deducao_do_imposto
   - utter_lei_rouanet_valor_maximo_projeto
   - utter_lei_rouanet_valor_maximo_pessoa_fisica
+  - utter_lei_rouanet_valor_maximo_outro_perfil
   - utter_lei_rouanet_valor_maximo_pessoa_juridica
   - utter_lei_rouanet_remuneracao_proponente
   - utter_lei_rouanet_comercializacao_de_ingressos
