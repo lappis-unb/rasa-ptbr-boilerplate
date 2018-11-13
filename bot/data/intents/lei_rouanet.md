@@ -1,4 +1,11 @@
 <!-- Lei Rouanet -->
+<<<<<<< HEAD:bot/data/intents/lei_rouanet.md
+
+## intent:lei_rouanet
+- quero falar sobre a lei rouanet
+- lei rouanet
+- me fale sobre a lei rouanet
+
 
 ## intent:lei_rouanet_o_que_eh
 - o que é [lei rouanet](lei_rouanet)
@@ -20,6 +27,44 @@
 - [lei rouanet](lei_rouanet)
 - Lei de Incentivo a Cultura
 
+=======
+
+## intent:lei_rouanet_o_que_eh
+- o que é [lei rouanet](lei_rouanet)
+- o que significa [ruane](lei_rouanet)
+- Explique a [lei ruanê](lei_rouanet)
+- o que é [lei ruanet](lei_rouanet)
+- o que significa [lei rouanet](lei_rouanet)
+- Explique a [lei rouanet](lei_rouanet)
+- o que é [lei rouane](lei_rouanet)
+- o que significa [lei rouanet](lei_rouanet)
+- Explique a [lei rouanet](lei_rouanet)
+- o que é [lei rouanet](lei_rouanet)
+- o que significa [lei rouanet](lei_rouanet)
+- Explique a [lei rouanet](lei_rouanet)
+- o que é [lei rouanet](lei_rouanet)
+- o que significa [lei rouanet](lei_rouanet)
+- Explique a [lei rouanet](lei_rouanet)
+- fale sobre a [lei rouanet](lei_rouanet)
+- [lei rouanet](lei_rouanet)
+- Lei de Incentivo a Cultura
+>>>>>>> a5120a178be98f4aba81da0ecbbfc78314345bbc:bot/data/intents/lei_rouanet.md
+
+## synonym:lei_rouanet   <!-- synonyms, method 2 -->
+- lei rouanet
+- Lei Rouanet
+- Lei de Incentivo a Cultura
+- ruane
+- ruanê
+- ruanet
+- rouane
+- rouanê
+- Lei ruane
+- Lei ruanê
+- lei ruanet
+- lei rouane
+- lei rouanê
+- lei adnet
 
 ## synonym:lei_rouanet   <!-- synonyms, method 2 -->
 - lei rouanet
@@ -234,6 +279,7 @@
 - quantidade por ano
 - ultrapassar o limite
 
+
 ## intent:lei_rouanet_valor_maximo_pessoa_fisica
 - pessoa fisica
 - uma pessoa fisica
@@ -338,9 +384,34 @@
 - valor da entrada
 - comercialização da entrada
 - comercialização do ingresso
-- vender a entrada
-- preço da entrada
-- ingressos gratuitos
-- entradas gratuitas
-- distribuir os ingressos
-- ingressos podem ser de graça
+- como vender a entrada
+- qual deve ser o preço da entrada
+- como estabelecer preços de ingressos
+- por qual valor devo vender a entrada
+- pode ter entradas gratuitas
+- como devo distribuir os ingressos
+- quantos ingressos podem ser de graça
+- há um limite de preço das entradas
+- qual o limite de valor das entradas
+
+## intent:lei_rouanet_promocao_de_marca
+- é possível que o patrocinador faça a prospecção da sua marca em um projeto realizado com incentivo fiscal
+- como o patrocinador pode ativar a sua marca no projeto
+- em que condições a marca do patrocinador pode ser divulgada
+- o patrocinador pode promover a sua marca
+- a marca do patrcinador pode ser promovida
+- a marca do patrocinador pode ser divulgada
+- como o patrocinador pode usar o projeto para promover a sua marca
+- a logo do patrocinador pode ser divulgada
+- posso divulgar a logo do patrocinador
+- a logo do patrocinador pode ficar visivel
+- posso colocar a logo do patrocinador no banner
+- a marca do patrocinador pode ser divulgada junto com o projeto
+- a logo do patrocinador pode ser associada ao projeto
+- como deve ser feita a divulgação da marca do patrocinador
+- como a logo do patrocinador deve ser divulgada
+- como promover a logo do patrocinador
+- há limites para a promoção da marca do patrocinador
+- como a marca do patrocinador deve ser promovida
+- há regras para a divulgação da marca do patrocinador no projeto
+- como a marca do patrocinador deve aparecer na divulgação

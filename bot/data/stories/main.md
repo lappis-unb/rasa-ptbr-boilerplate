@@ -28,7 +28,7 @@
 ## Nao entendi
 * diga_mais
     - utter_diga_mais  
-       
+
 ## fallback
 * out_of_scope
   - utter_default

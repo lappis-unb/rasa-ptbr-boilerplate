@@ -9,16 +9,18 @@
 - você esta aonde?
 - voce torce pra qual time
 - como esta o tempo
-- e a claudia leitte
 
 ## intent:afirmar
 - se não for incomodo
 - claro que sim
 - posso sim
 - gostaria sim
+- sei bastante
 - preenchi sim
 - gostaria de saber mais
 - gostaria de mais detalhes
+- ja preenchi uma proposta
+- sim, preenchi minha proposta
 - quero
 - por favor
 - tudo bem
@@ -29,8 +31,6 @@
 - ok
 - claro
 - confirmo
-- sim
-
 
 ## intent:negar
 - não sei onde a minha pergunta se encaixa
@@ -54,50 +54,50 @@
 - duvida
 - ainda não sei
 
-<!-- Saudação -->
-## intent:cumprimentar
-- ola tais, como vai
-- oi, tudo bem
-- como vai
-- oi, como vai voce
-- como vao as coisas
-- com licenca
-- tudo bom
-- posso falar com voce
-- pode me tirar uma duvida
-- gostaria de tirar uma duvida
-- ola tais
-- to bem
-- tranquilo
-- estou bem
-- estou otimo
-- muito bem
-- bom dia
-- boa tarde
-- boa noite
-- olá
-- oie
-- oiee
-- opa tudo bem
+## intent:afirmar_curiosidades
+- quero aprender mais sobre a lei
+- quero saber mais sobre a lei
+- pretendo saber mais sobre a lei
+- gostaria de aprender mais sobre a lei
+- gostaria de saber mais sobre a lei
+- possuo curiosidades sobre a lei rouanet
+- creio que sobre a lei rouanet
+- quero falar sobre a lei
+- vamos falar sobre a lei
+- me fale da lei rouanet
+- mais sobre a lei
+- aprender sobre a lei rouanet
+- sobre a lei
+- lei
+- rouanet
+- curiosidades
+- sobre a Lei eu acho
+- aprender mais
+- saber mais
+- aprender mais
 
-<!-- Despedir -->
+## intent:afirmar_projeto
+- prefiro conversar sobre criaçao e andamento de projetos
+- gostaria de saber sobre criacao e andamento de projetos
+- sobre criacao e andamento de projetos
+- criacao e andamento de projetos
+- conversar sobre proposta
+- conversar sobre projetos
+- prefiro falar sobre proposta
+- prefiro falar sobre projetos
+- conversar sobre projetos
+- conversar sobre proposta
+- projeto
+- proposta
+- criação
+- andamento
+- criacao de projeto
+- andamento de projeto
+- criaçao e andamento
+- sobre proposta
+- sobre projeto
+- sobre criacao
 
-##intent:despedir
-- Tchau obrigada
-- até logo
-- namaste
-- sayonara
-- até mais
-- até breve
-- falou, valeu
-- flw vlw
-- valeu
-- de boa
-- obrigada
-- obrigado
-- obj
-- beijo
-- beijos
 
 ## intent:diga_mais
 - como funciona
@@ -110,17 +110,10 @@
 - como assim
 - e como funciona
 - e como faco isso
-- massa
-- show
-- top
-- excelente
-- blza
 
 
 ## intent:o_que_sei_falar
 - #MEAJUDA
-- #meajuda
-- #
 - sobre o que você sabe falar
 - quais assuntos você fala
 - o que você sabe 

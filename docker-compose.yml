@@ -50,16 +50,13 @@ services:
       - BOT_VERSION=last-commit-hash
 
       # Analytics config
-      - ENABLE_ANALYTICS=True
+      - ENABLE_ANALYTICS=False
       - ELASTICSEARCH_URL=elasticsearch:9200
     ports:
       - 5005:5005
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
-    depends_on:
-      - actions
-      - rocketchat
 
   actions:
     build:

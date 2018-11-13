@@ -34,7 +34,7 @@
 	- utter_lei_rouanet_origem_do_dinheiro
 * lei_rouanet_quem_pode_incentivar
 	- utter_lei_rouanet_quem_pode_incentivar
-	- utter_manter_conversa	
+	- utter_manter_conversa
 * lei_rouanet_porcentagem_de_deducao_do_imposto
 	- utter_lei_rouanet_porcentagem_de_deducao_do_imposto
 	- utter_manter_conversa
@@ -146,5 +146,3 @@
 * lei_rouanet_denuncia
 	- utter_lei_rouanet_denuncia
 	- utter_manter_conversa
-
-

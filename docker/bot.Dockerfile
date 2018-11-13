@@ -13,7 +13,7 @@ add ./scripts /scripts
 
 workdir /bot
 
-env TRAINING_EPOCHS=300                    \
+env TRAINING_EPOCHS=20                    \
     ROCKETCHAT_URL=rocketchat:3000         \
     MAX_TYPING_TIME=10                     \
     MIN_TYPING_TIME=1                      \

@@ -2,14 +2,12 @@ intents:
   - cumprimentar
   - despedir
   - out_of_scope
+  - afirmar
+  - negar
+  - afirmar_curiosidades
+  - afirmar_projeto
   - o_que_sei_falar
   - erro_resposta_utter
-  - tudo_bem
-  - diga_mais
-  - negar
-  - afirmar
-  - lei_rouanet
-  - quem_eh_a_tais
 
   - captacao
   - captacao_quando_captar
@@ -26,21 +24,23 @@ intents:
   - definicao_salic
   - definicao_vinculada
 
+  - lei_rouanet
   - lei_rouanet_o_que_eh
+  - lei_rouanet_quantidade_de_projetos
+  - lei_rouanet_beneficios_incentivo_projetos_culturais
   - lei_rouanet_quem_pode_ser_proponente
   - lei_rouanet_origem_do_dinheiro
-  - lei_rouanet_beneficios_incentivo_projetos_culturais
-  - lei_rouanet_porcentagem_de_deducao_do_imposto
-  - lei_rouanet_quantidade_de_projetos
-  - lei_rouanet_quem_pode_incentivar
   - lei_rouanet_denuncia
+  - lei_rouanet_quem_pode_incentivar
+  - lei_rouanet_porcentagem_de_deducao_do_imposto
   - lei_rouanet_receber_incetivo_de_parentes
   - lei_rouanet_valor_maximo_projeto
+  - lei_rouanet_valor_maximo_geral
   - lei_rouanet_valor_maximo_pessoa_fisica
   - lei_rouanet_valor_maximo_pessoa_juridica
-  - lei_rouanet_valor_maximo_geral
   - lei_rouanet_remuneracao_proponente
   - lei_rouanet_comercializacao_de_ingressos
+  - lei_rouanet_promocao_de_marca
 
   - processo
   - processo_como_funciona
@@ -163,14 +163,14 @@ templates:
 
   utter_restart:
     - text: |
-        reiniciando =D
+          reiniciando =D
 
   utter_retorno:
     - text: |
-        Olá, que bom que você voltou!
-        Estou ansiosa para tirar suas novas dúvidas sobre a Lei Rouanet!
+          Olá, que bom que você voltou!
+          Estou ansiosa para tirar suas novas dúvidas sobre a Lei Rouanet!
 
-        Como posso te ajudar?
+          Como posso te ajudar?
 
   utter_processo_situacao_processo_A12:
     - text: |
@@ -714,7 +714,7 @@ templates:
 
           Utilizo algoritmos de aprendizagem profundo (deep learning) e sou toda desenvolvida como software livre :P
 
-          Se quiser me conhecer mais, entre no nosso projeto :P e entre em contato conosco do LAPPIS ;) 
+          Se quiser me conhecer mais, entre no nosso projeto :P e entre em contato conosco do LAPPIS ;)
 
           https://github.com/lappis-unb
 
@@ -736,9 +736,6 @@ templates:
 
           Denúncia
 
-  utter_lei_rouanet_mais:
-    - text: |
-          Deseja saber mais sobre a lei Rouanet?
 
   utter_lei_rouanet_o_que_eh:
     - text: |
@@ -754,12 +751,12 @@ templates:
           de Cultura, o diplomata Sérgio Paulo Rouanet.
 
     - text: |
-           A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de 
-            
-           Investimento Cultural e Artístico (Ficart). Este nunca foi 
-      
-           implementado, enquanto o Incentivo Fiscal – também chamado de 
-      
+          A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de
+
+          Investimento Cultural e Artístico (Ficart). Este nunca foi
+
+          implementado, enquanto o Incentivo Fiscal – também chamado de
+
            mecenato – prevaleceu e chega ser confundido com a própria Lei.
   utter_diga_mais:
     - text: |
@@ -856,19 +853,19 @@ templates:
 
   utter_processo_como_funciona:
     - text: |
-        Tudo bem. Aqui vai um resumo do processo
+          Tudo bem. Aqui vai um resumo do processo
 
-        A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
+          A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
 
-        Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
+          Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
 
-        Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
+          Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
 
-        Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
+          Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
 
-        A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
+          A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
 
-        O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+          O primeiro passo para você particiar deste processo é ter cadastro no SALIC
 
   utter_cadastro_salic_video:
     - text: |
@@ -900,39 +897,39 @@ templates:
 
   utter_curiosidadesMais:
     - text: |
-        Você quer saber mais curiosidades?
+          Você quer saber mais curiosidades?
 
     - text: |
-        Você tem interesse de saber mais curiosidades?
+          Você tem interesse de saber mais curiosidades?
 
     - text: |
-        Você gostaria de saber mais curiosidades?
+          Você gostaria de saber mais curiosidades?
 
   utter_curiosidadesMaisSim:
     - text: |
-        EBA!
+          EBA!
 
-        O que você quer saber?
-
-    - text: |
-        EBA!
-
-        Do que você quer saber?
+          O que você quer saber?
 
     - text: |
-        EBA!
+          EBA!
 
-        De qual assunto você quer saber?
+          Do que você quer saber?
+
+    - text: |
+          EBA!
+
+          De qual assunto você quer saber?
 
   utter_curiosidadesMaisNao:
     - text:
-        Tudo bem, então você quer saber sobre *projetos e propostas*?
+          Tudo bem, então você quer saber sobre *projetos e propostas*?
 
     - text:
-        Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
+          Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
 
     - text:
-        Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?
+          Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?
 
   utter_curiosidadesFalarSobreProjetos:
     - text: |
@@ -1030,18 +1027,90 @@ templates:
 
           Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm
 
+utter_lei_rouanet_valor_maximo_projeto:
+    - text: |
+          Isto depende do seu perfil de proponente.
+
+          Sobre qual perfil você quer saber:
+
+          - Pessoa Física e Microempresário Individual(MEI)
+
+          - Demais Pessoas Jurídicas
+
+          - Quero saber de todos
+
+utter_lei_rouanet_valor_maximo_pessoa_fisica:
+    - text: |
+          A (Secretaria de Fomento e Incentivo à Cultura) planeja,
+
+          coordena e supervisiona a operacionalização Pronac, na aprovação,
+
+          monitoramento e prestação de contas de projetos culturais.
+
+          Estes limites podem ser ultrapassados dependendo do espaço em que o projeto cultural será realizado e a região:
+
+          Ocorrendo em espaço público, estes perfis tem a quantidade de projetos acrescido em 2, mas o valor máximo não muda.
+
+utter_lei_rouanet_valor_maximo_outro_perfil:
+    - text: |
+          Você gostaria de saber a respeito dos limites para outro perfil?
+
+utter_lei_rouanet_valor_maximo_pessoa_juridica:
+    - text: |
+          Então, em relação aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,5 milhões para até oito projetos por ano;
+
+          Para a Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, o valor máximo é de R$ 60 milhões para até 16 projetos por ano.
+
+          Se o projeto cultural ocorrer em espaço público, o Empresário Individual tem a quantidade de projetos acrescido em 3, mas o valor máximo não muda.
+
+          Ássim como as Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, quem podem somar mais 4 projetos, se realizados em espaço público, mantendo os limites orçamentários.
+
+utter_lei_rouanet_remuneracao_proponente:
+    - text: |
+          O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, conforme previsto no orçamento apresentado.
+
+          O valor desta remuneração, ainda que por diversos serviços, não pode ultrapassar 50% do custo do projeto.
+
+          O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e
+          em benefício de empresa coligada ou que tenha sócio em comum.
+
+          O limite pode ser ultrapassado quando a remuneração é feita a grupos artísticos familiares que atuem na execução do projeto ou quando se tratar de pagamento a um mesmo fornecedor em projetos de execução de obras e restauros.
+
+utter_lei_rouanet_comercializacao_de_ingressos:
+    - text: |
+          Do total de ingressos de um projeto cultural, a Lei Rouanet estabelece que a venda deve ser feita da seguinte forma:
+
+          50% dos ingressos devem ser comercializadosa uma média de preço de R$225,00;
+
+          Minimo de 10% deve ser vendido gratuitamente, com caráter social, educativo ou formação artística;
+
+          Até 10% deve ser disponnibilizado gratuitamente pelos patrocinadores;
+
+          Até 10% deve ser distribuido gratuitamente pelo proponente de forma a divulgar o projeto;
+
+          Minimo de 20% dos ingressos deve ser comercializado em valores que não utrapassem R$75,00.
+
+utter_lei_rouanet_promocao_de_marca:
+    - text: |
+          O patrocinador pode divulgar sua marca em um projeto, desde que utilize
+          recursos próprios, não decorrentes do incentivo fiscal, nas seguintes situações:
+          Promoção da imagem da empresa ou nome do patrocinador em peças de divulgação
+          além das aprovadas pelo Ministério da Cultura;
+          Fornecimento de produtos ou serviços do patrocinador ao projeto cultural,
+          desde que seja comprovada uma vantagem econômica ou exclusividade.
+
   #TODO
-  utter_salic_preenchimento:
+utter_salic_preenchimento:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre o preenchimento de
 
           propostas no SALIC
 
-  utter_salic_preenchimento_campo_custo_auditoria:
+utter_salic_preenchimento_campo_custo_auditoria:
     - text: |
           Este campo não precisa ser preenchido agora, isso vai ser preenchido na prestação de contas.
 
-  utter_preenchimentoVinculoDePropostas:
+utter_preenchimentoVinculoDePropostas:
     - text: |
           Você deve ir em:
 
@@ -1053,7 +1122,7 @@ templates:
 
           contábil e jurídica.
 
-  utter_salic_preenchimento_valor_ingresso:
+utter_salic_preenchimento_valor_ingresso:
     - text: |
           Esse valor é usado para conferir a viabilidade do projeto e não
 
@@ -1067,7 +1136,7 @@ templates:
 
           de público.
 
-  utter_salic_preenchimento_vinculo_cpf_proposta:
+utter_salic_preenchimento_vinculo_cpf_proposta:
     - text: |
           O dirigente do projeto deve acessar o sistema e seguir os passos:
 
@@ -1083,14 +1152,14 @@ templates:
 
           3- Por último... clica também no botão Vincular
 
-  utter_salic_preenchimento_cadastro_agencia_bancaria:
+utter_salic_preenchimento_cadastro_agencia_bancaria:
     - text: |
           A agência bancária deve ser do banco do Brasil, deve conter 5
 
           dígitos, sem hifens, pontos ou letras
 
   #TODO
-  utter_salic_erros:
+utter_salic_erros:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre eventuais erros do
 
@@ -1098,13 +1167,13 @@ templates:
 
           preenchidos e recuperação de senha
 
-  utter_salic_erros_planilha_desapareceu:
+utter_salic_erros_planilha_desapareceu:
     - text: |
           Ao excluir um produto do plano de distribuição a planilha vai ser
 
           \"zerada\" e o proponente deverá refazê-la.
 
-  utter_salic_erros_salvamento_de_proposta:
+utter_salic_erros_salvamento_de_proposta:
     - text: |
           Esse erro aconteceu por exceder o tempo logado no sistema.
 
@@ -1112,7 +1181,7 @@ templates:
 
           Não esqueça de ir salvando a cada passo do preenchimento.
 
-  utter_salic_recuperacao_de_senha:
+utter_salic_recuperacao_de_senha:
     - text: |
           Ah isso acontece com todo mundo ;)
 
@@ -1124,7 +1193,7 @@ templates:
 
           senhasalic@cultura.gov.br
 
-  utter_salic_erros_vinculo_cpf_cnpj:
+utter_salic_erros_vinculo_cpf_cnpj:
     - text: |
           Apenas o dirigente da instituição é quem pode vincular uma
 
@@ -1132,7 +1201,7 @@ templates:
 
           o dirigente deve entrar com login e senha e aceitar o vínculo
 
-  utter_salic_erros_achar_proposta:
+utter_salic_erros_achar_proposta:
     - text: |
           Selecione o CPF ou CNPJ que deseja como proponente e liste a proposta
 
@@ -1144,7 +1213,7 @@ templates:
 
           propostas ativas no sistema
 
-  utter_processo:
+utter_processo:
     - text: |
           Na categoria de processos eu posso responder dúvidas sobre:
 
@@ -1158,13 +1227,13 @@ templates:
 
           Reativação da proposta
 
-  utter_processoProcessoCaptacaoDeRecursos:
+utter_processoProcessoCaptacaoDeRecursos:
     - text: |
           A captação só pode começar depois que o projeto passa pela fase de enquadramento, pela análise documental e pela publicação.
 
           Assim que o projeto é publicado no Diário Oficial da União você pode começar a captar recursos.
 
-  utter_processo_reativacao_de_proposta:
+utter_processo_reativacao_de_proposta:
     - text: |
           Pra reativar uma proposta indeferida você deve enviar um pedido de reativação
 
@@ -1174,20 +1243,20 @@ templates:
 
           E aí é só aguardar uma resposta
 
-  utter_salic_cadastro_proponente:
+utter_salic_cadastro_proponente:
     - text: |
           Basta você entrar no Salic...
 
           clicar em Administrativo > Cadastrar proponente e preencher todos os dados
 
   #TODO
-  utter_processo_prazo:
+utter_processo_prazo:
     - text: |
           Posso responder suas dúvidas a respeito de Datas
 
           e Prazos do seu projeto. Como: envio do CNAE e desistência de recurso
 
-  utter_processo_prazo_envio_cnae:
+utter_processo_prazo_envio_cnae:
     - text: |
           O proponente tem o prazo de 40 dias para responder a diligência 20+20 prorrogados automaticamente.
 
@@ -1195,7 +1264,7 @@ templates:
 
           Caso seja insuficiente, o proponente poderá anexar o protocolo da Receita de inserção do CNAE no Salic.
 
-  utter_processo_prazo_desistir_recurso:
+utter_processo_prazo_desistir_recurso:
     - text: |
           A partir do momento em que seu projeto foi enquadrado, iniciou-se o prazo de 10 dias corridos para recorrer ao enquadramento proposto para o projeto
 
@@ -1203,35 +1272,40 @@ templates:
 
           Ambas as manifestações se dão por via da aba "recurso" no Menu ao lado esquerdo da tela do projeto, no Salic
 
-  utter_cumprimentar:
+utter_cumprimentar:
     - text: |
-         Oi, sou assistente virtual do MinC, me chamo Tais. 
+          Oi, sou assistente virtual do MinC, me chamo Tais.
 
-         Estou aqui para te ajudar a esclarecer dúvidas sobre a lei de Incentivo à Cultura, conhecida como lei Rouanet.
+          Estou aqui para te ajudar a esclarecer dúvidas sobre a lei de Incentivo à Cultura, conhecida como lei Rouanet.
 
-  utter_o_que_sei_falar:
+utter_o_que_sei_falar:
     - text: |
-         Veja alguns dos assuntos que eu posso te ajudar:
+          Veja alguns dos assuntos que eu posso te ajudar:
 
-         O que é a Lei de Incentivo Culturais e como funciona
+          O que é a Lei de Incentivo Culturais e como funciona
 
-         Dúvidas operacionais encontradas durante a execução do projeto cultural (tipo, perdi minha senha no SALIC)
+          Dúvidas operacionais encontradas durante a execução do projeto cultural (tipo, perdi minha senha no SALIC)
 
+<<<<<<< HEAD
          Duvidas sobre Definições, nomenclaturas, e informações relacionadas à lei e ao Ministério da Cultura (MinC)
 
          Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o MinC
+=======
+          Duvidas sobre Definições, nomenclaturas, e informacoes relacionadas à lei e ao Ministério da Cultura
 
-         Agora pode me fazer tua pergunta!
-         
-  utter_erro_resposta_utter:
+          Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o Minitério da Cultura
+>>>>>>> 12e635aae2307266838389ecd327a288695458f2
+
+          Agora pode me fazer tua pergunta!
+
+utter_erro_resposta_utter:
     - text: |
-         
           Obrigada pelo feedback. Espero que na próxima vez vou conseguir responder a tua pergunta corretamente
 
           Gostaria de fazer uma nova pergunta?
 
-         
-  utter_manter_conversa:
+
+utter_manter_conversa:
     - text: |
           Espero estar te ajudando, você possui mais alguma pergunta?
 
@@ -1251,64 +1325,64 @@ templates:
           Gostaria te retirar mais alguma dúvida?
 
     - text: |
-            Espero ter solucionado a sua dúvida, tem mais alguma dúvida?
+          Espero ter solucionado a sua dúvida, tem mais alguma dúvida?
 
-  utter_despedir:
+utter_despedir:
     - text: |
-        Foi um prazer te ajudar!
+          Foi um prazer te ajudar!
 
-        Sempre que tiver alguma dúvida, volte aqui!
+          Sempre que tiver alguma dúvida, volte aqui!
 
-        Até logo!
-
-    - text: |
-        Foi um prazer te ajudar!
-
-        Sempre que precisar, volte aqui!
-
-        Até a próxima!
+          Até logo!
 
     - text: |
-        Foi um prazer te ajudar!
+          Foi um prazer te ajudar!
 
-        Quando surgir alguma dúvida, volte aqui!
+          Sempre que precisar, volte aqui!
 
-        Até mais!
+          Até a próxima!
 
-  utter_captacao:
     - text: |
-        Em captação, eu sei falar sobre quando captar e sobre como captar
+          Foi um prazer te ajudar!
 
-        O que você deseja saber?
+          Quando surgir alguma dúvida, volte aqui!
 
-  utter_captacao_quando_captar:
+          Até mais!
+
+utter_captacao:
     - text: |
-        A captação só pode começar depois que o projeto passa pela fase de
-        enquadramento, pela análise documental e pela publicação.
+          Em captação, eu sei falar sobre quando captar e sobre como captar
 
-        Assim que o projeto é publicado no Diário Oficial da União você pode
-        começar a captar recursos.
+          O que você deseja saber?
+
+utter_captacao_quando_captar:
+    - text: |
+          A captação só pode começar depois que o projeto passa pela fase de
+          enquadramento, pela análise documental e pela publicação.
+
+          Assim que o projeto é publicado no Diário Oficial da União você pode
+          começar a captar recursos.
 
   #TODO
-  utter_captacao_como_captar:
+utter_captacao_como_captar:
     - text: |
-        Para captar os recursos você deve achar incetivadores
+          Para captar os recursos você deve achar incetivadores
 
   #TODO
-  utter_processo_definicao_etapas:
+utter_processo_definicao_etapas:
     - text: |
-        O processo possui cinco etapas:
-        - Preenchimento
-        - Aprovação
-        - Admissibilidade
-        - Execução
-        - Análise de Resultados
+          O processo possui cinco etapas:
+            - Preenchimento
+            - Aprovação
+            - Admissibilidade
+            - Execução
+            - Análise de Resultados
 
-        Você tem alguma dúvida sobre elas?
+          Você tem alguma dúvida sobre elas?
 
-  utter_menu:
+utter_menu:
     - text: |
-        Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
+          Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
 
         Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
 
@@ -1319,20 +1393,20 @@ templates:
   
   utter_tudo_bem:
     - text: |
-        Tudo bem, obrigada! Em que posso te ajudar?
+          Tudo bem, obrigada! Em que posso te ajudar?
 
 
   #TODO
 
-  utter_salic:
+utter_salic:
     - text: |
-        Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
+          Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
 
-  utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
+utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
     - text: |
-        Você deve ir em:
-        Orçamento do projeto > Custos por produto > Clicar no produto desejado
-        Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
+          Você deve ir em:
+          Orçamento do projeto > Custos por produto > Clicar no produto desejado
+          Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
 
 
 actions:
@@ -1374,6 +1448,13 @@ actions:
   - utter_lei_rouanet_denuncia
   - utter_lei_rouanet_quem_pode_incentivar
   - utter_lei_rouanet_porcentagem_de_deducao_do_imposto
+  - utter_lei_rouanet_valor_maximo_projeto
+  - utter_lei_rouanet_valor_maximo_pessoa_fisica
+  - utter_lei_rouanet_valor_maximo_outro_perfil
+  - utter_lei_rouanet_valor_maximo_pessoa_juridica
+  - utter_lei_rouanet_remuneracao_proponente
+  - utter_lei_rouanet_comercializacao_de_ingressos
+  - utter_lei_rouanet_promocao_de_marca
 
   - utter_processo
   - utter_processo_reativacao_de_proposta
