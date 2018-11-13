@@ -708,7 +708,6 @@ templates:
 
           Obrigada por conversar comigo!
 
-
   utter_quem_eh_a_tais:
     - text: |
           Eu sou uma assistente virtual do MinC
@@ -739,7 +738,6 @@ templates:
           Quem pode incentivar
 
           Denúncia
-
 
   utter_lei_rouanet_o_que_eh:
     - text: |
@@ -1374,12 +1372,12 @@ utter_captacao_quando_captar:
           Assim que o projeto é publicado no Diário Oficial da União você pode
           começar a captar recursos.
 
-  #TODO
+#TODO
 utter_captacao_como_captar:
     - text: |
           Para captar os recursos você deve achar incetivadores
 
-  #TODO
+#TODO
 utter_processo_definicao_etapas:
     - text: |
           O processo possui cinco etapas:
@@ -1406,9 +1404,7 @@ utter_tudo_bem:
     - text: |
           Tudo bem, obrigada! Em que posso te ajudar?
 
-
-  #TODO
-
+#TODO
 utter_salic:
     - text: |
           Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
@@ -1418,7 +1414,6 @@ utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
           Você deve ir em:
           Orçamento do projeto > Custos por produto > Clicar no produto desejado
           Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
-
 
 actions:
   - utter_default
