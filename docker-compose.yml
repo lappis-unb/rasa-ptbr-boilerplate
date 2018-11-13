@@ -5,8 +5,6 @@ services:
   rocketchat:
     image: rocket.chat:0.69.2
     restart: unless-stopped
-    volumes:
-      - ./uploads:/app/uploads
     environment:
       - PORT=3000
       - ROOT_URL=http://localhost:3000
@@ -57,16 +55,6 @@ services:
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
-
-  actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
-    ports:
-      - 5055:5055
-    volumes:
-      - ./bot/actions:/bot/actions
-
 
 
   # =================================== Web ===================================
