@@ -350,3 +350,25 @@
 - quantos ingressos podem ser de graça
 - há um limite de preço das entradas
 - qual o limite de valor das entradas
+
+## intent:lei_rouanet_promocao_de_marca
+- é possível que o patrocinador faça a prospecção da sua marca em um projeto realizado com incentivo fiscal
+- como o patrocinador pode ativar a sua marca no projeto
+- em que condições a marca do patrocinador pode ser divulgada
+- o patrocinador pode promover a sua marca
+- a marca do patrcinador pode ser promovida
+- a marca do patrocinador pode ser divulgada
+- como o patrocinador pode usar o projeto para promover a sua marca
+- a logo do patrocinador pode ser divulgada
+- posso divulgar a logo do patrocinador
+- a logo do patrocinador pode ficar visivel
+- posso colocar a logo do patrocinador no banner
+- a marca do patrocinador pode ser divulgada junto com o projeto
+- a logo do patrocinador pode ser associada ao projeto
+- como deve ser feita a divulgação da marca do patrocinador
+- como a logo do patrocinador deve ser divulgada
+- como promover a logo do patrocinador
+- há limites para a promoção da marca do patrocinador
+- como a marca do patrocinador deve ser promovida
+- há regras para a divulgação da marca do patrocinador no projeto
+- como a marca do patrocinador deve aparecer na divulgação

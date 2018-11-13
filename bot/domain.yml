@@ -26,20 +26,21 @@ intents:
 
   - lei_rouanet
   - lei_rouanet_o_que_eh
+  - lei_rouanet_quantidade_de_projetos
+  - lei_rouanet_beneficios_incentivo_projetos_culturais
   - lei_rouanet_quem_pode_ser_proponente
   - lei_rouanet_origem_do_dinheiro
-  - lei_rouanet_beneficios_incentivo_projetos_culturais
-  - lei_rouanet_porcentagem_de_deducao_do_imposto
-  - lei_rouanet_quantidade_de_projetos
-  - lei_rouanet_quem_pode_incentivar
   - lei_rouanet_denuncia
+  - lei_rouanet_quem_pode_incentivar
+  - lei_rouanet_porcentagem_de_deducao_do_imposto
   - lei_rouanet_receber_incetivo_de_parentes
   - lei_rouanet_valor_maximo_projeto
+  - lei_rouanet_valor_maximo_geral
   - lei_rouanet_valor_maximo_pessoa_fisica
   - lei_rouanet_valor_maximo_pessoa_juridica
-  - lei_rouanet_valor_maximo_geral
   - lei_rouanet_remuneracao_proponente
   - lei_rouanet_comercializacao_de_ingressos
+  - lei_rouanet_promocao_de_marca
 
   - processo
   - processo_como_funciona
@@ -716,10 +717,6 @@ templates:
 
           Denúncia
 
-  utter_lei_rouanet_mais:
-    - text: |
-          Deseja saber mais sobre a lei Rouanet?
-
   utter_lei_rouanet_o_que_eh:
     - text: |
           A Lei 8.313/91, Lei Rouanet, é o principal
@@ -994,6 +991,15 @@ templates:
 
           Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm
 
+  utter_lei_rouanet_promocao_de_marca:
+    - text: |
+          O patrocinador pode divulgar sua marca em um projeto, desde que utilize
+          recursos próprios, não decorrentes do incentivo fiscal, nas seguintes situações:
+          Promoção da imagem da empresa ou nome do patrocinador em peças de divulgação
+          além das aprovadas pelo Ministério da Cultura;
+          Fornecimento de produtos ou serviços do patrocinador ao projeto cultural,
+          desde que seja comprovada uma vantagem econômica ou exclusividade.
+
   #TODO
   utter_salic_preenchimento:
     - text: |
@@ -1186,15 +1192,15 @@ templates:
          Duvidas sobre Definições, nomenclaturas, e informacoes relacionadas a lei e ao ministério
 
          Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o Minitério da Cultura
-         
+
 utter_erro_resposta_utter:
     - text: |
-         
+
           Obrigada pelo feedback. Espero que na próxima vez vou conseguir responder a tua pergunta corretamente
 
           Gostaria de fazer uma nova pergunta?
 
-         
+
 utter_manter_conversa:
     - text: |
          Vamos dar continuidade ao nosso bate-papo,
@@ -1382,7 +1388,6 @@ actions:
   - utter_definicao_vinculada
 
   - utter_lei_rouanet
-  - utter_lei_rouanet_mais
   - utter_lei_rouanet_o_que_eh
   - utter_lei_rouanet_quantidade_de_projetos
   - utter_lei_rouanet_beneficios_incentivo_projetos_culturais
@@ -1391,6 +1396,13 @@ actions:
   - utter_lei_rouanet_denuncia
   - utter_lei_rouanet_quem_pode_incentivar
   - utter_lei_rouanet_porcentagem_de_deducao_do_imposto
+  - utter_lei_rouanet_valor_maximo_projeto
+  - utter_lei_rouanet_valor_maximo_pessoa_fisica
+  - utter_lei_rouanet_valor_maximo_outro_perfil
+  - utter_lei_rouanet_valor_maximo_pessoa_juridica
+  - utter_lei_rouanet_remuneracao_proponente
+  - utter_lei_rouanet_comercializacao_de_ingressos
+  - utter_lei_rouanet_promocao_de_marca
 
   - utter_processo
   - utter_processo_reativacao_de_proposta

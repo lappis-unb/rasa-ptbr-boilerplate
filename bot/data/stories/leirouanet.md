@@ -61,9 +61,16 @@
 * cumprimentar
     - utter_cumprimentar
     - utter_menu
+* lei_rouanet_promocao_de_marca
+    - utter_lei_rouanet_promocao_de_marca
+    - utter_manter_conversa
+
+## LeiRouanet 8
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
 * lei_rouanet
     - utter_lei_rouanet
     - utter_manter_conversa
 * despedir
     - utter_despedir
-
