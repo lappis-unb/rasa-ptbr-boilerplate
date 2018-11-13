@@ -11,7 +11,6 @@
 - como esta o tempo
 - e a claudia leitte
 
-
 ## intent:afirmar
 - se não for incomodo
 - claro que sim
@@ -170,5 +169,13 @@
 - qual o seu papel no ministerio da cultura
 - qual o seu papel no ministerio
 - o que faz para o minc
+- me fale sobre voce
+- Tais, me fale sobre vc
+- qual sua tecnologia
+- qual seu pai
+- onde voce nasceu
+- quando vc nasceu
+
+
 
 

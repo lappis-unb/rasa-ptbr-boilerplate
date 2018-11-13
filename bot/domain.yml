@@ -152,9 +152,14 @@ slots:
 templates:
   utter_default:
     - text: |
-        Desculpe, não consegui te entender
+        Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
 
         Você pode perguntar de novo de outro jeito?
+    - text: |
+        Poxa, acho que ainda não sei isso... Mas se você perguntar de outra forma talvez eu consiga te responder 
+
+    - text: |
+        Hummmm... Não sei se entendi. Pode escrever de outra forma?
 
   utter_restart:
     - text: |
@@ -707,11 +712,11 @@ templates:
           Fui desenvolvida pelo excelente e magnífico LAPPIS (Laboratório Avançado de Produção Pesquisa e Inovação em Software)
           na Universidade de Brasilia
 
-          Utilizo algoritmos de aprendizagem de maquina profundo (deep learning) e sou toda desenvolvida em software livre :P
+          Utilizo algoritmos de aprendizagem profundo (deep learning) e sou toda desenvolvida como software livre :P
 
           Se quiser me conhecer mais, entre no nosso projeto :P e entre em contato conosco do LAPPIS ;) 
 
-          https://github.com/lappis-unb/rouana
+          https://github.com/lappis-unb
 
   utter_lei_rouanet:
     - text: |
@@ -758,9 +763,8 @@ templates:
            mecenato – prevaleceu e chega ser confundido com a própria Lei.
   utter_diga_mais:
     - text: |
-          Ainda estou aprendendo como fazer inferencia a partir do contexto. 
 
-          Mas, por enquanto, só entendo perguntas completas (ao invés de perguntar "como funciona", tente "como funciona a Lei Rouanet", por exemplo)
+          Por enquanto, só entendo perguntas completas. Então é melhor você me perguntar "como funciona a Lei Rouanet" ao invés de "Como funciona" ;)
   # TO DO
   utter_definicao:
     - text: |
@@ -876,7 +880,7 @@ templates:
          
          nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
          
-         Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)
+         Caso você não possa ver o vídeo, eu posso te explicar. 
 
   utter_salic_cadastro_usuario:
     - text: |
@@ -1307,10 +1311,11 @@ templates:
         Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
 
         Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
-        E ai, como posso te ajudar?
 
         Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :)
         Use e Abuse da #meajuda
+
+        E ai, como posso te ajudar?
   
   utter_tudo_bem:
     - text: |

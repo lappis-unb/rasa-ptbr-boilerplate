@@ -26,6 +26,11 @@
 - o que significa Minc
 - MinC é o ministério
 - o que a sigla Minc significa
+- qual o trabalho do Ministerio da Cultura 
+- qual o trabalho do Ministério da Cultura 
+- Ministerio
+- Minc
+- Minitério da Cultura
 
 ## intent:definicao_cnic
 - o que é CNIC
