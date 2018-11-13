@@ -144,8 +144,8 @@ sudo docker-compose run --rm web python manage.py migrate
 sudo docker-compose run --rm web python manage.py createsuperuser
 sudo docker-compose up -d web
 
-sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
 sudo docker-compose up -d kibana
+sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
 
 # aguarde 3 minutos para o rocketchat terminar de levantar
 sudo docker-compose up -d bot

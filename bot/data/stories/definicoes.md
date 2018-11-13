@@ -7,6 +7,12 @@
     - utter_manter_conversa
 
 
+## Definicao 111
+* definicao_proposta
+    - utter_definicao_proposta
+    - utter_manter_conversa
+
+
 ## Definicao 2
 * cumprimentar
     - utter_cumprimentar

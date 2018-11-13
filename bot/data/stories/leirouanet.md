@@ -3,7 +3,6 @@
     - utter_cumprimentar
     - utter_menu
 
-
 ## LeiRouanet 2
 * cumprimentar
     - utter_cumprimentar
@@ -48,10 +47,7 @@
     - utter_manter_conversa
 
 ## LeiRouanet 6
-* cumprimentar
-    - utter_cumprimentar
-    - utter_menu
-* lei_rouanet
+* lei_rouanet_o_que_eh
     - utter_lei_rouanet
 * lei_rouanet_denuncia
     - utter_lei_rouanet_denuncia
@@ -61,16 +57,38 @@
 * cumprimentar
     - utter_cumprimentar
     - utter_menu
-* lei_rouanet_promocao_de_marca
-    - utter_lei_rouanet_promocao_de_marca
-    - utter_manter_conversa
-
-## LeiRouanet 8
-* cumprimentar
-    - utter_cumprimentar
-    - utter_menu
-* lei_rouanet
+* lei_rouanet_o_que_eh
     - utter_lei_rouanet
     - utter_manter_conversa
 * despedir
     - utter_despedir
+
+## LeiRouanet 8
+* lei_rouanet_o_que_eh
+    - utter_lei_rouanet
+* lei_rouanet_valor_maximo_projeto
+    - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_outro_perfil
+* lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_manter_conversa
+
+## LeiRouanet 9
+* lei_rouanet_o_que_eh
+  - utter_lei_rouanet
+* lei_rouanet_valor_maximo_projeto
+  - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_geral
+  - utter_lei_rouanet_valor_maximo_pessoa_fisica
+  - utter_lei_rouanet_valor_maximo_pessoa_juridica
+  - utter_manter_conversa
+
+## LeiRouanet 10
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* lei_rouanet_promocao_de_marca
+    - utter_lei_rouanet_promocao_de_marca
+    - utter_manter_conversa

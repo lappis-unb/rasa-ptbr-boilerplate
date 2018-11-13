@@ -8,7 +8,7 @@ variables:
   WEB_LATEST_IMAGE: $CI_REGISTRY_IMAGE/web:latest
 
   BOT_STABLE_IMAGE: $CI_REGISTRY_IMAGE/bot:stable
-  BOT_LATEST_IMAGE: $CI_REGISTRY_IMAGE/actions:latest
+  ACTIONS_STABLE_IMAGE: $CI_REGISTRY_IMAGE/actions:stable
   WEB_STABLE_IMAGE: $CI_REGISTRY_IMAGE/web:stable
 
 build stable:
@@ -25,7 +25,7 @@ build stable:
     - docker build -f docker/actions.Dockerfile -t $ACTIONS_STABLE_IMAGE .
     - docker push $ACTIONS_STABLE_IMAGE
 
-    - docker build -f docker/web/Dockerfile -t $WEB_STABLE_IMAGE .
+    - docker build -f docker/web.Dockerfile -t $WEB_STABLE_IMAGE .
     - docker push $WEB_STABLE_IMAGE
   only:
     - tags
@@ -63,7 +63,7 @@ build latest:
     - docker build -f docker/actions.Dockerfile -t $ACTIONS_LATEST_IMAGE .
     - docker push $ACTIONS_LATEST_IMAGE
 
-    - docker build -f docker/web/Dockerfile -t $WEB_LATEST_IMAGE .
+    - docker build -f docker/web.Dockerfile -t $WEB_LATEST_IMAGE .
     - docker push $WEB_LATEST_IMAGE
   only:
     - /master/
@@ -78,7 +78,7 @@ deploy_to_development:
     - docker:dind
   script:
     - upgrade --environment Development --stack TAIS --service bot --new-image $BOT_LATEST_IMAGE --debug
-    - upgrade --environment Development --stack TAIS --service actions --new-image $actions_LATEST_IMAGE --debug
+    - upgrade --environment Development --stack TAIS --service actions --new-image $ACTIONS_LATEST_IMAGE --debug
     - upgrade --environment Development --stack TAIS --service web --new-image $WEB_LATEST_IMAGE --debug
   only:
     - /master/
