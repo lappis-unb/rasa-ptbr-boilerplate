@@ -749,13 +749,18 @@ templates:
           de Cultura, o diplomata Sérgio Paulo Rouanet.
 
     - text: |
-         A Lei foi concebida originalmente com três mecanismos: o Fundo
+           A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de 
+            
+           Investimento Cultural e Artístico (Ficart). Este nunca foi 
+      
+           implementado, enquanto o Incentivo Fiscal – também chamado de 
+      
+           mecenato – prevaleceu e chega ser confundido com a própria Lei.
+  utter_diga_mais:
+    - text: |
+          Ainda estou aprendendo como fazer inferencia a partir do contexto. 
 
-            'Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de '
-            'Investimento Cultural e Artístico (Ficart). Este nunca foi '
-            'implementado, enquanto o Incentivo Fiscal – também chamado de '
-            'mecenato – prevaleceu e chega ser confundido com a própria Lei."
-
+          Mas, por enquanto, só entendo perguntas completas (ao invés de perguntar "como funciona", tente "como funciona a Lei Rouanet", por exemplo)
   # TO DO
   utter_definicao:
     - text: |
@@ -1337,6 +1342,7 @@ actions:
   - utter_o_que_sei_falar
   - utter_erro_resposta_utter
   - utter_quem_eh_a_tais
+  - utter_diga_mais
 
   - utter_captacao
   - utter_captacao_quando_captar

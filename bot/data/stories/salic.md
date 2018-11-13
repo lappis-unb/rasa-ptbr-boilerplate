@@ -4,7 +4,6 @@
     - utter_menu
 * salic_cadastro_usuario
     - utter_cadastro_salic_video
-* afirmar
     - utter_salic_cadastro_usuario
 
 ## salic 16
@@ -20,7 +19,6 @@
 ## salic 17
 * salic_cadastro_usuario
     - utter_cadastro_salic_video
-* afirmar
     - utter_salic_cadastro_usuario
 
 

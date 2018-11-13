@@ -11,6 +11,7 @@
 - como esta o tempo
 - e a claudia leitte
 
+
 ## intent:afirmar
 - se não for incomodo
 - claro que sim

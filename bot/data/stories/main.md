@@ -5,6 +5,7 @@
 ## Oi Tudo Bem Story
 * tudo_bem
     - utter_tudo_bem
+    - utter_menu
 
 ## Oi Tudo Bem Story 1
 * cumprimentar
@@ -26,8 +27,12 @@
 
 ## Nao entendi
 * diga_mais
-    - utter_manter_conversa
+    - utter_diga_mais  
        
 ## fallback
 * out_of_scope
   - utter_default
+
+## fallback
+* afirmar
+ - utter_manter_conversa

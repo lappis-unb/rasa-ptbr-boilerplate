@@ -3,7 +3,6 @@
     - utter_cumprimentar
     - utter_menu
 
-
 ## LeiRouanet 2
 * cumprimentar
     - utter_cumprimentar
@@ -48,9 +47,6 @@
     - utter_manter_conversa
 
 ## LeiRouanet 6
-* cumprimentar
-    - utter_cumprimentar
-    - utter_menu
 * lei_rouanet
     - utter_lei_rouanet
 * lei_rouanet_denuncia
