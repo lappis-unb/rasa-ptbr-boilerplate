@@ -18,7 +18,6 @@
 ## salic 17
 * salic_cadastro_usuario
     - utter_cadastro_salic_video
-    - utter_salic_cadastro_usuario
 
 
 ## salic 18

@@ -10,6 +10,31 @@
 - voce torce pra qual time
 - como esta o tempo
 
+## intent:cumprimentar
+- ola tais, como vai
+- oi, tudo bem
+- como vai
+- oi, como vai voce
+- como vao as coisas
+- com licenca
+- tudo bom
+- posso falar com voce
+- pode me tirar uma duvida
+- gostaria de tirar uma duvida
+- ola tais
+- to bem
+- tranquilo
+- estou bem
+- estou otimo
+- muito bem
+- bom dia
+- boa tarde
+- boa noite
+- olá
+- oie
+- oiee
+- opa tudo bem
+
 ## intent:afirmar
 - se não for incomodo
 - claro que sim
@@ -121,6 +146,7 @@
 - lista de assuntos possiveis
 - quais as perguntas vc responde
 - quais as perquisar você responde
+- MEAJDA
 
 ## intent:erro_resposta_utter
 - #errou
@@ -168,6 +194,7 @@
 - qual seu pai
 - onde voce nasceu
 - quando vc nasceu
+
 
 
 

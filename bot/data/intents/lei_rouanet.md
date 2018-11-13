@@ -1,5 +1,4 @@
 <!-- Lei Rouanet -->
-<<<<<<< HEAD:bot/data/intents/lei_rouanet.md
 
 ## intent:lei_rouanet
 - quero falar sobre a lei rouanet
@@ -27,28 +26,6 @@
 - [lei rouanet](lei_rouanet)
 - Lei de Incentivo a Cultura
 
-=======
-
-## intent:lei_rouanet_o_que_eh
-- o que é [lei rouanet](lei_rouanet)
-- o que significa [ruane](lei_rouanet)
-- Explique a [lei ruanê](lei_rouanet)
-- o que é [lei ruanet](lei_rouanet)
-- o que significa [lei rouanet](lei_rouanet)
-- Explique a [lei rouanet](lei_rouanet)
-- o que é [lei rouane](lei_rouanet)
-- o que significa [lei rouanet](lei_rouanet)
-- Explique a [lei rouanet](lei_rouanet)
-- o que é [lei rouanet](lei_rouanet)
-- o que significa [lei rouanet](lei_rouanet)
-- Explique a [lei rouanet](lei_rouanet)
-- o que é [lei rouanet](lei_rouanet)
-- o que significa [lei rouanet](lei_rouanet)
-- Explique a [lei rouanet](lei_rouanet)
-- fale sobre a [lei rouanet](lei_rouanet)
-- [lei rouanet](lei_rouanet)
-- Lei de Incentivo a Cultura
->>>>>>> a5120a178be98f4aba81da0ecbbfc78314345bbc:bot/data/intents/lei_rouanet.md
 
 ## synonym:lei_rouanet   <!-- synonyms, method 2 -->
 - lei rouanet

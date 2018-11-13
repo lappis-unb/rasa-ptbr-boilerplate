@@ -8,6 +8,9 @@ intents:
   - afirmar_projeto
   - o_que_sei_falar
   - erro_resposta_utter
+  - quem_eh_a_tais
+  - diga_mais
+  - tudo_bem
 
   - captacao
   - captacao_quando_captar
@@ -155,6 +158,7 @@ templates:
         Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
 
         Você pode perguntar de novo de outro jeito?
+
     - text: |
         Poxa, acho que ainda não sei isso... Mas se você perguntar de outra forma talvez eu consiga te responder 
 
@@ -163,7 +167,7 @@ templates:
 
   utter_restart:
     - text: |
-          reiniciando =D
+        reiniciando =D
 
   utter_retorno:
     - text: |
@@ -226,7 +230,7 @@ templates:
 
           E quando o MinC utiliza ele?
 
-          Para saber mais você pode consultar a
+          Para saber mais você pode consultar a Instrução Normativa 05/2017
 
   utter_processo_situacao_processo_A16:
     - text: |
@@ -758,11 +762,13 @@ templates:
           implementado, enquanto o Incentivo Fiscal – também chamado de
 
            mecenato – prevaleceu e chega ser confundido com a própria Lei.
+
   utter_diga_mais:
     - text: |
 
-          Por enquanto, só entendo perguntas completas. Então é melhor você me perguntar "como funciona a Lei Rouanet" ao invés de "Como funciona" ;)
+          Por enquanto, só entendo perguntas completas. Então é melhor você me perguntar "como funciona a Lei Rouanet" ao invés de "Como funciona" 
   # TO DO
+ 
   utter_definicao:
     - text: |
           Sei conceituar sobre o que é o MinC, Salic, Sefic, proposta, projeto e proponente,
@@ -1072,6 +1078,7 @@ utter_lei_rouanet_remuneracao_proponente:
           O valor desta remuneração, ainda que por diversos serviços, não pode ultrapassar 50% do custo do projeto.
 
           O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e
+          
           em benefício de empresa coligada ou que tenha sócio em comum.
 
           O limite pode ser ultrapassado quando a remuneração é feita a grupos artísticos familiares que atuem na execução do projeto ou quando se tratar de pagamento a um mesmo fornecedor em projetos de execução de obras e restauros.
@@ -1093,10 +1100,15 @@ utter_lei_rouanet_comercializacao_de_ingressos:
 utter_lei_rouanet_promocao_de_marca:
     - text: |
           O patrocinador pode divulgar sua marca em um projeto, desde que utilize
+          
           recursos próprios, não decorrentes do incentivo fiscal, nas seguintes situações:
+          
           Promoção da imagem da empresa ou nome do patrocinador em peças de divulgação
+          
           além das aprovadas pelo Ministério da Cultura;
+          
           Fornecimento de produtos ou serviços do patrocinador ao projeto cultural,
+          
           desde que seja comprovada uma vantagem econômica ou exclusividade.
 
   #TODO
@@ -1171,7 +1183,7 @@ utter_salic_erros_planilha_desapareceu:
     - text: |
           Ao excluir um produto do plano de distribuição a planilha vai ser
 
-          \"zerada\" e o proponente deverá refazê-la.
+          "zerada" e o proponente deverá refazê-la.
 
 utter_salic_erros_salvamento_de_proposta:
     - text: |
@@ -1286,15 +1298,15 @@ utter_o_que_sei_falar:
 
           Dúvidas operacionais encontradas durante a execução do projeto cultural (tipo, perdi minha senha no SALIC)
 
-<<<<<<< HEAD
-         Duvidas sobre Definições, nomenclaturas, e informações relacionadas à lei e ao Ministério da Cultura (MinC)
 
-         Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o MinC
-=======
+          Duvidas sobre Definições, nomenclaturas, e informações relacionadas à lei e ao Ministério da Cultura (MinC)
+
+          Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o MinC
+
           Duvidas sobre Definições, nomenclaturas, e informacoes relacionadas à lei e ao Ministério da Cultura
 
+
           Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o Minitério da Cultura
->>>>>>> 12e635aae2307266838389ecd327a288695458f2
 
           Agora pode me fazer tua pergunta!
 
@@ -1303,7 +1315,6 @@ utter_erro_resposta_utter:
           Obrigada pelo feedback. Espero que na próxima vez vou conseguir responder a tua pergunta corretamente
 
           Gostaria de fazer uma nova pergunta?
-
 
 utter_manter_conversa:
     - text: |
@@ -1384,14 +1395,14 @@ utter_menu:
     - text: |
           Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
 
-        Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
+          Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
 
-        Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :)
-        Use e Abuse da #meajuda
+          Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :)
+          Use e Abuse da #meajuda
 
-        E ai, como posso te ajudar?
+          E ai, como posso te ajudar?
   
-  utter_tudo_bem:
+utter_tudo_bem:
     - text: |
           Tudo bem, obrigada! Em que posso te ajudar?
 
