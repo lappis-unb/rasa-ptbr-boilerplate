@@ -152,20 +152,20 @@ slots:
 templates:
   utter_default:
     - text: |
-        Desculpe, não consegui te entender
+          Desculpe, não consegui te entender
 
-        Você pode perguntar de novo de outro jeito?
+          Você pode perguntar de novo de outro jeito?
 
   utter_restart:
     - text: |
-        reiniciando =D
+          reiniciando =D
 
   utter_retorno:
     - text: |
-        Olá, que bom que você voltou!
-        Estou ansiosa para tirar suas novas dúvidas sobre a Lei Rouanet!
+          Olá, que bom que você voltou!
+          Estou ansiosa para tirar suas novas dúvidas sobre a Lei Rouanet!
 
-        Como posso te ajudar?
+          Como posso te ajudar?
 
   utter_processo_situacao_processo_A12:
     - text: |
@@ -746,11 +746,11 @@ templates:
           de Cultura, o diplomata Sérgio Paulo Rouanet.
 
     - text: |
-           A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de
+          A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de
 
-           Investimento Cultural e Artístico (Ficart). Este nunca foi
+          Investimento Cultural e Artístico (Ficart). Este nunca foi
 
-           implementado, enquanto o Incentivo Fiscal – também chamado de
+          implementado, enquanto o Incentivo Fiscal – também chamado de
 
            mecenato – prevaleceu e chega ser confundido com a própria Lei.
   utter_diga_mais:
@@ -849,31 +849,31 @@ templates:
 
   utter_processo_como_funciona:
     - text: |
-        Tudo bem. Aqui vai um resumo do processo
+          Tudo bem. Aqui vai um resumo do processo
 
-        A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
+          A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
 
-        Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
+          Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
 
-        Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
+          Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
 
-        Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
+          Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
 
-        A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
+          A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
 
-        O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+          O primeiro passo para você particiar deste processo é ter cadastro no SALIC
 
   utter_cadastro_salic_video:
     - text: |
-         O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura,
+          O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura,
 
-         e é por ele que você cadastra a proposta e a acompanha.
+          e é por ele que você cadastra a proposta e a acompanha.
 
-         Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
+          Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
 
-         nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
+          nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
 
-         Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)
+          Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)
 
   utter_salic_cadastro_usuario:
     - text: |
@@ -893,39 +893,39 @@ templates:
 
   utter_curiosidadesMais:
     - text: |
-        Você quer saber mais curiosidades?
+          Você quer saber mais curiosidades?
 
     - text: |
-        Você tem interesse de saber mais curiosidades?
+          Você tem interesse de saber mais curiosidades?
 
     - text: |
-        Você gostaria de saber mais curiosidades?
+          Você gostaria de saber mais curiosidades?
 
   utter_curiosidadesMaisSim:
     - text: |
-        EBA!
+          EBA!
 
-        O que você quer saber?
-
-    - text: |
-        EBA!
-
-        Do que você quer saber?
+          O que você quer saber?
 
     - text: |
-        EBA!
+          EBA!
 
-        De qual assunto você quer saber?
+          Do que você quer saber?
+
+    - text: |
+          EBA!
+
+          De qual assunto você quer saber?
 
   utter_curiosidadesMaisNao:
     - text:
-        Tudo bem, então você quer saber sobre *projetos e propostas*?
+          Tudo bem, então você quer saber sobre *projetos e propostas*?
 
     - text:
-        Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
+          Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
 
     - text:
-        Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?
+          Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?
 
   utter_curiosidadesFalarSobreProjetos:
     - text: |
@@ -1025,9 +1025,9 @@ templates:
 
 utter_lei_rouanet_valor_maximo_projeto:
     - text: |
-        Isto depende do seu perfil de proponente.
+          Isto depende do seu perfil de proponente.
 
-        Sobre qual perfil você quer saber:
+          Sobre qual perfil você quer saber:
 
           - Pessoa Física e Microempresário Individual(MEI)
 
@@ -1049,51 +1049,51 @@ utter_lei_rouanet_valor_maximo_pessoa_fisica:
 
 utter_lei_rouanet_valor_maximo_outro_perfil:
     - text: |
-        Você gostaria de saber a respeito dos limites para outro perfil?
+          Você gostaria de saber a respeito dos limites para outro perfil?
 
 utter_lei_rouanet_valor_maximo_pessoa_juridica:
     - text: |
-        Então, em relação aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,5 milhões para até oito projetos por ano;
+          Então, em relação aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,5 milhões para até oito projetos por ano;
 
-        Para a Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, o valor máximo é de R$ 60 milhões para até 16 projetos por ano.
+          Para a Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, o valor máximo é de R$ 60 milhões para até 16 projetos por ano.
 
-        Se o projeto cultural ocorrer em espaço público, o Empresário Individual tem a quantidade de projetos acrescido em 3, mas o valor máximo não muda.
+          Se o projeto cultural ocorrer em espaço público, o Empresário Individual tem a quantidade de projetos acrescido em 3, mas o valor máximo não muda.
 
-        Ássim como as Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, quem podem somar mais 4 projetos, se realizados em espaço público, mantendo os limites orçamentários.
+          Ássim como as Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, quem podem somar mais 4 projetos, se realizados em espaço público, mantendo os limites orçamentários.
 
 utter_lei_rouanet_remuneracao_proponente:
     - text: |
-        O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, conforme previsto no orçamento apresentado.
+          O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, conforme previsto no orçamento apresentado.
 
-        O valor desta remuneração, ainda que por diversos serviços, não pode ultrapassar 50% do custo do projeto.
+          O valor desta remuneração, ainda que por diversos serviços, não pode ultrapassar 50% do custo do projeto.
 
-        O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e
-        em benefício de empresa coligada ou que tenha sócio em comum.
+          O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e
+          em benefício de empresa coligada ou que tenha sócio em comum.
 
-        O limite pode ser ultrapassado quando a remuneração é feita a grupos artísticos familiares que atuem na execução do projeto ou quando se tratar de pagamento a um mesmo fornecedor em projetos de execução de obras e restauros.
+          O limite pode ser ultrapassado quando a remuneração é feita a grupos artísticos familiares que atuem na execução do projeto ou quando se tratar de pagamento a um mesmo fornecedor em projetos de execução de obras e restauros.
 
 utter_lei_rouanet_comercializacao_de_ingressos:
     - text: |
-        Do total de ingressos de um projeto cultural, a Lei Rouanet estabelece que a venda deve ser feita da seguinte forma:
+          Do total de ingressos de um projeto cultural, a Lei Rouanet estabelece que a venda deve ser feita da seguinte forma:
 
-        50% dos ingressos devem ser comercializadosa uma média de preço de R$225,00;
+          50% dos ingressos devem ser comercializadosa uma média de preço de R$225,00;
 
-        Minimo de 10% deve ser vendido gratuitamente, com caráter social, educativo ou formação artística;
+          Minimo de 10% deve ser vendido gratuitamente, com caráter social, educativo ou formação artística;
 
-        Até 10% deve ser disponnibilizado gratuitamente pelos patrocinadores;
+          Até 10% deve ser disponnibilizado gratuitamente pelos patrocinadores;
 
-        Até 10% deve ser distribuido gratuitamente pelo proponente de forma a divulgar o projeto;
+          Até 10% deve ser distribuido gratuitamente pelo proponente de forma a divulgar o projeto;
 
-        Minimo de 20% dos ingressos deve ser comercializado em valores que não utrapassem R$75,00.
+          Minimo de 20% dos ingressos deve ser comercializado em valores que não utrapassem R$75,00.
 
 utter_lei_rouanet_promocao_de_marca:
     - text: |
-        O patrocinador pode divulgar sua marca em um projeto, desde que utilize
-        recursos próprios, não decorrentes do incentivo fiscal, nas seguintes situações:
-        Promoção da imagem da empresa ou nome do patrocinador em peças de divulgação
-        além das aprovadas pelo Ministério da Cultura;
-        Fornecimento de produtos ou serviços do patrocinador ao projeto cultural,
-        desde que seja comprovada uma vantagem econômica ou exclusividade.
+          O patrocinador pode divulgar sua marca em um projeto, desde que utilize
+          recursos próprios, não decorrentes do incentivo fiscal, nas seguintes situações:
+          Promoção da imagem da empresa ou nome do patrocinador em peças de divulgação
+          além das aprovadas pelo Ministério da Cultura;
+          Fornecimento de produtos ou serviços do patrocinador ao projeto cultural,
+          desde que seja comprovada uma vantagem econômica ou exclusividade.
 
   #TODO
 utter_salic_preenchimento:
@@ -1270,27 +1270,26 @@ utter_processo_prazo_desistir_recurso:
 
 utter_cumprimentar:
     - text: |
-         Oi, sou assistente virtual do MinC, me chamo Tais.
+          Oi, sou assistente virtual do MinC, me chamo Tais.
 
-         Estou aqui para te ajudar a esclarecer dúvidas sobre a lei de Incentivo à Cultura, conhecida como lei Rouanet.
+          Estou aqui para te ajudar a esclarecer dúvidas sobre a lei de Incentivo à Cultura, conhecida como lei Rouanet.
 
 utter_o_que_sei_falar:
     - text: |
-         Veja alguns dos assuntos que eu posso te ajudar:
+          Veja alguns dos assuntos que eu posso te ajudar:
 
-         O que é a Lei de Incentivo Culturais e como funciona
+          O que é a Lei de Incentivo Culturais e como funciona
 
-         Dúvidas operacionais encontradas durante a execução do projeto cultural (tipo, perdi minha senha no SALIC)
+          Dúvidas operacionais encontradas durante a execução do projeto cultural (tipo, perdi minha senha no SALIC)
 
-         Duvidas sobre Definições, nomenclaturas, e informacoes relacionadas à lei e ao Ministério da Cultura
+          Duvidas sobre Definições, nomenclaturas, e informacoes relacionadas à lei e ao Ministério da Cultura
 
-         Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o Minitério da Cultura
+          Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o Minitério da Cultura
 
-         Agora pode me fazer tua pergunta!
+          Agora pode me fazer tua pergunta!
 
 utter_erro_resposta_utter:
     - text: |
-
           Obrigada pelo feedback. Espero que na próxima vez vou conseguir responder a tua pergunta corretamente
 
           Gostaria de fazer uma nova pergunta?
@@ -1316,87 +1315,87 @@ utter_manter_conversa:
           Gostaria te retirar mais alguma dúvida?
 
     - text: |
-            Espero ter solucionado a sua dúvida, tem mais alguma dúvida?
+          Espero ter solucionado a sua dúvida, tem mais alguma dúvida?
 
 utter_despedir:
     - text: |
-        Foi um prazer te ajudar!
+          Foi um prazer te ajudar!
 
-        Sempre que tiver alguma dúvida, volte aqui!
+          Sempre que tiver alguma dúvida, volte aqui!
 
-        Até logo!
-
-    - text: |
-        Foi um prazer te ajudar!
-
-        Sempre que precisar, volte aqui!
-
-        Até a próxima!
+          Até logo!
 
     - text: |
-        Foi um prazer te ajudar!
+          Foi um prazer te ajudar!
 
-        Quando surgir alguma dúvida, volte aqui!
+          Sempre que precisar, volte aqui!
 
-        Até mais!
+          Até a próxima!
+
+    - text: |
+          Foi um prazer te ajudar!
+
+          Quando surgir alguma dúvida, volte aqui!
+
+          Até mais!
 
 utter_captacao:
     - text: |
-        Em captação, eu sei falar sobre quando captar e sobre como captar
+          Em captação, eu sei falar sobre quando captar e sobre como captar
 
-        O que você deseja saber?
+          O que você deseja saber?
 
 utter_captacao_quando_captar:
     - text: |
-        A captação só pode começar depois que o projeto passa pela fase de
-        enquadramento, pela análise documental e pela publicação.
+          A captação só pode começar depois que o projeto passa pela fase de
+          enquadramento, pela análise documental e pela publicação.
 
-        Assim que o projeto é publicado no Diário Oficial da União você pode
-        começar a captar recursos.
+          Assim que o projeto é publicado no Diário Oficial da União você pode
+          começar a captar recursos.
 
   #TODO
 utter_captacao_como_captar:
     - text: |
-        Para captar os recursos você deve achar incetivadores
+          Para captar os recursos você deve achar incetivadores
 
   #TODO
 utter_processo_definicao_etapas:
     - text: |
-        O processo possui cinco etapas:
-        - Preenchimento
-        - Aprovação
-        - Admissibilidade
-        - Execução
-        - Análise de Resultados
+          O processo possui cinco etapas:
+            - Preenchimento
+            - Aprovação
+            - Admissibilidade
+            - Execução
+            - Análise de Resultados
 
-        Você tem alguma dúvida sobre elas?
+          Você tem alguma dúvida sobre elas?
 
 utter_menu:
     - text: |
-        Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
+          Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
 
-        Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
-        E ai, como posso te ajudar?
+          Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
+          E ai, como posso te ajudar?
 
-        Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :)
-        Use e Abuse da #meajuda
+          Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :)
+          Use e Abuse da #meajuda
 
 utter_tudo_bem:
     - text: |
-        Tudo bem, obrigada! Em que posso te ajudar?
+          Tudo bem, obrigada! Em que posso te ajudar?
 
 
   #TODO
 
 utter_salic:
     - text: |
-        Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
+          Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
 
 utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
     - text: |
-        Você deve ir em:
-        Orçamento do projeto > Custos por produto > Clicar no produto desejado
-        Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
+          Você deve ir em:
+          Orçamento do projeto > Custos por produto > Clicar no produto desejado
+          Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
 
 
 actions:
