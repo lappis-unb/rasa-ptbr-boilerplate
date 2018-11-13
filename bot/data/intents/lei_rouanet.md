@@ -51,10 +51,10 @@
 - quero ser proponente
 - como ser proponente
 - quem pode propor
-- como me inscrevo
+- como me inscrever
 - como me tornar proponente
 - elegibilidade
-- inscreve
+- inscrever
 - participar
 - aplicar
 - usar a lei
@@ -62,13 +62,13 @@
 ## intent:lei_rouanet_origem_do_dinheiro
 - quanto dinheiro a lei movimenta
 - quanto dinheiro a lei rouanet arrecada
-- De onde vem o dinheiro da lei rouanet
+- de onde vem o dinheiro da lei rouanet
 - de onde vem o dinheiro usado na Lei
 - o dinheiro da lei rouanet é público
-- Porque os cidadãos tem que pagar pelos projetos da lei rouanet
-- a lei rouanet usa dinheiro de empresas?
+- por que os cidadãos tem que pagar pelos projetos
+- a lei rouanet usa dinheiro de empresas
 - eu como cidadão posso contribuir para um projeto
-- quanto a lei ja arrecadou?
+- quanto a lei ja arrecadou
 - o dinheiro da lei é privado ou público
 - dinheiro
 - arrecadou
@@ -111,8 +111,8 @@
 - qual a porcentagem do imposto que vou abater após incentivar projetos
 - qual é o desconto que recebo no IR ao incentivar um projeto
 - qual a dedução de imposto de renda para incentivadores
-- Se eu incentivar eu vou ter dedução no meu imposto de renda
-- sou incentivador, quanto posso receber como dedução de imposto de renda??
+- se eu incentivar eu vou ter dedução no meu imposto de renda
+- sou incentivador quanto posso receber como dedução de imposto de renda
 - imposto de renda
 - imposto
 - dedução
@@ -194,12 +194,12 @@
 - meus parentes podem incentivar meu projeto
 - meus pais e tios podem incentivar meu projeto
 - tem problema parentes incentivarem projetos
-- tenho parentes que desejam incentivar meus projetos, tem alguma restrição
-- parentes incentivando meus projetos. Tem problema
-- tem problema meu irmão ou irmã, tio ou tia, primo ou prima, mãe ou pai incentivar meus projetos
-- minha irmã quer incetivar meu projeto, tem problema
-- meu projeto pode ser incentivado pela minha família?
-- meus familiares podem incentivar meu projeto?
+- tenho parentes que desejam incentivar meus projetos
+- parentes incentivando meus projetos
+- meu irmão ou irmã, tio ou tia, primo ou prima, mãe ou pai incentivar
+- minha irmã quer incetivar meu projeto tem problema
+- meu projeto pode ser incentivado pela minha família
+- meus familiares podem incentivar meu projeto
 - quero saber se meus parentes podem ajudar a financiar o meu projeto
 - incentivar
 - incentivado
@@ -301,7 +301,7 @@
 
 
 ## intent:lei_rouanet_remuneracao_proponente
-- o proponente (autor do projeto) é remunerado
+- o proponente autor do projeto é remunerado
 - ha limite para remuneração do proponente
 - existe remuneração para o proponente
 - quanto e a remuneraçao do proponente
@@ -326,21 +326,21 @@
 ## intent:lei_rouanet_comercializacao_de_ingressos
 - os produtos culturais podem ser comercializados
 - os ingressos podem ser comercializados
-- há um limite de preço a ser executado por produto realizado com apoio de incentivo fiscal
+- há um limite de preço a ser executado por produto realizado
 - por quanto devo vender os ingressos do meu projeto
 - como funciona a comercialização de ingressos
 - qual deve ser o preço dos ingressos
 - por qunto devo cobrar meus ingressos
+- como estabelecer preços de ingressos
+- há um limite de preço das entradas
+- qual o limite de valor das entradas
 - venda de ingresso
 - valor da entrada
 - comercialização da entrada
 - comercialização do ingresso
-- como vender a entrada
-- qual deve ser o preço da entrada
-- como estabelecer preços de ingressos
-- por qual valor devo vender a entrada
-- pode ter entradas gratuitas
-- como devo distribuir os ingressos
-- quantos ingressos podem ser de graça
-- há um limite de preço das entradas
-- qual o limite de valor das entradas
+- vender a entrada
+- preço da entrada
+- ingressos gratuitos
+- entradas gratuitas
+- distribuir os ingressos
+- ingressos podem ser de graça
