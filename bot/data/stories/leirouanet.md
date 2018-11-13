@@ -74,3 +74,13 @@
 * lei_rouanet_valor_maximo_pessoa_juridica
     - utter_lei_rouanet_valor_maximo_pessoa_juridica
     - utter_manter_conversa
+
+## LeiRouanet 9
+* lei_rouanet_o_que_eh
+  - utter_lei_rouanet
+* lei_rouanet_valor_maximo_projeto
+  - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_geral
+  - utter_lei_rouanet_valor_maximo_pessoa_fisica
+  - utter_lei_rouanet_valor_maximo_pessoa_juridica
+  - utter_manter_conversa
