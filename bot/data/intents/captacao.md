@@ -6,25 +6,25 @@
 - você sabe falar sobre captacao
 
 ## intent:captacao_quando_captar
-- Quando poderei efetuar a captação de recursos do meu projeto ?
-- Captação de recursos, quando fazer ?
-- Qual é o momento para fazer a captação de recursos ?
-- Quando fazer a captação de recursos do projeto ?
-- Quando posso começar a captação de recursos da minha proposta ?
-- Quando começa a captação?
-- A partir de quando posso começar a captar recursos?
-- quando a captação estará liberada?
+- quando poderei efetuar a captação de recursos do meu projeto
+- captação de recursos, quando fazer
+- qual é o momento para fazer a captação de recursos
+- quando fazer a captação de recursos do projeto
+- quando posso começar a captação de recursos da minha proposta
+- quando começa a captação
+- a partir de quando posso começar a captar recursos
+- quando a captação estará liberada
 - captar recursos do projeto
-- quero captar, quando posso iniciar?
-- quando começa a arrecadação de dinheiro?
-- quando eu começo a captar?
-- já enviei meu projeto, já posso captar?
-- quando preciso me preocupar com a captação?
-- Quando se iniciará a fase de captação?
-- a captação já pode ser feita?
-- em quanto tempo posso captar?
+- quero captar, quando posso iniciar
+- quando começa a arrecadação de dinheiro
+- quando eu começo a captar
+- já enviei meu projeto, já posso captar
+- quando preciso me preocupar com a captação
+- quando se iniciará a fase de captação
+- a captação já pode ser feita
+- em quanto tempo posso captar
 - eu submeti um projeto e quero saber quando posso começar a captar dinheiro
-- como posso fazer para captar recursos?
+- como posso fazer para captar recursos
 
 ## intent:captacao_como_captar
 - o próprio proponente do projeto pode captar os recursos para a sua execução
