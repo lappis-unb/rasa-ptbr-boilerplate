@@ -709,7 +709,7 @@ templates:
 
           Utilizo algoritmos de aprendizagem de maquina profundo (deep learning) e sou toda desenvolvida em software livre :P
 
-          Se quiser me conhecer mais, entre no nosso projeto :P e entre em contato conosco do LAPPIS ;) 
+          Se quiser me conhecer mais, entre no nosso projeto :P e entre em contato conosco do LAPPIS ;)
 
           https://github.com/lappis-unb/rouana
 
@@ -749,16 +749,16 @@ templates:
           de Cultura, o diplomata Sérgio Paulo Rouanet.
 
     - text: |
-           A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de 
-            
-           Investimento Cultural e Artístico (Ficart). Este nunca foi 
-      
-           implementado, enquanto o Incentivo Fiscal – também chamado de 
-      
+           A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de
+
+           Investimento Cultural e Artístico (Ficart). Este nunca foi
+
+           implementado, enquanto o Incentivo Fiscal – também chamado de
+
            mecenato – prevaleceu e chega ser confundido com a própria Lei.
   utter_diga_mais:
     - text: |
-          Ainda estou aprendendo como fazer inferencia a partir do contexto. 
+          Ainda estou aprendendo como fazer inferencia a partir do contexto.
 
           Mas, por enquanto, só entendo perguntas completas (ao invés de perguntar "como funciona", tente "como funciona a Lei Rouanet", por exemplo)
   # TO DO
@@ -869,13 +869,13 @@ templates:
   utter_cadastro_salic_video:
     - text: |
          O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura,
-         
+
          e é por ele que você cadastra a proposta e a acompanha.
-         
+
          Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
-         
+
          nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
-         
+
          Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique? (Sim ou Não)
 
   utter_salic_cadastro_usuario:
@@ -1025,6 +1025,61 @@ templates:
           Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm
 
           Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm
+
+utter_lei_rouanet_valor_maximo_projeto:
+    - text: |
+        Isto depende do seu perfil de proponente.
+
+        Sobre qual perfil você quer saber:
+
+          - Pessoa Física e Microempresário Individual(MEI)
+
+          - Demais Pessoas Jurídicas
+
+          - Quero saber de todos
+
+  utter_lei_rouanet_valor_maximo_pessoa_fisica:
+    - text: |
+        Para a Pessoa Física e para o Empresário Individual com enquadramento em Microempresário Individual (MEI), o valor máximo é de R$ 1,5 milhão para até quatro projetos por ano.
+
+        Estes limites podem ser ultrapassados dependendo do espaço em que o projeto cultural será realizado e a região:
+
+        Ocorrendo em espaço público, estes perfis tem a quantidade de projetos acrescido em 2, mas o valor máximo não muda.
+
+  utter_lei_rouanet_valor_maximo_pessoa_juridica:
+    - text: |
+        Então, em relação aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,5 milhões para até oito projetos por ano;
+
+        Para a Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, o valor máximo é de R$ 60 milhões para até 16 projetos por ano.
+
+        Se o projeto cultural ocorrer em espaço público, o Empresário Individual tem a quantidade de projetos acrescido em 3, mas o valor máximo não muda.
+
+        Ássim como as Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, quem podem somar mais 4 projetos, se realizados em espaço público, mantendo os limites orçamentários.
+
+  utter_lei_rouanet_remuneracao_proponente:
+    - text: |
+        O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, conforme previsto no orçamento apresentado.
+
+        O valor desta remuneração, ainda que por diversos serviços, não pode ultrapassar 50% do custo do projeto.
+
+        O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e
+        em benefício de empresa coligada ou que tenha sócio em comum.
+
+        O limite pode ser ultrapassado quando a remuneração é feita a grupos artísticos familiares que atuem na execução do projeto ou quando se tratar de pagamento a um mesmo fornecedor em projetos de execução de obras e restauros.
+
+  utter_lei_rouanet_comercializacao_de_ingressos:
+    - text: |
+        Do total de ingressos de um projeto cultural, a Lei Rouanet estabelece que a venda deve ser feita da seguinte forma:
+
+        50% dos ingressos devem ser comercializadosa uma média de preço de R$225,00;
+
+        Minimo de 10% deve ser vendido gratuitamente, com caráter social, educativo ou formação artística;
+
+        Até 10% deve ser disponnibilizado gratuitamente pelos patrocinadores;
+
+        Até 10% deve ser distribuido gratuitamente pelo proponente de forma a divulgar o projeto;
+
+        Minimo de 20% dos ingressos deve ser comercializado em valores que não utrapassem R$75,00.
 
   #TODO
   utter_salic_preenchimento:
@@ -1201,7 +1256,7 @@ templates:
 
   utter_cumprimentar:
     - text: |
-         Oi, sou assistente virtual do MinC, me chamo Tais. 
+         Oi, sou assistente virtual do MinC, me chamo Tais.
 
          Estou aqui para te ajudar a esclarecer dúvidas sobre a lei de Incentivo à Cultura, conhecida como lei Rouanet.
 
@@ -1218,15 +1273,15 @@ templates:
          Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o Minitério da Cultura
 
          Agora pode me fazer tua pergunta!
-         
+
   utter_erro_resposta_utter:
     - text: |
-         
+
           Obrigada pelo feedback. Espero que na próxima vez vou conseguir responder a tua pergunta corretamente
 
           Gostaria de fazer uma nova pergunta?
 
-         
+
   utter_manter_conversa:
     - text: |
           Espero estar te ajudando, você possui mais alguma pergunta?
@@ -1311,7 +1366,7 @@ templates:
 
         Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :)
         Use e Abuse da #meajuda
-  
+
   utter_tudo_bem:
     - text: |
         Tudo bem, obrigada! Em que posso te ajudar?
@@ -1369,6 +1424,11 @@ actions:
   - utter_lei_rouanet_denuncia
   - utter_lei_rouanet_quem_pode_incentivar
   - utter_lei_rouanet_porcentagem_de_deducao_do_imposto
+  - utter_lei_rouanet_valor_maximo_projeto
+  - utter_lei_rouanet_valor_maximo_pessoa_fisica
+  - utter_lei_rouanet_valor_maximo_pessoa_juridica
+  - utter_lei_rouanet_remuneracao_proponente
+  - utter_lei_rouanet_comercializacao_de_ingressos
 
   - utter_processo
   - utter_processo_reativacao_de_proposta
