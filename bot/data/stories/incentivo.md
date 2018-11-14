@@ -20,6 +20,14 @@
 	- utter_lei_rouanet_quem_pode_incentivar
 	- utter_manter_conversa
 
+## Incentivo Base 1.1
+* lei_rouanet_porcentagem_de_deducao_do_imposto
+	- utter_lei_rouanet_porcentagem_de_deducao_do_imposto
+	- utter_manter_conversa
+* lei_rouanet_quem_pode_incentivar
+	- utter_lei_rouanet_quem_pode_incentivar
+	- utter_manter_conversa
+
 ## Incentivo Base 2
 * lei_rouanet_o_que_eh
 	- utter_lei_rouanet_o_que_eh
@@ -38,6 +46,7 @@
 * lei_rouanet_porcentagem_de_deducao_do_imposto
 	- utter_lei_rouanet_porcentagem_de_deducao_do_imposto
 	- utter_manter_conversa
+
 
 ## Incentivo Base 3
 * lei_rouanet_o_que_eh
@@ -72,12 +81,25 @@
 	- utter_lei_rouanet_quem_pode_ser_proponente
 	- utter_manter_conversa
 
+## Incentivo Intermediario 1.1
+* lei_rouanet_beneficios_incentivo_projetos_culturais
+	- utter_lei_rouanet_beneficios_incentivo_projetos_culturais
+	- utter_manter_conversa
+* lei_rouanet_quem_pode_ser_proponente
+	- utter_lei_rouanet_quem_pode_ser_proponente
+	- utter_manter_conversa
+
 ## Incentivo Intermediario 2
 * lei_rouanet_o_que_eh
 	- utter_lei_rouanet_o_que_eh
 	- utter_manter_conversa
 * lei_rouanet_beneficios_incentivo_projetos_culturais
 	- utter_lei_rouanet_beneficios_incentivo_projetos_culturais
+* lei_rouanet_porcentagem_de_deducao_do_imposto
+	- utter_lei_rouanet_porcentagem_de_deducao_do_imposto
+	- utter_manter_conversa
+
+## Incentivo Intermediario 2.1
 * lei_rouanet_porcentagem_de_deducao_do_imposto
 	- utter_lei_rouanet_porcentagem_de_deducao_do_imposto
 	- utter_manter_conversa

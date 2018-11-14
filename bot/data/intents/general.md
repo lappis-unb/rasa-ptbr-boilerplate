@@ -178,6 +178,7 @@
 - Quem te desenvolveu? 
 - quem é voce
 - quem e vc
+- você tem pai
 - Como faço pra ter um chatbot maneiro assim?
 - me conte mais sobre voce
 - o que significa uma assistente virtual

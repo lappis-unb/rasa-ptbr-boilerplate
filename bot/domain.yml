@@ -27,7 +27,6 @@ intents:
   - definicao_salic
   - definicao_vinculada
 
-  - lei_rouanet
   - lei_rouanet_o_que_eh
   - lei_rouanet_quantidade_de_projetos
   - lei_rouanet_beneficios_incentivo_projetos_culturais
@@ -868,7 +867,7 @@ templates:
 
           A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
 
-          O primeiro passo para você particiar deste processo é ter cadastro no SALIC
+          O primeiro passo para você participar deste processo é ter cadastro no SALIC
 
   utter_cadastro_salic_video:
     - text: |
@@ -982,9 +981,7 @@ templates:
 
   utter_lei_rouanet_denuncia:
     - text: |
-          Para denunciar um projeto suspeito de irregularidades é preciso registrar uma denúncia para o Ministério Público Federal.
-
-          Sua denúncia pode ser feita no site do ministério público no link: http://aplicativos.pgr.mpf.mp.br/ouvidoria/portal/cadastro.html?tipoServico=2 ,ou pelo aplicativo do MPF na opção de \"Registrar denúncia ou solicitação\".
+          Em caso de irregularidades, dúvidas, sugestões,  entrar em contato com as áreas do MinC, http://rouanet.cultura.gov.br/fale-conosco/ 
 
   utter_lei_rouanet_quem_pode_incentivar:
     - text: |

@@ -1,28 +1,22 @@
 <!-- Lei Rouanet -->
 
-## intent:lei_rouanet
-- quero falar sobre a lei rouanet
-- lei rouanet
-- me fale sobre a lei rouanet
-
-
 ## intent:lei_rouanet_o_que_eh
 - o que é [lei rouanet](lei_rouanet)
 - o que significa [ruane](lei_rouanet)
 - Explique a [lei ruanê](lei_rouanet)
 - o que é [lei ruanet](lei_rouanet)
 - o que significa [lei rouanet](lei_rouanet)
-- Explique a [lei rouanet](lei_rouanet)
+- Explique a [lei ruane](lei_rouanet)
 - o que é [lei rouane](lei_rouanet)
-- o que significa [lei rouanet](lei_rouanet)
-- Explique a [lei rouanet](lei_rouanet)
+- o que significa [lei ruanet](lei_rouanet)
+- Explique a [lei ruanê](lei_rouanet)
 - o que é [lei rouanet](lei_rouanet)
 - o que significa [lei rouanet](lei_rouanet)
 - Explique a [lei rouanet](lei_rouanet)
 - o que é [lei rouanet](lei_rouanet)
-- o que significa [lei rouanet](lei_rouanet)
+- o que significa [lei rouanê](lei_rouanet)
 - Explique a [lei rouanet](lei_rouanet)
-- fale sobre a [lei rouanet](lei_rouanet)
+- fale sobre a [lei ruanê](lei_rouanet)
 - [lei rouanet](lei_rouanet)
 - Lei de Incentivo a Cultura
 
@@ -43,21 +37,6 @@
 - lei rouanê
 - lei adnet
 
-## synonym:lei_rouanet   <!-- synonyms, method 2 -->
-- lei rouanet
-- Lei Rouanet
-- Lei de Incentivo a Cultura
-- ruane
-- ruanê
-- ruanet
-- rouane
-- rouanê
-- Lei ruane
-- Lei ruanê
-- lei ruanet
-- lei rouane
-- lei rouanê
-- lei adnet
 
 ## intent:lei_rouanet_quem_pode_ser_proponente
 - quem pode se inscrever na lei rouanet
@@ -92,10 +71,15 @@
 - eu como cidadão posso contribuir para um projeto
 - quanto a lei ja arrecadou
 - o dinheiro da lei é privado ou público
+- como funciona a isenção fiscal
+- como funciona o recolhimento de dinheiro para os projetos
+- quanto custa isso pro governo
 - dinheiro
 - arrecadou
 - arrecadar
 - arrecadado
+- isenção fiscal
+- isencao fiscal
 - pagar
 - de onde vem
 - quem paga
@@ -114,6 +98,8 @@
 - quais as vantagens para o patrocinador
 - quais os beneficios de ser incentivador
 - quais os beneficios de um patrocinador
+- como financiar um projeto cultural
+- empresas ganham alguma coisa ajudando meus projetos
 - incentivo fiscal federal
 - beneficiados
 - benefício
@@ -122,7 +108,7 @@
 - incentivador
 - patrocinador
 - vantagem
-- ganha
+
 
 ## intent:lei_rouanet_porcentagem_de_deducao_do_imposto
 - incentivadores de projetos podem deduzir quanto de impostos de renda
@@ -133,6 +119,8 @@
 - qual a porcentagem do imposto que vou abater após incentivar projetos
 - qual é o desconto que recebo no IR ao incentivar um projeto
 - qual a dedução de imposto de renda para incentivadores
+
+
 - se eu incentivar eu vou ter dedução no meu imposto de renda
 - sou incentivador quanto posso receber como dedução de imposto de renda
 - imposto de renda
@@ -145,6 +133,10 @@
 - abatimento
 - abater
 - taxa
+- inseção fiscal
+- insecao fiscal
+- isencao
+- isenção
 
 ## intent:lei_rouanet_quantidade_de_projetos
 - quantos projetos foram aprovados
@@ -392,3 +384,6 @@
 - como a marca do patrocinador deve ser promovida
 - há regras para a divulgação da marca do patrocinador no projeto
 - como a marca do patrocinador deve aparecer na divulgação
+- marca
+- patrocinador
+- divulgar marca
