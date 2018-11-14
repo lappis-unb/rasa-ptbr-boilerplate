@@ -48,7 +48,7 @@
 
 ## LeiRouanet 6
 * lei_rouanet_o_que_eh
-    - utter_lei_rouanet
+    - utter_lei_rouanet_o_que_eh
 * lei_rouanet_denuncia
     - utter_lei_rouanet_denuncia
     - utter_manter_conversa
@@ -58,33 +58,11 @@
     - utter_cumprimentar
     - utter_menu
 * lei_rouanet_o_que_eh
-    - utter_lei_rouanet
+    - utter_lei_rouanet_o_que_eh
     - utter_manter_conversa
 * despedir
     - utter_despedir
 
-## LeiRouanet 8
-* lei_rouanet_o_que_eh
-    - utter_lei_rouanet
-    - utter_manter_conversa
-* lei_rouanet_valor_maximo_projeto
-    - utter_lei_rouanet_valor_maximo_projeto
-* lei_rouanet_valor_maximo_pessoa_fisica
-    - utter_lei_rouanet_valor_maximo_pessoa_fisica
-    - utter_lei_rouanet_valor_maximo_outro_perfil
-* lei_rouanet_valor_maximo_pessoa_juridica
-    - utter_lei_rouanet_valor_maximo_pessoa_juridica
-
-
-## LeiRouanet 9
-* lei_rouanet_o_que_eh
-  - utter_lei_rouanet
-  - utter_manter_conversa
-* lei_rouanet_valor_maximo_projeto
-  - utter_lei_rouanet_valor_maximo_projeto
-* lei_rouanet_valor_maximo_geral
-  - utter_lei_rouanet_valor_maximo_pessoa_fisica
-  - utter_lei_rouanet_valor_maximo_pessoa_juridica
 
 
 ## LeiRouanet 10

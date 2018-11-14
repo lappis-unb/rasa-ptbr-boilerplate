@@ -36,10 +36,6 @@ intents:
   - lei_rouanet_quem_pode_incentivar
   - lei_rouanet_porcentagem_de_deducao_do_imposto
   - lei_rouanet_receber_incetivo_de_parentes
-  - lei_rouanet_valor_maximo_projeto
-  - lei_rouanet_valor_maximo_geral
-  - lei_rouanet_valor_maximo_pessoa_fisica
-  - lei_rouanet_valor_maximo_pessoa_juridica
   - lei_rouanet_remuneracao_proponente
   - lei_rouanet_comercializacao_de_ingressos
   - lei_rouanet_promocao_de_marca
@@ -720,23 +716,6 @@ templates:
 
           https://github.com/lappis-unb
 
-  utter_lei_rouanet:
-    - text: |
-          Sobre a lei Rouanet eu sei explicar:
-
-          O que é a lei
-
-          Quem pode ser proponente
-
-          Origem do Dinheiro
-
-          Benefícios de Incentivar
-
-          Quantidade de Projetos
-
-          Quem pode incentivar
-
-          Denúncia
 
   utter_lei_rouanet_o_que_eh:
     - text: |
@@ -1436,7 +1415,6 @@ actions:
   - utter_definicao_salic
   - utter_definicao_vinculada
 
-  - utter_lei_rouanet
   - utter_lei_rouanet_mais
   - utter_lei_rouanet_o_que_eh
   - utter_lei_rouanet_quantidade_de_projetos
