@@ -3,7 +3,4 @@ rasa-nlu==0.13.7
 rocketchat-py-sdk==0.0.8
 elasticsearch==6.3.1
 sklearn-crfsuite==0.3.6
-<<<<<<< HEAD
-=======
 nltk==3.3
->>>>>>> a5120a178be98f4aba81da0ecbbfc78314345bbc

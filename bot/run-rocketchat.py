@@ -13,7 +13,7 @@ from tracker_store import ElasticTrackerStore
 logger = logging.getLogger(__name__)
 configure_colored_logging(loglevel='DEBUG')
 
-def run(core_dir, nlu_dir, endpoints_file):
+def run(core_dir, nlu_dir):
     configs = {
         'user': os.getenv('ROCKETCHAT_BOT_USERNAME'),
         'password': os.getenv('ROCKETCHAT_BOT_PASSWORD'),
@@ -26,8 +26,8 @@ def run(core_dir, nlu_dir, endpoints_file):
         server_url=configs['server_url']
     )
 
-    _endpoints = AvailableEndpoints.read_endpoints(endpoints_file)
-    _interpreter = NaturalLanguageInterpreter.create(nlu_dir, _endpoints.nlu)
+    _endpoints = AvailableEndpoints.read_endpoints(None)
+    _interpreter = NaturalLanguageInterpreter.create(nlu_dir)
     _tracker_store = ElasticTrackerStore()
 
     _agent = load_agent(core_dir,
@@ -43,4 +43,4 @@ def run(core_dir, nlu_dir, endpoints_file):
         logger.exception(exc)
 
 if __name__ == '__main__':
-    run('models/dialogue', 'models/nlu/current', 'endpoints.yml')
+    run('models/dialogue', 'models/nlu/current')
