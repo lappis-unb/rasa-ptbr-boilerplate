@@ -36,11 +36,18 @@ def train_dialogue(domain_file, model_path, training_folder):
                     LabelTokenizerSingleStateFeaturizer()
                 )
             )
+    #agent = Agent(domain_file, policies=[
+    #        keras_2,
+    #        MemoizationPolicy(max_history=MAX_HISTORY),
+    #                                                CustomFallbackPolicy(
+    #                    fallback_action_name=FALLBACK_ACTION_NAME,
+    #                    nlu_threshold=NLU_THRESHOLD,
+    #                    core_threshold=CORE_THRESHOLD)])
+
     agent = Agent(domain_file, policies=[
             keras_2,
             MemoizationPolicy(max_history=MAX_HISTORY),
-                                                    CustomFallbackPolicy(
-                        fallback_action_name=FALLBACK_ACTION_NAME,
+                                                    FallbackPolicy(
                         nlu_threshold=NLU_THRESHOLD,
                         core_threshold=CORE_THRESHOLD)])
 
