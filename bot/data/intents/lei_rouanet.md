@@ -119,8 +119,6 @@
 - qual a porcentagem do imposto que vou abater após incentivar projetos
 - qual é o desconto que recebo no IR ao incentivar um projeto
 - qual a dedução de imposto de renda para incentivadores
-
-
 - se eu incentivar eu vou ter dedução no meu imposto de renda
 - sou incentivador quanto posso receber como dedução de imposto de renda
 - imposto de renda

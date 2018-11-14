@@ -1041,11 +1041,7 @@ templates:
 
   utter_lei_rouanet_valor_maximo_pessoa_fisica:
     - text: |
-          A (Secretaria de Fomento e Incentivo à Cultura) planeja,
-
-          coordena e supervisiona a operacionalização Pronac, na aprovação,
-
-          monitoramento e prestação de contas de projetos culturais.
+          Para a Pessoa Física e para o Empresário Individual com enquadramento em Microempresário Individual (MEI), o valor máximo é de R$ 1,5 milhão para até quatro projetos por ano;
 
           Estes limites podem ser ultrapassados dependendo do espaço em que o projeto cultural será realizado e a região:
 
