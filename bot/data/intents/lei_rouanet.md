@@ -256,24 +256,20 @@
 
 
 
-## intent:
-- os produtos culturais podem ser comercializados
+## intent:lei_rouanet_comercializacao_de_ingressos
 - os ingressos podem ser comercializados
 - há um limite de preço a ser executado por produto realizado
 - por quanto devo vender os ingressos do meu projeto
 - como funciona a comercialização de ingressos
 - qual deve ser o preço dos ingressos
-- por qunto devo cobrar meus ingressos
 - como estabelecer preços de ingressos
 - há um limite de preço das entradas
 - qual o limite de valor das entradas
 - venda de ingresso
 - valor da entrada
-- comercialização da entrada
 - comercialização do ingresso
 - como vender a entrada
 - qual deve ser o preço da entrada
-- como estabelecer preços de ingressos
 - por qual valor devo vender a entrada
 - pode ter entradas gratuitas
 - como devo distribuir os ingressos
@@ -284,6 +280,8 @@
 - ingressos
 - democratização do acesso
 - democratização
+- democratizacao
+- democratizacao de acesso
 
 ## intent:lei_rouanet_promocao_de_marca
 - é possível que o patrocinador faça a prospecção da sua marca em um projeto realizado com incentivo fiscal
@@ -309,3 +307,43 @@
 - marca
 - patrocinador
 - divulgar marca
+
+
+## intent:lei_rouanet_valores_pagamento_caches
+ - quais os valores para pagamento de cachês em projetos realizados com incentivo fiscal
+ - há limites nos valores de pagamentos de cachês
+ - existe limite de pagamento de cachê
+ - qual o limite de pagamento de cachês
+ - quanto posso dar de cache para os artitas
+ - posso dar quanto de cache para meus funcionarios
+ - como funciona o pagamento de cache
+ - pagamento de cache para artista solo
+ - quanto cada artista do grupo pode receber de cache
+ - existe limite de pagamento para artistas
+ - valor de pagamento para artista solo e grupos artisticos
+ - quanto cada artista da peça pode receber
+ - valor cache
+ - pagamento cachê
+ - limite de cache
+ - cache artista
+ - cachê projeto
+ - pagamento artista solo
+ - cache orquestra
+ - limite cache artista solo
+
+
+ ## intent:lei_rouanet_etapas_aprovacao_projeto
+ - quais as etapas de aprovação de um projeto
+ - o que tenho que fazer pra aprovar meu projeto
+ - que passos tenho que fazer durante a criação do projeto
+ - o que eu tenho que fazer pra ser aprovado na lei rouanet
+ - quais sao os passos pra mandar um projeto para avaliacao
+ - como faco pra aprovar um projeto no salic
+ - quero mandar um projeto na lei rouanet, o que eu tenho que fazer
+ - como funciona o processe de analise da proposta
+ - por onde a proposta passa para ser aprovada
+ - quem analisa a proposta de projeto ate a decisão final
+ - etapas projeto
+ - passos submissao
+ - decisao final proposta
+ - etapas analise proposta

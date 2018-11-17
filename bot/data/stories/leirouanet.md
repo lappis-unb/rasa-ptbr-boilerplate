@@ -73,6 +73,11 @@
     - utter_lei_rouanet_promocao_de_marca
     - utter_manter_conversa
 
+## LeiRouanet 10.1
+* lei_rouanet_promocao_de_marca
+    - utter_lei_rouanet_promocao_de_marca
+    - utter_manter_conversa
+
 
 ## LeiRouanet 11
 * cumprimentar
@@ -91,4 +96,15 @@
 ## LeiRouanet 13
 * lei_rouanet_quem_pode_ser_proponente
     - utter_lei_rouanet_quem_pode_ser_proponente
+    - utter_manter_conversa
+
+
+## LeiRouanet 14
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+    - utter_manter_conversa
+
+## LeiRouanet 15
+* lei_rouanet_valores_pagamento_caches
+    - utter_lei_rouanet_valores_pagamento_caches
     - utter_manter_conversa

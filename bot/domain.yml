@@ -37,6 +37,8 @@ intents:
   - lei_rouanet_remuneracao_proponente
   - lei_rouanet_comercializacao_de_ingressos
   - lei_rouanet_promocao_de_marca
+  - lei_rouanet_valores_pagamento_caches
+  - lei_rouanet_etapas_aprovacao_projeto
 
   - processo
   - processo_como_funciona
@@ -798,21 +800,18 @@ templates:
   utter_definicao_vinculada:
     - text: |
           As vinculadas são órgãos associados ao MinC
-
           que avaliam o orçamento e adequação do projeto.
 
   utter_processo_como_funciona:
     - text: |
-          Tudo bem. Aqui vai um resumo do processo
+         Aqui vai um resumo do processo da Lei de Incentivo a Cultura
 
           A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
 
           Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
-
           Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
 
           Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
-
           A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
 
           O primeiro passo para você participar deste processo é ter cadastro no SALIC
@@ -820,11 +819,9 @@ templates:
   utter_cadastro_salic_video:
     - text: |
           O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura,
-
           e é por ele que você cadastra a proposta e a acompanha.
 
           Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
-
           nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
 
           Caso você não possa ver o vídeo, eu posso te explicar. 
@@ -834,13 +831,10 @@ templates:
           A primeira coisa que você deve fazer é acessar o SALIC no site http://salic.cultura.gov.br
 
           Então no formulário inicial, onde pede login e senha, você deve clicar na opção "Não sou cadastrado", logo abaixo
-
           Preencha todos os campos corretamente, todos eles são obrigatórios.
 
           E depois clique em "Cadastrar"
-
           Agora aguarde a chegada de um e-mail de confirmação. Este vai conter uma senha temporária
-
           É interessante você alterar esta senha, por isso, no seu primeiro acesso, vá em "Usuário > Alterar Senha", para mudar a mesma
 
           Agora que você já se cadastrou, o próximo passo cadastrar um proponente
@@ -947,29 +941,20 @@ templates:
           Atualmente, existem 2 situações descritas na Lei 8313/91:
 
           1) o artigo 26 da Lei indica que os percentuais de dedução do IR são os seguintes:
-
           Empresas:
-
           até 30% do valor patrocinado;
-
           até 40% do valor doado
 
           Pessoa física:
-
           até 60% do valor patrocinado;
-
           até 80% do valor doado.
-
           nesse caso, a empresa incentivadora poderá ainda lançar o valor incentivado como despesa operacional
 
           2) Com a modificação implementada pela Lei 9.874/99, quem investe em projetos culturais enquadrados nos segmentos indicados pelo artigo 18 da Lei passou a ter a possibilidade de deduzir até 100% do valor doado ou patrocinado as empresas que investem nesses segmentos não podem lançar o valor incentivado como despesa operacional agora, IMPORTANTE:
-
           os percentuais de dedução de IR são limitados aos estabelecidos pela legislação do imposto de renda vigente, que atualmente são 4% do imposto devido para empresas e 6% do imposto devido para pessoa física
 
           Você pode ver os detalhes das leis pelos endereços:
-
           Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm
-
           Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm
 
   utter_lei_rouanet_valor_maximo_projeto:
@@ -977,11 +962,8 @@ templates:
           Isto depende do seu perfil de proponente.
 
           Sobre qual perfil você quer saber:
-
           - Pessoa Física e Microempresário Individual(MEI)
-
           - Demais Pessoas Jurídicas
-
           - Quero saber de todos
 
   utter_lei_rouanet_valor_maximo_pessoa_fisica:
@@ -1012,8 +994,7 @@ templates:
 
           O valor desta remuneração, ainda que por diversos serviços, não pode ultrapassar 50% do custo do projeto.
 
-          O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e
-          
+          O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e         
           em benefício de empresa coligada ou que tenha sócio em comum.
 
           O limite pode ser ultrapassado quando a remuneração é feita a grupos artísticos familiares que atuem na execução do projeto ou quando se tratar de pagamento a um mesmo fornecedor em projetos de execução de obras e restauros.
@@ -1021,7 +1002,6 @@ templates:
   utter_lei_rouanet_comercializacao_de_ingressos:
     - text: |
           Do total de ingressos de um projeto cultural, a Lei Rouanet estabelece que a venda deve ser feita da seguinte forma:
-
           50% dos ingressos devem ser comercializadosa uma média de preço de R$225,00;
 
           Minimo de 10% deve ser vendido gratuitamente, com caráter social, educativo ou formação artística;
@@ -1034,17 +1014,51 @@ templates:
 
   utter_lei_rouanet_promocao_de_marca:
     - text: |
-          O patrocinador pode divulgar sua marca em um projeto, desde que utilize
-          
+          O patrocinador pode divulgar sua marca em um projeto, desde que utilize        
           recursos próprios, não decorrentes do incentivo fiscal, nas seguintes situações:
           
-          Promoção da imagem da empresa ou nome do patrocinador em peças de divulgação
-          
+          Promoção da imagem da empresa ou nome do patrocinador em peças de divulgação         
           além das aprovadas pelo Ministério da Cultura;
           
-          Fornecimento de produtos ou serviços do patrocinador ao projeto cultural,
-          
+          Fornecimento de produtos ou serviços do patrocinador ao projeto cultural,      
           desde que seja comprovada uma vantagem econômica ou exclusividade.
+  
+  utter_lei_rouanet_valores_pagamento_caches:
+    - text: |
+          O limite para pagamento de cachês artísticos por apresentação é:
+
+          R$ 45 mil para artista ou modelo solo;
+          R$ 90 mil para grupos artísticos e para grupos de modelos de desfiles de moda;
+
+          No caso de orquestras, os valores são: R$ 2.250 mil por músico e R$ 45 mil para o maestro; A aprovação de valores superiores aos definidos acima poderá ser feita pelo plenário da Comissão Nacional de Incentivo à Cultura (CNIC), a depender das justificativas apresentadas pelo proponente e pela área técnica.
+  
+  utter_lei_rouanet_etapas_aprovacao_projeto:
+   - text: |
+           Apresentação de proposta: O proponente (responsável pelo projeto) insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica. Devem ser preenchidos campos previamente definidos, tais como resumo, ficha técnica, orçamento, plano de distribuição de produtos/ingressos, e apresentados documentos obrigatórios de acordo com a área do projeto, conforme determinação da Instrução Normativa da Lei Rouanet vigente.
+
+           Análise de admissibilidade: o Ministério da Cultura (MinC) realiza a análise de admissibilidade da proposta a partir de critérios objetivos estabelecidos pela Lei 8.313/91 e pela Instrução Normativa em vigor, como, por exemplo:
+           Verificação do completo e correto preenchimento do formulário de apresentação da proposta cultural;
+           Análise quanto ao enquadramento do proponente e da proposta cultural;
+           Caso seja admitida, a proposta recebe um número de Pronac
+           Prazo: até 60 dias, podendo ser ampliado para até 120 dias quando os projetos forem de restauração do patrimônio histórico ou construção de imóveis.
+           Após a admissibilidade, o MinC publica portaria de autorização para captação de recursos incentivados no Diário Oficial da União (DOU).
+         
+           Análise técnica: o projeto é encaminhado à análise técnica por parecerista da área cultural do projeto. São analisados requisitos como:
+           Atendimento aos objetivos do incentivo fiscal da Lei Rouanet;
+           Suficiência das informações prestadas;
+           Aferição da capacidade técnica do proponente para execução do projeto apresentado;
+           Adequação do projeto às medidas de acessibilidade e democratização de acesso ao público;
+           Compatibilidade dos custos previstos no projeto com os preços praticados no mercado regional da produção, conforme métrica estabelecida pelo MinC – o que se mostrar inadequado pode sofrer cortes justificados pelo parecerista;
+           Relação custo/benefício do projeto no âmbito cultural, incluindo o impacto da utilização do mecanismo de incentivo fiscal na redução do preço final de produtos ou serviços culturais com público pagante, podendo o parecerista propor redução nos preços solicitados;
+           Atendimento aos critérios e limites de custos estabelecidos pela Lei e Instrução Normativa em vigor;
+           Prazo: até 30 dias do seu recebimento, podendo ser prorrogado por mais 120 dias quando se tratar de projeto de recuperação de patrimônio histórico ou construção de imóveis.
+           Nos casos de projetos culturais que tenham como objeto a preservação de bens culturais tombados ou registrados pelos poderes públicos (federal, estadual, distrital ou municipal), será obrigatória, também, a apreciação pelo órgão responsável pelo tombamento ou registro.
+         
+           Análise pela CNIC: Após emissão do parecer técnico, o projeto cultural será apreciado pela Comissão Nacional de Incentivo à Cultura (CNIC), que homologa a execução do projeto.
+           A CNIC é um colegiado de assessoramento de caráter paritário, formado por representantes dos setores artísticos, culturais e empresariais, em paridade da sociedade civil e do poder público;
+           Analisa os projetos culturais, inclusive sob seus aspectos orçamentários, podendo para tanto solicitar informações adicionais, diligenciando o proponente, emitindo parecer conclusivo pela aprovação, total ou parcial, ou rejeição do projeto cultural.
+         
+           Decisão final: o ministro de Estado da Cultura, em última instância, decide quanto à aprovação ou rejeição do projeto cultural. Historicamente, por convenção, o MinC acompanha a decisão do órgão consultivo. Excepcionalmente, é possível que o ministro decida de forma diferente, fundamentando a justificativa.
 
   #TODO
   utter_salic_preenchimento:
@@ -1398,6 +1412,8 @@ actions:
   - utter_lei_rouanet_remuneracao_proponente
   - utter_lei_rouanet_comercializacao_de_ingressos
   - utter_lei_rouanet_promocao_de_marca
+  - utter_lei_rouanet_valores_pagamento_caches
+  - utter_lei_rouanet_etapas_aprovacao_projeto
 
   - utter_processo
   - utter_processo_reativacao_de_proposta
