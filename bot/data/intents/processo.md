@@ -34,11 +34,20 @@
 - como é o processo de envio de projeto
 - como criar um projeto
 - como mandar um projeto
+- Como faço a proposta
+- como fazer uma proposta cultural
+- inscrevo uma proposta
+- inscrever uma proposta
+- enviar proposta?
+- como faço para colocar um projeto na lei de incentivo
+- Como incluir um projeto
+- Como faço para incluir um projeto na lei
 
 ## intent:processo_definicao_etapas
 - fale sobre a definição das etapas
 - quantas etapas tem
 - me fale sobre as etapas
+- quais as etapas da lei
 
 ## intent:processo_preenchimento
 - o que é Preenchimento
@@ -73,6 +82,11 @@
 - defina prestação de contas
 - o que devo fazer no análise de resultados
 - o que devo fazer no prestação de contas
+- tenho algumas duvidas sobre prestaçao de contas
+- prestaçao de contas
+- prestacao de contas
+- analise de resultados
+- O que é prestação de contas?
 
 ## intent:processo_reativacao_de_proposta
 - posso encaminhar pedido de reativação

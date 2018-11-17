@@ -4,8 +4,6 @@ intents:
   - out_of_scope
   - afirmar
   - negar
-  - afirmar_curiosidades
-  - afirmar_projeto
   - o_que_sei_falar
   - erro_resposta_utter
   - quem_eh_a_tais
@@ -719,25 +717,13 @@ templates:
 
   utter_lei_rouanet_o_que_eh:
     - text: |
-          A Lei 8.313/91, Lei Rouanet, é o principal
+          A Lei 8.313/91, Lei Rouanet, é o principal mecanismo de fomento à Cultura do Brasil. Ela instituiu o Programa Nacional de Apoio à Cultura (Pronac).
 
-          mecanismo de fomento à Cultura do Brasil. Ela instituiu o
+          Para cumprir este objetivo, a lei estabelece as normativas de como o Governo Federal deve disponibilizar recursos para a realização de projetos artístico-culturais. 
 
-          Programa Nacional de Apoio à Cultura (Pronac).
+          O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural.
 
-    - text: |
-          O nome Rouanet remete a seu criador, o então secretário Nacional
-
-          de Cultura, o diplomata Sérgio Paulo Rouanet.
-
-    - text: |
-          A Lei foi concebida originalmente com três mecanismos: o Fundo Nacional da Cultura (FNC), o Incentivo Fiscal e o Fundo de
-
-          Investimento Cultural e Artístico (Ficart). Este nunca foi
-
-          implementado, enquanto o Incentivo Fiscal – também chamado de
-
-           mecenato – prevaleceu e chega ser confundido com a própria Lei.
+          Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura.
 
   utter_diga_mais:
     - text: |
@@ -746,29 +732,19 @@ templates:
   #TO DO
   utter_definicao:
     - text: |
-          Sei conceituar sobre o que é o MinC, Salic, Sefic, proposta, projeto e proponente,
-
-          assim como falar sobre mim.
+          Sei conceituar sobre o que é o MinC, Salic, Sefic, proposta, projeto e proponente, assim como falar sobre mim.
 
   utter_definicao_minc:
     - text: |
-          O Ministério da Cultura (MinC) é o responsável pela aprovação e
-
-          monitoramento dos projetos submetidos.
+          O Ministério da Cultura (MinC) é o responsável pela aprovação e monitoramento dos projetos submetidos.
 
   utter_definicao_cnic:
     - text: |
-          O Conselho Nacional de Incentivo à Cultura (CNIC) é responsável por
-
-          selecionar e aprovar os projetos para captação.
+          O Conselho Nacional de Incentivo à Cultura (CNIC) é responsável por selecionar e aprovar os projetos para captação.
 
   utter_definicao_sefic:
     - text: |
-          A (Secretaria de Fomento e Incentivo à Cultura) planeja,
-
-          coordena e supervisiona a operacionalização Pronac, na aprovação,
-
-          monitoramento e prestação de contas de projetos culturais.
+          A (Secretaria de Fomento e Incentivo à Cultura) planeja,  coordena e supervisiona a operacionalização Pronac, na aprovação, monitoramento e prestação de contas de projetos culturais.
 
   utter_definicao_projeto:
     - text: |
@@ -776,15 +752,11 @@ templates:
 
   utter_definicao_proposta:
     - text: |
-          Proposta é o conjunto de formulários que explicam o projeto
-
-          cultural que pode ser incentivado pela Lei Rouanet.
+          Proposta é o conjunto de formulários que explicam o projeto cultural que pode ser incentivado pela Lei Rouanet.
 
   utter_definicao_proponente:
     - text: |
-          Proponente é o agente responsável por propor e participar
-
-          de projetos culturais.
+          Proponente é o agente responsável por propor e participar de projetos culturais.
 
   utter_processo_preenchimento:
     - text: |
@@ -792,15 +764,11 @@ templates:
 
   utter_processo_admissibilidade:
     - text: |
-          É a fase da proposta em que o MinC e a vinculada irão avaliar a
-
-          proposta, para pedir correções ou aprova-la, gerando um projeto.
+          É a fase da proposta em que o MinC e a vinculada irão avaliar a proposta, para pedir correções ou aprova-la, gerando um projeto.
 
   utter_processo_aprovacao:
     - text: |
-          Aprovação é a fase onde o MinC e a vinculada
-
-          estão julgando a validade do projeto
+          Aprovação é a fase onde o MinC e a vinculada  estão julgando a validade do projeto
 
   utter_processo_execucao:
     - text: |
@@ -811,10 +779,11 @@ templates:
   utter_processo_analise_de_resultados:
     - text: |
           É a fase do final do projeto, onde o proponente
-
           deve apresentar todas as notas fiscais e contratos realizados
-
           a fim de provar os gastos do projeto.
+
+          Mais detalhes sobre essa etapa (dúvidas, questões, ajuda) vou conseguir responder
+          somente nas minhas próximas versões :P
 
   utter_definicao_salic:
     - text: |
@@ -969,11 +938,8 @@ templates:
           Se você quiser saber mais sobre quais Pessoas Jurídicas devem fazer a apuração do lucro real confira o artigo 246, do Decreto 3.000 de 26 de março de 1999 que \"Regulamenta a tributação, fiscalização, arrecadação e administração do Imposto sobre a Renda e Proventos de Qualquer Natureza\"
 
           Olha, alguns familiares não podem incentivar projetos:
-
           - o cônjuge
-
           - os parentes até o terceiro grau, inclusive os afins
-
           - e os dependentes… tanto do doador, quanto do patrocinador, dos titulares, administradores, acionistas ou sócios de pessoa jurídica vinculada ao doador ou patrocinador, na data da operação, ou nos 12 meses anteriores.
 
   utter_lei_rouanet_porcentagem_de_deducao_do_imposto:
@@ -1084,8 +1050,9 @@ templates:
   utter_salic_preenchimento:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre o preenchimento de
+          propostas no SALIC. 
 
-          propostas no SALIC
+          Saberei responder mais sobre preenchimento nas minhas próximas versões :P
 
   utter_salic_preenchimento_campo_custo_auditoria:
     - text: |

@@ -72,3 +72,23 @@
 * lei_rouanet_promocao_de_marca
     - utter_lei_rouanet_promocao_de_marca
     - utter_manter_conversa
+
+
+## LeiRouanet 11
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* lei_rouanet_comercializacao_de_ingressos
+    - utter_lei_rouanet_comercializacao_de_ingressos
+    - utter_manter_conversa
+
+
+## LeiRouanet 12
+* lei_rouanet_comercializacao_de_ingressos
+    - utter_lei_rouanet_comercializacao_de_ingressos
+    - utter_manter_conversa
+
+## LeiRouanet 13
+* lei_rouanet_quem_pode_ser_proponente
+    - utter_lei_rouanet_quem_pode_ser_proponente
+    - utter_manter_conversa

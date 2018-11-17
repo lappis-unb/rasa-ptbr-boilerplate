@@ -41,12 +41,15 @@
 ## intent:lei_rouanet_quem_pode_ser_proponente
 - quem pode se inscrever na lei rouanet
 - quem pode participar
+- quem pode submeter projetos?
 - quero me inscrever na lei rouanet
 - posso me inscrever na lei rouanet
 - quero participar da lei
 - quero me inscrever
 - eu posso usar a lei
 - quem pode se aplicar
+- Posso inscrever uma proposta como pessoa fisica
+- Como pessoa fisica eu posso inscrever uma proposta
 - quero me tornar um proponente
 - eu posso participar da lei rouanet
 - quero ser proponente
@@ -74,6 +77,9 @@
 - como funciona a isenção fiscal
 - como funciona o recolhimento de dinheiro para os projetos
 - quanto custa isso pro governo
+- O Ministério da cultura é que dá o dinheiro?
+- o ministerio da dinheiro
+- o Minc da dinheiro para lei
 - dinheiro
 - arrecadou
 - arrecadar
@@ -164,6 +170,7 @@
 - Que tipos de empresas podem se beneficiar ao apoiar projetos culturais
 - Apoiando projetos culturais, qualquer empresa se beneficia
 - Empresas que se beneficiam ao apoiar projeto culturais
+- como pessoa fisica como posso patrocinar
 - Tenho uma empresa e quero particiar da lei rouanet, como eu sei se posso
 - qual o critério de elegibilidade para pessoas jurídicas
 - toda empresa pode usar a lei rouanet
@@ -249,7 +256,7 @@
 
 
 
-## intent:lei_rouanet_comercializacao_de_ingressos
+## intent:
 - os produtos culturais podem ser comercializados
 - os ingressos podem ser comercializados
 - há um limite de preço a ser executado por produto realizado
@@ -273,6 +280,10 @@
 - quantos ingressos podem ser de graça
 - há um limite de preço das entradas
 - qual o limite de valor das entradas
+- ingresso
+- ingressos
+- democratização do acesso
+- democratização
 
 ## intent:lei_rouanet_promocao_de_marca
 - é possível que o patrocinador faça a prospecção da sua marca em um projeto realizado com incentivo fiscal

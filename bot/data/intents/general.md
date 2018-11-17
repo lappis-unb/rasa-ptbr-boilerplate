@@ -10,6 +10,27 @@
 - voce torce pra qual time
 - como esta o tempo
 
+## intent:despedir
+- Tchau obrigada
+- até logo
+- namaste
+- sayonara
+- até mais
+- até breve
+- falou, valeu
+- flw vlw
+- blza
+- blz
+- valeu
+- massa
+- de boa
+- obrigada
+- obrigado
+- obj
+- obrigada, tais
+- tais, obrigado
+
+
 ## intent:cumprimentar
 - ola tais, como vai
 - oi, tudo bem
@@ -34,6 +55,8 @@
 - oie
 - oiee
 - opa tudo bem
+- ola boa tarde
+
 
 ## intent:afirmar
 - se não for incomodo
@@ -56,6 +79,7 @@
 - ok
 - claro
 - confirmo
+- mais ou menos
 
 ## intent:negar
 - não sei onde a minha pergunta se encaixa
@@ -78,50 +102,6 @@
 - falei errado
 - duvida
 - ainda não sei
-
-## intent:afirmar_curiosidades
-- quero aprender mais sobre a lei
-- quero saber mais sobre a lei
-- pretendo saber mais sobre a lei
-- gostaria de aprender mais sobre a lei
-- gostaria de saber mais sobre a lei
-- possuo curiosidades sobre a lei rouanet
-- creio que sobre a lei rouanet
-- quero falar sobre a lei
-- vamos falar sobre a lei
-- me fale da lei rouanet
-- mais sobre a lei
-- aprender sobre a lei rouanet
-- sobre a lei
-- lei
-- rouanet
-- curiosidades
-- sobre a Lei eu acho
-- aprender mais
-- saber mais
-- aprender mais
-
-## intent:afirmar_projeto
-- prefiro conversar sobre criaçao e andamento de projetos
-- gostaria de saber sobre criacao e andamento de projetos
-- sobre criacao e andamento de projetos
-- criacao e andamento de projetos
-- conversar sobre proposta
-- conversar sobre projetos
-- prefiro falar sobre proposta
-- prefiro falar sobre projetos
-- conversar sobre projetos
-- conversar sobre proposta
-- projeto
-- proposta
-- criação
-- andamento
-- criacao de projeto
-- andamento de projeto
-- criaçao e andamento
-- sobre proposta
-- sobre projeto
-- sobre criacao
 
 
 ## intent:diga_mais
@@ -171,6 +151,8 @@
 - joinha
 - tudo bom
 - bom dia flor do dia
+- Tudo bem e você
+- como vc esta
 
 
 ## intent:quem_eh_a_tais
