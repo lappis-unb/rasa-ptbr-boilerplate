@@ -54,24 +54,34 @@
 - sobre preenchimento
 - defina Preenchimento
 - o que devo fazer no preenchimento
+- preenchimento
 
 ## intent:processo_admissibilidade
 - o que é admissibilidade
 - sobre admissibilidade
 - defina admissibilidade
 - o que acontece na admissibilidade
+- admissibilidade
+- fase admissibilidade
+- etapa admissibilidade
 
 ## intent:processo_aprovacao
 - o que é aprovação
 - sobre aprovação
 - defina aprovação
 - o que acontece na aprovação
+- aprovação
+- fase aprovação
+- etapa aprovação
 
 ## intent:processo_execucao
 - o que é execução
 - sobre execução
 - defina execução
 - o que devo fazer no execução
+- execução 
+- fase execução
+- etapa execução
 
 ## intent:processo_analise_de_resultados
 - o que é análise de resultados
@@ -86,7 +96,7 @@
 - prestaçao de contas
 - prestacao de contas
 - analise de resultados
-- O que é prestação de contas?
+- O que é prestação de contas
 
 ## intent:processo_reativacao_de_proposta
 - posso encaminhar pedido de reativação
@@ -107,6 +117,9 @@
 - fale sobre o prazo
 - qual e o prazo
 - sabe o prazo
+- prazos
+- prazo
+- deadline
 
 ## intent:processo_prazo_envio_cnae
 - Qual é o prazo limite para envio do CNAE

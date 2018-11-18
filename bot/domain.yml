@@ -39,6 +39,10 @@ intents:
   - lei_rouanet_promocao_de_marca
   - lei_rouanet_valores_pagamento_caches
   - lei_rouanet_etapas_aprovacao_projeto
+  - lei_rouanet_valor_maximo_projeto
+  - lei_rouanet_valor_maximo_pessoa_fisica
+  - lei_rouanet_valor_maximo_pessoa_juridica
+  - lei_rouanet_valor_maximo_geral
 
   - processo
   - processo_como_funciona
@@ -174,7 +178,6 @@ templates:
   utter_processo_situacao_processo_A12:
     - text: |
           O estado A12 acontece durante a fase de Admissibilidade, e significa aguardando complementação de documentos
-
           E quando o MinC utiliza ele? Quando se solicita ao proponente documentação adicional
 
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69.
@@ -182,7 +185,6 @@ templates:
   utter_processo_situacao_processo_A14:
     - text: |
           O estado A14 acontece durante a fase de Admissibilidade, e significa indeferido – não enquadramento nos objetivos e fins da Lei 8313/91 ou do Decreto 5761/06
-
           E quando o MinC utiliza ele? Quando o projeto não se enquadra nos objetivos e fins do Art. 1º da Lei 8313/1991
 
           Para saber mais você pode consultar a Lei 8.313/1991, Art. 1º Instrução Normativa 05/2017, Art. 23
@@ -692,13 +694,10 @@ templates:
   utter_definicao_tais:
     - text: |
           Uma assistente virtual é um programa de computador
-
           criado para interagir com as pessoas.
 
           Meu objetivo é sanar dúvidas sobre a lei Rouanet.
-
           Em cada interação que temos aqui, eu aprendendo mais
-
           para que a gente se comunique melhor.
 
           Obrigada por conversar comigo!
@@ -775,7 +774,6 @@ templates:
   utter_processo_execucao:
     - text: |
           Execução é a fase do projeto que possui atividades
-
           como captação de recursos e realização do projeto.
 
   utter_processo_analise_de_resultados:
@@ -790,9 +788,7 @@ templates:
   utter_definicao_salic:
     - text: |
           Sistema de Apoio às Leis de Incentivo à Cultura (SALIC) é o
-
           sistema utilizado para submeter propostas e gerenciar
-
           projetos aprovados pela Lei Rouanet.
 
           Acesse: *salic.cultura.gov.br*
@@ -804,7 +800,7 @@ templates:
 
   utter_processo_como_funciona:
     - text: |
-         Aqui vai um resumo do processo da Lei de Incentivo a Cultura
+          Aqui vai um resumo do processo da Lei de Incentivo a Cultura
 
           A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
 
@@ -884,13 +880,11 @@ templates:
           Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.
 
           Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos.
-
           Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes.
 
   utter_lei_rouanet_beneficios_incentivo_projetos_culturais:
     - text: |
           O principal benefício de incentivar projetos culturais é dar a chance para sociedade usufruir das mais diversas manifestações culturais que talvez nunca fossem possíveis sem incentivo.
-
           E tem mais...as empresas que incentivam projetos culturais podem deduzir do imposto de renda as quantias que despenderam em projetos aprovados pelo Ministério da Cultura
 
           É claro que essa dedução do imposto de renda acontece nas condições estabelecidas na legislação vigente, e está limitada a 4% do imposto devido
@@ -900,15 +894,11 @@ templates:
           Todo projeto cultural, de qualquer artista, produtor e agente cultural brasileiro, pode se beneficiar desta Lei e se candidatar à captação de recursos de renúncia fiscal.
 
           A proponência pode ser feita por Pessoas físicas com atuação comprovada na área cultural, ou Pessoas jurídicas de natureza cultural com, no mínimo, dois anos de atividade,
-
           podendo ser:
 
           Pessoas jurídicas públicas da administração indireta
-
           (autarquias, fundações culturais etc.)
-
           ou pessoas jurídicas privadas com ou sem fins lucrativos
-
           (empresas, cooperativas, fundações, ONGs, organizações culturais etc.)
 
   utter_lei_rouanet_origem_do_dinheiro:
@@ -916,14 +906,13 @@ templates:
           O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural.
 
           Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura.
-
           Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a declaração no modelo completo podem contribuir com a lei Rouanet apoiando projetos.
 
           Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.
 
   utter_lei_rouanet_denuncia:
     - text: |
-          Em caso de irregularidades, dúvidas, sugestões,  entrar em contato com as áreas do MinC, http://rouanet.cultura.gov.br/fale-conosco/ 
+          Em caso de irregularidades, dúvidas, sugestões,  entre em contato com as áreas do MinC, http://rouanet.cultura.gov.br/fale-conosco/ 
 
   utter_lei_rouanet_quem_pode_incentivar:
     - text: |
@@ -969,7 +958,6 @@ templates:
   utter_lei_rouanet_valor_maximo_pessoa_fisica:
     - text: |
           Para a Pessoa Física e para o Empresário Individual com enquadramento em Microempresário Individual (MEI), o valor máximo é de R$ 1,5 milhão para até quatro projetos por ano;
-
           Estes limites podem ser ultrapassados dependendo do espaço em que o projeto cultural será realizado e a região:
 
           Ocorrendo em espaço público, estes perfis tem a quantidade de projetos acrescido em 2, mas o valor máximo não muda.
@@ -981,7 +969,6 @@ templates:
   utter_lei_rouanet_valor_maximo_pessoa_juridica:
     - text: |
           Então, em relação aos demais enquadramentos de Empresário Individual, o valor máximo é de R$ 7,5 milhões para até oito projetos por ano;
-
           Para a Empresa Individual de Responsabilidade Limitada (EIRELI), Sociedades Limitadas (Ltda.) e demais Pessoas Jurídicas, o valor máximo é de R$ 60 milhões para até 16 projetos por ano.
 
           Se o projeto cultural ocorrer em espaço público, o Empresário Individual tem a quantidade de projetos acrescido em 3, mas o valor máximo não muda.
@@ -991,7 +978,6 @@ templates:
   utter_lei_rouanet_remuneracao_proponente:
     - text: |
           O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, conforme previsto no orçamento apresentado.
-
           O valor desta remuneração, ainda que por diversos serviços, não pode ultrapassar 50% do custo do projeto.
 
           O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e         
@@ -1005,9 +991,7 @@ templates:
           50% dos ingressos devem ser comercializadosa uma média de preço de R$225,00;
 
           Minimo de 10% deve ser vendido gratuitamente, com caráter social, educativo ou formação artística;
-
-          Até 10% deve ser disponnibilizado gratuitamente pelos patrocinadores;
-
+          Até 10% deve ser disponibilizado gratuitamente pelos patrocinadores;
           Até 10% deve ser distribuido gratuitamente pelo proponente de forma a divulgar o projeto;
 
           Minimo de 20% dos ingressos deve ser comercializado em valores que não utrapassem R$75,00.
@@ -1077,25 +1061,19 @@ templates:
           Você deve ir em:
 
           Orçamento do projeto > Custos por produto > Clicar no produto
-
           desejado
 
           Clicar no Local de realização > por último na aba Assessoria
-
           contábil e jurídica.
 
   utter_salic_preenchimento_valor_ingresso:
     - text: |
           Esse valor é usado para conferir a viabilidade do projeto e não
-
           pode ultrapassar R$ 250,00 por beneficiário.
 
           Por exemplo: R$ 9.445.076,00 / 22.556 pessoas = R$ 419,18 por
-
           beneficiário, ou seja, está acima do limite para sanar esse problema,
-
           você pode diminuir o custo do projeto ou aumentar a estimativa
-
           de público.
 
   utter_salic_preenchimento_vinculo_cpf_proposta:
@@ -1103,36 +1081,29 @@ templates:
           O dirigente do projeto deve acessar o sistema e seguir os passos:
 
           1- Administrativo > Gerenciar responsáveis
-
           em seguida...
 
           2- Vincular propostas > Clicar na \"bolinha\" (Vincular) > Inserir
-
           responsável > abaixo terá o número da Proposta/Nome
 
           Nome do responsável selecionado > Clicar na \"bolinha\"
-
           3- Por último... clica também no botão Vincular
 
   utter_salic_preenchimento_cadastro_agencia_bancaria:
     - text: |
           A agência bancária deve ser do banco do Brasil, deve conter 5
-
           dígitos, sem hifens, pontos ou letras
 
   #TODO
   utter_salic_erros:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre eventuais erros do
-
           sistema SALIC. Como: planilha desaparecida, perda dos dados
-
           preenchidos e recuperação de senha
 
   utter_salic_erros_planilha_desapareceu:
     - text: |
           Ao excluir um produto do plano de distribuição a planilha vai ser
-
           "zerada" e o proponente deverá refazê-la.
 
   utter_salic_erros_salvamento_de_proposta:
@@ -1146,19 +1117,16 @@ templates:
   utter_salic_recuperacao_de_senha:
     - text: |
           Ah isso acontece com todo mundo ;)
-
           você pode gerar uma nova senha aqui:
 
           http://salic.cultura.gov.br/autenticacao/index/solicitarsenha
 
           ou se isso não funcionar, mande uma solicitação para:
-
           senhasalic@cultura.gov.br
 
   utter_salic_erros_vinculo_cpf_cnpj:
     - text: |
           Apenas o dirigente da instituição é quem pode vincular uma
-
           pessoa física ao CNPJ
 
           o dirigente deve entrar com login e senha e aceitar o vínculo
@@ -1166,13 +1134,10 @@ templates:
   utter_salic_erros_achar_proposta:
     - text: |
           Selecione o CPF ou CNPJ que deseja como proponente e liste a proposta
-
           do CPF ou CNPJ selecionado  para isso, vá em:
 
           1- Proposta > Listar proposta
-
           2- Clicar em CPF Proponente > Selecionar o CNPJ aparecerão todas as
-
           propostas ativas no sistema
 
   utter_processo:
@@ -1180,13 +1145,9 @@ templates:
           Na categoria de processos eu posso responder dúvidas sobre:
 
           Como Funciona
-
           Situação do Processo
-
           Definição das Etapas
-
           Prazos
-
           Reativação da proposta
 
   utter_processoProcessoCaptacaoDeRecursos:
@@ -1200,7 +1161,6 @@ templates:
           Pra reativar uma proposta indeferida você deve enviar um pedido de reativação
 
           Esse pedido tem que expor as justificativas apropriadas para reanálise e deve ser assinado pelo proponente
-
           Você encaminha o pedido em formato PDF para reativacao.proposta@cultura.gov.br
 
           E aí é só aguardar uma resposta
@@ -1215,7 +1175,6 @@ templates:
   utter_processo_prazo:
     - text: |
           Posso responder suas dúvidas a respeito de Datas
-
           e Prazos do seu projeto. Como: envio do CNAE e desistência de recurso
 
   utter_processo_prazo_envio_cnae:
@@ -1223,15 +1182,13 @@ templates:
           O proponente tem o prazo de 40 dias para responder a diligência 20+20 prorrogados automaticamente.
 
           Não é necessário fazer solicitação.
-
           Caso seja insuficiente, o proponente poderá anexar o protocolo da Receita de inserção do CNAE no Salic.
 
   utter_processo_prazo_desistir_recurso:
     - text: |
           A partir do momento em que seu projeto foi enquadrado, iniciou-se o prazo de 10 dias corridos para recorrer ao enquadramento proposto para o projeto
 
-          Caso concorde com o enquadramento dado é possível desistir desse prazo
-
+          Caso concorde com o enquadramento dado é possível desistir desse prazo.
           Ambas as manifestações se dão por via da aba "recurso" no Menu ao lado esquerdo da tela do projeto, no Salic
 
   utter_cumprimentar:
@@ -1245,19 +1202,10 @@ templates:
           Veja alguns dos assuntos que eu posso te ajudar:
 
           O que é a Lei de Incentivo Culturais e como funciona
-
           Dúvidas operacionais encontradas durante a execução do projeto cultural (tipo, perdi minha senha no SALIC)
-
-
           Duvidas sobre Definições, nomenclaturas, e informações relacionadas à lei e ao Ministério da Cultura (MinC)
 
           Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o MinC
-
-          Duvidas sobre Definições, nomenclaturas, e informacoes relacionadas à lei e ao Ministério da Cultura
-
-
-          Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o Minitério da Cultura
-
           Agora pode me fazer tua pergunta!
 
   utter_erro_resposta_utter:
@@ -1291,21 +1239,18 @@ templates:
   utter_despedir:
     - text: |
           Foi um prazer te ajudar!
-
           Sempre que tiver alguma dúvida, volte aqui!
 
           Até logo!
 
     - text: |
           Foi um prazer te ajudar!
-
           Sempre que precisar, volte aqui!
 
           Até a próxima!
 
     - text: |
           Foi um prazer te ajudar!
-
           Quando surgir alguma dúvida, volte aqui!
 
           Até mais!
@@ -1314,7 +1259,6 @@ templates:
     - text: |
           Em captação, eu sei falar sobre quando captar e sobre como captar
 
-          O que você deseja saber?
 
   utter_captacao_quando_captar:
     - text: |
@@ -1327,7 +1271,9 @@ templates:
   #TODO
   utter_captacao_como_captar:
     - text: |
-          Para captar os recursos você deve achar incetivadores
+          Para captar os recursos você deve achar incetivadores. Assim que o projeto é publicado no Diário Oficial da União você pode
+          começar a captar recursos. 
+          Esse é parte das atribuições do proponente e não há participação do MinC.
 
   #TODO
   utter_processo_definicao_etapas:
@@ -1346,7 +1292,6 @@ templates:
           Podemos conversar sobre como submeter um projeto, as etapas, algumas dúvidas operacionais…
 
           Ou se você já tiver um projeto cadastrado, a gente pode falar sobre isso também.
-
           Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :)
           Use e Abuse da #meajuda
 
