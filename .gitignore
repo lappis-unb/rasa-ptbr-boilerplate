@@ -13,6 +13,14 @@ bot/.keras/
 bot/.local/
 bot/work
 
+### Intents Notebook ###
+notebooks/intents/evaluate-intents.ipynb
+notebooks/intents/models
+notebooks/intents/errors.json
+ ### Stories Notebook ###
+notebooks/stories/models
+notebooks/stories/errors.json
+
 ### Rocketchat ###
 /data
 uploads
