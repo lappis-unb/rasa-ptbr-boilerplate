@@ -943,15 +943,15 @@ templates:
           os percentuais de dedução de IR são limitados aos estabelecidos pela legislação do imposto de renda vigente, que atualmente são 4% do imposto devido para empresas e 6% do imposto devido para pessoa física
 
           Você pode ver os detalhes das leis pelos endereços:
-          Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm
-          Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.htm
+          Lei 8313/91: http://www.planalto.gov.br/ccivil_03/leis/l8313cons.html
+          Lei 9.874/99: http://www.planalto.gov.br/ccivil_03/leis/l9874.html
 
   utter_lei_rouanet_valor_maximo_projeto:
     - text: |
           Isto depende do seu perfil de proponente.
 
           Sobre qual perfil você quer saber:
-          - Pessoa Física e Microempresário Individual(MEI)
+          - Pessoa Física, Microempresário Individual(MEI)
           - Demais Pessoas Jurídicas
           - Quero saber de todos
 
@@ -962,9 +962,17 @@ templates:
 
           Ocorrendo em espaço público, estes perfis tem a quantidade de projetos acrescido em 2, mas o valor máximo não muda.
 
-  utter_lei_rouanet_valor_maximo_outro_perfil:
+  utter_lei_rouanet_valor_maximo_regiao:
     - text: |
-          Você gostaria de saber a respeito dos limites para outro perfil?
+          Se o seu projeto for aplicado na Região Sul, ou no Espírito Santo ou Minas Gerais, pode ter um aumento de até 25%.Nas Regiões Norte, Nordeste ou Centro-Oeste, o aumento pode ser de até 50%.
+
+          Lembrando que essa exceção não pode ser aplicada em projetos com:
+          - planos anuais e plurianuais;
+          - conservação e restauração de imóveis, monumentos, espaços e objetos tombados.
+
+          Quem autoriza os limites desses projetos, de reservação de acervo, exposições com acervos museológicos, de construção e implantação de equipamentos culturais, é a área técnica do MinC.
+
+          Não há um valor mínimo para projetos.
 
   utter_lei_rouanet_valor_maximo_pessoa_juridica:
     - text: |
@@ -1352,8 +1360,8 @@ actions:
   - utter_lei_rouanet_porcentagem_de_deducao_do_imposto
   - utter_lei_rouanet_valor_maximo_projeto
   - utter_lei_rouanet_valor_maximo_pessoa_fisica
-  - utter_lei_rouanet_valor_maximo_outro_perfil
   - utter_lei_rouanet_valor_maximo_pessoa_juridica
+  - utter_lei_rouanet_valor_maximo_regiao
   - utter_lei_rouanet_remuneracao_proponente
   - utter_lei_rouanet_comercializacao_de_ingressos
   - utter_lei_rouanet_promocao_de_marca

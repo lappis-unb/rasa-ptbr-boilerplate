@@ -63,8 +63,6 @@
 * despedir
     - utter_despedir
 
-
-
 ## LeiRouanet 10
 * cumprimentar
     - utter_cumprimentar
@@ -107,4 +105,38 @@
 ## LeiRouanet 15
 * lei_rouanet_valores_pagamento_caches
     - utter_lei_rouanet_valores_pagamento_caches
+    - utter_manter_conversa
+
+## LeiRouanet 16
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* lei_rouanet_valor_maximo_projeto
+    - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_regiao
+    - utter_manter_conversa
+ 
+## LeiRouanet 17
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* lei_rouanet_valor_maximo_projeto
+    - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_maximo_regiao
+    - utter_manter_conversa
+
+## LeiRouanet 18
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* lei_rouanet_valor_maximo_projeto
+    - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_geral
+    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_maximo_regiao
     - utter_manter_conversa
