@@ -380,6 +380,11 @@
  - quantidade máxima de projetos pode ser ultrapassada
  - ultrapassar limite de projetos
  - aumentar limite de projetos
+ - valor minimo de projeto
+ - Valor minimo pra projeto
+ - projeto valor mínimo
+ - qual e o valor minimo pra projeto
+ - qual e o valor minimo de projetos
 
  ## intent:lei_rouanet_valor_maximo_pessoa_fisica
  - pessoa fisica
@@ -425,3 +430,8 @@
  - opção três
  - três
  - categoria 3
+ - sobre todos
+ - todos os perfis
+ - os dois perfis
+ - sobre todos os perfis
+ - de todos
