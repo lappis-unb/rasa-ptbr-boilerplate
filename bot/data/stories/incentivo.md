@@ -168,3 +168,88 @@
 * lei_rouanet_denuncia
 	- utter_lei_rouanet_denuncia
 	- utter_manter_conversa
+
+
+
+# Incentivo Cadastro Salic 1
+* processo_como_funciona
+    - utter_processo_como_funciona
+    - utter_manter_conversa
+* salic_cadastro_usuario
+    - utter_cadastro_salic_video
+* negar
+    - utter_manter_conversa
+
+# Incentivo Cadastro Salic 2
+* processo_como_funciona
+    - utter_processo_como_funciona
+* salic_cadastro_usuario
+    - utter_cadastro_salic_video
+* afirmar
+    - utter_salic_cadastro_usuario
+
+
+# Incentivo Cadastro Salic 3
+* processo_como_funciona
+    - utter_processo_como_funciona
+* diga_mais
+    - utter_cadastro_salic_video
+* afirmar
+    - utter_salic_cadastro_usuario
+
+# Incentivo Cadastro Salic 4
+* processo_como_funciona
+    - utter_processo_como_funciona
+* diga_mais
+    - utter_cadastro_salic_video
+* negar
+    - utter_manter_conversa
+
+
+## Cumprimentar Base 1
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* negar
+    - utter_manter_conversa
+
+## Cumprimentar Base 2
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* afirmar
+    - utter_manter_conversa
+
+## Incentivo Base 11
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* processo_como_funciona
+	- utter_processo_como_funciona
+	- utter_manter_conversa
+* afirmar
+    - utter_manter_conversa
+
+## Incentivo Base 11
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* processo_como_funciona
+	- utter_processo_como_funciona
+	- utter_manter_conversa
+* negar
+    - utter_manter_conversa
+
+## Incentivo Base 12
+* lei_rouanet_o_que_eh
+	- utter_lei_rouanet_o_que_eh
+	- utter_manter_conversa
+* negar
+    - utter_manter_conversa
+
+## Incentivo Base 13
+* lei_rouanet_quem_pode_ser_proponente
+	- utter_lei_rouanet_quem_pode_ser_proponente
+	- utter_manter_conversa
+* afirmar
+    - utter_manter_conversa
