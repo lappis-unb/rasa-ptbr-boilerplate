@@ -114,6 +114,7 @@
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
 * lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_minimo
     - utter_lei_rouanet_valor_maximo_pessoa_fisica
     - utter_lei_rouanet_valor_maximo_regiao
     - utter_manter_conversa
@@ -125,6 +126,7 @@
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
 * lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_minimo
     - utter_lei_rouanet_valor_maximo_pessoa_juridica
     - utter_lei_rouanet_valor_maximo_regiao
     - utter_manter_conversa
@@ -136,6 +138,7 @@
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
 * lei_rouanet_valor_maximo_geral
+    - utter_lei_rouanet_valor_minimo
     - utter_lei_rouanet_valor_maximo_pessoa_fisica
     - utter_lei_rouanet_valor_maximo_pessoa_juridica
     - utter_lei_rouanet_valor_maximo_regiao

@@ -972,6 +972,8 @@ templates:
 
           Quem autoriza os limites desses projetos, de reservação de acervo, exposições com acervos museológicos, de construção e implantação de equipamentos culturais, é a área técnica do MinC.
 
+  utter_lei_rouanet_valor_minimo:
+    - text: |
           Não há um valor mínimo para projetos.
 
   utter_lei_rouanet_valor_maximo_pessoa_juridica:
@@ -1362,6 +1364,7 @@ actions:
   - utter_lei_rouanet_valor_maximo_pessoa_fisica
   - utter_lei_rouanet_valor_maximo_pessoa_juridica
   - utter_lei_rouanet_valor_maximo_regiao
+  - utter_lei_rouanet_valor_minimo
   - utter_lei_rouanet_remuneracao_proponente
   - utter_lei_rouanet_comercializacao_de_ingressos
   - utter_lei_rouanet_promocao_de_marca
