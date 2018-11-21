@@ -33,6 +33,10 @@
 * out_of_scope
   - utter_default
 
-## fallback
+## afirmar
 * afirmar
+ - utter_manter_conversa
+
+## negar sem contexto
+* negar
  - utter_manter_conversa

@@ -586,6 +586,7 @@ templates:
           Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
           nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
           Caso você não possa ver o vídeo, eu posso te explicar. 
+
   utter_salic_cadastro_usuario:
     - text: |
           A primeira coisa que você deve fazer é acessar o SALIC no site http://salic.cultura.gov.br
@@ -755,7 +756,7 @@ templates:
            Compatibilidade dos custos previstos no projeto com os preços praticados no mercado regional da produção, conforme métrica estabelecida pelo MinC – o que se mostrar inadequado pode sofrer cortes justificados pelo parecerista;
            Relação custo/benefício do projeto no âmbito cultural, incluindo o impacto da utilização do mecanismo de incentivo fiscal na redução do preço final de produtos ou serviços culturais com público pagante, podendo o parecerista propor redução nos preços solicitados;
            Atendimento aos critérios e limites de custos estabelecidos pela Lei e Instrução Normativa em vigor;
-           Prazo: até 30 dias do seu recebimento, podendo ser prorrogado por mais 120 dias quando se tratar de projeto de recuperação de patrimônio histórico ou construção de imóveis.
+           Prazo: até 30 dias do seu recebimento, podendo ser prorrogado por mais 120 dias quando utter_cadastro_salic_videose tratar de projeto de recuperação de patrimônio histórico ou construção de imóveis.
            Nos casos de projetos culturais que tenham como objeto a preservação de bens culturais tombados ou registrados pelos poderes públicos (federal, estadual, distrital ou municipal), será obrigatória, também, a apreciação pelo órgão responsável pelo tombamento ou registro.
          
            Análise pela CNIC: Após emissão do parecer técnico, o projeto cultural será apreciado pela Comissão Nacional de Incentivo à Cultura (CNIC), que homologa a execução do projeto.

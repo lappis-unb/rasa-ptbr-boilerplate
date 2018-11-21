@@ -12,6 +12,7 @@
 
 ## intent:despedir
 - Tchau obrigada
+- Tchau
 - até logo
 - namaste
 - sayonara
@@ -102,6 +103,7 @@
 - falei errado
 - duvida
 - ainda não sei
+- nenhum
 
 
 ## intent:diga_mais
