@@ -17,9 +17,12 @@ bot/work
 notebooks/intents/evaluate-intents.ipynb
 notebooks/intents/models
 notebooks/intents/errors.json
+
  ### Stories Notebook ###
+notebooks/stories/tais-analysis.ipynb
 notebooks/stories/models
 notebooks/stories/errors.json
+notebooks/stories/img
 
 ### Rocketchat ###
 /data
