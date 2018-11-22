@@ -211,7 +211,7 @@
     - utter_cumprimentar
     - utter_menu
 * negar
-    - utter_manter_conversa
+    - utter_despedir
 
 ## Cumprimentar Base 2
 * cumprimentar
@@ -238,14 +238,14 @@
 	- utter_processo_como_funciona
 	- utter_manter_conversa
 * negar
-    - utter_manter_conversa
+    - utter_despedir
 
 ## Incentivo Base 12
 * lei_rouanet_o_que_eh
 	- utter_lei_rouanet_o_que_eh
 	- utter_manter_conversa
 * negar
-    - utter_manter_conversa
+    - utter_despedir
 
 ## Incentivo Base 13
 * lei_rouanet_quem_pode_ser_proponente

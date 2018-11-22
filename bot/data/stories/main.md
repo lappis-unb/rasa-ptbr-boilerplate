@@ -39,7 +39,7 @@
 
 ## negar sem contexto
 * negar
- - utter_manter_conversa
+ - utter_despedir
 
 
 ## elogios
