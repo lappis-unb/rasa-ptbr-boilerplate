@@ -44,6 +44,7 @@
 - Sefic é um orgão
 - Sefic é do ministério
 - o que é a sigla Sefic
+- o que é SEFIC?
 
 ## intent:definicao_projeto
 - o que é Projeto
@@ -66,6 +67,7 @@
 - o que é SALIC
 - o que significa Salic
 - Salic é sigla de que
+- o que é SALIC
 
 ## intent:definicao_vinculada
 - o que é Vinculada

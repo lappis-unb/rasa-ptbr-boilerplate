@@ -40,3 +40,8 @@
 ## negar sem contexto
 * negar
  - utter_manter_conversa
+
+
+## elogios
+* elogios
+   - utter_elogios

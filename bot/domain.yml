@@ -9,6 +9,7 @@ intents:
   - quem_eh_a_tais
   - diga_mais
   - tudo_bem
+  - elogios
 
   - captacao
   - captacao_quando_captar
@@ -847,6 +848,9 @@ templates:
     - text: |
           A captação só pode começar depois que o projeto passa pela fase de enquadramento, pela análise documental e pela publicação.
           Assim que o projeto é publicado no Diário Oficial da União você pode começar a captar recursos.
+  utter_elogios:
+    - text: |
+          Obrigada! É sempre bom dar e receber elogios :P 
   utter_processo_reativacao_de_proposta:
     - text: |
           Pra reativar uma proposta indeferida você deve enviar um pedido de reativação
@@ -974,6 +978,7 @@ actions:
   - utter_erro_resposta_utter
   - utter_quem_eh_a_tais
   - utter_diga_mais
+  - utter_elogios
 
   - utter_captacao
   - utter_captacao_quando_captar

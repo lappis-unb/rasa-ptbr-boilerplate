@@ -64,6 +64,8 @@
 - admissibilidade
 - fase admissibilidade
 - etapa admissibilidade
+- qual a definição de admissibilidade
+- admissibilidade
 
 ## intent:processo_aprovacao
 - o que é aprovação

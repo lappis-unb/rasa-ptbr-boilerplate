@@ -4,6 +4,9 @@
 - quero saber sobre o salic
 - opção salic
 - salic
+- o que é SALIC
+- o que eh salic
+
 
 ## intent:salic_cadastro_usuario
 - como me cadastro no salic

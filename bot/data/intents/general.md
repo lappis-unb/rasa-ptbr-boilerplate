@@ -58,6 +58,12 @@
 - opa tudo bem
 - ola boa tarde
 
+#intent:elogios
+- Tais, você é muito educada!
+- Adorei
+- Me ajudou muito
+- vc eh linda
+
 
 ## intent:afirmar
 - se não for incomodo
@@ -95,10 +101,8 @@
 - não sei do que quero conversar
 - nunca
 - nao
-- não sei
 - nao conheco
 - não quero
-- nao tenho certeza
 - escolhi errado
 - falei errado
 - duvida
@@ -117,6 +121,11 @@
 - como assim
 - e como funciona
 - e como faco isso
+- como cadastra
+- nao tenho certeza
+- não sei
+- por onde solicitar
+- como ter acesso
 
 
 ## intent:o_que_sei_falar
@@ -155,6 +164,9 @@
 - bom dia flor do dia
 - Tudo bem e você
 - como vc esta
+- oi tais. como vai vc
+- ola tais. tudo bem
+-  como vai
 
 
 ## intent:quem_eh_a_tais
@@ -179,7 +191,12 @@
 - qual seu pai
 - onde voce nasceu
 - quando vc nasceu
-
+- vc é homem ou mulher
+- você é um robo
+- Tais
+- Taís
+- vc é um humano
+- você eh um robo
 
 
 

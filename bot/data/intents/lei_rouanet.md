@@ -208,6 +208,7 @@
 - mecanismo de denuncia
 - registrar denuncia
 - projeto ilegal
+- como Denúncia de projetos
 
 ## intent:lei_rouanet_receber_incetivo_de_parentes
 - meus parentes podem incentivar meu projeto
