@@ -561,16 +561,19 @@ templates:
           a fim de provar os gastos do projeto.
           Mais detalhes sobre essa etapa (dúvidas, questões, ajuda) vou conseguir responder
           somente nas minhas próximas versões :P
+
   utter_definicao_salic:
     - text: |
           Sistema de Apoio às Leis de Incentivo à Cultura (SALIC) é o
           sistema utilizado para submeter propostas e gerenciar
           projetos aprovados pela Lei Rouanet.
           Acesse: *salic.cultura.gov.br*
+
   utter_definicao_vinculada:
     - text: |
           As vinculadas são órgãos associados ao MinC
           que avaliam o orçamento e adequação do projeto.
+
   utter_processo_como_funciona:
     - text: |
           Aqui vai um resumo do processo da Lei de Incentivo a Cultura
@@ -580,6 +583,7 @@ templates:
           Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
           A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
           O primeiro passo para você participar deste processo é ter cadastro no SALIC
+          
   utter_cadastro_salic_video:
     - text: |
           O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura,

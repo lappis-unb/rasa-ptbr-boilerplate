@@ -14,9 +14,6 @@
 
 
 ## Definicao 2
-* cumprimentar
-    - utter_cumprimentar
-    - utter_menu
 * definicao_projeto
     - utter_definicao_projeto
     - utter_manter_conversa
@@ -27,9 +24,6 @@
     - utter_manter_conversa
 
 ## Definicao 4
-* cumprimentar
-    - utter_cumprimentar
-    - utter_menu
 * definicao_cnic
     - utter_definicao_cnic
     - utter_manter_conversa
@@ -47,6 +41,11 @@
     - utter_definicao_salic
     - utter_manter_conversa
 
+## Definicao 6.1
+* definicao_salic
+    - utter_definicao_salic
+    - utter_manter_conversa
+
 ## Definicao 7
 * definicao_tais
     - utter_definicao_tais
@@ -60,10 +59,20 @@
     - utter_definicao_proponente
     - utter_manter_conversa
 
+## Definicao 8.1
+* definicao_proponente
+    - utter_definicao_proponente
+    - utter_manter_conversa
+
 ## Definicao 9
 * cumprimentar
     - utter_cumprimentar
     - utter_menu
+* definicao_vinculada
+    - utter_definicao_vinculada
+    - utter_manter_conversa
+
+## Definicao 9.1
 * definicao_vinculada
     - utter_definicao_vinculada
     - utter_manter_conversa
@@ -81,6 +90,12 @@
   - utter_manter_conversa
 * despedir
   - utter_despedir  
+
+## Definicao 11
+* definicao_projeto
+  - utter_definicao_projeto
+  - utter_manter_conversa
+
 
 ## Definicao 12
 * cumprimentar
