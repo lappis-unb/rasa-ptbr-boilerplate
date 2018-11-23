@@ -21,7 +21,7 @@
 * negar
     - utter_manter_conversa
 
-## salic 2
+## salic 2.0
 * salic_cadastro_proponente
     - utter_salic_cadastro_proponente
     - utter_manter_conversa
