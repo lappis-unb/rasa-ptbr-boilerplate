@@ -31,7 +31,7 @@
 - Ministerio
 - Minc
 - Minitério da Cultura
-
+- quais as funções do Minc
 
 ## intent:definicao_cnic
 - o que é CNIC
@@ -51,7 +51,6 @@
 - o que é SEFIC?
 - qual o papel da sefic
 - quem é a sefic
-
 
 ## intent:definicao_projeto
 - o que é Projeto

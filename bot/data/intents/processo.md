@@ -75,6 +75,7 @@
 - aprovação
 - fase aprovação
 - etapa aprovação
+- qual prazo para aprovação do projeto?
 
 ## intent:processo_execucao
 - o que é execução

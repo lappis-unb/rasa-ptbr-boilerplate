@@ -13,6 +13,35 @@
       - utter_processo_analise_de_resultados
       - utter_manter_conversa
 
+## Processo 1_3
+* processo_admissibilidade
+      - utter_processo_admissibilidade
+      - utter_manter_conversa
+
+## Processo 1_4
+* cumprimentar
+      - utter_cumprimentar
+      - utter_menu
+* processo_admissibilidade
+      - utter_processo_admissibilidade
+      - utter_manter_conversa
+
+## Processo 1_5
+* processo_aprovacao
+      - utter_processo_aprovacao
+      - utter_manter_conversa
+
+
+## Processo 1_6
+* cumprimentar
+      - utter_cumprimentar
+      - utter_menu
+* processo_aprovacao
+      - utter_processo_aprovacao
+      - utter_manter_conversa
+     
+
+
 ## Processo 1_2
 * processo_analise_de_resultados
       - utter_processo_analise_de_resultados
@@ -45,7 +74,7 @@
     - utter_manter_conversa
 * negar
     - utter_despedir
-    
+
 ## Processo 5
 * cumprimentar
     - utter_cumprimentar

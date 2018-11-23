@@ -256,7 +256,14 @@
 * afirmar
     - utter_manter_conversa
 
-## Incentivo Base 13
+## Incentivo Base 14
 * definicao_sefic
    - utter_definicao_sefic
+   - utter_manter_conversa
 
+## Incentivo Base 15
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* definicao_sefic
+   - utter_definicao_sefic

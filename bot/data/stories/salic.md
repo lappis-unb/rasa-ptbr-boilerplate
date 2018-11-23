@@ -26,6 +26,14 @@
     - utter_salic_cadastro_proponente
     - utter_manter_conversa
 
+## salic 2.1
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* salic_cadastro_proponente
+    - utter_salic_cadastro_proponente
+    - utter_manter_conversa
+
 ## salic 3
 * cumprimentar
     - utter_cumprimentar
@@ -70,6 +78,12 @@
 * cumprimentar
     - utter_cumprimentar
     - utter_menu
+* definicao_salic
+    - utter_definicao_salic
+    - utter_manter_conversa
+
+
+## salic 8.1
 * definicao_salic
     - utter_definicao_salic
     - utter_manter_conversa

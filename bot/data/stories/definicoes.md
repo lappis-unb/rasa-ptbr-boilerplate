@@ -23,6 +23,15 @@
     - utter_definicao_minc
     - utter_manter_conversa
 
+
+## Definicao 3.1
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* definicao_minc
+    - utter_definicao_minc
+    - utter_manter_conversa
+
 ## Definicao 4
 * definicao_cnic
     - utter_definicao_cnic

@@ -15,6 +15,10 @@
 - qual o endereço do salic
 - o que eu preciso para cadastrar no salic
 - me cadastre no salic
+- como realizar Cadastro de usuários
+- como realizar Cadastro de usuario
+- cadastro 
+- usuarios
 
 ## intent:salic_cadastro_proponente
 - Como cadastrar o proponente via Salic ?
@@ -25,6 +29,7 @@
 - cadastrar proponente
 - cadastro de proponente
 - Como faço para cadastrar um proponente?
+- como realizar Cadastro de proponentes
 
 ## intent:salic_recuperacao_de_senha
 - não me recordo da senha de acesso
