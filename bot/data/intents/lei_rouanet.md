@@ -245,6 +245,9 @@
 - o proponente tem remuneracao
 - o proponente recebe um salario
 - o proponente tem direito a honorários
+- qual limite para Remuneração do proponente
+- quanto o proponente pode se remunerar
+- qual a remuneração do proponente
 - remuneração
 - remunerado
 - honorário

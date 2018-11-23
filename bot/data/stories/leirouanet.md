@@ -143,3 +143,16 @@
     - utter_lei_rouanet_valor_maximo_pessoa_juridica
     - utter_lei_rouanet_valor_maximo_regiao
     - utter_manter_conversa
+
+## LeiRouanet 19
+* lei_rouanet_remuneracao_proponente
+    - utter_lei_rouanet_remuneracao_proponente
+    - utter_manter_conversa
+
+## LeiRouanet 20
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* lei_rouanet_remuneracao_proponente
+    - utter_lei_rouanet_remuneracao_proponente
+    - utter_manter_conversa

@@ -24,7 +24,9 @@
       - utter_menu
 * processo_reativacao_de_proposta
       - utter_processo_reativacao_de_proposta
-    - utter_manter_conversa
+      - utter_manter_conversa
+* negar
+    - utter_despedir
 
 ## Processo 3
 * cumprimentar
@@ -41,7 +43,9 @@
 * processo_como_funciona
     - utter_processo_como_funciona
     - utter_manter_conversa
-
+* negar
+    - utter_despedir
+    
 ## Processo 5
 * cumprimentar
     - utter_cumprimentar

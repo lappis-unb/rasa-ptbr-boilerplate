@@ -590,7 +590,7 @@ templates:
           e é por ele que você cadastra a proposta e a acompanha.
           Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
           nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
-          Caso você não possa ver o vídeo, eu posso te explicar. 
+          Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique (sim ou não) 
 
   utter_salic_cadastro_usuario:
     - text: |
@@ -717,6 +717,7 @@ templates:
           O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e         
           em benefício de empresa coligada ou que tenha sócio em comum.
           O limite pode ser ultrapassado quando a remuneração é feita a grupos artísticos familiares que atuem na execução do projeto ou quando se tratar de pagamento a um mesmo fornecedor em projetos de execução de obras e restauros.
+
   utter_lei_rouanet_comercializacao_de_ingressos:
     - text: |
           Do total de ingressos de um projeto cultural, a Lei Rouanet estabelece que a venda deve ser feita da seguinte forma:

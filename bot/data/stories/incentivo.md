@@ -147,6 +147,8 @@
 * lei_rouanet_denuncia
 	- utter_lei_rouanet_denuncia
 	- utter_manter_conversa
+* negar
+    - utter_despedir
 
 ## Incentivo Avancado 3
 * lei_rouanet_origem_do_dinheiro
@@ -178,7 +180,7 @@
 * salic_cadastro_usuario
     - utter_cadastro_salic_video
 * negar
-    - utter_manter_conversa
+    - utter_despedir
 
 # Incentivo Cadastro Salic 2
 * processo_como_funciona
