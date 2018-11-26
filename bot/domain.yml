@@ -1168,9 +1168,22 @@ templates:
 
   utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
     - text: |
-          Você deve ir em:
           Orçamento do projeto > Custos por produto > Clicar no produto desejado
           Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
+
+  utter_passo_a_passo:
+    - text: |
+          Aqui vai um passo a passo do que você deve fazer:
+
+    - text: |
+          Vou te explicar as etapas do que você deve fazer:
+
+    - text: |
+          Você deve ir em:
+
+    - text: |
+          É só seguir as seguintes instruções:
+          
 actions:
   - utter_default
   - utter_restart
@@ -1301,6 +1314,7 @@ actions:
   - utter_processo_situacao_processo_L06
 
   - utter_salic
+  - utter_passo_a_passo
   - utter_salic_preenchimento_cadastro_rubrica_advogado_contador
   - utter_salic_preenchimento
   - utter_salic_preenchimento_campo_custo_auditoria
