@@ -167,10 +167,10 @@ templates:
     - text: |
         Hummmm... Não sei se entendi. Pode escrever de outra forma?
      
-     - text: |
+    - text: |
         Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
 
-      - text: |
+    - text: |
         Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
 
   utter_restart:
