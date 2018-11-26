@@ -5,8 +5,6 @@ services:
   rocketchat:
     image: rocket.chat:0.69.2
     restart: unless-stopped
-    volumes:
-      - ./uploads:/app/uploads
     environment:
       - PORT=3000
       - ROOT_URL=http://localhost:3000
@@ -34,7 +32,7 @@ services:
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
     environment:
-      - TRAINING_EPOCHS=130
+      - TRAINING_EPOCHS=10
       - ROCKETCHAT_URL=rocketchat:3000
       - MAX_TYPING_TIME=8
       - MIN_TYPING_TIME=1
@@ -50,26 +48,13 @@ services:
       - BOT_VERSION=last-commit-hash
 
       # Analytics config
-      - ENABLE_ANALYTICS=True
+      - ENABLE_ANALYTICS=False
       - ELASTICSEARCH_URL=elasticsearch:9200
     ports:
       - 5005:5005
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
-    depends_on:
-      - actions
-      - rocketchat
-
-  actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
-    ports:
-      - 5055:5055
-    volumes:
-      - ./bot/actions:/bot/actions
-
 
 
   # =================================== Web ===================================

@@ -56,7 +56,9 @@ class RocketChatBot(OutputChannel):
         if recipient_id not in self.users:
             self.users[recipient_id] = RocketchatHandleMessages(recipient_id,
                                                                 self)
-        self.users[recipient_id].add_message(message)
+
+        for message_part in message.split("\n\n"):
+            self.users[recipient_id].add_message(message_part)
 
 
 

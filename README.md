@@ -71,7 +71,12 @@ sudo docker-compose run --rm bot make train
 sudo docker-compose run --rm bot make run-console
 ```
 
+### Train Online
 
+```
+sudo docker-compose run --rm bot make train
+sudo docker-compose run --rm bot make train-online
+```
 
 
 ## Site do Beta

@@ -1,0 +1,6 @@
+numpy==1.14.5
+sklearn_crfsuite==0.3.6
+rocketchat-API==0.6.22
+rocketchat-py-sdk==0.0.8
+rasa-core==0.9.0
+rasa-nlu==0.13.7

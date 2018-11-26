@@ -10,6 +10,14 @@ from rasa_core.events import ActionExecuted, BotUttered, UserUttered
 
 from elasticsearch import Elasticsearch
 
+try:
+    from nltk.corpus import stopwords
+except Exception as e:
+    import nltk
+    nltk.download('stopwords')
+    from nltk.corpus import stopwords
+    pass
+
 logger = logging.getLogger(__name__)
 
 es = Elasticsearch([os.getenv('ELASTICSEARCH_URL', 'elasticsearch:9200')])
@@ -32,7 +40,17 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         if not tracker.latest_message.text:
             return
 
-        timestamp = time.time()
+        ts = time.time()
+        timestamp = datetime.datetime.strftime(
+            datetime.datetime.fromtimestamp(ts),
+            '%Y/%m/%d %H:%M:%S'
+        )
+
+        #Bag of words
+        tags = []
+        for word in tracker.latest_message.text.replace('. ',' ').replace(',',' ').replace('"','').replace("'",'').replace('*','').replace('(','').replace(')','').split(' '):
+            if word.lower() not in stopwords.words('portuguese') and len(word) > 1:
+                tags.append(word)
 
         message = {
             'environment': ENVIRONMENT_NAME,
@@ -43,6 +61,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
             'timestamp': timestamp,
 
             'text': tracker.latest_message.text,
+            'tags': tags,
 
             'entities': tracker.latest_message.entities,
             'intent_name': tracker.latest_message.intent['name'],
@@ -53,7 +72,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         }
 
         es.index(index='messages', doc_type='message',
-                 id='{}_user_{}'.format(ENVIRONMENT_NAME, gen_id(timestamp)),
+                 id='{}_user_{}'.format(ENVIRONMENT_NAME, gen_id(ts)),
                  body=json.dumps(message))
 
     def save_bot_message(self, tracker):
@@ -78,10 +97,15 @@ class ElasticTrackerStore(InMemoryTrackerStore):
         for utter in utters[::-1]:
             time_offset += 100
 
-            timestamp = (
+            ts = (
                 datetime.datetime.now() +
                 datetime.timedelta(milliseconds=time_offset)
             ).timestamp()
+
+            timestamp = datetime.datetime.strftime(
+                datetime.datetime.fromtimestamp(ts),
+                '%Y/%m/%d %H:%M:%S'
+            )
 
             message = {
                 'environment': ENVIRONMENT_NAME,
@@ -91,6 +115,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
                 'is_bot': True,
 
                 'text': '',
+                'tags': [],
                 'timestamp': timestamp,
 
                 'entities': [],
@@ -102,7 +127,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
             }
 
             es.index(index='messages', doc_type='message',
-                     id='{}_bot_{}'.format(ENVIRONMENT_NAME, gen_id(timestamp)),
+                     id='{}_bot_{}'.format(ENVIRONMENT_NAME, gen_id(ts)),
                      body=json.dumps(message))
 
     def save(self, tracker):
