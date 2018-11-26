@@ -162,10 +162,16 @@ templates:
     - text: |
         Poxa, acho que ainda não sei isso... Se não consegui responder tua pergunta, 
         entre no site da Rouanet (http://rouanet.cultura.gov.br/perguntas_frequentes_28_12/)
-         Mas se você perguntar de outra forma talvez eu consiga te responder 
+        Mas se você perguntar de outra forma talvez eu consiga te responder 
          
     - text: |
         Hummmm... Não sei se entendi. Pode escrever de outra forma?
+     
+     - text: |
+        Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
+
+      - text: |
+        Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
 
   utter_restart:
     - text: |
@@ -176,6 +182,31 @@ templates:
           Olá, que bom que você voltou!
           Estou ansiosa para tirar suas novas dúvidas sobre a Lei Rouanet!
           Como posso te ajudar?
+
+  utter_processo_situacao:
+    - text: |
+          O estado do seu processo é o seguinte:
+
+    - text: |
+          Olha, eu pesquisei e descobri que o estado do seu processo é esse:
+
+    - text: |
+          Vamos lá, descobrir qual estado do seu processo:
+
+    - text: |
+          A situação do seu processo é a seguinte:
+
+    - text: |
+          O estado do seu processo é o seguinte:
+    - text: |
+          Olha, eu pesquisei e descobri que o estado do seu processo é esse:
+
+    - text: |
+          Vamos lá, descobrir qual estado do seu processo:
+
+    - text: |
+          A situação do seu processo é a seguinte:
+
 
   utter_processo_situacao_processo_A12:
     - text: |
@@ -1239,6 +1270,7 @@ actions:
   - utter_processo_execucao
   - utter_processo_analise_de_resultados
   - utter_processo_como_funciona
+  - utter_processo_situacao
   - utter_processo_situacao_processo_A12
   - utter_processo_situacao_processo_A14
   - utter_processo_situacao_processo_A20
