@@ -20,8 +20,6 @@ except Exception as e:
 
 logger = logging.getLogger(__name__)
 
-es = Elasticsearch([os.getenv('ELASTICSEARCH_URL', 'elasticsearch:9200')])
-
 ENABLE_ANALYTICS = os.getenv('ENABLE_ANALYTICS', 'False').lower() == 'true'
 ENVIRONMENT_NAME = os.getenv('ENVIRONMENT_NAME', 'locahost')
 BOT_VERSION = os.getenv('BOT_VERSION', 'notdefined')
@@ -33,7 +31,16 @@ def gen_id(timestamp):
     return _id
 
 class ElasticTrackerStore(InMemoryTrackerStore):
-    def __init__(self, domain=None):
+    def __init__(self, domain,
+                 user=None, password=None, scheme='http', scheme_port=80):
+        if user is None:
+            self.es = Elasticsearch([domain])
+        else:
+            self.es = Elasticsearch(
+                ['{}://{}:{}@{}:{}'.format(scheme, user, password,
+                                           domain, scheme_port)],
+            )
+
         super(ElasticTrackerStore, self).__init__(domain)
 
     def save_user_message(self, tracker):
@@ -71,7 +78,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
             'is_fallback': False,
         }
 
-        es.index(index='messages', doc_type='message',
+        self.es.index(index='messages', doc_type='message',
                  id='{}_user_{}'.format(ENVIRONMENT_NAME, gen_id(ts)),
                  body=json.dumps(message))
 
@@ -126,7 +133,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
                 'is_fallback': utter == 'action_default_fallback',
             }
 
-            es.index(index='messages', doc_type='message',
+            self.es.index(index='messages', doc_type='message',
                      id='{}_bot_{}'.format(ENVIRONMENT_NAME, gen_id(ts)),
                      body=json.dumps(message))
 

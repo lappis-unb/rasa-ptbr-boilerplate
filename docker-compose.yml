@@ -50,6 +50,12 @@ services:
       # Analytics config
       - ENABLE_ANALYTICS=False
       - ELASTICSEARCH_URL=elasticsearch:9200
+
+      # HTTP login on elasticsearch
+      # - ELASTICSEARCH_USER=admin
+      # - ELASTICSEARCH_PASSWORD=admin
+      # - ELASTICSEARCH_HTTP_SCHEME=https
+      # - ELASTICSEARCH_PORT=443
     ports:
       - 5005:5005
     volumes:

@@ -28,7 +28,20 @@ def run(core_dir, nlu_dir):
 
     _endpoints = AvailableEndpoints.read_endpoints(None)
     _interpreter = NaturalLanguageInterpreter.create(nlu_dir)
-    _tracker_store = ElasticTrackerStore()
+
+    elastic_user = os.getenv('ELASTICSEARCH_USER')
+    if elastic_user is None:
+        _tracker_store = ElasticTrackerStore(
+            domain = os.getenv('ELASTICSEARCH_URL', 'elasticsearch:9200')
+        )
+    else:
+        _tracker_store = ElasticTrackerStore(
+            domain      = os.getenv('ELASTICSEARCH_URL', 'elasticsearch:9200'),
+            user        = os.getenv('ELASTICSEARCH_USER', 'user'),
+            password    = os.getenv('ELASTICSEARCH_PASSWORD', 'password'),
+            scheme      = os.getenv('ELASTICSEARCH_HTTP_SCHEME', 'http'),
+            scheme_port = os.getenv('ELASTICSEARCH_PORT', '80')
+        )
 
     _agent = load_agent(core_dir,
                         interpreter=_interpreter,
