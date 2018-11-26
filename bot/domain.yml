@@ -735,43 +735,6 @@ templates:
 
           Agora que você já se cadastrou, o próximo passo cadastrar um proponente
 
-  utter_curiosidadesMais:
-    - text: |
-          Você quer saber mais curiosidades?
-
-    - text: |
-          Você tem interesse de saber mais curiosidades?
-
-    - text: |
-          Você gostaria de saber mais curiosidades?
-
-  utter_curiosidadesMaisSim:
-    - text: |
-          EBA!
-          O que você quer saber?
-
-    - text: |
-          EBA!
-          Do que você quer saber?
-
-    - text: |
-          EBA!
-          De qual assunto você quer saber?
-
-  utter_curiosidadesMaisNao:
-    - text: |
-          Tudo bem, então você quer saber sobre *projetos e propostas*?
-
-    - text: |
-          Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
-
-    - text: |
-          Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?
-
-  utter_curiosidadesFalarSobreProjetos:
-    - text: |
-          Maravilha! É bom saber que você quer entender mais sobre propostas e projetos
-
   utter_lei_rouanet_quantidade_de_projetos:
     - text: |
           Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.
