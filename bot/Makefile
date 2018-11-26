@@ -15,6 +15,9 @@ run-rest:
 run-console:
 	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug
 
+run-test:
+	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug --port 5005 --enable_api
+
 train-online:
 	python3 -m rasa_core.train -d domain.yml -s data/stories -o models/dialogue --epochs 15 --online --nlu models/nlu/current/
 
