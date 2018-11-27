@@ -908,7 +908,14 @@ templates:
            Analisa os projetos culturais, inclusive sob seus aspectos orçamentários, podendo para tanto solicitar informações adicionais, diligenciando o proponente, emitindo parecer conclusivo pela aprovação, total ou parcial, ou rejeição do projeto cultural.
          
            Decisão final: o ministro de Estado da Cultura, em última instância, decide quanto à aprovação ou rejeição do projeto cultural. Historicamente, por convenção, o MinC acompanha a decisão do órgão consultivo. Excepcionalmente, é possível que o ministro decida de forma diferente, fundamentando a justificativa.
-
+           
+  utter_lei_rouanet_democratizacao:
+   - text: |
+           A formação de plateia não é mais obrigatória e não é mais utilizado desde a IN 5.
+           Já a democratização ao acesso são medidas previstas nos artigos 20 e 21 da IN 
+           que promovem e ampliam a possibilidade de fruição dos bens, produtos e ações culturais,
+           em especial para as camadas da população menos assistidas ou excluídas do exercício de seus diretos culturais 
+           por sua condição socioeconômica ou outras circunstancias. 
   #TODO
   utter_salic_preenchimento:
     - text: |
@@ -1217,6 +1224,7 @@ actions:
   - utter_lei_rouanet_promocao_de_marca
   - utter_lei_rouanet_valores_pagamento_caches
   - utter_lei_rouanet_etapas_aprovacao_projeto
+  - utter_lei_rouanet_democratizacao
 
   - utter_processo
   - utter_processo_reativacao_de_proposta

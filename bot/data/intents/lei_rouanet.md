@@ -456,3 +456,25 @@
  - os dois perfis
  - sobre todos os perfis
  - de todos
+
+## intent:lei_rouanet_democratizacao
+- o que é democratização do acesso e formação de plateia
+- o que é democratização ao acesso
+- o que é formação de plateia
+- democratização de acesso formação de plateia
+- formação de plateia e democratização do acesso
+- é obrigatório realizar a formação de plateia 
+- é obrigatória realizar a formação de plateia 
+- é necessário a formação de plateia
+- como funciona a democratização do acesso
+- democratização de acesso à cultura
+- democratização e plateia
+- democratização de acesso
+- obrigatoriedade de formação de plateia
+- obrigatoriedade de democratização de acesso
+- realizar formação de plateia
+- promover o acesso cultural
+- promover acesso à cultura
+- formação de plateia
+- acesso cultural
+- plateia
