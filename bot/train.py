@@ -9,6 +9,14 @@ from rasa_core.policies.memoization import MemoizationPolicy, AugmentedMemoizati
 from rasa_core.policies.fallback import FallbackPolicy
 from fallback import CustomFallbackPolicy
 
+## imports to verify domain.yml
+from jsonschema import validate
+import yaml
+
+## imports to verify intents existence
+from os import listdir
+from os.path import isfile, join
+
 logger = logging.getLogger(__name__)
 NLU_THRESHOLD = float(os.getenv('NLU_THRESHOLD', 0.6))
 
@@ -58,6 +66,61 @@ def train_dialogue(domain_file, model_path, training_folder):
                                 validation_split=VALIDATION_SPLIT)
     agent.persist(model_path)
 
+def verify_domain():
+    schema = """
+    type: object
+    """
+    file = open('domain.yml', 'r')
+    domain = file.read()
+    validate(yaml.load(domain), yaml.load(schema))
+    logger.info('Domain verified')
+
+def search(vector,searched_value):
+    vector.append(searched_value)
+    count = 0
+    while(searched_value != vector[count]):
+        count += 1
+    if(count == len(vector)-1):
+        return('ERROR 404 - ' + searched_value + ' not found')
+
+def verify_intents():
+    ## Adds intents in domain to the list
+    file = open('domain.yml', 'r')
+    domain_lines = file.readlines()
+    intents_in_domain = []
+
+    for line in domain_lines:
+        if line != 'actions:\n':
+            if line[:3] == '  -':
+                intents_in_domain.append(line[4:-1])
+        else:
+            break
+
+    ## Adds intents in intent files to another list
+    intents_in_files = []
+    intent_files = [f for f in listdir("data/intents") if isfile(join("data/intents", f))]
+
+    for intent in intent_files:
+        f = open('data/intents/'+intent, 'r')
+        intent_lines = f.readlines()
+    
+        for line in intent_lines:
+            if line[:10] == '## intent:':
+                intents_in_files.append(line[10:-1])
+
+    ## Checks if the intents in domain are the same of the ones in the intent files
+    for intent in intents_in_domain:
+        not_found = search(intents_in_files, intent)
+        if not_found:
+            logger.error(not_found + ' in intent files')
+    
+    for intent in intents_in_files:
+        not_found = search(intents_in_domain, intent)
+        if not_found:
+            logger.error(not_found + ' in domain file')
+    
 
 if __name__ == "__main__":
+    verify_domain()
+    verify_intents()
     train_dialogue('domain.yml', 'models/dialogue', 'data/stories/')
