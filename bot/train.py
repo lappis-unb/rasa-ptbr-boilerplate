@@ -81,7 +81,9 @@ def search(vector,searched_value):
     while(searched_value != vector[count]):
         count += 1
     if(count == len(vector)-1):
-        return('ERROR 404 - ' + searched_value + ' not found')
+        return False
+    else:
+        return True
 
 def verify_intents():
     ## Adds intents in domain to the list
@@ -109,18 +111,48 @@ def verify_intents():
                 intents_in_files.append(line[10:-1])
 
     ## Checks if the intents in domain are the same of the ones in the intent files
+    valid_intents = []
     for intent in intents_in_domain:
-        not_found = search(intents_in_files, intent)
-        if not_found:
-            logger.error(not_found + ' in intent files')
+        found = search(intents_in_files, intent)
+        if not found:
+            logger.error('Intent ' + intent + ' was not found in the intent files')
+        else:
+            valid_intents.append(intent)
     
     for intent in intents_in_files:
-        not_found = search(intents_in_domain, intent)
-        if not_found:
-            logger.error(not_found + ' in domain file')
+        found = search(intents_in_domain, intent)
+        if not found:
+            logger.error('Intent ' + intent + ' was not found in the domain file')
+        else:
+            valid_intents.append(intent)
+
+    return valid_intents
+
+def verify_intents_in_stories(valid_intents):
+    stories_files = [f for f in listdir("data/stories") if isfile(join("data/stories", f))]
+
+    for file in stories_files:
+        f = open('data/stories/'+file, 'r')
+        stories_lines = f.readlines()
     
+        for line in stories_lines:
+            if line[:2] == '* ':
+                intent = line[2:-1]
+                if '{' in intent:
+                    intent = intent[:intent.find('{')]
+                
+                found = search(valid_intents, intent)
+                if not found:
+                    logger.error('The intent'+ intent +' is used in the stories'+
+                                 ' file '+ file + ' (line:'+
+                                 str(stories_lines.index(line)+1) +
+                                 ' ) but it\'s not a valid intent.')
+
+def run_verifications():
+    verify_domain()
+    valid_intents = verify_intents()
+    verify_intents_in_stories(valid_intents)
 
 if __name__ == "__main__":
-    verify_domain()
-    verify_intents()
+    run_verifications()
     train_dialogue('domain.yml', 'models/dialogue', 'data/stories/')
