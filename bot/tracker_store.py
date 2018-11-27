@@ -114,6 +114,19 @@ class ElasticTrackerStore(InMemoryTrackerStore):
                 '%Y/%m/%d %H:%M:%S'
             )
 
+            user_text = ''
+
+            if utter == 'action_default_fallback':
+                index = len(tracker.events) - 1
+                while index > 0:
+                    evt = tracker.events[index]
+                    if isinstance(evt, UserUttered):
+                        user_text = evt.text
+                        break
+                    index -= 1
+            else:
+                user_text = tracker.latest_message.text
+
             message = {
                 'environment': ENVIRONMENT_NAME,
                 'version': BOT_VERSION,
@@ -121,7 +134,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
 
                 'is_bot': True,
 
-                'text': '',
+                'text': user_text,
                 'tags': [],
                 'timestamp': timestamp,
 
