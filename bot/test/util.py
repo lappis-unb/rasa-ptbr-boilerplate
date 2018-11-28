@@ -15,7 +15,7 @@ Here is an example of output:
 """
 
 def get_tracker_data():
-    URL = 'http://localhost:5005/conversations/default/tracker'
+    URL = 'http://bot:5005/conversations/default/tracker'
     event_tracker = []
     try:
         request = requests.get(url = URL)
@@ -39,7 +39,7 @@ def get_tracker_data():
 def send_message(message):
     request=""
     try:
-        URL = 'http://localhost:5005/conversations/default/respond'
+        URL = 'http://bot:5005/conversations/default/respond'
         PARAMS = {'query':message}
         request = requests.get(url = URL, params = PARAMS)
     except ConnectionError:
