@@ -183,26 +183,12 @@ templates:
           Estou ansiosa para tirar suas novas dúvidas sobre a Lei Rouanet!
           Como posso te ajudar?
 
-  utter_processo_situacao:
+  utter_introducao_processo_situacao:
     - text: |
-          O estado do seu processo é o seguinte:
+          Olha, eu pesquisei e descobri que a situação do seu processo é essa:
 
     - text: |
-          Olha, eu pesquisei e descobri que o estado do seu processo é esse:
-
-    - text: |
-          Vamos lá, descobrir qual estado do seu processo:
-
-    - text: |
-          A situação do seu processo é a seguinte:
-
-    - text: |
-          O estado do seu processo é o seguinte:
-    - text: |
-          Olha, eu pesquisei e descobri que o estado do seu processo é esse:
-
-    - text: |
-          Vamos lá, descobrir qual estado do seu processo:
+          Vamos lá, descobrir qual a situação do seu processo:
 
     - text: |
           A situação do seu processo é a seguinte:
@@ -1171,7 +1157,7 @@ templates:
           Orçamento do projeto > Custos por produto > Clicar no produto desejado
           Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
 
-  utter_passo_a_passo:
+  utter_introducao_passo_a_passo:
     - text: |
           Aqui vai um passo a passo do que você deve fazer:
 
