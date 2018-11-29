@@ -79,6 +79,7 @@ class Validator:
         for intent in self.intents:
             f = open(intent, 'r')
             intent_lines = f.readlines()
+            f.close()
     
             for line in intent_lines:
                 s_line = line.split(':')
@@ -106,7 +107,8 @@ class Validator:
         for file in self.stories:
             f = open(file, 'r')
             stories_lines = f.readlines()
-    
+            f.close()
+
             for line in stories_lines:
                 s_line = line.split()
                 if len(s_line) == 2 and s_line[0] == '*':  
