@@ -6,8 +6,6 @@ from os import listdir
 from os.path import isfile, join
 from rasa_core import utils
 
-
-
 class Validator:
     domain = ''
     intents = []
@@ -128,7 +126,3 @@ class Validator:
         self.verify_intents()
         self.verify_intents_in_stories()
 
-
-if __name__ == '__main__':
-    my_validator = Validator('domain.yml','data/intents', 'data/stories/' )
-    my_validator.run_verifications()
