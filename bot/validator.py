@@ -5,6 +5,7 @@ import yaml
 from os import listdir
 from os.path import isfile, join
 from rasa_core import utils
+import traceback
 
 class Validator:
     domain = ''
@@ -43,9 +44,13 @@ class Validator:
         """
         file = open(self.domain, 'r')
         domain_file = file.read()
-        validate(yaml.load(domain_file), yaml.load(schema))
-        logging.info('Domain verified')
         file.close()
+        try:
+            validate(yaml.load(domain_file), yaml.load(schema))
+            logging.info('Domain verified')
+        except Exception as e:
+            logging.error('There is an error in domain.yml ' + str(e))
+
 
     def search(self, vector,searched_value):
         vector.append(searched_value)
