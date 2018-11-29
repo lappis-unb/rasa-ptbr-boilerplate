@@ -49,7 +49,7 @@ class Validator:
             validate(yaml.load(domain_file), yaml.load(schema))
             logging.info('Domain verified')
         except Exception as e:
-            logging.error('There is an error in domain.yml ' + str(e))
+            logging.error('There is an error in ' + self.domain + ' ' + str(e))
 
 
     def search(self, vector,searched_value):
@@ -123,10 +123,10 @@ class Validator:
                 
                     found = self.search(self.valid_intents, intent)
                     if not found:
-                        logging.error('The intent'+ intent +' is used in the stories'+
-                                     ' file '+ file + ' (line:'+
+                        logging.error('The intent '+ intent +' is used in the stories'+
+                                     ' file '+ file + ' (line: '+
                                      str(stories_lines.index(line)+1) +
-                                     ' ) but it\'s not a valid intent.')
+                                     ') but it\'s not a valid intent.')
 
     def run_verifications(self):
         self.verify_domain()
