@@ -44,6 +44,7 @@ intents:
   - lei_rouanet_valor_maximo_pessoa_fisica
   - lei_rouanet_valor_maximo_pessoa_juridica
   - lei_rouanet_valor_maximo_geral
+  - lei_rouanet_democratizacao
 
   - processo
   - processo_como_funciona
