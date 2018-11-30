@@ -19,6 +19,8 @@
 - fale sobre a [lei ruanê](lei_rouanet)
 - [lei rouanet](lei_rouanet)
 - Lei de Incentivo a Cultura
+- Gostaria de saber curiosidades sobre a lei
+- como funciona a lei rounet?    
 
 
 ## synonym:lei_rouanet   <!-- synonyms, method 2 -->
@@ -44,15 +46,21 @@
 - quem pode submeter projetos?
 - quero me inscrever na lei rouanet
 - posso me inscrever na lei rouanet
+- Quem pode iniciar um projeto na lei rouanet
 - quero participar da lei
+- Quem pode apresentar proposta cultural
 - quero me inscrever
 - eu posso usar a lei
 - quem pode se aplicar
+- Tenho uma banda de musica posso propor um projeto  
 - Posso inscrever uma proposta como pessoa fisica
 - Como pessoa fisica eu posso inscrever uma proposta
 - quero me tornar um proponente
 - eu posso participar da lei rouanet
 - quero ser proponente
+- agente publico pode enviar propostas
+- pessoa fisica pode ser proponente
+- Qualquer pessao pode apresentar um projeto
 - como ser proponente
 - quem pode propor
 - como me inscrever
@@ -96,10 +104,12 @@
 ## intent:lei_rouanet_beneficios_incentivo_projetos_culturais
 - tem beneficio para quem incentiva projeto
 - tem algum benefício em incentivar projetos
+- Quais são as vantagens de ter seu projeto incentivado
 - que tipo de beneficios recebe ao incentivar
 - que beneficios tem para quem incentiva
 - um incentivador pode receber beneficio
 - qual é a vantagem de incentivar
+- quem pode patrocinar um proejto
 - quais as vantagens de ser incentivador
 - quais as vantagens para o patrocinador
 - quais os beneficios de ser incentivador
@@ -171,6 +181,10 @@
 - Apoiando projetos culturais, qualquer empresa se beneficia
 - Empresas que se beneficiam ao apoiar projeto culturais
 - como pessoa fisica como posso patrocinar
+- Quem pode incentivar um proejto cultural
+- Quem pode incentivar projetos culturais
+- quem pode propor um projeto
+- quem pode ser proponente de um projeto
 - Tenho uma empresa e quero particiar da lei rouanet, como eu sei se posso
 - qual o critério de elegibilidade para pessoas jurídicas
 - toda empresa pode usar a lei rouanet
@@ -216,10 +230,12 @@
 - tem problema parentes incentivarem projetos
 - tenho parentes que desejam incentivar meus projetos
 - parentes incentivando meus projetos
+- Parentes pode participar do mesmo projeto
 - meu irmão ou irmã, tio ou tia, primo ou prima, mãe ou pai incentivar
 - minha irmã quer incetivar meu projeto tem problema
 - meu projeto pode ser incentivado pela minha família
 - meus familiares podem incentivar meu projeto
+- parentes podem ser patrocinador
 - quero saber se meus parentes podem ajudar a financiar o meu projeto
 - incentivar
 - incentivado
@@ -338,6 +354,7 @@
 
  ## intent:lei_rouanet_etapas_aprovacao_projeto
  - quais as etapas de aprovação de um projeto
+ - Andamento do projeto
  - o que tenho que fazer pra aprovar meu projeto
  - que passos tenho que fazer durante a criação do projeto
  - o que eu tenho que fazer pra ser aprovado na lei rouanet
@@ -370,7 +387,7 @@
  - valor maximo de proposta
  - quantidade maxima de projetos
  - quantidade maxima de propostas
- - total de projetos em meu nome 
+ - total de projetos em meu nome
  - Quantos projetos o proponente pode inscrever
  - valor maximo por ano
  - quantidade maxima
@@ -410,7 +427,7 @@
  - sou uma pessoa juridica
  - sou empresario individual
  - empresario individual
- - empresa individual de responsabilidade limitada 
+ - empresa individual de responsabilidade limitada
  - EIRELI
  - segunda opção
  - segundo tópico
