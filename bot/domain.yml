@@ -198,6 +198,8 @@ templates:
     - text: |
           A situação do seu processo é a seguinte:
 
+    - text: |
+          Dá uma olhada e vê se a situação do seu processo é essa:
 
   utter_processo_situacao_processo_A12:
     - text: |
