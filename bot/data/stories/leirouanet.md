@@ -96,18 +96,54 @@
     - utter_lei_rouanet_quem_pode_ser_proponente
     - utter_manter_conversa
 
-
 ## LeiRouanet 14
 * lei_rouanet_etapas_aprovacao_projeto
     - utter_lei_rouanet_etapas_aprovacao_projeto
+* lei_rouanet_apresentacao_de_proposta
+    - utter_lei_rouanet_apresentacao_de_proposta
     - utter_manter_conversa
 
 ## LeiRouanet 15
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+* lei_rouanet_analise_de_admissibilidade
+    - utter_lei_rouanet_analise_de_admissibilidade
+    - utter_manter_conversa
+
+## LeiRouanet 16
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+* lei_rouanet_analise_de_admissibilidade
+    - utter_lei_rouanet_analise_de_admissibilidade
+    - utter_manter_conversa
+
+## LeiRouanet 17
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+* lei_rouanet_analise_tecnica
+    - utter_lei_rouanet_analise_tecnica
+    - utter_manter_conversa
+
+## LeiRouanet 18
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+* lei_rouanet_analise_pela_cnic
+    - utter_lei_rouanet_analise_pela_cnic
+    - utter_manter_conversa
+
+## LeiRouanet 19
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+* lei_rouanet_decisao_final
+    - utter_lei_rouanet_decisao_final
+    - utter_manter_conversa
+
+## LeiRouanet 20
 * lei_rouanet_valores_pagamento_caches
     - utter_lei_rouanet_valores_pagamento_caches
     - utter_manter_conversa
 
-## LeiRouanet 16
+## LeiRouanet 21
 * cumprimentar
     - utter_cumprimentar
     - utter_menu
@@ -119,7 +155,7 @@
     - utter_lei_rouanet_valor_maximo_regiao
     - utter_manter_conversa
  
-## LeiRouanet 17
+## LeiRouanet 22
 * cumprimentar
     - utter_cumprimentar
     - utter_menu
@@ -131,7 +167,7 @@
     - utter_lei_rouanet_valor_maximo_regiao
     - utter_manter_conversa
 
-## LeiRouanet 18
+## LeiRouanet 23
 * cumprimentar
     - utter_cumprimentar
     - utter_menu
@@ -144,12 +180,12 @@
     - utter_lei_rouanet_valor_maximo_regiao
     - utter_manter_conversa
 
-## LeiRouanet 19
+## LeiRouanet 24
 * lei_rouanet_remuneracao_proponente
     - utter_lei_rouanet_remuneracao_proponente
     - utter_manter_conversa
 
-## LeiRouanet 20
+## LeiRouanet 25
 * cumprimentar
     - utter_cumprimentar
     - utter_menu
