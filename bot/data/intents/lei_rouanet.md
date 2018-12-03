@@ -476,5 +476,5 @@
 - promover o acesso cultural
 - promover acesso à cultura
 - formação de plateia
-- acesso cultural
+- democratizacao
 - plateia
