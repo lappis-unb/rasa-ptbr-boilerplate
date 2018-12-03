@@ -9,8 +9,6 @@ services:
     restart: unless-stopped
     environment:
       - TRAINING_EPOCHS=10
-    ports:
-      - 5005:5005
     volumes:
       - ../bot:/bot
       - ../scripts:/scripts
