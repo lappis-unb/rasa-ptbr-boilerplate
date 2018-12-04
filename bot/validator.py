@@ -7,6 +7,8 @@ from os.path import isfile, join
 from rasa_core import utils
 import traceback
 
+logger = logging.getLogger('Validator') 
+
 class Validator:
     domain = ''
     intents = []
@@ -47,9 +49,9 @@ class Validator:
         file.close()
         try:
             validate(yaml.load(domain_file), yaml.load(schema))
-            logging.info('Domain verified')
+            logger.info('Domain verified')
         except Exception as e:
-            logging.error('There is an error in ' + self.domain + ' ' + str(e))
+            logger.error('There is an error in ' + self.domain + ' ' + str(e))
 
 
     def search(self, vector,searched_value):
@@ -95,7 +97,7 @@ class Validator:
         for intent in intents_in_domain:
             found = self.search(intents_in_files, intent)
             if not found:
-                logging.error('Intent ' + intent + ' is in the domain file but was'+
+                logger.error('Intent ' + intent + ' is in the domain file but was'+
                           ' not found in the intent files')
             else:
                 self.valid_intents.append(intent)
@@ -103,7 +105,7 @@ class Validator:
         for intent in intents_in_files:
             found = self.search(intents_in_domain, intent)
             if not found:
-                logging.error('Intent ' + intent + ' is in the intent files but was'+
+                logger.error('Intent ' + intent + ' is in the intent files but was'+
                              ' not found in the domain file')
             else:
                 self.valid_intents.append(intent)
@@ -127,7 +129,7 @@ class Validator:
                 
                     found = self.search(self.valid_intents, intent)
                     if not found:
-                        logging.error('The intent '+ intent +' is used in the stories'+
+                        logger.error('The intent '+ intent +' is used in the stories'+
                                      ' file '+ file + ' (line: '+
                                      str(stories_lines.index(line)+1) +
                                      ') but it\'s not a valid intent.')
@@ -153,7 +155,7 @@ class Validator:
         for intent in self.valid_intents:
             found = self.search(stories_intents, intent)
             if not found:
-                logging.warning('The intent ' + intent + ' is not being used in any story')
+                logger.warning('The intent ' + intent + ' is not being used in any story')
 
     def run_verifications(self):
         self.verify_domain()
