@@ -109,6 +109,10 @@ class Validator:
                 self.valid_intents.append(intent)
 
     def verify_intents_in_stories(self):
+        if self.valid_intents == []:
+            self.verify_intents() 
+        
+
         for file in self.stories:
             f = open(file, 'r')
             stories_lines = f.readlines()
@@ -128,8 +132,32 @@ class Validator:
                                      str(stories_lines.index(line)+1) +
                                      ') but it\'s not a valid intent.')
 
+    def verify_intents_being_used(self):
+        if self.valid_intents == []:
+            self.verify_intents() 
+        
+        stories_intents = []
+        for file in self.stories:
+            f = open(file, 'r')
+            stories_lines = f.readlines()
+            f.close()
+
+            for line in stories_lines:
+                s_line = line.split()
+                if len(s_line) == 2 and s_line[0] == '*':
+                    intent = s_line[1]
+                    if '{' in intent:
+                        intent = intent[:intent.find('{')]
+                    stories_intents.append(intent)
+
+        for intent in self.valid_intents:
+            found = self.search(stories_intents, intent)
+            if not found:
+                logging.warning('The intent ' + intent + ' is not being used in any story')
+
     def run_verifications(self):
         self.verify_domain()
         self.verify_intents()
         self.verify_intents_in_stories()
+        self.verify_intents_being_used()
 
