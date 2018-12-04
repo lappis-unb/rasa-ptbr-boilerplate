@@ -6,8 +6,40 @@ from os import listdir
 from os.path import isfile, join
 from rasa_core import utils
 import traceback
+import argparse
 
-logger = logging.getLogger('Validator') 
+logger = logging.getLogger(__name__) 
+
+parser = argparse.ArgumentParser()
+
+def str2bool(v):
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+
+parser.add_argument(
+    '--domain', type=str, default='domain.yml',
+    help='Path for the domain file'
+) 
+
+parser.add_argument(
+    '--stories', type=str, default='data/stories.md',
+    help='Path for the stories file or directory'
+) 
+
+parser.add_argument(
+    '--intents', type=str, default='data/intents.md',
+    help='Path for the intents file or directory'
+)
+
+
+parser.add_argument(
+    '--warnings', '-w', type=str2bool, default=True,
+    help='Warings flag'
+) 
 
 class Validator:
     domain = ''
@@ -163,3 +195,21 @@ class Validator:
         self.verify_intents_in_stories()
         self.verify_intents_being_used()
 
+if __name__ == '__main__':
+    domain = parser.parse_args().domain
+    stories = parser.parse_args().stories
+    intents = parser.parse_args().intents
+    warning = parser.parse_args().warnings
+
+    validator = Validator(domain, intents, stories)
+    validator.verify_domain()
+    validator.verify_intents()
+    validator.verify_intents_in_stories()
+    
+    print(warning)
+
+    if warning:
+        validator.verify_intents_being_used()
+
+
+    
