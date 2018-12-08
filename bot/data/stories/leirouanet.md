@@ -156,3 +156,11 @@
 * lei_rouanet_remuneracao_proponente
     - utter_lei_rouanet_remuneracao_proponente
     - utter_manter_conversa
+
+## LeiRouanet 21
+* cumprimentar
+    - utter_cumprimentar
+    - utter_menu
+* lei_rouanet_democratizacao
+    - utter_lei_rouanet_democratizacao
+    - utter_manter_conversa

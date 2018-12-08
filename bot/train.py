@@ -9,6 +9,8 @@ from rasa_core.policies.memoization import MemoizationPolicy, AugmentedMemoizati
 from rasa_core.policies.fallback import FallbackPolicy
 from fallback import CustomFallbackPolicy
 
+from validator import Validator
+
 logger = logging.getLogger(__name__)
 NLU_THRESHOLD = float(os.getenv('NLU_THRESHOLD', 0.6))
 
@@ -58,6 +60,7 @@ def train_dialogue(domain_file, model_path, training_folder):
                                 validation_split=VALIDATION_SPLIT)
     agent.persist(model_path)
 
-
 if __name__ == "__main__":
+    validate = Validator('domain.yml','data/intents', 'data/stories/' )
+    validate.run_verifications()
     train_dialogue('domain.yml', 'models/dialogue', 'data/stories/')
