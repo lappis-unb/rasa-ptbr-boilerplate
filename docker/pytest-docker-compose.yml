@@ -12,7 +12,8 @@ services:
     volumes:
       - ../bot:/bot
       - ../scripts:/scripts
-    command: "make run-test"
+      - ./run_bot_test_container.sh:/tmp/run_bot_test_container.sh
+    command: "bash /tmp/run_bot_test_container.sh"
 
 
   # =============================== Pytest ====================================
@@ -21,7 +22,7 @@ services:
       context: ../
       dockerfile: ./docker/pytest.Dockerfile
     volumes:
-      - ../bot/test:/test/
+      - ../test:/test/
       - ./run_test.sh:/tmp/run_test.sh
     depends_on:
       - bot
