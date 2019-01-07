@@ -1,5 +1,8 @@
 import requests
+import logging
 import simplejson as json
+
+logger = logging.getLogger(__name__)
 
 """
 The result of the function get_tracker_data() is a list of dictionaries,
@@ -32,7 +35,7 @@ def get_tracker_data():
             if event != {}:
                 event_tracker.append(event)
     except ValueError:
-        print("Error while genting data from RASA API!!")
+        logger.exception("Error while genting data from RASA API!!")
 
     return event_tracker
 
@@ -43,7 +46,7 @@ def send_message(message):
         PARAMS = {'query':message}
         request = requests.get(url = URL, params = PARAMS)
     except ConnectionError:
-        print(ConnectionError)
+        logger.exception(ConnectionError)
     return request.json()
 
 def send_multiple_messages(messages):
@@ -52,5 +55,5 @@ def send_multiple_messages(messages):
 
 def start(messages):
     send_multiple_messages(messages)
-    print(get_tracker_data())
+    logger.exception(get_tracker_data())
     return get_tracker_data()

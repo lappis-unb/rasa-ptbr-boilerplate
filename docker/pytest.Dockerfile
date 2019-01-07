@@ -10,6 +10,8 @@ run pip install --no-cache-dir -r /tmp/pytest.requirements.txt
 
 add ./test /test
 
+add ./docker/run_test.sh /tmp/run_test.sh
+
 workdir /test
 
-cmd pytest test.py
+cmd /tmp/run_test.sh

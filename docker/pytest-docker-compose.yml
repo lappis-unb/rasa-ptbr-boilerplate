@@ -23,7 +23,6 @@ services:
       dockerfile: ./docker/pytest.Dockerfile
     volumes:
       - ../test:/test/
-      - ./run_test.sh:/tmp/run_test.sh
     depends_on:
       - bot
     command: "bash /tmp/run_test.sh"
