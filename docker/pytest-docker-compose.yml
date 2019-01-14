@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  # ================================= Bot =====================================
+  bot:
+    build:
+      context: ../
+      dockerfile: ./docker/bot.Dockerfile
+    restart: unless-stopped
+    environment:
+      - TRAINING_EPOCHS=10
+    volumes:
+      - ../bot:/bot
+      - ../scripts:/scripts
+      - ./run_bot_test_container.sh:/tmp/run_bot_test_container.sh
+    command: "bash /tmp/run_bot_test_container.sh"
+
+
+  # =============================== Pytest ====================================
+  pytest:
+    build:
+      context: ../
+      dockerfile: ./docker/pytest.Dockerfile
+    volumes:
+      - ../test:/test/
+    depends_on:
+      - bot
+    command: "bash /tmp/run_test.sh"

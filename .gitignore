@@ -8,6 +8,8 @@ notebooks/models/
 notebooks/errors.json
 notebooks/lab/
 notebooks/evaluate-intents.ipynb
+notebooks/stories/failed_stories.md
+notebooks/stories/matrix.pdf
 bot/.ipython/
 bot/.keras/
 bot/.local/
