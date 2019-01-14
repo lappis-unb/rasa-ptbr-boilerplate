@@ -217,6 +217,14 @@ templates:
           Quando o proponente solicita arquivamento do projeto.
           Para saber mais você pode consultar a Instrução Normativa 05/2017
 
+  utter_processo_situacao_processo_A14:
+    - text: |
+          A situação A14 acontece durante a fase de Admissibilidade. 
+          E significa: indeferido – não enquadramento nos objetivos e fins da Lei 8313/91 ou do Decreto 5761/06
+          E quando o MinC utiliza ele? 
+          Quando o projeto não se enquadra nos objetivos e fins do Art. 1º da Lei 8313/1991
+          Para saber mais você pode consultar a Lei 8.313/1991, Art. 1º Instrução Normativa 05/2017, Art. 23
+
   utter_processo_situacao_processo_A16:
     - text: |
           A situação A16 acontece durante a fase de Aprovação.
