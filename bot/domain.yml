@@ -1212,7 +1212,7 @@ templates:
 
   utter_cumprimentar:
     - text: |
-          Oi, sou assistente virtual da Secretaria do Estado da Cultura, me chamo Tais.
+          Oi, sou assistente virtual da Secretaria do Especial da Cultura, me chamo Tais.
           Estou aqui para te guiar na inscrição do seu projeto ou esclarecer algumas dúvidas sobre a lei Rouanet,
           Para saber de quais assuntos podemos conversar. Use e abuse da #MEAJUDA.
 
@@ -1242,14 +1242,16 @@ templates:
           Se a sua dúvida foi sobre algum desses conceitos, talvez você queira saber mais sobre outras definições.
           Eu consigo explicar o que é MinC, Salic, Cnic, Sefic, Vinculadas, meu nome (Tais) e quem sou eu.
           Se você tiver alguma dúvida sobre outra sigla, fique a vontade para perguntar a qualquer momento.
-
-  utter_manter_conversa:
+  
+  utter_manter_conversa1:
     - text: |
           A minha missão é te guiar para a inscrição da sua proposta,
           Se você já sabe como submeter uma proposta e já fez seu cadastro no salic,
           é porque você já tem dúvidas avançadas que talvez eu não consiga sanar as suas dúvidas.
           Se você quiser podemos continuar conversando sobre alguns conceitos básicos da lei Rouanet (:
-
+  utter_manter_conversa2:
+    - text: |
+          
   utter_despedir:
     - text: |
           Foi um prazer te ajudar!
