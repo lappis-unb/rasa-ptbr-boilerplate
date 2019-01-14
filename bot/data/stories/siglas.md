@@ -302,7 +302,7 @@
 * cumprimentar
     - utter_cumprimentar
 * quem_eh_a_tais
-    - utter_definicao_quem_eh_a_tais
+    - utter_quem_eh_a_tais
     - utter_objetivo_siglas
     - utter_objetivo
 * afirmar
@@ -312,7 +312,7 @@
 * cumprimentar
     - utter_cumprimentar
 * quem_eh_a_tais
-    - utter_definicao_quem_eh_a_tais
+    - utter_quem_eh_a_tais
     - utter_objetivo_siglas
     - utter_objetivo
 * negar
@@ -326,7 +326,7 @@
 * cumprimentar
     - utter_cumprimentar
 * quem_eh_a_tais
-    - utter_definicao_quem_eh_a_tais
+    - utter_quem_eh_a_tais
     - utter_objetivo_siglas
     - utter_objetivo
 * negar
@@ -341,7 +341,7 @@
 * cumprimentar
     - utter_cumprimentar
 * quem_eh_a_tais
-    - utter_definicao_quem_eh_a_tais
+    - utter_quem_eh_a_tais
     - utter_objetivo_siglas
     - utter_objetivo
 * negar
