@@ -662,13 +662,6 @@ templates:
           E quando o MinC utiliza ele? Situação automática: criada para que os projetos, cujos proponentes não apresentaram a prestação de contas final depois de terem sido notificados, sejam encaminhados para TCE.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 48, §1º
 
-  utter_processo_situacao_processo_E81:
-    - text: |
-          A situação E90 acontece durante a liberação do projeto para adequação à realidade de execução.
-          E quando o MinC utiliza ela?
-          Após a captação mínima de 10% do valor autorizado a captar.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, arts.26
-
   utter_processo_situacao_processo_L03:
     - text: |
           A situação L03 acontece durante a fase de Avaliação financeira.
