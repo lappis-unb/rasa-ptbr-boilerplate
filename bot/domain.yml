@@ -1360,7 +1360,7 @@ actions:
   - utter_despedir
   - utter_menu
   - utter_tudo_bem
-  - utter_manter_conversa1
+  - utter_manter_conversa
   - utter_continuar_conversa
   - utter_objetivo
   - utter_retorno
