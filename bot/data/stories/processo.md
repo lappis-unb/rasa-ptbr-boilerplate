@@ -401,7 +401,6 @@
 
 ## Processo_situacao_E10
   * processo_situacao_processo{"situacao_processo": "E10"}
-      - utter_processo_situacao
       - utter_processo_situacao_processo_E10
       - utter_manter_conversa
 
