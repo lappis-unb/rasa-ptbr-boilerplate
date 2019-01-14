@@ -7,8 +7,6 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 1.1
 * cumprimentar
@@ -23,8 +21,6 @@
     - utter_cadastro_salic_video
 * negar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 1.2
 * cumprimentar
@@ -40,8 +36,6 @@
 * afirmar
    - utter_salic_cadastro_usuario
    - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 1.3
 * cumprimentar
@@ -54,8 +48,6 @@
     - utter_processo_como_funciona
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 2
 * cumprimentar
@@ -66,8 +58,6 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 2.1
 * cumprimentar
@@ -82,8 +72,6 @@
     - utter_cadastro_salic_video
 * negar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 2.2
 * cumprimentar
@@ -97,10 +85,8 @@
 * negar
     - utter_cadastro_salic_video
 * afirmar
-    - utter_salic_cadastro_usuario
-    - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
+   - utter_salic_cadastro_usuario
+   - utter_manter_conversa
 
 ## sigla 2.3
 * cumprimentar
@@ -113,8 +99,6 @@
     - utter_processo_como_funciona
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 
 ## sigla 3
@@ -126,8 +110,6 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 3.1
 * cumprimentar
@@ -142,8 +124,6 @@
     - utter_cadastro_salic_video
 * negar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 3.2
 * cumprimentar
@@ -159,8 +139,6 @@
 * afirmar
    - utter_salic_cadastro_usuario
    - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 3.3
 * cumprimentar
@@ -173,8 +151,6 @@
     - utter_processo_como_funciona
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 4
 * cumprimentar
@@ -185,8 +161,6 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 4.1
 * cumprimentar
@@ -201,8 +175,6 @@
     - utter_cadastro_salic_video
 * negar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 4.2
 * cumprimentar
@@ -211,8 +183,6 @@
     - utter_definicao_minc
     - utter_objetivo_siglas
     - utter_objetivo
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 4.3
 * cumprimentar
@@ -225,8 +195,6 @@
     - utter_processo_como_funciona
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 5
 * cumprimentar
@@ -251,8 +219,6 @@
     - utter_cadastro_salic_video
 * negar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 5.2
 * cumprimentar
@@ -268,8 +234,6 @@
 * afirmar
    - utter_salic_cadastro_usuario
    - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 5.3
 * cumprimentar
@@ -282,8 +246,6 @@
     - utter_processo_como_funciona
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 6
 * cumprimentar
@@ -294,8 +256,6 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 6.1
 * cumprimentar
@@ -310,8 +270,6 @@
     - utter_cadastro_salic_video
 * negar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 6.2
 * cumprimentar
@@ -327,8 +285,6 @@
 * afirmar
    - utter_salic_cadastro_usuario
    - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 6.3
 * cumprimentar
@@ -341,8 +297,6 @@
     - utter_processo_como_funciona
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 7
 * cumprimentar
@@ -353,8 +307,6 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 7.1
 * cumprimentar
@@ -369,8 +321,6 @@
     - utter_cadastro_salic_video
 * negar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 7.2
 * cumprimentar
@@ -386,8 +336,6 @@
 * afirmar
    - utter_salic_cadastro_usuario
    - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
 
 ## sigla 7.3
 * cumprimentar
@@ -400,5 +348,3 @@
     - utter_processo_como_funciona
 * afirmar
     - utter_manter_conversa
-* definicao_proponente
-    - utter_continuar_conversa
