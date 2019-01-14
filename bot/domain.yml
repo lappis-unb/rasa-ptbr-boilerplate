@@ -841,6 +841,7 @@ templates:
           A prestação de contas é analisada pela área responsável do Ministério.
 
           O primeiro passo para você participar deste processo é ter cadastro no SALIC
+          Você já tem um cadastro no SALIC?
 
   utter_cadastro_salic_video:
     - text: |
@@ -1210,8 +1211,9 @@ templates:
 
   utter_cumprimentar:
     - text: |
-          Oi, sou assistente virtual do MinC, me chamo Tais.
-          Estou aqui para te ajudar a esclarecer dúvidas sobre a lei de Incentivo à Cultura, conhecida como lei Rouanet.
+          Oi, sou assistente virtual da Secretaria do Estado da Cultura, me chamo Tais.
+          Estou aqui para te guiar na inscrição do seu projeto ou esclarecer algumas dúvidas sobre a lei Rouanet,
+          Para saber de quais assuntos podemos conversar. Use e abuse da #MEAJUDA.
 
   utter_o_que_sei_falar:
     - text: |
@@ -1229,26 +1231,50 @@ templates:
           Obrigada pelo feedback. Espero que na próxima vez vou conseguir responder a tua pergunta corretamente
           Gostaria de fazer uma nova pergunta?
 
+  utter_objetivo:
+    - text: |
+          Mas, me conta aí, você já preencheu uma proposta?
+
+  utter_objetivo_siglas:
+    - text: |
+          Se você chegou até aqui é porque perguntou alguma definição das que estão abaixo,
+          Eu consigo explicar o que é MinC, Salic, Cnic, Sefic, Vinculadas, meu nome (Tais), e quem sou eu.
+          Se você tiver alguma dúvida sobre outra sigla, fique a vontade para perguntar a qualquer momento.
+
   utter_manter_conversa:
     - text: |
+          Eu adoro te guiar para a inscrição da sua proposta e tirar dúvidas sobre as etapas de submissão de proposta,
+          fora isso podemos conversar sobre algumas definições da lei Rouanet.
           Espero estar te ajudando, você possui mais alguma pergunta?
 
     - text: |
+          Eu adoro te guiar para a inscrição da sua proposta e tirar dúvidas sobre as etapas de submissão de proposta,
+          fora isso podemos conversar sobre algumas definições da lei Rouanet.
           Em que mais posso te ajudar?
 
     - text: |
+          Eu adoro te guiar para a inscrição da sua proposta e tirar dúvidas sobre as etapas de submissão de proposta,
+          fora isso podemos conversar sobre algumas definições da lei Rouanet.
           Você tem mais alguma dúvida?
 
     - text: |
+          Eu adoro te guiar para a inscrição da sua proposta e tirar dúvidas sobre as etapas de submissão de proposta,
+          fora isso podemos conversar sobre algumas definições da lei Rouanet.
           Qual o próximo tema te interessa?
 
     - text: |
+          Eu adoro te guiar para a inscrição da sua proposta e tirar dúvidas sobre as etapas de submissão de proposta,
+          fora isso podemos conversar sobre algumas definições da lei Rouanet.
           O que mais você deseja saber?
 
     - text: |
+          Eu adoro te guiar para a inscrição da sua proposta e tirar dúvidas sobre as etapas de submissão de proposta,
+          fora isso podemos conversar sobre algumas definições da lei Rouanet.
           Gostaria te retirar mais alguma dúvida?
 
     - text: |
+          Eu adoro te guiar para a inscrição da sua proposta e tirar dúvidas sobre as etapas de submissão de proposta,
+          fora isso podemos conversar sobre algumas definições da lei Rouanet.
           Espero ter solucionado a sua dúvida, tem mais alguma dúvida?
 
   utter_despedir:
@@ -1344,6 +1370,7 @@ actions:
   - utter_menu
   - utter_tudo_bem
   - utter_manter_conversa
+  - utter_objetivo
   - utter_retorno
   - utter_o_que_sei_falar
   - utter_erro_resposta_utter
@@ -1365,6 +1392,7 @@ actions:
   - utter_definicao_proponente
   - utter_definicao_salic
   - utter_definicao_vinculada
+  - utter_objetivo_siglas
 
   - utter_lei_rouanet_o_que_eh
   - utter_lei_rouanet_quantidade_de_projetos
@@ -1384,7 +1412,7 @@ actions:
   - utter_lei_rouanet_promocao_de_marca
   - utter_lei_rouanet_valores_pagamento_caches
   - utter_lei_rouanet_etapas_aprovacao_projeto
-  - utter_lei_rouanet_apresentacao_de_proposta
+s  - utter_lei_rouanet_apresentacao_de_proposta
   - utter_lei_rouanet_analise_de_admissibilidade
   - utter_lei_rouanet_analise_tecnica
   - utter_lei_rouanet_analise_pela_cnic
