@@ -192,3 +192,167 @@
     - utter_lei_rouanet_quantidade_de_projetos
     - utter_continuar_conversa
 
+## LeiRouanet 18
+* definicao_proposta
+    - utter_definicao_proposta
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* definicao_proponente
+    - utter_definicao_proponente
+    - utter_continuar_conversa
+
+## LeiRouanet 19
+* definicao_proposta
+    - utter_definicao_proposta
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_quem_pode_ser_proponente
+    - utter_lei_rouanet_quem_pode_ser_proponente
+    - utter_continuar_conversa
+
+## LeiRouanet 20
+* definicao_proposta
+    - utter_definicao_proposta
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* utter_lei_rouanet_denuncia
+    - utter_lei_rouanet_denuncia
+    - utter_continuar_conversa
+
+## LeiRouanet 21
+* definicao_proposta
+    - utter_definicao_proposta
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_quem_pode_incentivar
+    - utter_lei_rouanet_quem_pode_incentivar
+    - utter_continuar_conversa
+
+## LeiRouanet 22
+* definicao_proposta
+    - utter_definicao_proposta
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+*lei_rouanet_quantidade_de_projetos
+    - utter_lei_rouanet_quantidade_de_projetos
+    - utter_continuar_conversa
+
+## LeiRouanet 23
+* definicao_projeto
+    - utter_definicao_projeto
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_quem_pode_ser_proponente
+    - utter_lei_rouanet_quem_pode_ser_proponente
+    - utter_continuar_conversa
+
+## LeiRouanet 24
+* definicao_projeto
+    - utter_definicao_projeto
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* utter_lei_rouanet_denuncia
+    - utter_lei_rouanet_denuncia
+    - utter_continuar_conversa
+
+## LeiRouanet 25
+* definicao_projeto
+    - utter_definicao_projeto
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_quem_pode_incentivar
+    - utter_lei_rouanet_quem_pode_incentivar
+    - utter_continuar_conversa
+
+## LeiRouanet 26
+* definicao_projeto
+    - utter_definicao_projeto
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+*lei_rouanet_quantidade_de_projetos
+    - utter_lei_rouanet_quantidade_de_projetos
+    - utter_continuar_conversa
+
+## LeiRouanet 27
+* lei_rouanet_quem_pode_ser_proponente
+    - utter_lei_rouanet_quem_pode_ser_proponente
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* utter_lei_rouanet_denuncia
+    - utter_lei_rouanet_denuncia
+    - utter_continuar_conversa
+
+## LeiRouanet 28
+* lei_rouanet_quem_pode_ser_proponente
+    - utter_lei_rouanet_quem_pode_ser_proponente
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_quem_pode_incentivar
+    - utter_lei_rouanet_quem_pode_incentivar
+    - utter_continuar_conversa
+
+## LeiRouanet 29
+* lei_rouanet_quem_pode_ser_proponente
+    - utter_lei_rouanet_quem_pode_ser_proponente
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+*lei_rouanet_quantidade_de_projetos
+    - utter_lei_rouanet_quantidade_de_projetos
+    - utter_continuar_conversa
+
+## LeiRouanet 30
+* lei_rouanet_denuncia
+    - utter_lei_rouanet_denuncia
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_quem_pode_incentivar
+    - utter_lei_rouanet_quem_pode_incentivar
+    - utter_continuar_conversa
+
+## LeiRouanet 31
+* lei_rouanet_denuncia
+    - utter_lei_rouanet_denuncia
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+*lei_rouanet_quantidade_de_projetos
+    - utter_lei_rouanet_quantidade_de_projetos
+    - utter_continuar_conversa
+
+## LeiRouanet 32
+* lei_rouanet_quem_pode_incentivar
+    - utter_lei_rouanet_quem_pode_incentivar
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+*lei_rouanet_quantidade_de_projetos
+    - utter_lei_rouanet_quantidade_de_projetos
+    - utter_continuar_conversa
