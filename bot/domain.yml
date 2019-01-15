@@ -1247,7 +1247,7 @@ templates:
     - text: |
           A minha missão é te guiar para a inscrição da sua proposta,
           Se você já sabe como submeter uma proposta e já fez seu cadastro no salic,
-          é porque você já tem dúvidas avançadas que talvez eu não consiga sanar as suas dúvidas.
+          é porque você já tem um conhecimento avançado e talvez eu não consiga sanar as suas dúvidas.
           Se você quiser podemos continuar conversando sobre alguns conceitos básicos da lei Rouanet (:
 
   utter_continuar_conversa:
