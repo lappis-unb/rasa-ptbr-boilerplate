@@ -356,3 +356,73 @@
 *lei_rouanet_quantidade_de_projetos
     - utter_lei_rouanet_quantidade_de_projetos
     - utter_continuar_conversa
+
+## LeiRouanet 33
+* lei_rouanet_o_que_eh
+    - utter_lei_rouanet_o_que_eh
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+    - utter_continuar_conversa
+* lei_rouanet_apresentacao_de_proposta
+    - utter_lei_rouanet_apresentacao_de_proposta
+    - utter_continuar_conversa
+
+## LeiRouanet 34
+* lei_rouanet_o_que_eh
+    - utter_lei_rouanet_o_que_eh
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+    - utter_continuar_conversa
+* lei_rouanet_analise_de_admissibilidade
+    - utter_lei_rouanet_analise_de_admissibilidade
+    - utter_continuar_conversa
+
+## LeiRouanet 35
+* lei_rouanet_o_que_eh
+    - utter_lei_rouanet_o_que_eh
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+    - utter_continuar_conversa
+* lei_rouanet_analise_tecnica
+    - utter_lei_rouanet_analise_tecnica
+    - utter_continuar_conversa
+
+## LeiRouanet 36
+* lei_rouanet_o_que_eh
+    - utter_lei_rouanet_o_que_eh
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+    - utter_continuar_conversa
+* lei_rouanet_analise_pela_cnic
+    - utter_lei_rouanet_analise_pela_cnic
+    - utter_continuar_conversa
+
+## LeiRouanet 37
+* lei_rouanet_o_que_eh
+    - utter_lei_rouanet_o_que_eh
+    - utter_objetivo_lei_rouanet
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+* lei_rouanet_etapas_aprovacao_projeto
+    - utter_lei_rouanet_etapas_aprovacao_projeto
+    - utter_continuar_conversa
+* lei_rouanet_decisao_final
+    - utter_lei_rouanet_decisao_final
+    - utter_continuar_conversa
