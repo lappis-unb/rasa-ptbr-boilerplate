@@ -762,7 +762,6 @@ templates:
     - text: |
         Por enquanto, só entendo perguntas completas. Então é melhor você me perguntar "como funciona a Lei Rouanet" ao invés de "Como funciona"
 
-  #TO DO
   utter_definicao:
     - text: |
           Sei conceituar sobre o que é o MinC, Salic, Sefic, proposta, projeto e proponente, assim como falar sobre mim.
@@ -1113,7 +1112,6 @@ templates:
           A agência bancária deve ser do banco do Brasil, deve conter 5
           dígitos, sem hifens, pontos ou letras
 
-  #TODO
   utter_salic_erros:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre eventuais erros do
@@ -1190,7 +1188,6 @@ templates:
           Basta você entrar no Salic...
           clicar em Administrativo > Cadastrar proponente e preencher todos os dados
 
-  #TODO
   utter_processo_prazo:
     - text: |
           Posso responder suas dúvidas a respeito de Datas
@@ -1242,7 +1239,20 @@ templates:
           Se a sua dúvida foi sobre algum desses conceitos, talvez você queira saber mais sobre outras definições.
           Eu consigo explicar o que é MinC, Salic, Cnic, Sefic, Vinculadas, meu nome (Tais) e quem sou eu.
           Se você tiver alguma dúvida sobre outra sigla, fique a vontade para perguntar a qualquer momento.
-  
+
+  utter_objetivo_money:
+    - text: |
+          Se a sua pergunta está relacionada sobre as finanças da lei Rouanet, talvez você queira aprofundar seu conhecimento sobre isso.
+          Eu posso te informar sobre benefícios de incentivar, origem do dinheiro, valor máximo de um projeto, bem como seu valor mínimo, remuneração do proponente, comercialização de ingressos, promoção de marca, pagamento de caches e dúvidas sobre captação.
+          Você pode me perguntar sobre esses tópicos quando desejar.
+
+  utter_objetivo_lei_rouanet:
+    - text: |
+          Se você perguntou sobre alguma definição ou curiosidade da lei Rouanet,
+          talvez você tenha interesse de continuar aprendendo sobre os seguintes tópicos:
+          o que é a lei, conceitos básicos como proposta, projeto e proponente.
+          Quem pode ser um proponente, como denunciar um projeto e as etapas de aprovação de um projeto.
+          A qualquer momento você pode tirar dúvidas sobre esses assuntos.
   utter_manter_conversa:
     - text: |
           A minha missão é te guiar para a inscrição da sua proposta,
@@ -1267,7 +1277,7 @@ templates:
           Espero ter solucionado a sua dúvida, tem mais alguma dúvida?
 
     - text: |
-          
+
   utter_despedir:
     - text: |
           Foi um prazer te ajudar!
@@ -1295,7 +1305,6 @@ templates:
 
           Assim que o projeto é publicado no Diário Oficial da União você pode
           começar a captar recursos.
-  #TODO
 
   utter_captacao_como_captar:
     - text: |
@@ -1303,7 +1312,6 @@ templates:
           começar a captar recursos.
 
           Esse é parte das atribuições do proponente e não há participação do MinC.
-  #TODO
 
   utter_processo_definicao_etapas:
     - text: |
@@ -1329,7 +1337,6 @@ templates:
   utter_tudo_bem:
     - text: |
           Tudo bem, obrigada! Em que posso te ajudar?
-  #TODO
 
   utter_salic:
     - text: |
@@ -1363,6 +1370,9 @@ actions:
   - utter_manter_conversa
   - utter_continuar_conversa
   - utter_objetivo
+  - utter_objetivo_siglas
+  - utter_objetivo_money
+  - utter_objetivo_lei_rouanet
   - utter_retorno
   - utter_o_que_sei_falar
   - utter_erro_resposta_utter
@@ -1384,7 +1394,6 @@ actions:
   - utter_definicao_proponente
   - utter_definicao_salic
   - utter_definicao_vinculada
-  - utter_objetivo_siglas
 
   - utter_lei_rouanet_o_que_eh
   - utter_lei_rouanet_quantidade_de_projetos
