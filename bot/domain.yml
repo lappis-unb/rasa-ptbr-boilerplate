@@ -1253,6 +1253,7 @@ templates:
           o que é a lei, conceitos básicos como proposta, projeto e proponente.
           Quem pode ser um proponente, como denunciar um projeto e as etapas de aprovação de um projeto.
           A qualquer momento você pode tirar dúvidas sobre esses assuntos.
+
   utter_manter_conversa:
     - text: |
           A minha missão é te guiar para a inscrição da sua proposta,
