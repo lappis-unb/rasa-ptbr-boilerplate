@@ -446,7 +446,6 @@
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
 * lei_rouanet_valor_maximo_pessoa_fisica
-    - utter_
     - utter_lei_rouanet_valor_minimo
     - utter_lei_rouanet_valor_maximo_pessoa_fisica
     - utter_lei_rouanet_valor_maximo_regiao
