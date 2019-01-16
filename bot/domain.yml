@@ -242,6 +242,21 @@ templates:
           Quando o proponente não atende a alguma diligência feita pela unidade vinculada ou CNIC.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69, § 3º
 
+  utter_processo_situacao_processo_A20:
+    - text: |
+          O estado A20 acontece durante a fase de Admissibilidade, 
+          E significa: indeferido – projeto em duplicidade
+          E quando o MinC utiliza ele?
+          Quando se constata que se trata de projeto idêntico a ser realizado no mesmo período
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 23, I, b)
+
+          utter_processo_situacao_processo_A23:
+    - text: |
+          O estado A23 acontece durante a fase de Admissibilidade, 
+          E significa: indeferido – somatório dos projetos apresentados excede o limite permitiddo para pessoa física
+          E quando o MinC utiliza ele? 
+          Quando o somatório dos projetos apresentados execede os limites trazidos no Art. 20 da Instrução Normativa MinC nº 1/2017
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 4
 
   utter_processo_situacao_processo_A42:
     - text: |
@@ -313,12 +328,28 @@ templates:
           É utilizado quando a unidade vinculada analisa o projeto e emite um parecer consolidado.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 27
 
+  utter_processo_situacao_processo_C26:
+    - text: |
+          O estado C26 acontece durante a fase de Aprovação, 
+          E significa: projeto incluído na pauta da CNIC para reanálise/análise complementar
+          E quando o MinC utiliza ele? 
+          Quando autoridade superior entende que algum item pode ser reavaliado ou quando constatado erro material
+          Para saber mais você pode consultar a STF, Súmula nº 346/1963 (autotutela)
+
   utter_processo_situacao_processo_C30:
     - text: |
           A situação C30 acontece quando o projeto é diligenciado pela CNIC durante o processo de apreciação.
           E quando o MinC utiliza ele?
           Quando há necessidade de informações adicionais para fins de apreciação do comissário da CNIC.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69
+
+  utter_processo_situacao_processo_D03:
+    - text: |
+          O estado D03 acontece durante a fase de Aprovação, 
+          E significa: projeto aprovado – aguardando análise documental
+          E quando o MinC utiliza ele? 
+          Após análise da CNIC.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 28
 
   utter_processo_situacao_processo_D12:
     - text: |
@@ -1438,6 +1469,7 @@ actions:
   - utter_processo_situacao_processo_A20
   - utter_processo_situacao_processo_A23
   - utter_processo_situacao_processo_B01
+  - utter_processo_situacao_processo_B04
   - utter_processo_situacao_processo_B14
   - utter_processo_situacao_processo_A13
   - utter_processo_situacao_processo_A16
@@ -1451,6 +1483,7 @@ actions:
   - utter_processo_situacao_processo_C26
   - utter_processo_situacao_processo_C30
   - utter_processo_situacao_processo_D03
+  - utter_processo_situacao_processo_D12
   - utter_processo_situacao_processo_D14
   - utter_processo_situacao_processo_D20
   - utter_processo_situacao_processo_D25
@@ -1493,6 +1526,9 @@ actions:
   - utter_processo_situacao_processo_E50
   - utter_processo_situacao_processo_L09
   - utter_processo_situacao_processo_D38
+  - utter_processo_situacao_processo_D50
+  - utter_processo_situacao_processo_D51
+  - utter_processo_situacao_processo_D52
   - utter_processo_situacao_processo_E22
   - utter_processo_situacao_processo_E73
   - utter_processo_situacao_processo_E78
@@ -1500,7 +1536,7 @@ actions:
   - utter_processo_situacao_processo_L06
 
   - utter_salic
-  - utter_passo_a_passo
+  - utter_introducao_passo_a_passo
   - utter_salic_preenchimento_cadastro_rubrica_advogado_contador
   - utter_salic_preenchimento
   - utter_salic_preenchimento_campo_custo_auditoria
