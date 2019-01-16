@@ -31,7 +31,6 @@
 - obrigada, tais
 - tais, obrigado
 
-
 ## intent:cumprimentar
 - ola tais, como vai
 - oi, tudo bem
@@ -63,7 +62,6 @@
 - Adorei
 - Me ajudou muito
 - vc eh linda
-
 
 ## intent:afirmar
 - se não for incomodo
@@ -109,7 +107,6 @@
 - ainda não sei
 - nenhum
 
-
 ## intent:diga_mais
 - como funciona
 - me diga mais
@@ -126,7 +123,6 @@
 - não sei
 - por onde solicitar
 - como ter acesso
-
 
 ## intent:o_que_sei_falar
 - #MEAJUDA
@@ -152,7 +148,6 @@
 - burra
 - tais burra
 
-
 ## intent:tudo_bem
 - Tudo bem
 - Oi Tais. Tudo bem
@@ -167,7 +162,6 @@
 - oi tais. como vai vc
 - ola tais. tudo bem
 -  como vai
-
 
 ## intent:quem_eh_a_tais
 - Quem te criou? 
@@ -197,7 +191,3 @@
 - Taís
 - vc é um humano
 - você eh um robo
-
-
-
-

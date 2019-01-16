@@ -22,7 +22,6 @@
 - Gostaria de saber curiosidades sobre a lei
 - como funciona a lei rounet?    
 
-
 ## synonym:lei_rouanet   <!-- synonyms, method 2 -->
 - lei rouanet
 - Lei Rouanet
@@ -38,7 +37,6 @@
 - lei rouane
 - lei rouanê
 - lei adnet
-
 
 ## intent:lei_rouanet_quem_pode_ser_proponente
 - quem pode se inscrever na lei rouanet
@@ -124,7 +122,6 @@
 - incentivador
 - patrocinador
 - vantagem
-
 
 ## intent:lei_rouanet_porcentagem_de_deducao_do_imposto
 - incentivadores de projetos podem deduzir quanto de impostos de renda
@@ -248,8 +245,6 @@
 - estimular
 - pais
 
-
-
 ## intent:lei_rouanet_remuneracao_proponente
 - o proponente autor do projeto é remunerado
 - ha limite para remuneração do proponente
@@ -274,8 +269,6 @@
 - ordenado
 - rendimento
 
-
-
 ## intent:lei_rouanet_comercializacao_de_ingressos
 - os ingressos podem ser comercializados
 - há um limite de preço a ser executado por produto realizado
@@ -298,7 +291,6 @@
 - qual o limite de valor das entradas
 - ingresso
 - ingressos
-
 
 ## intent:lei_rouanet_promocao_de_marca
 - é possível que o patrocinador faça a prospecção da sua marca em um projeto realizado com incentivo fiscal
@@ -325,7 +317,6 @@
 - patrocinador
 - divulgar marca
 
-
 ## intent:lei_rouanet_valores_pagamento_caches
  - quais os valores para pagamento de cachês em projetos realizados com incentivo fiscal
  - há limites nos valores de pagamentos de cachês
@@ -347,7 +338,6 @@
  - pagamento artista solo
  - cache orquestra
  - limite cache artista solo
-
 
  ## intent:lei_rouanet_etapas_aprovacao_projeto
  - quais as etapas de aprovação de um projeto
