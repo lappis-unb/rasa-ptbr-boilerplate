@@ -34,8 +34,8 @@
 * negar
     - utter_cadastro_salic_video
 * afirmar
-   - utter_salic_cadastro_usuario
-   - utter_manter_conversa
+    - utter_salic_cadastro_usuario
+    - utter_manter_conversa
 
 ## LeiRouanet 4
 * cumprimentar
