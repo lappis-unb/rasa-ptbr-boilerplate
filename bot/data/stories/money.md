@@ -59,6 +59,47 @@
 * afirmar
     - utter_manter_conversa
 
+## Money 2.1
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_origem_do_dinheiro
+    - utter_lei_rouanet_origem_do_dinheiro
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* negar
+    - utter_cadastro_salic_video
+* negar
+    - utter_manter_conversa
+
+## Money 2.2
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_origem_do_dinheiro
+    - utter_lei_rouanet_origem_do_dinheiro
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* negar
+    - utter_cadastro_salic_video
+* afirmar
+   - utter_salic_cadastro_usuario
+   - utter_manter_conversa
+
+## Money 2.3
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_origem_do_dinheiro
+    - utter_lei_rouanet_origem_do_dinheiro
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* afirmar
+    - utter_manter_conversa
+
 ## Money 3
 * cumprimentar
     - utter_cumprimentar
@@ -79,6 +120,57 @@
 * afirmar
     - utter_manter_conversa
 
+## Money 4
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_remuneracao_proponente
+    - utter_lei_rouanet_remuneracao_proponente
+    - utter_objetivo_money
+    - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+
+## Money 4.1
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_remuneracao_proponente
+    - utter_lei_rouanet_remuneracao_proponente
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* negar
+    - utter_cadastro_salic_video
+* negar
+    - utter_manter_conversa
+
+## Money 4.2
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_remuneracao_proponente
+    - utter_lei_rouanet_remuneracao_proponente
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* negar
+    - utter_cadastro_salic_video
+* afirmar
+   - utter_salic_cadastro_usuario
+   - utter_manter_conversa
+
+## Money 4.3
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_remuneracao_proponente
+    - utter_lei_rouanet_remuneracao_proponente
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* afirmar
+    - utter_manter_conversa
+
 ## Money 5
 * cumprimentar
     - utter_cumprimentar
@@ -86,6 +178,47 @@
     - utter_lei_rouanet_comercializacao_de_ingressos
     - utter_objetivo_money
     - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+
+## Money 5.1
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_comercializacao_de_ingressos
+    - utter_lei_rouanet_comercializacao_de_ingressos
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* negar
+    - utter_cadastro_salic_video
+* negar
+    - utter_manter_conversa
+
+## Money 5.2
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_comercializacao_de_ingressos
+    - utter_lei_rouanet_comercializacao_de_ingressos
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* negar
+    - utter_cadastro_salic_video
+* afirmar
+   - utter_salic_cadastro_usuario
+   - utter_manter_conversa
+
+## Money 5.3
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_comercializacao_de_ingressos
+    - utter_lei_rouanet_comercializacao_de_ingressos
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
 * afirmar
     - utter_manter_conversa
 
@@ -99,6 +232,47 @@
 * afirmar
     - utter_manter_conversa
 
+## Money 6.1
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_promocao_de_marca
+    - utter_lei_rouanet_promocao_de_marca
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* negar
+    - utter_cadastro_salic_video
+* negar
+    - utter_manter_conversa
+
+## Money 6.2
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_promocao_de_marca
+    - utter_lei_rouanet_promocao_de_marca
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* negar
+    - utter_cadastro_salic_video
+* afirmar
+   - utter_salic_cadastro_usuario
+   - utter_manter_conversa
+
+## Money 6.3
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_promocao_de_marca
+    - utter_lei_rouanet_promocao_de_marca
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* afirmar
+    - utter_manter_conversa
+
 ## Money 7
 * cumprimentar
     - utter_cumprimentar
@@ -106,6 +280,48 @@
     - utter_lei_rouanet_valores_pagamento_caches
     - utter_objetivo_money
     - utter_objetivo
+* afirmar
+    - utter_manter_conversa
+
+## Money 7
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_valores_pagamento_caches
+    - utter_lei_rouanet_valores_pagamento_caches
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* negar
+    - utter_cadastro_salic_video
+* negar
+    - utter_manter_conversa
+
+
+## Money 7
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_valores_pagamento_caches
+    - utter_lei_rouanet_valores_pagamento_caches
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
+* negar
+    - utter_cadastro_salic_video
+* afirmar
+   - utter_salic_cadastro_usuario
+   - utter_manter_conversa
+
+## Money 7
+* cumprimentar
+    - utter_cumprimentar
+* lei_rouanet_valores_pagamento_caches
+    - utter_lei_rouanet_valores_pagamento_caches
+    - utter_objetivo_money
+    - utter_objetivo
+* negar
+    - utter_processo_como_funciona
 * afirmar
     - utter_manter_conversa
 
