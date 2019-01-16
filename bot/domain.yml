@@ -1463,6 +1463,7 @@ actions:
   - utter_processo_execucao
   - utter_processo_analise_de_resultados
   - utter_processo_como_funciona
+  - utter_processoProcessoCaptacaoDeRecursos
   - utter_introducao_processo_situacao
   - utter_processo_situacao_processo_A12
   - utter_processo_situacao_processo_A14
@@ -1542,6 +1543,7 @@ actions:
   - utter_salic_preenchimento_campo_custo_auditoria
   - utter_salic_preenchimento_valor_ingresso
   - utter_salic_preenchimento_vinculo_cpf_proposta
+  - utter_preenchimentoVinculoDePropostas
   - utter_salic_preenchimento_cadastro_agencia_bancaria
   - utter_salic_erros
   - utter_salic_erros_planilha_desapareceu
