@@ -58,7 +58,7 @@
 - opa tudo bem
 - ola boa tarde
 
-#intent:elogios
+## intent:elogios
 - Tais, você é muito educada!
 - Adorei
 - Me ajudou muito
