@@ -1414,7 +1414,7 @@ actions:
   - utter_lei_rouanet_promocao_de_marca
   - utter_lei_rouanet_valores_pagamento_caches
   - utter_lei_rouanet_etapas_aprovacao_projeto
-s  - utter_lei_rouanet_apresentacao_de_proposta
+  - utter_lei_rouanet_apresentacao_de_proposta
   - utter_lei_rouanet_analise_de_admissibilidade
   - utter_lei_rouanet_analise_tecnica
   - utter_lei_rouanet_analise_pela_cnic
