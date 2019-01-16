@@ -18,7 +18,7 @@
 * negar
     - utter_processo_como_funciona
 * negar
-    - utter_cadastro_salic_vio
+    - utter_cadastro_salic_video
 * negar
     - utter_manter_conversa
 
@@ -34,8 +34,8 @@
 * negar
     - utter_cadastro_salic_video
 * afirmar
-   - utter_salic_cadastro_usuario
-   - utter_manter_conversa
+    - utter_salic_cadastro_usuario
+    - utter_manter_conversa
 
 ## Money 1.3
 * cumprimentar
@@ -85,8 +85,8 @@
 * negar
     - utter_cadastro_salic_video
 * afirmar
-   - utter_salic_cadastro_usuario
-   - utter_manter_conversa
+    - utter_salic_cadastro_usuario
+    - utter_manter_conversa
 
 ## Money 2.3
 * cumprimentar
@@ -374,7 +374,7 @@
 * cumprimentar
     - utter_cumprimentar
 * lei_rouanet_valor_maximo_projeto
-    - utter_valor_maximo_projeto
+    - utter_lei_rouanet_valor_maximo_projeto
 * lei_rouanet_valor_maximo_geral
     - utter_lei_rouanet_valor_minimo
     - utter_lei_rouanet_valor_maximo_pessoa_fisica

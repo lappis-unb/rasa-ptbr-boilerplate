@@ -34,8 +34,8 @@
 * negar
     - utter_cadastro_salic_video
 * afirmar
-   - utter_salic_cadastro_usuario
-   - utter_manter_conversa
+    - utter_salic_cadastro_usuario
+    - utter_manter_conversa
 
 ## sigla 1.3
 * cumprimentar
@@ -469,8 +469,8 @@
 * negar
     - utter_cadastro_salic_video
 * afirmar
-   - utter_salic_cadastro_usuario
-   - utter_manter_conversa
+    - utter_salic_cadastro_usuario
+    - utter_manter_conversa
 
 ## sigla 6.3
 * cumprimentar
@@ -520,8 +520,8 @@
 * negar
     - utter_cadastro_salic_video
 * afirmar
-   - utter_salic_cadastro_usuario
-   - utter_manter_conversa
+    - utter_salic_cadastro_usuario
+    - utter_manter_conversa
 
 ## sigla 7.3
 * cumprimentar
