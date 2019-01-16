@@ -40,6 +40,11 @@ intents:
   - lei_rouanet_promocao_de_marca
   - lei_rouanet_valores_pagamento_caches
   - lei_rouanet_etapas_aprovacao_projeto
+  - lei_rouanet_apresentacao_de_proposta
+  - lei_rouanet_analise_de_admissibilidade
+  - lei_rouanet_analise_tecnica
+  - lei_rouanet_analise_pela_cnic
+  - lei_rouanet_decisao_final
   - lei_rouanet_valor_maximo_projeto
   - lei_rouanet_valor_maximo_pessoa_fisica
   - lei_rouanet_valor_maximo_pessoa_juridica
@@ -160,12 +165,18 @@ templates:
         Você pode perguntar de novo de outro jeito?
 
     - text: |
-        Poxa, acho que ainda não sei isso... Se não consegui responder tua pergunta, 
+        Poxa, acho que ainda não sei isso... Se não consegui responder tua pergunta,
         entre no site da Rouanet (http://rouanet.cultura.gov.br/perguntas_frequentes_28_12/)
-         Mas se você perguntar de outra forma talvez eu consiga te responder 
-         
+        Mas se você perguntar de outra forma talvez eu consiga te responder
+
     - text: |
         Hummmm... Não sei se entendi. Pode escrever de outra forma?
+
+    - text: |
+        Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
+
+    - text: |
+        Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
 
   utter_restart:
     - text: |
@@ -177,393 +188,543 @@ templates:
           Estou ansiosa para tirar suas novas dúvidas sobre a Lei Rouanet!
           Como posso te ajudar?
 
+  utter_introducao_processo_situacao:
+    - text: |
+          Olha, eu pesquisei e descobri que a situação do seu processo é essa:
+
+    - text: |
+          Vamos lá, descobrir qual a situação do seu processo:
+
+    - text: |
+          A situação do seu processo é a seguinte:
+
+    - text: |
+          Dá uma olhada e vê se a situação do seu processo é essa:
+
   utter_processo_situacao_processo_A12:
     - text: |
-          O estado A12 acontece durante a fase de Admissibilidade, e significa aguardando complementação de documentos
-          E quando o MinC utiliza ele? Quando se solicita ao proponente documentação adicional
+          A situação A12 acontece durante a fase de Admissibilidade.
+          E significa: aguardando complementação de documentos.
+          E quando o MinC utiliza ele?
+          Quando se solicita ao proponente documentação adicional.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69.
+
+  utter_processo_situacao_processo_A13:
+    - text: |
+          A situação A13 acontece durante a fase de Aprovação.
+          E significa: arquivado – solicitação de desistência do proponente
+          E quando o MinC utiliza ele?
+          Quando o proponente solicita arquivamento do projeto.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017
 
   utter_processo_situacao_processo_A14:
     - text: |
-          O estado A14 acontece durante a fase de Admissibilidade, e significa indeferido – não enquadramento nos objetivos e fins da Lei 8313/91 ou do Decreto 5761/06
-          E quando o MinC utiliza ele? Quando o projeto não se enquadra nos objetivos e fins do Art. 1º da Lei 8313/1991
+          A situação A14 acontece durante a fase de Admissibilidade.
+          E significa: indeferido – não enquadramento nos objetivos e fins da Lei 8313/91 ou do Decreto 5761/06
+          E quando o MinC utiliza ele?
+          Quando o projeto não se enquadra nos objetivos e fins do Art. 1º da Lei 8313/1991
           Para saber mais você pode consultar a Lei 8.313/1991, Art. 1º Instrução Normativa 05/2017, Art. 23
 
-  utter_processo_situacao_processo_A20:
+  utter_processo_situacao_processo_A16:
     - text: |
-          O estado A20 acontece durante a fase de Admissibilidade, e significa indeferido – projeto em duplicidade
-          E quando o MinC utiliza ele? Quando se constata que se trata de projeto idêntico a ser realizado no mesmo período
+          A situação A16 acontece durante a fase de Aprovação.
+          E significa: indeferido – Projeto já realizado.
+          E quando o MinC utiliza ele?
+          Quando é constatado que o projeto foi executado antes da publicação de autorização de capitação.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 23, I, b)
 
-  utter_processo_situacao_processo_A23:
+
+  utter_processo_situacao_processo_A17:
     - text: |
-          O estado A23 acontece durante a fase de Admissibilidade, e significa indeferido – somatório dos projetos apresentados excede o limite permitiddo para pessoa física
-          E quando o MinC utiliza ele? Quando o somatório dos projetos apresentados execede os limites trazidos no Art. 20 da Instrução Normativa MinC nº 1/2017
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 4
+          A situação A17 acontece durante a fase de Aprovação.
+          E significa: indeferido – não atendimento à diligência.
+          E quando o MinC utiliza ele?
+          Quando o proponente não atende a alguma diligência feita pela unidade vinculada ou CNIC.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69, § 3º
+
+
+  utter_processo_situacao_processo_A42:
+    - text: |
+          A situação A42 acontece durante a fase de Aprovação.
+          E significa: projeto arquivado – não atendimento à diligência técnica.
+          E quando o MinC utiliza ele?
+          Quando o proponente não atende a alguma diligência feita Coordenação de aprovação.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69, § 3º
 
   utter_processo_situacao_processo_B01:
     - text: |
-          O estado B01 acontece durante a fase de Admissibilidade, e significa proposta transformada em projeto
-          E quando o MinC utiliza ele? Após o exame de admissibilidade
+          A situação B01 acontece durante a fase de Admissibilidade.
+          E significa: proposta transformada em projeto.
+          E quando o MinC utiliza ele?
+          Após o exame de admissibilidade.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 24 e 25
+
+  utter_processo_situacao_processo_B04:
+    - text: |
+          A situação B04 acontece durante a fase de admissibilidade.
+          E significa: aguardando análise documental.
+          E quando o MinC utiliza ela?
+          Quando já esta na fase final para publicação de autorização de captação.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 24 e 25
 
   utter_processo_situacao_processo_B14:
     - text: |
-          O estado B14 acontece durante a fase de Admissibilidade, e significa diligenciado – Parecer técnico
-          E quando o MinC utiliza ele? Quando da necessidade de informações adicionais para fins de análise técnica
+          A situação B14 acontece quando o projeto é diligenciado – Parecer técnico
+          E quando o MinC utiliza ela?
+          Quando da necessidade de informações adicionais para fins de análise técnica pela unidade vinculada.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69
-
-  utter_processo_situacao_processo_A13:
-    - text: |
-          O estado A13 acontece durante a fase de Aprovação, e significa arquivado – solicitação de desistência do proponente
-          E quando o MinC utiliza ele?
-          Para saber mais você pode consultar a Instrução Normativa 05/2017
-
-  utter_processo_situacao_processo_A16:
-    - text: |
-          O estado A16 acontece durante a fase de Aprovação, e significa indeferido – Projeto já realizado.
-          E quando o MinC utiliza ele?
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 23, I, b)
-
-  utter_processo_situacao_processo_A17:
-    - text: |
-          O estado A17 acontece durante a fase de Aprovação, e significa indeferido – não atendimento à diligência
-          E quando o MinC utiliza ele? Quando o proponente não atende a alguma diligência feita
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69, § 3º
-
-  utter_processo_situacao_processo_A42:
-    - text: |
-          O estado A42 acontece durante a fase de Aprovação, e significa projeto arquivado – não atendimento à diligência técnica
-          E quando o MinC utiliza ele? Quando o proponente não atende a alguma diligência feita
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69, § 3º
 
   utter_processo_situacao_processo_B11:
     - text: |
-          O estado B11 acontece durante a fase de Aprovação, e significa encaminhado para análise técnica
-          E quando o MinC utiliza ele? Situação em que o projeto é encaminhado para análise na vinculada.
+          A situação B11 acontece durante a fase de Aprovação.
+          E significa: encaminhado para análise técnica.
+          E quando o MinC utiliza ele?
+          Situação em que o projeto é encaminhado para análise na vinculada.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 26, §2º e Art. 27
 
   utter_processo_situacao_processo_B20:
     - text: |
-          O estado B20 acontece durante a fase de Aprovação, e significa projeto adequado à realidade de execução
-          E quando o MinC utiliza ele? Antes de ser encaminhado para análise técnica, o proponente tem a prerrogativa de promover ajustes, visando adequar o projeto à realidade da execução.
+          A situação B20 acontece durante a fase de Aprovação.
+          E significa: projeto adequado à realidade de execução.
+          E quando o MinC utiliza ele?
+          Quando o proponente devolve o projeto após superada a fase de adequação.
           Para saber mais você pode consultar a Instrução Normativa 05/201, Art. 26
 
   utter_processo_situacao_processo_C09:
     - text: |
-          O estado C09 acontece durante a fase de Aprovação, e significa projeto fora da pauta – Proponente Inabilitado
-          E quando o MinC utiliza ele? Quando o proponente encontra-se inabilitado, seus projetos em fase de aprovação, são tirados de pauta.
+          A situação C09 C09 acontece durante a fase de Aprovação.
+          E significa: projeto fora da pauta – Proponente Inabilitado.
+          E quando o MinC utiliza ele?
+          Quando o proponente encontra-se inabilitado, seus projetos em fase de aprovação são tirados de pauta.
           Para saber mais você pode consultar a Instrução Normativa 05/201, Art. 59
 
   utter_processo_situacao_processo_C10:
     - text: |
-          O estado C10 acontece durante a fase de Aprovação, e significa projeto incluído em pauta para avaliação da CNIC
+          A situação C10 acontece durante a fase de Aprovação.
+          E significa: projeto incluído em pauta para avaliação da CNIC.
           E quando o MinC utiliza ele? Após conclusão da análise técnica, o projeto é incluido na pauta da CNIC
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 28
 
   utter_processo_situacao_processo_C20:
     - text: |
-          O estado C20 acontece durante a fase de Aprovação, e significa parecer técnico emitido
-          E quando o MinC utiliza ele? Quando ocorre a conclusão da análise e o parecer técnico é emitido
+          A situação C20 acontece durante a fase de Aprovação.
+          E significa: parecer técnico emitido pela unidade vinculada.
+          E quando o MinC utiliza ele?
+          É utilizado quando a unidade vinculada analisa o projeto e emite um parecer consolidado.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 27
-
-  utter_processo_situacao_processo_C26:
-    - text: |
-          O estado C26 acontece durante a fase de Aprovação, e significa projeto incluído na pauta da CNIC para reanálise/análise complementar
-          E quando o MinC utiliza ele? Quando autoridade superior entende que algum item pode ser reavaliado ou quando constatado erro material
-          Para saber mais você pode consultar a STF, Súmula nº 346/1963 (autotutela)
 
   utter_processo_situacao_processo_C30:
     - text: |
-          O estado C30 acontece durante a fase de Aprovação, e significa diligenciado – Comissão Nacional de Incentivo à Cultura – CNIC
-          E quando o MinC utiliza ele? Quando da necessidade de informações adicionais para fins de análise técnica
+          A situação C30 acontece quando o projeto é diligenciado pela CNIC durante o processo de apreciação.
+          E quando o MinC utiliza ele?
+          Quando há necessidade de informações adicionais para fins de apreciação do comissário da CNIC.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69
-          
-  utter_processo_situacao_processo_D03:
+
+  utter_processo_situacao_processo_D12:
     - text: |
-          O estado D03 acontece durante a fase de Aprovação, e significa projeto aprovado – aguardando análise documental
-          E quando o MinC utiliza ele? Após análise da CNIC.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 28
+          A situação D12 acontece quando o projeto é retirado de pauta da reunião da CNIC.
+          E quando o MinC utiliza ele?
+          Quando o componente da comissão entende que é necessário consultar outros órgãos para finalizar sua apreciação.
 
   utter_processo_situacao_processo_D14:
     - text: |
-          O estado D14 acontece durante a fase de Aprovação, e significa indeferido
-          E quando o MinC utiliza ele? Quando o projeto é indeferido
-          Para saber mais você pode consultar a Instrução Normativa 05/2017
+          A situação D14 acontece durante a fase de aprovação.
+          E significa: o projeto foi indeferido.
+          E quando o MinC utiliza ele?
+          Quando o projeto é indeferido pela unidade vinculada ou CNIC.
 
   utter_processo_situacao_processo_D20:
     - text: |
-          O estado D20 acontece durante a fase de Aprovação, e significa recurso
-          E quando o MinC utiliza ele? Quando o proponente interpõe recurso contra resultado da análise
+          A situação D20 acontece durante a fase de aprovação.
+          E significa: recurso.
+          E quando o MinC utiliza ele?
+          Quando o proponente interpõe pedido de reconsideração ou recurso contra resultado da análise feita pela unidade vinculada ou CNIC.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 67
+
+  utter_processo_situacao_processo_D22:
+    - text: |
+          A situação D22 acontece durante a fase de Execução.
+          E significa: aguardando elaboração de portaria de Prorrogação.
+          E quando o MinC utiliza ele?
+          Quando há prorrogação automática ou proponente solicita prorrogação de prazo.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 33
 
   utter_processo_situacao_processo_D25:
     - text: |
-          O estado D25 acontece durante a fase de Aprovação, e significa diligenciado – Projeto aprovado – (Solicitação de Documentos)
-          E quando o MinC utiliza ele? Quando da necessidade de informações adicionais para fins de aprovação
+          A situação D25 acontece durante a fase de aprovação.
+          E significa: diligenciado (solicitação de documentos).
+          E quando o MinC utiliza ele?
+          Quando da necessidade de informações adicionais para fins de homologação.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69
 
   utter_processo_situacao_processo_D27:
     - text: |
-          O estado D27 acontece durante a fase de Aprovação, e significa encaminhado para inclusão em portaria
-          E quando o MinC utiliza ele? Quando o projeto é encaminhado para publicação em portaria no Diário Oficial da União
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 25
+          A situação D27 acontece durante a fase de Autorização de captação.
+          E significa: encaminhado para inclusão em portaria.
+          E quando o MinC utiliza ele?
+          Quando o projeto é encaminhado para publicação em portaria no Diário Oficial da União.
 
-  utter_processo_situacao_processo_E25:
+  utter_processo_situacao_processo_D28:
     - text: |
-          O estado E25 acontece durante a fase de Avaliação do objeto, e significa análise de resposta de diligência – Objeto
-          E quando o MinC utiliza ele? O proponente respodeu à diligência enviada e a resposta aguarda análise do técnico
-          Para saber mais você pode consultar a Portaria Interministerial nº 424/2016, art. 59, III
+          A situação D28 acontece durante a fase de Execução.
+          E significa: encaminhado p/inclusão em portaria/complementação.
+          E quando o MinC utiliza ele?
+          Quando o projeto atinge o percentual de 50% de captação, pode solicitar complementação orçamentária.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 38
 
-  utter_processo_situacao_processo_E62:
+  utter_processo_situacao_processo_D29:
     - text: |
-          O estado E62 acontece durante a fase de Avaliação do objeto, e significa diligenciado – na avaliação do relatório cumprimento de objeto
-          E quando o MinC utiliza ele? Proponente foi diligenciado na análise do objeto.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 47, §3º
+          Essa situação pode acontecer em 2 momentos:
+          A situação D29 acontece durante a fase de Execução.
+          E significa: encaminhado p/inclusão em portaria/redução.
+          E quando o MinC utiliza ele?
+          Quando o projeto atinge o percentual de 20% de captação, pode solicitar redução orçamentária.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 39
 
-  utter_processo_situacao_processo_E66:
+          Ou a situação D29 acontece logo após a fase de homologação do projeto.
+          E quando o MinC utiliza ele?
+          Quando o projeto após a homologação final apresenta redução sobre o valor inicial (autorizado a captar - cadastrado em proposta).
+
+  utter_processo_situacao_processo_D38:
     - text: |
-          O estado E66 acontece durante a fase de Avaliação do objeto, e significa inadimplente – por não responder diligência na avaliação do relatório cumprimento de objeto
-          E quando o MinC utiliza ele? O proponente foi diligenciado na análise do objeto e não apresentou resposta no prazo correto.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 58, I
+          A situação D38 acontece durante a fase de Recomposição de dano ao erário.
+          E significa: Cadin – Inadimplente.
+          E quando o MinC utiliza ele?
+          Após a situação E78, quando a inscrição no Cadin é realizada.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
+
+  utter_processo_situacao_processo_D50:
+    - text: |
+          A situação D50 acontece logo após a divulgaçao do resultado da apreciação da CNIC.
+          E quando o MinC utiliza ela?
+          É utilizado após a finalização da apreciação da CNIC.
+
+  utter_processo_situacao_processo_D51:
+    - text: |
+          A situação D51 condiciona ao proponente a se manifestar quanto as análises realizadas pela unidade vinculada e CNIC.
+          E quando o MinC utiliza ela?
+          Quando há divergência entre o que o proponente adequou e o resultado final da homologação.
+
+
+  utter_processo_situacao_processo_D52:
+    - text: |
+          A situação D52 acontece quando o projeto é homologado.
+          E quando o MinC utiliza ela?
+          Quando o projeto já está em fase final para divulgar a homologação.
+
+  utter_processo_situacao_processo_E10:
+    - text: |
+          Essa situação pode acontecer em 2 momentos:
+          A situação E10 acontece durante a fase de Execução.
+          E significa: autorizada a captação total dos recursos.
+          E quando o MinC utiliza ele?
+          Quando é publicada a autorização para captação de recursos, aguardando a captação mínima de 10% para que o mesmo siga com o fluxo de análise.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 26
+          Ou a situação E10 acontece durante a fase de Execução.
+          E significa: autorizada a captação total dos recursos.
+          E quando o MinC utiliza ele?
+          Quando o projeto é homologado e encaminhado para a fase de execução.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 33
+
+  utter_processo_situacao_processo_E11:
+    - text: |
+          A situação E11 acontece durante a fase de Execução.
+          E significa: expirado o prazo de captação total.
+          E quando o MinC utiliza ele?
+          Quando expira o prazo de captação.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 33
+
+  utter_processo_situacao_processo_E12:
+    - text: |
+          O estado E12 acontece durante a fase de Execução.
+          E significa autorizada a captação residual dos recursos.
+          E quando o MinC utiliza ele?
+          Quando o projeto já obteve alguma captação e ainda se encontra com prazo vigente após a autorização de captação ou quando o projeto após homologação já apresenta alguma captação e se encontra com o prazo vigente.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 33
+
+  utter_processo_situacao_processo_E13:
+    - text: |
+          A situação E13 acontece durante a fase de Execução.
+          E significa: projeto em execução – Encerrado prazo de captação.
+          E quando o MinC utiliza ele?
+          Quando o prazo de captação expirou, mas o prazo de execução continua vigente.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, arts. 33 e 34
+
+  utter_processo_situacao_processo_E15:
+    - text: |
+          A situação E15 acontece durante a fase de Execução.
+          E significa: expirado o prazo de captação parcial.
+          E quando o MinC utiliza ele?
+          Quando o projeto atingiu captação suficiente para movimentar e o prazo de captação expira.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 33
+
+  utter_processo_situacao_processo_E16:
+    - text: |
+          A situação E16 acontece durante a fase de Execução.
+          E significa: projeto encerrado por excesso de prazo sem captação.
+          E quando o MinC utiliza ele?
+          Situação automática: quando o projeto não consegue captar recursos suficientes para liberação das contas e o prazo expira
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 52
 
   utter_processo_situacao_processo_E20:
     - text: |
-          O estado E20 acontece durante a fase de Avaliação financeira, e significa inadimplente – não respondeu a diligência da Prestação de Contas
-          E quando o MinC utiliza ele? Quando o proponente é omisso em responder à diligência.
+          A situação E20 acontece durante a fase de Avaliação financeira.
+          E significa: inadimplente – não respondeu a diligência da Prestação de Contas.
+          E quando o MinC utiliza ele?
+          Quando o proponente é omisso em responder à diligência.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 69, § 3º, inc. III
+
+  utter_processo_situacao_processo_E22:
+    - text: |
+          A situação E22 acontece durante a fase de Recomposição de dano ao erário.
+          E significa: instaurada Tomada de Contas Especial.
+          E quando o MinC utiliza ele?
+          Após a situação G47, quando a tomada de contas especial é instaurada.
+          Para saber mais você pode consultar a IN TCU 71/2012, art. 4º
+
+  utter_processo_situacao_processo_E23:
+    - text: |
+          A situação E23 acontece durante a fase de Execução.
+          E significa: inadimplente.
+          E quando o MinC utiliza ele?
+          Situação que gira automaticamente quando o proponente não apresenta a prestação de contas final dentro do prazo regular.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 48, §1°
+
+  utter_processo_situacao_processo_E24:
+    - text: |
+          A situação E24 acontece durante a fase de Execução.
+          E significa: apresentou prestação de contas.
+          E quando o MinC utiliza ele?
+          Quando a prestação de contas é apresentada, é recebida pela GCEFI e o projeto é, posteriormente, tramitado para a CGARE.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 49
+
+  utter_processo_situacao_processo_E25:
+    - text: |
+          A situação E25 acontece durante a fase de Avaliação do objeto.
+          E significa: análise de resposta de diligência – Objeto.
+          E quando o MinC utiliza ele?
+          O proponente respodeu à diligência enviada e a resposta aguarda análise do técnico.
+          Para saber mais você pode consultar a Portaria Interministerial nº 424/2016, art. 59, III
 
   utter_processo_situacao_processo_E27:
     - text: |
-          O estado E27 acontece durante a fase de Avaliação financeira, e significa análise Financeira da Prestação de Contas
+          A situação E27 acontece durante a fase de Avaliação financeira.
+          E significa: análise Financeira da Prestação de Contas.
           E quando o MinC utiliza ele? Quando se inicia a análise financeira da prestação de contas.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 50
 
   utter_processo_situacao_processo_E30:
     - text: |
-          O estado E30 acontece durante a fase de Avaliação financeira, e significa análise de resposta de diligência
-          E quando o MinC utiliza ele? Quando se inicia a análise financeira da resposta à diligência.
+          A situação E30 acontece durante a fase de Avaliação financeira.
+          E significa: análise de resposta de diligência.
+          E quando o MinC utiliza ele?
+          Quando se inicia a análise financeira da resposta à diligência.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 69
-
-  utter_processo_situacao_processo_E68:
-    - text: |
-          O estado E68 acontece durante a fase de Avaliação financeira, e significa aguarda análise financeira
-          E quando o MinC utiliza ele? Quando o projeto aguarda o início da análise financeira da prestação de contas.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 50
-
-  utter_processo_situacao_processo_E77:
-    - text: |
-          O estado E77 acontece durante a fase de Avaliação financeira, e significa aguarda laudo final
-          E quando o MinC utiliza ele? Quando a avaliação de resultados está finalizada e aguarda a produção do laudo final.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 53
-
-  utter_processo_situacao_processo_L03:
-    - text: |
-          O estado L03 acontece durante a fase de Avaliação financeira, e significa prestação de contas aprovada com ressalva formal e sem prejuízo
-          E quando o MinC utiliza ele? Quando a prestação de contas é aprovada com ressalva.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 51, inc. II e art. 53
-
-  utter_processo_situacao_processo_L05:
-    - text: |
-          O estado L05 acontece durante a fase de Avaliação financeira, e significa prestação de contas desaprovada com notificação de cobrança
-          E quando o MinC utiliza ele? Quando a prestação de contas é reprovada, é dada a ciência ao proponente por intimação.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 54, § 5°
-
-  utter_processo_situacao_processo_L08:
-    - text: |
-          O estado L08 acontece durante a fase de Avaliação financeira, e significa prestação de contas aprovada após ressarcimento ao erário.
-          E quando o MinC utiliza ele? Quando a prestação de contas é reprovada, mas o proponente reverte com o ressarcimento do débito ao FNC.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 59, § 3°
-
-  utter_processo_situacao_processo_L10:
-    - text: |
-          O estado L10 acontece durante a fase de Avaliação financeira, e significa prestação de contas reprovada – Inabilitação Prescrita
-          E quando o MinC utiliza ele? Quando são transcorridos cinco anos após a prestação de contas do projeto, a inabilitação prescreve.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 57
-
-  utter_processo_situacao_processo_L11:
-    - text: |
-          O estado L11 acontece durante a fase de Avaliação financeira, e significa prestação de contas reprovada – Inabilitação suspensa
-          E quando o MinC utiliza ele? Quando a justiça manda suspender a inabilitação do proponente.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 59
-
-  utter_processo_situacao_processo_D22:
-    - text: |
-          O estado D22 acontece durante a fase de Execução, e significa aguardando elaboração de portaria de Prorrogação
-          E quando o MinC utiliza ele? Quando há prorrogação automática ou proponente solicita prorrogação de prazo
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 33
-
-  utter_processo_situacao_processo_D28:
-    - text: |
-          O estado D28 acontece durante a fase de Execução, e significa encaminhado p/inclusão em portaria/complementação
-          E quando o MinC utiliza ele? Quando o projeto atinge o percentual de 50% de captação, pode solicitar complementação orçamentária
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 38
-
-  utter_processo_situacao_processo_D29:
-    - text: |
-          O estado D29 acontece durante a fase de Execução, e significa encaminhado p/inclusão em portaria/redução.
-          E quando o MinC utiliza ele? Quando o projeto atinge o percentual de 20% de captação, pode solicitar redução orçamentária
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 39
-
-  utter_processo_situacao_processo_E10:
-    - text: |
-          O estado E10 acontece durante a fase de Execução, e significa autorizada a captação total dos recursos
-          E quando o MinC utiliza ele? Quando é publicada a autorização para captação de recursos
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 33
-
-  utter_processo_situacao_processo_E11:
-    - text: |
-          O estado E11 acontece durante a fase de Execução, e significa expirado o prazo de captação total
-          E quando o MinC utiliza ele? Quando expira o prazo de captação
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 33
-
-  utter_processo_situacao_processo_E12:
-    - text: |
-          O estado E12 acontece durante a fase de Execução, e significa autorizada a captação residual dos recursos
-          E quando o MinC utiliza ele? Quando o projeto já obteve alguma captação e ainda se encontra com prazo vigente
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 33
-
-  utter_processo_situacao_processo_E13:
-    - text: |
-          O estado E13 acontece durante a fase de Execução, e significa projeto em execução – Encerrado prazo de captação
-          E quando o MinC utiliza ele? Quando o prazo de captação expirou, mas o prazo de execução continua vigente.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, arts. 33 e 34
-
-  utter_processo_situacao_processo_E15:
-    - text: |
-          O estado E15 acontece durante a fase de Execução, e significa expirado o prazo de captação parcial
-          E quando o MinC utiliza ele? Quando o projeto atingiu captação suficiente para movimentar e o prazo de captação expira.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 33
-
-  utter_processo_situacao_processo_E16:
-    - text: |
-          O estado E16 acontece durante a fase de Execução, e significa projeto encerrado por excesso de prazo sem captação
-          E quando o MinC utiliza ele? Situação automática: quando o projeto não consegue captar recursos suficientes para liberação das contas e o prazo expira
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 52
-
-  utter_processo_situacao_processo_E23:
-    - text: |
-          O estado E23 acontece durante a fase de Execução, e significa inadimplente
-          E quando o MinC utiliza ele? Situação que gira automaticamente quando o proponente não apresenta a prestação de contas final dentro do prazo regular
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 48, §1°
-
-  utter_processo_situacao_processo_E24:
-    - text: |
-          O estado E24 acontece durante a fase de Execução, e significa apresentou prestação de contas
-          E quando o MinC utiliza ele? Quando a prestação de contas é apresentada, é recebida pela GCEFI e o projeto é, posteriormente, tramitado para a CGARE
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 49
 
   utter_processo_situacao_processo_E36:
     - text: |
-          O estado E36 acontece durante a fase de Execução, e significa arquivado por ter 24 meses aprovação sem captação de recursos
-          E quando o MinC utiliza ele? Quando ocoore o arquivamento porque o projeto atingiu 24 meses sem captação nenhuma
+          A situação E36 acontece durante a fase de Execução.
+          E significa: arquivado por ter 24 meses aprovação sem captação de recursos.
+          E quando o MinC utiliza ele?
+          Quando ocoore o arquivamento porque o projeto atingiu 24 meses sem captação nenhuma.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 52
+
+  utter_processo_situacao_processo_E47:
+    - text: |
+          A situação G47 acontece durante a fase de Recomposição de dano ao erário.
+          E significa: em processo de instauração de Tomada de Contas Especial.
+          E quando o MinC utiliza ele?
+          Após asituação L06, quando o processo segue para análise e instrução à tomada de contas especial.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
+
+  utter_processo_situacao_processo_E50:
+    - text: |
+          A situação E50 acontece durante a fase de Movimentação Financeira.
+          E significa: diligenciado – movimentação da conta corrente.
+          E quando o MinC utiliza ele?
+          Quando constata-se alguma inconsistência bancária ou na transferência de recursos e o proponente é diligenciado para prestar esclarecimentos.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, arts. 80 a 83
 
   utter_processo_situacao_processo_E59:
     - text: |
-          O estado E59 acontece durante a fase de Execução, e significa diligenciado – Readequação
-          E quando o MinC utiliza ele? Quando o proponente pleitea alterações e é diligenciado para apresentar documentos/informações complementares
+          A situação E59 acontece durante a fase de Execução.
+          E significa: diligenciado – Readequação.
+          E quando o MinC utiliza ele?
+          Quando o proponente pleitea alterações e é diligenciado para apresentar documentos/informações complementares.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Arts. 29 a 31
+
+  utter_processo_situacao_processo_E60:
+    - text: |
+          A situação E60 acontece durante a fase de Fiscalização.
+          E significa: diligenciado – fiscalização.
+          E quando o MinC utiliza ele?
+          Quando é necessário que o proponente apresente documentos ou informações para a Coordenação de Fiscalização.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69
 
   utter_processo_situacao_processo_E63:
     - text: |
-          O estado E63 acontece durante a fase de Execução, e significa projeto arquivado – por excesso de prazo sem captação
-          E quando o MinC utiliza ele? Quando o proponente não solicitou a prorrogação do período de captação de forma tempestiva
+          A situação E63 acontece durante a fase de Execução.
+          E significa: projeto arquivado – por excesso de prazo sem captação.
+          E quando o MinC utiliza ele?
+          Quando o proponente não solicitou a prorrogação do período de captação de forma tempestiva.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 52
 
   utter_processo_situacao_processo_E64:
     - text: |
-          O estado E64 acontece durante a fase de Execução, e significa projeto arquivado – captação/execução encerradas
-          E quando o MinC utiliza ele? Quando o pedido de prorrogação é indeferido por se tratar de calendário específico
+          A situação E64 acontece durante a fase de Execução.
+          E significa: projeto arquivado – captação/execução encerradas.
+          E quando o MinC utiliza ele?
+          Quando o pedido de prorrogação é indeferido por se tratar de calendário específico.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 52
 
   utter_processo_situacao_processo_E65:
     - text: |
-          O estado E65 acontece durante a fase de Execução, e significa projeto arquivado – solicitação de arquivamento, de projeto de incentivo fiscal, feito pelo proponente
-          E quando o MinC utiliza ele? Quando o arquivamento ocorre a pedido do proponente
+          A situação E65 acontece durante a fase de Execução.
+          E significa: projeto arquivado – solicitação de arquivamento, de projeto de incentivo fiscal, feito pelo proponente
+          E quando o MinC utiliza ele?
+          Quando o arquivamento ocorre a pedido do proponente.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 52
+
+  utter_processo_situacao_processo_E62:
+    - text: |
+          A situação E62 acontece durante a fase de Avaliação do objeto.
+          E significa: diligenciado – na avaliação do relatório cumprimento de objeto.
+          E quando o MinC utiliza ele?
+          Proponente foi diligenciado na análise do objeto.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 47, §3º
+
+  utter_processo_situacao_processo_E66:
+    - text: |
+          A situação E66 acontece durante a fase de Avaliação do objeto.
+          E significa: inadimplente – por não responder diligência na avaliação do relatório cumprimento de objeto.
+          E quando o MinC utiliza ele?
+          O proponente foi diligenciado na análise do objeto e não apresentou resposta no prazo correto.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 58, I
+
+  utter_processo_situacao_processo_E68:
+    - text: |
+          A situação E68 acontece durante a fase de Avaliação financeira.
+          E significa: aguarda análise financeira.
+          E quando o MinC utiliza ele?
+          Quando o projeto aguarda o início da análise financeira da prestação de contas.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 50
+
+  utter_processo_situacao_processo_E77:
+    - text: |
+          A situação E77 acontece durante a fase de Avaliação financeira.
+          E significa: aguarda laudo final.
+          E quando o MinC utiliza ele?
+          Quando a avaliação de resultados está finalizada e aguarda a produção do laudo final.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 53
+
+  utter_processo_situacao_processo_E72:
+    - text: |
+          A situação E72 acontece durante a fase de Fiscalização.
+          E significa: execução Suspensa de Forma Cautelar.
+          E quando o MinC utiliza ele?
+          Após decisão da autoridade máxima da Secretaria em casos que são detectados indícios de irregularidades no projeto.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 58, II
+
+  utter_processo_situacao_processo_E73:
+    - text: |
+          A situação E73 acontece durante a fase de Recomposição de dano ao erário.
+          E significa: TCE julgada pelo TCU.
+          E quando o MinC utiliza ele?
+          Atualização dos autos e do Salic após o julgamento das contas pelo TCU.
+          Para saber mais você pode consultar a IN TCU 71/2012, art. 4º
 
   utter_processo_situacao_processo_E75:
     - text: |
-          O estado E75 acontece durante a fase de Execução, e significa expirado o prazo de execução do projeto
-          E quando o MinC utiliza ele? Quando expira o prazo de execução e inicia-se o prazo para entrega da prestação de contas final
+          A situação E75 acontece durante a fase de Execução.
+          E significa: expirado o prazo de execução do projeto.
+          E quando o MinC utiliza ele?
+          Quando expira o prazo de execução e inicia-se o prazo para entrega da prestação de contas final.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Arts. 48 e 49
+
+  utter_processo_situacao_processo_E78:
+    - text: |
+          A situação E78 acontece durante a fase de Recomposição de dano ao erário.
+          E significa: débito inferior ao valor mínimo para TCE.
+          E quando o MinC utiliza ele?
+          Após asituação L06, quando o processo segue para análise e instrução à tomada de contas simplificada.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
 
   utter_processo_situacao_processo_E79:
     - text: |
-          O estado E79 acontece durante a fase de Execução, e significa projeto não executado por insuficiência de captação de recursos
-          E quando o MinC utiliza ele? Situação automática: criada para projetos que não captaram recursos suficientes para iniciar a execução
+          A situação E79 acontece durante a fase de Execução.
+          E significa: projeto não executado por insuficiência de captação de recursos.
+          E quando o MinC utiliza ele? Situação automática: criada para projetos que não captaram recursos suficientes para iniciar a execução.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 52
 
   utter_processo_situacao_processo_E80:
     - text: |
-          O estado E80 acontece durante a fase de Execução, e significa inadimplente – Proponente notificado a apresentar prestação de contas
-          E quando o MinC utiliza ele? Situação criada para diligenciar automaticamente o proponente que não entregou a prestação de contas final dentro do prazo regular
+          A situação E80 acontece durante a fase de Execução.
+          E significa: inadimplente – Proponente notificado a apresentar prestação de contas.
+          E quando o MinC utiliza ele?
+          Situação criada para diligenciar automaticamente o proponente que não entregou a prestação de contas final dentro do prazo regular.
 
   utter_processo_situacao_processo_E81:
     - text: |
-          O estado E81 acontece durante a fase de Execução, e significa inadimplente – Não atendeu a notificação para apresentar prestação de contas
+          A situação E81 acontece durante a fase de Execução.
+          E significa: inadimplente – Não atendeu a notificação para apresentar prestação de contas.
           E quando o MinC utiliza ele? Situação automática: criada para que os projetos, cujos proponentes não apresentaram a prestação de contas final depois de terem sido notificados, sejam encaminhados para TCE.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 48, §1º
 
-  utter_processo_situacao_processo_E60:
+  utter_processo_situacao_processo_L03:
     - text: |
-          O estado E60 acontece durante a fase de Fiscalização, e significa diligenciado – fiscalização
-          E quando o MinC utiliza ele? Quando é necessário que o proponente apresente documentos ou informações para a Coordenação de Fiscalização.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 69
+          A situação L03 acontece durante a fase de Avaliação financeira.
+          E significa: prestação de contas aprovada com ressalva formal e sem prejuízo.
+          E quando o MinC utiliza ele?
+          Quando a prestação de contas é aprovada com ressalva.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 51, inc. II e art. 53
 
-  utter_processo_situacao_processo_E72:
+  utter_processo_situacao_processo_L05:
     - text: |
-          O estado E72 acontece durante a fase de Fiscalização, e significa execução Suspensa de Forma Cautelar
-          E quando o MinC utiliza ele? Após decisão da autoridade máxima da Secretaria em casos que são detectados indícios de irregularidades no projeto
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, Art. 58, II
+          A situação L05 acontece durante a fase de Avaliação financeira.
+          E significa: prestação de contas desaprovada com notificação de cobrança.
+          E quando o MinC utiliza ele?
+          Quando a prestação de contas é reprovada, é dada a ciência ao proponente por intimação.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 54, § 5°
 
-  utter_processo_situacao_processo_E50:
+  utter_processo_situacao_processo_L06:
     - text: |
-          O estado E50 acontece durante a fase de Movimentação Financeira, e significa diligenciado – movimentação da conta corrente
-          E quando o MinC utiliza ele? Quando constata-se alguma inconsistência bancária ou na transferência de recursos e o proponente é diligenciado para prestar esclarecimentos.
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, arts. 80 a 83
+          A situação L06 acontece durante a fase de Recomposição de dano ao erário.
+          E significa: prestação de contas desaprovada com INDICATIVO para Tomada de Contas Especial.
+          E quando o MinC utiliza ele?
+          Após a situação L05.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
+
+  utter_processo_situacao_processo_L08:
+    - text: |
+          A situação L08 acontece durante a fase de Avaliação financeira.
+          E significa: prestação de contas aprovada após ressarcimento ao erário.
+          E quando o MinC utiliza ele?
+          Quando a prestação de contas é reprovada, mas o proponente reverte com o ressarcimento do débito ao FNC.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 59, § 3°
 
   utter_processo_situacao_processo_L09:
     - text: |
-          O estado L09 acontece durante a fase de Parcelamento, e significa débito Parcelado
-          E quando o MinC utiliza ele? Quando o proponente realiza o pagamento da primeira parcela do parcelamento solicitado, independentemente da situação em que o processo se encontre
+          A situação L09 acontece durante a fase de Parcelamento.
+          E significa: débito Parcelado.
+          E quando o MinC utiliza ele?
+          Quando o proponente realiza o pagamento da primeira parcela do parcelamento solicitado, independentemente da situação em que o processo se encontre.
           Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 64
 
-  utter_processo_situacao_processo_D38:
+  utter_processo_situacao_processo_L10:
     - text: |
-          O estado D38 acontece durante a fase de Recomposição de dano ao erário, e significa cADIN – Inadimplente
-          E quando o MinC utiliza ele? Após a situação E78, quando a inscrição no Cadin é realizada
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
+          A situação L10 acontece durante a fase de Avaliação financeira.
+          E significa: prestação de contas reprovada – Inabilitação Prescrita.
+          E quando o MinC utiliza ele?
+          Quando são transcorridos cinco anos após a prestação de contas do projeto, a inabilitação prescreve.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 57
 
-  utter_processo_situacao_processo_E22:
+  utter_processo_situacao_processo_L11:
     - text: |
-          O estado E22 acontece durante a fase de Recomposição de dano ao erário, e significa instaurada Tomada de Contas Especial
-          E quando o MinC utiliza ele? Após a situação G47, quando a tomada de contas especial é instaurada
-          Para saber mais você pode consultar a IN TCU 71/2012, art. 4º
-
-  utter_processo_situacao_processo_E73:
-    - text: |
-          O estado E73 acontece durante a fase de Recomposição de dano ao erário, e significa tCE julgada pelo TCU
-          E quando o MinC utiliza ele? Atualização dos autos e do Salic após o julgamento das contas pelo TCU
-          Para saber mais você pode consultar a IN TCU 71/2012, art. 4º
-
-  utter_processo_situacao_processo_E78:
-    - text: |
-          O estado E78 acontece durante a fase de Recomposição de dano ao erário, e significa débito inferior ao valor mínimo para TCE
-          E quando o MinC utiliza ele? Após asituação L06, quando o processo segue para análise e instrução à tomada de contas simplificada
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
-
-  utter_processo_situacao_processo_E47:
-    - text: |
-          O estado G47 acontece durante a fase de Recomposição de dano ao erário, e significa em processo de instauração de Tomada de Contas Especial
-          E quando o MinC utiliza ele? Após asituação L06, quando o processo segue para análise e instrução à tomada de contas especial
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
-  utter_processo_situacao_processo_L06:
-    - text: |
-          O estado L06 acontece durante a fase de Recomposição de dano ao erário, e significa prestação de contas desaprovada com INDICATIVO para Tomada de Contas Especial
-          E quando o MinC utiliza ele? Após a situação L05
-          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 56
+          A situação L11 acontece durante a fase de Avaliação financeira.
+          E significa: prestação de contas reprovada – Inabilitação suspensa.
+          E quando o MinC utiliza ele?
+          Quando a justiça manda suspender a inabilitação do proponente.
+          Para saber mais você pode consultar a Instrução Normativa 05/2017, art. 59
 
   utter_definicao_tais:
     - text: |
@@ -573,7 +734,7 @@ templates:
 
           Em cada interação que temos aqui, eu aprendendo mais
           para que a gente se comunique melhor.
-          
+
           Obrigada por conversar comigo!
 
   utter_quem_eh_a_tais:
@@ -592,16 +753,15 @@ templates:
     - text: |
           A Lei 8.313/91, Lei Rouanet, é o principal mecanismo de fomento à Cultura do Brasil. Ela instituiu o Programa Nacional de Apoio à Cultura (Pronac).
 
-          Para cumprir este objetivo, a lei estabelece as normativas de como o Governo Federal deve disponibilizar recursos para a realização de projetos artístico-culturais. 
-          
+          Para cumprir este objetivo, a lei estabelece as normativas de como o Governo Federal deve disponibilizar recursos para a realização de projetos artístico-culturais.
+
           O mecanismo de incentivos fiscais da Lei Rouanet é uma forma de estimular o apoio da iniciativa privada ao setor cultural.
           Ou seja, o governo abre mão de parte dos impostos, para que esses valores sejam investidos na Cultura.
 
   utter_diga_mais:
     - text: |
-          Por enquanto, só entendo perguntas completas. Então é melhor você me perguntar "como funciona a Lei Rouanet" ao invés de "Como funciona" 
-  
-  #TO DO
+        Por enquanto, só entendo perguntas completas. Então é melhor você me perguntar "como funciona a Lei Rouanet" ao invés de "Como funciona"
+
   utter_definicao:
     - text: |
           Sei conceituar sobre o que é o MinC, Salic, Sefic, proposta, projeto e proponente, assim como falar sobre mim.
@@ -620,41 +780,41 @@ templates:
 
   utter_definicao_projeto:
     - text: |
-          Projeto é o termo dado para a proposta aprovada no SALIC.
+        Após a superação da análise de admissibilidade da proposta é gerado o número de PRONAC para definir o projeto cultural
 
   utter_definicao_proposta:
     - text: |
-          Proposta é o conjunto de formulários que explicam o projeto cultural que pode ser incentivado pela Lei Rouanet.
+        Proposta é o conjunto de formulários que devem ser preenchidos pelo proponente afim de se tornar um projeto.
 
   utter_definicao_proponente:
     - text: |
-          Proponente é o agente responsável por propor e participar de projetos culturais.
+        Proponente é o agente responsável por propor e participar de projeto cultural.
 
   utter_processo_preenchimento:
     - text: |
-          É a primeira fase da proposta, onde você preenche os formulários.
+        É a primeira fase da proposta, em que o proponente preenche os formulários.
 
   utter_processo_admissibilidade:
     - text: |
-          É a fase da proposta em que o MinC e a vinculada irão avaliar a proposta, para pedir correções ou aprova-la, gerando um projeto.
+        É a fase de análise da proposta feita pela coordenação de admissibilidade.
 
   utter_processo_aprovacao:
     - text: |
-          Aprovação é a fase onde o MinC e a vinculada  estão julgando a validade do projeto
+        Aprovação é a fase em que a SEFIC envia o projeto à análise técnica, inclui na pauta da Reunião da CNIC, confere documentação e encaminha para publicação de resultado.
 
   utter_processo_execucao:
     - text: |
-          Execução é a fase do projeto que possui atividades
-          como captação de recursos e realização do projeto.
-          
+        Execução é a fase que possui atividades como execução do projeto cultural, envolvendo abertura das contas, movimentações financeiras e ajustes diversos.
+
   utter_processo_analise_de_resultados:
     - text: |
-          É a fase do final do projeto, onde o proponente
-          deve apresentar todas as notas fiscais e contratos realizados
-          a fim de provar os gastos do projeto.
-
-          Mais detalhes sobre essa etapa (dúvidas, questões, ajuda) vou conseguir responder
-          somente nas minhas próximas versões :P
+        É a fase do final do projeto, onde o proponente deve apresentar todas as notas fiscais e contratos realizados a fim de provar os gastos do projeto.
+        Todos os documentos que comprovam que a execução ocorreu em conformidade com o projeto aprovado.
+        EX:
+        Comprovante de divulgação (Amostras de peças de divulgação e cliping de mídia expontânea)
+        Plano de distribuição (Borderôs, declaração de recebimento dos beneficiários/patrocinadores, etc).
+        Comprovação de medidas de democratização do acesso (fotos, vídeos, declarações, etc.)
+        Comprovação de medidas de acessibilidade (fotos, vídeos, declarações, etc.)
 
   utter_definicao_salic:
     - text: |
@@ -666,21 +826,23 @@ templates:
 
   utter_definicao_vinculada:
     - text: |
-          As vinculadas são órgãos associados ao MinC
-          que avaliam o orçamento e adequação do projeto.
+        As unidades vinculadas são órgãos associados ao MinC
+        que avaliam o conteúdo, custos do projeto e sua readequação.
 
   utter_processo_como_funciona:
     - text: |
           Aqui vai um resumo do processo da Lei de Incentivo a Cultura
           A pessoa responsável, chamada de proponente, insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica.
 
-          Essa proposta é analisada pelo MinC. Se for aprovada, autoriza o proponente a captar recursos.
-          Assim que o valor mínimo for captado, o proponente pode começar a executar o projeto.
+          Essa proposta é analisada pelo MinC. Se for admitida, autoriza o proponente a captar recursos.
+          Após a captação mínima de 10% do valor autorizado, o projeto segue com o fluxo análise até sua homologação.
           Durante a execução o proponente deve prestar contas de acordo com os prazos definidos na Lei Rouanet.
 
-          A prestação de contas é analisada pelos técnicos do Ministério e se aprovada, permite que o proponente crie um novo projeto.
+          A prestação de contas é analisada pela área responsável do Ministério.
+
           O primeiro passo para você participar deste processo é ter cadastro no SALIC
-          
+          Você já tem um cadastro no SALIC?
+
   utter_cadastro_salic_video:
     - text: |
           O Salic é o Sistema de Apoio às Leis de Incentivo à Cultura,
@@ -689,7 +851,7 @@ templates:
           Se você encontrar dificuldades no momento do cadastro, pode assistir este vídeo,
           nele você pode observar o passo a passo para se cadastrar: https://youtu.be/rMGEZyIr1U8
 
-          Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique (sim ou não) 
+          Caso você não possa ver o vídeo, eu posso te explicar. Quer que eu te explique?
 
   utter_salic_cadastro_usuario:
     - text: |
@@ -704,43 +866,6 @@ templates:
 
           Agora que você já se cadastrou, o próximo passo cadastrar um proponente
 
-  utter_curiosidadesMais:
-    - text: |
-          Você quer saber mais curiosidades?
-
-    - text: |
-          Você tem interesse de saber mais curiosidades?
-
-    - text: |
-          Você gostaria de saber mais curiosidades?
-
-  utter_curiosidadesMaisSim:
-    - text: |
-          EBA!
-          O que você quer saber?
-
-    - text: |
-          EBA!
-          Do que você quer saber?
-
-    - text: |
-          EBA!
-          De qual assunto você quer saber?
-
-  utter_curiosidadesMaisNao:
-    - text: |
-          Tudo bem, então você quer saber sobre *projetos e propostas*?
-
-    - text: |
-          Ok, então você prefere tirar dúvidas sobre *projetos e propostas*?
-
-    - text: |
-          Beleza, então você quer sanar dúvidas sobre *projetos e propostas*?
-
-  utter_curiosidadesFalarSobreProjetos:
-    - text: |
-          Maravilha! É bom saber que você quer entender mais sobre propostas e projetos
-
   utter_lei_rouanet_quantidade_de_projetos:
     - text: |
           Até o momento foram enviadas mais de 240.000 propostas, das quais mais de 89.000 foram aprovadas, se tornando projetos.
@@ -748,6 +873,8 @@ templates:
           Há mais de 43.000 proponentes cadastrados e mais de 80.000 incentivadores contribuindo com projetos.
 
           Além disso, mais de 69.000 fornecedores foram contratados pelos proponentes.
+
+          Para uma informação atualizada, acesse: http://sistemas.cultura.gov.br/comparar/
 
   utter_lei_rouanet_beneficios_incentivo_projetos_culturais:
     - text: |
@@ -774,14 +901,15 @@ templates:
 
           Qualquer empresa tributada com base no lucro real, e pessoas físicas pagadoras de Imposto de Renda (IR) que fazem a declaração no modelo completo podem contribuir com a lei Rouanet apoiando projetos.
           Atualmente, mais de 3 mil projetos são apoiados a cada ano por meio desta lei.
+          Para saber mais, acesse: http://rouanet.cultura.gov.br/incentivofiscal/
 
   utter_lei_rouanet_denuncia:
     - text: |
-          Em caso de irregularidades, dúvidas, sugestões,  entre em contato com as áreas do MinC, http://rouanet.cultura.gov.br/fale-conosco/ 
+          Em caso de irregularidades, dúvidas, sugestões,  entre em contato com as áreas do MinC, http://rouanet.cultura.gov.br/fale-conosco/
 
   utter_lei_rouanet_quem_pode_incentivar:
     - text: |
-          Somente as Pessoas Jurídicas tributadas com base no Lucro Real podem descontar as doações ou patrocínios do imposto de renda observando sempre o limite máximo de 4% do imposto devido
+          Pessoas Físicas ou  Jurídicas tributadas com base no Lucro Real podem descontar as doações ou patrocínios do imposto de renda observando sempre o limite máximo de 4% do imposto devido
           Se você quiser saber mais sobre quais Pessoas Jurídicas devem fazer a apuração do lucro real confira o artigo 246, do Decreto 3.000 de 26 de março de 1999 que \"Regulamenta a tributação, fiscalização, arrecadação e administração do Imposto sobre a Renda e Proventos de Qualquer Natureza\"
 
           Olha, alguns familiares não podem incentivar projetos:
@@ -848,7 +976,7 @@ templates:
           O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, conforme previsto no orçamento apresentado.
           O valor desta remuneração, ainda que por diversos serviços, não pode ultrapassar 50% do custo do projeto.
 
-          O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e         
+          O percentual de 50% inclui remuneração por serviços realizados por cônjuge, companheiro, parentes em linha reta ou colateral até o segundo grau, parentes com vínculo de afinidade com o proponente e
           em benefício de empresa coligada ou que tenha sócio em comum.
 
           O limite pode ser ultrapassado quando a remuneração é feita a grupos artísticos familiares que atuem na execução do projeto ou quando se tratar de pagamento a um mesmo fornecedor em projetos de execução de obras e restauros.
@@ -866,15 +994,15 @@ templates:
 
   utter_lei_rouanet_promocao_de_marca:
     - text: |
-          O patrocinador pode divulgar sua marca em um projeto, desde que utilize        
+          O patrocinador pode divulgar sua marca em um projeto, desde que utilize
           recursos próprios, não decorrentes do incentivo fiscal, nas seguintes situações:
-          
-          Promoção da imagem da empresa ou nome do patrocinador em peças de divulgação         
+
+          Promoção da imagem da empresa ou nome do patrocinador em peças de divulgação
           além das aprovadas pelo Ministério da Cultura;
-          
-          Fornecimento de produtos ou serviços do patrocinador ao projeto cultural,      
+
+          Fornecimento de produtos ou serviços do patrocinador ao projeto cultural,
           desde que seja comprovada uma vantagem econômica ou exclusividade.
-  
+
   utter_lei_rouanet_valores_pagamento_caches:
     - text: |
           O limite para pagamento de cachês artísticos por apresentação é:
@@ -882,46 +1010,65 @@ templates:
 
           R$ 90 mil para grupos artísticos e para grupos de modelos de desfiles de moda;
           No caso de orquestras, os valores são: R$ 2.250 mil por músico e R$ 45 mil para o maestro; A aprovação de valores superiores aos definidos acima poderá ser feita pelo plenário da Comissão Nacional de Incentivo à Cultura (CNIC), a depender das justificativas apresentadas pelo proponente e pela área técnica.
-  
+
   utter_lei_rouanet_etapas_aprovacao_projeto:
-   - text: |
-           Apresentação de proposta: O proponente (responsável pelo projeto) insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic), de forma eletrônica. Devem ser preenchidos campos previamente definidos, tais como resumo, ficha técnica, orçamento, plano de distribuição de produtos/ingressos, e apresentados documentos obrigatórios de acordo com a área do projeto, conforme determinação da Instrução Normativa da Lei Rouanet vigente.
-           Análise de admissibilidade: o Ministério da Cultura (MinC) realiza a análise de admissibilidade da proposta a partir de critérios objetivos estabelecidos pela Lei 8.313/91 e pela Instrução Normativa em vigor, como, por exemplo:
-           Verificação do completo e correto preenchimento do formulário de apresentação da proposta cultural;
-           Análise quanto ao enquadramento do proponente e da proposta cultural;
-           Caso seja admitida, a proposta recebe um número de Pronac
-           Prazo: até 60 dias, podendo ser ampliado para até 120 dias quando os projetos forem de restauração do patrimônio histórico ou construção de imóveis.
-           Após a admissibilidade, o MinC publica portaria de autorização para captação de recursos incentivados no Diário Oficial da União (DOU).
-         
-           Análise técnica: o projeto é encaminhado à análise técnica por parecerista da área cultural do projeto. São analisados requisitos como:
-           Atendimento aos objetivos do incentivo fiscal da Lei Rouanet;
-           Suficiência das informações prestadas;
-           Aferição da capacidade técnica do proponente para execução do projeto apresentado;
-           Adequação do projeto às medidas de acessibilidade e democratização de acesso ao público;
-           Compatibilidade dos custos previstos no projeto com os preços praticados no mercado regional da produção, conforme métrica estabelecida pelo MinC – o que se mostrar inadequado pode sofrer cortes justificados pelo parecerista;
-           Relação custo/benefício do projeto no âmbito cultural, incluindo o impacto da utilização do mecanismo de incentivo fiscal na redução do preço final de produtos ou serviços culturais com público pagante, podendo o parecerista propor redução nos preços solicitados;
-           Atendimento aos critérios e limites de custos estabelecidos pela Lei e Instrução Normativa em vigor;
-           Prazo: até 30 dias do seu recebimento, podendo ser prorrogado por mais 120 dias quando utter_cadastro_salic_videose tratar de projeto de recuperação de patrimônio histórico ou construção de imóveis.
-           Nos casos de projetos culturais que tenham como objeto a preservação de bens culturais tombados ou registrados pelos poderes públicos (federal, estadual, distrital ou municipal), será obrigatória, também, a apreciação pelo órgão responsável pelo tombamento ou registro.
-         
-           Análise pela CNIC: Após emissão do parecer técnico, o projeto cultural será apreciado pela Comissão Nacional de Incentivo à Cultura (CNIC), que homologa a execução do projeto.
-           A CNIC é um colegiado de assessoramento de caráter paritário, formado por representantes dos setores artísticos, culturais e empresariais, em paridade da sociedade civil e do poder público;
-           Analisa os projetos culturais, inclusive sob seus aspectos orçamentários, podendo para tanto solicitar informações adicionais, diligenciando o proponente, emitindo parecer conclusivo pela aprovação, total ou parcial, ou rejeição do projeto cultural.
-         
-           Decisão final: o ministro de Estado da Cultura, em última instância, decide quanto à aprovação ou rejeição do projeto cultural. Historicamente, por convenção, o MinC acompanha a decisão do órgão consultivo. Excepcionalmente, é possível que o ministro decida de forma diferente, fundamentando a justificativa.
-           
-  utter_lei_rouanet_democratizacao:
-   - text: |
-           A formação de plateia não é mais obrigatória e não é mais utilizado desde a IN 5.
-           Já a democratização ao acesso são medidas previstas nos artigos 20 e 21 da IN 
-           que promovem e ampliam a possibilidade de fruição dos bens, produtos e ações culturais,
-           em especial para as camadas da população menos assistidas ou excluídas do exercício de seus diretos culturais 
-           por sua condição socioeconômica ou outras circunstancias. 
-  #TODO
+    - text: |
+
+          As etapas para a aprovação de um projeto são as seguintes:
+
+          Apresentação de proposta
+          Análise de admissibilidade
+          Análise técnica
+          Análise pela CNIC
+          Decisão final
+
+          Caso você deseje saber a definição de cada uma delas abuse da #:
+          #apresentaçãodeproposta,  #análisedeadmissibilidade, #análisetécnica, #análisepelacnic, #decisãofinal.
+
+  utter_lei_rouanet_apresentacao_de_proposta:
+     - text: |
+
+          O proponente (responsável pelo projeto) insere uma proposta cultural no Sistema de Apoio às Leis de Incentivo à Cultura (Salic),
+          de forma eletrônica. Devem ser preenchidos campos como resumo, ficha técnica, orçamento, plano de distribuição de produtos/ingressos,
+          e apresentados documentos obrigatórios de acordo com a área do projeto.
+
+  utter_lei_rouanet_analise_de_admissibilidade:
+     - text: |
+
+          Critérios objetivos estabelecidos pela Lei 8.313/91 e pela Instrução Normativa em vigor, como, por exemplo:
+          Verificação do completo e correto preenchimento do formulário de apresentação da proposta cultural;
+          Análise quanto ao enquadramento do proponente e da proposta cultural;
+          Caso seja admitida, a proposta recebe um número de Pronac.
+          Prazo: até 60 dias, podendo ser ampliado para até 120 dias quando os projetos forem de restauração do patrimônio histórico ou construção de imóveis.
+
+          Após a admissibilidade, o MinC publica portaria de autorização para captação de recursos incentivados no Diário Oficial da União (DOU).
+  utter_lei_rouanet_analise_tecnica:
+     - text: |
+
+          O projeto é encaminhado à análise técnica por parecerista da área cultural do projeto. São analisados requisitos como:
+          Atendimento aos objetivos do incentivo fiscal da Lei Rouanet;
+          Suficiência das informações prestadas;
+          Aferição da capacidade técnica do proponente para execução do projeto apresentado;
+          Adequação do projeto às medidas de acessibilidade e democratização de acesso ao público;
+          Compatibilidade dos custos previstos no projeto com os preços praticados no mercado regional da produção, conforme métrica estabelecida pelo MinC – o que se mostrar inadequado pode sofrer cortes justificados pelo parecerista;
+          Relação custo/benefício do projeto no âmbito cultural, incluindo o impacto da utilização do mecanismo de incentivo fiscal na redução do preço final de produtos ou serviços culturais com público pagante, podendo o parecerista propor redução nos preços solicitados;
+          Atendimento aos critérios e limites de custos estabelecidos pela Lei e Instrução Normativa em vigor;
+
+          Prazo: até 30 dias do seu recebimento, podendo ser prorrogado por mais 120 dias quando se tratar de projeto de recuperação de patrimônio histórico ou construção de imóveis.
+          Nos casos de projetos culturais que tenham como objeto a preservação de bens culturais tombados ou registrados pelos poderes públicos (federal, estadual, distrital ou municipal), será obrigatória, também, a apreciação pelo órgão responsável pelo tombamento ou registro.
+
+  utter_lei_rouanet_analise_pela_cnic:
+     - text: |
+          Após emissão do parecer técnico, o projeto cultural será apreciado pela Comissão Nacional de Incentivo à Cultura (CNIC), que homologa a execução do projeto.
+
+  utter_lei_rouanet_decisao_final:
+     - text: |
+          O ministro de Estado da Cultura, em última instância, decide quanto à aprovação ou rejeição do projeto cultural. Historicamente, por convenção, o MinC acompanha a decisão do órgão consultivo. Excepcionalmente, é possível que o ministro decida de forma diferente, fundamentando a justificativa.
+
   utter_salic_preenchimento:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre o preenchimento de
-          propostas no SALIC. 
+          propostas no SALIC.
 
           Saberei responder mais sobre preenchimento nas minhas próximas versões :P
 
@@ -965,7 +1112,6 @@ templates:
           A agência bancária deve ser do banco do Brasil, deve conter 5
           dígitos, sem hifens, pontos ou letras
 
-  #TODO
   utter_salic_erros:
     - text: |
           Nesta etapa eu posso responder dúvidas sobre eventuais erros do
@@ -1027,7 +1173,7 @@ templates:
 
   utter_elogios:
     - text: |
-          Obrigada! É sempre bom dar e receber elogios :P 
+          Obrigada! É sempre bom dar e receber elogios :P
 
   utter_processo_reativacao_de_proposta:
     - text: |
@@ -1042,7 +1188,6 @@ templates:
           Basta você entrar no Salic...
           clicar em Administrativo > Cadastrar proponente e preencher todos os dados
 
-  #TODO
   utter_processo_prazo:
     - text: |
           Posso responder suas dúvidas a respeito de Datas
@@ -1064,15 +1209,16 @@ templates:
 
   utter_cumprimentar:
     - text: |
-          Oi, sou assistente virtual do MinC, me chamo Tais.
-          Estou aqui para te ajudar a esclarecer dúvidas sobre a lei de Incentivo à Cultura, conhecida como lei Rouanet.
+          Oi, sou assistente virtual da Secretaria Especial da Cultura, me chamo Tais.
+          Estou aqui para te guiar na inscrição do seu projeto ou esclarecer algumas dúvidas sobre a lei Rouanet,
+          Para saber de quais assuntos podemos conversar. Use e abuse da #MEAJUDA.
 
   utter_o_que_sei_falar:
     - text: |
           Veja alguns dos assuntos que eu posso te ajudar:
           O que é a Lei de Incentivo Culturais e como funciona
           Dúvidas operacionais encontradas durante a execução do projeto cultural (tipo, perdi minha senha no SALIC)
-          
+
           Duvidas sobre Definições, nomenclaturas, e informações relacionadas à lei e ao Ministério da Cultura (MinC)
           Além desses, também sei responder sobre outros assuntos como definições, nomenclaturas, e informações sobre a lei e sobre o MinC
 
@@ -1083,27 +1229,55 @@ templates:
           Obrigada pelo feedback. Espero que na próxima vez vou conseguir responder a tua pergunta corretamente
           Gostaria de fazer uma nova pergunta?
 
+  utter_objetivo:
+    - text: |
+          Mas, antes de tudo, para que a nossa conversa seja mais eficiente,
+          gostaria de te fazer uma pergunta, você já submeteu uma proposta?
+
+  utter_objetivo_siglas:
+    - text: |
+          Se a sua dúvida foi sobre algum desses conceitos, talvez você queira saber mais sobre outras definições.
+          Eu consigo explicar o que é MinC, Salic, Cnic, Sefic, Vinculadas, meu nome (Tais) e quem sou eu.
+          Se você tiver alguma dúvida sobre outra sigla, fique a vontade para perguntar a qualquer momento.
+
+  utter_objetivo_money:
+    - text: |
+          Se a sua pergunta está relacionada sobre as finanças da lei Rouanet, talvez você queira aprofundar seu conhecimento sobre isso.
+          Eu posso te informar sobre benefícios de incentivar, origem do dinheiro, valor máximo de um projeto, bem como seu valor mínimo, remuneração do proponente, comercialização de ingressos, promoção de marca, pagamento de caches e dúvidas sobre captação.
+          Você pode me perguntar sobre esses tópicos quando desejar.
+
+  utter_objetivo_lei_rouanet:
+    - text: |
+          Se você perguntou sobre alguma definição ou curiosidade da lei Rouanet,
+          talvez você tenha interesse de continuar aprendendo sobre os seguintes tópicos:
+          o que é a lei, conceitos básicos como proposta, projeto e proponente.
+          Quem pode ser um proponente e as etapas de aprovação de um projeto.
+          A qualquer momento você pode tirar dúvidas sobre esses assuntos.
+
   utter_manter_conversa:
     - text: |
-          Espero estar te ajudando, você possui mais alguma pergunta?
+          A minha missão é te guiar para a inscrição da sua proposta,
+          Se você já sabe como submeter uma proposta e já fez seu cadastro no salic,
+          é porque você já tem um conhecimento avançado e talvez eu não consiga sanar as suas dúvidas.
+          Se você quiser podemos continuar conversando sobre alguns conceitos básicos da lei Rouanet (:
 
+  utter_continuar_conversa:
+    - text: |
+          Espero estar te ajudando, você possui mais alguma pergunta?
     - text: |
           Em que mais posso te ajudar?
-
     - text: |
           Você tem mais alguma dúvida?
-
     - text: |
           Qual o próximo tema te interessa?
-
     - text: |
           O que mais você deseja saber?
-
     - text: |
           Gostaria te retirar mais alguma dúvida?
-
     - text: |
           Espero ter solucionado a sua dúvida, tem mais alguma dúvida?
+
+    - text: |
 
   utter_despedir:
     - text: |
@@ -1132,15 +1306,13 @@ templates:
 
           Assim que o projeto é publicado no Diário Oficial da União você pode
           começar a captar recursos.
-  #TODO
-  
+
   utter_captacao_como_captar:
     - text: |
           Para captar os recursos você deve achar incetivadores. Assim que o projeto é publicado no Diário Oficial da União você pode
-          começar a captar recursos. 
+          começar a captar recursos.
 
           Esse é parte das atribuições do proponente e não há participação do MinC.
-  #TODO
 
   utter_processo_definicao_etapas:
     - text: |
@@ -1162,21 +1334,33 @@ templates:
           Use e Abuse da #meajuda
 
           E ai, como posso te ajudar?
-  
+
   utter_tudo_bem:
     - text: |
           Tudo bem, obrigada! Em que posso te ajudar?
-  #TODO
-  
+
   utter_salic:
     - text: |
           Posso tirar dúvidas sobre o SALIC, por exemplo, como se cadastrar, como recuperar senha, e sobre alguns erros do sistema.
 
   utter_salic_preenchimento_cadastro_rubrica_advogado_contador:
     - text: |
-          Você deve ir em:
           Orçamento do projeto > Custos por produto > Clicar no produto desejado
           Clicar no Local de realização > por último na aba Assessoria contábil e jurídica.
+
+  utter_introducao_passo_a_passo:
+    - text: |
+          Aqui vai um passo a passo do que você deve fazer:
+
+    - text: |
+          Vou te explicar as etapas do que você deve fazer:
+
+    - text: |
+          Você deve ir em:
+
+    - text: |
+          É só seguir as seguintes instruções:
+
 actions:
   - utter_default
   - utter_restart
@@ -1185,6 +1369,11 @@ actions:
   - utter_menu
   - utter_tudo_bem
   - utter_manter_conversa
+  - utter_continuar_conversa
+  - utter_objetivo
+  - utter_objetivo_siglas
+  - utter_objetivo_money
+  - utter_objetivo_lei_rouanet
   - utter_retorno
   - utter_o_que_sei_falar
   - utter_erro_resposta_utter
@@ -1225,7 +1414,11 @@ actions:
   - utter_lei_rouanet_promocao_de_marca
   - utter_lei_rouanet_valores_pagamento_caches
   - utter_lei_rouanet_etapas_aprovacao_projeto
-  - utter_lei_rouanet_democratizacao
+s  - utter_lei_rouanet_apresentacao_de_proposta
+  - utter_lei_rouanet_analise_de_admissibilidade
+  - utter_lei_rouanet_analise_tecnica
+  - utter_lei_rouanet_analise_pela_cnic
+  - utter_lei_rouanet_decisao_final
 
   - utter_processo
   - utter_processo_reativacao_de_proposta
@@ -1239,6 +1432,7 @@ actions:
   - utter_processo_execucao
   - utter_processo_analise_de_resultados
   - utter_processo_como_funciona
+  - utter_introducao_processo_situacao
   - utter_processo_situacao_processo_A12
   - utter_processo_situacao_processo_A14
   - utter_processo_situacao_processo_A20
@@ -1306,6 +1500,7 @@ actions:
   - utter_processo_situacao_processo_L06
 
   - utter_salic
+  - utter_passo_a_passo
   - utter_salic_preenchimento_cadastro_rubrica_advogado_contador
   - utter_salic_preenchimento
   - utter_salic_preenchimento_campo_custo_auditoria

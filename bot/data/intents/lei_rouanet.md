@@ -366,6 +366,35 @@
  - decisao final proposta
  - etapas analise proposta
 
+## intent:lei_rouanet_apresentacao_de_proposta
+ - #apresentaçãodeproposta
+ - #apresentcaodeproposta
+ - apresentaçãodeproposta
+ - apresentcaodeproposta
+
+## intent:lei_rouanet_analise_de_admissibilidade
+ - #análisedeadmissibilidade
+ - #analisedeadmissibilidade
+ - análisedeadmissibilidade
+ - analisedeadmissibilidade
+
+## intent:lei_rouanet_analise_tecnica
+ - #análisetécnica
+ - #analisetecnica
+ - análisetécnica
+ - analisetecnica
+
+## intent:lei_rouanet_analise_pela_cnic
+ - #análisepelacnic
+ - #analisepelacnic
+ - análisepelacnic
+ - analisepelacnic
+
+## intent:lei_rouanet_decisao_final
+ - #decisãofinal
+ - #decisaofinal
+ - decisãofinal
+ - decisaofinal
 
  ## intent:lei_rouanet_valor_maximo_projeto
  - tem valor maximo de projetos
