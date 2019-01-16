@@ -100,7 +100,7 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* utter_lei_rouanet_denuncia
+* lei_rouanet_denuncia
     - utter_lei_rouanet_denuncia
     - utter_continuar_conversa
 
@@ -166,7 +166,7 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* utter_lei_rouanet_denuncia
+* lei_rouanet_denuncia
     - utter_lei_rouanet_denuncia
     - utter_continuar_conversa
 
@@ -221,7 +221,7 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* utter_lei_rouanet_denuncia
+* lei_rouanet_denuncia
     - utter_lei_rouanet_denuncia
     - utter_continuar_conversa
 
@@ -265,7 +265,7 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* utter_lei_rouanet_denuncia
+* lei_rouanet_denuncia
     - utter_lei_rouanet_denuncia
     - utter_continuar_conversa
 
@@ -298,7 +298,7 @@
     - utter_objetivo
 * afirmar
     - utter_manter_conversa
-* utter_lei_rouanet_denuncia
+* lei_rouanet_denuncia
     - utter_lei_rouanet_denuncia
     - utter_continuar_conversa
 

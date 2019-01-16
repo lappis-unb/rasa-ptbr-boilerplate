@@ -355,46 +355,16 @@
     - utter_captacao_quando_captar
     - utter_continuar_conversa
 
-## Money 10
-* cumprimentar
-    - utter_cumprimentar
-* lei_rouanet_valor_minimo
-    - utter_lei_rouanet_valor_minimo
-    - utter_objetivo_money
-    - utter_objetivo
-* afirmar
-    - utter_manter_conversa
-
-## Money 10.1
-* cumprimentar
-    - utter_cumprimentar
-* lei_rouanet_valor_minimo
-    - utter_lei_rouanet_valor_minimo
-    - utter_objetivo_money
-    - utter_objetivo
-
-
-## Money 10.2
-* cumprimentar
-    - utter_cumprimentar
-* lei_rouanet_valor_minimo
-    - utter_lei_rouanet_valor_minimo
-    - utter_objetivo_money
-    - utter_objetivo
-
-
-## Money 10.3
-* cumprimentar
-    - utter_cumprimentar
-* lei_rouanet_valor_minimo
-    - utter_lei_rouanet_valor_minimo
-    - utter_objetivo_money
-    - utter_objetivo
 
 ## Money 11
 * cumprimentar
     - utter_cumprimentar
-* lei_rouanet_valor_maximo_regiao
+* lei_rouanet_valor_maximo_projeto
+    - utter_valor_maximo_projeto
+* lei_rouanet_valor_maximo_geral
+    - utter_lei_rouanet_valor_minimo
+    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_pessoa_juridica
     - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
@@ -404,7 +374,12 @@
 ## Money 11.1
 * cumprimentar
     - utter_cumprimentar
-* lei_rouanet_valor_maximo_regiao
+* lei_rouanet_valor_maximo_projeto
+    - utter_valor_maximo_projeto
+* lei_rouanet_valor_maximo_geral
+    - utter_lei_rouanet_valor_minimo
+    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_pessoa_juridica
     - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
@@ -418,7 +393,12 @@
 ## Money 11.2
 * cumprimentar
     - utter_cumprimentar
-* lei_rouanet_valor_maximo_regiao
+* lei_rouanet_valor_maximo_projeto
+    utter_valor_maximo_projeto
+* lei_rouanet_valor_maximo_geral
+    - utter_lei_rouanet_valor_minimo
+    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_pessoa_juridica
     - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
@@ -433,7 +413,12 @@
 ## Money 11.3
 * cumprimentar
     - utter_cumprimentar
-* lei_rouanet_valor_maximo_regiao
+* lei_rouanet_valor_maximo_projeto
+    - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_geral
+    - utter_lei_rouanet_valor_minimo
+    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_pessoa_juridica
     - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
@@ -447,6 +432,10 @@
     - utter_cumprimentar
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_minimo
+    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
 * afirmar
@@ -457,6 +446,11 @@
     - utter_cumprimentar
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_
+    - utter_lei_rouanet_valor_minimo
+    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
 * negar
@@ -465,12 +459,17 @@
     - utter_cadastro_salic_video
 * negar
     - utter_manter_conversa
+    
 
 ## Money 12.2
 * cumprimentar
     - utter_cumprimentar
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_minimo
+    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+    - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
 * negar
@@ -486,6 +485,10 @@
     - utter_cumprimentar
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
+* lei_rouanet_valor_maximo_pessoa_fisica
+     - utter_lei_rouanet_valor_minimo
+     - utter_lei_rouanet_valor_maximo_pessoa_fisica
+     - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
 * negar
@@ -498,8 +501,10 @@
     - utter_cumprimentar
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
-* lei_rouanet_valor_maximo_pessoa_fisica
-    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+* lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_minimo
+    - utter_lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
 * afirmar
@@ -510,8 +515,10 @@
     - utter_cumprimentar
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
-* lei_rouanet_valor_maximo_pessoa_fisica
-    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+* lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_minimo
+    - utter_lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
 * negar
@@ -520,15 +527,16 @@
     - utter_cadastro_salic_video
 * negar
     - utter_manter_conversa
-    
 
 ## Money 13.2
 * cumprimentar
     - utter_cumprimentar
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
-* lei_rouanet_valor_maximo_pessoa_fisica
-    - utter_lei_rouanet_valor_maximo_pessoa_fisica
+* lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_minimo
+    - utter_lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
 * negar
@@ -544,67 +552,10 @@
     - utter_cumprimentar
 * lei_rouanet_valor_maximo_projeto
     - utter_lei_rouanet_valor_maximo_projeto
-* lei_rouanet_valor_maximo_pessoa_fisica
-    - utter_lei_rouanet_valor_maximo_pessoa_fisica
-    - utter_objetivo_money
-    - utter_objetivo
-* negar
-    - utter_processo_como_funciona
-* afirmar
-    - utter_manter_conversa
-
-## Money 14
-* cumprimentar
-    - utter_cumprimentar
-* lei_rouanet_valor_maximo_projeto
-    - utter_lei_rouanet_valor_maximo_projeto
 * lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_minimo
     - utter_lei_rouanet_valor_maximo_pessoa_juridica
-    - utter_objetivo_money
-    - utter_objetivo
-* afirmar
-    - utter_manter_conversa
-
-## Money 14.1
-* cumprimentar
-    - utter_cumprimentar
-* lei_rouanet_valor_maximo_projeto
-    - utter_lei_rouanet_valor_maximo_projeto
-* lei_rouanet_valor_maximo_pessoa_juridica
-    - utter_lei_rouanet_valor_maximo_pessoa_juridica
-    - utter_objetivo_money
-    - utter_objetivo
-* negar
-    - utter_processo_como_funciona
-* negar
-    - utter_cadastro_salic_video
-* negar
-    - utter_manter_conversa
-
-## Money 14.2
-* cumprimentar
-    - utter_cumprimentar
-* lei_rouanet_valor_maximo_projeto
-    - utter_lei_rouanet_valor_maximo_projeto
-* lei_rouanet_valor_maximo_pessoa_juridica
-    - utter_lei_rouanet_valor_maximo_pessoa_juridica
-    - utter_objetivo_money
-    - utter_objetivo
-* negar
-    - utter_processo_como_funciona
-* negar
-    - utter_cadastro_salic_video
-* afirmar
-   - utter_salic_cadastro_usuario
-   - utter_manter_conversa
-
-## Money 14.3
-* cumprimentar
-    - utter_cumprimentar
-* lei_rouanet_valor_maximo_projeto
-    - utter_lei_rouanet_valor_maximo_projeto
-* lei_rouanet_valor_maximo_pessoa_juridica
-    - utter_lei_rouanet_valor_maximo_pessoa_juridica
+    - utter_lei_rouanet_valor_maximo_regiao
     - utter_objetivo_money
     - utter_objetivo
 * negar
