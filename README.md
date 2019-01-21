@@ -1,16 +1,7 @@
-# Tais - Assistente Virtual da Cultura
+# Rasa Boilerplate
 
-A Taís é uma assistente virtual desenvolvida pelo LAPPIS - Laboratório Avançado
-de Produção, Pesquisa e Inovação em Software (FGA/UnB), em parceria com o
-Ministério da Cultura.
-
-O nome é uma sigla para Tecnologia de Aprendizado Interativo do Salic.
-Ela tem como objetivo ajudar cidadãs e cidadãos a tirar dúvidas sobre a lei
-Rouanet e sobre o incentivo a projetos culturais.
-
-
-
-
+Um projeto feito em Rasa com configurações necessárias para a construção
+de um projeto grande de chatbot.
 
 ## Bot
 
@@ -34,14 +25,14 @@ Condition: Visitor time on site
     Value: 3
 Action: Send Message
  Value: Impersonate next agent from queue
- Value: Olá, meu nome é Taís, sou assistente virtual do MinC! Você quer conversar sobre incentivo à cultura? 
+ Value: Olá!
 ```
 
-O valor `http://localhost:8080/` deve ser a URL de acesso da Taís.
+O valor `http://localhost:8080/` deve ser a URL de acesso do Bot.
 
 #### Instalação
 
-Para colocar a Taís em um site você precisa inserir o seguinte Javascript na sua página
+Para executar o bot em um site você precisa inserir o seguinte Javascript na sua página
 
 ```js
 <!-- Start of Rocket.Chat Livechat Script -->

@@ -28,11 +28,8 @@
 - obrigada
 - obrigado
 - obj
-- obrigada, tais
-- tais, obrigado
 
 ## intent:cumprimentar
-- ola tais, como vai
 - oi, tudo bem
 - como vai
 - oi, como vai voce
@@ -42,7 +39,6 @@
 - posso falar com voce
 - pode me tirar uma duvida
 - gostaria de tirar uma duvida
-- ola tais
 - to bem
 - tranquilo
 - estou bem
@@ -58,7 +54,7 @@
 - ola boa tarde
 
 ## intent:elogios
-- Tais, você é muito educada!
+- Você é muiteducado!
 - Adorei
 - Me ajudou muito
 - vc eh linda
@@ -142,15 +138,9 @@
 - erro
 - #erou
 - #errado
-- a tais errou
-- bot burro
-- burro
-- burra
-- tais burra
 
 ## intent:tudo_bem
 - Tudo bem
-- Oi Tais. Tudo bem
 - Como vocês esta
 - como ta
 - joia
@@ -159,11 +149,9 @@
 - bom dia flor do dia
 - Tudo bem e você
 - como vc esta
-- oi tais. como vai vc
-- ola tais. tudo bem
--  como vai
+- como vai
 
-## intent:quem_eh_a_tais
+## intent:quem_eh_voce
 - Quem te criou? 
 - Quem te desenvolveu? 
 - quem é voce
@@ -180,14 +168,11 @@
 - qual o seu papel no ministerio
 - o que faz para o minc
 - me fale sobre voce
-- Tais, me fale sobre vc
 - qual sua tecnologia
 - qual seu pai
 - onde voce nasceu
 - quando vc nasceu
 - vc é homem ou mulher
 - você é um robo
-- Tais
-- Taís
 - vc é um humano
 - você eh um robo
