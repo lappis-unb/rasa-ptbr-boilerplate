@@ -53,21 +53,6 @@
 - Me ajudou muito
 - vc eh linda
 
-## intent:afirmar
-- se não for incomodo
-- claro que sim
-- posso sim
-- gostaria sim
-- quero
-- por favor
-- tudo bem
-- já
-- sim
-- ok
-- claro
-- confirmo
-- mais ou menos
-
 ## intent:negar
 - não sei onde a minha pergunta se encaixa
 - nao quero saber mais

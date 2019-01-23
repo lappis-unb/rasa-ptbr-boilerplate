@@ -64,12 +64,6 @@
 - conte-me uma [piada](joke)
 - manda uma [piada](joke) ai
 
-## intent:name
-- Qual o seu [nome](name)?
-- Como você se [chama](name)?
-- Qual o seu [nome](name) completo?
-- [nome](name)
-
 ## intent:license
 - qual e a sua [licença](license)
 - qual e a sua [licenca](license)
@@ -153,36 +147,11 @@
 - [toalha](towel)
 - Qual a utilidade da [toalha](towel)?
 
-## intent:book
-- Lino, qual o seu [livro](book) predileto?
-- Qual o seu [livro](book) favorito?
-- Qual [livro](book) você gosta?
-- Me indica um [livro](book)
-- Qual [livro](book) é bom?
-
-## intent:weather
-- Lino, fale sobre o [clima](weather) de hoje?
-- Como está o [clima](weather) hoje?
-- Como está o [tempo](weather) hoje?
-- [clima](weather) hoje
-- [tempo](weather) hoje
-- Fale sobre o [clima](weather) de hoje 
-- [metereologia](weather)
-- condições [metereologicas](weather)
-
 ## intent:where_r_u_from
 - de onde você é?
 - onde você [nasceu](where)?
 - onde voce [nasceu](where)?
 - qual a sua [natalidade](where)?
-
-## intent:creators
-- Quem são os seus [criadores](creators)?
-- Você foi feito por quem?
-- Quem são seus [desenvolvedores](creators)?
-- Quem [te fez](creators)?
-- Como você [surgiu](creators)?
-- Quem são [seus pais](creators)?
 
 ## intent:relationship
 - Você tem [namorado](relationship)?

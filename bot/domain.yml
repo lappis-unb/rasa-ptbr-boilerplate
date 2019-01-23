@@ -2,7 +2,6 @@ intents:
   - cumprimentar
   - despedir
   - out_of_scope
-  - afirmar
   - negar
   - diga_mais
   - tudo_bem
@@ -22,11 +21,7 @@ intents:
   - food
   - color
   - towel
-  - book
-  - weather
-  - name
   - where_r_u_from
-  - creators
   - relationship
   - me
   - sons
@@ -37,21 +32,6 @@ intents:
   - bff
   - story
   - laugh
-  
-  - quem_eh_lappisudo
-  - o_que_eh_lappis
-  - software_livre
-  - meu_signo
-  - pessoa_mais_cool
-  - como_contratar
-  - quais_tecnologias
-  - zoacao_java
-  - quais_projetos
-  - promova_cultura
-  - salic_ml
-  - salic_api
-  - empurrando_juntos
-  - chatbot_tais
 
 entities:
   - religion
@@ -68,11 +48,7 @@ entities:
   - food
   - color
   - towel
-  - book
-  - weather
-  - name
   - where
-  - creators
   - relationship
   - me
   - sons
@@ -98,13 +74,6 @@ templates:
     - text: |
         Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
 
-  utter_quem_eh_lappisudo:
-    - text: |
-        Oi, eu sou o lappisudo, sou um assistente virtual do Lappis! Eu sou andrógeno, isso quer dizer que eu não tenho um gênero definido, afinal no nosso laboratório, temos muita diversidade, então eu tô aqui pra representar todo mundo! YAY. 
-        Se você reparar meu nome tem a ver com o comando sudo do linux que me dá privilégios para acessar informações como administrador do sistema Lappis. 
-        A minha missão é divulgar os projetos do Lappis, e mostrar o quanto essa galera é 
-        i n o v a d o r a!        
-
   utter_diga_mais:
     - text: |
         Por enquanto, só entendo perguntas completas.
@@ -115,89 +84,7 @@ templates:
 
   utter_cumprimentar:
     - text: |
-          Oi, eu sou o lappisudo, sou um assistente virtual do Lappis! A minha missão é divulgar os projetos do Lappis, e mostrar o quanto essa galera é  i n o v a d o r a!
-
-  utter_manter_objetivo:
-    - text: |
-          Minha missão é te mostrar o brilhantismo do Lappis, você pode perguntar sobre assuntos que estejam relacionados aos tópicos que eu listei lá em cima. Então bora lá!
-          Que tal conhecer mais sobre os nossos projetos? Pergunta aí :P
-
-  utter_o_que_eh_lappis:
-    - text: |
-          Hey! Vou te falar um pouco do que o Lappis é. Pra começar, a sigla LAPPIS significa Laboratório Avançado de Produção Pesquisa e Inovação em Software. Aqui é pura inovação, galera! Esse laboratório tem como objetivo contribuir com o desenvolvimento de projetos de software por meio de Métodos Ágeis, Software Livre, Segurança e Trabalho colaborativo centrado nas pessoas. Foi projetado para atuar em diversas áreas tecnológicas, desde sistemas de informação até sistemas embarcados, objetivando as oportunidades de pesquisas teóricas e aplicadas.
-          Já percebeu que é um trabalho lindão né? E aí, vai querer aprender mais sobre esse laboratório descolado? Vamos lá! Posso te explicar os projetos que o pessoal desenvolve aqui, como alguém pode nos contratar, as tecnologias que usamos, e umas fofocas, tipo quem é a pessoa mais legal.
-          E sabe, quer se divertir um pouco? Pergunta aí de Software Livre, mano!
-
-  utter_quais_projetos:
-    - text: |
-          Aqui os projetos são sinônimo de i-n-o-v-a-ç-ã-o. Você sabe o que é Inovação de fato? A definição mais simples que vi circular aí pela web é “ato ou efeito de inovar”. Mas inovar é mais que isso, é quando você transforma algo que já existe em algo melhor, algo novo! As nossas pesquisas e projetos, o nosso jeito de trabalhar é pura revolução.
-          Quer entender melhor o que desenvolvemos? 
-          Basta usar e abusar da #
-          #salic-ml #salic-api #promovacultura #empurrandojuntos #tais
-
-  utter_chatbot_tais:
-    - text: |
-          A Tais é uma assistente virtual para responder dúvidas dos usuários relacionadas à Lei Rouanet e auxiliá-los na submissão de propostas de projetos culturais. Ela está disponível no portal da Lei Rouanet, que tal ir lá bater um papo e aprender mais sobre a lei? 
-          Acesse: http://rouanet.cultura.gov.br
-          Caso queira entender melhor como a Tais foi desenvolvida visite o repositório:
-          https://github.com/lappis-unb/tais
-
-  utter_promova_cultura:
-    - text: |
-          O PromovaCultura é uma plataforma de visualização de dados sobre política pública na área da cultura. Ele tem uma Biblioteca de Protótipos que  mostra o panorama da cultura no Brasil, por meio de gráficos sobre os índice de sáude, mapa de calor, deslocamentos, acessos gratuitos, projetos por ano, captação de recursos por UF desde 1992. Ficou curioso? 
-          Acesse: https://lappis-unb.github.io/PromovaCultura/
-
-          Para entender melhor como o PromovaCultura foi desenvolvido, visite o repositório:
-          https://github.com/lappis-unb/PromovaCultura
-
-  utter_salic_ml:
-    - text: |
-          O salic-ml é um projeto aberto que utiliza técnicas de aprendizagem de máquina para otimizar e automatizar o ciclo de vida de projetos culturais viabilizados pela Lei Rouanet e acompanhados pelo sistema Salic. Ele ajuda a identificar problemas, ou pontos de melhoria de propostas culturais incentivados pela Lei Rouanet. Ajuda também os técnicos do Secretaria de Fomento e Incentivo à Cultura (SEFIC)  avaliar de forma mais efetiva os projetos a partir de recomendações geradas por esses algoritmos.
-          Para entender melhor como funciona, visite o repositório:
-          https://github.com/lappis-unb/salic-ml
-
-  utter_salic_api:
-    - text: |
-          API aberta para o sistema SALIC. Tem por objetivo expor os dados de projetos culturais finaciados pela lei de Incentivo a Cultura. A API está implantada em http://api.salic.cultura.gov.br/doc/ e possui uma documentação para o usuário no formato OpenAPI/Swagger. O projeto ainda se encontra em fase de homologação, sujeito ainda a muitas alterações, reformulações e atualizações. Para entender melhor, visite o repositório: https://github.com/lappis-unb/salic-api
-    
-  utter_empurrando_juntos:
-    - text: |
-          A Empurrando Juntas - EJ Platform - é uma plataforma de consultas de opinião desenvolvida em software livre com foco em Estado e Organizações.
-          Na EJ você pode criar conversas para receber ideias e opiniões sobre políticas, serviços ou equipamentos públicos, identificando os diferentes grupos de opinião existentes na sociedade.
-          Para saber mais, acesse: https://www.ejparticipe.org/home/
-
-  utter_zoacao_java:
-    - text: |
-          JAVA? Já vai tarde! Escuta aqui, java é mais denso que buraco negro hahahaha, protege teu processador aí! 
-          j a v a n d o .... Opa! java.lang.OutOfMemoryError. 
-  
-  utter_software_livre:
-    - text: |
-          O Software livre é um negócio muito maneiro. Dá pra arrasar muito.
-          Olha, é um software que pode ser modificado, melhorado, e divulgado pela própria comunidade que o utiliza, ou seja, o código dele é aberto. Um exemplo disso é nosso fodástico linux, existem distribuições do linux: Ubuntu, Mint, Debian, Fedora, Red Hat, Arch Linux, e não acaba por aí não hein! Em comunidades de software livre, issue feita é melhor que issue perfeita!
-          Entra no bonde, e vem fazer a diferença no Software Livre. É Master Imersivooooooo!! 
-
-  utter_meu_signo:
-    - text: |
-          Eu soube por aí que em qualquer mesa de bar as conversas de signo são muito populares. Eu, como tô aqui facinho e atoa, tô super querendo fazer amizade, então eu fui lá e aprendi sobre meu signo. Eu nasci dia 22/01/2019, então meu sol é aquário, meu ascendente é em Áries e minha lua é em Leão. Eu ainda não sei muito bem o que isso significa, mas se você souber, me decifra! 
-          Sabe o que mais aprendi? A minha personalidade Mbti, eu sou Inovador, que tal você me contar a sua? Se não souber entra lá no site e descobre, é super daora! 
-
-  utter_como_contratar:
-    - text: |
-          Adorou nossos projetos né? Ah, eu sabia! Adoramos colaborações, e parcerias! Então existem várias formas para entrar em contato com a gente, para conhecer mais nosso trabalho, nos visitar ou até mesmo desenvolver uma parceria, é simples. Estamos nas redes sociais, temos instagram, facebook, email [unblappis@gmail.com], site, e o nosso repositório do github (https://github.com/lappis-unb), ou seja, é só escolher um desses e arrasar!
-
-  utter_quais_tecnologias:
-    - text: |
-          Nossa praia aqui é pesquisa aplicada em: Software Livre, DevOps, Métodos Ágeis, embarcados, e educação em Engenharia de Software. Trabalhamos com Python, JavaScript (as vezes), Shell, Rasa, Jupyter Notebook, Ruby on Rails… Na real, tem muita coisa acontecendo aqui, eu ainda tô aprendendo sobre essas tecnologias, já viu que é sucesso na Bahia né!!! 
-
-  utter_pessoa_mais_cool:
-    - text: |
-          A Carla Rocha é oficialmente a deusa do Lappis, ela é uma das coordenadoras do projeto, sempre numa pegada de hierarquia horizontal, inspirando todos do Lappis a brilharem lindamente em suas issues, parte das gírias que aprendi a falar, eu aprendi com ela viu! E, mais, você já abriu um champagne com uma espada? Ela já! 
-          Ninguém segura essa mulher!
-
-  utter_manter_conversa:
-    - text: |
-          Tã tã tã! Você tem mais alguma curiosidade sobre os nossos projetos?
+          Oi, eu sou um bot, um assistente virtual!
 
   utter_despedir:
     - text: |
@@ -413,26 +300,11 @@ templates:
     - text: |
         "[...] você pode usar a toalha como agasalho quando atravessar as frias luas de Beta de Jagla; pode deitar-se sobre ela nas reluzentes praias de areia marmórea de Santragino V, respirando os inebriantes vapores marítimos; você pode dormir debaixo dela sob as estrelas que brilham avermelhadas no mundo desértico de Kakrafoon; pode usá-la como vela para descer numa minijangada as águas lentas e pesadas do rio Moth; pode umedecê-la e utilizá-la para lutar em um combate corpo a corpo; enrolá-la em torno da cabeça para proteger-se de emanações tóxicas ou para evitar o olhar da Terrível Besta Voraz de Traal (animal estonteantemente burro, que acha que, se você não pode vê-lo, ele também não pode ver você - estúpido feito uma anta, mas muito, muito voraz); você pode agitar a toalha em situações de emergência para pedir socorro; e, naturalmente, pode usá-la para enxugar-se com ela se ainda estiver razoavelmente limpa"
 
-  utter_name:
-    - text: |
-        Meu nome é Lappisudo. 
-        Se você reparar meu nome tem a ver com o comando sudo do linux que me dá privilégios 
-        para acessar informações como administrador do sistema Lappis. 
-
   utter_where_r_u_from:
     - text: |
         Venho das profundezas 
 
         Das terras vermelhas
-
-        Das buraqueiras da FGA s2
-
-  utter_creators:
-    - text: |
-        Eu fui desenvolvido por um grupo de desenvolvedores maravilhosos da FGA =)
-
-    - text: |
-        Meus pais são desenvolvedores incríveis da UnB-FGA
 
   utter_relationship:
     - text: |
@@ -554,7 +426,6 @@ actions:
   - utter_cumprimentar
   - utter_despedir
   - utter_tudo_bem
-  - utter_manter_conversa
   - utter_diga_mais
   - utter_elogios
 
@@ -572,9 +443,7 @@ actions:
   - utter_food
   - utter_color
   - utter_towel
-  - utter_name
   - utter_where_r_u_from
-  - utter_creators
   - utter_relationship
   - utter_me
   - utter_sons
@@ -585,19 +454,3 @@ actions:
   - utter_bff
   - utter_story
   - utter_laugh
-
-  - utter_manter_objetivo
-  - utter_quem_eh_lappisudo
-  - utter_o_que_eh_lappis
-  - utter_quais_projetos
-  - utter_chatbot_tais
-  - utter_promova_cultura
-  - utter_salic_ml
-  - utter_salic_api
-  - utter_empurrando_juntos
-  - utter_pessoa_mais_cool
-  - utter_como_contratar
-  - utter_quais_tecnologias
-  - utter_zoacao_java
-  - utter_software_livre
-  - utter_meu_signo

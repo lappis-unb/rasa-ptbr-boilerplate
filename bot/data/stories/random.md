@@ -57,19 +57,10 @@
 * towel
 - utter_towel
 
-## path_name
-* name
-- utter_name
-
 ## path_where_r_u_from
 * where_r_u_from
 - utter_where_r_u_from
 
-## path_creators
-* creators
-- utter_creators
-
-## path_relationship
 * relationship
 - utter_relationship
 

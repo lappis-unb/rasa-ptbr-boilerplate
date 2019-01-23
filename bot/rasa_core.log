@@ -467,3 +467,110 @@ There is a memorised next action '0'
 Predicted next action using policy_1_MemoizationPolicy
 Predicted next action 'action_listen' with prob 1.00.
 Action 'action_listen' ended with events '[]'
+Rasa process starting
+/usr/local/lib/python3.6/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/nlu/current/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+Restoring parameters from models/nlu/current/intent_classifier_tensorflow_embedding.ckpt
+/usr/local/lib/python3.6/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'oi' with intent '{'name': 'cumprimentar', 'confidence': 0.820499062538147}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_cumprimentar': 1.0}]
+There is a memorised next action '4'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_cumprimentar' with prob 1.00.
+Action 'utter_cumprimentar' ended with events '[]'
+Bot utterance 'BotUttered(text: Oi, eu sou um bot, um assistente virtual!
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_listen': 1.0, 'intent_cumprimentar': 1.0}, {'prev_utter_cumprimentar': 1.0, 'intent_cumprimentar': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'tudo bem?' with intent '{'name': 'tudo_bem', 'confidence': 0.9257047176361084}' and entities '[]'
+Logged UserUtterance - tracker now has 6 events
+Current slot values: 
+
+Current tracker state [{'prev_utter_cumprimentar': 1.0, 'intent_cumprimentar': 1.0}, {'intent_tudo_bem': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '6'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_tudo_bem' with prob 1.00.
+Action 'utter_tudo_bem' ended with events '[]'
+Bot utterance 'BotUttered(text: Tudo bem, obrigada! Em que posso te ajudar?
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_tudo_bem': 1.0, 'prev_action_listen': 1.0}, {'intent_tudo_bem': 1.0, 'prev_utter_tudo_bem': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'adorei' with intent '{'name': 'elogios', 'confidence': 0.9046992063522339}' and entities '[]'
+Logged UserUtterance - tracker now has 10 events
+Current slot values: 
+
+Current tracker state [{'intent_tudo_bem': 1.0, 'prev_utter_tudo_bem': 1.0}, {'intent_elogios': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '8'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_elogios' with prob 1.00.
+Action 'utter_elogios' ended with events '[]'
+Bot utterance 'BotUttered(text: Obrigada! É sempre bom dar e receber elogios :P
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_elogios': 1.0, 'prev_action_listen': 1.0}, {'intent_elogios': 1.0, 'prev_utter_elogios': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'flw' with intent '{'name': 'despedir', 'confidence': 0.8777105808258057}' and entities '[]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+
+Current tracker state [{'intent_elogios': 1.0, 'prev_utter_elogios': 1.0}, {'prev_action_listen': 1.0, 'intent_despedir': 1.0}]
+There is a memorised next action '5'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'utter_despedir' with prob 1.00.
+Action 'utter_despedir' ended with events '[]'
+Bot utterance 'BotUttered(text: Foi um prazer te ajudar!
+Sempre que tiver alguma dúvida, volte aqui!
+Até logo!
+, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_listen': 1.0, 'intent_despedir': 1.0}, {'prev_utter_despedir': 1.0, 'intent_despedir': 1.0}]
+There is a memorised next action '0'
+Predicted next action using policy_1_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
