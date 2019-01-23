@@ -52,6 +52,9 @@
         - utter_manter_conversa
 
 ## path 3
+* cumprimentar
+    - utter_cumprimentar
+    - utter_manter_objetivo
 * pessoa_mais_cool
     - utter_pessoa_mais_cool
     - utter_manter_conversa
@@ -394,3 +397,48 @@
     - utter_manter_conversa
 * meu_signo
     - utter_meu_signo
+
+## path 38
+* quem_eh_lappisudo
+    - utter_quem_eh_lappisudo
+    - utter_manter_conversa
+
+## path 39
+* o_que_eh_lappis
+    - utter_o_que_eh_lappis
+    - utter_manter_conversa
+
+## path 40
+* pessoa_mais_cool
+    - utter_pessoa_mais_cool
+    - utter_manter_conversa
+
+## path 41
+* como_contratar
+    - utter_como_contratar
+    - utter_manter_conversa
+
+## path 42
+* quais_tecnologias
+    - utter_quais_tecnologias
+    - utter_manter_conversa
+
+## path 43
+* zoacao_java
+    - utter_zoacao_java
+    - utter_manter_conversa
+
+## path 44
+* software_livre
+    - utter_software_livre
+    - utter_manter_conversa
+
+## path 8
+* meu_signo
+    - utter_meu_signo
+    - utter_manter_conversa
+
+## path 45
+* quais_projetos
+    - utter_quais_projetos
+    - utter_manter_conversa

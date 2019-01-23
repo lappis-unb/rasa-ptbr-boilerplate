@@ -57,14 +57,6 @@
 * towel
 - utter_towel
 
-## path_book
-* book
-- utter_book
-
-## path_weather
-* weather
-- utter_weather
-
 ## path_name
 * name
 - utter_name

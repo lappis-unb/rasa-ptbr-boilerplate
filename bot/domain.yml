@@ -413,27 +413,11 @@ templates:
     - text: |
         "[...] você pode usar a toalha como agasalho quando atravessar as frias luas de Beta de Jagla; pode deitar-se sobre ela nas reluzentes praias de areia marmórea de Santragino V, respirando os inebriantes vapores marítimos; você pode dormir debaixo dela sob as estrelas que brilham avermelhadas no mundo desértico de Kakrafoon; pode usá-la como vela para descer numa minijangada as águas lentas e pesadas do rio Moth; pode umedecê-la e utilizá-la para lutar em um combate corpo a corpo; enrolá-la em torno da cabeça para proteger-se de emanações tóxicas ou para evitar o olhar da Terrível Besta Voraz de Traal (animal estonteantemente burro, que acha que, se você não pode vê-lo, ele também não pode ver você - estúpido feito uma anta, mas muito, muito voraz); você pode agitar a toalha em situações de emergência para pedir socorro; e, naturalmente, pode usá-la para enxugar-se com ela se ainda estiver razoavelmente limpa"
 
-  utter_book:
-    - text: |
-        Os três lininhos!
-
-        Esse livro é TOP
-
-    - text: |
-        Neuromancer
-
-  utter_weather:
-    - text: |
-        O clima hoje tá bom pra guaxinim!!!
-
-    - text: |
-        WOW!!!
-
-        O tempo está lindo hoje =)
-
   utter_name:
     - text: |
-        Meu nome é Lino Lineuzinho Bilu de Teste
+        Meu nome é Lappisudo. 
+        Se você reparar meu nome tem a ver com o comando sudo do linux que me dá privilégios 
+        para acessar informações como administrador do sistema Lappis. 
 
   utter_where_r_u_from:
     - text: |
@@ -588,8 +572,6 @@ actions:
   - utter_food
   - utter_color
   - utter_towel
-  - utter_book
-  - utter_weather
   - utter_name
   - utter_where_r_u_from
   - utter_creators
