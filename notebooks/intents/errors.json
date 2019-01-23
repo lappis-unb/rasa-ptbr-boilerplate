@@ -1,0 +1,116 @@
+{
+    "intent_errors": [
+        {
+            "text": "software livre",
+            "intent": "license",
+            "intent_prediction": {
+                "name": "software_livre",
+                "confidence": 0.8758267164230347
+            }
+        },
+        {
+            "text": "e o c#",
+            "intent": "languages",
+            "intent_prediction": {
+                "name": "",
+                "confidence": 0.0
+            }
+        },
+        {
+            "text": "Tudo bem?",
+            "intent": "its_ok",
+            "intent_prediction": {
+                "name": "afirmar",
+                "confidence": 0.6227023005485535
+            }
+        },
+        {
+            "text": "onde voce nasceu?",
+            "intent": "where_r_u_from",
+            "intent_prediction": {
+                "name": "quem_eh_voce",
+                "confidence": 0.7670958042144775
+            }
+        },
+        {
+            "text": "Quem te fez?",
+            "intent": "creators",
+            "intent_prediction": {
+                "name": "o_que_eh_lappis",
+                "confidence": 0.8802075982093811
+            }
+        },
+        {
+            "text": "Qual o seu signo?",
+            "intent": "sign",
+            "intent_prediction": {
+                "name": "meu_signo",
+                "confidence": 0.7709224820137024
+            }
+        },
+        {
+            "text": "chatbot",
+            "intent": "quem_eh_lappisudo",
+            "intent_prediction": {
+                "name": "quem_eh_voce",
+                "confidence": 0.8417193293571472
+            }
+        },
+        {
+            "text": "signo",
+            "intent": "meu_signo",
+            "intent_prediction": {
+                "name": "sign",
+                "confidence": 0.7748193740844727
+            }
+        },
+        {
+            "text": "java",
+            "intent": "zoacao_java",
+            "intent_prediction": {
+                "name": "languages",
+                "confidence": 0.7685664892196655
+            }
+        },
+        {
+            "text": "como vai",
+            "intent": "cumprimentar",
+            "intent_prediction": {
+                "name": "tudo_bem",
+                "confidence": 0.7766595482826233
+            }
+        },
+        {
+            "text": "tudo bom",
+            "intent": "cumprimentar",
+            "intent_prediction": {
+                "name": "tudo_bem",
+                "confidence": 0.777603030204773
+            }
+        },
+        {
+            "text": "Tudo bem",
+            "intent": "tudo_bem",
+            "intent_prediction": {
+                "name": "afirmar",
+                "confidence": 0.6227023005485535
+            }
+        },
+        {
+            "text": "Quem te criou?",
+            "intent": "quem_eh_voce",
+            "intent_prediction": {
+                "name": "o_que_eh_lappis",
+                "confidence": 0.8640211820602417
+            }
+        },
+        {
+            "text": "Quem te desenvolveu?",
+            "intent": "quem_eh_voce",
+            "intent_prediction": {
+                "name": "o_que_eh_lappis",
+                "confidence": 0.8942159414291382
+            }
+        }
+    ]
+}
