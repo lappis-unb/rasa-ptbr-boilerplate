@@ -12,16 +12,6 @@
 * tudo_bem
     - utter_tudo_bem
 
-## Oi Quem e tais 1
-* cumprimentar
-    - utter_cumprimentar
-* quem_eh_a_tais
-    - utter_chatbot_tais
-
-## Oi Quem e tais 2
-* quem_eh_a_tais
-    - utter_chatbot_tais    
-
 ## Nao entendi
 * diga_mais
     - utter_diga_mais  
@@ -62,9 +52,6 @@
         - utter_manter_conversa
 
 ## path 3
-* cumprimentar
-    - utter_cumprimentar
-    - utter_manter_objetivo
 * pessoa_mais_cool
     - utter_pessoa_mais_cool
     - utter_manter_conversa

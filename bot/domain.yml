@@ -5,7 +5,6 @@ intents:
   - afirmar
   - negar
   - diga_mais
-  - erro_resposta_utter
   - tudo_bem
   - elogios
 
@@ -19,7 +18,6 @@ intents:
   - license
   - where_u_liv
   - how_am_i
-  - its_ok
   - playlist
   - food
   - color
@@ -99,10 +97,6 @@ templates:
 
     - text: |
         Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
-
-  utter_restart:
-    - text: |
-        reiniciando =D
 
   utter_quem_eh_lappisudo:
     - text: |
@@ -201,32 +195,9 @@ templates:
           A Carla Rocha é oficialmente a deusa do Lappis, ela é uma das coordenadoras do projeto, sempre numa pegada de hierarquia horizontal, inspirando todos do Lappis a brilharem lindamente em suas issues, parte das gírias que aprendi a falar, eu aprendi com ela viu! E, mais, você já abriu um champagne com uma espada? Ela já! 
           Ninguém segura essa mulher!
 
-  utter_erro_resposta_utter:
-    - text: |
-          Obrigada pelo feedback. Espero que na próxima vez vou conseguir responder a tua pergunta corretamente
-          Gostaria de fazer uma nova pergunta?
-
   utter_manter_conversa:
     - text: |
           Tã tã tã! Você tem mais alguma curiosidade sobre os nossos projetos?
-
-  utter_continuar_conversa:
-    - text: |
-          Espero estar te ajudando, você possui mais alguma pergunta?
-    - text: |
-          Em que mais posso te ajudar?
-    - text: |
-          Você tem mais alguma dúvida?
-    - text: |
-          Qual o próximo tema te interessa?
-    - text: |
-          O que mais você deseja saber?
-    - text: |
-          Gostaria te retirar mais alguma dúvida?
-    - text: |
-          Espero ter solucionado a sua dúvida, tem mais alguma dúvida?
-
-    - text: |
 
   utter_despedir:
     - text: |
@@ -596,13 +567,10 @@ templates:
 
 actions:
   - utter_default
-  - utter_restart
   - utter_cumprimentar
   - utter_despedir
   - utter_tudo_bem
   - utter_manter_conversa
-  - utter_continuar_conversa
-  - utter_erro_resposta_utter
   - utter_diga_mais
   - utter_elogios
 
