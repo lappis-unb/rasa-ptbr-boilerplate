@@ -1,5 +1,5 @@
-rasa-core==0.11.12
-rasa-nlu==0.13.7
+rasa-core==0.13.1
+rasa-nlu==0.14.1
 rocketchat-py-sdk==0.0.8
 elasticsearch==6.3.1
 sklearn-crfsuite==0.3.6
