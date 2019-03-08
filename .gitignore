@@ -19,6 +19,7 @@ bot/work
 notebooks/intents/evaluate-intents.ipynb
 notebooks/intents/models
 notebooks/intents/errors.json
+notebooks/stories/matrix.pdf
 
  ### Stories Notebook ###
 notebooks/stories/models

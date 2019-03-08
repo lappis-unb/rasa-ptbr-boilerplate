@@ -72,3 +72,14 @@ services:
       - ./bot/actions:/bot/actions
       - ./bot/Makefile:/bot/Makefile
     command: "make run-actions"
+
+  # =============================== Notebooks =================================
+  notebooks:
+    build:
+      context: .
+      dockerfile: ./docker/notebooks.Dockerfile
+    volumes:
+      - ./bot:/work/bot
+      - ./notebooks:/work/notebooks
+    ports:
+      - 8888:8888
