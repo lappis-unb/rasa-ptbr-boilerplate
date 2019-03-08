@@ -10,9 +10,6 @@ notebooks/lab/
 notebooks/evaluate-intents.ipynb
 notebooks/stories/failed_stories.md
 notebooks/stories/matrix.pdf
-notebooks/stories/img/*
-notebooks/stories/matrix.pdf
-notebooks/intents/erros.json
 bot/.ipython/
 bot/.keras/
 bot/.local/
@@ -24,7 +21,6 @@ notebooks/intents/models
 notebooks/intents/errors.json
 
  ### Stories Notebook ###
-notebooks/stories/tais-analysis.ipynb
 notebooks/stories/models
 notebooks/stories/errors.json
 notebooks/stories/img

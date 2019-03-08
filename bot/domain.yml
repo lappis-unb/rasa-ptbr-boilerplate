@@ -33,6 +33,8 @@ intents:
   - story
   - laugh
 
+  - action_test
+
 entities:
   - religion
   - sport
@@ -454,3 +456,5 @@ actions:
   - utter_bff
   - utter_story
   - utter_laugh
+
+  - action_test

@@ -14,7 +14,7 @@ from validator import Validator
 logger = logging.getLogger(__name__)
 NLU_THRESHOLD = float(os.getenv('NLU_THRESHOLD', 0.6))
 
-TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 20))
+TRAINING_EPOCHS = int(os.getenv('TRAINING_EPOCHS', 10))
 BATCH_SIZE = int(os.getenv('BATCH_SIZE', 10))
 VALIDATION_SPLIT = float(os.getenv('VALIDATION_SPLIT', 0.2))
 
