@@ -74,16 +74,6 @@ sudo docker-compose run --rm bot make train-online
 
 
 
-## Tests
-
-Para executar os testes automatizados do bot faça:
-
-```sh
-sudo docker-compose -f docker/pytest-docker-compose.yml up
-```
-
-
-
 ## Analytics
 
 ### Setup
