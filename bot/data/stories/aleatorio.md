@@ -1,42 +1,42 @@
-## path_religion
-* religion
-- utter_religion
+## path_religiao
+* religiao
+- utter_religiao
 
-## path_sport
-* sport
-- utter_sport
+## path_eeesporteee
+* eeesporteee
+- utter_eeesporteee
 
-## path_team
-* team
-- utter_team
+## path_time
+* time
+- utter_time
 
-## path_languages
-* languages
-- utter_languages
+## path_linguagens
+* linguagens
+- utter_linguagens
 
-## path_genre
-* genre
-- utter_genre
+## path_genero
+* genero
+- utter_genero
 
 ## path_star_wars
 * star_wars
 - utter_star_wars
 
-## path_joke
-* joke
-- utter_joke
+## path_piada
+* piada
+- utter_piada
 
 ## path_license
 * license
 - utter_license
 
-## path_where_u_liv
-* where_u_liv
-- utter_where_u_liv
+## path_onde_voce_mora
+* onde_voce_mora
+- utter_onde_voce_mora
 
-## path_how_am_i
-* how_am_i
-- utter_how_am_i
+## path_como_estou
+* como_estou
+- utter_como_estou
 
 
 
@@ -45,21 +45,17 @@
 * playlist
 - utter_playlist
 
-## path_food
-* food
-- utter_food
+## path_comida
+* comida
+- utter_comida
 
-## path_color
-* color
-- utter_color
+## path_cor
+* cor
+- utter_cor
 
-## path_towel
-* towel
-- utter_towel
-
-## path_where_r_u_from
-* where_r_u_from
-- utter_where_r_u_from
+## path_de_onde_voce_eh
+* de_onde_voce_eh
+- utter_de_onde_voce_eh
 
 * relationship
 - utter_relationship
@@ -68,21 +64,21 @@
 * me
 - utter_me
 
-## path_sons
-* sons
-- utter_sons
+## path_filhos
+* filhos
+- utter_filhos
 
-## path_movie
-* movie
-- utter_movie
+## path_filme
+* filme
+- utter_filme
 
-## path_sign
-* sign
-- utter_sign
+## path_signo
+* signo
+- utter_signo
 
-## path_sad
-* sad
-- utter_sad
+## path_triste
+* triste
+- utter_triste
 
 ## path_hobby
 * hobby
@@ -92,10 +88,10 @@
 * bff
 - utter_bff
 
-## path_story
-* story
-- utter_story
+## path_historia
+* historia
+- utter_historia
 
-## path_laugh
-* laugh
-- utter_laugh
+## path_risada
+* risada
+- utter_risada

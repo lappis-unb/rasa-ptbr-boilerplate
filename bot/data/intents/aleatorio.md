@@ -1,37 +1,35 @@
-## intent:religion
-- voce acredita em [deus](religion)
-- [deus] (religion) existe
-- voce e [catolico protestante](religion)
-- voce tem [religiao](religion)
-- voce e [mussumano](religion)
-- [jesus](religion)
-- [deus](religion)
-- [crente](religion)
-- [evengelico](religion)
-- voce e [crente](religion)
-- voce é [católico](religion)
-- voce é [ateu](religion)
-- qual a sua [religião](religion)?
-- Lino, você acredita em alguma [religião](religion)?
-- [biblia](religion)
-- [religiao](religion)
+## intent:religiao
+- voce acredita em [deus](religiao)
+- [deus] (religiao) existe
+- voce e [catolico protestante](religiao)
+- voce tem [religiao](religiao)
+- voce e [mussumano](religiao)
+- [jesus](religiao)
+- [deus](religiao)
+- [crente](religiao)
+- [evengelico](religiao)
+- voce e [crente](religiao)
+- voce é [católico](religiao)
+- voce é [ateu](religiao)
+- qual a sua [religião](religiao)?
+- Lino, você acredita em alguma [religião](religiao)?
+- [biblia](religiao)
+- [religiao](religiao)
 
-## intent:sport
-- voce joga [futebol](sport)
-- vamos falar de [futebol](sport)
-- qual o seu [esporte](sport) favorito?
-- voce pratica [esporte](sport)?
-- [esporte](sport)
-- [futebol](sport)
+## intent:eeesporteee
+- voce joga [futebol](eeesporteee)
+- vamos falar de [futebol](eeesporteee)
+- qual o seu [eeeesporteeee](eeesporteee) favorito?
+- voce pratica [eeeesporteeee](eeesporteee)?
+- [eeeesporteeee](eeesporteee)
+- [futebol](eeesporteee)
 
-## intent:team
+## intent:time
 - qual o melhor time do brasil
 - qual o seu time?
 - para qual time você torce?
 - que time vc torce?
 - quem vai ser o campeao brasileiro nesse ano
-- voce viu que o messi quer jogar no Botafogo
-- o que você acha do botafogo
 
 ## intent:star_wars
 - [mestre yoda](starwars)
@@ -45,7 +43,7 @@
 - concelhos do [yoda](starwars)
 - [guerra nas estrelas](starwars)
 
-## intent:how_am_i
+## intent:como_estou
 - [como voce é](how)?
 - [como vc é](how)?
 - [como você é](how)?
@@ -55,14 +53,14 @@
 - voce e [bonito ou feio](how)
 - voce e [alto ou baixo](how)
 
-## intent:joke
-- sabe alguma [piada](joke)
-- voce sabe contar [piadas](joke)
-- conhece alguma [piada](joke)
-- [piada](joke)
-- me conte uma [piada](joke)
-- conte-me uma [piada](joke)
-- manda uma [piada](joke) ai
+## intent:piada
+- sabe alguma [piada](piada)
+- voce sabe contar [piadas](piada)
+- conhece alguma [piada](piada)
+- [piada](piada)
+- me conte uma [piada](piada)
+- conte-me uma [piada](piada)
+- manda uma [piada](piada) ai
 
 ## intent:license
 - qual e a sua [licença](license)
@@ -77,7 +75,7 @@
 - [licença](license)
 - [licenca](license)
 
-## intent:where_u_liv
+## intent:onde_voce_mora
 - onde voce [mora](live)
 - onde voce [vive](live)
 - em que lugar voce [vive](live)
@@ -87,31 +85,31 @@
 - [onde vc esta](live), lino
 - [cade vc](live)
 
-## intent:genre
-- voce é [homem ou mulher](genre)
-- voce é [macho ou femea](genre)
-- qual o seu [sexo](genre)
-- voce e [mulher](genre)
-- voce e um [homem](genre)
-- voce tem [genero](genre)
-- voce faz [sexo](genre)
-- voce tem um [penis ou uma vagina](genre)
+## intent:genero
+- voce é [homem ou mulher](genero)
+- voce é [macho ou femea](genero)
+- qual o seu [sexo](genero)
+- voce e [mulher](genero)
+- voce e um [homem](genero)
+- voce tem [genero](genero)
+- voce faz [sexo](genero)
+- voce tem um [penis ou uma vagina](genero)
 
-## intent:languages
-- o que acha do [java](languages)
-- o que acha do [c#](languages)
-- o que acha do [php](languages)
-- você gosta de [java](languages)
-- você gosta de [c#](languages)
-- você gosta de [php](languages)
-- e o [php](languages)
-- e o [java](languages)
-- e o [c#](languages)
-- [java](languages)
-- [php](languages)
-- linguagem [java](languages)
-- linguagem [php](languages)
-- linguagem [c#](languages)
+## intent:linguagens
+- o que acha do [java](linguagens)
+- o que acha do [c#](linguagens)
+- o que acha do [php](linguagens)
+- você gosta de [java](linguagens)
+- você gosta de [c#](linguagens)
+- você gosta de [php](linguagens)
+- e o [php](linguagens)
+- e o [java](linguagens)
+- e o [c#](linguagens)
+- [java](linguagens)
+- [php](linguagens)
+- linguagem [java](linguagens)
+- linguagem [php](linguagens)
+- linguagem [c#](linguagens)
 
 ## intent:playlist
 - Lino, me indica uma música
@@ -123,31 +121,25 @@
 - sabe qual [playlist](playlist) é boa?
 - diga uma [playlist](playlist) Lino
 
-## intent:food
-- Qual a sua [comida preferida](food)?
-- Que [comida você gosta](food)?
-- Que [comida vc gosta](food)?
-- Lino, qual a [melhor comida](food)?
-- Qual seu [lanche preferido](food)?
+## intent:comida
+- Qual a sua [comida preferida](comida)?
+- Que [comida você gosta](comida)?
+- Que [comida vc gosta](comida)?
+- Lino, qual a [melhor comida](comida)?
+- Qual seu [lanche preferido](comida)?
 - Qual comida você me sugere?
-- O que você [adora comer](food)?
-- O que você [gosta de comer](food)?
+- O que você [adora comer](comida)?
+- O que você [gosta de comer](comida)?
 
-## intent:color
-- Qual a sua [cor preferida](color)?
-- Que [cor você gosta](color)?
-- Que [cor vc gosta](color)?
-- Lino, qual a [melhor cor](color)?
-- Qual sua [cor preferida](color)?
-- Qual [cor](color) você me sugere?
+## intent:cor
+- Qual a sua [cor preferida](cor)?
+- Que [cor você gosta](cor)?
+- Que [cor vc gosta](cor)?
+- Lino, qual a [melhor cor](cor)?
+- Qual sua [cor preferida](cor)?
+- Qual [cor](cor) você me sugere?
 
-## intent:towel
-- Para que serve a [toalha](towel)?
-- Qual a função da [toalha](towel)?
-- [toalha](towel)
-- Qual a utilidade da [toalha](towel)?
-
-## intent:where_r_u_from
+## intent:de_onde_voce_eh
 - de onde você é?
 - onde você [nasceu](where)?
 - onde voce [nasceu](where)?
@@ -157,7 +149,7 @@
 - Você tem [namorado](relationship)?
 - Você tem [namorada](relationship)?
 - Você [namora](relationship)?
-- Você é [casado](relationship)?
+- Você é [catristeo](relationship)?
 - Gosta de alguém?
 - [Namorar](relationship) comigo?
 - Quer [namorar](relationship)?
@@ -174,38 +166,38 @@
 - [Fala](me) man
 - [Fala](me) macho
 
-## intent:sons
-- Você tem [filhos](sons)?
-- [filhos](sons)?
-- Você tem [filhos](sons)?
-- [filho](sons)
-- [filha](sons)
-- [filhas](sons)?
-- [Filhote](sons)?
-- Tem [filhote](sons)?
-- Tem [filhotes](sons)?
-- Quantos [filhos](sons) você tem?
-- Quantos [filhotes](sons) você tem?
+## intent:filhos
+- Você tem [filhos](filhos)?
+- [filhos](filhos)?
+- Você tem [filhos](filhos)?
+- [filho](filhos)
+- [filha](filhos)
+- [filhas](filhos)?
+- [Filhote](filhos)?
+- Tem [filhote](filhos)?
+- Tem [filhotes](filhos)?
+- Quantos [filhos](filhos) você tem?
+- Quantos [filhotes](filhos) você tem?
 
-## intent:movie
-- Me indica um [filme](movie)?
-- Qual o seu [filme](movie) favorito?
-- De qual [filme](movie) você gosta?
-- Qual o melhor [filme](movie)?
+## intent:filme
+- Me indica um [filme](filme)?
+- Qual o seu [filme](filme) favorito?
+- De qual [filme](filme) você gosta?
+- Qual o melhor [filme](filme)?
 
-## intent:sign
-- Qual o seu [signo](sign)?
-- Fala seu [signo](sign)?
-- [signo](sign)
+## intent:signo
+- Qual o seu [signoo](signo)?
+- Fala seu [signoo](signo)?
+- [signoo](signo)
 
-## intent:sad
-- Estou [triste](sad)
-- Estou muito [triste](sad)
-- [Tristeza](sad)
-- A [tristeza](sad) me consome
-- Estou [chorando](sad)
-- Estou [desapontado](sad)
-- [depressão](sad)
+## intent:triste
+- Estou [triste](triste)
+- Estou muito [triste](triste)
+- [Tristeza](triste)
+- A [tristeza](triste) me consome
+- Estou [chorando](triste)
+- Estou [desapontado](triste)
+- [depressão](triste)
 
 ## intent:hobby
 - O que você [gosta de fazer](hobby)?
@@ -229,15 +221,15 @@
 - Quem é sua [bff](bff)?
 - [bff](bff)
 
-## intent:story
-- me fala uma [história](story)
-- me conta uma [história](story)
-- [historia](story)
-- [história](story)
-- conta pra mim uma [historinha](story)
-- fala uma [historia](story) ai
+## intent:historia
+- me fala uma [história](historia)
+- me conta uma [história](historia)
+- [historia](historia)
+- [história](historia)
+- conta pra mim uma [historinha](historia)
+- fala uma [historia](historia) ai
 
-## intent:laugh
+## intent:risada
 - kkkkkkkkk
 - iuahsuahsuha
 - hehehehehe
