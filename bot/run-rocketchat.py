@@ -26,7 +26,7 @@ def run(core_dir, nlu_dir):
         server_url=configs['server_url']
     )
 
-    _endpoints = AvailableEndpoints.read_endpoints(None)
+    _endpoints = AvailableEndpoints.read_endpoints('endpoints.yml')
     _interpreter = NaturalLanguageInterpreter.create(nlu_dir)
 
     elastic_user = os.getenv('ELASTICSEARCH_USER')

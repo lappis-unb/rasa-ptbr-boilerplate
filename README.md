@@ -123,6 +123,5 @@ sudo docker-compose up -d rocketchat
 sudo docker-compose up -d kibana
 sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
 
-# aguarde 3 minutos para o rocketchat terminar de levantar
 sudo docker-compose up -d bot
 ```

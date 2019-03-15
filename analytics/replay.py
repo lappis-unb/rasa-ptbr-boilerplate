@@ -27,8 +27,8 @@ logger.addHandler(ch)
 bot = {
     'bot_url': os.getenv('BOT_URL', 'http://bot:5005/webhooks/rest/webhook'),
     'rocketchat_url': os.getenv('ROCKETCHAT_URL', 'rocketchat:3000'),
-    'username': os.getenv('ROCKETCHAT_BOT_USERNAME', 'tais'),
-    'password': os.getenv('ROCKETCHAT_BOT_PASSWORD', 'tais'),
+    'username': os.getenv('ROCKETCHAT_BOT_USERNAME', 'bot'),
+    'password': os.getenv('ROCKETCHAT_BOT_PASSWORD', 'bot'),
     'driver': None,
 }
 
