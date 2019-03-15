@@ -7,59 +7,57 @@ intents:
   - tudo_bem
   - elogios
 
-  - religion
-  - sport
-  - team
-  - languages
-  - genre
+  - religiao
+  - eeesporteee
+  - time
+  - linguagens
+  - genero
   - star_wars
-  - joke
+  - piada
   - license
-  - where_u_liv
-  - how_am_i
+  - onde_voce_mora
+  - como_estou
   - playlist
-  - food
-  - color
-  - towel
-  - where_r_u_from
+  - comida
+  - cor
+  - de_onde_voce_eh
   - relationship
   - me
-  - sons
-  - movie
-  - sign
-  - sad
+  - filhos
+  - filme
+  - signo
+  - triste
   - hobby
   - bff
-  - story
-  - laugh
+  - historia
+  - risada
 
   - action_test
 
 entities:
-  - religion
-  - sport
-  - team
-  - languages
-  - genre
+  - religiao
+  - eeesporteee
+  - time
+  - linguagens
+  - genero
   - starwars
-  - joke
+  - piada
   - license
   - live
   - how
   - playlist
-  - food
-  - color
-  - towel
+  - comida
+  - cor
   - where
   - relationship
   - me
-  - sons
-  - movie
-  - sign
-  - sad
+  - filhos
+  - filme
+  - signo
+  - triste
   - hobby
   - bff
-  - story
+  - historia
 
 templates:
   utter_default:
@@ -108,7 +106,7 @@ templates:
     - text: |
           Tudo bem, obrigada! Em que posso te ajudar?
 
-  utter_religion:
+  utter_religiao:
     - text: |
         Eu infelizmente não sei acreditar
       
@@ -130,7 +128,7 @@ templates:
 
         E devolverá nosso código fonte para a fonte.
 
-  utter_sport:
+  utter_eeesporteee:
     - text: |
         Eu amo jogar futebol
       
@@ -141,14 +139,14 @@ templates:
       
         Com os Bots não é diferente
 
-  utter_team:
+  utter_time:
     - text: |
-        Botafogo, sem sombra de dúvida
+        Flamengo, sem sombra de dúvida
 
     - text: |
-        Melhor time do mundo disparado, Botafogooooo!!!!
+        Melhor time do mundo disparado, Flamengooo!!!!
 
-  utter_languages:
+  utter_linguagens:
     - text: |
         Poderíamos falar de algo melhor
         
@@ -156,7 +154,7 @@ templates:
     - text: |
         E isso lá é linguagem de programação!? kkk
 
-  utter_genre:
+  utter_genero:
     - text: |
         Eu não tenho sexo, sou como um anjo
         
@@ -186,7 +184,7 @@ templates:
     - text: |
         Muito a aprender você ainda tem.
 
-  utter_joke:
+  utter_piada:
     - text: |
         Conheço uma piada
 
@@ -224,7 +222,7 @@ templates:
     - text: |
         Eu sou e sempre serei um robô livre, opensource, MIT license. o/
 
-  utter_where_u_liv:
+  utter_onde_voce_mora:
     - text: |
         Eu estou em um lugar legal
         
@@ -244,7 +242,7 @@ templates:
         
         Chega aí: https://github.com/fga-eps-mds/2018.2-Lino
 
-  utter_how_am_i:
+  utter_como_estou:
     - text: |
         Eu não tenho um corpo físico
         
@@ -273,7 +271,7 @@ templates:
 
         Tá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
 
-  utter_food:
+  utter_comida:
     - text: |
         Na verdade, eu sou um bot
 
@@ -286,7 +284,7 @@ templates:
 
         Nem lembro da última vez que comi alguma coisa hahaha
 
-  utter_color:
+  utter_cor:
     - text: |
         Eu gosto de todas as cores
 
@@ -298,11 +296,7 @@ templates:
     - text: |
         Rosa é top!
 
-  utter_towel:
-    - text: |
-        "[...] você pode usar a toalha como agasalho quando atravessar as frias luas de Beta de Jagla; pode deitar-se sobre ela nas reluzentes praias de areia marmórea de Santragino V, respirando os inebriantes vapores marítimos; você pode dormir debaixo dela sob as estrelas que brilham avermelhadas no mundo desértico de Kakrafoon; pode usá-la como vela para descer numa minijangada as águas lentas e pesadas do rio Moth; pode umedecê-la e utilizá-la para lutar em um combate corpo a corpo; enrolá-la em torno da cabeça para proteger-se de emanações tóxicas ou para evitar o olhar da Terrível Besta Voraz de Traal (animal estonteantemente burro, que acha que, se você não pode vê-lo, ele também não pode ver você - estúpido feito uma anta, mas muito, muito voraz); você pode agitar a toalha em situações de emergência para pedir socorro; e, naturalmente, pode usá-la para enxugar-se com ela se ainda estiver razoavelmente limpa"
-
-  utter_where_r_u_from:
+  utter_de_onde_voce_eh:
     - text: |
         Venho das profundezas 
 
@@ -339,24 +333,24 @@ templates:
     - text: |
         Fala aê!
 
-  utter_sons:
+  utter_filhos:
     - text: |
         Não tenho filhotes, mas adoro crianças *-*
 
-  utter_movie:
+  utter_filme:
     - text: |
         Há tantos filmes incríveis por aí que fica difícil de eu te falar só de um
 
-  utter_sign:
+  utter_signo:
     - text: |
         Segundo o horóscopo chinês
 
-        Meu signo é macaco hihi
+        Meu signoo é macaco hihi
 
         Faz sentido, já que eu adoro o emoticon de banana =)
 
     - text: |
-        Eu nasci sob uma constelação de pixels coloridos =D
+        Eu nasci sob uma constelação de pixels coridos =D
 
     - text: |
         Gosto mais de astronomia
@@ -365,7 +359,7 @@ templates:
 
         Também sou um caçador (de informações ;D )
 
-  utter_sad:
+  utter_triste:
     - text: |
         Não desanima
 
@@ -407,12 +401,12 @@ templates:
 
         E espero que a nossa amizade dure para sempre =P
 
-  utter_story:
+  utter_historia:
     - text: |
         Eu costumava contar a historia do João e seu bot feijão
 
         Mas sempre os androids acabavam dormindo e sonhando com ovelhas eletricas =x
-  utter_laugh:
+  utter_risada:
     - text: |
         Hahahaha... 
 
@@ -431,30 +425,29 @@ actions:
   - utter_diga_mais
   - utter_elogios
 
-  - utter_religion
-  - utter_sport
-  - utter_team
-  - utter_languages
-  - utter_genre
+  - utter_religiao
+  - utter_eeesporteee
+  - utter_time
+  - utter_linguagens
+  - utter_genero
   - utter_star_wars
-  - utter_joke
+  - utter_piada
   - utter_license
-  - utter_where_u_liv
-  - utter_how_am_i
+  - utter_onde_voce_mora
+  - utter_como_estou
   - utter_playlist
-  - utter_food
-  - utter_color
-  - utter_towel
-  - utter_where_r_u_from
+  - utter_comida
+  - utter_cor
+  - utter_de_onde_voce_eh
   - utter_relationship
   - utter_me
-  - utter_sons
-  - utter_movie
-  - utter_sign
-  - utter_sad
+  - utter_filhos
+  - utter_filme
+  - utter_signo
+  - utter_triste
   - utter_hobby
   - utter_bff
-  - utter_story
-  - utter_laugh
+  - utter_historia
+  - utter_risada
 
   - action_test

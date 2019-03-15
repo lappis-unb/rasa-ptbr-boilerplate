@@ -74,16 +74,6 @@ sudo docker-compose run --rm bot make train-online
 
 
 
-## Tests
-
-Para executar os testes automatizados do bot faça:
-
-```sh
-sudo docker-compose -f docker/pytest-docker-compose.yml up
-```
-
-
-
 ## Analytics
 
 ### Setup
@@ -133,6 +123,5 @@ sudo docker-compose up -d rocketchat
 sudo docker-compose up -d kibana
 sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
 
-# aguarde 3 minutos para o rocketchat terminar de levantar
 sudo docker-compose up -d bot
 ```
