@@ -1,9 +1,6 @@
-# Rasa Boilerplate
+# Rasa Class Assistant
 
-Um projeto feito em Rasa com configurações necessárias para a construção
-de um projeto grande de chatbot.
-
-Este projeto teve como base a [Tais](http://github.com/lappis-unb/tais).
+Um Chatbot para ajudar nas tarefas do dia-a-dia na sala de aula
 
 ## Bot
 
