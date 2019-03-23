@@ -235,13 +235,6 @@ templates:
         
         Só até conseguir achar uma memória cache...
 
-    - text: |
-        Eu moro em um repositório no github
-        
-        Você pode passar lá pra me visitar qualquer dia
-        
-        Chega aí: https://github.com/fga-eps-mds/2018.2-Lino
-
   utter_como_estou:
     - text: |
         Eu não tenho um corpo físico

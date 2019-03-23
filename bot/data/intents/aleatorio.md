@@ -12,17 +12,17 @@
 - voce é [católico](religiao)
 - voce é [ateu](religiao)
 - qual a sua [religião](religiao)?
-- Lino, você acredita em alguma [religião](religiao)?
+- você acredita em alguma [religião](religiao)?
 - [biblia](religiao)
 - [religiao](religiao)
 
-## intent:eeesporteee
-- voce joga [futebol](eeesporteee)
-- vamos falar de [futebol](eeesporteee)
-- qual o seu [eeeesporteeee](eeesporteee) favorito?
-- voce pratica [eeeesporteeee](eeesporteee)?
-- [eeeesporteeee](eeesporteee)
-- [futebol](eeesporteee)
+## intent:esporte
+- voce joga [futebol](esporte)
+- vamos falar de [futebol](esporte)
+- qual o seu [esporte](esporte) favorito?
+- voce pratica [esporte](esporte)?
+- [esporte](esporte)
+- [futebol](esporte)
 
 ## intent:time
 - qual o melhor time do brasil
@@ -82,7 +82,7 @@
 - [onde voce esta](live) agora
 - voce [mora](live) no computador
 - voce [vive](live) na internet
-- [onde vc esta](live), lino
+- [onde vc esta](live)
 - [cade vc](live)
 
 ## intent:genero
@@ -112,20 +112,20 @@
 - linguagem [c#](linguagens)
 
 ## intent:playlist
-- Lino, me indica uma música
-- Lino, manda uma [playlist](playlist)
+- me indica uma música
+- manda uma [playlist](playlist)
 - me fala uma [playlist](playlist) boa
 - quero uma [playlist](playlist)
 - [playlist](playlist)
 - qual a melhor [playlist](playlist)
 - sabe qual [playlist](playlist) é boa?
-- diga uma [playlist](playlist) Lino
+- diga uma [playlist](playlist)
 
 ## intent:comida
 - Qual a sua [comida preferida](comida)?
 - Que [comida você gosta](comida)?
 - Que [comida vc gosta](comida)?
-- Lino, qual a [melhor comida](comida)?
+- qual a [melhor comida](comida)?
 - Qual seu [lanche preferido](comida)?
 - Qual comida você me sugere?
 - O que você [adora comer](comida)?
@@ -135,7 +135,7 @@
 - Qual a sua [cor preferida](cor)?
 - Que [cor você gosta](cor)?
 - Que [cor vc gosta](cor)?
-- Lino, qual a [melhor cor](cor)?
+- qual a [melhor cor](cor)?
 - Qual sua [cor preferida](cor)?
 - Qual [cor](cor) você me sugere?
 
@@ -158,7 +158,6 @@
 - Tem [girlfriend](relationship)?
 
 ## intent:me
-- [Lino](me)
 - [Ow](me)
 - [Ei](me)
 - [hey](me)
@@ -209,8 +208,8 @@
 - [hobbies](hobby)
 
 ## intent:bff
-- Lino, qual é o seu [melhor amigo](bff)?
-- Lino, qual é o sua [melhor amiga](bff)?
+- qual é o seu [melhor amigo](bff)?
+- qual é o sua [melhor amiga](bff)?
 - Quem é seu [melhor amigo](bff)?
 - Quem é sua [melhor amiga](bff)?
 - [melhor amigo](bff)
