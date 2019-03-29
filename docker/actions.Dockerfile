@@ -1,5 +1,8 @@
 FROM python:3.6-slim
 
+ENV http_proxy="http://10.251.13.154:3128"     \
+    https_proxy="http://10.251.13.154:3128"
+
 RUN apt update && apt install -y git gcc make curl
 
 ADD ./docker/actions.requirements.txt /tmp/

@@ -1,5 +1,9 @@
 from python:3.6-slim
 
+# São necessárias as seguintes linhas com o ip da máquina caso vc tenha um proxy no trabalho
+# ENV http_proxy="http://10.250.19.150:3128"     \
+#    https_proxy="http://10.250.19.150:3128"
+
 run apt update && apt install -y git gcc make curl
 
 run python -m pip install --upgrade pip
@@ -27,6 +31,7 @@ env TRAINING_EPOCHS=20                    \
     BOT_VERSION=last-commit-hash           \
     ENABLE_ANALYTICS=False                 \
     ELASTICSEARCH_URL=elasticsearch:9200
+
 
 cmd python /scripts/bot_config.py -r $ROCKETCHAT_URL                        \
            -an $ROCKETCHAT_ADMIN_USERNAME -ap $ROCKETCHAT_ADMIN_PASSWORD    \
