@@ -2,9 +2,9 @@
 * religiao
 - utter_religiao
 
-## path_eeesporteee
-* eeesporteee
-- utter_eeesporteee
+## path_esporte
+* esporte
+- utter_esporte
 
 ## path_time
 * time
