@@ -57,6 +57,49 @@ Para executar o bot em um site você precisa inserir o seguinte Javascript na su
 **Atenção**: Você precisa alterar a variavel `host` dentro do código acima para a url do site onde estará
 o seu Rocket.Chat.
 
+### Telegram
+
+Para realizar este processo, recomenda-se a criação de um [Bot para o Telegram](https://core.telegram.org/bots#3-how-do-i-create-a-bot) para obter todas as informações necessárias.
+
+Para rodar a _stack_ do bot pelo Telegram juntamente com os serviços anexados, é necessário comentar a parte relacionada ao Rocket.Chat e descomentar o serviço relacionado ao bot do telegram.
+
+Após, é necessário utilizar o [ngrok](https://ngrok.com/download) para expor determinada porta para ser utilizado pelo Telegram.
+
+Ao baixar, é só executar utilizando o seguinte comando:
+
+```
+./ngrok http {porta utilizada}
+```
+
+**Atenção:** O conector do Telegram está utilizando a porta 5001 como padrão. Caso queira mudar, somente altere a porta utilizada pelo http_server criado:
+
+```py
+http_server = _agent.handle_channels(
+    [input_channel], {porta escolhida}, ""
+)
+```
+
+Ao executar, será gerado um link onde será usado para recuperar todas as informações obtidas pelo webhook do Bot pelo Telegram, semelhante a este link:
+
+```
+Exemplo:
+https://283e291f.ngrok.io
+```
+
+Configure todas as informações necessárias no docker-compose para integrar o bot do telegram criado:
+
+```yml
+- TELEGRAM_ACCESS_TOKEN={token fornecido pelo BotFather}
+- VERIFY={username do bot}
+- WEBHOOK_URL={link do ngrok}/webhooks/telegram/webhook
+```
+
+Para executar somente o serviço do bot para o Telegram, utilize o seguinte comando:
+
+```
+sudo docker-compose up telegram_bot
+```
+
 ### Console
 
 ```sh
@@ -70,9 +113,6 @@ sudo docker-compose run --rm bot make run-console
 sudo docker-compose run --rm bot make train
 sudo docker-compose run --rm bot make train-online
 ```
-
-
-
 
 ## Analytics
 
