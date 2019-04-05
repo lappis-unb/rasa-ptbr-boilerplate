@@ -67,10 +67,9 @@ services:
     command: "make run-telegram"
 
   actions:
-    # build:
-    #   context: .
-    #   dockerfile: ./docker/actions.Dockerfile
-    image: diegodorgam/botons:actions
+    build:
+      context: .
+      dockerfile: ./docker/actions.Dockerfile
     ports:
       - 5055:5055
     volumes:
