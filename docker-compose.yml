@@ -3,7 +3,7 @@ version: '2'
 services:
   # ============================= Rocketchat ==================================
   rocketchat:
-    image: rocket.chat:0.69.2
+    image: rocket.chat:latest
     restart: unless-stopped
     environment:
       - PORT=3000
@@ -38,11 +38,14 @@ services:
       - ROCKETCHAT_ADMIN_PASSWORD=admin
       - ROCKETCHAT_BOT_USERNAME=bot
       - ROCKETCHAT_BOT_PASSWORD=bot
+      - TELEGRAM_BOT_USERNAME=botlearning_bot
+      - TELEGRAM_TOKEN=token
+      - TELEGRAM_WEBHOOK=webhook
 
       # Should be set to 'production' or 'beta' or 'dev'
       - ENVIRONMENT_NAME=localhost
       # Last commit hash using this command: git rev-parse HEAD
-      - BOT_VERSION=last-commit-hash
+      - BOT_VERSION=0.1.0-alpha
 
       # Analytics config
       - ENABLE_ANALYTICS=False
@@ -61,11 +64,13 @@ services:
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
+    command: "make run-telegram"
 
   actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: ./docker/actions.Dockerfile
+    image: diegodorgam/botons:actions
     ports:
       - 5055:5055
     volumes:
@@ -74,12 +79,12 @@ services:
     command: "make run-actions"
 
   # =============================== Notebooks =================================
-  notebooks:
-    build:
-      context: .
-      dockerfile: ./docker/notebooks.Dockerfile
-    volumes:
-      - ./bot:/work/bot
-      - ./notebooks:/work/notebooks
-    ports:
-      - 8888:8888
+  # notebooks:
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/notebooks.Dockerfile
+  #   volumes:
+  #     - ./bot:/work/bot
+  #     - ./notebooks:/work/notebooks
+  #   ports:
+  #     - 8888:8888
