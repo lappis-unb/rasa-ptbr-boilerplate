@@ -1,7 +1,7 @@
 ### Rasa ###
 bot/models
-rasa_core.log
-errors.json
+bot/rasa_core.log
+client_secret.json
 
 ### Rasa evaluation ###
 notebooks/models/
@@ -10,6 +10,9 @@ notebooks/lab/
 notebooks/evaluate-intents.ipynb
 notebooks/stories/failed_stories.md
 notebooks/stories/matrix.pdf
+notebooks/stories/img/*
+notebooks/stories/matrix.pdf
+notebooks/intents/erros.json
 bot/.ipython/
 bot/.keras/
 bot/.local/
@@ -19,9 +22,9 @@ bot/work
 notebooks/intents/evaluate-intents.ipynb
 notebooks/intents/models
 notebooks/intents/errors.json
-notebooks/stories/matrix.pdf
 
  ### Stories Notebook ###
+notebooks/stories/tais-analysis.ipynb
 notebooks/stories/models
 notebooks/stories/errors.json
 notebooks/stories/img
