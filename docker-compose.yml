@@ -73,6 +73,38 @@ services:
       - ./bot/Makefile:/bot/Makefile
     command: "make run-actions"
 
+  # ============================ Telegram Bot =================================
+  telegram_bot:
+      build:
+          context: .
+          dockerfile: ./docker/bot.Telegram.Dockerfile
+      stdin_open: true
+      tty: true
+      environment:
+        - MAX_TYPING_TIME=8
+        - MIN_TYPING_TIME=1
+        - WORDS_PER_SECOND_TYPING=10
+        - TRAINING_EPOCHS=15
+        - TELEGRAM_ACCESS_TOKEN={token do bot}
+        - VERIFY={username do bot}
+        - WEBHOOK_URL={link do ngrok}/webhooks/telegram/webhook
+
+        # Should be set to 'production' or 'beta' or 'dev'
+        - ENVIRONMENT_NAME=localhost
+        # Last commit hash using this command: git rev-parse HEAD
+        - BOT_VERSION=0.1.0-alpha
+
+        # Analytics config
+        - ENABLE_ANALYTICS=False
+        - ELASTICSEARCH_URL=elasticsearch:9200
+      ports:
+        - 5001:5001
+      depends_on:
+        - actions
+      volumes:
+        - ./bot:/bot
+        - ./scripts:/scripts
+
   # =============================== Notebooks =================================
   notebooks:
     build:
