@@ -2,6 +2,7 @@ version: '2'
 
 services:
   # ============================= Rocketchat ==================================
+<<<<<<< HEAD
   rocketchat:
     image: rocket.chat:0.69.2
     restart: unless-stopped
@@ -62,6 +63,68 @@ services:
       - ./bot:/bot
       - ./scripts:/scripts
 
+=======
+  # rocketchat:
+  #   image: rocket.chat:latest
+  #   restart: unless-stopped
+  #   environment:
+  #     - PORT=3000
+  #     - ROOT_URL=http://localhost:3000
+  #     - MONGO_URL=mongodb://mongo:27017/rocketchat
+  #     - ADMIN_USERNAME=admin
+  #     - ADMIN_PASS=admin
+  #   ports:
+  #     - 3000:3000
+  #   depends_on:
+  #     - mongo
+  #
+  # mongo:
+  #   image: mongo:3.2
+  #   restart: unless-stopped
+  #   volumes:
+  #     - ./data/db:/data/db
+  #   command: mongod --smallfiles --oplogSize 128
+  #
+  # =========================== Rocketchat Bot ================================
+  # bot:
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/bot.Dockerfile
+  #   restart: unless-stopped
+  #   environment:
+  #     - MAX_TYPING_TIME=8
+  #     - MIN_TYPING_TIME=1
+  #     - WORDS_PER_SECOND_TYPING=10
+  #     - ROCKETCHAT_URL=rocketchat:3000
+  #     - ROCKETCHAT_ADMIN_USERNAME=admin
+  #     - ROCKETCHAT_ADMIN_PASSWORD=admin
+  #     - ROCKETCHAT_BOT_USERNAME=botons
+  #     - ROCKETCHAT_BOT_PASSWORD=botons
+  #
+  #     # Should be set to 'production' or 'beta' or 'dev'
+  #     - ENVIRONMENT_NAME=localhost
+  #     # Last commit hash using this command: git rev-parse HEAD
+  #     - BOT_VERSION=0.1.0-alpha
+  #
+  #     # Analytics config
+  #     - ENABLE_ANALYTICS=False
+  #     - ELASTICSEARCH_URL=elasticsearch:9200
+  #
+  #     # HTTP login on elasticsearch
+  #     # - ELASTICSEARCH_USER=admin
+  #     # - ELASTICSEARCH_PASSWORD=admin
+  #     # - ELASTICSEARCH_HTTP_SCHEME=https
+  #     # - ELASTICSEARCH_PORT=443
+  #   ports:
+  #     - 5005:5005
+  #     - 5002:5002
+  #   depends_on:
+  #     - actions
+  #   volumes:
+  #     - ./bot:/bot
+  #     - ./scripts:/scripts
+  #
+>>>>>>> 5782c7c... Inserts telegram bot service into docker-compose
   actions:
     build:
       context: .
@@ -72,6 +135,38 @@ services:
       - ./bot/actions:/bot/actions
       - ./bot/Makefile:/bot/Makefile
     command: "make run-actions"
+
+  # ============================ Telegram Bot =================================
+  telegram_bot:
+      build:
+          context: .
+          dockerfile: ./docker/bot.Telegram.Dockerfile
+      stdin_open: true
+      tty: true
+      environment:
+        - MAX_TYPING_TIME=8
+        - MIN_TYPING_TIME=1
+        - WORDS_PER_SECOND_TYPING=10
+        - TRAINING_EPOCHS=15
+        - TELEGRAM_ACCESS_TOKEN=854364096:AAGuM7J18lpdyVEsntCbkbaVzl4xkrjxRlY
+        - VERIFY=LinoTesteBot
+        - WEBHOOK_URL=https://283e291f.ngrok.io/webhooks/telegram/webhook
+
+        # Should be set to 'production' or 'beta' or 'dev'
+        - ENVIRONMENT_NAME=localhost
+        # Last commit hash using this command: git rev-parse HEAD
+        - BOT_VERSION=0.1.0-alpha
+
+        # Analytics config
+        - ENABLE_ANALYTICS=False
+        - ELASTICSEARCH_URL=elasticsearch:9200
+      ports:
+        - 5001:5001
+      depends_on:
+        - actions
+      volumes:
+        - ./bot:/bot
+        - ./scripts:/scripts
 
   # =============================== Notebooks =================================
   notebooks:
