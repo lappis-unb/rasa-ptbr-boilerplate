@@ -32,7 +32,10 @@ intents:
   - historia
   - risada
 
-  - action_test
+  - ver_chamada
+
+  - aviso_presenca
+  - aviso_admin
 
 entities:
   - religiao
@@ -410,6 +413,10 @@ templates:
 
         Você está feliz hoje, hein!?
 
+  utter_ver_chamada:
+    - text: |
+        Você pode conferir a chamada neste link: https://docs.google.com/spreadsheets/d/1l5myu_x3Fu_IxqehZppKAiZnkXFIE5czfWIVbLREh_c/edit?usp=sharing
+
 actions:
   - utter_default
   - utter_cumprimentar
@@ -443,4 +450,7 @@ actions:
   - utter_historia
   - utter_risada
 
-  - action_test
+  - utter_ver_chamada
+
+  - action_aviso_presenca
+  - action_aviso_admin
