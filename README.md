@@ -39,12 +39,10 @@ Para executar o bot em um site você precisa inserir o seguinte Javascript na su
 ```js
 <!-- Start of Rocket.Chat Livechat Script -->
 <script type="text/javascript">
+// !!! Mudar para o seu host AQUI !!!
+host = 'http://localhost:3000';
+// !!! ^^^^^^^^^^^^^^^^^^^^^^^^^^ !!!
 (function(w, d, s, u) {
-
-    // !!! Mudar para o seu host AQUI !!!
-    host = 'http://localhost:3000';
-    // !!! ^^^^^^^^^^^^^^^^^^^^^^^^^^ !!!
-
     w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
     var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
     j.async = true; j.src = host + '/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js?_=201702160944';
