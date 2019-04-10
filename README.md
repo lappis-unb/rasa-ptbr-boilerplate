@@ -90,7 +90,7 @@ ENVIRONMENT_NAME=localhost
 BOT_VERSION=last-commit-hash
 ```
 
-### Vizualização
+### Visualização
 
 ```
 sudo docker-compose up -d kibana
