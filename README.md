@@ -69,13 +69,7 @@ Ao baixar, é só executar utilizando o seguinte comando:
 ./ngrok http {porta utilizada}
 ```
 
-**Atenção:** O conector do Telegram está utilizando a porta 5001 como padrão. Caso queira mudar, somente altere a porta utilizada pelo http_server criado:
-
-```py
-http_server = _agent.handle_channels(
-    [input_channel], {porta escolhida}, ""
-)
-```
+**Atenção:** O conector do Telegram está utilizando a porta 5001 como padrão. Caso queira mudar, somente altere a porta utilizada pelo no Makefile.
 
 Ao executar, será gerado um link onde será usado para recuperar todas as informações obtidas pelo webhook do Bot pelo Telegram, semelhante a este link:
 
