@@ -89,6 +89,7 @@ Configure todas as informações necessárias no docker-compose para integrar o 
 Para executar somente o serviço do bot para o Telegram, utilize o seguinte comando:
 
 ```
+sudo docker-compose run --rm bot make train
 sudo docker-compose up telegram_bot
 ```
 
