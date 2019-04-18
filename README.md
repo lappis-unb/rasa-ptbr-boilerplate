@@ -86,10 +86,17 @@ Configure todas as informações necessárias no docker-compose para integrar o 
 - WEBHOOK_URL={link do ngrok}/webhooks/telegram/webhook
 ```
 
-Para executar somente o serviço do bot para o Telegram, utilize os seguintes comandos:
+Para executar somente o serviço do bot para o Telegram, utilize o seguinte comando:
 
-```
+Se ainda não tiver treinado seu bot execute antes:
+
+```sh
 sudo docker-compose run --rm bot make train
+```
+
+Depois execute o bot no telegram:
+
+```sh
 sudo docker-compose up telegram_bot
 ```
 
