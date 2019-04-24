@@ -1,0 +1,6 @@
+rasa-nlu==0.14.6
+rasa-core==0.13.1
+sklearn-crfsuite==0.3.6
+nltk==3.3
+rocketchat-py-sdk==0.0.8
+elasticsearch==6.3.1
