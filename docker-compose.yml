@@ -1,5 +1,8 @@
 version: '2'
 
+volumes:
+  models:
+
 services:
   # ============================= Rocketchat ==================================
   rocketchat:
@@ -37,8 +40,18 @@ services:
       - 5002:5002
     depends_on:
       - actions
+      - coach
     volumes:
+      - models:/bot/models/:ro
       - ./bot:/bot
+      - ./scripts:/scripts
+
+  coach:
+    image: coach:latest
+    command: cp -a /src_models/. /models/
+    volumes:
+      - models:/models/
+      - ./coach:/coach
       - ./scripts:/scripts
 
   actions:
