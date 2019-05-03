@@ -12,7 +12,7 @@ def train_dialogue(domain_file,
                    model_path,
                    training_folder,
                    policy_config):
-    return train.train_dialogue_model(domain_file=domain_file,
+    return train(domain_file=domain_file,
                                       stories_file=training_folder,
                                       output_path=model_path,
                                       policy_config=policy_config,
