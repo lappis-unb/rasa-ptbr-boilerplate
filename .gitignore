@@ -15,16 +15,16 @@ bot/.keras/
 bot/.local/
 bot/work
 
-### Intents Notebook ###
+### Jupyter Notebooks ###
 notebooks/intents/evaluate-intents.ipynb
 notebooks/intents/models
 notebooks/intents/errors.json
-notebooks/stories/matrix.pdf
 
- ### Stories Notebook ###
 notebooks/stories/models
 notebooks/stories/errors.json
 notebooks/stories/img
+notebooks/stories/results/
+notebooks/stories/matrix.pdf
 
 ### Rocketchat ###
 /data
