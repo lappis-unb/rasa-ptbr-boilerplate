@@ -17,8 +17,10 @@ bot/work
 
 ### Jupyter Notebooks ###
 notebooks/intents/evaluate-intents.ipynb
-notebooks/intents/models
 notebooks/intents/errors.json
+notebooks/intents/reports/
+notebooks/intents/hist.png
+notebooks/intents/confmat.png
 
 notebooks/stories/models
 notebooks/stories/errors.json
