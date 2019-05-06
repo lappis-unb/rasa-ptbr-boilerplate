@@ -33,6 +33,7 @@ services:
       context: .
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
+    command: run-rocketchat
     env_file:
       - docker/bot.env
     ports:

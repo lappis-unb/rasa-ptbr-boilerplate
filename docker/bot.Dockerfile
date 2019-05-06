@@ -22,5 +22,6 @@ RUN find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 
 CMD python /scripts/bot_config.py -r $ROCKETCHAT_URL                        \
     -an $ROCKETCHAT_ADMIN_USERNAME -ap $ROCKETCHAT_ADMIN_PASSWORD    \
-    -bu $ROCKETCHAT_BOT_USERNAME -bp $ROCKETCHAT_BOT_PASSWORD \
-    && make run-rocketchat
+    -bu $ROCKETCHAT_BOT_USERNAME -bp $ROCKETCHAT_BOT_PASSWORD
+
+ENTRYPOINT [ "make" ]
