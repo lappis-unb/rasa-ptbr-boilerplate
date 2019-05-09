@@ -1,20 +1,20 @@
-from python:3.6-slim
+FROM python:3.6-slim
 
-run apt update && apt install -y git gcc make curl
+RUN apt update && apt install -y git gcc make curl
 
-run python -m pip install --upgrade pip
+RUN python -m pip install --upgrade pip
 
-add ./bot.requirements.txt /tmp
+ADD ./bot.requirements.txt /tmp
 
-run pip install -r /tmp/bot.requirements.txt
-run python -c "import nltk; nltk.download('stopwords');"
+RUN pip install -r /tmp/bot.requirements.txt
+RUN python -c "import nltk; nltk.download('stopwords');"
 
-run apt-get update && apt-get install -y graphviz libgraphviz-dev pkg-config
+RUN apt-get update && apt-get install -y graphviz libgraphviz-dev pkg-config
 
 # Pygraphviz depends on package graphviz wich needs to be configurated
 # acording to each OS. because of it it's not added to bot.requirements
-run pip install jupyter pygraphviz==1.5
+RUN pip install jupyter pygraphviz==1.5
 
-workdir /work/
+WORKDIR /work/
 
-cmd jupyter-notebook --allow-root --NotebookApp.token='' --ip=0.0.0.0 --NotebookApp.password=''
+CMD jupyter-notebook --allow-root --NotebookApp.token='' --ip=0.0.0.0 --NotebookApp.password=''

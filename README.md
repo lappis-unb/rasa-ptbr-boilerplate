@@ -7,6 +7,14 @@ Este projeto teve como base a [Tais](http://github.com/lappis-unb/tais).
 
 ## Bot
 
+**Atenção**: Para funcionamento inicial das imagens docker citadas aqui, como "bot", "coach" e "requirements", é importante que em sua primeira execução deste repositório, seja executado:
+```sh
+make first-run
+# ou 
+sudo make first-run
+```
+Este script foi configurado para construir as imagens genéricas necessárias para execução deste ambiente. Caso seu projeto utilize este boilerplate e vá realizar uma integração contínua ou similar, é interessante criar um repositório para as imagens e substitua os nomes das imagens "bot", "coach" e "requirements" pelas suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público, não sendo mais necessário então a execução do script "first-run".
+
 ### RocketChat
 
 ```sh
@@ -91,8 +99,10 @@ Para executar somente o serviço do bot para o Telegram, utilize o seguinte coma
 Se ainda não tiver treinado seu bot execute antes:
 
 ```sh
-sudo docker-compose run --rm bot make train
+make train
 ```
+**Atenção**: o comando "make train" executa um container docker, caso precise de sudo em seu computador para execução docker, utilize "sudo make train".  
+
 
 Depois execute o bot no telegram:
 
@@ -103,15 +113,15 @@ sudo docker-compose up telegram_bot
 ### Console
 
 ```sh
-sudo docker-compose run --rm bot make train
+make train
 sudo docker-compose run --rm bot make run-console
 ```
 
 ### Train Online
 
 ```
-sudo docker-compose run --rm bot make train
-sudo docker-compose run --rm bot make train-online
+make train
+sudo docker-compose run --rm coach make train-online
 ```
 
 ## Analytics
