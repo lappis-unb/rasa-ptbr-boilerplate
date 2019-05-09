@@ -1,5 +1,5 @@
 train: 
-	docker build . -f docker/coach.Dockerfile -t coach:latest
+	docker build . -f docker/coach.Dockerfile -t botcoach:latest
 	docker-compose build bot
 
 first-run:

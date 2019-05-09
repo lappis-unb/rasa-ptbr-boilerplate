@@ -30,7 +30,7 @@ services:
       context: .
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
-    command: make run-console
+    command: sleep infinity
     # or
     # command: make run-rocketchat
     # depends_on:

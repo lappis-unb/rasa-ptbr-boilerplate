@@ -1,10 +1,10 @@
-FROM coach as coach
+FROM botcoach:latest as coach
 FROM requirements:latest
 
 
 COPY ./bot /bot
 COPY ./scripts /scripts
-COPY --from=coach /src_models/ /bot/models/
+COPY --from=coach /src_models/ /models/
 
 WORKDIR /bot
 
