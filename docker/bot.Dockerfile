@@ -1,7 +1,10 @@
+FROM coach as coach
 FROM requirements:latest
+
 
 COPY ./bot /bot
 COPY ./scripts /scripts
+COPY --from=coach /src_models/ /bot/models/
 
 WORKDIR /bot
 
@@ -20,8 +23,6 @@ ENV ROCKETCHAT_URL=rocketchat:3000         \
 
 RUN find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 
-CMD python /scripts/bot_config.py -r $ROCKETCHAT_URL                        \
-    -an $ROCKETCHAT_ADMIN_USERNAME -ap $ROCKETCHAT_ADMIN_PASSWORD    \
+CMD python /scripts/bot_config.py -r $ROCKETCHAT_URL              \
+    -an $ROCKETCHAT_ADMIN_USERNAME -ap $ROCKETCHAT_ADMIN_PASSWORD \
     -bu $ROCKETCHAT_BOT_USERNAME -bp $ROCKETCHAT_BOT_PASSWORD
-
-ENTRYPOINT [ "make" ]
