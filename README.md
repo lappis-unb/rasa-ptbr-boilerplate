@@ -180,3 +180,17 @@ sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/
 
 sudo docker-compose up -d bot
 ```
+
+# Como conseguir ajuda
+
+Parte da documentação técnica do framework da Tais está disponível na [wiki do repositório](https://github.com/lappis-unb/tais/wiki). Caso não encontre sua resposta, abra uma issue com a tag `duvida` que tentaremos responder o mais rápido possível.
+
+Em caso de dúvidas em relação ao Rasa, veja o grupo [Telegram Rasa Stack Brasil](https://t.me/RasaBrasil), estamos lá também para ajudar.
+
+Veja mais informações de contato em nosso site: https://lappis.rocks
+
+# Licença
+
+Todo o framework da Tais é desenvolvido sob a licença [GPL3](https://github.com/lappis-unb/rasa-ptbr-boilerplate/blob/master/LICENSE)
+
+Veja a lista de dependências de licenças [aqui](https://libraries.io/github/lappis-unb/rasa-ptbr-boilerplate)
