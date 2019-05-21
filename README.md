@@ -191,6 +191,6 @@ Veja mais informações de contato em nosso site: https://lappis.rocks
 
 # Licença
 
-Todo o framework da Tais é desenvolvido sob a licença [GPL3](https://github.com/lappis-unb/rasa-ptbr-boilerplate/blob/master/LICENSE)
+Todo o framework do boilerplate é desenvolvido sob a licença [GPL3](https://github.com/lappis-unb/rasa-ptbr-boilerplate/blob/master/LICENSE)
 
 Veja a lista de dependências de licenças [aqui](https://libraries.io/github/lappis-unb/rasa-ptbr-boilerplate)
