@@ -1,7 +1,5 @@
 FROM requirements:latest
 
-ADD ./docker/actions.requirements.txt /tmp/
-
 ADD ./bot/actions/actions.py /bot/actions/actions.py
 ADD ./bot/Makefile /bot/Makefile
 
