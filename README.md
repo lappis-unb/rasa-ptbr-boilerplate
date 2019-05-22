@@ -1,9 +1,20 @@
 # Rasa Boilerplate
+<!-- badges -->
+<a href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html"><img src="https://img.shields.io/badge/licence-GPL3-green.svg"/></a>
 
-Um projeto feito em Rasa com configurações necessárias para a construção
-de um projeto grande de chatbot.
+Um projeto feito em Rasa com configurações necessárias para a construção de um projeto grande de chatbot.
 
 Este projeto teve como base a [Tais](http://github.com/lappis-unb/tais).
+
+Esse repositório contém o código do framework do chatbot BoilerPlate utilizando inteligência artificial, feito em Rasa.
+
+# O que é o Rasa Boilerplate?
+
+O Rasa Boilerplate é um chatbot desenvolvido pelo [LAPPIS](https://lappis.rocks) e serve como base para a construção de chatbots utilizando o Rasa. O chatbot possui interações e histórias simples, úteis para o estudo de como funciona a criação de um chatbot.
+
+# Como funciona?
+
+O usuário interage com o Rasa Boilerplate via RocketChat, que manda as mensagens para o Rasa NLU, que identifica a intent, e responde pelo Rasa Core, de acordo com as stories e actions. É possível ainda, interagir com o bot pelo terminal, esta forma é mais utilizada para testes de novos conteúdos inseridos.
 
 ## Bot
 
@@ -175,3 +186,11 @@ sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/
 
 sudo docker-compose up -d bot
 ```
+# Tecnologias do Projeto:
+- [Rasa](http://rasa.com) - Inteligência Artificial do Bot
+- [RocketChat](https://rocket.chat) - Mensageiro de comunicação do Bot
+- [Docker](https://www.docker.com) - Os ambientes são todos dockerizados
+
+# Licença
+
+Todo o framework do Rasa BoilerPlate é desenvolvido sob a licença [GPL3](https://github.com/lappis-unb/rasa-ptbr-boilerplate/blob/devel/LICENSE)
