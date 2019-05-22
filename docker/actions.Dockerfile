@@ -1,11 +1,6 @@
-FROM python:3.6-slim
-
-RUN apt update && apt install -y git gcc make curl
+FROM requirements:latest
 
 ADD ./docker/actions.requirements.txt /tmp/
-
-RUN pip install --upgrade pip && \
-    pip install -r /tmp/actions.requirements.txt
 
 ADD ./bot/actions/actions.py /bot/actions/actions.py
 ADD ./bot/Makefile /bot/Makefile

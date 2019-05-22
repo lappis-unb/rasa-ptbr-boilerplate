@@ -1,13 +1,4 @@
-FROM python:3.6-slim
-
-RUN apt update && apt install -y git gcc make curl
-
-RUN python -m pip install --upgrade pip
-
-ADD ./bot.requirements.txt /tmp
-
-RUN pip install -r /tmp/bot.requirements.txt
-RUN python -c "import nltk; nltk.download('stopwords');"
+FROM requirements:latest
 
 RUN apt-get update && apt-get install -y graphviz libgraphviz-dev pkg-config
 
