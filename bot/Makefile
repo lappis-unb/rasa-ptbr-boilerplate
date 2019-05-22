@@ -4,6 +4,9 @@ run-rocketchat:
 run-telegram:
 	python -m rasa_core.run -d /models/dialogue -u /models/nlu/current --port 5001 --credentials credentials.yml --endpoints endpoints.yml
 
+config-rocket:
+	python /scripts/bot_config.py
+
 run-console:
 	python3 -m rasa_core.run -d /models/dialogue -u /models/nlu/current \
   --debug --endpoints endpoints.yml

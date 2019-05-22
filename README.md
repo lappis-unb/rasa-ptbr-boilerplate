@@ -9,6 +9,8 @@ Este projeto teve como base a [Tais](http://github.com/lappis-unb/tais).
 
 **Atenção**: Para funcionamento inicial das imagens docker citadas aqui, como "bot", "coach" e "requirements", é importante que em sua primeira execução deste repositório, seja executado:
 ```sh
+docker-compose up -d rocketchat
+
 make first-run
 # ou 
 sudo make first-run

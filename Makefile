@@ -1,6 +1,7 @@
 first-run:
 	cd docker && ./build-base.sh
 	make train
+	docker-compose run --rm bot make config-rocket
 	docker-compose up bot
 
 train:
