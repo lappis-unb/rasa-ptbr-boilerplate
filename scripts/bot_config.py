@@ -4,7 +4,7 @@ import argparse
 import json
 import logging
 import requests
-
+import os
 # == Log Config ==
 
 logger = logging.getLogger('Bot Config')
@@ -21,47 +21,8 @@ ch.setFormatter(formatter)
 
 logger.addHandler(ch)
 
-# == CLI ==
 
-parser = argparse.ArgumentParser()
-
-parser.add_argument(
-    '--bot-name', '-bn', type=str, default='Bot',
-    help='Bot username at RocketChat(default: Bot)'
-)
-parser.add_argument(
-    '--bot-username', '-bu', type=str, default='bot',
-    help='Bot username at RocketChat(default: bot)'
-)
-parser.add_argument(
-    '--bot-password', '-bp', type=str, default='bot',
-    help='Bot password at RocketChat(default: bot)'
-)
-parser.add_argument(
-    '--bot-avatar', '-ba', type=str, default='https://raw.githubusercontent.com/lappis-unb/rouana/master/images/rouana_avatar.jpeg',
-    help='Bot avatar photo link (default: bot\'s github avatar)'
-)
-parser.add_argument(
-    '--admin-name', '-an', type=str, default='admin',
-    help='Admin username at RocketChat(default: admin)'
-)
-parser.add_argument(
-    '--admin-password', '-ap', type=str, default='admin',
-    help='Admin password at RocketChat(default: admin)'
-)
-parser.add_argument(
-    '--rocketchat-url', '-r', type=str, default='http://rocketchat:3000',
-    help='Rocket chat URL (default: http://rocketchat:3000)'
-)
-parser.add_argument(
-    '--rasa-url', '-rasa', type=str, default='http://bot:5005/webhooks/rocketchat/webhook',
-    help='Rasa URL (default: http://bot:5005/webhooks/rocketchat/webhook)'
-)
-
-args = parser.parse_args()
-
-
-host = args.rocketchat_url
+host = os.getenv('ROCKETCHAT_URL', 'http://rocketchat:3000')
 if host[-1] == '/':
     host = host[:-1]
 
@@ -71,20 +32,23 @@ if not host.startswith('http://'):
 path = '/api/v1/login'
 
 bot = {
-    'name': args.bot_name,
-    'username': args.bot_username,
-    'password': args.bot_password,
-    'avatar': args.bot_avatar,
-    'email': args.bot_name + '@email.com',
+    'name': os.getenv('ROCKETCHAT_BOT_NAME', 'Bot'),
+    'username': os.getenv('ROCKETCHAT_BOT_USERNAME', 'bot'),
+    'password': os.getenv('ROCKETCHAT_BOT_PASSWORD', 'bot'),
+    'avatar': os.getenv('ROCKETCHAT_BOT_AVATAR_URL', 'https://raw.githubusercontent.com/lappis-unb/rouana/master/images/rouana_avatar.jpeg'),
+    'email': os.getenv('ROCKETCHAT_BOT_USERNAME', 'bot') + '@email.com',
 }
 
-admin_name = args.admin_name
-admin_password = args.admin_password
+admin_name = os.getenv('ROCKETCHAT_ADMIN_USERNAME','admin')
+admin_password = os.getenv('ROCKETCHAT_ADMIN_PASSWORD','admin')
 
-rasa_url = args.rasa_url
+rasa_url = os.getenv('RASA_URL','http://bot:5005/webhooks/rocketchat/webhook')
 user_header = None
 
 def api(endpoint, values=None, is_post=True):
+
+    requests.adapters.DEFAULT_RETRIES = 5
+
     if endpoint[0] == '/':
         endpoint = endpoint[1:]
 
@@ -93,7 +57,7 @@ def api(endpoint, values=None, is_post=True):
     data = None
     if values:
         data = json.dumps(values)
-
+    
     if is_post:
         response = requests.post(url, data=data, headers=user_header)
     else:
@@ -103,6 +67,7 @@ def api(endpoint, values=None, is_post=True):
         logger.info('Success {} :: {}'.format(url, response.json()))
     else:
         logger.error('ERROR {} :: {}'.format(url, response.json()))
+        raise EnvironmentError
 
     return response.json()
 
@@ -132,7 +97,8 @@ def get_authentication_token():
 
 
 def create_bot_user():
-    api_post('users.create', {
+    try:
+        api_post('users.create', {
         'name': bot['name'],
         'email': bot['email'],
         'password': bot['password'],
@@ -140,6 +106,8 @@ def create_bot_user():
         'requirePasswordChange': False,
         'sendWelcomeEmail': True, 'roles': ['bot']
     })
+    except:
+        print("User already created.")
 
     api_post('users.setAvatar', {
         'avatarUrl': bot['avatar'],
@@ -249,7 +217,10 @@ def create_department(bot_agent_id):
 if __name__ == '__main__':
     logger.info('===== Automatic env configuration =====')
 
-    user_header = get_authentication_token()
+    try:
+        user_header = get_authentication_token()
+    except:
+        print("\n\n --------- Rocket Chat Unavailable! --------\n\n")
 
     if user_header:
         logger.info('>> Create user')

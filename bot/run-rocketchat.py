@@ -56,4 +56,4 @@ def run(core_dir, nlu_dir):
         logger.exception(exc)
 
 if __name__ == '__main__':
-    run('models/dialogue', 'models/nlu/current')
+    run('/models/dialogue', '/models/nlu/current')

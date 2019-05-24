@@ -26,9 +26,14 @@ class RocketChatBot(OutputChannel):
         self.password = password
 
         self.logged_in = False
-
-        self.connector.connect()
-        self.login()
+        try:
+            self.connector.connect()
+            self.login()
+        except:
+            raise Exception (
+                '\n\n\n\n\nRocket-chat is not running! \n'
+                'Be sure to run docker-compose up rocketchat\n'
+                'or change your run-rocketchat for run-console on docker-compose.yml')
 
     def login(self):
         while not self.logged_in:

@@ -15,16 +15,18 @@ bot/.keras/
 bot/.local/
 bot/work
 
-### Intents Notebook ###
+### Jupyter Notebooks ###
 notebooks/intents/evaluate-intents.ipynb
-notebooks/intents/models
 notebooks/intents/errors.json
-notebooks/stories/matrix.pdf
+notebooks/intents/reports/
+notebooks/intents/hist.png
+notebooks/intents/confmat.png
 
- ### Stories Notebook ###
 notebooks/stories/models
 notebooks/stories/errors.json
 notebooks/stories/img
+notebooks/stories/results/
+notebooks/stories/matrix.pdf
 
 ### Rocketchat ###
 /data
@@ -146,7 +148,7 @@ docs/_build/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+*.ipynb_checkpoints*
 
 # pyenv
 .python-version
@@ -192,3 +194,7 @@ tags
 
 
 # End of https://www.gitignore.io/api/vim,linux,macos,python
+
+models/dialogue/
+
+models/nlu/current/

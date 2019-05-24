@@ -2,9 +2,10 @@
 <a href="https://codeclimate.com/github/lappis-unb/rasa-ptbr-boilerplate/maintainability"><img src="https://api.codeclimate.com/v1/badges/3fe22bf52000e147c6df/maintainability" /></a>
 
 # Rasa Boilerplate
+<!-- badges -->
+<a href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html"><img src="https://img.shields.io/badge/licence-GPL3-green.svg"/></a>
 
-Um projeto feito em Rasa com configurações necessárias para a construção
-de um projeto grande de chatbot.
+Um projeto feito em Rasa com configurações necessárias para a construção de um projeto grande de chatbot.
 
 Este projeto teve como base a [Tais](http://github.com/lappis-unb/tais).
 
@@ -19,8 +20,17 @@ As *models* utilizadas para a conversação foram geradas pelo módulo *trainer*
 Os notebooks avaliam o funcionamento de acordo com o formato das *intents* e *stories*.
 O elasticsearch coleta os dados da conversa e armazena para a análise feita pelo kibana, que gera gráficos para avaliação das conversas dos usuários e do boilerplate.
 
-
 ## Bot
+
+**Atenção**: Para funcionamento inicial das imagens docker citadas aqui, como "bot", "coach" e "requirements", é importante que em sua primeira execução deste repositório, seja executado:
+```sh
+docker-compose up -d rocketchat
+
+make first-run
+# ou 
+sudo make first-run
+```
+Este script foi configurado para construir as imagens genéricas necessárias para execução deste ambiente. Caso seu projeto utilize este boilerplate e vá realizar uma integração contínua ou similar, é interessante criar um repositório para as imagens e substitua os nomes das imagens "bot", "coach" e "requirements" pelas suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público, não sendo mais necessário então a execução do script "first-run".
 
 ### RocketChat
 
@@ -106,8 +116,10 @@ Para executar somente o serviço do bot para o Telegram, utilize o seguinte coma
 Se ainda não tiver treinado seu bot execute antes:
 
 ```sh
-sudo docker-compose run --rm bot make train
+make train
 ```
+**Atenção**: o comando "make train" executa um container docker, caso precise de sudo em seu computador para execução docker, utilize "sudo make train".  
+
 
 Depois execute o bot no telegram:
 
@@ -118,15 +130,15 @@ sudo docker-compose up telegram_bot
 ### Console
 
 ```sh
-sudo docker-compose run --rm bot make train
+make train
 sudo docker-compose run --rm bot make run-console
 ```
 
 ### Train Online
 
 ```
-sudo docker-compose run --rm bot make train
-sudo docker-compose run --rm bot make train-online
+make train
+sudo docker-compose run --rm coach make train-online
 ```
 
 ## Analytics
@@ -180,6 +192,7 @@ sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/
 
 sudo docker-compose up -d bot
 ```
+
 
 # Como conseguir ajuda
 
