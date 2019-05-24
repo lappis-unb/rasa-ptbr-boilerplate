@@ -1,3 +1,6 @@
+<a href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html"><img src="https://img.shields.io/badge/licence-GPL3-green.svg"/></a>
+<a href="https://codeclimate.com/github/lappis-unb/rasa-ptbr-boilerplate/maintainability"><img src="https://api.codeclimate.com/v1/badges/3fe22bf52000e147c6df/maintainability" /></a>
+
 # Rasa Boilerplate
 <!-- badges -->
 <a href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html"><img src="https://img.shields.io/badge/licence-GPL3-green.svg"/></a>
@@ -6,15 +9,16 @@ Um projeto feito em Rasa com configurações necessárias para a construção de
 
 Este projeto teve como base a [Tais](http://github.com/lappis-unb/tais).
 
-Esse repositório contém o código do framework do chatbot BoilerPlate utilizando inteligência artificial, feito em Rasa.
+# Entenda a Arquitetura
 
-# O que é o Rasa Boilerplate?
+É utilizado no boilerplate diversas tecnologias que interagem entre si para obter um melhor resultado. Veja a arquitetura implementada:
 
-O Rasa Boilerplate é um chatbot desenvolvido pelo [LAPPIS](https://lappis.rocks) e serve como base para a construção de chatbots utilizando o Rasa. O chatbot possui interações e histórias simples, úteis para o estudo de como funciona a criação de um chatbot.
+![](https://user-images.githubusercontent.com/8556291/57933140-d8d66b80-7892-11e9-8d58-a7eda60b099b.png)
 
-# Como funciona?
-
-O usuário interage com o Rasa Boilerplate via RocketChat, que manda as mensagens para o Rasa NLU, que identifica a intent, e responde pelo Rasa Core, de acordo com as stories e actions. É possível ainda, interagir com o bot pelo terminal, esta forma é mais utilizada para testes de novos conteúdos inseridos.
+O usuário interage com a Boilerplate via RocketChat ou Telegram, que manda as mensagens para o Rasa NLU através de conectores, onde ele identifica a *intent*, e responde pelo Rasa Core, de acordo com as *stories* e *actions*.  
+As *models* utilizadas para a conversação foram geradas pelo módulo *trainer* e depois transferidas para o bot, estes modelos podem ser versionados e evoluídos entre bots.  
+Os notebooks avaliam o funcionamento de acordo com o formato das *intents* e *stories*.
+O elasticsearch coleta os dados da conversa e armazena para a análise feita pelo kibana, que gera gráficos para avaliação das conversas dos usuários e do boilerplate.
 
 ## Bot
 
@@ -188,11 +192,18 @@ sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/
 
 sudo docker-compose up -d bot
 ```
-# Tecnologias do Projeto:
-- [Rasa](http://rasa.com) - Inteligência Artificial do Bot
-- [RocketChat](https://rocket.chat) - Mensageiro de comunicação do Bot
-- [Docker](https://www.docker.com) - Os ambientes são todos dockerizados
+
+
+# Como conseguir ajuda
+
+Parte da documentação técnica do framework da Tais está disponível na [wiki do repositório](https://github.com/lappis-unb/tais/wiki). Caso não encontre sua resposta, abra uma issue com a tag `duvida` que tentaremos responder o mais rápido possível.
+
+Em caso de dúvidas em relação ao Rasa, veja o grupo [Telegram Rasa Stack Brasil](https://t.me/RasaBrasil), estamos lá também para ajudar.
+
+Veja mais informações de contato em nosso site: https://lappis.rocks
 
 # Licença
 
-Todo o framework do Rasa BoilerPlate é desenvolvido sob a licença [GPL3](https://github.com/lappis-unb/rasa-ptbr-boilerplate/blob/devel/LICENSE)
+Todo o framework do boilerplate é desenvolvido sob a licença [GPL3](https://github.com/lappis-unb/rasa-ptbr-boilerplate/blob/master/LICENSE)
+
+Veja a lista de dependências de licenças [aqui](https://libraries.io/github/lappis-unb/rasa-ptbr-boilerplate)
