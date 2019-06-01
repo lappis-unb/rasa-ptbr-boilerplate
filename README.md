@@ -15,14 +15,19 @@ Este projeto teve como base a [Tais](http://github.com/lappis-unb/tais).
 
 ![](https://user-images.githubusercontent.com/8556291/57933140-d8d66b80-7892-11e9-8d58-a7eda60b099b.png)
 
-O usuário interage com a Boilerplate via RocketChat ou Telegram, que manda as mensagens para o Rasa NLU através de conectores, onde ele identifica a *intent*, e responde pelo Rasa Core, de acordo com as *stories* e *actions*.  
-As *models* utilizadas para a conversação foram geradas pelo módulo *trainer* e depois transferidas para o bot, estes modelos podem ser versionados e evoluídos entre bots.  
+O usuário interage com a Boilerplate via RocketChat ou Telegram, que manda as mensagens para o Rasa NLU através de
+conectores, onde ele identifica a *intent*, e responde pelo Rasa Core, de acordo com as *stories* e *actions*.  
+As *models* utilizadas para a conversação foram geradas pelo módulo *trainer* e depois transferidas para o bot, estes 
+modelos podem ser versionados e evoluídos entre bots.  
 Os notebooks avaliam o funcionamento de acordo com o formato das *intents* e *stories*.
-O elasticsearch coleta os dados da conversa e armazena para a análise feita pelo kibana, que gera gráficos para avaliação das conversas dos usuários e do boilerplate.
+O elasticsearch coleta os dados da conversa e armazena para a análise feita pelo kibana, que gera gráficos para
+avaliação das conversas dos usuários e do boilerplate.
 
 ## Bot
 
-**Atenção**: Para funcionamento inicial das imagens docker citadas aqui, como "bot", "coach" e "requirements", é importante que em sua primeira execução deste repositório, seja executado:
+**Atenção**: Para funcionamento inicial das imagens docker citadas aqui, como "bot", "coach" e "requirements", é
+importante que em sua primeira execução deste repositório, seja executado:
+
 ```sh
 docker-compose up -d rocketchat
 
@@ -30,7 +35,12 @@ make first-run
 # ou 
 sudo make first-run
 ```
-Este script foi configurado para construir as imagens genéricas necessárias para execução deste ambiente. Caso seu projeto utilize este boilerplate e vá realizar uma integração contínua ou similar, é interessante criar um repositório para as imagens e substitua os nomes das imagens "bot", "coach" e "requirements" pelas suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público, não sendo mais necessário então a execução do script "first-run".
+
+Este script foi configurado para construir as imagens genéricas necessárias para execução deste ambiente.
+Caso seu projeto utilize este boilerplate e vá realizar uma integração contínua ou similar, é interessante
+criar um repositório para as imagens e substitua os nomes das imagens "bot", "coach" e "requirements" pelas
+suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público, não sendo mais necessário
+então a execução do script "first-run".
 
 ### RocketChat
 
@@ -82,11 +92,14 @@ o seu Rocket.Chat.
 
 ### Telegram
 
-Para realizar este processo, recomenda-se a criação de um [Bot para o Telegram](https://core.telegram.org/bots#3-how-do-i-create-a-bot) para obter todas as informações necessárias.
+Para realizar este processo, recomenda-se a criação de um
+[Bot para o Telegram](https://core.telegram.org/bots#3-how-do-i-create-a-bot) para obter todas as informações necessárias.
 
-Para rodar a _stack_ do bot pelo Telegram juntamente com os serviços anexados, é necessário comentar a parte relacionada ao Rocket.Chat e descomentar o serviço relacionado ao bot do telegram.
+Para rodar a _stack_ do bot pelo Telegram juntamente com os serviços anexados, é necessário comentar a parte
+relacionada ao Rocket.Chat e descomentar o serviço relacionado ao bot do telegram.
 
-Após, é necessário utilizar o [ngrok](https://ngrok.com/download) para expor determinada porta para ser utilizado pelo Telegram.
+Após, é necessário utilizar o [ngrok](https://ngrok.com/download) para expor determinada porta para ser utilizado
+pelo Telegram.
 
 Ao baixar, é só executar utilizando o seguinte comando:
 
@@ -94,9 +107,11 @@ Ao baixar, é só executar utilizando o seguinte comando:
 ./ngrok http {porta utilizada}
 ```
 
-**Atenção:** O conector do Telegram está utilizando a porta 5001 como padrão. Caso queira mudar, somente altere a porta utilizada pelo no Makefile.
+**Atenção:** O conector do Telegram está utilizando a porta 5001 como padrão. Caso queira mudar, somente altere
+a porta utilizada pelo no Makefile.
 
-Ao executar, será gerado um link onde será usado para recuperar todas as informações obtidas pelo webhook do Bot pelo Telegram, semelhante a este link:
+Ao executar, será gerado um link onde será usado para recuperar todas as informações obtidas pelo webhook do Bot
+pelo Telegram, semelhante a este link:
 
 ```
 Exemplo:
@@ -118,7 +133,8 @@ Se ainda não tiver treinado seu bot execute antes:
 ```sh
 make train
 ```
-**Atenção**: o comando "make train" executa um container docker, caso precise de sudo em seu computador para execução docker, utilize "sudo make train".  
+**Atenção**: o comando "make train" executa um container docker, caso precise de sudo em seu computador
+para execução docker, utilize "sudo make train".  
 
 
 Depois execute o bot no telegram:
@@ -196,14 +212,18 @@ sudo docker-compose up -d bot
 
 # Como conseguir ajuda
 
-Parte da documentação técnica do framework da Tais está disponível na [wiki do repositório](https://github.com/lappis-unb/tais/wiki). Caso não encontre sua resposta, abra uma issue com a tag `duvida` que tentaremos responder o mais rápido possível.
+Parte da documentação técnica do framework da Tais está disponível na 
+[wiki do repositório](https://github.com/lappis-unb/tais/wiki). Caso não encontre sua resposta, abra uma issue
+com a tag `duvida` que tentaremos responder o mais rápido possível.
 
-Em caso de dúvidas em relação ao Rasa, veja o grupo [Telegram Rasa Stack Brasil](https://t.me/RasaBrasil), estamos lá também para ajudar.
+Em caso de dúvidas em relação ao Rasa, veja o grupo [Telegram Rasa Stack Brasil](https://t.me/RasaBrasil),
+estamos lá também para ajudar.
 
 Veja mais informações de contato em nosso site: https://lappis.rocks
 
 # Licença
 
-Todo o framework do boilerplate é desenvolvido sob a licença [GPL3](https://github.com/lappis-unb/rasa-ptbr-boilerplate/blob/master/LICENSE)
+Todo o framework do boilerplate é desenvolvido sob a licença
+[GPL3](https://github.com/lappis-unb/rasa-ptbr-boilerplate/blob/master/LICENSE)
 
 Veja a lista de dependências de licenças [aqui](https://libraries.io/github/lappis-unb/rasa-ptbr-boilerplate)
