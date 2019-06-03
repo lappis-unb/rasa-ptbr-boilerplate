@@ -399,6 +399,7 @@ templates:
         Eu costumava contar a historia do João e seu bot feijão
 
         Mas sempre os androids acabavam dormindo e sonhando com ovelhas eletricas =x
+
   utter_risada:
     - text: |
         Hahahaha... 
