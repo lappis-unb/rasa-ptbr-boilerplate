@@ -36,12 +36,11 @@ services:
     ports:
       - 5005:5005
       - 5002:5002
-    depends_on:
-      - actions
     volumes:
       - ./bot:/bot
+      - ./models:/models/
       - ./scripts:/scripts
-
+  
   actions:
     build:
       context: .
@@ -53,33 +52,12 @@ services:
       - ./bot/Makefile:/bot/Makefile
     command: sh -c "make run-actions"
 
-  # ============================ Telegram Bot =================================
-  telegram_bot:
-      build:
-        context: .
-        dockerfile: ./docker/bot.Dockerfile
-      environment:
-        - TELEGRAM_BOT_USERNAME=lappisbot
-        - TELEGRAM_TOKEN=token
-        - TELEGRAM_WEBHOOK=your_webhook_server/webhooks/telegram/webhook
-      ports:
-        - 5001:5001
-      depends_on:
-        - actions
-      volumes:
-        - ./bot:/bot
-        - ./scripts:/scripts
-      command: sh -c "make run-telegram"
-
-  # =============================== Notebooks =================================
-  notebooks:
-    build:
-      context: .
-      dockerfile: ./docker/notebooks.Dockerfile
+  tais:
+    image: lappis/bot:latest
+    restart: unless-stopped
+    command: make run-api
     env_file:
-      - docker/notebooks.env
-    volumes:
-      - ./bot:/work/bot
-      - ./notebooks:/work/notebooks
+      - docker/bot.env
     ports:
-      - 8888:8888
+      - 5006:5005
+      - 5003:5002
