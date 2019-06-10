@@ -30,7 +30,7 @@ services:
       context: .
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
-    command: make run-rocketchat 
+    command: make run-console
     env_file:
       - docker/bot.env
     ports:

@@ -25,10 +25,12 @@ ENVIRONMENT_NAME = os.getenv('ENVIRONMENT_NAME', 'locahost')
 BOT_VERSION = os.getenv('BOT_VERSION', 'notdefined')
 HASH_GEN = hashlib.md5()
 
+
 def gen_id(timestamp):
     HASH_GEN.update(str(timestamp).encode('utf-8'))
     _id = HASH_GEN.hexdigest()[10:]
     return _id
+
 
 class ElasticTrackerStore(InMemoryTrackerStore):
     def __init__(self, domain,
@@ -55,6 +57,7 @@ class ElasticTrackerStore(InMemoryTrackerStore):
 
         #Bag of words
         tags = []
+
         for word in tracker.latest_message.text.replace('. ',' ').replace(',',' ').replace('"','').replace("'",'').replace('*','').replace('(','').replace(')','').split(' '):
             if word.lower() not in stopwords.words('portuguese') and len(word) > 1:
                 tags.append(word)
