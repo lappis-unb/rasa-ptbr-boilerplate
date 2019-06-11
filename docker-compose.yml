@@ -38,9 +38,8 @@ services:
       - 5002:5002
     volumes:
       - ./bot:/bot
-      - ./models:/models/
       - ./scripts:/scripts
-  
+
   actions:
     build:
       context: .
