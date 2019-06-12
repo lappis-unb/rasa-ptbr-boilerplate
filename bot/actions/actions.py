@@ -25,6 +25,10 @@ class ActionFallback(Action):
         text = ''
         text = tracker.latest_message.get('text')
 
+        self.send_message(dispatcher, tracker, text)
+        self.get_message_tracker(dispatcher, tracker, text)
+
+    def send_message(self, dispatcher, tracker, text):
         payload = {'query': text}
         payload = json.dumps(payload)
         header = {"content-type": "application/json"}
@@ -34,3 +38,16 @@ class ActionFallback(Action):
 
         for i in range(0, len(r.json())):
             dispatcher.utter_message(r.json()[i]['text'])
+
+    def get_message_tracker(self, dispatcher, tracker, text):
+        payload = {'query': text}
+        payload = json.dumps(payload)
+        header = {"content-type": "application/json"}
+
+        r = requests.get("http://tais:5005/conversations/default/tracker",
+                         data=payload, headers=header)
+        r = r.json()
+        for event in r['events']:
+            if 'parse_data' in event:
+                logger.warning(event['text'])
+                logger.warning(event['parse_data']['intent']['confidence'])
