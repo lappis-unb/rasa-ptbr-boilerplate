@@ -34,13 +34,13 @@ services:
     env_file:
       - docker/bot.env
     ports:
-      - 5005:5005
       - 5002:5002
     depends_on:
       - actions
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
+    command: sh -c "make run-rocketchat"
 
   actions:
     build:

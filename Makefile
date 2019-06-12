@@ -1,5 +1,6 @@
 first-run:
 	cd docker && ./build-base.sh
+	docker-compose up -d rocketchat
 	make train
 	docker-compose run --rm bot make config-rocket
 	docker-compose up bot
