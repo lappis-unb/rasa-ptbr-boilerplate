@@ -24,16 +24,13 @@ class ActionFallback(Action):
     def run(self, dispatcher, tracker, domain):
         text = ''
         text = tracker.latest_message.get('text')
-        r = ''
+
         payload = {'query': text}
         payload = json.dumps(payload)
         header = {"content-type": "application/json"}
 
         r = requests.post("http://tais:5005/conversations/default/respond",
                           data=payload, headers=header)
-        logger.warning(str(r.text))
-        r = r.text
-        # logger.warning("************************" + r[0] + "*********************************")
-        r = json.loads(r)
-        # logger.warning("teste " + r["text"])
-        dispatcher.utter_message("ola")
+
+        for i in range(0, len(r.json())):
+            dispatcher.utter_message(r.json()[i]['text'])
