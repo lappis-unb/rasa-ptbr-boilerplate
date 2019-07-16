@@ -73,7 +73,20 @@ services:
     env_file:
       - docker/notebooks.env
     volumes:
-      - ./bot:/work/bot
+      - ./coach:/work/coach
       - ./notebooks:/work/notebooks
+      - notebook_models:/models:ro
     ports:
       - 8888:8888
+    depends_on:
+      - coach
+
+  # =============================== Coach =================================  
+  coach:
+    image: botcoach:latest
+    volumes:
+      - notebook_models:/notebook_models
+    command: sh -c "cp -r /src_models/* /notebook_models"
+  
+volumes:
+  notebook_models:
