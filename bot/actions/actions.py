@@ -25,25 +25,33 @@ class ActionFallback(Action):
         text = ''
         text = tracker.latest_message.get('text')
 
-        bots = ["tais:5005"]
 
+        # TODO: Inserção das API's sem ser hardcode
+        bots = ["localhost:5006", '192.168.100.245:5005']
+
+        # TODO: Paralelizar o envio das mensagens para as APIs cadastradas
+        # TODO: Configurar os dados que recebemos do tracker em uma struct separada
         answers = self.ask_bots(text, bots)
 
         answer = self.get_best_answer(answers)
-        
-        logger.debug("Remote Utter: " + answer.info.utter)
-        logger.debug("Remote Intent: " + answer.info.intent)
-        logger.debug("Remote Confidence: " + answer.confidence)
-        
-        for message in answer.messages:
+        # TODO: Continuar com o Fallback padrão quando nenhum bot tem confiança suficiente
+        logger.info("Bot: " + answer["bot"])
+        logger.info("Confidence: " + str(answer["confidence"]))
+        logger.info("Intent Name: " + answer["intent_name"])
+
+        for message in answer["messages"]:
+            logger.info("Message: " + message)
             dispatcher.utter_message(message)
+
+        dispatcher.utter_attachment(str(answer))
 
 
     def get_best_answer(self, answers):
+        # TODO: Fazer a hierarquia das policies, antes da confiança
         max_confidence = max([answer['confidence'] for answer in answers])
         best_answer = {}
         for answer in answers:
-            if(answer.confidence >= max_confidence):
+            if(answer["confidence"] >= max_confidence):
                 best_answer = answer
         return best_answer
 
