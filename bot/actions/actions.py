@@ -52,11 +52,12 @@ class ActionFallback(Action):
         answers = []
         for bot in bots:
             messages = self.send_message(text, bot)
-            info = self.get_message_info(text, bot)
+            info = self.get_answer_info(text, bot)
             bot_answer = {
+                "bot": bot,
                 "messages": messages,
-                "info": info,
-                "confidence": info.confidence
+                "intent_name": info['intent_name'],
+                "confidence": info['confidence']
             }
             answers.append(bot_answer)
 
@@ -73,19 +74,23 @@ class ActionFallback(Action):
             messages.append(r[i]['text'])
         return messages
 
-    def get_message_info(self, text, bot_url):
-        payload = {'query': text}
+    def get_answer_info(self, message, bot_url):
+        payload = {'query': message}
         payload = json.dumps(payload)
 
         r = get_request(payload, "http://" + bot_url + "/conversations/default/tracker")
+        answer_info = {}
+        for event in r['events']:
+            if 'event' in event and 'user' == event['event']:
+                if message == event['text']:
+                    answer_info['confidence'] = event['parse_data']['intent']['confidence'] 
+                    answer_info['intent_name'] = event['parse_data']['intent']['name']
         
-        for events in data['events']:
-            if 'event' in events:
-                if 'action' in events['event']:
-                    event_tracker.append(['Utter: ', events['name']])
-            if 'parse_data' in events:
-                event_tracker.append(['User Message: ', events['text']])
-                event_tracker.append(['Intent: ', events['parse_data']['intent']['name']])
-                event_tracker.append(['Confidence: ', events['parse_data']['intent']['confidence']])
-event_tracker.append('-'*50)
-        return message_info
+        if answer_info == {}:
+            answer_info['confidence'] = -1
+            answer_info['intent_name'] = "no answer"
+
+        if not answer_info['intent_name']:
+            answer_info['intent_name'] = "Fallback"
+        
+        return answer_info
