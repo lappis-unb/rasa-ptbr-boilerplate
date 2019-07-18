@@ -49,26 +49,47 @@ class ActionFallback(Action):
     def get_best_answer(self, answers):
         # TODO: Fazer a hierarquia das policies, antes da confiança
         max_confidence = max([answer['confidence'] for answer in answers])
-        best_answer = {}
-        for answer in answers:
-            if(answer["confidence"] >= max_confidence):
-                best_answer = answer
+
+        # FIXME: use the value directly from policy_config.yml, smallest of the thresholds
+        if(max_confidence >= 0.6):
+            best_answer = self.find_answer_by_confidence(answers, max_confidence)
+        else:
+            best_answer = {
+                'bot': 'main-bot',
+                'confidence': 1,
+                'intent_name': 'fallback',
+                'messages':[
+                    "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito.",
+                    "Você pode perguntar de novo de outro jeito?"
+                ]
+            }
         return best_answer
 
+    def find_answer_by_confidence(self, answers, confidence):
+        best_answer = {}
+        for answer in answers:
+            if(answer["confidence"] == confidence):
+                best_answer = answer
+
+        return best_answer
 
     def ask_bots(self, text, bots):
         answers = []
         for bot in bots:
-            messages = self.send_message(text, bot)
-            info = self.get_answer_info(text, bot)
-            bot_answer = {
-                "bot": bot,
-                "messages": messages,
-                "intent_name": info['intent_name'],
-                "confidence": info['confidence']
-            }
-            answers.append(bot_answer)
-
+            try:
+                messages = self.send_message(text, bot)
+                info = self.get_answer_info(text, bot)
+                bot_answer = {
+                    "bot": bot,
+                    "messages": messages,
+                    "intent_name": info['intent_name'],
+                    "confidence": info['confidence']
+                }
+                answers.append(bot_answer)
+            except:
+                logger.warn("Bot didn't answer: " + bot)
+                logger.warn("Connection Error")
+            
         return answers
 
 
