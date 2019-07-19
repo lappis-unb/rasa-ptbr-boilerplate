@@ -1,11 +1,11 @@
 from rasa_core_sdk import Action
 import json
+import environ
 import logging
 from .api_helper import get_request, post_request
-
 logger = logging.getLogger(__name__)
 
-
+env = environ.Env()
 class ActionTest(Action):
     def name(self):
         return "action_test"
@@ -17,6 +17,26 @@ class ActionTest(Action):
             dispatcher.utter_message(ValueError)
 
 
+def get_bots_from_env():
+    bot_env_var = env.str("BOTS", "")
+    bots = []
+    # Remove possible extra ; at the end of the string
+    if bot_env_var[-1] == ";":
+        bot_env_var = bot_env_var[:-1]
+
+    # Create array of bot name to be used in requests
+    for bot in bot_env_var.split(';'):
+        bots.append(bot)
+
+    logger.warn("-"*100)
+    logger.warn("Signed bots to be requests on fallbacks:\n")
+    for bot in bots:
+        logger.warn(bot)
+    logger.warn("-"*100)
+
+    return bots
+
+
 class ActionFallback(Action):
     def name(self):
         return "action_fallback"
@@ -25,9 +45,9 @@ class ActionFallback(Action):
         text = ''
         text = tracker.latest_message.get('text')
 
-
+        bots = get_bots_from_env()
         # TODO: Inserção das API's sem ser hardcode
-        bots = ["localhost:5006", '192.168.100.245:5005']
+        # bots = ["localhost:5006", 'localhost:5007']
 
         # TODO: Paralelizar o envio das mensagens para as APIs cadastradas
         # TODO: Configurar os dados que recebemos do tracker em uma struct separada
@@ -35,6 +55,7 @@ class ActionFallback(Action):
 
         answer = self.get_best_answer(answers)
         # TODO: Continuar com o Fallback padrão quando nenhum bot tem confiança suficiente
+        logger.info("\n\n -- Answer Selected -- ")
         logger.info("Bot: " + answer["bot"])
         logger.info("Confidence: " + str(answer["confidence"]))
         logger.info("Intent Name: " + answer["intent_name"])

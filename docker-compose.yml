@@ -46,6 +46,8 @@ services:
       dockerfile: ./docker/actions.Dockerfile
     ports:
       - 5055:5055
+    environment:
+      - BOTS=localhost:5006;localhost:5007
     volumes:
       - ./bot/actions:/bot/actions
       - ./bot/Makefile:/bot/Makefile
