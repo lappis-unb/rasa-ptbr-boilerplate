@@ -3,6 +3,7 @@ version: '2'
 services:
   # ============================= Rocketchat ==================================
   rocketchat:
+    container_name: rocketchat
     image: rocket.chat:0.69.2
     restart: unless-stopped
     env_file:
@@ -19,8 +20,17 @@ services:
       - ./data/db:/data/db
     command: mongod --smallfiles --oplogSize 128
 
+  # =============================== Coach =================================  
+  coach:
+    container_name: coach
+    image: botcoach:latest
+    volumes:
+      - notebook_models:/notebook_models
+    command: sh -c "cp -r /src_models/* /notebook_models"
+
   # ================================= Bot =====================================
   bot:
+    container_name: bot_rocketchat
     image: bot
     build:
       context: .
@@ -38,19 +48,9 @@ services:
       - ./scripts:/scripts
     command: sh -c "make run-rocketchat"
 
-  actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
-    ports:
-      - 5055:5055
-    volumes:
-      - ./bot/actions:/bot/actions
-      - ./bot/Makefile:/bot/Makefile
-    command: sh -c "make run-actions"
-
   # ============================ Telegram Bot =================================
-  telegram_bot:
+  bot_telegram:
+      container_name: bot_telegram
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
@@ -65,8 +65,22 @@ services:
         - ./scripts:/scripts
       command: sh -c "make run-telegram"
 
+  # ================================= Actions =================================
+  actions:
+    container_name: actions
+    build:
+      context: .
+      dockerfile: ./docker/actions.Dockerfile
+    ports:
+      - 5055:5055
+    volumes:
+      - ./bot/actions:/bot/actions
+      - ./bot/Makefile:/bot/Makefile
+    command: sh -c "make run-actions"
+
   # =============================== Notebooks =================================
   notebooks:
+    container_name: notebooks
     build:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
@@ -80,13 +94,6 @@ services:
       - 8888:8888
     depends_on:
       - coach
-
-  # =============================== Coach =================================  
-  coach:
-    image: botcoach:latest
-    volumes:
-      - notebook_models:/notebook_models
-    command: sh -c "cp -r /src_models/* /notebook_models"
   
 volumes:
   notebook_models:
