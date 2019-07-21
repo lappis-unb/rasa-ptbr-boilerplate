@@ -14,6 +14,3 @@ train-online:
   -s data/stories                    \
   --nlu models/nlu/current/          \
   --endpoints endpoints.yml
-
-run-validator:
-	python3 validator.py --intents data/intents/ --stories data/stories --domain domain.yml

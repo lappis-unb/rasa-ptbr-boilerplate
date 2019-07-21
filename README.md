@@ -1,9 +1,9 @@
-<a href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html"><img src="https://img.shields.io/badge/licence-GPL3-green.svg"/></a>
-<a href="https://codeclimate.com/github/lappis-unb/rasa-ptbr-boilerplate/maintainability"><img src="https://api.codeclimate.com/v1/badges/3fe22bf52000e147c6df/maintainability" /></a>
-
 # Rasa Boilerplate
 <!-- badges -->
 <a href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html"><img src="https://img.shields.io/badge/licence-GPL3-green.svg"/></a>
+<a href="https://codeclimate.com/github/lappis-unb/rasa-ptbr-boilerplate/maintainability"><img src="https://api.codeclimate.com/v1/badges/3fe22bf52000e147c6df/maintainability"/></a>
+
+### For English version, see [README-en](docs/README-en.md)
 
 Um projeto feito em Rasa com configurações necessárias para a construção de um projeto grande de chatbot.
 
@@ -29,10 +29,6 @@ avaliação das conversas dos usuários e do boilerplate.
 importante que em sua primeira execução deste repositório, seja executado:
 
 ```sh
-docker-compose up -d rocketchat
-
-make first-run
-# ou 
 sudo make first-run
 ```
 
@@ -46,7 +42,6 @@ então a execução do script "first-run".
 
 ```sh
 sudo docker-compose up -d rocketchat
-# aguarde 3 minutos para o rocketchat terminar de levantar
 sudo docker-compose up bot
 ```
 

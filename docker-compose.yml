@@ -5,12 +5,8 @@ services:
   rocketchat:
     image: rocket.chat:0.69.2
     restart: unless-stopped
-    environment:
-      - PORT=3000
-      - ROOT_URL=http://localhost:3000
-      - MONGO_URL=mongodb://mongo:27017/rocketchat
-      - ADMIN_USERNAME=admin
-      - ADMIN_PASS=admin
+    env_file:
+      - docker/rocketchat.env
     ports:
       - 3000:3000
     depends_on:
@@ -32,7 +28,7 @@ services:
     restart: unless-stopped
     command: make run-rocketchat 
     env_file:
-      - docker/bot.env
+      - docker/bot-rocketchat.env
     ports:
       - 5002:5002
     depends_on:
@@ -58,10 +54,8 @@ services:
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
-      environment:
-        - TELEGRAM_BOT_USERNAME=lappisbot
-        - TELEGRAM_TOKEN=token
-        - TELEGRAM_WEBHOOK=your_webhook_server/webhooks/telegram/webhook
+      env_file:
+        - docker/bot-telegram.env
       ports:
         - 5001:5001
       depends_on:
@@ -79,7 +73,20 @@ services:
     env_file:
       - docker/notebooks.env
     volumes:
-      - ./bot:/work/bot
+      - ./coach:/work/coach
       - ./notebooks:/work/notebooks
+      - notebook_models:/models:ro
     ports:
       - 8888:8888
+    depends_on:
+      - coach
+
+  # =============================== Coach =================================  
+  coach:
+    image: botcoach:latest
+    volumes:
+      - notebook_models:/notebook_models
+    command: sh -c "cp -r /src_models/* /notebook_models"
+  
+volumes:
+  notebook_models:
