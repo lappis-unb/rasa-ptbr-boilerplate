@@ -8,7 +8,7 @@ set -o nounset
 base_image=requirements:latest
 
 # Build base image
-docker build . -f requirements.Dockerfile -t $base_image
+docker build . -f docker/requirements.Dockerfile -t $base_image
 
 # Check if user wants to publish
 if [ $# -eq 1 ]; then

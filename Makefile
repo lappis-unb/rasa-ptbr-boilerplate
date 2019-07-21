@@ -5,7 +5,7 @@ first-run:
 	docker-compose up bot
 
 build-bot:
-	cd docker && ./build-base.sh
+	./docker/build-base.sh
 	make train
 
 train:
