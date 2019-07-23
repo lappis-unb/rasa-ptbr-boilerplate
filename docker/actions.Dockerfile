@@ -1,4 +1,4 @@
-FROM requirements:latest
+FROM lappis/botrequirements:boilerplate
 
 ADD ./bot/actions/actions.py /bot/actions/actions.py
 ADD ./bot/Makefile /bot/Makefile

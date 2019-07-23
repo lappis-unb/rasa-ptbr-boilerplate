@@ -9,7 +9,7 @@ build-bot:
 	make train
 
 train:
-	docker build . -f docker/coach.Dockerfile -t botcoach:latest
+	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
 	docker-compose build bot
 
 run-rocketchat:
