@@ -130,17 +130,31 @@ class ActionFallback(Action):
 
         r = get_request(payload, "http://" + bot_url + "/conversations/default/tracker")
         answer_info = {}
-        for event in r['events']:
+
+        iterator = iter(r['events'])
+        for event in iterator:
             if 'event' in event and 'user' == event['event']:
                 if message == event['text']:
-                    answer_info['confidence'] = event['parse_data']['intent']['confidence'] 
+                    answer_info['intent_confidence'] = event['parse_data']['intent']['confidence'] 
                     answer_info['intent_name'] = event['parse_data']['intent']['name']
-        
+                    
+                    # always after a user event, there is a action event with policy info.
+                    answer_info['utter_confidence'], answer_info['policy_name'] = self.get_policy_info(iterator)
+
+                    break
+
         if answer_info == {}:
-            answer_info['confidence'] = -1
+            answer_info['intent_confidence'] = -1
             answer_info['intent_name'] = "no answer"
 
         if not answer_info['intent_name']:
             answer_info['intent_name'] = "Fallback"
         
         return answer_info
+    
+    def get_policy_info(self, iterator):
+        event = next(iterator)
+        if event['event'] != 'action':
+            raise ValueError("Event after user event is not a action event")
+
+        return (event['confidence'], event['policy'])
