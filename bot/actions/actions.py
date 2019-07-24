@@ -163,3 +163,18 @@ class ActionFallback(Action):
             raise ValueError("Event after user event is not a action event")
 
         return (event['confidence'], event['policy'])
+
+
+def main_bot_fallback():
+    return  {
+                'bot': 'main-bot',
+                'total_confidence': 2,
+                'intent_confidence': 1,
+                'utter_confidence': 1,
+                'policy_name': 'Fallback',
+                'intent_name': 'fallback',
+                'messages':[
+                    "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito.",
+                    "Você pode perguntar de novo de outro jeito?"
+                ]
+            }
