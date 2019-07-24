@@ -25,18 +25,11 @@ avaliação das conversas dos usuários e do boilerplate.
 
 ## Bot
 
-**Atenção**: Para funcionamento inicial das imagens docker citadas aqui, como "bot", "coach" e "requirements", é
-importante que em sua primeira execução deste repositório, seja executado:
-
-```sh
-sudo make first-run
-```
 
 Este script foi configurado para construir as imagens genéricas necessárias para execução deste ambiente.
 Caso seu projeto utilize este boilerplate e vá realizar uma integração contínua ou similar, é interessante
-criar um repositório para as imagens e substitua os nomes das imagens "bot", "coach" e "requirements" pelas
-suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público, não sendo mais necessário
-então a execução do script "first-run".
+criar um repositório para as imagens e substitua os nomes das imagens "lappis/bot", "lappis/coach" e "lappis/botrequirements" pelas
+suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público.
 
 ### RocketChat
 

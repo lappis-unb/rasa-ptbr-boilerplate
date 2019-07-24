@@ -25,21 +25,10 @@ evaluation of user conversations and boilerplate.
 
 ## Bot
 
-**Attention**: For initial operation of the docker images quoted here, such as "bot", "coach" and "requirements", is
-important that in its first execution of this repository, be executed:
-
-```sh
-docker-compose up -d rocketchat
-
-make first-run
-# or 
-sudo make first-run
-```
 
 This script has been configured to build the generic images needed to run this environment.
 If your project uses this boilerplate and goes to perform continuous or similar integration, it is interesting
-create a repository for the images and replace the names of the "bot", "coach" and "requirements" their respective new images, for example "<organization>/bot" in a public repository, no longer needed
-then run the "first-run" script.
+create a repository for the images and replace the names of the "bot", "coach" and "requirements" their respective new images, for example "<organization>/bot" in a public repository.
 
 ### RocketChat
 
