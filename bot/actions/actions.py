@@ -57,7 +57,10 @@ class ActionFallback(Action):
         # TODO: Continuar com o Fallback padrão quando nenhum bot tem confiança suficiente
         logger.info("\n\n -- Answer Selected -- ")
         logger.info("Bot: " + answer["bot"])
-        logger.info("Confidence: " + str(answer["confidence"]))
+        logger.info("Confidence: " + str(answer["intent_confidence"]))
+        logger.info("Confidence: " + str(answer["utter_confidence"]))
+        logger.info("Total Confidence: " + str(answer["total_confidence"]))
+        logger.info("Policy: " + str(answer["policy_name"]))
         logger.info("Intent Name: " + answer["intent_name"])
 
         for message in answer["messages"]:
@@ -69,27 +72,23 @@ class ActionFallback(Action):
 
     def get_best_answer(self, answers):
         # TODO: Fazer a hierarquia das policies, antes da confiança
-        max_confidence = max([answer['confidence'] for answer in answers])
+        try:
+            max_confidence = max([answer['total_confidence'] for answer in answers])
+        except ValueError:
+            # Empty answers
+            max_confidence = 0
 
         # FIXME: use the value directly from policy_config.yml, smallest of the thresholds
         if(max_confidence >= 0.6):
             best_answer = self.find_answer_by_confidence(answers, max_confidence)
         else:
-            best_answer = {
-                'bot': 'main-bot',
-                'confidence': 1,
-                'intent_name': 'fallback',
-                'messages':[
-                    "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito.",
-                    "Você pode perguntar de novo de outro jeito?"
-                ]
-            }
+            best_answer = main_bot_fallback()
         return best_answer
 
     def find_answer_by_confidence(self, answers, confidence):
         best_answer = {}
         for answer in answers:
-            if(answer["confidence"] == confidence):
+            if(answer["total_confidence"] == confidence):
                 best_answer = answer
 
         return best_answer
@@ -100,11 +99,17 @@ class ActionFallback(Action):
             try:
                 messages = self.send_message(text, bot)
                 info = self.get_answer_info(text, bot)
+                if "fallback" in info['policy_name'].lower():    
+                    continue
+                
                 bot_answer = {
                     "bot": bot,
                     "messages": messages,
                     "intent_name": info['intent_name'],
-                    "confidence": info['confidence']
+                    "intent_confidence": info['intent_confidence'],
+                    "utter_confidence": info['utter_confidence'],
+                    "total_confidence": info['intent_confidence']+info['utter_confidence'],
+                    "policy_name": info['policy_name'],
                 }
                 answers.append(bot_answer)
             except:
