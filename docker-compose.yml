@@ -30,8 +30,8 @@ services:
 
   # ================================= Bot =====================================
   bot:
+    image: lappis/bot:boilerplate
     container_name: bot_rocketchat
-    image: bot
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile

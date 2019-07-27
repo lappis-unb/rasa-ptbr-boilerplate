@@ -1,15 +1,9 @@
-first-run:
-	docker-compose up -d rocketchat
-	make build-bot
-	docker-compose run --rm bot make config-rocket
-	docker-compose up bot
-
 build-bot:
 	./docker/build-base.sh
 	make train
 
 train:
-	docker build . -f docker/coach.Dockerfile -t botcoach:latest
+	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
 	docker-compose build bot
 
 run-rocketchat:
