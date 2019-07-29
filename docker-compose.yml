@@ -46,7 +46,6 @@ services:
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
-    command: sh -c "make run-rocketchat"
 
   # ============================ Telegram Bot =================================
   bot_telegram:
