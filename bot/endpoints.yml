@@ -1,3 +1,8 @@
 action_endpoint:
   url: "http://actions:5055/webhook"
 
+# event_broker:
+#   url: rabbitmq
+#   username: admin
+#   password: admin
+#   queue: bot_messages
