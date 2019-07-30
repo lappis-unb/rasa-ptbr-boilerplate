@@ -4,12 +4,14 @@ rasa_core.log
 errors.json
 
 ### Rasa evaluation ###
+.ipynb_checkpoints/
 notebooks/models/
 notebooks/errors.json
 notebooks/lab/
 notebooks/evaluate-intents.ipynb
 notebooks/stories/failed_stories.md
 notebooks/stories/matrix.pdf
+notebooks/stories/chat_graph.html
 bot/.ipython/
 bot/.keras/
 bot/.local/

@@ -20,24 +20,20 @@ class RocketChatBot(OutputChannel):
         from rocketchat_py_sdk.driver import Driver
 
         self.username = user
-        self.connector = Driver(url=server , ssl=ssl)
+        self.connector = Driver(url=server, ssl=ssl)
         self.users = {}
         self.user = user
         self.password = password
 
         self.logged_in = False
-        try:
-            self.connector.connect()
-            self.login()
-        except:
-            raise Exception (
-                '\n\n\n\n\nRocket-chat is not running! \n'
-                'Be sure to run docker-compose up rocketchat\n'
-                'or change your run-rocketchat for run-console on docker-compose.yml')
+
+        self.connector.connect()
+        self.login()
 
     def login(self):
         while not self.logged_in:
-            logger.info('Trying to login to rocketchat as {}'.format(self.user))
+            logger.info('Trying to login to rocketchat as {}'
+                        .format(self.user))
             self.connector.login(user=self.user, password=self.password,
                                  callback=self._login_callback)
             time.sleep(10)
@@ -64,7 +60,6 @@ class RocketChatBot(OutputChannel):
 
         for message_part in message.split("\n\n"):
             self.users[recipient_id].add_message(message_part)
-
 
 
 class RocketChatInput(InputChannel):
@@ -129,6 +124,7 @@ class RocketChatInput(InputChannel):
 
         return rocketchat_webhook
 
+
 class RocketchatHandleMessages:
     def __init__(self, rid, bot):
         self.rid = rid
@@ -136,6 +132,16 @@ class RocketchatHandleMessages:
         self.message_index = 0
         self.bot = bot
         self.is_typing = False
+
+    def manage_is_typing_message(self, log_message, activate_is_typing,
+                                 typing_function):
+        logger.info(log_message)
+
+        self.bot.connector.call(
+            'stream-notify-room',
+            [self.rid + '/typing', self.bot.username, activate_is_typing],
+            typing_function
+        )
 
     def send_message(self):
         msg = self.messages[self.message_index]
@@ -147,26 +153,18 @@ class RocketchatHandleMessages:
 
         if self.message_index == len(self.messages):
             if self.is_typing:
-                logger.info('deactivate typing for {}'.format(self.rid))
-
-                self.bot.connector.call(
-                    'stream-notify-room',
-                    [self.rid + '/typing', self.bot.username, False],
-                    self.deactivate_typing
-                )
+                self.manage_is_typing_message('deactivate typing for {}'.
+                                              format(self.rid),
+                                              False, self.deactivate_typing)
 
             self.messages = []
             self.message_index = 0
 
     def add_message(self, message):
         if not self.is_typing:
-            logger.info('activate typing for {}'.format(self.rid))
-
-            self.bot.connector.call(
-                'stream-notify-room',
-                [self.rid + '/typing', self.bot.username, True],
-                self.activate_typing
-            )
+            self.manage_is_typing_message('activate typing for {}'.
+                                          format(self.rid),
+                                          True, self.activate_typing)
 
         wait_time = int(os.getenv('MIN_TYPING_TIME', 1))
         max_time = int(os.getenv('MAX_TYPING_TIME', 10))
@@ -177,8 +175,8 @@ class RocketchatHandleMessages:
 
             words_per_sec = int(os.getenv('WORDS_PER_SECOND_TYPING', 5))
             wait_time = min(max_time,
-                max(1, n_words // words_per_sec)
-            ) + last_msg['time']
+                            max(1, n_words // words_per_sec)
+                            ) + last_msg['time']
 
         threading.Timer(wait_time, self.send_message).start()
 
@@ -192,4 +190,3 @@ class RocketchatHandleMessages:
     def deactivate_typing(self, error, data):
         if not error:
             self.is_typing = False
-

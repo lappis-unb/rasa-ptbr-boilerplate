@@ -1,9 +1,9 @@
-<a href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html"><img src="https://img.shields.io/badge/licence-GPL3-green.svg"/></a>
-<a href="https://codeclimate.com/github/lappis-unb/rasa-ptbr-boilerplate/maintainability"><img src="https://api.codeclimate.com/v1/badges/3fe22bf52000e147c6df/maintainability" /></a>
-
 # Rasa Boilerplate
 <!-- badges -->
 <a href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html"><img src="https://img.shields.io/badge/licence-GPL3-green.svg"/></a>
+<a href="https://codeclimate.com/github/lappis-unb/rasa-ptbr-boilerplate/maintainability"><img src="https://api.codeclimate.com/v1/badges/3fe22bf52000e147c6df/maintainability"/></a>
+
+### For English version, see [README-en](docs/README-en.md)
 
 Um projeto feito em Rasa com configurações necessárias para a construção de um projeto grande de chatbot.
 
@@ -25,28 +25,16 @@ avaliação das conversas dos usuários e do boilerplate.
 
 ## Bot
 
-**Atenção**: Para funcionamento inicial das imagens docker citadas aqui, como "bot", "coach" e "requirements", é
-importante que em sua primeira execução deste repositório, seja executado:
-
-```sh
-docker-compose up -d rocketchat
-
-make first-run
-# ou 
-sudo make first-run
-```
 
 Este script foi configurado para construir as imagens genéricas necessárias para execução deste ambiente.
 Caso seu projeto utilize este boilerplate e vá realizar uma integração contínua ou similar, é interessante
-criar um repositório para as imagens e substitua os nomes das imagens "bot", "coach" e "requirements" pelas
-suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público, não sendo mais necessário
-então a execução do script "first-run".
+criar um repositório para as imagens e substitua os nomes das imagens "lappis/bot", "lappis/coach" e "lappis/botrequirements" pelas
+suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público.
 
 ### RocketChat
 
 ```sh
 sudo docker-compose up -d rocketchat
-# aguarde 3 minutos para o rocketchat terminar de levantar
 sudo docker-compose up bot
 ```
 

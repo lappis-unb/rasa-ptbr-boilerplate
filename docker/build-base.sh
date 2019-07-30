@@ -5,10 +5,10 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-base_image=requirements:latest
+base_image=lappis/botrequirements:boilerplate
 
 # Build base image
-docker build . -f requirements.Dockerfile -t $base_image
+docker build . -f docker/requirements.Dockerfile -t $base_image
 
 # Check if user wants to publish
 if [ $# -eq 1 ]; then
