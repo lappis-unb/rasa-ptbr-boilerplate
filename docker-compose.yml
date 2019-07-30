@@ -82,7 +82,7 @@ services:
     restart: unless-stopped
     command: make run-api
     env_file:
-      - docker/bot.env
+      - docker/bot-rocketchat.env
     ports:
       - 5006:5005
       - 5003:5002
