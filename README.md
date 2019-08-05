@@ -150,8 +150,8 @@ sudo docker-compose run --rm coach make train-online
 ### Setup
 
 ```
-sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
 sudo docker-compose up -d elasticsearch
+sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
 ```
 
 Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
@@ -159,6 +159,66 @@ Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
 ```
 ENVIRONMENT_NAME=localhost
 BOT_VERSION=last-commit-hash
+```
+
+#### Setup RabbitMQ
+
+Inicie o serviço do servidor do RabbitMQ:
+
+```sh
+sudo docker-compose up -d rabbitmq
+```
+
+Inicie o serviço do consumidor do RabbitMQ, que ficará responsável por enviar as mensagens para o ElasticSearch:
+
+```sh
+sudo docker-compose up -d rabbitmq-consumer
+```
+
+Lembre-se de configurar as seguintes variáveis de ambiente do serviço `rabbitmq-consumer` no `docker-compose`.
+
+```sh
+ENVIRONMENT_NAME=localhost
+BOT_VERSION=last-commit-hash
+RABBITMQ_DEFAULT_USER=admin
+RABBITMQ_DEFAULT_PASS=admin
+```
+
+Sendo que as configurações de `RABBITMQ_DEFAULT_USER` e `RABBITMQ_DEFAULT_PASS` devem ser as mesmas definidas no serviço do `rabbitmq`.
+
+
+
+### Execução
+
+Existem duas formas para executar a Tais com o *broker*. A primeira delas é via linha de comando.
+Para utilizar esta forma é preciso definir Dentro do arquivo `endpoints.yml` as configurações do broker:
+
+```yml
+event_broker:
+  url: rabbitmq
+  username: admin
+  password: admin
+  queue: bot_messages
+```
+
+Depois basta executar o bot:
+
+```sh
+sudo docker-compose run --rm bot make run-console-broker
+```
+
+A segunda forma é utilizando o script `run-rocketchat` que é utilizado quando o bot é executado com o RocketChat como canal. Para isso, as mesmas variáveis devem ser configuradas no arquivo `docker/bot/bot.env`.
+Lembre-se também de configurar como `True` a seguinte variável do serviço `bot` no `docker-compose`.
+
+```
+# Analytics config
+ENABLE_ANALYTICS=True
+
+# Broker config
+BROKER_URL=rabbitmq
+BROKER_USERNAME=admin
+BROKER_PASSWORD=admin
+QUEUE_NAME=bot_messages
 ```
 
 ### Visualização
