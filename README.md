@@ -229,8 +229,29 @@ sudo docker-compose up -d kibana
 
 Você pode acessar o kibana no `locahost:5601`
 
+## Testando Fluxos de Conversa
 
+É possível testar os fluxos de conversação utilizando o [Evaluation do Rasa Core](https://github.com/lappis-unb/tais/wiki/Testes-Automatizados). Para testá-los no seu bot basta adicionar um arquivo dentro do diretório `bot/e2e/` com as histórias a serem testadas. Essas histórias devem ser descritas normalmente, porém com exemplos de frases para cada uma das *Intents* sendo testadas, segundo o formato abaixo:
 
+```
+## História de teste 1
+* cumprimentar: oi
+   - utter_cumprimentar
+* action_test: test custom action
+   - action_test
+```
+
+Uma vez que os arquivos de teste foram adicionados ao diretório correto, basta rodar os testes com a *task* do bot:
+
+```sh
+sudo docker-compose run --rm bot make test-stories
+```
+
+Para gerar data-science referente aos testes automatizados de bor, execute o seguinte comando do *Makefile* na raíz do projeto:
+
+```sh
+sudo docker-compose run --rm bot make test-dialogue
+```
 
 ## Notebooks - Análise de dados
 
