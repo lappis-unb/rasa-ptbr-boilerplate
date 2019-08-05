@@ -1,4 +1,5 @@
 run-rocketchat:
+	make config-bot
 	python3 run-rocketchat.py
 
 run-telegram:
@@ -23,4 +24,5 @@ evaluate:
 run-actions:
 	python -m rasa_core_sdk.endpoint --actions actions
 
-
+config-bot:
+	python /scripts/bot_config.py -r ${ROCKETCHAT_URL} -an ${ROCKETCHAT_ADMIN_USERNAME} -ap ${ROCKETCHAT_ADMIN_PASSWORD} -bu ${ROCKETCHAT_BOT_USERNAME} -bp ${ROCKETCHAT_BOT_PASSWORD}

@@ -101,7 +101,6 @@ services:
       - RABBITMQ_DEFAULT_PASS=admin
 
       # Analytics config
-      - ENABLE_ANALYTICS=False
       - ELASTICSEARCH_URL=elasticsearch:9200
       - ENVIRONMENT_NAME=localhost
       - BOT_VERSION=last-bot-commit-hash
