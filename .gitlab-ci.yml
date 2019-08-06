@@ -1,0 +1,112 @@
+image: python:3.6-slim
+
+variables:
+  BOT_IMAGE: $DOCKERHUB_USER/bot
+  COACH_IMAGE: $DOCKERHUB_USER/coach
+
+stages:
+  - test style
+  # - validate format
+  - test stories
+  - build requirements
+  - build coach
+  - build
+
+
+#############################################################
+#################### TEST STYLE #############################
+#############################################################
+test style:
+  stage: test style
+  script:
+    - pip -V
+    - python -V
+    - pip install -r requirements.txt
+    - flake8 --exclude venv
+
+
+#############################################################
+############### VALIDATE FORMAT #############################
+#############################################################
+# run dataset validator:
+#   stage: validate format
+#   image: $COACH_IMAGE:latest
+#   script:
+#     - cd coach/
+#     - make run-validator
+
+
+#############################################################
+############### TEST STORIES ################################
+#############################################################
+test stories:
+  stage: test stories
+  image: docker
+  tags:
+    - docker
+  services:
+    - docker:dind
+  script:
+    - docker build . -f docker/bot/coach.Dockerfile -t $COACH_IMAGE:latest > /dev/null 2>&1
+    - docker build -f docker/bot/bot.Dockerfile -t $BOT_IMAGE:latest .
+    - docker run --rm $BOT_IMAGE:latest make test-stories
+
+
+#############################################################
+############### BUILD REQUIREMENTS ##########################
+#############################################################
+build requirements:
+  stage: build requirements
+  image: docker
+  tags:
+    - docker
+  services:
+    - docker:dind
+  script:
+    - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+    - cd ./docker/bot
+    - ./build-base.sh publish
+  only:
+    refs:
+      - master
+    changes:
+      - ./docker/bot/requirements.txt
+  environment: homolog
+
+
+#############################################################
+############### BUILD COACH #################################
+#############################################################
+build coach:
+  stage: build coach
+  image: docker
+  tags:
+    - docker
+  services:
+    - docker:dind
+  script:
+    - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+    - docker build . -f docker/bot/coach.Dockerfile -t $COACH_IMAGE:latest > /dev/null 2>&1
+    - docker push $COACH_IMAGE:latest
+  only:
+    - master
+  environment: homolog
+
+
+#############################################################
+############### BUILD BOT ###################################
+#############################################################
+build bot:
+  stage: build
+  image: docker
+  tags:
+    - docker
+  services:
+    - docker:dind
+  script:
+    - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+    - docker build -f docker/bot/bot.Dockerfile -t $BOT_IMAGE:latest .
+    - docker push $BOT_IMAGE:latest
+  only:
+    - master
+  environment: homolog
