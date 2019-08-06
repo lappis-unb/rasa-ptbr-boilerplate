@@ -5,7 +5,7 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-base_image=joaovitor3/botrequirements:boilerplate
+base_image=lappis/botrequirements:boilerplate
 
 # Build base image
 docker build . -f docker/requirements.Dockerfile -t $base_image

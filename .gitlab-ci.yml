@@ -6,7 +6,6 @@ variables:
 
 stages:
   - test style
-  # - validate format
   - test stories
   - build requirements
   - build coach
@@ -26,17 +25,6 @@ test style:
 
 
 #############################################################
-############### VALIDATE FORMAT #############################
-#############################################################
-# run dataset validator:
-#   stage: validate format
-#   image: $COACH_IMAGE:latest
-#   script:
-#     - cd coach/
-#     - make run-validator
-
-
-#############################################################
 ############### TEST STORIES ################################
 #############################################################
 test stories:
@@ -47,8 +35,8 @@ test stories:
   services:
     - docker:dind
   script:
-    - docker build . -f docker/bot/coach.Dockerfile -t $COACH_IMAGE:latest > /dev/null 2>&1
-    - docker build -f docker/bot/bot.Dockerfile -t $BOT_IMAGE:latest .
+    - docker build -f docker/coach.Dockerfile -t $COACH_IMAGE:latest .
+    - docker build -f docker/bot.Dockerfile -t $BOT_IMAGE:latest .
     - docker run --rm $BOT_IMAGE:latest make test-stories
 
 
@@ -68,7 +56,7 @@ build requirements:
     - ./build-base.sh publish
   only:
     refs:
-      - master
+      - add_ci
     changes:
       - ./docker/bot/requirements.txt
   environment: homolog
@@ -86,10 +74,10 @@ build coach:
     - docker:dind
   script:
     - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
-    - docker build . -f docker/bot/coach.Dockerfile -t $COACH_IMAGE:latest > /dev/null 2>&1
+    - docker build -f docker/coach.Dockerfile -t $COACH_IMAGE:latest .
     - docker push $COACH_IMAGE:latest
   only:
-    - master
+    - add_ci
   environment: homolog
 
 
@@ -105,8 +93,8 @@ build bot:
     - docker:dind
   script:
     - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
-    - docker build -f docker/bot/bot.Dockerfile -t $BOT_IMAGE:latest .
+    - docker build -f docker/bot.Dockerfile -t $BOT_IMAGE:latest .
     - docker push $BOT_IMAGE:latest
   only:
-    - master
+    - add_ci
   environment: homolog
