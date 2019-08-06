@@ -1,6 +1,6 @@
 FROM python:3.6-slim
 
-RUN apt update && apt install -y gcc make
+RUN apt update && apt install -y gcc make nginx
 
 RUN python -m pip install --upgrade pip
 
