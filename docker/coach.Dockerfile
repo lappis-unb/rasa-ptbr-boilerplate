@@ -11,8 +11,11 @@ RUN make train
 
 
 WORKDIR /
+RUN tar -czvf models.tar.gz /src_models/
+RUN md5sum models.tar.gz > model_version.txt
 
-RUN make train
+RUN mkdir notebook_models
+RUN cp -r /src_models/* /notebook_models
 
 RUN find /. | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 
