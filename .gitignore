@@ -201,3 +201,7 @@ tags
 models/dialogue/
 
 models/nlu/current/
+
+# Model files
+models.tar.gz
+
