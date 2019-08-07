@@ -10,6 +10,28 @@ MODEL_HOST = os.getenv('COACH_URL', 'coach')
 VERSION_URL = "http://" + MODEL_HOST + "/version"
 FILE_URL = 'http://' + MODEL_HOST + '/' + MODEL_FILENAME
 
+
+
+def try_connect_coach():
+    for _ in range(100):
+        if get_version():
+            log.info("Coach is available. Continuing config...")
+            return
+        print('Coach is unavailable. Retrying in 1 second')
+        time.sleep(1)
+
+    log.critical('Maximum number of attempts connecting to coach')
+    raise RuntimeError('could not connect to coach')
+
+
+def get_version():
+    try:
+        r = requests.get(url=VERSION_URL)
+        return True
+    except:
+        return False
+
+
 def md5(fname):
     hash_md5 = hashlib.md5()
     with open(fname, "rb") as f:
@@ -21,6 +43,9 @@ def uncompress_models(filename):
     os.system("tar -xzvf " + filename)
     os.system("mv src_models " + MODEL_FOLDER)
 
+
+
+try_connect_coach()
 
 if os.path.isfile(MODEL_FILENAME) == True:
     print("file already exist")
