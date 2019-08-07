@@ -2,7 +2,7 @@ import requests
 import os
 import wget
 import hashlib
-
+import time
 
 MODEL_FOLDER = "/models" 
 MODEL_FILENAME = "models.tar.gz"
@@ -15,12 +15,12 @@ FILE_URL = 'http://' + MODEL_HOST + '/' + MODEL_FILENAME
 def try_connect_coach():
     for _ in range(100):
         if get_version():
-            log.info("Coach is available. Continuing config...")
+            print("Coach is available. Continuing config...")
             return
         print('Coach is unavailable. Retrying in 1 second')
         time.sleep(1)
 
-    log.critical('Maximum number of attempts connecting to coach')
+    print('Maximum number of attempts connecting to coach')
     raise RuntimeError('could not connect to coach')
 
 
