@@ -3,10 +3,12 @@ import os
 import wget
 import hashlib
 
-FILE_URL = 'http://coach/models.tar.gz'
-VERSION_URL = "http://coach/version"
-MODEL_FILENAME = "models.tar.gz"
+
 MODEL_FOLDER = "/models" 
+MODEL_FILENAME = "models.tar.gz"
+MODEL_HOST = os.getenv('COACH_URL', 'coach')
+VERSION_URL = "http://" + MODEL_HOST + "/version"
+FILE_URL = 'http://' + MODEL_HOST + '/' + MODEL_FILENAME
 
 def md5(fname):
     hash_md5 = hashlib.md5()
