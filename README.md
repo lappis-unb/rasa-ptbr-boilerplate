@@ -250,7 +250,7 @@ sudo docker-compose run --rm bot make test-stories
 Para gerar data-science referente aos testes automatizados de bor, execute o seguinte comando do *Makefile* na raíz do projeto:
 
 ```sh
-make test-dialogue
+sudo docker-compose run --rm bot make test-dialogue
 ```
 
 ## Notebooks - Análise de dados
