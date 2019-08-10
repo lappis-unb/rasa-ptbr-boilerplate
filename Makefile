@@ -11,3 +11,6 @@ run-telegram:
 
 run-console:
 	docker-compose run bot make run-console
+
+test-dialogue:
+	docker-compose run --rm bot make e2e
