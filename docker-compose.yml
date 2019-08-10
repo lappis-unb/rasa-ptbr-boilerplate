@@ -1,25 +1,6 @@
 version: '2'
 
 services:
-  # ============================= Rocketchat ==================================
-  rocketchat:
-    container_name: rocketchat
-    image: rocket.chat:0.69.2
-    restart: unless-stopped
-    env_file:
-      - docker/rocketchat.env
-    ports:
-      - 3000:3000
-    depends_on:
-      - mongo
-
-  mongo:
-    image: mongo:3.2
-    restart: unless-stopped
-    volumes:
-      - ./data/db:/data/db
-    command: mongod --smallfiles --oplogSize 128
-
   # =============================== Coach =================================  
   coach:
     container_name: coach
@@ -76,6 +57,26 @@ services:
       - ./bot/actions:/bot/actions
       - ./bot/Makefile:/bot/Makefile
     command: sh -c "make run-actions"
+
+  # ============================= Rocketchat ==================================
+  rocketchat:
+    container_name: rocketchat
+    image: rocket.chat:0.69.2
+    restart: unless-stopped
+    env_file:
+      - docker/rocketchat.env
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:3.2
+    restart: unless-stopped
+    volumes:
+      - ./data/db:/data/db
+    command: mongod --smallfiles --oplogSize 128
+
 
   # =============================== Notebooks =================================
   notebooks:
