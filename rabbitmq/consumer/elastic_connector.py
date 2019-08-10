@@ -88,7 +88,7 @@ class ElasticConnector():
             'environment': ENVIRONMENT_NAME,
             'version': BOT_VERSION,
 
-            'user_id': '',
+            'user_id': user_message['sender_id'],
             'is_bot': False,
             'timestamp': timestamp,
 
@@ -115,7 +115,7 @@ class ElasticConnector():
         message = {
             'environment': ENVIRONMENT_NAME,
             'version': BOT_VERSION,
-            'user_id': '',
+            'user_id': user_message['sender_id'],
 
             'is_bot': True,
 
