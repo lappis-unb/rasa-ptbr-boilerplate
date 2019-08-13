@@ -1,10 +1,10 @@
-build-bot:
+build:
 	./docker/build-base.sh
 	make train
 
 train:
-	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
-	docker-compose build bot
+	docker-compose rm -s -f coach
+	docker-compose build coach
 
 run-telegram:
 	docker-compose up telegram_bot

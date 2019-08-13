@@ -22,15 +22,18 @@ services:
 
   # =============================== Coach =================================  
   coach:
+    image: lappis/coach:boilerplate
     container_name: coach
     build:
       context: .
       dockerfile: ./docker/coach.Dockerfile
-    image: lappis/coach:boilerplate
     volumes:
       - notebook_models:/notebook_models
     ports:
       - 80:80
+    environment:
+      - AUGMENTATION_FACTOR=50
+      - VALIDATION_SPLIT=0.2
   # ================================= Bot =====================================
   bot:
     image: lappis/bot:boilerplate
