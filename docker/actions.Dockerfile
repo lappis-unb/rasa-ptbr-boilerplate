@@ -1,6 +1,7 @@
 FROM lappis/botrequirements:boilerplate
 
 ADD ./bot/actions/actions.py /bot/actions/actions.py
+ADD ./coach/policy_config.yml /bot/actions/policy_config.yml
 ADD ./bot/Makefile /bot/Makefile
 
 WORKDIR bot/

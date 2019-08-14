@@ -1,5 +1,6 @@
 from rasa_core_sdk import Action
 import json
+import yaml
 import environ
 import logging
 from .api_helper import get_request, post_request
@@ -46,8 +47,6 @@ class ActionFallback(Action):
         text = tracker.latest_message.get('text')
 
         bots = get_bots_from_env()
-        # TODO: Inserção das API's sem ser hardcode
-        # bots = ["localhost:5006", 'localhost:5007']
 
         # TODO: Paralelizar o envio das mensagens para as APIs cadastradas
         # TODO: Configurar os dados que recebemos do tracker em uma struct separada
@@ -69,20 +68,31 @@ class ActionFallback(Action):
 
         dispatcher.utter_attachment(str(answer))
 
+    def get_core_threshold(self, answers):
+        with open('./policy_config.yml') as file:
+            policy_data = yaml.load(file)
+
+        core_threshold = policy_data['policies'][1]['core_threshold']
+
+        return core_threshold
 
     def get_best_answer(self, answers):
         # TODO: Fazer a hierarquia das policies, antes da confiança
+        core_threshold = get_core_threshold(answers)
+
+        valid_answers = filter(lambda x: x['intent_confidence'] >= core_threshold, answers)
+
         try:
-            max_confidence = max([answer['total_confidence'] for answer in answers])
+            max_confidence = max([answer['total_confidence'] for answer in valid_answers])
         except ValueError:
             # Empty answers
             max_confidence = 0
 
-        # FIXME: use the value directly from policy_config.yml, smallest of the thresholds
-        if(max_confidence >= 0.6):
+        if(valid_answers and max_confidence != 0):
             best_answer = self.find_answer_by_confidence(answers, max_confidence)
         else:
             best_answer = main_bot_fallback()
+
         return best_answer
 
     def find_answer_by_confidence(self, answers, confidence):
@@ -99,9 +109,9 @@ class ActionFallback(Action):
             try:
                 messages = self.send_message(text, bot)
                 info = self.get_answer_info(text, bot)
-                if "fallback" in info['policy_name'].lower():    
+                if "fallback" in info['policy_name'].lower():
                     continue
-                
+
                 bot_answer = {
                     "bot": bot,
                     "messages": messages,
@@ -115,7 +125,7 @@ class ActionFallback(Action):
             except:
                 logger.warn("Bot didn't answer: " + bot)
                 logger.warn("Connection Error")
-            
+
         return answers
 
 
@@ -140,9 +150,9 @@ class ActionFallback(Action):
         for event in iterator:
             if 'event' in event and 'user' == event['event']:
                 if message == event['text']:
-                    answer_info['intent_confidence'] = event['parse_data']['intent']['confidence'] 
+                    answer_info['intent_confidence'] = event['parse_data']['intent']['confidence']
                     answer_info['intent_name'] = event['parse_data']['intent']['name']
-                    
+
                     # always after a user event, there is a action event with policy info.
                     answer_info['utter_confidence'], answer_info['policy_name'] = self.get_policy_info(iterator)
 
@@ -154,9 +164,9 @@ class ActionFallback(Action):
 
         if not answer_info['intent_name']:
             answer_info['intent_name'] = "Fallback"
-        
+
         return answer_info
-    
+
     def get_policy_info(self, iterator):
         event = next(iterator)
         if event['event'] != 'action':
