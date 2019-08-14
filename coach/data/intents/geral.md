@@ -96,3 +96,14 @@
 - Tudo bem e você
 - como vc esta
 - como vai
+
+## intent:botao
+- Envia um botão
+- Me envia um botão
+- Testando um botão
+
+## intent:afirmacao_botao
+- afirmação de botão
+
+## intent:negacao_botao
+- negação de botão
