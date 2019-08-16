@@ -3,8 +3,8 @@ FROM lappis/botrequirements:boilerplate
 COPY ./coach /coach
 COPY ./scripts /scripts
 
-RUN mv /coach/base_config/nginx.conf /etc/nginx/conf.d/nginx.conf
-RUN mv /coach/base_config/* /
+RUN mv ./coach/base_config/nginx.conf /etc/nginx/conf.d/nginx.conf
+RUN mv ./coach/base_config/* /
 
 RUN mkdir /src_models
 

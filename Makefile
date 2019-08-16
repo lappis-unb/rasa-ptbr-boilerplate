@@ -10,4 +10,7 @@ run-telegram:
 	docker-compose up telegram_bot
 
 run-console:
-	docker-compose run bot make run-console
+	docker-compose run --rm bot make run-console
+
+run-api:
+	docker-compose run --rm bot make run-api
