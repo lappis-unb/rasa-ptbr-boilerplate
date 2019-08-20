@@ -5,8 +5,8 @@ import datetime
 import hashlib
 import json
 
-from rasa_core.tracker_store import InMemoryTrackerStore
-from rasa_core.events import ActionExecuted, BotUttered, UserUttered
+from rasa.core.tracker_store import InMemoryTrackerStore
+from rasa.core.events import ActionExecuted, BotUttered, UserUttered
 
 from elasticsearch import Elasticsearch
 

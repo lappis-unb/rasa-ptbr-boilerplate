@@ -1,6 +1,6 @@
 run-rocketchat:
 	make config-bot
-	python3 run-rocketchat.py
+	python3 run_rocketchat.py
 
 run-telegram:
 	python -m rasa_core.run -d /models/dialogue -u /models/nlu/current --port 5001 --credentials credentials.yml --endpoints endpoints.yml
