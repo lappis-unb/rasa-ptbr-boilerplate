@@ -145,7 +145,7 @@ services:
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
-    command: sh -c "rasa run"
+    command: sh -c "rasa run --credentials credentials.yml --model /models"
 
   # ============================= Rocketchat ==================================
   # Rocketchat container instance avaible on localhost:3000.
