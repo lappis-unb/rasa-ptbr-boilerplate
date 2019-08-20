@@ -1,0 +1,100 @@
+image: python:3.6-slim
+
+variables:
+  BOT_IMAGE: $DOCKERHUB_USER/bot
+  COACH_IMAGE: $DOCKERHUB_USER/coach
+
+stages:
+  - test style
+  - test stories
+  - build requirements
+  - build coach
+  - build
+
+
+#############################################################
+#################### TEST STYLE #############################
+#############################################################
+test style:
+  stage: test style
+  script:
+    - pip -V
+    - python -V
+    - pip install -r requirements.txt
+    - flake8 --exclude venv
+
+
+#############################################################
+############### TEST STORIES ################################
+#############################################################
+test stories:
+  stage: test stories
+  image: docker
+  tags:
+    - docker
+  services:
+    - docker:dind
+  script:
+    - docker build -f docker/coach.Dockerfile -t $COACH_IMAGE:latest .
+    - docker build -f docker/bot.Dockerfile -t $BOT_IMAGE:latest .
+    - docker run --rm $BOT_IMAGE:latest make test-stories
+
+
+#############################################################
+############### BUILD REQUIREMENTS ##########################
+#############################################################
+build requirements:
+  stage: build requirements
+  image: docker
+  tags:
+    - docker
+  services:
+    - docker:dind
+  script:
+    - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+    - cd ./docker/bot
+    - ./build-base.sh publish
+  only:
+    refs:
+      - master
+    changes:
+      - ./docker/bot/requirements.txt
+  environment: homolog
+
+
+#############################################################
+############### BUILD COACH #################################
+#############################################################
+build coach:
+  stage: build coach
+  image: docker
+  tags:
+    - docker
+  services:
+    - docker:dind
+  script:
+    - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+    - docker build -f docker/coach.Dockerfile -t $COACH_IMAGE:latest .
+    - docker push $COACH_IMAGE:latest
+  only:
+    - master
+  environment: homolog
+
+
+#############################################################
+############### BUILD BOT ###################################
+#############################################################
+build bot:
+  stage: build
+  image: docker
+  tags:
+    - docker
+  services:
+    - docker:dind
+  script:
+    - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+    - docker build -f docker/bot.Dockerfile -t $BOT_IMAGE:latest .
+    - docker push $BOT_IMAGE:latest
+  only:
+    - master
+  environment: homolog

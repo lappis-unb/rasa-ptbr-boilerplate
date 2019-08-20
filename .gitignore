@@ -18,6 +18,7 @@ bot/.ipython/
 bot/.keras/
 bot/.local/
 bot/work
+bot/results/
 
 ### Jupyter Notebooks ###
 notebooks/intents/evaluate-intents.ipynb

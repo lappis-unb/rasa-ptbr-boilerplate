@@ -169,6 +169,68 @@ ENVIRONMENT_NAME=localhost
 BOT_VERSION=last-commit-hash
 ```
 
+
+#### Setup RabbitMQ
+
+Inicie o serviço do servidor do RabbitMQ:
+
+```sh
+sudo docker-compose up -d rabbitmq
+```
+
+Inicie o serviço do consumidor do RabbitMQ, que ficará responsável por enviar as mensagens para o ElasticSearch:
+
+```sh
+sudo docker-compose up -d rabbitmq-consumer
+```
+
+Lembre-se de configurar as seguintes variáveis de ambiente do serviço `rabbitmq-consumer` no `docker-compose`.
+
+```sh
+ENVIRONMENT_NAME=localhost
+BOT_VERSION=last-commit-hash
+RABBITMQ_DEFAULT_USER=admin
+RABBITMQ_DEFAULT_PASS=admin
+```
+
+Sendo que as configurações de `RABBITMQ_DEFAULT_USER` e `RABBITMQ_DEFAULT_PASS` devem ser as mesmas definidas no serviço do `rabbitmq`.
+
+
+
+### Execução
+
+Existem duas formas para executar a Tais com o *broker*. A primeira delas é via linha de comando.
+Para utilizar esta forma é preciso definir Dentro do arquivo `endpoints.yml` as configurações do broker:
+
+```yml
+event_broker:
+  url: rabbitmq
+  username: admin
+  password: admin
+  queue: bot_messages
+```
+
+Depois basta executar o bot:
+
+```sh
+sudo docker-compose run --rm bot make run-console-broker
+```
+
+A segunda forma é utilizando o script `run-rocketchat` que é utilizado quando o bot é executado com o RocketChat como canal. Para isso, as mesmas variáveis devem ser configuradas no arquivo `docker/bot/bot.env`.
+Lembre-se também de configurar como `True` a seguinte variável do serviço `bot` no `docker-compose`.
+
+```
+# Analytics config
+ENABLE_ANALYTICS=True
+
+# Broker config
+BROKER_URL=rabbitmq
+BROKER_USERNAME=admin
+BROKER_PASSWORD=admin
+QUEUE_NAME=bot_messages
+```
+
+
 #### Visualizações (Kibana)
 
 O Kibana nos auxilia com uma interface para visualizar os dados armazenados nos índices do ElasticSearch.
@@ -178,6 +240,7 @@ sudo docker-compose up -d kibana
 ```
 
 Você pode acessar o kibana no `locahost:5601`
+
 
 #### Para visualização dos Dashboards padrão
 
@@ -190,6 +253,30 @@ Para usar estes _templates_ execute os seguintes passos:
 * Clique em `Import`;
 * Utilize o arquivo `export.json` na pasta `analytics/elasticsearch/` do projeto.
 
+
+## Testando Fluxos de Conversa
+
+É possível testar os fluxos de conversação utilizando o [Evaluation do Rasa Core](https://github.com/lappis-unb/tais/wiki/Testes-Automatizados). Para testá-los no seu bot basta adicionar um arquivo dentro do diretório `bot/e2e/` com as histórias a serem testadas. Essas histórias devem ser descritas normalmente, porém com exemplos de frases para cada uma das *Intents* sendo testadas, segundo o formato abaixo:
+
+```
+## História de teste 1
+* cumprimentar: oi
+   - utter_cumprimentar
+* action_test: test custom action
+   - action_test
+```
+
+Uma vez que os arquivos de teste foram adicionados ao diretório correto, basta rodar os testes com a *task* do bot:
+
+```sh
+sudo docker-compose run --rm bot make test-stories
+```
+
+Para gerar data-science referente aos testes automatizados de bor, execute o seguinte comando do *Makefile* na raíz do projeto:
+
+```sh
+sudo docker-compose run --rm bot make test-dialogue
+```
 
 ## Notebooks - Análise de dados
 
