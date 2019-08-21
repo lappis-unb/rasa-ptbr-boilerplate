@@ -1,6 +1,21 @@
-build:
+
+build-requirements:
 	./docker/build-base.sh
-	make train
+
+build-coach:
+	docker-compose build coach
+
+build-bot:
+	docker-compose build bot
+
+build:
+	make build-requirements
+	make build-coach
+	make build-bot
+
+first-run:
+	make build
+	make run-console
 
 train:
 	docker-compose rm -s -f coach

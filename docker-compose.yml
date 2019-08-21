@@ -49,6 +49,7 @@ services:
       - 5002:5002
     depends_on:
       - actions
+      - coach
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
