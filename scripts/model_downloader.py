@@ -5,8 +5,8 @@ import hashlib
 import time
 
 
-MODEL_FOLDER = "/models" 
-MODEL_FILENAME = "models.tar.gz"
+MODEL_FOLDER = os.getenv('BOT_FOLDER', '/models') 
+MODEL_FILENAME = os.getenv('MODEL_URL', 'models.tar.gz') 
 MODEL_HOST = os.getenv('COACH_URL', 'coach')
 VERSION_URL = "http://" + MODEL_HOST + "/version"
 FILE_URL = 'http://' + MODEL_HOST + '/' + MODEL_FILENAME
@@ -26,7 +26,7 @@ def try_connect_coach():
 
 def get_version():
     try:
-        r = requests.get(url=VERSION_URL)
+        requests.get(url=VERSION_URL)
         return True
     except:
         return False

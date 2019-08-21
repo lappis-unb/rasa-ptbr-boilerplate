@@ -45,6 +45,9 @@ services:
     command: make run-rocketchat 
     env_file:
       - docker/bot-rocketchat.env
+      - docker/boilerplate.env
+      - docker/analytics.env
+      - docker/broker.env
     ports:
       - 5002:5002
     depends_on:
