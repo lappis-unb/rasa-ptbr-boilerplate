@@ -1,5 +1,5 @@
-FROM lappis/botrequirements:boilerplate
-
+ARG BOT_CONTAINER
+FROM ${BOT_CONTAINER}
 
 COPY ./bot /bot
 COPY ./scripts /scripts

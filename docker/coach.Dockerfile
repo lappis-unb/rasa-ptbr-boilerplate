@@ -1,4 +1,5 @@
-FROM lappis/botrequirements:boilerplate
+ARG BOT_CONTAINER
+FROM ${BOT_CONTAINER}
 
 COPY ./coach /coach
 COPY ./scripts /scripts

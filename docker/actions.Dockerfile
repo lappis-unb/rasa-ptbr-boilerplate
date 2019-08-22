@@ -1,4 +1,5 @@
-FROM lappis/botrequirements:boilerplate
+ARG BOT_CONTAINER
+FROM ${BOT_CONTAINER}
 
 ADD ./bot/actions/actions.py /bot/actions/actions.py
 ADD ./bot/Makefile /bot/Makefile

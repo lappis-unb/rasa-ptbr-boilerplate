@@ -27,6 +27,8 @@ services:
     build:
       context: .
       dockerfile: ./docker/coach.Dockerfile
+      args:
+        BOT_CONTAINER: 'lappis/botrequirements:boilerplate'
     volumes:
       - notebook_models:/notebook_models
     ports:
@@ -41,6 +43,8 @@ services:
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
+      args:
+        BOT_CONTAINER: 'lappis/botrequirements:boilerplate'
     restart: unless-stopped
     command: make run-rocketchat 
     env_file:
@@ -143,6 +147,8 @@ services:
     build:
       context: .
       dockerfile: ./docker/actions.Dockerfile
+      args:
+        BOT_CONTAINER: 'lappis/botrequirements:boilerplate'
     ports:
       - 5055:5055
     volumes:
@@ -156,6 +162,8 @@ services:
     build:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
+      args:
+        BOT_CONTAINER: 'lappis/botrequirements:boilerplate'
     env_file:
       - docker/notebooks.env
     volumes:
