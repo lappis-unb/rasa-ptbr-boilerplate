@@ -24,6 +24,10 @@
 * negar
     - utter_despedir
 
+## negar_despedir
+* negar_despedir
+    - utter_despedir
+
 ## elogios
 * elogios
     - utter_elogios

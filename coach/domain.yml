@@ -2,6 +2,7 @@ intents:
   - cumprimentar
   - despedir
   - out_of_scope
+  - negar_despedir
   - negar
   - diga_mais
   - tudo_bem
