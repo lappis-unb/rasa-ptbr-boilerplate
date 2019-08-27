@@ -1,3 +1,7 @@
+## cumprimentar
+* cumprimentar
+    - utter_cumprimentar
+
 ## Despedir
 * despedir
     - utter_despedir
@@ -31,13 +35,4 @@
 ## elogios
 * elogios
     - utter_elogios
-
-## path 1
-* cumprimentar
-    - utter_cumprimentar
-* despedir
-    - utter_despedir
-
-## path 2
-* cumprimentar
-    - utter_cumprimentar
+    - utter_continuar_conversa

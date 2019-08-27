@@ -86,6 +86,7 @@ templates:
   utter_cumprimentar:
     - text: |
           Oi, eu sou um bot, um assistente virtual!
+          Uhuu! Manda aí um assunto que te interessa :)
 
   utter_despedir:
     - text: |
