@@ -411,6 +411,10 @@ templates:
 
         Você está feliz hoje, hein!?
 
+  utter_continuar_conversa:
+    - text: |
+        E aí, qual nosso próximo assunto?
+
 actions:
   - utter_default
   - utter_cumprimentar
@@ -418,6 +422,7 @@ actions:
   - utter_tudo_bem
   - utter_diga_mais
   - utter_elogios
+  - utter_continuar_conversa
 
   - utter_religiao
   - utter_esporte
