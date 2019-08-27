@@ -6,22 +6,59 @@
 - batatinha quando nasce
 
 ## intent:despedir
-- Tchau obrigada
-- Tchau
-- até logo
+- tchau obrigada
+- tchau
 - namaste
 - sayonara
+- au revoir
+- até logo
+- ate logo
 - até mais
+- ate mais
 - até breve
+- ate breve
+- até a próxima
+- ate a proxima
 - falou, valeu
 - flw vlw
+- beleza
 - blza
 - blz
+- valew
 - valeu
-- de boa
-- obrigada
-- obrigado
-- obj
+
+## intent: negar_despedir
+- não sei onde a minha pergunta se encaixa
+- nao quero saber mais
+- quero falar sobre outra coisa
+- não quero saber de mais nada
+- não tenho mais dúvidas
+- não tenho mais perguntas
+- você já me respondeu tudo
+- nao era isso, me enganei
+- não quero falar sobre isso
+- ainda nao sei escolher um tópico
+- ainda não pensei sobre isso
+- nao sei do que quero falar
+- não sei do que quero conversar
+- já me respondeu
+- já me ajudou
+- só isso mesmo, obrigada
+- so isso mesmo obrigada
+- só isso mesmo, obrigado
+- so isso mesmo obrigado
+- só isso mesmo
+- so isso mesmo
+- não tenho mais perguntas
+- não tenho mais dúvidas
+- nao tenho mais duvidas
+- não tenho mais
+- não quero saber
+- não obrigado
+- nao obrigado
+- não obrigada
+- nao obrigada
+- nada
 
 ## intent:cumprimentar
 - oi, tudo bem
@@ -74,25 +111,18 @@
 - lindao
 
 ## intent:negar
-- não sei onde a minha pergunta se encaixa
-- nao quero saber mais
-- quero falar sobre outra coisa
-- não quero saber de mais nada
-- nao era isso, me enganei
-- não quero falar sobre isso
-- ainda nao sei escolher um tópico
-- ainda não pensei sobre isso
-- nao sei do que quero falar
-- não sei do que quero conversar
-- nunca
+- não
 - nao
 - nao conheco
 - não quero
+- nada
 - escolhi errado
 - falei errado
 - duvida
 - ainda não sei
 - nenhum
+- nunca
+- jamais
 
 ## intent:diga_mais
 - como funciona
@@ -106,13 +136,19 @@
 - nao tenho certeza
 
 ## intent:tudo_bem
-- Tudo bem
-- Como vocês esta
+- tudo bem e você
+- tudo bem
+- tudo bom
+- tá bem
+- ta bem
+- como vocês esta
+- como voce esta
+- como voce ta
+- como vai você
+- como vai voce
+- como vai vc
+- como vai
 - como ta
 - joia
 - joinha
-- tudo bom
-- bom dia flor do dia
-- Tudo bem e você
-- como vc esta
-- como vai
+
