@@ -48,10 +48,30 @@
 - ola boa tarde
 
 ## intent:elogios
-- Você é  muito educado!
-- Adorei
-- Me ajudou muito
+- você é muito educado
+- voce e muito educado
+- me ajudou muito
+- você é demais
+- você é lindo
+- voce e lindo
+- voce e maravilhoso
+- vc é demais
+- vc e demais
 - vc eh linda
+- vc e lindo
+- vc é maravilhoso
+- adorei você
+- amei você
+- adorei voce
+- amei voce
+- adorei vc
+- amei vc
+- maravilhoso
+- educado
+- adorei
+- lindo
+- lindão
+- lindao
 
 ## intent:negar
 - não sei onde a minha pergunta se encaixa
