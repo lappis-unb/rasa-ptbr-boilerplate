@@ -78,6 +78,8 @@ templates:
   utter_diga_mais:
     - text: |
         Por enquanto, só entendo perguntas completas.
+        Como por exemplo "qual é o melhor time do Brasil?".
+        Se você puder perguntar de novo de outro jeito :)
 
   utter_elogios:
     - text: |
@@ -317,13 +319,13 @@ templates:
 
   utter_me:
     - text: |
-        Eu!!!
+        Eaê!
 
     - text: |
         Diz ai =)
 
     - text: |
-        Oi ;)
+        Conta mais, mano
 
     - text: |
         Fala aê!

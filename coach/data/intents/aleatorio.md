@@ -23,6 +23,10 @@
 - voce pratica [esporte](esporte)?
 - [esporte](esporte)
 - [futebol](esporte)
+- você joga basquete
+- voce joga basquete
+- voce joga
+- jogar
 
 ## intent:time
 - qual o melhor time do brasil
@@ -42,6 +46,8 @@
 - [yoda] (starwars)
 - concelhos do [yoda](starwars)
 - [guerra nas estrelas](starwars)
+- quero conselhos do yoda
+- frase de star wars
 
 ## intent:como_estou
 - [como voce é](how)?
@@ -52,6 +58,8 @@
 - voce e [magro ou gordo](how)
 - voce e [bonito ou feio](how)
 - voce e [alto ou baixo](how)
+- você é humano
+- como você é
 
 ## intent:piada
 - sabe alguma [piada](piada)
@@ -59,8 +67,10 @@
 - conhece alguma [piada](piada)
 - [piada](piada)
 - me conte uma [piada](piada)
+- me conta uma piada
 - conte-me uma [piada](piada)
 - manda uma [piada](piada) ai
+- me conta uma coisa engraçada
 
 ## intent:license
 - qual e a sua [licença](license)
@@ -84,6 +94,7 @@
 - voce [vive](live) na internet
 - [onde vc esta](live)
 - [cade vc](live)
+- qual o seu endereço
 
 ## intent:genero
 - voce é [homem ou mulher](genero)
@@ -91,9 +102,12 @@
 - qual o seu [sexo](genero)
 - voce e [mulher](genero)
 - voce e um [homem](genero)
+- você é um [homem](genero)
 - voce tem [genero](genero)
 - voce faz [sexo](genero)
 - voce tem um [penis ou uma vagina](genero)
+- você é uma mulher
+- você é andrógeno
 
 ## intent:linguagens
 - o que acha do [java](linguagens)
@@ -110,6 +124,7 @@
 - linguagem [java](linguagens)
 - linguagem [php](linguagens)
 - linguagem [c#](linguagens)
+- qual é a sua linguagem
 
 ## intent:playlist
 - me indica uma música
@@ -120,6 +135,9 @@
 - qual a melhor [playlist](playlist)
 - sabe qual [playlist](playlist) é boa?
 - diga uma [playlist](playlist)
+- indica uma música
+- indicar música
+- música
 
 ## intent:comida
 - Qual a sua [comida preferida](comida)?
@@ -130,6 +148,7 @@
 - Qual comida você me sugere?
 - O que você [adora comer](comida)?
 - O que você [gosta de comer](comida)?
+- qual a sua comida favorita
 
 ## intent:cor
 - Qual a sua [cor preferida](cor)?
@@ -138,6 +157,7 @@
 - qual a [melhor cor](cor)?
 - Qual sua [cor preferida](cor)?
 - Qual [cor](cor) você me sugere?
+- qual a sua cor favorita
 
 ## intent:de_onde_voce_eh
 - de onde você é?
@@ -164,6 +184,9 @@
 - [yo](me)
 - [Fala](me) man
 - [Fala](me) macho
+- fala brother
+- iai brother
+- brother
 
 ## intent:filhos
 - Você tem [filhos](filhos)?
@@ -177,17 +200,25 @@
 - Tem [filhotes](filhos)?
 - Quantos [filhos](filhos) você tem?
 - Quantos [filhotes](filhos) você tem?
+- você é pai
 
 ## intent:filme
 - Me indica um [filme](filme)?
 - Qual o seu [filme](filme) favorito?
 - De qual [filme](filme) você gosta?
 - Qual o melhor [filme](filme)?
+- me indica um movie
 
 ## intent:signo
 - Qual o seu [signoo](signo)?
+- qual é o seu signo
+- qual o seu signo
 - Fala seu [signoo](signo)?
 - [signoo](signo)
+- diz pra mim qual é seu signo
+- diz pra mim qual e seu signo
+- seu signo
+- signo
 
 ## intent:triste
 - Estou [triste](triste)
@@ -197,6 +228,7 @@
 - Estou [chorando](triste)
 - Estou [desapontado](triste)
 - [depressão](triste)
+- estou infeliz
 
 ## intent:hobby
 - O que você [gosta de fazer](hobby)?
@@ -204,6 +236,7 @@
 - Me fala seu [hobby](hobby)?
 - Qual é o seu [hobby](hobby)?
 - Me fala o que você [gosta de fazer](hobby)?
+- o que te diverte
 - [hobby](hobby)
 - [hobbies](hobby)
 
@@ -217,7 +250,9 @@
 - [amigo](bff)
 - [amiga](bff)
 - Quem é seu [bff](bff)?
+- quem é seu best friend
 - Quem é sua [bff](bff)?
+- mais que amigos, friends
 - [bff](bff)
 
 ## intent:historia
@@ -227,6 +262,7 @@
 - [história](historia)
 - conta pra mim uma [historinha](historia)
 - fala uma [historia](historia) ai
+- me conta uma experiência
 
 ## intent:risada
 - kkkkkkkkk
