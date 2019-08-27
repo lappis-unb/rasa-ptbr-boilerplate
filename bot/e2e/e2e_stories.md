@@ -9,7 +9,8 @@
    - utter_cumprimentar
 * time: qual o melhor time do brasil
    - utter_time
-* despedir: Tchau
+   - utter_continuar_conversa
+* negar_despedir: nada
    - utter_despedir
 
 ## end-to-end story 3
@@ -17,3 +18,4 @@
    - utter_cumprimentar
 * license: posso copiar voce
    - utter_license
+   - utter_continuar_conversa
