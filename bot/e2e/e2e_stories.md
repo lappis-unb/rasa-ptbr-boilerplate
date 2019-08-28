@@ -29,7 +29,7 @@
 ## end-to-end story 5
 * cumprimentar: Oi
    - utter_cumprimentar
-* star_wars: frases de guerra nas estrelas
+* star_wars: lado negro da força
    - utter_star_wars
 * diga_mais: como funciona?
    - utter_diga_mais
