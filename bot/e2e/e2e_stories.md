@@ -1,8 +1,11 @@
-## end-to-end story 1
+## end-to-end story 2
 * cumprimentar: oi
    - utter_cumprimentar
-* action_test: test custom action
-   - action_test
+* time: melhor time
+   - utter_time
+   - utter_continuar_conversa
+* negar_despedir: nada
+   - utter_despedir
 
 ## end-to-end story 3
 * cumprimentar: oi
