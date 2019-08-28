@@ -23,9 +23,9 @@
 ## end-to-end story 4
 * cumprimentar: olá
    - utter_cumprimentar
-* elogios: Você é muito educado!
+* elogios: Me ajudou muito
    - utter_elogios
-* out_of_scope: Você fala sobre o meio ambiente?
+* out_of_scope: Qual a origem do mundo?
    - utter_default
 * despedir: tchau
    - utter_despedir
