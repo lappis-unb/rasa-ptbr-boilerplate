@@ -1,8 +1,15 @@
 ## intent:out_of_scope
-- Você fala sobre o meio ambiente?
-- Qual a origem do mundo?
-- Vc gosta de carnaval?
+- você fala sobre o meio ambiente
+- qual a origem do mundo
+- vc gosta de carnaval
 - batatinha quando nasce
+- imbecil
+- imbécil
+- nojento
+- chato
+- babaca
+- feio
+- burro
 
 ## intent:despedir
 - tchau obrigada
@@ -60,28 +67,22 @@
 - nada
 
 ## intent:cumprimentar
-- oi, tudo bem
-- como vai
-- oi, como vai voce
-- como vao as coisas
 - com licenca
-- tudo bom
 - posso falar com voce
 - pode me tirar uma duvida
 - gostaria de tirar uma duvida
-- to bem
-- tranquilo
-- estou bem
-- estou otimo
-- muito bem
 - bom dia
 - boa tarde
 - boa noite
 - olá
+- ola
+- oi
+- oiii
 - oie
 - oiee
-- opa tudo bem
 - ola boa tarde
+- hi
+- salut
 
 ## intent:elogios
 - você é muito educado
@@ -134,6 +135,14 @@
 - nao tenho certeza
 
 ## intent:tudo_bem
+- oi, tudo bem
+- oi, como vai voce
+- como vao as coisas
+- opa tudo bem
+- to bem
+- tranquilo
+- estou bem
+- estou otimo
 - tudo bem e você
 - tudo bem
 - tudo bom

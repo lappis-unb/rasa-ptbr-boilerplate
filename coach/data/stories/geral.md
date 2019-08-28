@@ -6,11 +6,11 @@
 * despedir
     - utter_despedir
 
-## Oi Tudo Bem Story
+## Tudo Bem Story
 * tudo_bem
     - utter_tudo_bem
 
-## Oi Tudo Bem Story 1
+## Oi Tudo Bem Story 
 * cumprimentar
     - utter_cumprimentar
 * tudo_bem
