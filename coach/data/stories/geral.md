@@ -26,7 +26,7 @@
 
 ## negar sem contexto
 * negar
-    - utter_continuar_conversa
+    - utter_despedir
 
 ## negar_despedir
 * negar_despedir

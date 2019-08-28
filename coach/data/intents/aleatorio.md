@@ -333,6 +333,7 @@
 - você é pai de quantos filhos
 - você é pai
 - voce e pai
+- pai
 
 ## intent:filme
 - Me indica um [filme](filme)?

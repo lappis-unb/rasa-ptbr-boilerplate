@@ -7,9 +7,9 @@
 ## end-to-end story 2
 * cumprimentar: oi
    - utter_cumprimentar
-* time: melhor time
+* time: para qual time você torce?
    - utter_time
-* negar_despedir: nada
+* negar: não
    - utter_despedir
 
 ## end-to-end story 3
@@ -17,7 +17,7 @@
    - utter_cumprimentar
 * license: posso copiar voce
    - utter_license
-* negar_despedir: não tenho mais perguntas
+* negar: não
    - utter_despedir
 
 ## end-to-end story 4
@@ -35,7 +35,7 @@
    - utter_tudo_bem
 * religiao: você acredita em Deus?
    - utter_religiao
-* negar_despedir: não tenho mais dúvidas
+* negar: não
    - utter_despedir
 
 ## end-to-end story 6
@@ -48,13 +48,12 @@
 * despedir: até mais
    - utter_despedir
 
-
 ## end-to-end story 7
 * star_wars: frase de star wars
    - utter_star_wars
 * piada: me conta uma coisa engraçada
    - utter_piada
-* negar_despedir: não tenho mais perguntas
+* negar: não
    - utter_despedir
 
 ## end-to-end story 8
@@ -62,7 +61,7 @@
    - utter_como_estou
 * onde_voce_mora: qual o seu endereço?
    - utter_onde_voce_mora
-* negar_despedir: nada
+* negar: não
    - utter_despedir
 
 ## end-to-end story 9
@@ -70,45 +69,45 @@
    - utter_genero
 * playlist: me indica uma música?
    - utter_playlist
-* negar_despedir: nada
+* negar: não
    - utter_despedir
 
 ## end-to-end story 10
 * comida: qual a sua comida favorita?
    - utter_comida
-* cor: qual a sua cor favorita?
+* cor: qual a sua cor preferida?
    - utter_cor
-* negar_despedir: nada
+* negar: não
    - utter_despedir
 
 ## end-to-end story 11
-* de_onde_voce_eh: de onde você é?
+* de_onde_voce_eh: onde você mora?
    - utter_de_onde_voce_eh
-* relationship: você tem esposa?
+* relationship: você tem namorada?
    - utter_relationship
-* filhos: você é pai?
+* filhos: você tem filhos?
    - utter_filhos
-* negar_despedir: nada
+* negar: não
    - utter_despedir
 
 ## end-to-end story 12
-* filme: me indica um movie
+* filme: me indica um filme?
    - utter_filme
 * signo: qual é o seu signo?
    - utter_signo
 * triste: estou infeliz
    - utter_triste
-* negar_despedir: nada
+* negar: não
    - utter_despedir
 
 ## end-to-end story 13
-* hobby: o que te diverte?
+* hobby: o que você gosta de fazer?
    - utter_hobby
-* bff: quem é seu best friend?
+* bff: qual é o seu melhor amigo?
    - utter_bff
 * historia: me conta uma experiência
    - utter_historia
 * risada: risos
    - utter_risada
-* negar_despedir: nada
+* negar: não
    - utter_despedir
