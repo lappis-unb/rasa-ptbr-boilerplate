@@ -23,14 +23,17 @@
 ## end-to-end story 4
 * tudo_bem: tudo bem?
    - utter_tudo_bem
+* elogios: adorei
+   - utter_elogios
+   - utter_continuar_conversa
 * negar: não
    - utter_despedir
 
 ## end-to-end story 5
 * cumprimentar: Oi
    - utter_cumprimentar
-* star_wars: lado negro da força
-   - utter_star_wars
+* como_estou: você é humano?
+   - utter_como_estou
 * diga_mais: como funciona?
    - utter_diga_mais
 * despedir: até mais
@@ -43,8 +46,6 @@
    - utter_despedir
 
 ## end-to-end story 7
-* como_estou: você é humano?
-   - utter_como_estou
 * onde_voce_mora: de onde você é?
    - utter_onde_voce_mora
 * negar: não
@@ -65,11 +66,8 @@
    - utter_despedir
 
 ## end-to-end story 10
-* cumprimentar
+* cumprimentar: Oi
    - utter_cumprimentar
-* elogios: adorei
-   - utter_elogios
-   - utter_continuar_conversa
 * de_onde_voce_eh: de onde você é?
    - utter_de_onde_voce_eh
 * relationship: Gosta de alguém?
