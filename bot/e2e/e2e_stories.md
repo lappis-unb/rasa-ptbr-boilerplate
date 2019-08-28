@@ -21,16 +21,6 @@
    - utter_despedir
 
 ## end-to-end story 4
-* cumprimentar: olá
-   - utter_cumprimentar
-* elogios: Me ajudou muito
-   - utter_elogios
-* out_of_scope: Qual a origem do mundo?
-   - utter_default
-* despedir: tchau
-   - utter_despedir
-
-## end-to-end story 5
 * tudo_bem: tudo bem?
    - utter_tudo_bem
 * religiao: deus existe?
@@ -38,7 +28,7 @@
 * negar: não
    - utter_despedir
 
-## end-to-end story 6
+## end-to-end story 5
 * cumprimentar: Oi
    - utter_cumprimentar
 * star_wars: frases de star wars
@@ -48,13 +38,13 @@
 * despedir: até mais
    - utter_despedir
 
-## end-to-end story 7
+## end-to-end story 6
 * piada: me conta uma coisa engraçada
    - utter_piada
 * negar: não
    - utter_despedir
 
-## end-to-end story 8
+## end-to-end story 7
 * como_estou: você é humano?
    - utter_como_estou
 * onde_voce_mora: de onde você é?
@@ -62,7 +52,7 @@
 * negar: não
    - utter_despedir
 
-## end-to-end story 9
+## end-to-end story 8
 * genero: você é andrógeno?
    - utter_genero
 * playlist: me indica uma música?
@@ -70,13 +60,13 @@
 * negar: não
    - utter_despedir
 
-## end-to-end story 10
+## end-to-end story 9
 * comida: qual comida você me sugere?
    - utter_comida
 * negar: não
    - utter_despedir
 
-## end-to-end story 11
+## end-to-end story 10
 * de_onde_voce_eh: de onde você é?
    - utter_de_onde_voce_eh
 * relationship: Gosta de alguém?
@@ -84,7 +74,7 @@
 * negar: não
    - utter_despedir
 
-## end-to-end story 12
+## end-to-end story 11
 * bff: quem é seu best friend?
    - utter_bff
 * risada: risos
