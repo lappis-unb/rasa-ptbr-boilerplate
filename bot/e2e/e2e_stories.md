@@ -23,8 +23,6 @@
 ## end-to-end story 4
 * tudo_bem: tudo bem?
    - utter_tudo_bem
-* religiao: deus existe?
-   - utter_religiao
 * negar: não
    - utter_despedir
 
