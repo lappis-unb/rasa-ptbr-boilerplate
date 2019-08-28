@@ -1,15 +1,15 @@
 policies:
   - name: KerasPolicy
     priority: 5
-    epochs: 20
+    epochs: 25
     batch_size: 10
     featurizer:
       - name: FullDialogueTrackerFeaturizer
         state_featurizer:
           - name: LabelTokenizerSingleStateFeaturizer
   - name: FallbackPolicy
-    nlu_threshold: 0.6
-    core_threshold: 0.6
+    nlu_threshold: 0.5
+    core_threshold: 0.5
     priority: 1
   - name: MemoizationPolicy
     priority: 2

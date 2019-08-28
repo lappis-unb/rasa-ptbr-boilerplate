@@ -91,7 +91,7 @@
 * cor: qual a sua cor favorita?
    - utter_cor
    - utter_continuar_conversa
-* me: iai brother
+* me: iai mano
    - utter_me
    - utter_continuar_conversa
 * negar_despedir: nada
@@ -101,7 +101,7 @@
 * de_onde_voce_eh: de onde você é?
    - utter_de_onde_voce_eh
    - utter_continuar_conversa
-* relationship: gosta de alguém?
+* relationship: você tem esposa?
    - utter_relationship
    - utter_continuar_conversa
 * filhos: você é pai?

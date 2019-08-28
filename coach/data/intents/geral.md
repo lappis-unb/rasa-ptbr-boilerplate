@@ -74,6 +74,8 @@
 - bom dia
 - boa tarde
 - boa noite
+- bonjour
+- bonsoir
 - olá
 - ola
 - oi
@@ -96,6 +98,7 @@
 - vc e demais
 - vc eh linda
 - vc e lindo
+- vc é bonito
 - vc é maravilhoso
 - adorei você
 - amei você
@@ -106,6 +109,8 @@
 - maravilhoso
 - educado
 - adorei
+- bonito
+- bonitão
 - lindo
 - lindão
 - lindao

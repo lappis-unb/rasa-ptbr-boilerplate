@@ -79,7 +79,7 @@ templates:
     - text: |
         Por enquanto, só entendo perguntas completas.
         Como por exemplo "qual é o melhor time do Brasil?".
-        Se você puder perguntar de novo de outro jeito :)
+        Se você puder pergunta de novo de outro jeito :)
 
   utter_elogios:
     - text: |
