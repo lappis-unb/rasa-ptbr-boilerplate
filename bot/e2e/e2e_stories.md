@@ -91,9 +91,6 @@
 * cor: qual a sua cor favorita?
    - utter_cor
    - utter_continuar_conversa
-* me: iai mano
-   - utter_me
-   - utter_continuar_conversa
 * negar_despedir: nada
    - utter_despedir
 
