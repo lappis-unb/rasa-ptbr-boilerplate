@@ -105,7 +105,7 @@
    - utter_hobby
 * bff: quem é seu best friend?
    - utter_bff
-* historia: me conta uma experiência
+* historia: me conta uma experiência sua
    - utter_historia
 * risada: risos
    - utter_risada

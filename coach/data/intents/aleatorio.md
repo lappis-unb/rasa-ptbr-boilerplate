@@ -428,10 +428,11 @@
 - fala uma [historia](historia) ai
 - conta uma história pra dormir
 - conta uma historia pra dormir
-- me conta uma experiência
+- me conta uma experiência sua
 - me conta uma experiencia
 - me conta uma historinha
 - me conta uma estória
+- experiência
 - hitorinha
 - estória
 
