@@ -41,16 +41,14 @@
 ## end-to-end story 6
 * cumprimentar: Oi
    - utter_cumprimentar
-* esporte: você joga?
-   - utter_esporte
+* star_wars: frases de star wars
+   - utter_star_wars
 * diga_mais: como funciona?
    - utter_diga_mais
 * despedir: até mais
    - utter_despedir
 
 ## end-to-end story 7
-* star_wars: frases de star wars
-   - utter_star_wars
 * piada: me conta uma coisa engraçada
    - utter_piada
 * negar: não
@@ -59,7 +57,7 @@
 ## end-to-end story 8
 * como_estou: você é humano?
    - utter_como_estou
-* onde_voce_mora: qual o seu endereço?
+* onde_voce_mora: de onde você é?
    - utter_onde_voce_mora
 * negar: não
    - utter_despedir
@@ -73,7 +71,7 @@
    - utter_despedir
 
 ## end-to-end story 10
-* comida: qual a sua comida favorita?
+* comida: qual comida você me sugere?
    - utter_comida
 * negar: não
    - utter_despedir
@@ -81,30 +79,14 @@
 ## end-to-end story 11
 * de_onde_voce_eh: de onde você é?
    - utter_de_onde_voce_eh
-* relationship: você tem esposa?
+* relationship: Gosta de alguém?
    - utter_relationship
-* filhos: você é pai?
-   - utter_filhos
 * negar: não
    - utter_despedir
 
 ## end-to-end story 12
-* filme: me indica um movie
-   - utter_filme
-* signo: qual é o seu signo?
-   - utter_signo
-* triste: estou infeliz
-   - utter_triste
-* negar: não
-   - utter_despedir
-
-## end-to-end story 13
-* hobby: o que te diverte?
-   - utter_hobby
 * bff: quem é seu best friend?
    - utter_bff
-* historia: me conta uma experiência sua
-   - utter_historia
 * risada: risos
    - utter_risada
 * negar: não

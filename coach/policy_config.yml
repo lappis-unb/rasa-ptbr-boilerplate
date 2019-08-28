@@ -8,8 +8,8 @@ policies:
         state_featurizer:
           - name: LabelTokenizerSingleStateFeaturizer
   - name: FallbackPolicy
-    nlu_threshold: 0.6
-    core_threshold: 0.6
+    nlu_threshold: 0.5
+    core_threshold: 0.5
     priority: 1
   - name: MemoizationPolicy
     priority: 2
