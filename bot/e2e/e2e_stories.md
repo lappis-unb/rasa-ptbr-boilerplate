@@ -7,7 +7,7 @@
 ## end-to-end story 2
 * cumprimentar: oi
    - utter_cumprimentar
-* time: para qual time você torce?
+* time: que time vc torce?
    - utter_time
 * negar: não
    - utter_despedir
@@ -23,9 +23,9 @@
 ## end-to-end story 4
 * cumprimentar: olá
    - utter_cumprimentar
-* elogios: lindo
+* elogios: Você é muito educado!
    - utter_elogios
-* out_of_scope: batatinha quando nasce
+* out_of_scope: Você fala sobre o meio ambiente?
    - utter_default
 * despedir: tchau
    - utter_despedir
@@ -33,7 +33,7 @@
 ## end-to-end story 5
 * tudo_bem: tudo bem?
    - utter_tudo_bem
-* religiao: você acredita em Deus?
+* religiao: deus existe?
    - utter_religiao
 * negar: não
    - utter_despedir
@@ -41,7 +41,7 @@
 ## end-to-end story 6
 * cumprimentar: Oi
    - utter_cumprimentar
-* esporte: você joga basquete?
+* esporte: você joga?
    - utter_esporte
 * diga_mais: como funciona?
    - utter_diga_mais
@@ -49,7 +49,7 @@
    - utter_despedir
 
 ## end-to-end story 7
-* star_wars: frase de star wars
+* star_wars: frases de star wars
    - utter_star_wars
 * piada: me conta uma coisa engraçada
    - utter_piada
@@ -75,8 +75,6 @@
 ## end-to-end story 10
 * comida: qual a sua comida favorita?
    - utter_comida
-* cor: qual a sua cor?
-   - utter_cor
 * negar: não
    - utter_despedir
 
