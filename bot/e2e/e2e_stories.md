@@ -65,6 +65,11 @@
    - utter_despedir
 
 ## end-to-end story 10
+* cumprimentar
+   - utter_cumprimentar
+* elogios: você é muito educado!
+   - utter_elogios
+   - utter_continuar_conversa
 * de_onde_voce_eh: de onde você é?
    - utter_de_onde_voce_eh
 * relationship: Gosta de alguém?

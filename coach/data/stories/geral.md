@@ -32,7 +32,14 @@
 * negar_despedir
     - utter_despedir
 
-## elogios
+## elogios 1
+* elogios
+    - utter_elogios
+    - utter_continuar_conversa
+
+## elogios 2
+* cumprimentar
+    - utter_cumprimentar
 * elogios
     - utter_elogios
     - utter_continuar_conversa
