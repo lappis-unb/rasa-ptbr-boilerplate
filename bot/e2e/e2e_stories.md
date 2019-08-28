@@ -75,23 +75,23 @@
 ## end-to-end story 10
 * comida: qual a sua comida favorita?
    - utter_comida
-* cor: qual a sua cor preferida?
+* cor: qual a sua cor?
    - utter_cor
 * negar: não
    - utter_despedir
 
 ## end-to-end story 11
-* de_onde_voce_eh: onde você mora?
+* de_onde_voce_eh: de onde você é?
    - utter_de_onde_voce_eh
-* relationship: você tem namorada?
+* relationship: você tem esposa?
    - utter_relationship
-* filhos: você tem filhos?
+* filhos: você é pai?
    - utter_filhos
 * negar: não
    - utter_despedir
 
 ## end-to-end story 12
-* filme: me indica um filme?
+* filme: me indica um movie
    - utter_filme
 * signo: qual é o seu signo?
    - utter_signo
@@ -101,9 +101,9 @@
    - utter_despedir
 
 ## end-to-end story 13
-* hobby: o que você gosta de fazer?
+* hobby: o que te diverte?
    - utter_hobby
-* bff: qual é o seu melhor amigo?
+* bff: quem é seu best friend?
    - utter_bff
 * historia: me conta uma experiência
    - utter_historia
