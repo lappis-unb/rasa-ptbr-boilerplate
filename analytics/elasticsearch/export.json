@@ -1,0 +1,235 @@
+[
+  {
+    "_id": "292db310-e6b5-11e8-bb67-918dc5752875",
+    "_type": "visualization",
+    "_source": {
+      "title": "Perguntas mais frequentes",
+      "visState": "{\"title\":\"Perguntas mais frequentes\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Quantidade de mensagens\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Quantidade de mensagens\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"top\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"json\":\"\",\"customLabel\":\"Quantidade de mensagens\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"intent_name\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"outras\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"exclude\":\"\\\"\\\"\",\"customLabel\":\"Objetivo da pergunta\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Quantidade de mensagens\":\"#614D93\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"cumprimentar\",\"params\":{\"query\":\"cumprimentar\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"cumprimentar\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"afirmar\",\"params\":{\"query\":\"afirmar\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"afirmar\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"despedir\",\"params\":{\"query\":\"despedir\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"despedir\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"is_bot\",\"value\":\"false\",\"params\":{\"query\":false,\"type\":\"phrase\"}},\"query\":{\"match\":{\"is_bot\":{\"query\":false,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "bc6ef080-f33a-11e8-9faf-3521ed822de9",
+    "_type": "visualization",
+    "_source": {
+      "title": "Média de perguntas por usuário",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customBucket\":{\"enabled\":true,\"id\":\"1-bucket\",\"params\":{\"field\":\"user_id\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"order\":\"desc\",\"orderBy\":\"_key\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":3000},\"schema\":{\"aggFilter\":[],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"max\":null,\"min\":0,\"name\":\"bucketAgg\",\"params\":[],\"title\":\"Bucket Agg\"},\"type\":\"terms\"},\"customLabel\":\"Perguntas por usuário\",\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{},\"schema\":{\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\",\"!sum_bucket\",\"!avg_bucket\",\"!min_bucket\",\"!max_bucket\",\"!derivative\",\"!moving_avg\",\"!serial_diff\",\"!cumulative_sum\"],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"max\":null,\"min\":0,\"name\":\"metricAgg\",\"params\":[],\"title\":\"Metric Agg\"},\"type\":\"count\"}},\"schema\":\"metric\",\"type\":\"avg_bucket\"}],\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":40,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"title\":\"Média de perguntas por usuário\",\"type\":\"metric\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"is_bot\",\"value\":\"false\",\"params\":{\"query\":false,\"type\":\"phrase\"}},\"query\":{\"match\":{\"is_bot\":{\"query\":false,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"cumprimentar\",\"params\":{\"query\":\"cumprimentar\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"cumprimentar\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"afirmar\",\"params\":{\"query\":\"afirmar\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"afirmar\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"despedir\",\"params\":{\"query\":\"despedir\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"despedir\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"83b55140-e6b4-11e8-bb67-918dc5752875\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"tudo_bem\",\"params\":{\"query\":\"tudo_bem\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"tudo_bem\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "99d90500-47ff-11e9-9faf-3521ed822de9",
+    "_type": "visualization",
+    "_source": {
+      "title": "Usuários por dia",
+      "visState": "{\"title\":\"Usuários por dia\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"},\"valueAxis\":\"ValueAxis-1\"},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100,\"rotate\":75,\"filter\":false},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Usuários\"}}],\"seriesParams\":[{\"show\":true,\"mode\":\"stacked\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"2\",\"label\":\"Usuários\"},\"valueAxis\":\"ValueAxis-1\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"top\",\"times\":[],\"addTimeMarker\":true},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"user_id\",\"customLabel\":\"Usuários\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"d\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Data\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":true,\"colors\":{\"Usuários\":\"#1F78C1\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"environment\",\"value\":\"production\",\"params\":{\"query\":\"production\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"environment\":{\"query\":\"production\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "9ed9ccf0-4986-11e9-9faf-3521ed822de9",
+    "_type": "visualization",
+    "_source": {
+      "title": "Total de usuários",
+      "visState": "{\"title\":\"Total de usuários\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":40}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"user_id\",\"customLabel\":\"Usuários\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"is_bot\",\"value\":\"false\",\"params\":{\"query\":false,\"type\":\"phrase\"}},\"query\":{\"match\":{\"is_bot\":{\"query\":false,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "557c6060-4a7e-11e9-9faf-3521ed822de9",
+    "_type": "visualization",
+    "_source": {
+      "title": "Usuários e mensagens por semana",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customBucket\":{\"enabled\":true,\"id\":\"1-bucket\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"timestamp\",\"interval\":\"w\",\"min_doc_count\":1},\"schema\":{\"aggFilter\":[],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"max\":null,\"min\":0,\"name\":\"bucketAgg\",\"params\":[],\"title\":\"Bucket Agg\"},\"type\":\"date_histogram\"},\"customLabel\":\"Usuários por semana\",\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{\"field\":\"user_id\"},\"schema\":{\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\",\"!sum_bucket\",\"!avg_bucket\",\"!min_bucket\",\"!max_bucket\",\"!derivative\",\"!moving_avg\",\"!serial_diff\",\"!cumulative_sum\"],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"max\":null,\"min\":0,\"name\":\"metricAgg\",\"params\":[],\"title\":\"Metric Agg\"},\"type\":\"cardinality\"}},\"schema\":\"metric\",\"type\":\"avg_bucket\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customBucket\":{\"enabled\":true,\"id\":\"2-bucket\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"timestamp\",\"interval\":\"w\",\"min_doc_count\":1},\"schema\":{\"aggFilter\":[],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"max\":null,\"min\":0,\"name\":\"bucketAgg\",\"params\":[],\"title\":\"Bucket Agg\"},\"type\":\"date_histogram\"},\"customLabel\":\"Mensagens por semana\",\"customMetric\":{\"enabled\":true,\"id\":\"2-metric\",\"params\":{\"json\":\"\"},\"schema\":{\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\",\"!sum_bucket\",\"!avg_bucket\",\"!min_bucket\",\"!max_bucket\",\"!derivative\",\"!moving_avg\",\"!serial_diff\",\"!cumulative_sum\"],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"max\":null,\"min\":0,\"name\":\"metricAgg\",\"params\":[],\"title\":\"Metric Agg\"},\"type\":\"count\"}},\"schema\":\"metric\",\"type\":\"avg_bucket\"}],\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":34,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"title\":\"Usuários e mensagens por semana\",\"type\":\"metric\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"is_bot\",\"value\":\"false\",\"params\":{\"query\":false,\"type\":\"phrase\"}},\"query\":{\"match\":{\"is_bot\":{\"query\":false,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "940af720-4a4b-11e9-9faf-3521ed822de9",
+    "_type": "visualization",
+    "_source": {
+      "title": "Quantidade de pessoas que usaram #MEAJUDA",
+      "visState": "{\"title\":\"Quantidade de pessoas que usaram #MEAJUDA\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":35}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"user_id\",\"customLabel\":\"Usuários pediram #MEAJUDA\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Mensagens #MEAJUDA\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"o_que_sei_falar\",\"params\":{\"query\":\"o_que_sei_falar\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"o_que_sei_falar\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"is_bot\",\"value\":\"false\",\"params\":{\"query\":false,\"type\":\"phrase\"}},\"query\":{\"match\":{\"is_bot\":{\"query\":false,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "fc3a57d0-78b0-11e9-b7f8-ab32b998c172",
+    "_type": "visualization",
+    "_source": {
+      "title": "Ocorrências incomuns nas intents",
+      "visState": "{\"title\":\"Ocorrências incomuns nas intents\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100,\"filter\":true,\"rotate\":75},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\",\"defaultYExtents\":false,\"setYExtents\":false},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Perguntas\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Perguntas\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"linear\",\"lineWidth\":3}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Perguntas\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"significant_terms\",\"schema\":\"group\",\"params\":{\"field\":\"intent_name\",\"size\":7,\"customLabel\":\"Nome das intents\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"w\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Intervalo de tempo (semana)\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"key\":\"is_bot\",\"negate\":false,\"params\":{\"query\":false,\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"false\"},\"query\":{\"match\":{\"is_bot\":{\"query\":false,\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"key\":\"intent_name\",\"negate\":true,\"params\":{\"query\":\"afirmar\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"afirmar\"},\"query\":{\"match\":{\"intent_name\":{\"query\":\"afirmar\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"key\":\"intent_name\",\"negate\":true,\"params\":{\"query\":\"cumprimentar\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"cumprimentar\"},\"query\":{\"match\":{\"intent_name\":{\"query\":\"cumprimentar\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"key\":\"intent_name\",\"negate\":true,\"params\":{\"query\":\"o_que_sei_falar\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"o_que_sei_falar\"},\"query\":{\"match\":{\"intent_name\":{\"query\":\"o_que_sei_falar\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"key\":\"intent_name\",\"negate\":true,\"params\":{\"query\":\"despedir\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"despedir\"},\"query\":{\"match\":{\"intent_name\":{\"query\":\"despedir\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"key\":\"intent_name\",\"negate\":true,\"params\":{\"query\":\"diga_mais\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"diga_mais\"},\"query\":{\"match\":{\"intent_name\":{\"query\":\"diga_mais\",\"type\":\"phrase\"}}}},{\"meta\":{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"negar\",\"params\":{\"query\":\"negar\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"negar\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"negar_despedir\",\"params\":{\"query\":\"negar_despedir\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"negar_despedir\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "8b684b80-8629-11e9-b7f8-ab32b998c172",
+    "_type": "visualization",
+    "_source": {
+      "title": "Perguntas não entendidas",
+      "visState": "{\"title\":\"Perguntas não entendidas\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":35}}},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"user_id\",\"customLabel\":\"Usuários caíram no Fallback\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Perguntas não entendidas\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"is_fallback\",\"value\":\"true\",\"params\":{\"query\":true,\"type\":\"phrase\"}},\"query\":{\"match\":{\"is_fallback\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "4866d8d0-8631-11e9-b7f8-ab32b998c172",
+    "_type": "visualization",
+    "_source": {
+      "title": "Cloud tag intents",
+      "visState": "{\"title\":\"Cloud tag intents\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":15,\"maxFontSize\":40,\"showLabel\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"intent_name\",\"size\":40,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Nome das intents\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "4cdaa320-8630-11e9-b7f8-ab32b998c172",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"intent_name\",\"value\":\"salic_cadastro_usuario\",\"params\":{\"query\":\"salic_cadastro_usuario\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"intent_name\":{\"query\":\"salic_cadastro_usuario\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "f35cb700-8794-11e9-b7f8-ab32b998c172",
+    "_type": "visualization",
+    "_source": {
+      "title": "Como utilizar a nuvem de palavras como filtro",
+      "visState": "{\"title\":\"Como utilizar a nuvem de palavras como filtro\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"openLinksInNewTab\":false,\"markdown\":\"### Como utilizar a nuvem de palavras como filtro\\n\\n&emsp;&emsp;Quando selecionada uma intent será aplicado um filtro no dashboard, assim filtrará as mensagens somente da intent.\\n\\n&emsp;&emsp;Caso queira voltar para todas as intents, basta clicar no botão de retornar do navegador ou então excluir o filtro que aparecerá logo acima desse tutorial (em azul e estará escrito o nome da intent).\\n\\n&emsp;&emsp;Ao terminar de examinar uma intent e enteder que já não é mais necessário mantê-la na _Cloud Tag_, basta clicar na opção **Edit** , no canto superior direito do dashboard. Assim, ele permitirá você editar cada visualização.\\n\\n&emsp;&emsp;Clique na **Engrenagem** no canto superior direito da visualização da nuvem de palavras e vá em **Editar a visualização**. \\n\\n&emsp;&emsp;Clique em **Add filter +** e siga os seguintes passos:\\n\\n1. Escolha a opção **intent_name** no filtro que deseja.\\n2. Use a condicional **is not**.\\n3. Digite ou escolha a opção com o nome da intent. Depois basta clicar em **Save**\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "4cdaa320-8630-11e9-b7f8-ab32b998c172",
+    "_type": "search",
+    "_source": {
+      "title": "Perguntas do usuários (intents text)",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "intent_confidence",
+        "text"
+      ],
+      "sort": [
+        "timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"key\":\"is_bot\",\"negate\":false,\"params\":{\"query\":false,\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"false\"},\"query\":{\"match\":{\"is_bot\":{\"query\":false,\"type\":\"phrase\"}}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "282acc80-862b-11e9-b7f8-ab32b998c172",
+    "_type": "search",
+    "_source": {
+      "title": "Quantidade de fallbacks e perguntas que caíram no fallback",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "is_fallback",
+        "text"
+      ],
+      "sort": [
+        "timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"194404f0-e6b4-11e8-bb67-918dc5752875\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"is_fallback\",\"value\":\"true\",\"params\":{\"query\":true,\"type\":\"phrase\"}},\"query\":{\"match\":{\"is_fallback\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "79e79a50-497a-11e9-9faf-3521ed822de9",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Perfil do Usuário",
+      "hits": 0,
+      "description": "Informações gerais das interações dos usuários.",
+      "panelsJSON": "[{\"embeddableConfig\":{\"vis\":{\"colors\":{\"Usuários\":\"#1F78C1\"},\"legendOpen\":true}},\"gridData\":{\"x\":0,\"y\":0,\"w\":26,\"h\":16,\"i\":\"1\"},\"id\":\"99d90500-47ff-11e9-9faf-3521ed822de9\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":16,\"w\":12,\"h\":17,\"i\":\"2\"},\"id\":\"bc6ef080-f33a-11e8-9faf-3521ed822de9\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":12,\"y\":16,\"w\":36,\"h\":17,\"i\":\"3\"},\"id\":\"292db310-e6b5-11e8-bb67-918dc5752875\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":38,\"y\":0,\"w\":10,\"h\":16,\"i\":\"4\"},\"id\":\"9ed9ccf0-4986-11e9-9faf-3521ed822de9\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":26,\"y\":0,\"w\":12,\"h\":16,\"i\":\"5\"},\"id\":\"557c6060-4a7e-11e9-9faf-3521ed822de9\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":33,\"w\":10,\"h\":15,\"i\":\"7\"},\"id\":\"940af720-4a4b-11e9-9faf-3521ed822de9\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":20,\"y\":33,\"w\":28,\"h\":15,\"i\":\"8\"},\"id\":\"fc3a57d0-78b0-11e9-b7f8-ab32b998c172\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":48,\"w\":48,\"h\":14,\"i\":\"9\"},\"id\":\"282acc80-862b-11e9-b7f8-ab32b998c172\",\"panelIndex\":\"9\",\"type\":\"search\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":10,\"y\":33,\"w\":10,\"h\":15,\"i\":\"10\"},\"id\":\"8b684b80-8629-11e9-b7f8-ab32b998c172\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "8d909b00-862f-11e9-b7f8-ab32b998c172",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Paloma's",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"1\",\"w\":48,\"x\":0,\"y\":12},\"id\":\"4866d8d0-8631-11e9-b7f8-ab32b998c172\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":11,\"i\":\"2\",\"w\":48,\"x\":0,\"y\":26},\"id\":\"4cdaa320-8630-11e9-b7f8-ab32b998c172\",\"panelIndex\":\"2\",\"type\":\"search\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"3\",\"w\":48,\"x\":0,\"y\":37},\"id\":\"282acc80-862b-11e9-b7f8-ab32b998c172\",\"panelIndex\":\"3\",\"type\":\"search\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"4\",\"w\":48,\"x\":0,\"y\":0},\"id\":\"f35cb700-8794-11e9-b7f8-ab32b998c172\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "194404f0-e6b4-11e8-bb67-918dc5752875",
+    "_type": "index-pattern",
+    "_source": {
+      "title": "messages*",
+      "timeFieldName": "timestamp",
+      "fields": "[{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"entities\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"environment\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"intent_confidence\",\"type\":\"number\",\"count\":1,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"intent_name\",\"type\":\"string\",\"count\":4,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"is_bot\",\"type\":\"boolean\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"is_fallback\",\"type\":\"boolean\",\"count\":7,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"tags\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"text\",\"type\":\"string\",\"count\":9,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"timestamp\",\"type\":\"date\",\"count\":5,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"user_id\",\"type\":\"string\",\"count\":5,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"utter_name\",\"type\":\"string\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"version\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
+    }
+  },
+  {
+    "_id": "83b55140-e6b4-11e8-bb67-918dc5752875",
+    "_type": "index-pattern",
+    "_source": {
+      "title": "mes*",
+      "timeFieldName": "timestamp",
+      "fields": "[{\"name\":\"_id\",\"type\":\"string\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":5,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":5,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"entities\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"environment\",\"type\":\"string\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"intent_confidence\",\"type\":\"number\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"intent_name\",\"type\":\"string\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"is_bot\",\"type\":\"boolean\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"is_fallback\",\"type\":\"boolean\",\"count\":4,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"tags\",\"type\":\"string\",\"count\":1,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"text\",\"type\":\"string\",\"count\":1,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"timestamp\",\"type\":\"date\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"user_id\",\"type\":\"string\",\"count\":5,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"utter_name\",\"type\":\"string\",\"count\":5,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"version\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
+    }
+  }
+]
