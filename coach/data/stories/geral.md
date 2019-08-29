@@ -43,3 +43,15 @@
 * elogios
     - utter_elogios
     - utter_continuar_conversa
+
+## afirmar_botao
+* botao
+    - utter_botao
+* afirmacao_botao
+    - utter_afirmacao_botao
+
+## negar_botao
+* botao
+    - utter_botao
+* negacao_botao
+    - utter_negacao_botao

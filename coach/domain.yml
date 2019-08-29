@@ -7,6 +7,9 @@ intents:
   - diga_mais
   - tudo_bem
   - elogios
+  - botao
+  - afirmacao_botao
+  - negacao_botao
 
   - religiao
   - esporte
@@ -418,6 +421,24 @@ templates:
   utter_continuar_conversa:
     - text: |
         E aí, qual nosso próximo assunto?
+        
+  utter_botao:
+  - text: |
+        Enviando mensagem do botão
+    channel: "telegram"
+    buttons:
+    - title: "afirmação"
+      payload: "afirmação de botão"
+    - title: "negação"
+      payload: "negação de botão"
+
+  utter_afirmacao_botao:
+  - text: |
+        Mensagem de afirmação após clique em botão
+
+  utter_negacao_botao:
+  - text: |
+        Mensagem de negação após clique em botão
 
 actions:
   - utter_default
@@ -452,5 +473,8 @@ actions:
   - utter_bff
   - utter_historia
   - utter_risada
+  - utter_botao
+  - utter_afirmacao_botao
+  - utter_negacao_botao
 
   - action_test

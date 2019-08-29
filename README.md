@@ -17,7 +17,7 @@ Este projeto teve como base a [Tais](http://github.com/lappis-unb/tais).
 
 O usuário interage com a Boilerplate via RocketChat ou Telegram, que manda as mensagens para o Rasa NLU através de
 conectores, onde ele identifica a *intent*, e responde pelo Rasa Core, de acordo com as *stories* e *actions*.  
-As *models* utilizadas para a conversação foram geradas pelo módulo *trainer* e depois transferidas para o bot, estes 
+As *models* utilizadas para a conversação foram geradas pelo módulo *trainer* e depois transferidas para o bot, estes
 modelos podem ser versionados e evoluídos entre bots.  
 Os notebooks avaliam o funcionamento de acordo com o formato das *intents* e *stories*.
 O elasticsearch coleta os dados da conversa e armazena para a análise feita pelo kibana, que gera gráficos para
@@ -147,7 +147,15 @@ sudo docker-compose run --rm coach make train-online
 
 ## Analytics
 
+Para a análise dos dados das conversas com o usuário, utilize o kibana, e veja como os usuários estão interagindo com o bot, os principais assuntos, média de usuários e outras informações da análise de dados.
+As mensagens são inseridas no *cluster* do Elastic Search utilizando o *broker* RabbitMQ.
+
 ### Setup
+
+
+#### Setup ElasticSearch
+
+Para subir o ambiente do ElasticSearch rode os seguintes comandos:
 
 ```
 sudo docker-compose up -d elasticsearch
@@ -160,6 +168,7 @@ Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
 ENVIRONMENT_NAME=localhost
 BOT_VERSION=last-commit-hash
 ```
+
 
 #### Setup RabbitMQ
 
@@ -221,13 +230,29 @@ BROKER_PASSWORD=admin
 QUEUE_NAME=bot_messages
 ```
 
-### Visualização
+
+#### Visualizações (Kibana)
+
+O Kibana nos auxilia com uma interface para visualizar os dados armazenados nos índices do ElasticSearch.
 
 ```
 sudo docker-compose up -d kibana
 ```
 
 Você pode acessar o kibana no `locahost:5601`
+
+
+#### Para visualização dos Dashboards padrão
+
+Já estão disponíveis dois **dashboards** para a análise de algumas [métricas importante](https://github.com/lappis-unb/tais/wiki/Estudo-sobre-metricas-para-bots) para o desenvolvimento e monitoramento de chatbots.
+
+Para usar estes _templates_ execute os seguintes passos:
+
+* Suba o container do **Kibana** e acesse `http://locahost:5601`;
+* Na interface, acesse `Management` e clique em `Saved Objects`;
+* Clique em `Import`;
+* Utilize o arquivo `export.json` na pasta `analytics/elasticsearch/` do projeto.
+
 
 ## Testando Fluxos de Conversa
 
@@ -281,7 +306,7 @@ sudo docker-compose up -d bot
 
 # Como conseguir ajuda
 
-Parte da documentação técnica do framework da Tais está disponível na 
+Parte da documentação técnica do framework da Tais está disponível na
 [wiki do repositório](https://github.com/lappis-unb/tais/wiki). Caso não encontre sua resposta, abra uma issue
 com a tag `duvida` que tentaremos responder o mais rápido possível.
 
