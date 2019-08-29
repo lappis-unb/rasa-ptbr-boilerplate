@@ -1,5 +1,5 @@
 rasa==1.2.2
-nltk==3.3
+nltk==3.4.5
 rocketchat-py-sdk==0.0.8
 elasticsearch==6.3.1
 
