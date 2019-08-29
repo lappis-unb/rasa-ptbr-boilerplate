@@ -2,6 +2,7 @@ intents:
   - cumprimentar
   - despedir
   - out_of_scope
+  - negar_despedir
   - negar
   - diga_mais
   - tudo_bem
@@ -80,6 +81,8 @@ templates:
   utter_diga_mais:
     - text: |
         Por enquanto, só entendo perguntas completas.
+        Como por exemplo "qual é o melhor time do Brasil?".
+        Se você puder pergunta de novo de outro jeito :)
 
   utter_elogios:
     - text: |
@@ -88,6 +91,7 @@ templates:
   utter_cumprimentar:
     - text: |
           Oi, eu sou um bot, um assistente virtual!
+          Uhuu! Manda aí um assunto que te interessa :)
 
   utter_despedir:
     - text: |
@@ -318,13 +322,13 @@ templates:
 
   utter_me:
     - text: |
-        Eu!!!
+        Eaê!
 
     - text: |
         Diz ai =)
 
     - text: |
-        Oi ;)
+        Conta mais, mano
 
     - text: |
         Fala aê!
@@ -414,6 +418,10 @@ templates:
 
         Você está feliz hoje, hein!?
 
+  utter_continuar_conversa:
+    - text: |
+        E aí, qual nosso próximo assunto?
+        
   utter_botao:
   - text: |
         Enviando mensagem do botão
@@ -439,6 +447,7 @@ actions:
   - utter_tudo_bem
   - utter_diga_mais
   - utter_elogios
+  - utter_continuar_conversa
 
   - utter_religiao
   - utter_esporte
