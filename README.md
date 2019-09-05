@@ -147,7 +147,7 @@ sudo docker-compose run --rm coach make train-online
 
 ## Analytics
 
-### Setup
+### Setup ElasticSearch
 
 ```
 sudo docker-compose up -d elasticsearch
@@ -160,6 +160,21 @@ Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
 ENVIRONMENT_NAME=localhost
 BOT_VERSION=last-commit-hash
 ```
+
+
+### Setup Kibana (Visualização)
+
+```
+sudo docker-compose up -d kibana
+
+# Caso queira subir com os dashboards para monitoramento de bots:
+
+sudo docker-compose run --rm kibana python3.6 import_dashboards.py
+```
+
+Você pode acessar o kibana no `locahost:5601`
+
+
 
 #### Setup RabbitMQ
 
@@ -220,14 +235,6 @@ BROKER_USERNAME=admin
 BROKER_PASSWORD=admin
 QUEUE_NAME=bot_messages
 ```
-
-### Visualização
-
-```
-sudo docker-compose up -d kibana
-```
-
-Você pode acessar o kibana no `locahost:5601`
 
 ## Testando Fluxos de Conversa
 
