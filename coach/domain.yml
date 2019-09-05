@@ -2,10 +2,14 @@ intents:
   - cumprimentar
   - despedir
   - out_of_scope
+  - negar_despedir
   - negar
   - diga_mais
   - tudo_bem
   - elogios
+  - botao
+  - afirmacao_botao
+  - negacao_botao
 
   - religiao
   - esporte
@@ -77,6 +81,8 @@ templates:
   utter_diga_mais:
     - text: |
         Por enquanto, só entendo perguntas completas.
+        Como por exemplo "qual é o melhor time do Brasil?".
+        Se você puder pergunta de novo de outro jeito :)
 
   utter_elogios:
     - text: |
@@ -85,6 +91,7 @@ templates:
   utter_cumprimentar:
     - text: |
           Oi, eu sou um bot, um assistente virtual!
+          Uhuu! Manda aí um assunto que te interessa :)
 
   utter_despedir:
     - text: |
@@ -315,13 +322,13 @@ templates:
 
   utter_me:
     - text: |
-        Eu!!!
+        Eaê!
 
     - text: |
         Diz ai =)
 
     - text: |
-        Oi ;)
+        Conta mais, mano
 
     - text: |
         Fala aê!
@@ -411,6 +418,28 @@ templates:
 
         Você está feliz hoje, hein!?
 
+  utter_continuar_conversa:
+    - text: |
+        E aí, qual nosso próximo assunto?
+        
+  utter_botao:
+  - text: |
+        Enviando mensagem do botão
+    channel: "telegram"
+    buttons:
+    - title: "afirmação"
+      payload: "afirmação de botão"
+    - title: "negação"
+      payload: "negação de botão"
+
+  utter_afirmacao_botao:
+  - text: |
+        Mensagem de afirmação após clique em botão
+
+  utter_negacao_botao:
+  - text: |
+        Mensagem de negação após clique em botão
+
 actions:
   - utter_default
   - utter_cumprimentar
@@ -418,6 +447,7 @@ actions:
   - utter_tudo_bem
   - utter_diga_mais
   - utter_elogios
+  - utter_continuar_conversa
 
   - utter_religiao
   - utter_esporte
@@ -443,5 +473,8 @@ actions:
   - utter_bff
   - utter_historia
   - utter_risada
+  - utter_botao
+  - utter_afirmacao_botao
+  - utter_negacao_botao
 
   - action_test

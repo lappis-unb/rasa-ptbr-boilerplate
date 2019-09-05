@@ -6,6 +6,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
+
 def getIdDashboards(pathToFile):
     dashboardsIds = {}
 
@@ -33,7 +34,7 @@ def importDashboards(pathToFile):
     datas = open(pathToFile, 'rb').read()
     datas = datas.decode("utf-8")
 
-    request = requests.post(url=fullURL, headers=header, data=json.dumps(datas))
+    requests.post(url=fullURL, headers=header, data=json.dumps(datas))
 
 
 if __name__ == "__main__":
