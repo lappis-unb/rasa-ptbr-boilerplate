@@ -64,17 +64,18 @@ services:
       - esdata:/usr/share/elasticsearch/data
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.3.0
+    build:
+      context: .
+      dockerfile: ./docker/kibana.Dockerfile
     restart: unless-stopped
     ports:
       - 5601:5601
     environment:
       - SERVER_PORT=5601
       - ELASTICSEARCH_URL=http://elasticsearch:9200
-      - KIBANA_URL=http://localhost:5601
+      - KIBANA_URL=http://kibana:5601
     depends_on:
       - elasticsearch
-
 
   # =============================== Broker ====================================
   rabbitmq:
