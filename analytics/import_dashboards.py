@@ -22,7 +22,7 @@ def getIdDashboards(pathToFile):
 
 
 def importDashboards(pathToFile):
-    URL = os.getenv('KIBANA_URL', 'http://localhost:5601')
+    URL = os.getenv('KIBANA_URL', 'http://kibana:5601')
     fullURL = URL + '/api/kibana/dashboards/import?exclude=index-pattern'
 
     header = {
@@ -38,6 +38,6 @@ def importDashboards(pathToFile):
 
 if __name__ == "__main__":
     try:
-        importDashboards('analytics/dashboards.json')
+        importDashboards('dashboards.json')
     except Exception as ex:
         logger.error(str(ex))
