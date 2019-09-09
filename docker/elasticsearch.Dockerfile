@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.4.2
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.3.0
 
 RUN mkdir backup
 

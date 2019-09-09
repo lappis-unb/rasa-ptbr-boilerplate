@@ -147,13 +147,11 @@ sudo docker-compose run --rm coach make train-online
 
 ## Analytics
 
+### Setup ElasticSearch
+
 Para a análise dos dados das conversas com o usuário, utilize o kibana, e veja como os usuários estão interagindo com o bot, os principais assuntos, média de usuários e outras informações da análise de dados.
 As mensagens são inseridas no *cluster* do Elastic Search utilizando o *broker* RabbitMQ.
 
-### Setup
-
-
-#### Setup ElasticSearch
 
 Para subir o ambiente do ElasticSearch rode os seguintes comandos:
 
@@ -168,6 +166,28 @@ Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
 ENVIRONMENT_NAME=localhost
 BOT_VERSION=last-commit-hash
 ```
+
+
+### Setup Kibana (Visualização)
+
+O Kibana nos auxilia com uma interface para visualizar os dados armazenados nos índices do ElasticSearch.
+
+```
+sudo docker-compose up -d kibana
+```
+
+#### Importação de dashboards
+
+Caso queira subir com os dashboards para monitoramento de bots:
+
+```
+sudo docker-compose run --rm kibana python3.6 import_dashboards.py
+```
+
+Após rodar o comando anterior os dashboards importados estarão presentes no menu management/kibana/Saved Objects.
+
+Você pode acessar o kibana no `locahost:5601`
+
 
 
 #### Setup RabbitMQ
@@ -229,30 +249,6 @@ BROKER_USERNAME=admin
 BROKER_PASSWORD=admin
 QUEUE_NAME=bot_messages
 ```
-
-
-#### Visualizações (Kibana)
-
-O Kibana nos auxilia com uma interface para visualizar os dados armazenados nos índices do ElasticSearch.
-
-```
-sudo docker-compose up -d kibana
-```
-
-Você pode acessar o kibana no `locahost:5601`
-
-
-#### Para visualização dos Dashboards padrão
-
-Já estão disponíveis dois **dashboards** para a análise de algumas [métricas importante](https://github.com/lappis-unb/tais/wiki/Estudo-sobre-metricas-para-bots) para o desenvolvimento e monitoramento de chatbots.
-
-Para usar estes _templates_ execute os seguintes passos:
-
-* Suba o container do **Kibana** e acesse `http://locahost:5601`;
-* Na interface, acesse `Management` e clique em `Saved Objects`;
-* Clique em `Import`;
-* Utilize o arquivo `export.json` na pasta `analytics/elasticsearch/` do projeto.
-
 
 ## Testando Fluxos de Conversa
 
