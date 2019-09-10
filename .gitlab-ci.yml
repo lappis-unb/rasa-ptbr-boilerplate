@@ -1,20 +1,17 @@
 image: python:3.6-slim
 
 variables:
-  BOT_IMAGE: $DOCKERHUB_USER/bot
-  COACH_IMAGE: $DOCKERHUB_USER/coach
+  COACH_TEMP_IMAGE: $CI_REGISTRY_IMAGE/ci/coach:$CI_COMMIT_SHORT_SHA
+  BOT_TEMP_IMAGE: $CI_REGISTRY_IMAGE/ci/bot:$CI_COMMIT_SHORT_SHA
 
 stages:
   - test style
-  - test stories
   - build requirements
+  - test stories
   - build coach
   - build
 
 
-#############################################################
-#################### TEST STYLE #############################
-#############################################################
 test style:
   stage: test style
   script:
@@ -24,9 +21,6 @@ test style:
     - flake8 --exclude venv
 
 
-#############################################################
-############### TEST STORIES ################################
-#############################################################
 test stories:
   stage: test stories
   image: docker
@@ -35,14 +29,15 @@ test stories:
   services:
     - docker:dind
   script:
-    - docker build -f docker/coach.Dockerfile -t $COACH_IMAGE:latest .
-    - docker build -f docker/bot.Dockerfile -t $BOT_IMAGE:latest .
-    - docker run --rm $BOT_IMAGE:latest make test-stories
+    - docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate # Builds lappis/coach:boilerplate
+    - docker build -f docker/bot.Dockerfile -t $BOT_TEMP_IMAGE . # It uses lappis/coach:boilerplate built locally
+    - docker run --rm $BOT_TEMP_IMAGE make test-stories
+    - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
+    - docker tag lappis/coach:boilerplate $COACH_TEMP_IMAGE # Retags lappis/coach:boilerplate to temp image
+    - docker push $COACH_TEMP_IMAGE # Pushes temp image to the gitlab registry (it will be pulled from gitlab and pushed to Dockerhub later)
+    - docker push $BOT_TEMP_IMAGE
 
 
-#############################################################
-############### BUILD REQUIREMENTS ##########################
-#############################################################
 build requirements:
   stage: build requirements
   image: docker
@@ -52,19 +47,16 @@ build requirements:
     - docker:dind
   script:
     - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
-    - cd ./docker/bot
+    - cd ./docker
     - ./build-base.sh publish
   only:
     refs:
       - master
     changes:
-      - ./docker/bot/requirements.txt
+      - ./docker/requirements.txt
   environment: homolog
 
 
-#############################################################
-############### BUILD COACH #################################
-#############################################################
 build coach:
   stage: build coach
   image: docker
@@ -74,16 +66,14 @@ build coach:
     - docker:dind
   script:
     - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
-    - docker build -f docker/coach.Dockerfile -t $COACH_IMAGE:latest .
-    - docker push $COACH_IMAGE:latest
+    - docker pull $COACH_TEMP_IMAGE
+    - docker tag $COACH_TEMP_IMAGE lappis/coach:boilerplate
+    - docker push lappis/coach:boilerplate
   only:
     - master
   environment: homolog
 
 
-#############################################################
-############### BUILD BOT ###################################
-#############################################################
 build bot:
   stage: build
   image: docker
@@ -93,8 +83,9 @@ build bot:
     - docker:dind
   script:
     - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
-    - docker build -f docker/bot.Dockerfile -t $BOT_IMAGE:latest .
-    - docker push $BOT_IMAGE:latest
+    - docker pull $BOT_TEMP_IMAGE
+    - docker tag $BOT_TEMP_IMAGE lappis/bot:boilerplate
+    - docker push lappis/bot:boilerplate
   only:
     - master
   environment: homolog

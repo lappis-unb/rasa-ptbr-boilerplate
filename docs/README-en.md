@@ -28,7 +28,7 @@ evaluation of user conversations and boilerplate.
 
 This script has been configured to build the generic images needed to run this environment.
 If your project uses this boilerplate and goes to perform continuous or similar integration, it is interesting
-create a repository for the images and replace the names of the "bot", "coach" and "requirements" their respective new images, for example "<organization>/bot" in a public repository.
+create a repository for the images and replace the names of the "bot", "coach" and "requirements" to their respective new images, for example "<organization>/bot" in a public repository.
 
 ### RocketChat
 

@@ -23,7 +23,7 @@ services:
   # =============================== Coach =================================  
   coach:
     container_name: coach
-    image: botcoach:latest
+    image: lappis/coach:boilerplate
     volumes:
       - notebook_models:/notebook_models
     command: sh -c "cp -r /src_models/* /notebook_models"

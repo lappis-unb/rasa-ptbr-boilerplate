@@ -28,8 +28,8 @@ avaliação das conversas dos usuários e do boilerplate.
 
 Este script foi configurado para construir as imagens genéricas necessárias para execução deste ambiente.
 Caso seu projeto utilize este boilerplate e vá realizar uma integração contínua ou similar, é interessante
-criar um repositório para as imagens e substitua os nomes das imagens "lappis/bot", "lappis/coach" e "lappis/botrequirements" pelas
-suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público.
+criar um repositório para as imagens e substitua os nomes das imagens "lappis/bot:boilerplate", "lappis/coach:boilerplate" e "lappis/botrequirements:boilerplate" pelas
+suas respectivas novas imagens, por exemplo "<organização>/bot:tag" em repositório público.
 
 ### RocketChat
 
