@@ -32,14 +32,23 @@ criar um repositório para as imagens e substitua os nomes das imagens "lappis/b
 suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público.
 
 ### RocketChat
+Para testar o assistente virtual utilizando da plataforma do RocketChat, siga os seguintes comandos para subir os containers em seu computador:
+
 
 ```sh
 sudo docker-compose up -d rocketchat
-sudo docker-compose up bot
+# aguarde o container do rocketchat subir
+sudo docker-compose up -d bot
 ```
 
-Para que a assistente virtual inicie a conversa você deve criar um `trigger`.
-Para isso, entre no rocketchat como `admin`, e vá no painel do Livechat na
+Após esses comandos o RocketChat deve estar disponível na porta 3000 do seu computador. Entre em http://localhost:3000 para acessar. Será pedido que faça login. Por padrão é gerado um usuário admin: username: admin senha: admin. Nas próximas telas apenas clique na opção `Continue` e `Go to your workspace`.
+
+Para configurar o chat do bot no rocketchat, acesse o [link](/docs/add_bot_rocketchat.md).
+
+
+
+Opcionalmente, é possível fazer uma configuração para que o assistente virtual inicie a conversa, para isso você deve criar um `trigger`.
+Para criar um `trigger` entre no rocketchat como `admin`, e vá no painel do Livechat na
 seção de Triggers, clique em `New Trigger`. Preencha o Trigger da seguinte forma:
 
 ```yaml
@@ -53,7 +62,6 @@ Action: Send Message
  Value: Olá!
 ```
 
-O valor `http://localhost:8080/` deve ser a URL de acesso do Bot.
 
 #### Instalação
 
