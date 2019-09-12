@@ -32,12 +32,16 @@ settings = {
                                       "format": "yyyy/MM/dd HH:mm:ss"},
                 "intent_name":       {"type": "keyword"},
                 "intent_confidence": {"type": "double"},
-                "entities":         {"type": "keyword"},
+                "entities":          {"type": "keyword"},
                 "utter_name":        {"type": "keyword"},
                 "is_fallback":       {"type": "boolean"},
             }
         }
     }
+}
+
+param = {
+    "include_type_name": "true"
 }
 
 index_name = 'messages'
@@ -47,6 +51,7 @@ if __name__ == '__main__':
         try:
             if not es.indices.exists(index_name):
                 logger.debug(es.indices.create(index=index_name, ignore=400,
+                                               params=param,
                                                body=settings))
                 logger.info('Created Index')
             else:
