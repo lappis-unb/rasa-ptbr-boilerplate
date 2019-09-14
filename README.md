@@ -46,10 +46,10 @@ seção de Triggers (Gatilho), clique em `New Trigger` (Novo Gatilho). Preencha 
 Enabled: Yes
 Name: Start Talk
 Description: Start Talk
-Condition: Visitor time on site (Tempo do visitante no site)
+Condition: Visitor time on site
     Value: 3
-Action: Send Message (Envie uma mensagem)
- Value: Impersonate next agent from queue (Representar o próximo agente da fila)
+Action: Send Message
+ Value: Impersonate next agent from queue
  Value: Olá!
 ```
 
