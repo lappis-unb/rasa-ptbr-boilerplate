@@ -52,6 +52,7 @@ ENABLE_ANALYTICS=True
 sudo docker-compose up -d bot
 ```
 
+
 Após esses comandos o RocketChat deve estar disponível na porta 3000 do seu computador. Entre em http://localhost:3000 para acessar. Será pedido que faça login. Por padrão é gerado um usuário admin: username: admin senha: admin. Nas próximas telas apenas clique na opção `Continue` e `Go to your workspace`.
 
 Para configurar o bot no rocketchat e conseguir conversar com ele pelo próprio rocket, acesse o [link](http://github.com/lappis-unb/rasa-ptbr-boilerplate/tree/master/docs/add_bot_rocketchat.md).
@@ -60,6 +61,7 @@ Para configurar o bot no rocketchat e conseguir conversar com ele pelo próprio 
 Opcionalmente, é possível fazer uma configuração para que o assistente virtual inicie a conversa, para isso você deve criar um `trigger`.
 Para criar um `trigger` entre no rocketchat como `admin`, e vá no painel do Livechat na
 seção de Triggers, clique em `New Trigger`. Preencha o Trigger da seguinte forma:
+
 
 ```yaml
 Enabled: Yes
