@@ -32,15 +32,36 @@ criar um repositório para as imagens e substitua os nomes das imagens "lappis/b
 suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público.
 
 ### RocketChat
+Para testar o assistente virtual utilizando da plataforma do RocketChat, siga os seguintes comandos para subir os containers em seu computador:
+
 
 ```sh
 sudo docker-compose up -d rocketchat
-sudo docker-compose up bot
+
+# Caso não vá subir a stack do Analytics
+# aguarde o container do rocketchat subir
+sudo docker-compose up -d bot
 ```
 
-Para que a assistente virtual inicie a conversa você deve criar um `trigger`.
-Para isso, entre no rocketchat (http://localhost:8080) como `admin` (senha: `admin`), e vá no painel do Livechat na
-seção de Triggers (Gatilho), clique em `New Trigger` (Novo Gatilho). Preencha o Trigger da seguinte forma:
+Caso queira subir toda a stack e vá utilizar do analytics é necessário substituir a seguinte variável de ambiente no `docker/bot-rocketchat.env` de **False** para **True**.
+```
+# Analytics config
+ENABLE_ANALYTICS=True
+
+# E logo após trocar, subir o container do bot
+sudo docker-compose up -d bot
+```
+
+
+Após esses comandos o RocketChat deve estar disponível na porta 3000 do seu computador. Entre em http://localhost:3000 para acessar. Será pedido que faça login. Por padrão é gerado um usuário admin: username: admin senha: admin. Nas próximas telas apenas clique na opção `Continue` e `Go to your workspace`.
+
+Para configurar o bot no rocketchat e conseguir conversar com ele pelo próprio rocket, acesse o [link](http://github.com/lappis-unb/rasa-ptbr-boilerplate/tree/master/docs/add_bot_rocketchat.md).
+
+
+Opcionalmente, é possível fazer uma configuração para que o assistente virtual inicie a conversa, para isso você deve criar um `trigger`.
+Para criar um `trigger` entre no rocketchat como `admin`, e vá no painel do Livechat na
+seção de Triggers, clique em `New Trigger`. Preencha o Trigger da seguinte forma:
+
 
 ```yaml
 Enabled: Yes
@@ -53,7 +74,6 @@ Action: Send Message
  Value: Olá!
 ```
 
-O valor `http://localhost:8080/` deve ser a URL de acesso do Bot.
 
 #### Instalação
 
@@ -75,8 +95,7 @@ host = 'http://localhost:3000';
 <!-- End of Rocket.Chat Livechat Script -->
 ```
 
-**Atenção**: Você precisa alterar a variavel `host` dentro do código acima para a url do site onde estará
-o seu Rocket.Chat.
+**Atenção**: Você precisa alterar a variavel `host` dentro do código acima para a url do site onde estará o seu Rocket.Chat.
 
 ### Telegram
 
@@ -86,7 +105,7 @@ Para realizar este processo, recomenda-se a criação de um
 Para rodar a _stack_ do bot pelo Telegram juntamente com os serviços anexados, é necessário comentar a parte
 relacionada ao Rocket.Chat e descomentar o serviço relacionado ao bot do telegram.
 
-Após, é necessário utilizar o [ngrok](https://ngrok.com/download) para expor determinada porta para ser utilizado
+Após a etapa anterior, é necessário utilizar o [ngrok](https://ngrok.com/download) para expor determinada porta para ser utilizado
 pelo Telegram.
 
 Ao baixar, é só executar utilizando o seguinte comando:
@@ -147,50 +166,11 @@ sudo docker-compose run --rm coach make train-online
 
 ## Analytics
 
-### Setup ElasticSearch
-
-Para a análise dos dados das conversas com o usuário, utilize o kibana, e veja como os usuários estão interagindo com o bot, os principais assuntos, média de usuários e outras informações da análise de dados.
-As mensagens são inseridas no *cluster* do Elastic Search utilizando o *broker* RabbitMQ.
-
-
-Para subir o ambiente do ElasticSearch rode os seguintes comandos:
-
-```
-sudo docker-compose up -d elasticsearch
-sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
-```
-
-Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
-
-```
-ENVIRONMENT_NAME=localhost
-BOT_VERSION=last-commit-hash
-```
-
-
-### Setup Kibana (Visualização)
-
-O Kibana nos auxilia com uma interface para visualizar os dados armazenados nos índices do ElasticSearch.
-
-```
-sudo docker-compose up -d kibana
-```
-
-#### Importação de dashboards
-
-Caso queira subir com os dashboards para monitoramento de bots:
-
-```
-sudo docker-compose run --rm kibana python3.6 import_dashboards.py
-```
-
-Após rodar o comando anterior os dashboards importados estarão presentes no menu management/kibana/Saved Objects.
-
-Você pode acessar o kibana no `locahost:5601`
-
-
+Para a visualização dos dados da interação entre o usuário e o chatbot nós utilizamos uma parte da Stack do Elastic, composta pelo ElasticSearch e o Kibana. Com isso, utilizamos um broker para fazer a gerência de mensagens. Então conseguimos adicionar mensagens ao ElasticSearch independente do tipo de mensageiro que estamos utilizando.
 
 #### Setup RabbitMQ
+
+Em primeiro lugar para fazer o setup do analytics é necessário subir o RabiitMQ e suas configurações.
 
 Inicie o serviço do servidor do RabbitMQ:
 
@@ -237,12 +217,9 @@ sudo docker-compose run --rm bot make run-console-broker
 ```
 
 A segunda forma é utilizando o script `run-rocketchat` que é utilizado quando o bot é executado com o RocketChat como canal. Para isso, as mesmas variáveis devem ser configuradas no arquivo `docker/bot/bot.env`.
-Lembre-se também de configurar como `True` a seguinte variável do serviço `bot` no `docker-compose`.
+Lembre-se também de configurar como `True` a seguinte variável do serviço `bot` no arquivo `docker/bot-rocketchat.env`.
 
 ```
-# Analytics config
-ENABLE_ANALYTICS=True
-
 # Broker config
 BROKER_URL=rabbitmq
 BROKER_USERNAME=admin
@@ -250,80 +227,55 @@ BROKER_PASSWORD=admin
 QUEUE_NAME=bot_messages
 ```
 
-### Configurando os usuários 
-
-Caso seja desejada a função de se ter usuários com diferentes permissões dentro do kibana, deve-se seguir os seguintes passos (Caso não seja esse seu interesse, pode passar para a próxima sessão):   
-
-OBS: Os seguintes passos podem ser encontrados, com mais detalhes, na seguinte paǵina: https://www.elastic.co/guide/en/elastic-stack-overview/current/get-started-enable-security.html
-
-**1. Habilitar função de segurança do elastic search:**
-
-   Depois de se subir o container do elastic de acordo com a seção [Setup](https://github.com/lappis-unb/rasa-ptbr-boilerplate/tree/master#setup-elasticsearch),
-   adicione a seguinte linha ao arquivo 'rasa-ptbr-boilerplate/elasticsearch/elasticsearch.yml':
+Ao final é necessário buildar novamente o container do bot.
 
 ```
-xpack.security.enabled: true
+sudo docker-compose up --build -d bot
 ```
 
-Após adicionar a linha, reinicie o container do Elastic Search
+### Setup ElasticSearch
+
+O ElasticSearch é o serviço responsável por armazenar os dados provenientes da interação entre o usuário e o chatbot.
+
+As mensagens são inseridas no índice do ElasticSearch utilizando o *broker* RabbitMQ.
+
+Para subir o ambiente do ElasticSearch rode os seguintes comandos:
 
 ```
-sudo docker-compose restart elasticsearch
+sudo docker-compose up -d elasticsearch
+sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
 ```
 
-
-**2. Definir senhas para usuários internos do elasticsearch:**
-
- Entre no container com o comando:
-
+Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
 
 ```
-sudo docker-compose exec elasticsearch bash
+ENVIRONMENT_NAME=localhost
+BOT_VERSION=last-commit-hash
 ```
 
-   Dentro do container execute o seguinte comando, preenchendo as senhas que deseja para cada um dos usuários.
+### Setup Kibana (Visualização)
+Para a análise dos dados das conversas com o usuário, utilize o kibana, e veja como os usuários estão interagindo com o bot, os principais assuntos, média de usuários e outras informações da análise de dados.
 
-
-```
-./bin/elasticsearch-setup-passwords interactive
-```
-
-**3. Adicionar usuário kibana ao container do kibana**
-
-   Depois de subir o container do kibana de acordo com a seção [Visualização](https://github.com/lappis-unb/rasa-ptbr-boilerplate/tree/master#setup-kibana-visualização), entre no mesmo com o comando:
+O Kibana nos auxilia com uma interface para criação de visualização para os dados armazenados nos índices do ElasticSearch.
 
 ```
-sudo docker-compose exec kibana bash
+sudo docker-compose up -d kibana
 ```
 
-   Dentro do container, execute os seguintes comandos, digitando, quando necessário, o usuário kibana, e a senha criada no passo anterior.
+**Atenção:** Caso queira configurar permissões diferentes de usuários (Login) no ElasticSearch/Kibana, siga esse tutorial ([link](https://github.com/lappis-unb/rasa-ptbr-boilerplate/tree/master/docs/setup_user_elasticsearch.md)).
+
+#### Importação de dashboards
+
+Caso queira subir com os dashboards que criamos para fazer o monitoramento de bots:
 
 ```
-../bin/kibana-keystore create
-../bin/kibana-keystore add elasticsearch.username
-../bin/kibana-keystore add elasticsearch.password
+sudo docker-compose run --rm kibana python3.6 import_dashboards.py
 ```
 
-Após executar os comandos acima, reinicie o container do kibana.
+Após rodar o comando anterior os dashboards importados estarão presentes no menu management/kibana/Saved Objects.
 
-```
-sudo docker-compose restart kibana
-```
+Você pode acessar o kibana no `locahost:5601`
 
-
-**4. Crie usuários além do administrador**
-
-   Após os três passos anteriores, será possível entrar no kibana utilizando a conta com usuário 'elastic'. 
-
-   Na interface, é possível criar outros usuários, com diversas outras permissões, entrando em ***Management / Security / Users***, e após isso clicando no botão Create New User.
-
-**5. Definir permissões para usuários.**
-
-   Na criação de usuários é possível se definir permissões para cada um deles, utilizando os ***roles*** definidos pelo elastic.
-
-   Por exemplo, um usuário que deva ter somente aceesso a leitura dos dashboards criados, deverá ter o role ***kibana_dashboard_only_user*** e ***apm_user***
-
-   É possível criar novos ***roles*** em ***Management / Security / Roles***
 
 
 ## Testando Fluxos de Conversa
@@ -369,8 +321,12 @@ Acesse o notebook em `localhost:8888`
 ```sh
 sudo docker-compose up -d rocketchat
 
-sudo docker-compose up -d kibana
+sudo docker-compose up -d rabbitmq
+sudo docker-compose up -d rabbitmq-consumer
+
+sudo docker-compose up -d elasticsearch
 sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
+sudo docker-compose up -d kibana
 
 sudo docker-compose up -d bot
 ```
