@@ -39,8 +39,8 @@ sudo docker-compose up bot
 ```
 
 Para que a assistente virtual inicie a conversa você deve criar um `trigger`.
-Para isso, entre no rocketchat como `admin`, e vá no painel do Livechat na
-seção de Triggers, clique em `New Trigger`. Preencha o Trigger da seguinte forma:
+Para isso, entre no rocketchat (http://localhost:8080) como `admin` (senha: `admin`), e vá no painel do Livechat na
+seção de Triggers (Gatilho), clique em `New Trigger` (Novo Gatilho). Preencha o Trigger da seguinte forma:
 
 ```yaml
 Enabled: Yes
