@@ -61,13 +61,16 @@ services:
 
   # Visualization layer of Analitics Stack.
   kibana:
-    image: docker.elastic.co/kibana/kibana:6.4.2
+    build:
+      context: .
+      dockerfile: ./docker/kibana.Dockerfile
     restart: unless-stopped
     ports:
       - 5601:5601
     environment:
       - SERVER_PORT=5601
       - ELASTICSEARCH_URL=http://elasticsearch:9200
+      - KIBANA_URL=http://kibana:5601
     depends_on:
       - elasticsearch
 

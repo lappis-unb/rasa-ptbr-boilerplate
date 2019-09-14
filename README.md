@@ -147,13 +147,11 @@ sudo docker-compose run --rm coach make train-online
 
 ## Analytics
 
+### Setup ElasticSearch
+
 Para a análise dos dados das conversas com o usuário, utilize o kibana, e veja como os usuários estão interagindo com o bot, os principais assuntos, média de usuários e outras informações da análise de dados.
 As mensagens são inseridas no *cluster* do Elastic Search utilizando o *broker* RabbitMQ.
 
-### Setup
-
-
-#### Setup ElasticSearch
 
 Para subir o ambiente do ElasticSearch rode os seguintes comandos:
 
@@ -168,6 +166,28 @@ Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
 ENVIRONMENT_NAME=localhost
 BOT_VERSION=last-commit-hash
 ```
+
+
+### Setup Kibana (Visualização)
+
+O Kibana nos auxilia com uma interface para visualizar os dados armazenados nos índices do ElasticSearch.
+
+```
+sudo docker-compose up -d kibana
+```
+
+#### Importação de dashboards
+
+Caso queira subir com os dashboards para monitoramento de bots:
+
+```
+sudo docker-compose run --rm kibana python3.6 import_dashboards.py
+```
+
+Após rodar o comando anterior os dashboards importados estarão presentes no menu management/kibana/Saved Objects.
+
+Você pode acessar o kibana no `locahost:5601`
+
 
 
 #### Setup RabbitMQ
@@ -230,28 +250,80 @@ BROKER_PASSWORD=admin
 QUEUE_NAME=bot_messages
 ```
 
+### Configurando os usuários 
 
-#### Visualizações (Kibana)
+Caso seja desejada a função de se ter usuários com diferentes permissões dentro do kibana, deve-se seguir os seguintes passos (Caso não seja esse seu interesse, pode passar para a próxima sessão):   
 
-O Kibana nos auxilia com uma interface para visualizar os dados armazenados nos índices do ElasticSearch.
+OBS: Os seguintes passos podem ser encontrados, com mais detalhes, na seguinte paǵina: https://www.elastic.co/guide/en/elastic-stack-overview/current/get-started-enable-security.html
+
+**1. Habilitar função de segurança do elastic search:**
+
+   Depois de se subir o container do elastic de acordo com a seção [Setup](https://github.com/lappis-unb/rasa-ptbr-boilerplate/tree/master#setup-elasticsearch),
+   adicione a seguinte linha ao arquivo 'rasa-ptbr-boilerplate/elasticsearch/elasticsearch.yml':
 
 ```
-sudo docker-compose up -d kibana
+xpack.security.enabled: true
 ```
 
-Você pode acessar o kibana no `locahost:5601`
+Após adicionar a linha, reinicie o container do Elastic Search
+
+```
+sudo docker-compose restart elasticsearch
+```
 
 
-#### Para visualização dos Dashboards padrão
+**2. Definir senhas para usuários internos do elasticsearch:**
 
-Já estão disponíveis dois **dashboards** para a análise de algumas [métricas importante](https://github.com/lappis-unb/tais/wiki/Estudo-sobre-metricas-para-bots) para o desenvolvimento e monitoramento de chatbots.
+ Entre no container com o comando:
 
-Para usar estes _templates_ execute os seguintes passos:
 
-* Suba o container do **Kibana** e acesse `http://locahost:5601`;
-* Na interface, acesse `Management` e clique em `Saved Objects`;
-* Clique em `Import`;
-* Utilize o arquivo `export.json` na pasta `analytics/elasticsearch/` do projeto.
+```
+sudo docker-compose exec elasticsearch bash
+```
+
+   Dentro do container execute o seguinte comando, preenchendo as senhas que deseja para cada um dos usuários.
+
+
+```
+./bin/elasticsearch-setup-passwords interactive
+```
+
+**3. Adicionar usuário kibana ao container do kibana**
+
+   Depois de subir o container do kibana de acordo com a seção [Visualização](https://github.com/lappis-unb/rasa-ptbr-boilerplate/tree/master#setup-kibana-visualização), entre no mesmo com o comando:
+
+```
+sudo docker-compose exec kibana bash
+```
+
+   Dentro do container, execute os seguintes comandos, digitando, quando necessário, o usuário kibana, e a senha criada no passo anterior.
+
+```
+../bin/kibana-keystore create
+../bin/kibana-keystore add elasticsearch.username
+../bin/kibana-keystore add elasticsearch.password
+```
+
+Após executar os comandos acima, reinicie o container do kibana.
+
+```
+sudo docker-compose restart kibana
+```
+
+
+**4. Crie usuários além do administrador**
+
+   Após os três passos anteriores, será possível entrar no kibana utilizando a conta com usuário 'elastic'. 
+
+   Na interface, é possível criar outros usuários, com diversas outras permissões, entrando em ***Management / Security / Users***, e após isso clicando no botão Create New User.
+
+**5. Definir permissões para usuários.**
+
+   Na criação de usuários é possível se definir permissões para cada um deles, utilizando os ***roles*** definidos pelo elastic.
+
+   Por exemplo, um usuário que deva ter somente aceesso a leitura dos dashboards criados, deverá ter o role ***kibana_dashboard_only_user*** e ***apm_user***
+
+   É possível criar novos ***roles*** em ***Management / Security / Roles***
 
 
 ## Testando Fluxos de Conversa
