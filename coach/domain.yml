@@ -104,6 +104,7 @@ templates:
           Tem alguns assuntos que eu também ainda não domino, 
           mas vou deixar você descobrir o que eu sei responder.
           Vou adorar poder bater um papo com você  ;)
+          E, aí do que podemos conversar?
 
   utter_despedir:
     - text: |
