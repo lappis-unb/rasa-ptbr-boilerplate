@@ -21,9 +21,7 @@
    - utter_despedir
 
 ## end-to-end story 4
-* cumprimentar: olá
-   - utter_cumprimentar
-* meajuda: meajuda
+* meajuda: me ajuda
    - utter_meajuda
 * despedir: tchau
    - utter_despedir
