@@ -164,7 +164,7 @@
 - joia
 - joinha
 
-## intent: meajuda
+## intent: o_que_sei_falar
 - sobre o que você sabe falar
 - o que mais você sabe falar
 - quais assuntos você fala
@@ -182,3 +182,14 @@
 - ajuda eu
 - ajuda
 - menu
+
+## intent:botao
+- Envia um botão
+- Me envia um botão
+- Testando um botão
+
+## intent:afirmacao_botao
+- afirmação de botão
+
+## intent:negacao_botao
+- negação de botão
