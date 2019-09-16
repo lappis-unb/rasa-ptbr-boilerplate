@@ -163,3 +163,22 @@
 - como ta
 - joia
 - joinha
+
+## intent: meajuda
+- sobre o que você sabe falar
+- o que mais você sabe falar
+- quais assuntos você fala
+- o que você sabe 
+- lista de assuntos possiveis
+- quais as perguntas vc responde
+- quais as perquisar você responde
+- quero ajuda
+- meajuda
+- meajude
+- MEAJUD
+- MEAJDA
+- me ajuda
+- me ajude
+- ajuda eu
+- ajuda
+- menu

@@ -43,3 +43,13 @@
 * elogios
     - utter_elogios
     - utter_continuar_conversa
+
+## meajuda 1
+* meajuda
+    - utter_meajuda
+
+## meajuda 2
+* cumprimentar
+    - utter_cumprimentar
+* meajuda
+    - utter_meajuda
