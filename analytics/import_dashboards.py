@@ -6,6 +6,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
+
 def getRequestDatas(finalUrl):
     fullUrl = []
 
@@ -39,7 +40,8 @@ def getIdDashboards(pathToFile):
 
 
 def importDashboards(pathToFile):
-    requestData = getRequestDatas('/api/kibana/dashboards/import?exclude=index-pattern')
+    finalUrl = '/api/kibana/dashboards/import?exclude=index-pattern'
+    requestData = getRequestDatas(finalUrl)
 
     datas = open(pathToFile, 'rb').read()
     datas = datas.decode("utf-8")
@@ -47,6 +49,8 @@ def importDashboards(pathToFile):
     requests.post(url=requestData[0],
                   headers=requestData[1],
                   data=json.dumps(datas))
+
+    createIndexPattern()
 
 
 def createIndexPattern():
@@ -70,6 +74,5 @@ def createIndexPattern():
 if __name__ == "__main__":
     try:
         importDashboards('dashboards.json')
-        createIndexPattern()
     except Exception as ex:
         logger.error(str(ex))
