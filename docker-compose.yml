@@ -56,7 +56,7 @@ services:
       - discovery.type=single-node
     volumes:
       - esbackup:/usr/share/elasticsearch/backup
-      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./modules/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
       - esdata:/usr/share/elasticsearch/data
 
   # Visualization layer of Analitics Stack.
