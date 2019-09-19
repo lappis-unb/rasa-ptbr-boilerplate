@@ -1,26 +1,8 @@
 version: '2'
 
 services:
-  # ============================= Rocketchat ==================================
-  rocketchat:
-    container_name: rocketchat
-    image: rocket.chat:0.69.2
-    restart: unless-stopped
-    env_file:
-      - docker/rocketchat.env
-    ports:
-      - 3000:3000
-    depends_on:
-      - mongo
-
-  mongo:
-    image: mongo:3.2
-    restart: unless-stopped
-    volumes:
-      - ./data/db:/data/db
-    command: mongod --smallfiles --oplogSize 128
-
   # =============================== Coach =================================  
+  # All the models are trained by this coach.
   coach:
     container_name: coach
     image: botcoach:latest
@@ -29,16 +11,14 @@ services:
     command: sh -c "cp -r /src_models/* /notebook_models"
 
   # ================================= Bot =====================================
+  # Generic Rasa bot, used to run console for example.
   bot:
     image: lappis/bot:boilerplate
-    container_name: bot_rocketchat
+    container_name: bot
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
-    command: make run-rocketchat 
-    env_file:
-      - docker/bot-rocketchat.env
     ports:
       - 5002:5002
     depends_on:
@@ -46,8 +26,24 @@ services:
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
+    command: sh -c "rasa run"
+
+  # ================================= Actions =================================
+  # Rasa middleware used to connect with external APIs.
+  actions:
+    container_name: actions
+    build:
+      context: .
+      dockerfile: ./docker/actions.Dockerfile
+    ports:
+      - 5055:5055
+    volumes:
+      - ./bot/actions:/bot/actions
+      - ./bot/Makefile:/bot/Makefile
+    command: sh -c "make run-actions"
 
   # =============================== Analytics =================================
+  # Analitics ElasticSearch Stack.
   elasticsearch:
     build:
       context: .
@@ -63,6 +59,7 @@ services:
       - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
       - esdata:/usr/share/elasticsearch/data
 
+  # Visualization layer of Analitics Stack.
   kibana:
     build:
       context: .
@@ -78,6 +75,7 @@ services:
       - elasticsearch
 
   # =============================== Broker ====================================
+  # Custom broker to store Rasa tracker data.
   rabbitmq:
     image: rabbitmq:3-management
     restart: unless-stopped
@@ -89,6 +87,7 @@ services:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=admin
 
+  # Custom broker consumer responsible to store data into ElasticSearch.
   rabbitmq-consumer:
     build:
       context: .
@@ -102,6 +101,7 @@ services:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=admin
 
+      # TODO: move this env vars to a envfile
       # Analytics config
       - ELASTICSEARCH_URL=elasticsearch:9200
       - ENVIRONMENT_NAME=localhost
@@ -113,6 +113,7 @@ services:
     command: python3 /opt/scripts/consume_bot_messages.py
 
   # ============================ Telegram Bot =================================
+  # Specific Rasa bot integrated with Telegram.
   bot_telegram:
       container_name: bot_telegram
       build:
@@ -129,20 +130,51 @@ services:
         - ./scripts:/scripts
       command: sh -c "make run-telegram"
 
-  # ================================= Actions =================================
-  actions:
-    container_name: actions
+  # ================================= Bot =====================================
+  # Specific Rasa bot integrated with Rocket.Chat.
+  bot_rocketchat:
+    image: lappis/bot:boilerplate
+    container_name: bot_rocketchat
     build:
       context: .
-      dockerfile: ./docker/actions.Dockerfile
+      dockerfile: ./docker/bot.Dockerfile
+    restart: unless-stopped
+    env_file:
+      - docker/bot-rocketchat.env
     ports:
-      - 5055:5055
+      - 5002:5002
+    depends_on:
+      - actions
     volumes:
-      - ./bot/actions:/bot/actions
-      - ./bot/Makefile:/bot/Makefile
-    command: sh -c "make run-actions"
+      - ./bot:/bot
+      - ./scripts:/scripts
+    command: sh -c "rasa run --credentials credentials.yml --model /models"
+
+  # ============================= Rocketchat ==================================
+  # Rocketchat container instance avaible on localhost:3000.
+  rocketchat:
+    container_name: rocketchat
+    # TODO: Update to 1.x.x version.
+    image: rocket.chat:0.69.2
+    restart: unless-stopped
+    env_file:
+      - docker/rocketchat.env
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+
+  # Rocketchat local database.
+  mongo:
+    image: mongo:3.2
+    restart: unless-stopped
+    volumes:
+      - ./data/db:/data/db
+    command: mongod --smallfiles --oplogSize 128
+
 
   # =============================== Notebooks =================================
+  # Rasa lab to enhance hyperparameters.
   notebooks:
     container_name: notebooks
     build:
@@ -159,6 +191,7 @@ services:
     depends_on:
       - coach
   
+# Shared volumes between containers (coach and bot).
 volumes:
   notebook_models:
   esbackup:

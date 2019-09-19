@@ -1,16 +1,15 @@
 train-nlu:
-	python3 -m rasa_nlu.train -c nlu_config.yml --fixed_model_name current \
-	--data data/intents/ -o /src_models --project nlu --verbose
+	rasa train nlu -vv                 \
+	--config nlu_config.yml            \
+	--fixed-model-name current         \
+	--nlu data/intents/                \
+	--out /src_models
 
 train-core:
-	python3 train.py
+	rasa train core -vv                \
+	--config core_config.yml           \
+	-d domain.yml                      \
+	-s data/stories/                   \
+	--out /src_models/dialogue/
 
 train: train-nlu train-core
-
-train-online:
-	python -m rasa_core.train        \
-  interactive -o models/dialogue     \
-  -d domain.yml -c policy_config.yml \
-  -s data/stories                    \
-  --nlu models/nlu/current/          \
-  --endpoints endpoints.yml

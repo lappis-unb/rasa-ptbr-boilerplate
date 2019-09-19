@@ -1,5 +1,9 @@
 image: python:3.6-slim
 
+before_script:
+  - apt-get update --yes
+  - apt-get install gcc
+
 variables:
   BOT_IMAGE: $DOCKERHUB_USER/bot
   COACH_IMAGE: $DOCKERHUB_USER/coach
