@@ -30,7 +30,7 @@ Este projeto teve como base o projeto [Tais](http://github.com/lappis-unb/tais).
 
 ![](https://user-images.githubusercontent.com/8556291/57933140-d8d66b80-7892-11e9-8d58-a7eda60b099b.png)
 
-O usuário interage com a Boilerplate via RocketChat ou Telegram, que manda as mensagens para o Rasa NLU através de
+O usuário interage com a Boilerplate via Telegram, que manda as mensagens para o Rasa NLU através de
 conectores, onde ele identifica a *intent*, e responde pelo Rasa Core, de acordo com as *stories* e *actions*.  
 As *models* utilizadas para a conversação foram geradas pelo módulo *trainer* e depois transferidas para o bot, estes
 modelos podem ser versionados e evoluídos entre bots.  
@@ -122,16 +122,6 @@ Depois basta executar o bot:
 sudo docker-compose run --rm bot make run-console-broker
 ```
 
-A segunda forma é utilizando o script `run-rocketchat` que é utilizado quando o bot é executado com o RocketChat como canal. Para isso, as mesmas variáveis devem ser configuradas no arquivo `docker/bot/bot.env`.
-Lembre-se também de configurar como `True` a seguinte variável do serviço `bot` no arquivo `docker/bot-rocketchat.env`.
-
-```
-# Broker config
-BROKER_URL=rabbitmq
-BROKER_USERNAME=admin
-BROKER_PASSWORD=admin
-QUEUE_NAME=bot_messages
-```
 
 Ao final é necessário buildar novamente o container do bot.
 

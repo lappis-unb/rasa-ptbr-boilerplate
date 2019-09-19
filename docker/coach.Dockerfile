@@ -1,7 +1,7 @@
 FROM lappis/botrequirements:boilerplate
 
 COPY ./coach /coach
-COPY ./scripts /scripts
+COPY ./modules/ /modules
 
 RUN mkdir /src_models
 
