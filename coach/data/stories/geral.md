@@ -44,6 +44,16 @@
     - utter_elogios
     - utter_continuar_conversa
 
+## meajuda 1
+* o_que_sei_falar
+    - utter_o_que_sei_falar
+
+## meajuda 2
+* cumprimentar
+    - utter_cumprimentar
+* o_que_sei_falar
+    - utter_o_que_sei_falar
+
 ## afirmar_botao
 * botao
     - utter_botao

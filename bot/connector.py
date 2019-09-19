@@ -6,7 +6,7 @@ from typing import Text
 
 from flask import Blueprint, request, jsonify, make_response
 
-from rasa_core.channels.channel import UserMessage, OutputChannel, InputChannel
+from rasa.core.channels.channel import UserMessage, OutputChannel, InputChannel
 
 logger = logging.getLogger(__name__)
 

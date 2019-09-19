@@ -1,18 +1,16 @@
-from rasa_core.test import _generate_trackers, collect_story_predictions
-
-import logging
-from rasa_core import utils
-from rasa_core.utils import AvailableEndpoints
-from rasa_core.run import load_agent
-from rasa_core.interpreter import NaturalLanguageInterpreter
-from collections import namedtuple
+import os
 import re
 import sys
-import os
+import logging
+import argparse
 from os import listdir
 from os.path import isfile, join
-import argparse
+from collections import namedtuple
 
+from rasa.core import utils
+from rasa.core import run
+from rasa.core.interpreter import NaturalLanguageInterpreter
+from rasa.core.test import _generate_trackers, collect_story_predictions
 
 logger = logging.getLogger(__name__)
 
@@ -90,9 +88,9 @@ def run_evaluation(file_to_evaluate,
                    max_stories=None,
                    use_e2e=False):
 
-    _endpoints = AvailableEndpoints.read_endpoints(None)
+    _endpoints = utils.AvailableEndpoints.read_endpoints(None)
     _interpreter = NaturalLanguageInterpreter.create(NLU_DIR)
-    _agent = load_agent(CORE_DIR,
+    _agent = run.load_agent(CORE_DIR,
                         interpreter=_interpreter,
                         endpoints=_endpoints)
 
