@@ -5,21 +5,16 @@
 
 ## Tutorial para configurar todo o projeto
 
-```sh
-```
+Para ter seu chatbot Rasa no ar e funcionando rápidamente no `shell` execute os seguintes comandos:
 
 ```sh
-sudo docker-compose up -d rocketchat
-
-sudo docker-compose up -d rabbitmq
-sudo docker-compose up -d rabbitmq-consumer
-
-sudo docker-compose up -d elasticsearch
-sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
-sudo docker-compose up -d kibana
-
-sudo docker-compose up -d bot
+sudo make build-bot
+sudo make train
+sudo make run-console
 ```
+
+Estes comandos irão construir o seu chatbot e abrir a conversação no terminal. Tudo está dockerizado
+então você não terá problemas de instalação do ambiente.
 
 ## Introdução
 
