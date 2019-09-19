@@ -140,7 +140,7 @@ services:
       - docker/notebooks.env
     volumes:
       - ./coach:/work/coach
-      - ./notebooks:/work/notebooks
+      - ./modules/notebooks:/work/notebooks
       - notebook_models:/models:ro
     ports:
       - 8888:8888

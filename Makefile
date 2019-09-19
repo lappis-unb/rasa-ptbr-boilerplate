@@ -8,7 +8,7 @@ run-analytics:
 	docker-compose up -d rabbitmq
 	docker-compose up -d rabbitmq-consumer
 	docker-compose up -d elasticsearch
-	docker-compose run --rm -v $(current_dir)/analytics:/analytics bot python /analytics/setup_elastic.py
+	docker-compose run --rm -v $(current_dir)/modules/analytics:/analytics bot python /analytics/setup_elastic.py
 	docker-compose up -d kibana
 
 train:
