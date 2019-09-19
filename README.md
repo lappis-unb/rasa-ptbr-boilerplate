@@ -9,7 +9,6 @@ Para ter seu chatbot Rasa no ar e funcionando rápidamente no `shell` execute os
 
 ```sh
 sudo make build-bot
-sudo make train
 sudo make run-console
 ```
 

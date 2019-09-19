@@ -94,7 +94,7 @@ services:
       dockerfile: ./docker/rabbitmq/consumer.Dockerfile
     restart: unless-stopped
     volumes:
-      - ./rabbitmq/consumer/:/opt/scripts/
+      - ./modules/rabbitmq/consumer/:/opt/scripts/
     depends_on:
       - rabbitmq
     environment:
