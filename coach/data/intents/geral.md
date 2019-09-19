@@ -164,6 +164,25 @@
 - joia
 - joinha
 
+## intent: o_que_sei_falar
+- sobre o que você sabe falar
+- o que mais você sabe falar
+- quais assuntos você fala
+- o que você sabe 
+- lista de assuntos possiveis
+- quais as perguntas vc responde
+- quais as perquisar você responde
+- quero ajuda
+- meajuda
+- meajude
+- MEAJUD
+- MEAJDA
+- me ajuda
+- me ajude
+- ajuda eu
+- ajuda
+- menu
+
 ## intent:botao
 - Envia um botão
 - Me envia um botão

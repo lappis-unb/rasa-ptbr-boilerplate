@@ -13,17 +13,17 @@
    - utter_despedir
 
 ## end-to-end story 3
-* cumprimentar: oi
-   - utter_cumprimentar
+* tudo_bem: tudo bem?
+   - utter_tudo_bem
 * bff: quem é seu best friend?
    - utter_bff
 * negar: não
    - utter_despedir
 
 ## end-to-end story 4
-* tudo_bem: tudo bem?
-   - utter_tudo_bem
-* negar: não
+* o_que_sei_falar: me ajuda
+   - utter_o_que_sei_falar
+* despedir: tchau
    - utter_despedir
 
 ## end-to-end story 5
