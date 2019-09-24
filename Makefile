@@ -17,3 +17,6 @@ train:
 
 run-console:
 	docker-compose run bot make run-console
+
+run-webchat:
+	docker-compose run bot make run-webchat

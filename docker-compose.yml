@@ -21,6 +21,7 @@ services:
     restart: unless-stopped
     ports:
       - 5002:5002
+      - 5005:5005
     depends_on:
       - actions
     volumes:

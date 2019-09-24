@@ -14,6 +14,10 @@ run-api:
 run-actions:
 	rasa run actions --actions actions
 
+run-webchat:
+	rasa run -m /models/dialogue -vv --endpoints endpoints.yml \
+	--credentials credentials.yml --port 5005 --cors '*'
+
 # Force Makefile to execute e2e command every time
 #.PHONY: all e2e clean
 #test-dialogue:
