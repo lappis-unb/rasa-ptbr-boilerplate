@@ -1,6 +1,25 @@
 version: '2'
 
 services:
+  # ============================= Rocketchat ==================================
+  rocketchat:
+    container_name: rocketchat
+    image: rocket.chat:0.69.2
+    restart: unless-stopped
+    env_file:
+      - docker/rocketchat.env
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:3.2
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    command: mongod --smallfiles --oplogSize 128
+
   # =============================== Coach =================================  
   # All the models are trained by this coach.
   coach:
@@ -21,6 +40,7 @@ services:
     restart: unless-stopped
     ports:
       - 5002:5002
+      - 5005:5005
     depends_on:
       - actions
     volumes:
@@ -194,6 +214,7 @@ services:
 # Shared volumes between containers (coach and bot).
 volumes:
   notebook_models:
+  mongo_data:
   esbackup:
   esdata:
     driver: local
