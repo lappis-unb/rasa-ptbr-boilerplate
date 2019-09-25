@@ -80,7 +80,7 @@ services:
     image: rabbitmq:3-management
     restart: unless-stopped
     volumes:
-      - ./data/rabbitmq:/var/lib/rabbitmq
+      - rabbit_data:/var/lib/rabbitmq
     ports:
       - 15672:15672
     environment:
@@ -157,6 +157,7 @@ services:
 volumes:
   notebook_models:
   mongo_data:
+  rabbit_data:
   esbackup:
   esdata:
     driver: local
