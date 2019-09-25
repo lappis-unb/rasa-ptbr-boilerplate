@@ -3,7 +3,6 @@ version: '2'
 services:
   # ============================= Rocketchat ==================================
   rocketchat:
-    container_name: rocketchat
     image: rocket.chat:0.69.2
     restart: unless-stopped
     env_file:
@@ -23,7 +22,6 @@ services:
   # =============================== Coach =================================  
   # All the models are trained by this coach.
   coach:
-    container_name: coach
     image: lappis/coach:boilerplate
     volumes:
       - notebook_models:/notebook_models
@@ -33,7 +31,10 @@ services:
   # Generic Rasa bot, used to run console for example.
   bot:
     image: lappis/bot:boilerplate
+<<<<<<< HEAD
     container_name: bot
+=======
+>>>>>>> Remove container names
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
@@ -135,7 +136,6 @@ services:
   # ============================ Telegram Bot =================================
   # Specific Rasa bot integrated with Telegram.
   bot_telegram:
-      container_name: bot_telegram
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
@@ -150,11 +150,8 @@ services:
         - ./scripts:/scripts
       command: sh -c "make run-telegram"
 
-  # ================================= Bot =====================================
-  # Specific Rasa bot integrated with Rocket.Chat.
-  bot_rocketchat:
-    image: lappis/bot:boilerplate
-    container_name: bot_rocketchat
+  # ================================= Actions =================================
+  actions:
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
@@ -196,7 +193,6 @@ services:
   # =============================== Notebooks =================================
   # Rasa lab to enhance hyperparameters.
   notebooks:
-    container_name: notebooks
     build:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
