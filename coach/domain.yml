@@ -1,5 +1,6 @@
 intents:
   - cumprimentar
+  - o_que_sei_falar
   - despedir
   - out_of_scope
   - negar_despedir
@@ -92,6 +93,18 @@ templates:
     - text: |
           Oi, eu sou um bot, um assistente virtual!
           Uhuu! Manda aí um assunto que te interessa :)
+          Para aprender como você pode interagir comigo basta escrever meajuda.
+
+  utter_o_que_sei_falar:
+    - text: |
+          Eu ainda não consigo entender frases muito longas, 
+          para a gente ter uma conversa mais eficiente, envia pra mim
+          perguntas curtas e completas, como por exemplo "qual é o seu filme favorito?"
+
+          Tem alguns assuntos que eu também ainda não domino, 
+          mas vou deixar você descobrir o que eu sei responder.
+          Vou adorar poder bater um papo com você  ;)
+          E, aí do que podemos conversar?
 
   utter_despedir:
     - text: |
@@ -443,6 +456,7 @@ templates:
 actions:
   - utter_default
   - utter_cumprimentar
+  - utter_o_que_sei_falar
   - utter_despedir
   - utter_tudo_bem
   - utter_diga_mais
