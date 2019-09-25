@@ -17,7 +17,7 @@ services:
     image: mongo:3.2
     restart: unless-stopped
     volumes:
-      - ./data/db:/data/db
+      - mongo_data:/data/db
     command: mongod --smallfiles --oplogSize 128
 
   # =============================== Coach =================================  
@@ -41,6 +41,7 @@ services:
       - docker/bot-rocketchat.env
     ports:
       - 5002:5002
+      - 5005:5005
     depends_on:
       - actions
     volumes:
@@ -161,6 +162,7 @@ services:
   
 volumes:
   notebook_models:
+  mongo_data:
   esbackup:
   esdata:
     driver: local
