@@ -3,7 +3,6 @@ version: '2'
 services:
   # ============================= Rocketchat ==================================
   rocketchat:
-    container_name: rocketchat
     image: rocket.chat:0.69.2
     restart: unless-stopped
     env_file:
@@ -22,7 +21,6 @@ services:
 
   # =============================== Coach =================================  
   coach:
-    container_name: coach
     image: lappis/coach:boilerplate
     volumes:
       - notebook_models:/notebook_models
@@ -31,7 +29,6 @@ services:
   # ================================= Bot =====================================
   bot:
     image: lappis/bot:boilerplate
-    container_name: bot_rocketchat
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
@@ -115,7 +112,6 @@ services:
 
   # ============================ Telegram Bot =================================
   bot_telegram:
-      container_name: bot_telegram
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
@@ -132,7 +128,6 @@ services:
 
   # ================================= Actions =================================
   actions:
-    container_name: actions
     build:
       context: .
       dockerfile: ./docker/actions.Dockerfile
@@ -145,7 +140,6 @@ services:
 
   # =============================== Notebooks =================================
   notebooks:
-    container_name: notebooks
     build:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
