@@ -3,7 +3,6 @@ version: '2'
 services:
   # ============================= Rocketchat ==================================
   rocketchat:
-    container_name: rocketchat
     image: rocket.chat:0.69.2
     restart: unless-stopped
     env_file:
@@ -17,13 +16,12 @@ services:
     image: mongo:3.2
     restart: unless-stopped
     volumes:
-      - ./data/db:/data/db
+      - mongo_data:/data/db
     command: mongod --smallfiles --oplogSize 128
 
   # =============================== Coach =================================  
   coach:
-    container_name: coach
-    image: botcoach:latest
+    image: lappis/coach:boilerplate
     volumes:
       - notebook_models:/notebook_models
     command: sh -c "cp -r /src_models/* /notebook_models"
@@ -31,7 +29,6 @@ services:
   # ================================= Bot =====================================
   bot:
     image: lappis/bot:boilerplate
-    container_name: bot_rocketchat
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
@@ -41,6 +38,7 @@ services:
       - docker/bot-rocketchat.env
     ports:
       - 5002:5002
+      - 5005:5005
     depends_on:
       - actions
     volumes:
@@ -82,7 +80,7 @@ services:
     image: rabbitmq:3-management
     restart: unless-stopped
     volumes:
-      - ./data/rabbitmq:/var/lib/rabbitmq
+      - rabbit_data:/var/lib/rabbitmq
     ports:
       - 15672:15672
     environment:
@@ -114,7 +112,6 @@ services:
 
   # ============================ Telegram Bot =================================
   bot_telegram:
-      container_name: bot_telegram
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
@@ -131,7 +128,6 @@ services:
 
   # ================================= Actions =================================
   actions:
-    container_name: actions
     build:
       context: .
       dockerfile: ./docker/actions.Dockerfile
@@ -144,7 +140,6 @@ services:
 
   # =============================== Notebooks =================================
   notebooks:
-    container_name: notebooks
     build:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
@@ -161,6 +156,8 @@ services:
   
 volumes:
   notebook_models:
+  mongo_data:
+  rabbit_data:
   esbackup:
   esdata:
     driver: local
