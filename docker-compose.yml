@@ -142,11 +142,10 @@ services:
     volumes:
       - ./coach:/work/coach
       - ./modules/notebooks:/work/notebooks
-      - notebook_models:/models:ro
     ports:
       - 8888:8888
-    depends_on:
-      - coach
+        #depends_on:
+        #  - coach
   
 # Shared volumes between containers (coach and bot).
 volumes:
