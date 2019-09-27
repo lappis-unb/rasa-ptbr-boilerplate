@@ -20,3 +20,6 @@ run-console:
 
 run-webchat:
 	docker-compose run bot make run-webchat
+
+run-notebooks:
+	docker-compose up -d notebooks
