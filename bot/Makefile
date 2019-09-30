@@ -16,7 +16,7 @@ run-console-broker:
 	rasa shell -m /models/dialogue -vv --endpoints endpoints.yml
 
 run-api:
-	rasa run -m /models/dialogue -vv --endpoints endpoints.yml --enable_api 
+	rasa run -m /models/dialogue -vv --endpoints endpoints.yml --enable-api
 
 run-actions:
 	rasa run actions --actions actions
