@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  # =============================== Coach =================================  
+  # =============================== Coach =================================
   # All the models are trained by this coach.
   coach:
     container_name: coach
@@ -20,14 +20,13 @@ services:
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
     ports:
-      - 5002:5002
       - 5005:5005
     depends_on:
       - actions
     volumes:
       - ./bot:/bot
       - ./modules:/modules
-    command: sh -c "rasa run"
+    command: sh -c "rasa run -m /models/dialogue -vv --endpoints endpoints.yml --enable-api"
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
@@ -146,7 +145,6 @@ services:
       - 8888:8888
         #depends_on:
         #  - coach
-  
 # Shared volumes between containers (coach and bot).
 volumes:
   notebook_models:
