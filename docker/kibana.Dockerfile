@@ -1,7 +1,7 @@
 FROM docker.elastic.co/kibana/kibana:7.3.0
 
-COPY analytics/import_dashboards.py analytics/import_dashboards.py
-COPY analytics/dashboards.json analytics/dashboards.json
+COPY modules/analytics/import_dashboards.py analytics/import_dashboards.py
+COPY modules/analytics/dashboards.json analytics/dashboards.json
 
 USER root
 

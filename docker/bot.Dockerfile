@@ -3,7 +3,7 @@ FROM lappis/botrequirements:boilerplate
 
 
 COPY ./bot /bot
-COPY ./scripts /scripts
+COPY ./modules /modules
 COPY --from=coach /src_models/ /models/
 
 WORKDIR /bot

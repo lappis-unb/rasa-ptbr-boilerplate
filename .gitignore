@@ -5,8 +5,14 @@ errors.json
 models/dialogue/
 models/nlu/current/
 
+### Rasa visualize ###
+coach/graph.html
+
 ### Rasa evaluation ###
 .ipynb_checkpoints/
+modules/notebooks/intents/confmat.png
+modules/notebooks/intents/hist.png
+modules/notebooks/intents/models/
 notebooks/models/
 notebooks/errors.json
 notebooks/lab/
