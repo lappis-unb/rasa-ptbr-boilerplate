@@ -38,7 +38,7 @@ run-console:
 	docker-compose run bot make run-console
 
 run-webchat:
-	docker-compose run bot make run-webchat
+	docker-compose run --service-ports bot make run-webchat
 
 run-notebooks:
 	docker-compose up -d notebooks
