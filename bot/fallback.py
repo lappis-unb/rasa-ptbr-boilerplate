@@ -44,11 +44,12 @@ class CustomFallbackPolicy(Policy):
     def _standard_featurizer():
         return None
 
-    def __init__(self,
-                 nlu_threshold=0.6,  # type: float
-                 core_threshold=0.6,  # type: float
-                 fallback_action_name="action_default_fallback"  # type: Text
-                 ):
+    def __init__(
+        self,
+        nlu_threshold=0.6,  # type: float
+        core_threshold=0.6,  # type: float
+        fallback_action_name="action_default_fallback",  # type: Text
+    ):
         # type: (...) -> None
 
         super(CustomFallbackPolicy, self).__init__()
@@ -57,20 +58,20 @@ class CustomFallbackPolicy(Policy):
         self.core_threshold = core_threshold
         self.fallback_action_name = fallback_action_name
 
-    def train(self,
-              training_trackers,  # type: List[DialogueStateTracker]
-              domain,  # type: Domain
-              **kwargs  # type: Any
-              ):
+    def train(
+        self,
+        training_trackers,  # type: List[DialogueStateTracker]
+        domain,  # type: Domain
+        **kwargs  # type: Any
+    ):
         # type: (...) -> None
         """Does nothing. This policy is deterministic."""
 
         pass
 
-    def should_fallback(self,
-                        nlu_confidence,  # type float
-                        last_action_name  # type: Text
-                        ):
+    def should_fallback(
+        self, nlu_confidence, last_action_name  # type float  # type: Text
+    ):
         # type: (...) -> bool
         """It should predict fallback action only if
         a. predicted NLU confidence is lower than ``nlu_threshold`` &&
@@ -117,11 +118,12 @@ class CustomFallbackPolicy(Policy):
         #     logger.debug("FALLBACK_SCORE = {}".format(FALLBACK_SCORE))
 
         if self.should_fallback(nlu_confidence, tracker.latest_action_name):
-            logger.debug("NLU confidence {} is lower "
-                         "than NLU threshold {}. "
-                         "Predicting fallback action: {}"
-                         "".format(nlu_confidence, self.nlu_threshold,
-                                   self.fallback_action_name))
+            logger.debug(
+                "NLU confidence {} is lower "
+                "than NLU threshold {}. "
+                "Predicting fallback action: {}"
+                "".format(nlu_confidence, self.nlu_threshold, self.fallback_action_name)
+            )
             # we set this to 1.1 to make sure fallback overrides
             # the memoization policy
             result = self.fallback_scores(domain)
@@ -132,16 +134,14 @@ class CustomFallbackPolicy(Policy):
             # the fallback action will be executed.
             result = self.fallback_scores(domain, self.core_threshold)
             try:
-                if (tracker.latest_action_name !=
-                        nlu_data["intent"].get('name')):
-                    if (nlu_data["intent"].get('confidence') >
-                            self.core_threshold):
-                        idx = domain.index_for_action("utter_{}".format(
-                                                      nlu_data["intent"]
-                                                      .get('name')))
-                        result[idx] = (nlu_data["intent"]
-                                       .get('confidence',
-                                       self.nlu_threshold))
+                if tracker.latest_action_name != nlu_data["intent"].get("name"):
+                    if nlu_data["intent"].get("confidence") > self.core_threshold:
+                        idx = domain.index_for_action(
+                            "utter_{}".format(nlu_data["intent"].get("name"))
+                        )
+                        result[idx] = nlu_data["intent"].get(
+                            "confidence", self.nlu_threshold
+                        )
             except Exception:
                 pass
             # logger.debug("else result= {}".format(result))
@@ -153,11 +153,11 @@ class CustomFallbackPolicy(Policy):
     def persist(self, path):
         # type: (Text) -> None
         """Persists the policy to storage."""
-        config_file = os.path.join(path, 'custom_fallback_policy.json')
+        config_file = os.path.join(path, "custom_fallback_policy.json")
         meta = {
             "nlu_threshold": self.nlu_threshold,
             "core_threshold": self.core_threshold,
-            "fallback_action_name": self.fallback_action_name
+            "fallback_action_name": self.fallback_action_name,
         }
         utils.create_dir_for_file(config_file)
         utils.dump_obj_as_json_to_file(config_file, meta)
