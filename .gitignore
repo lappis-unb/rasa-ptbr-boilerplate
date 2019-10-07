@@ -39,11 +39,8 @@ notebooks/stories/img
 notebooks/stories/results/
 notebooks/stories/matrix.pdf
 
-### Rocketchat ###
-/data
-uploads
-
 ### database ###
+/db
 web/postegres-data
 
 ### PyCharm ###
