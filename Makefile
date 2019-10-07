@@ -2,6 +2,7 @@ current_dir := $(shell pwd)
 
 first-run:
 	make build-bot
+	make train
 	make run-console
 
 build-bot:
@@ -28,10 +29,10 @@ train:
 	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
 	docker-compose build bot
 
-run-validate:
+validate:
 	docker-compose run --rm coach rasa data validate --domain domain.yml --data ./data -vv
 
-run-visualize:
+visualize:
 	docker-compose run --rm  -v $(current_dir)/coach:/coach coach rasa visualize --domain domain.yml --stories ./data/stories --config policy_config.yml --nlu ./data/intents --out ./graph.html -vv
 
 run-console:

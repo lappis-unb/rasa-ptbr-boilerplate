@@ -172,7 +172,6 @@
 - homem
 - mulher
 - sexo
-- penis
 - vagina
 
 ## intent:linguagens

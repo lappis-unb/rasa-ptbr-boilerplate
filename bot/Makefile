@@ -3,7 +3,7 @@ run-telegram:
 	--endpoints endpoints.yml
 
 run-console:
-	rasa shell -m /models/dialogue -vv
+	rasa shell -m /models/dialogue -vv --cors "*"
 
 run-console-broker:
 	rasa shell -m /models/dialogue -vv --endpoints endpoints.yml
