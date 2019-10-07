@@ -80,7 +80,7 @@ services:
     image: rabbitmq:3-management
     restart: unless-stopped
     volumes:
-      - ./data/rabbitmq:/var/lib/rabbitmq
+      - ./db/rabbitmq:/var/lib/rabbitmq
     ports:
       - 15672:15672
     environment:

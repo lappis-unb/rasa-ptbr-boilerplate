@@ -2,7 +2,6 @@ current_dir := $(shell pwd)
 
 first-run:
 	make build-bot
-	make train
 	make run-console
 
 build-bot:
