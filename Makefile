@@ -38,7 +38,8 @@ run-console:
 	docker-compose run bot make run-console
 
 run-webchat:
-	docker-compose run --service-ports bot make run-webchat
+	docker-compose run -d --rm --service-ports bot make run-webchat
+	xdg-open modules/webchat/index.html
 
 run-notebooks:
 	docker-compose up -d notebooks

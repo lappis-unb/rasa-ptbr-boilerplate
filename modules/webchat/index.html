@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <body>
     <div id="webchat" />
     <script src="https://storage.googleapis.com/mrbot-cdn/webchat-0.5.8.js"></script>
@@ -9,17 +8,17 @@
             selector: "#webchat",
             initPayload: "oi",
             interval: 1000, // 1000 ms between each message
-            // customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
-            socketUrl: "http://localhost:5005",
+            //customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
             // socketUrl: "http://localhost:3000",
+            socketUrl: "http://localhost:5005",
             socketPath: "/socket.io/",
-            title: "Dirce",
+            title: "Tais",
             backgroundColor: '#FF0000',
             inputTextFieldHint: "Digite sua mensagem...",
             connectingText: "Conectando...",
             hideWhenNotConnected: true,
             fullScreenMode: false,
-            profileAvatar: "assets/lawyer.png",
+            profileAvatar: "assets/bot.png",
             openLauncherImage: 'assets/launcher_button.svg',
             closeLauncherImage: 'assets/launcher_button.svg',
             params: {
