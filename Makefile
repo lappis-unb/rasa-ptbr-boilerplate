@@ -8,6 +8,22 @@ build-bot:
 	./docker/build-base.sh
 	make train
 
+train-nlu:
+	rasa train nlu -vv         \
+	--config config.yml        \
+	--fixed-model-name current \
+	--nlu data/intents/        \
+	--out /src_models
+
+train-core:
+	rasa train core -vv         \
+	--config config.yml         \
+	-d domain.yml               \
+	-s data/stories/            \
+	--out /src_models/dialogue/
+
+train: train-nlu train-core
+
 build-analytics:
 	docker-compose up -d elasticsearch
 	docker-compose up -d rabbitmq
@@ -43,3 +59,4 @@ run-webchat:
 
 run-notebooks:
 	docker-compose up -d notebooks
+
