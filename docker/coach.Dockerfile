@@ -8,6 +8,6 @@ RUN mkdir /src_models
 
 WORKDIR /coach
 
-RUN make train
+RUN make coach-train
 
 RUN find /. | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf

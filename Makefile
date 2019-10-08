@@ -22,9 +22,9 @@ train-core:
 	-s data/stories/            \
 	--out /src_models/dialogue/
 
-train: train-nlu train-core
+coach-train: train-nlu train-core
 
-coach-train:
+train:
 	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
 	docker-compose build bot
 
