@@ -1,7 +1,8 @@
 FROM lappis/coach:boilerplate as coach
 FROM lappis/botrequirements:boilerplate
 
-COPY ./ /bot
+COPY ./bot /bot
+COPY ./Makefile /bot/
 COPY ./modules /modules
 COPY --from=coach /src_models/ /models/
 

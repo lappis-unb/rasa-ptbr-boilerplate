@@ -1,7 +1,7 @@
 FROM lappis/botrequirements:boilerplate
 
-COPY ./config.yml /coach/
-COPY ./domain.yml /coach/
+COPY ./bot/config.yml /coach/
+COPY ./bot/domain.yml /coach/
 COPY ./Makefile /coach/
 
 RUN mkdir /src_models
