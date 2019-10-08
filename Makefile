@@ -26,10 +26,10 @@ run-analytics:
 	docker-compose up -d kibana
 
 validate:
-	docker-compose run --rm coach rasa data validate --domain domain.yml --data ./data -vv
+	docker-compose run --rm coach rasa data validate --domain bot/domain.yml --data ./bot/data -vv
 
 visualize:
-	docker-compose run --rm  -v $(current_dir)/coach:/coach coach rasa visualize --domain domain.yml --stories ./data/stories --config policy_config.yml --nlu ./data/intents --out ./graph.html -vv
+	docker-compose run --rm  -v $(current_dir)/bot:/coach coach rasa visualize --domain bot/domain.yml --stories ./bot/data/stories.md --config bot/config.yml --nlu ./bot/data/nlu.md --out ./graph.html -vv
 
 run-console:
 	docker-compose run bot make run-console
@@ -45,16 +45,16 @@ run-notebooks:
 ############################## COACH ############################## 
 train-nlu:
 	rasa train nlu -vv         \
-	--config config.yml        \
+	--config bot/config.yml    \
 	--fixed-model-name current \
-	--nlu data/intents/        \
+	--nlu bot/data/            \
 	--out /src_models
 
 train-core:
 	rasa train core -vv         \
-	--config config.yml         \
-	-d domain.yml               \
-	-s data/stories/            \
+	--config bot/config.yml     \
+	-d bot/domain.yml           \
+	-s bot/data/                \
 	--out /src_models/dialogue/
 
 coach-train: train-nlu train-core
@@ -82,6 +82,8 @@ webchat:
 run-api:
 	rasa run -m /models/dialogue -vv --endpoints endpoints.yml --enable-api
 
+
+############################## ACTIONS ############################## 
 run-actions:
 	rasa run actions --actions actions
 
