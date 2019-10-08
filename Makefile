@@ -3,7 +3,7 @@ current_dir := $(shell pwd)
 ############################## BOILERPLATE ############################## 
 first-run:
 	make build-bot
-	make run-console
+	make run-webchat
 
 build-bot:
 	./docker/build-base.sh
@@ -18,6 +18,7 @@ build-analytics:
 	# The following command is needed just once for project. It's just a setup onfiguration script.
 	sleep 30
 	docker-compose run --rm -v $(current_dir)/modules/analytics/setup_elastic.py:/analytics/setup_elastic.py bot python /analytics/setup_elastic.py
+	docker-compose run --rm kibana python3.6 $(current_dir)/modules/analytics/import_dashboards.py
 
 run-analytics:
 	docker-compose up -d rabbitmq
@@ -36,7 +37,7 @@ run-console:
 
 run-webchat:
 	docker-compose run -d --rm --service-ports bot make webchat
-	xdg-open modules/webchat/index.html
+	firefox modules/webchat/index.html
 
 run-notebooks:
 	docker-compose up -d notebooks
