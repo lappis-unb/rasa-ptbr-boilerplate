@@ -24,6 +24,11 @@ train-core:
 
 train: train-nlu train-core
 
+coach-train:
+	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
+	docker-compose build bot
+
+
 build-analytics:
 	docker-compose up -d elasticsearch
 	docker-compose up -d rabbitmq
@@ -39,10 +44,6 @@ run-analytics:
 	docker-compose up -d rabbitmq-consumer
 	docker-compose up -d elasticsearch
 	docker-compose up -d kibana
-
-train:
-	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
-	docker-compose build bot
 
 validate:
 	docker-compose run --rm coach rasa data validate --domain domain.yml --data ./data -vv

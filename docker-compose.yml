@@ -6,9 +6,7 @@ services:
   coach:
     container_name: coach
     image: lappis/coach:boilerplate
-    volumes:
-      - notebook_models:/notebook_models
-    command: sh -c "cp -r /src_models/* /notebook_models"
+    command: sh -c "cp -r /src_models/* "
 
   # ================================= Bot =====================================
   # Generic Rasa bot, used to run console for example.
