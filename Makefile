@@ -1,5 +1,6 @@
 current_dir := $(shell pwd)
 
+############################## BOILERPLATE ############################## 
 first-run:
 	make build-bot
 	make run-console
@@ -7,27 +8,6 @@ first-run:
 build-bot:
 	./docker/build-base.sh
 	make train
-
-train-nlu:
-	rasa train nlu -vv         \
-	--config config.yml        \
-	--fixed-model-name current \
-	--nlu data/intents/        \
-	--out /src_models
-
-train-core:
-	rasa train core -vv         \
-	--config config.yml         \
-	-d domain.yml               \
-	-s data/stories/            \
-	--out /src_models/dialogue/
-
-coach-train: train-nlu train-core
-
-train:
-	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
-	docker-compose build bot
-
 
 build-analytics:
 	docker-compose up -d elasticsearch
@@ -55,9 +35,53 @@ run-console:
 	docker-compose run bot make run-console
 
 run-webchat:
-	docker-compose run -d --rm --service-ports bot make run-webchat
+	docker-compose run -d --rm --service-ports bot make webchat
 	xdg-open modules/webchat/index.html
 
 run-notebooks:
 	docker-compose up -d notebooks
+
+
+############################## COACH ############################## 
+train-nlu:
+	rasa train nlu -vv         \
+	--config config.yml        \
+	--fixed-model-name current \
+	--nlu data/intents/        \
+	--out /src_models
+
+train-core:
+	rasa train core -vv         \
+	--config config.yml         \
+	-d domain.yml               \
+	-s data/stories/            \
+	--out /src_models/dialogue/
+
+coach-train: train-nlu train-core
+
+train:
+	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
+	docker-compose build bot
+
+
+############################## BOT ############################## 
+console:
+	rasa shell -m /models/dialogue -vv --cors "*"
+
+console-broker:
+	rasa shell -m /models/dialogue -vv --endpoints endpoints.yml
+
+telegram:
+	rasa run -m /models/dialogue --port 5001 --credentials credentials.yml \
+	--endpoints endpoints.yml
+
+webchat:
+	rasa run -m /models/dialogue -vv --endpoints endpoints.yml \
+	--credentials credentials.yml --port 5005 --cors '*'
+
+run-api:
+	rasa run -m /models/dialogue -vv --endpoints endpoints.yml --enable-api
+
+run-actions:
+	rasa run actions --actions actions
 
