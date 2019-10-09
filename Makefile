@@ -37,7 +37,6 @@ run-console:
 
 run-webchat:
 	docker-compose run -d --rm --service-ports bot make webchat
-	firefox modules/webchat/index.html
 
 run-notebooks:
 	docker-compose up -d notebooks
@@ -46,16 +45,16 @@ run-notebooks:
 ############################## COACH ############################## 
 train-nlu:
 	rasa train nlu -vv         \
-	--config bot/config.yml    \
+	--config config.yml        \
 	--fixed-model-name current \
-	--nlu bot/data/            \
+	--nlu data/                \
 	--out /src_models
 
 train-core:
-	rasa train core -vv         \
-	--config bot/config.yml     \
-	-d bot/domain.yml           \
-	-s bot/data/                \
+	rasa train core -vv     \
+	--config config.yml     \
+	-d domain.yml           \
+	-s data/                \
 	--out /src_models/dialogue/
 
 coach-train: train-nlu train-core
@@ -87,4 +86,3 @@ run-api:
 ############################## ACTIONS ############################## 
 run-actions:
 	rasa run actions --actions actions
-

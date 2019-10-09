@@ -37,7 +37,7 @@ services:
       - 5055:5055
     volumes:
       - ./bot/actions:/bot/actions
-      - ./bot/Makefile:/bot/Makefile
+      - ./Makefile:/bot/Makefile
     command: sh -c "make run-actions"
 
   # ============================ Telegram Bot =================================

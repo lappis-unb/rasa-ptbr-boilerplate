@@ -8,6 +8,7 @@ models/
 
 ### Rasa visualize ###
 graph.html
+bot/Makefile
 
 ### Rasa evaluation ###
 .ipynb_checkpoints/

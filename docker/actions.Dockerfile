@@ -1,7 +1,7 @@
 FROM lappis/botrequirements:boilerplate
 
-ADD ./bot/actions/actions.py /bot/actions/actions.py
-ADD ./Makefile /bot/Makefile
+COPY ./bot/actions/actions.py /bot/actions/actions.py
+COPY ./Makefile /bot/Makefile
 
 WORKDIR bot/
 
