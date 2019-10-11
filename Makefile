@@ -5,9 +5,20 @@ first-run:
 	make build-bot
 	make run-webchat
 
+build-requirements:
+	docker build . -f docker/requirements.Dockerfile -t lappis/botrequirements:boilerplate
+
 build-bot:
-	./docker/build-base.sh
-	make train
+	docker-compose build bot
+
+build:
+	make build-requirements
+	make build-coach
+	make build-bot
+
+first-run:
+	make build
+	make run-console
 
 build-analytics:
 	docker-compose up -d elasticsearch
@@ -70,7 +81,6 @@ train:
 	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
 	docker-compose build bot
 
-
 ############################## BOT ############################## 
 console:
 	rasa shell -m /models/ -vv --endpoints endpoints.yml --cors "*"
@@ -88,7 +98,6 @@ webchat:
 
 run-api:
 	rasa run -m /models/ -vv --endpoints endpoints.yml --enable-api
-
 
 ############################## ACTIONS ############################## 
 run-actions:

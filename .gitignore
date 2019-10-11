@@ -42,7 +42,7 @@ notebooks/stories/results/
 notebooks/stories/matrix.pdf
 
 ### database ###
-/db
+db/
 web/postegres-data
 
 ### PyCharm ###

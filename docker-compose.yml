@@ -12,7 +12,7 @@ services:
   # Generic Rasa bot, used to run console for example.
   bot:
     image: lappis/bot:boilerplate
-    container_name: bot
+    container_name: boilerplate
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
@@ -141,7 +141,6 @@ services:
   # =============================== Notebooks =================================
   # Rasa lab to enhance hyperparameters.
   notebooks:
-    container_name: notebooks
     build:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
@@ -155,6 +154,8 @@ services:
 # Shared volumes between containers (coach and bot).
 volumes:
   notebook_models:
+  mongo_data:
+  rabbit_data:
   esbackup:
   esdata:
     driver: local
