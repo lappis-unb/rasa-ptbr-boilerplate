@@ -6,9 +6,7 @@ services:
   coach:
     container_name: coach
     image: lappis/coach:boilerplate
-    volumes:
-      - notebook_models:/notebook_models
-    command: sh -c "cp -r /src_models/* /notebook_models"
+    command: sh -c "cp -r /src_models/* "
 
   # ================================= Bot =====================================
   # Generic Rasa bot, used to run console for example.
@@ -25,8 +23,8 @@ services:
       - actions
     volumes:
       - ./bot:/bot
+      - ./Makefile:/bot/Makefile
       - ./modules:/modules
-    command: sh -c "rasa run -m /models/dialogue -vv --endpoints endpoints.yml --enable-api"
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
@@ -39,8 +37,40 @@ services:
       - 5055:5055
     volumes:
       - ./bot/actions:/bot/actions
-      - ./bot/Makefile:/bot/Makefile
+      - ./Makefile:/bot/Makefile
     command: sh -c "make run-actions"
+
+  # ============================ Telegram Bot =================================
+  # Specific Rasa bot integrated with Telegram.
+  bot-telegram:
+      container_name: bot_telegram
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      env_file:
+        - docker/bot-telegram.env
+      ports:
+        - 5001:5001
+      depends_on:
+        - actions
+      volumes:
+        - ./bot:/bot
+      command: sh -c "make run-telegram"
+
+  # ============================ WebChat Bot =================================
+  # Specific Rasa bot integrated with WebChat.
+  bot-webchat:
+      container_name: bot_telegram
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      ports:
+        - 5001:5001
+      depends_on:
+        - actions
+      volumes:
+        - ./bot:/bot
+      command: sh -c "make run-webchat"
 
   # =============================== Analytics =================================
   # Analitics ElasticSearch Stack.
@@ -80,7 +110,7 @@ services:
     image: rabbitmq:3-management
     restart: unless-stopped
     volumes:
-      - ./data/rabbitmq:/var/lib/rabbitmq
+      - ./db/rabbitmq:/var/lib/rabbitmq
     ports:
       - 15672:15672
     environment:
@@ -106,28 +136,7 @@ services:
       - ELASTICSEARCH_URL=elasticsearch:9200
       - ENVIRONMENT_NAME=localhost
       - BOT_VERSION=last-bot-commit-hash
-      # - ELASTICSEARCH_USER=admin
-      # - ELASTICSEARCH_PASSWORD=admin
-      # - ELASTICSEARCH_HTTP_SCHEME=https
-      # - ELASTICSEARCH_PORT=443
     command: python3 /opt/scripts/consume_bot_messages.py
-
-  # ============================ Telegram Bot =================================
-  # Specific Rasa bot integrated with Telegram.
-  bot_telegram:
-      container_name: bot_telegram
-      build:
-        context: .
-        dockerfile: ./docker/bot.Dockerfile
-      env_file:
-        - docker/bot-telegram.env
-      ports:
-        - 5001:5001
-      depends_on:
-        - actions
-      volumes:
-        - ./bot:/bot
-      command: sh -c "make run-telegram"
 
   # =============================== Notebooks =================================
   # Rasa lab to enhance hyperparameters.
@@ -139,12 +148,10 @@ services:
     env_file:
       - docker/notebooks.env
     volumes:
-      - ./coach:/work/coach
       - ./modules/notebooks:/work/notebooks
     ports:
       - 8888:8888
-        #depends_on:
-        #  - coach
+
 # Shared volumes between containers (coach and bot).
 volumes:
   notebook_models:

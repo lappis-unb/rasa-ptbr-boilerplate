@@ -1,3 +1,11 @@
+language : "pt"
+pipeline:
+  - name: "WhitespaceTokenizer"
+  - name: "CRFEntityExtractor"
+  - name: "EntitySynonymMapper"
+  - name: "CountVectorsFeaturizer"
+  - name: "EmbeddingIntentClassifier"
+
 policies:
   - name: MemoizationPolicy
   - name: KerasPolicy

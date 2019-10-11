@@ -4,9 +4,11 @@ rasa_core.log
 errors.json
 models/dialogue/
 models/nlu/current/
+models/
 
 ### Rasa visualize ###
-coach/graph.html
+graph.html
+bot/Makefile
 
 ### Rasa evaluation ###
 .ipynb_checkpoints/
@@ -39,11 +41,8 @@ notebooks/stories/img
 notebooks/stories/results/
 notebooks/stories/matrix.pdf
 
-### Rocketchat ###
-/data
-uploads
-
 ### database ###
+/db
 web/postegres-data
 
 ### PyCharm ###
