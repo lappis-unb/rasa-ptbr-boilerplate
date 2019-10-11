@@ -29,10 +29,11 @@ run-analytics:
 	sensible-browser --no-sandbox http://localhost:5601
 
 validate:
-	docker-compose run --rm coach rasa data validate --domain bot/domain.yml --data ./bot/data -vv
+	docker-compose run --rm coach rasa data validate --domain domain.yml --data data/ -vv
 
 visualize:
-	docker-compose run --rm  -v $(current_dir)/bot:/coach coach rasa visualize --domain bot/domain.yml --stories ./bot/data/stories.md --config bot/config.yml --nlu ./bot/data/nlu.md --out ./graph.html -vv
+	docker-compose run --rm  -v $(current_dir)/bot:/coach coach rasa visualize --domain domain.yml --stories data/stories.md --config config.yml --nlu data/nlu.md --out ./graph.html -vv
+	sensible-browser --no-sandbox bot/graph.html
 
 run-console:
 	docker-compose run bot make console
