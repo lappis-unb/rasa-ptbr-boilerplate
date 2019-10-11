@@ -23,8 +23,8 @@ services:
       - actions
     volumes:
       - ./bot:/bot
+      - ./Makefile:/bot/Makefile
       - ./modules:/modules
-    #command: sh -c "rasa run -m /models/dialogue -vv --endpoints endpoints.yml --enable-api"
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.

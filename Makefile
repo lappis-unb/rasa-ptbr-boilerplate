@@ -37,6 +37,7 @@ run-console:
 
 run-webchat:
 	docker-compose run -d --rm --service-ports bot make webchat
+	sensible-browser --no-sandbox modules/webchat/index.html
 
 run-notebooks:
 	docker-compose up -d notebooks
