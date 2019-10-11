@@ -19,6 +19,7 @@ build-analytics:
 	sleep 30
 	docker-compose run --rm -v $(current_dir)/modules/analytics/setup_elastic.py:/analytics/setup_elastic.py bot python /analytics/setup_elastic.py
 	docker-compose run --rm -v $(current_dir)/modules/analytics/:/analytics/ bot python /analytics/import_dashboards.py
+	echo "Não se esqueça de atualizar o arquivo endpoints.yml"
 	sensible-browser --no-sandbox http://localhost:5601
 
 run-analytics:
@@ -60,9 +61,10 @@ train-core:
 	--config config.yml     \
 	-d domain.yml           \
 	-s data/                \
-	--out /src_models/dialogue/
+	--out /src_models/
 
-coach-train: train-nlu train-core
+coach-train:
+	rasa train -vv --out /src_models
 
 train:
 	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
@@ -71,21 +73,21 @@ train:
 
 ############################## BOT ############################## 
 console:
-	rasa shell -m /models/dialogue -vv --cors "*"
+	rasa shell -m /models/ -vv --endpoints endpoints.yml --cors "*"
 
 console-broker:
-	rasa shell -m /models/dialogue -vv --endpoints endpoints.yml
+	rasa shell -m /models/ -vv --endpoints endpoints.yml
 
 telegram:
-	rasa run -m /models/dialogue --port 5001 --credentials credentials.yml \
+	rasa run -m /models/ --port 5001 --credentials credentials.yml \
 	--endpoints endpoints.yml
 
 webchat:
-	rasa run -m /models/dialogue -vv --endpoints endpoints.yml \
+	rasa run -m /models/ -vv --endpoints endpoints.yml \
 	--credentials credentials.yml --port 5005 --cors '*'
 
 run-api:
-	rasa run -m /models/dialogue -vv --endpoints endpoints.yml --enable-api
+	rasa run -m /models/ -vv --endpoints endpoints.yml --enable-api
 
 
 ############################## ACTIONS ############################## 
