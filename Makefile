@@ -18,13 +18,15 @@ build-analytics:
 	# The following command is needed just once for project. It's just a setup onfiguration script.
 	sleep 30
 	docker-compose run --rm -v $(current_dir)/modules/analytics/setup_elastic.py:/analytics/setup_elastic.py bot python /analytics/setup_elastic.py
-	docker-compose run --rm kibana python3.6 $(current_dir)/modules/analytics/import_dashboards.py
+	docker-compose run --rm -v $(current_dir)/modules/analytics/:/analytics/ bot python /analytics/import_dashboards.py
+	sensible-browser --no-sandbox http://localhost:5601
 
 run-analytics:
 	docker-compose up -d rabbitmq
 	docker-compose up -d rabbitmq-consumer
 	docker-compose up -d elasticsearch
 	docker-compose up -d kibana
+	sensible-browser --no-sandbox http://localhost:5601
 
 validate:
 	docker-compose run --rm coach rasa data validate --domain bot/domain.yml --data ./bot/data -vv
@@ -33,7 +35,7 @@ visualize:
 	docker-compose run --rm  -v $(current_dir)/bot:/coach coach rasa visualize --domain bot/domain.yml --stories ./bot/data/stories.md --config bot/config.yml --nlu ./bot/data/nlu.md --out ./graph.html -vv
 
 run-console:
-	docker-compose run bot make run-console
+	docker-compose run bot make console
 
 run-webchat:
 	docker-compose run -d --rm --service-ports bot make webchat
@@ -41,6 +43,7 @@ run-webchat:
 
 run-notebooks:
 	docker-compose up -d notebooks
+	sensible-browser --no-sandbox http://localhost:8888
 
 
 ############################## COACH ############################## 
