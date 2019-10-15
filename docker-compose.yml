@@ -21,7 +21,6 @@ services:
       - actions
     volumes:
       - ./bot:/bot
-      - ./Makefile:/bot/Makefile
       - ./modules:/modules
 
   # ================================= Actions =================================
@@ -34,7 +33,6 @@ services:
       - 5055:5055
     volumes:
       - ./bot/actions:/bot/actions
-      - ./Makefile:/bot/Makefile
     command: sh -c "make run-actions"
 
   # ============================ Telegram Bot =================================
@@ -45,7 +43,7 @@ services:
         context: .
         dockerfile: ./docker/bot.Dockerfile
       env_file:
-        - docker/bot-telegram.env
+        - env/bot-telegram.env
       ports:
         - 5001:5001
       depends_on:
