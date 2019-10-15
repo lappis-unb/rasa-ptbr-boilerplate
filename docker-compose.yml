@@ -19,9 +19,6 @@ services:
       - 5005:5005
     depends_on:
       - actions
-    volumes:
-      - ./bot:/bot
-      - ./modules:/modules
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
@@ -38,33 +35,27 @@ services:
   # ============================ Telegram Bot =================================
   # Specific Rasa bot integrated with Telegram.
   bot-telegram:
-      container_name: bot_telegram
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
       env_file:
         - env/bot-telegram.env
       ports:
-        - 5001:5001
+        - 5005:5005
       depends_on:
         - actions
-      volumes:
-        - ./bot:/bot
       command: sh -c "make run-telegram"
 
   # ============================ WebChat Bot =================================
   # Specific Rasa bot integrated with WebChat.
   bot-webchat:
-      container_name: bot_telegram
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
       ports:
-        - 5001:5001
+        - 5005:5005
       depends_on:
         - actions
-      volumes:
-        - ./bot:/bot
       command: sh -c "make run-webchat"
 
   # =============================== Analytics =================================
