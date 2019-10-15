@@ -44,7 +44,7 @@ services:
         - 5005:5005
       depends_on:
         - actions
-      command: sh -c "make run-telegram"
+      command: sh -c "make telegram"
 
   # ============================ WebChat Bot =================================
   # Specific Rasa bot integrated with WebChat.
@@ -56,7 +56,7 @@ services:
         - 5005:5005
       depends_on:
         - actions
-      command: sh -c "make run-webchat"
+      command: sh -c "make webchat"
 
   # =============================== Analytics =================================
   # Analitics ElasticSearch Stack.
