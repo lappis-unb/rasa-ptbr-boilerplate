@@ -5,7 +5,9 @@ import argparse
 from elasticsearch import Elasticsearch
 
 parser = argparse.ArgumentParser(description="configures elastic")
-parser.add_argument("--task", "-t", default="setup", choices=["setup", "delete"])
+parser.add_argument(
+    "--task", "-t", default="setup", choices=["setup", "delete"]
+)
 args = parser.parse_args()
 
 logging.basicConfig(level=logging.DEBUG)
@@ -45,7 +47,10 @@ if __name__ == "__main__":
             if not es.indices.exists(index_name):
                 logger.debug(
                     es.indices.create(
-                        index=index_name, ignore=400, params=param, body=settings
+                        index=index_name,
+                        ignore=400,
+                        params=param,
+                        body=settings,
                     )
                 )
                 logger.info("Created Index")

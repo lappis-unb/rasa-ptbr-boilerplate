@@ -29,7 +29,10 @@ else:
 
 connection = pika.BlockingConnection(
     pika.ConnectionParameters(
-        host="rabbitmq", credentials=credentials, connection_attempts=20, retry_delay=5
+        host="rabbitmq",
+        credentials=credentials,
+        connection_attempts=20,
+        retry_delay=5,
     )
 )
 
