@@ -4,7 +4,6 @@ services:
   # =============================== Coach =================================
   # All the models are trained by this coach.
   coach:
-    container_name: coach
     image: lappis/coach:boilerplate
     volumes:
       - notebook_models:/notebook_models
@@ -14,7 +13,6 @@ services:
   # Generic Rasa bot, used to run console for example.
   bot:
     image: lappis/bot:boilerplate
-    container_name: bot
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
@@ -31,7 +29,6 @@ services:
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
   actions:
-    container_name: actions
     build:
       context: .
       dockerfile: ./docker/actions.Dockerfile
@@ -115,7 +112,6 @@ services:
   # ============================ Telegram Bot =================================
   # Specific Rasa bot integrated with Telegram.
   bot_telegram:
-      container_name: bot_telegram
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
@@ -132,7 +128,6 @@ services:
   # =============================== Notebooks =================================
   # Rasa lab to enhance hyperparameters.
   notebooks:
-    container_name: notebooks
     build:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
