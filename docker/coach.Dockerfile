@@ -1,6 +1,6 @@
 FROM lappis/botrequirements:boilerplate
 
-COPY ./coach /coach
+COPY ./bot /coach
 COPY ./modules/ /modules
 
 RUN mkdir /src_models
