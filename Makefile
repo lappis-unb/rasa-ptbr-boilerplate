@@ -39,8 +39,8 @@ run-analytics:
 	docker-compose up -d kibana
 	#sensible-browser --no-sandbox http://localhost:5601
 
-run-console:
-	docker-compose run bot make console
+run-shell:
+	docker-compose run bot make shell
 
 run-webchat:
 	docker-compose run -d --rm --service-ports bot-webchat

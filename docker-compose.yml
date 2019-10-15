@@ -16,7 +16,7 @@ services:
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
     ports:
-      - 5005:5005
+      - 5004:5004
     depends_on:
       - actions
 
