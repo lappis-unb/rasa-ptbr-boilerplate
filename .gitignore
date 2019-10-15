@@ -4,9 +4,11 @@ rasa_core.log
 errors.json
 models/dialogue/
 models/nlu/current/
+models/
 
 ### Rasa visualize ###
-coach/graph.html
+graph.html
+bot/Makefile
 
 ### Rasa evaluation ###
 .ipynb_checkpoints/
