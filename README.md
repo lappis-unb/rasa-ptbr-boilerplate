@@ -84,13 +84,15 @@ Para a visualização dos dados da interação entre o usuário e o chatbot nós
 
 ### Configuração do RabbitMQ
 
-* Para uma configuração rápida execute o seguinte comando:
+* Para uma **configuração rápida** execute o seguinte comando:
 
 ```sh
 sudo make buil-analytics
 ```
 
-O comando acima só precisa ser executado apenas 1 vez. Nas próximas vezes que desejar utilizar o `analytics` execute o comando:
+O comando acima só precisa ser executado apenas 1 vez e já vai deixar toda a infra de `analytics` pronta para o uso.
+
+Nas próximas vezes que desejar utilizar o `analytics` execute o comando:
 
 ```sh
 sudo make run-analytics
@@ -98,7 +100,7 @@ sudo make run-analytics
 
 Por fim acesse o **kibana** no `locahost:5601`
 
-* Explicação completa:
+* **Explicação completa:**
 
 Em primeiro lugar para fazer o setup do analytics é necessário subir o RabiitMQ e suas configurações.
 
@@ -136,12 +138,6 @@ event_broker:
   username: admin
   password: admin
   queue: bot_messages
-```
-
-Depois basta executar o bot:
-
-```sh
-sudo docker-compose run --rm bot make run-console-broker
 ```
 
 Ao final é necessário buildar novamente o container do bot.

@@ -10,7 +10,6 @@ telegram:
 	--endpoints endpoints.yml
 
 webchat:
-	pip freeze | grep engine && \
 	rasa run -m models/ -vv --endpoints endpoints.yml --credentials credentials.yml --port 5005 --cors '*'
 
 run-api:

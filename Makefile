@@ -37,22 +37,23 @@ run-analytics:
 	docker-compose up -d rabbitmq-consumer
 	docker-compose up -d elasticsearch
 	docker-compose up -d kibana
-	#sensible-browser --no-sandbox http://localhost:5601
+	sensible-browser --no-sandbox http://localhost:5601
 
 run-shell:
 	docker-compose run --service-ports bot make shell
 
 run-webchat:
 	docker-compose run -d --rm --service-ports bot-webchat
+	sensible-browser --no-sandbox modules/webchat/index.html
 
 run-telegram:
 	docker-compose run -d --rm --service-ports bot make telegram
 
 run-notebooks:
 	docker-compose up -d notebooks
-	#sensible-browser --no-sandbox http://localhost:8888
+	sensible-browser --no-sandbox http://localhost:8888
 
-coach-train:
+train:
 	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
 	docker-compose build bot
 
@@ -61,4 +62,4 @@ validate:
 
 visualize:
 	docker-compose run --rm  -v $(current_dir)/bot:/coach coach rasa visualize --domain domain.yml --stories data/stories.md --config config.yml --nlu data/nlu.md --out ./graph.html -vv
-	#sensible-browser --no-sandbox bot/graph.html
+	sensible-browser --no-sandbox bot/graph.html

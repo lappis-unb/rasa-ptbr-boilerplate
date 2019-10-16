@@ -104,7 +104,7 @@ services:
   rabbitmq-consumer:
     build:
       context: .
-      dockerfile: ./docker/rabbitmq/consumer.Dockerfile
+      dockerfile: ./docker/consumer.Dockerfile
     restart: unless-stopped
     volumes:
       - ./modules/rabbitmq/consumer/:/opt/scripts/
