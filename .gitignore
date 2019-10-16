@@ -1,35 +1,27 @@
 ### Rasa ###
 bot/models
-rasa_core.log
-errors.json
-models/dialogue/
-models/nlu/current/
-models/
 
 ### Rasa visualize ###
 graph.html
-bot/Makefile
 
 ### Rasa evaluation ###
 .ipynb_checkpoints/
 modules/notebooks/intents/confmat.png
 modules/notebooks/intents/hist.png
 modules/notebooks/intents/models/
+modules/notebooks/intents/errors.json
 bot/.ipython/
 bot/.keras/
 bot/.local/
-bot/work
 bot/results/
 
 ### database ###
 db/
-web/postegres-data
 
 ### PyCharm ###
 .idea/
 
 # Created by https://www.gitignore.io/api/vim,linux,macos,python
-
 ### Linux ###
 *~
 

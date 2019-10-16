@@ -16,13 +16,9 @@ services:
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
     ports:
-      - 5005:5005
+      - 5004:5004
     depends_on:
       - actions
-    volumes:
-      - ./bot:/bot
-      - ./Makefile:/bot/Makefile
-      - ./modules:/modules
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
@@ -34,40 +30,33 @@ services:
       - 5055:5055
     volumes:
       - ./bot/actions:/bot/actions
-      - ./Makefile:/bot/Makefile
     command: sh -c "make run-actions"
 
   # ============================ Telegram Bot =================================
   # Specific Rasa bot integrated with Telegram.
   bot-telegram:
-      container_name: bot_telegram
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
       env_file:
-        - docker/bot-telegram.env
+        - env/bot-telegram.env
       ports:
-        - 5001:5001
+        - 5005:5005
       depends_on:
         - actions
-      volumes:
-        - ./bot:/bot
-      command: sh -c "make run-telegram"
+      command: sh -c "make telegram"
 
   # ============================ WebChat Bot =================================
   # Specific Rasa bot integrated with WebChat.
   bot-webchat:
-      container_name: bot_telegram
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
       ports:
-        - 5001:5001
+        - 5005:5005
       depends_on:
         - actions
-      volumes:
-        - ./bot:/bot
-      command: sh -c "make run-webchat"
+      command: sh -c "make webchat"
 
   # =============================== Analytics =================================
   # Analitics ElasticSearch Stack.
