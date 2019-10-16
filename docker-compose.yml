@@ -143,7 +143,6 @@ services:
     ports:
       - 8888:8888
 
-# Shared volumes between containers (coach and bot).
 volumes:
   notebook_models:
   mongo_data:
