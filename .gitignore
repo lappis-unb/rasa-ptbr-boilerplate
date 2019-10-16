@@ -15,31 +15,11 @@ bot/Makefile
 modules/notebooks/intents/confmat.png
 modules/notebooks/intents/hist.png
 modules/notebooks/intents/models/
-notebooks/models/
-notebooks/errors.json
-notebooks/lab/
-notebooks/evaluate-intents.ipynb
-notebooks/stories/failed_stories.md
-notebooks/stories/matrix.pdf
-notebooks/stories/chat_graph.html
 bot/.ipython/
 bot/.keras/
 bot/.local/
 bot/work
 bot/results/
-
-### Jupyter Notebooks ###
-notebooks/intents/evaluate-intents.ipynb
-notebooks/intents/errors.json
-notebooks/intents/reports/
-notebooks/intents/hist.png
-notebooks/intents/confmat.png
-
-notebooks/stories/models
-notebooks/stories/errors.json
-notebooks/stories/img
-notebooks/stories/results/
-notebooks/stories/matrix.pdf
 
 ### database ###
 db/
@@ -173,7 +153,6 @@ celerybeat-schedule.*
 # Environments
 .env
 .venv
-env/
 venv/
 ENV/
 env.bak/

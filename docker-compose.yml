@@ -4,7 +4,6 @@ services:
   # =============================== Coach =================================
   # All the models are trained by this coach.
   coach:
-    container_name: coach
     image: lappis/coach:boilerplate
     command: sh -c "cp -r /src_models/* "
 
@@ -12,7 +11,6 @@ services:
   # Generic Rasa bot, used to run console for example.
   bot:
     image: lappis/bot:boilerplate
-    container_name: boilerplate
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
@@ -29,7 +27,6 @@ services:
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
   actions:
-    container_name: actions
     build:
       context: .
       dockerfile: ./docker/actions.Dockerfile
@@ -82,8 +79,8 @@ services:
     ports:
       - 9200:9200
       - 9300:9300
-    environment:
-      - discovery.type=single-node
+    env_file:
+      - env/elasticsearch.env
     volumes:
       - esbackup:/usr/share/elasticsearch/backup
       - ./modules/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
@@ -97,10 +94,8 @@ services:
     restart: unless-stopped
     ports:
       - 5601:5601
-    environment:
-      - SERVER_PORT=5601
-      - ELASTICSEARCH_URL=http://elasticsearch:9200
-      - KIBANA_URL=http://kibana:5601
+    env_file:
+      - env/kibana.env
     depends_on:
       - elasticsearch
 
@@ -113,9 +108,8 @@ services:
       - ./db/rabbitmq:/var/lib/rabbitmq
     ports:
       - 15672:15672
-    environment:
-      - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=admin
+    env_file:
+      - env/rabbitmq.env
 
   # Custom broker consumer responsible to store data into ElasticSearch.
   rabbitmq-consumer:
@@ -127,16 +121,25 @@ services:
       - ./modules/rabbitmq/consumer/:/opt/scripts/
     depends_on:
       - rabbitmq
-    environment:
-      - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=admin
-
-      # TODO: move this env vars to a envfile
-      # Analytics config
-      - ELASTICSEARCH_URL=elasticsearch:9200
-      - ENVIRONMENT_NAME=localhost
-      - BOT_VERSION=last-bot-commit-hash
+    env_file:
+      - env/rabbitmq-consumer.env
     command: python3 /opt/scripts/consume_bot_messages.py
+
+  # ============================ Telegram Bot =================================
+  # Specific Rasa bot integrated with Telegram.
+  bot_telegram:
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      env_file:
+        - env/bot-telegram.env
+      ports:
+        - 5001:5001
+      depends_on:
+        - actions
+      volumes:
+        - ./bot:/bot
+      command: sh -c "make run-telegram"
 
   # =============================== Notebooks =================================
   # Rasa lab to enhance hyperparameters.
@@ -145,13 +148,12 @@ services:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
     env_file:
-      - docker/notebooks.env
+      - env/notebooks.env
     volumes:
       - ./modules/notebooks:/work/notebooks
     ports:
       - 8888:8888
 
-# Shared volumes between containers (coach and bot).
 volumes:
   notebook_models:
   mongo_data:
