@@ -1,4 +1,4 @@
-FROM lappis/botrequirements:boilerplate
+FROM botrequirements
 
 COPY ./bot/actions/actions.py /bot/actions/actions.py
 COPY ./bot/Makefile /bot/Makefile

@@ -4,8 +4,13 @@ services:
   # =============================== Coach =================================
   # All the models are trained by this coach.
   coach:
-    image: lappis/coach:boilerplate
-    command: sh -c "cp -r /src_models/* "
+    build:
+      context: .
+      dockerfile: ./docker/coach.Dockerfile
+    volumes:
+      - ./bot/models/:/bot/models/
+    command: sh -c "make train"
+
 
   # ================================= Bot =====================================
   # Generic Rasa bot, used to run console for example.

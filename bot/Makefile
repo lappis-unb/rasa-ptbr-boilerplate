@@ -1,6 +1,6 @@
 ############################## BOT ############################## 
 train:
-	rasa train -vv
+	rasa train -vv --out models/
 
 shell:
 	rasa shell -m models/ -vv --endpoints endpoints.yml --port 5004 --cors "*"

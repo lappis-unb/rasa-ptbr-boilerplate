@@ -11,13 +11,13 @@ build:
 	make build-bot
 
 build-requirements:
-	docker build . -f docker/requirements.Dockerfile -t lappis/botrequirements:boilerplate
+	docker build . -f docker/requirements.Dockerfile -t botrequirements
 
 build-bot:
 	docker-compose build bot
 	
 build-coach:
-	docker-compose build coach
+	docker-compose up coach
 
 build-analytics:
 	docker-compose up -d elasticsearch
@@ -30,7 +30,7 @@ build-analytics:
 	docker-compose run --rm -v $(current_dir)/modules/analytics/setup_elastic.py:/analytics/setup_elastic.py bot python /analytics/setup_elastic.py
 	docker-compose run --rm -v $(current_dir)/modules/analytics/:/analytics/ bot python /analytics/import_dashboards.py
 	echo "Não se esqueça de atualizar o arquivo endpoints.yml"
-	#sensible-browser --no-sandbox http://localhost:5601
+	sensible-browser --no-sandbox http://localhost:5601
 
 run-analytics:
 	docker-compose up -d rabbitmq
@@ -54,7 +54,7 @@ run-notebooks:
 	sensible-browser --no-sandbox http://localhost:8888
 
 train:
-	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
+	docker-compose up coach
 	docker-compose build bot
 
 validate:
