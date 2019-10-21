@@ -1,0 +1,32 @@
+language : "pt"
+pipeline:
+  - name: "WhitespaceTokenizer"
+  - name: "CRFEntityExtractor"
+  - name: "EntitySynonymMapper"
+  - name: "CountVectorsFeaturizer"
+  - name: "EmbeddingIntentClassifier"
+
+policies:
+  - name: MemoizationPolicy
+  - name: KerasPolicy
+  - name: MappingPolicy
+
+# TODO: Update this config file with previous configurations
+#policies:
+#  - name: KerasPolicy
+#    priority: 5
+#    epochs: 20
+#    batch_size: 10
+#    featurizer:
+#      - name: FullDialogueTrackerFeaturizer
+#        state_featurizer:
+#          - name: LabelTokenizerSingleStateFeaturizer
+#  - name: FallbackPolicy
+#    nlu_threshold: 0.6
+#    core_threshold: 0.6
+#    priority: 1
+#  - name: MemoizationPolicy
+#    priority: 2
+#    max_history: 2
+#    
+#

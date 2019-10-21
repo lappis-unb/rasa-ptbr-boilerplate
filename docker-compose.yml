@@ -1,132 +1,32 @@
 version: '2'
 
 services:
-  # ============================= Rocketchat ==================================
-  rocketchat:
-    image: rocket.chat:0.69.2
-    restart: unless-stopped
-    env_file:
-      - docker/rocketchat.env
-    ports:
-      - 3000:3000
-    depends_on:
-      - mongo
-
-  mongo:
-    image: mongo:3.2
-    restart: unless-stopped
-    volumes:
-      - mongo_data:/data/db
-    command: mongod --smallfiles --oplogSize 128
-
-  # =============================== Coach =================================  
+  # =============================== Coach =================================
+  # All the models are trained by this coach.
   coach:
-    image: lappis/coach:boilerplate
+    build:
+      context: .
+      dockerfile: ./docker/coach.Dockerfile
     volumes:
-      - notebook_models:/notebook_models
-    command: sh -c "cp -r /src_models/* /notebook_models"
+      - ./bot/models/:/bot/models/
+    command: sh -c "make train"
+
 
   # ================================= Bot =====================================
+  # Generic Rasa bot, used to run console for example.
   bot:
     image: lappis/bot:boilerplate
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
-    command: make run-rocketchat 
-    env_file:
-      - docker/bot-rocketchat.env
     ports:
-      - 5002:5002
-      - 5005:5005
+      - 5004:5004
     depends_on:
       - actions
-    volumes:
-      - ./bot:/bot
-      - ./scripts:/scripts
-
-  # =============================== Analytics =================================
-  elasticsearch:
-    build:
-      context: .
-      dockerfile: ./docker/elasticsearch.Dockerfile
-    restart: unless-stopped
-    ports:
-      - 9200:9200
-      - 9300:9300
-    environment:
-      - discovery.type=single-node
-    volumes:
-      - esbackup:/usr/share/elasticsearch/backup
-      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-      - esdata:/usr/share/elasticsearch/data
-
-  kibana:
-    build:
-      context: .
-      dockerfile: ./docker/kibana.Dockerfile
-    restart: unless-stopped
-    ports:
-      - 5601:5601
-    environment:
-      - SERVER_PORT=5601
-      - ELASTICSEARCH_URL=http://elasticsearch:9200
-      - KIBANA_URL=http://kibana:5601
-    depends_on:
-      - elasticsearch
-
-  # =============================== Broker ====================================
-  rabbitmq:
-    image: rabbitmq:3-management
-    restart: unless-stopped
-    volumes:
-      - rabbit_data:/var/lib/rabbitmq
-    ports:
-      - 15672:15672
-    environment:
-      - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=admin
-
-  rabbitmq-consumer:
-    build:
-      context: .
-      dockerfile: ./docker/rabbitmq/consumer.Dockerfile
-    restart: unless-stopped
-    volumes:
-      - ./rabbitmq/consumer/:/opt/scripts/
-    depends_on:
-      - rabbitmq
-    environment:
-      - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=admin
-
-      # Analytics config
-      - ELASTICSEARCH_URL=elasticsearch:9200
-      - ENVIRONMENT_NAME=localhost
-      - BOT_VERSION=last-bot-commit-hash
-      # - ELASTICSEARCH_USER=admin
-      # - ELASTICSEARCH_PASSWORD=admin
-      # - ELASTICSEARCH_HTTP_SCHEME=https
-      # - ELASTICSEARCH_PORT=443
-    command: python3 /opt/scripts/consume_bot_messages.py
-
-  # ============================ Telegram Bot =================================
-  bot_telegram:
-      build:
-        context: .
-        dockerfile: ./docker/bot.Dockerfile
-      env_file:
-        - docker/bot-telegram.env
-      ports:
-        - 5001:5001
-      depends_on:
-        - actions
-      volumes:
-        - ./bot:/bot
-        - ./scripts:/scripts
-      command: sh -c "make run-telegram"
 
   # ================================= Actions =================================
+  # Rasa middleware used to connect with external APIs.
   actions:
     build:
       context: .
@@ -135,25 +35,119 @@ services:
       - 5055:5055
     volumes:
       - ./bot/actions:/bot/actions
-      - ./bot/Makefile:/bot/Makefile
     command: sh -c "make run-actions"
 
+  # ============================ Telegram Bot =================================
+  # Specific Rasa bot integrated with Telegram.
+  bot-telegram:
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      env_file:
+        - env/bot-telegram.env
+      ports:
+        - 5005:5005
+      depends_on:
+        - actions
+      command: sh -c "make telegram"
+
+  # ============================ WebChat Bot =================================
+  # Specific Rasa bot integrated with WebChat.
+  bot-webchat:
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      ports:
+        - 5005:5005
+      depends_on:
+        - actions
+      command: sh -c "make webchat"
+
+  # =============================== Analytics =================================
+  # Analitics ElasticSearch Stack.
+  elasticsearch:
+    build:
+      context: .
+      dockerfile: ./docker/elasticsearch.Dockerfile
+    restart: unless-stopped
+    ports:
+      - 9200:9200
+      - 9300:9300
+    env_file:
+      - env/elasticsearch.env
+    volumes:
+      - esbackup:/usr/share/elasticsearch/backup
+      - ./modules/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - esdata:/usr/share/elasticsearch/data
+
+  # Visualization layer of Analitics Stack.
+  kibana:
+    build:
+      context: .
+      dockerfile: ./docker/kibana.Dockerfile
+    restart: unless-stopped
+    ports:
+      - 5601:5601
+    env_file:
+      - env/kibana.env
+    depends_on:
+      - elasticsearch
+
+  # =============================== Broker ====================================
+  # Custom broker to store Rasa tracker data.
+  rabbitmq:
+    image: rabbitmq:3-management
+    restart: unless-stopped
+    volumes:
+      - ./db/rabbitmq:/var/lib/rabbitmq
+    ports:
+      - 15672:15672
+    env_file:
+      - env/rabbitmq.env
+
+  # Custom broker consumer responsible to store data into ElasticSearch.
+  rabbitmq-consumer:
+    build:
+      context: .
+      dockerfile: ./docker/consumer.Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./modules/rabbitmq/consumer/:/opt/scripts/
+    depends_on:
+      - rabbitmq
+    env_file:
+      - env/rabbitmq-consumer.env
+    command: python3 /opt/scripts/consume_bot_messages.py
+
+  # ============================ Telegram Bot =================================
+  # Specific Rasa bot integrated with Telegram.
+  bot_telegram:
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      env_file:
+        - env/bot-telegram.env
+      ports:
+        - 5001:5001
+      depends_on:
+        - actions
+      volumes:
+        - ./bot:/bot
+      command: sh -c "make run-telegram"
+
   # =============================== Notebooks =================================
+  # Rasa lab to enhance hyperparameters.
   notebooks:
     build:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
     env_file:
-      - docker/notebooks.env
+      - env/notebooks.env
     volumes:
-      - ./coach:/work/coach
-      - ./notebooks:/work/notebooks
-      - notebook_models:/models:ro
+      - ./modules/notebooks:/work/notebooks
     ports:
       - 8888:8888
-    depends_on:
-      - coach
-  
+
 volumes:
   notebook_models:
   mongo_data:

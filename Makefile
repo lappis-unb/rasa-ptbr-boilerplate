@@ -1,54 +1,65 @@
-build-requirements:
-	docker build . -f docker/requirements.Dockerfile -t lappis/botrequirements:boilerplate
+current_dir := $(shell pwd)
 
-build-coach:
-	docker-compose build coach
-
-build-bot:
-	docker-compose build bot
+############################## BOILERPLATE ############################## 
+first-run:
+	make build
+	make run-webchat
 
 build:
 	make build-requirements
 	make build-coach
 	make build-bot
 
-first-run:
-	make build
-	make run-console
+build-requirements:
+	docker build . -f docker/requirements.Dockerfile -t botrequirements
 
-train:
-	docker build . -f docker/coach.Dockerfile -t lappis/coach:boilerplate
+build-bot:
 	docker-compose build bot
+	
+build-coach:
+	docker-compose up coach
 
-run-rabbitmq:
+build-analytics:
+	docker-compose up -d elasticsearch
 	docker-compose up -d rabbitmq
 	docker-compose up -d rabbitmq-consumer
-	make train
-
-run-elasticsearch:
-	docker-compose up -d elasticsearch
-	docker-compose run --rm -v ${CURDIR}/analytics:/analytics bot python /analytics/setup_elastic.py
-
-run-kibana:
 	docker-compose up -d kibana
-	sleep 100
-	docker-compose run --rm kibana python3.6 analytics/import_dashboards.py
+	# This sleep time is a work arround the main objetive is run the following command when elasticsearch is ready
+	# The following command is needed just once for project. It's just a setup onfiguration script.
+	sleep 30
+	docker-compose run --rm -v $(current_dir)/modules/analytics/setup_elastic.py:/analytics/setup_elastic.py bot python /analytics/setup_elastic.py
+	docker-compose run --rm -v $(current_dir)/modules/analytics/:/analytics/ bot python /analytics/import_dashboards.py
+	echo "Não se esqueça de atualizar o arquivo endpoints.yml"
+	sensible-browser --no-sandbox http://localhost:5601
 
 run-analytics:
-	make run-rabbitmq
-	make run-elasticsearch
-	make run-kibana
+	docker-compose up -d rabbitmq
+	docker-compose up -d rabbitmq-consumer
+	docker-compose up -d elasticsearch
+	docker-compose up -d kibana
+	sensible-browser --no-sandbox http://localhost:5601
+
+run-shell:
+	docker-compose run --service-ports bot make shell
+
+run-webchat:
+	docker-compose run -d --rm --service-ports bot-webchat
+	sensible-browser --no-sandbox modules/webchat/index.html
 
 run-telegram:
-	docker-compose up telegram_bot
+	docker-compose run -d --rm --service-ports bot make telegram
 
-run-console:
-	docker-compose run --rm bot make run-console
+run-notebooks:
+	docker-compose up -d notebooks
+	sensible-browser --no-sandbox http://localhost:8888
 
-run-rocketchat:
-	docker-compose up -d rocketchat
-	sleep 25
-	docker-compose up -d bot
+train:
+	docker-compose up coach
+	docker-compose build bot
 
-test-dialogue:
-	docker-compose run --rm bot make e2e
+validate:
+	docker-compose run --rm coach rasa data validate --domain domain.yml --data data/ -vv
+
+visualize:
+	docker-compose run --rm  -v $(current_dir)/bot:/coach coach rasa visualize --domain domain.yml --stories data/stories.md --config config.yml --nlu data/nlu.md --out ./graph.html -vv
+	sensible-browser --no-sandbox bot/graph.html
