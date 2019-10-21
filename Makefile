@@ -40,7 +40,7 @@ run-analytics:
 	sensible-browser --no-sandbox http://localhost:5601
 
 run-shell:
-	docker-compose run --service-ports bot make shell
+	docker-compose run --rm --service-ports bot make shell
 
 run-webchat:
 	docker-compose run -d --rm --service-ports bot-webchat

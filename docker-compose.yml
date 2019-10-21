@@ -145,6 +145,7 @@ services:
       - env/notebooks.env
     volumes:
       - ./modules/notebooks:/work/notebooks
+      - ./bot/:/bot/
     ports:
       - 8888:8888
 
