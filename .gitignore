@@ -8,6 +8,8 @@ graph.html
 .ipynb_checkpoints/
 modules/notebooks/intents/models/
 modules/notebooks/intents/results/
+modules/notebooks/stories/models/
+modules/notebooks/stories/results/
 bot/.ipython/
 bot/.keras/
 bot/.local/
