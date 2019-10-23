@@ -1,5 +1,8 @@
 current_dir := $(shell pwd)
 
+clean:
+	sudo docker-compose down
+
 ############################## BOILERPLATE ############################## 
 first-run:
 	make build
