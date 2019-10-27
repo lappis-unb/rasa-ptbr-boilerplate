@@ -96,7 +96,7 @@ Para a visualização dos dados da interação entre o usuário e o chatbot nós
 * Para uma **configuração rápida** execute o seguinte comando:
 
 ```sh
-sudo make buil-analytics
+sudo make build-analytics
 ```
 
 O comando acima só precisa ser executado apenas 1 vez e já vai deixar toda a infra de `analytics` pronta para o uso.
