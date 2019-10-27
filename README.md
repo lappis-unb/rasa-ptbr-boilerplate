@@ -66,6 +66,15 @@ Após realizar o [tutorial](/docs/setup_telegram.md) de exportação de todas va
 
 **Antes de seguir adiante. Importante:** As variáveis de ambiente são necessárias para o correto funcionamento do bot, por isso não esqueça de exportá-las.
 
+Edite o arquivo **credentials.yml** e descomente as linhas referentes ao telegram:
+
+```sh
+telegram:
+ access_token: ${TELEGRAM_TOKEN}
+ verify: ${TELEGRAM_BOT_USERNAME}
+ webhook_url: ${TELEGRAM_WEBHOOK}
+```
+
 Se ainda não tiver treinado seu bot execute antes:
 
 ```sh
