@@ -50,7 +50,7 @@ run-webchat:
 	sensible-browser --no-sandbox modules/webchat/index.html
 
 run-telegram:
-	docker-compose run -d --rm --service-ports bot make telegram
+	docker-compose run -d --rm --service-ports bot_telegram make telegram
 
 run-notebooks:
 	docker-compose up -d notebooks
