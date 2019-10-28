@@ -1,4 +1,4 @@
-FROM botrequirements as coach
+FROM botrequirements
 
 WORKDIR /bot
 
