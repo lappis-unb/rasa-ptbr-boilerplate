@@ -66,6 +66,15 @@ Após realizar o [tutorial](/docs/setup_telegram.md) de exportação de todas va
 
 **Antes de seguir adiante. Importante:** As variáveis de ambiente são necessárias para o correto funcionamento do bot, por isso não esqueça de exportá-las.
 
+Edite o arquivo **credentials.yml** e descomente as linhas referentes ao telegram:
+
+```sh
+telegram:
+ access_token: ${TELEGRAM_TOKEN}
+ verify: ${TELEGRAM_BOT_USERNAME}
+ webhook_url: ${TELEGRAM_WEBHOOK}
+```
+
 Se ainda não tiver treinado seu bot execute antes:
 
 ```sh
@@ -87,7 +96,7 @@ Para a visualização dos dados da interação entre o usuário e o chatbot nós
 * Para uma **configuração rápida** execute o seguinte comando:
 
 ```sh
-sudo make buil-analytics
+sudo make build-analytics
 ```
 
 O comando acima só precisa ser executado apenas 1 vez e já vai deixar toda a infra de `analytics` pronta para o uso.

@@ -6,10 +6,10 @@ graph.html
 
 ### Rasa evaluation ###
 .ipynb_checkpoints/
-modules/notebooks/intents/confmat.png
-modules/notebooks/intents/hist.png
 modules/notebooks/intents/models/
-modules/notebooks/intents/errors.json
+modules/notebooks/intents/results/
+modules/notebooks/stories/models/
+modules/notebooks/stories/results/
 bot/.ipython/
 bot/.keras/
 bot/.local/
@@ -17,6 +17,9 @@ bot/results/
 
 ### database ###
 db/
+
+### Rabbitmq ###
+data/
 
 ### PyCharm ###
 .idea/

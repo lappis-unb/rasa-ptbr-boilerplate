@@ -1,5 +1,8 @@
 current_dir := $(shell pwd)
 
+clean:
+	sudo docker-compose down
+
 ############################## BOILERPLATE ############################## 
 first-run:
 	make build
@@ -40,14 +43,14 @@ run-analytics:
 	sensible-browser --no-sandbox http://localhost:5601
 
 run-shell:
-	docker-compose run --service-ports bot make shell
+	docker-compose run --rm --service-ports bot make shell
 
 run-webchat:
 	docker-compose run -d --rm --service-ports bot-webchat
 	sensible-browser --no-sandbox modules/webchat/index.html
 
 run-telegram:
-	docker-compose run -d --rm --service-ports bot make telegram
+	docker-compose run -d --rm --service-ports bot_telegram make telegram
 
 run-notebooks:
 	docker-compose up -d notebooks

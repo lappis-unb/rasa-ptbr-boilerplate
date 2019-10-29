@@ -37,20 +37,6 @@ services:
       - ./bot/actions:/bot/actions
     command: sh -c "make run-actions"
 
-  # ============================ Telegram Bot =================================
-  # Specific Rasa bot integrated with Telegram.
-  bot-telegram:
-      build:
-        context: .
-        dockerfile: ./docker/bot.Dockerfile
-      env_file:
-        - env/bot-telegram.env
-      ports:
-        - 5005:5005
-      depends_on:
-        - actions
-      command: sh -c "make telegram"
-
   # ============================ WebChat Bot =================================
   # Specific Rasa bot integrated with WebChat.
   bot-webchat:
@@ -133,7 +119,7 @@ services:
         - actions
       volumes:
         - ./bot:/bot
-      command: sh -c "make run-telegram"
+      command: sh -c "make telegram"
 
   # =============================== Notebooks =================================
   # Rasa lab to enhance hyperparameters.
@@ -145,6 +131,7 @@ services:
       - env/notebooks.env
     volumes:
       - ./modules/notebooks:/work/notebooks
+      - ./bot/:/bot/
     ports:
       - 8888:8888
 
