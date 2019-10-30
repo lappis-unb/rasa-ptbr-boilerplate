@@ -1,12 +1,12 @@
-## cumprimentar action_test
+## testa acoes
 * cumprimentar
     - utter_cumprimentar
-* action_test
-    - action_test
+* testa_acoes
+    - action_teste
 
-## action_test
-* action_test
-    - action_test
+## testa acoes
+* testa_acoes
+    - action_teste
 
 ## path_religiao 1
 * religiao

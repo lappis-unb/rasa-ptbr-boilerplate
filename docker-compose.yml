@@ -35,7 +35,7 @@ services:
       - 5055:5055
     volumes:
       - ./bot/actions:/bot/actions
-    command: sh -c "make run-actions"
+    command: sh -c "make actions"
 
   # ============================ WebChat Bot =================================
   # Specific Rasa bot integrated with WebChat.

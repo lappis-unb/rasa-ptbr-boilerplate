@@ -37,7 +37,7 @@ intents:
   - historia
   - risada
 
-  - action_test
+  - testa_acoes
 
 entities:
   - religiao
@@ -63,6 +63,11 @@ entities:
   - hobby
   - bff
   - historia
+  - cpf
+
+slots:
+  cpf:
+    type: text
 
 templates:
   utter_default:
@@ -491,4 +496,4 @@ actions:
   - utter_afirmacao_botao
   - utter_negacao_botao
 
-  - action_test
+  - action_teste

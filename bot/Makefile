@@ -1,3 +1,5 @@
+.PHONY: all clean actions
+
 clean:
 	rm -rf graph.html results/ models/*
 
@@ -13,6 +15,9 @@ test-nlu:
 train:
 	rasa train -vv --out models/
 
+validate:
+	rasa data validate -vv
+
 # MENSAGEIROS
 shell:
 	rasa shell -m models/ -vv --endpoints endpoints.yml --port 5004 --cors "*"
@@ -24,9 +29,9 @@ telegram:
 webchat:
 	rasa run -m models/ -vv --endpoints endpoints.yml --credentials credentials.yml --port 5005 --cors '*'
 
-run-api:
+api:
 	rasa run -m models/ -vv --endpoints endpoints.yml --enable-api
 
 # ACTIONS
-run-actions:
+actions:
 	rasa run actions --actions actions -vv
