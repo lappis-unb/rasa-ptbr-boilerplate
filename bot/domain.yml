@@ -38,6 +38,7 @@ intents:
   - risada
 
   - testa_acoes
+  - informa_cpf
 
 entities:
   - religiao
@@ -458,6 +459,10 @@ templates:
   - text: |
         Mensagem de negação após clique em botão
 
+  utter_pergunta_cpf:
+  - text: |
+        Por favor, me diga seu CPF
+
 actions:
   - utter_default
   - utter_cumprimentar
@@ -496,4 +501,7 @@ actions:
   - utter_afirmacao_botao
   - utter_negacao_botao
 
+  - utter_pergunta_cpf
+
   - action_teste
+  - action_cpf

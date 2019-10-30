@@ -18,9 +18,6 @@ bot/results/
 ### database ###
 db/
 
-### Rabbitmq ###
-data/
-
 ### PyCharm ###
 .idea/
 

@@ -8,6 +8,10 @@
 * testa_acoes
     - action_teste
 
+## testa slots
+* informa_cpf
+    - action_cpf
+
 ## path_religiao 1
 * religiao
     - utter_religiao
