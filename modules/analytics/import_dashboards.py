@@ -43,9 +43,7 @@ def importDashboards(pathToFile):
     datas = open(pathToFile, "rb").read()
     datas = datas.decode("utf-8")
 
-    requests.post(
-        url=requestData[0], headers=requestData[1], data=json.dumps(datas)
-    )
+    requests.post(url=requestData[0], headers=requestData[1], data=json.dumps(datas))
 
     createIndexPattern()
 
@@ -59,9 +57,7 @@ def createIndexPattern():
 
     datas = {"attributes": {"title": "messages*"}}
 
-    requests.post(
-        url=requestData[0], headers=requestData[1], data=json.dumps(datas)
-    )
+    requests.post(url=requestData[0], headers=requestData[1], data=json.dumps(datas))
 
 
 if __name__ == "__main__":

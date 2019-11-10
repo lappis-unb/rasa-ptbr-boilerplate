@@ -1,10 +1,19 @@
-## intent:action_test
+## intent:testa_acoes
+- testa acoes
 - test custom action
 - custom action
 - actions
 - custom actions
 - action
 - test action
+
+## intent:informa_cpf
+- O meu cpf é [000.000.000-00](cpf)
+- meu cpf é [000.000.000-00](cpf)
+- Claro, [000.000.000-00](cpf)
+- Sim, anota ai: [000.000.000-00](cpf)
+- Ok, o meu CPF é [000.000.000-00](cpf)
+- Blz [000.000.000-00](cpf)
 
 ## intent:religiao
 - voce acredita em [deus](religiao)

@@ -13,9 +13,7 @@ logger.setLevel(logging.DEBUG)
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 
-formatter = logging.Formatter(
-    "%(asctime)s :: %(name)s :: %(levelname)s :: %(message)s"
-)
+formatter = logging.Formatter("%(asctime)s :: %(name)s :: %(levelname)s :: %(message)s")
 
 ch.setFormatter(formatter)
 
@@ -119,8 +117,7 @@ def create_bot_user():
         print("User already created.")
 
     api_post(
-        "users.setAvatar",
-        {"avatarUrl": bot["avatar"], "username": bot["username"]},
+        "users.setAvatar", {"avatarUrl": bot["avatar"], "username": bot["username"]},
     )
 
 
@@ -137,9 +134,7 @@ def configure_livechat():
     api_post("settings/Livechat_registration_form", {"value": False})
 
     # Change Livechat Color
-    api_post(
-        "settings/Livechat_title_color", {"value": "#039046", "editor": "color"}
-    )
+    api_post("settings/Livechat_title_color", {"value": "#039046", "editor": "color"})
 
     # Change Livechat Title
     api_post("settings/Livechat_title", {"value": bot["name"]})
@@ -200,9 +195,7 @@ def configure_rocketchat():
 def create_department(bot_agent_id):
     get_departments_url = host + "/api/v1/livechat/department"
 
-    get_departments_response = requests.get(
-        get_departments_url, headers=user_header
-    )
+    get_departments_response = requests.get(get_departments_url, headers=user_header)
 
     number_of_departments = len(get_departments_response.json()["departments"])
 
