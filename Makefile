@@ -57,7 +57,7 @@ run-notebooks:
 	sensible-browser --no-sandbox http://localhost:8888
 
 train:
-	docker-compose up coach
+	docker-compose build coach
 	docker-compose build bot
 
 validate:

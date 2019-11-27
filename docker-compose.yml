@@ -9,7 +9,6 @@ services:
       dockerfile: ./docker/coach.Dockerfile
     volumes:
       - ./bot/models/:/bot/models/
-    command: sh -c "make train"
 
 
   # ================================= Bot =====================================
