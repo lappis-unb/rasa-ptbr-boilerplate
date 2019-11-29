@@ -14,13 +14,13 @@ build:
 	make build-bot
 
 build-requirements:
-	docker build . -f docker/requirements.Dockerfile -t botrequirements
+	docker build . --no-cache -f docker/requirements.Dockerfile -t botrequirements
 
 build-bot:
-	docker-compose build bot
+	docker-compose build --no-cache bot
 	
 build-coach:
-	docker-compose up coach
+	docker-compose build --no-cache coach
 
 build-analytics:
 	docker-compose up -d elasticsearch
@@ -57,7 +57,7 @@ run-notebooks:
 	sensible-browser --no-sandbox http://localhost:8888
 
 train:
-	docker-compose up coach
+	docker-compose build coach
 	docker-compose build bot
 
 validate:
