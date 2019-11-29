@@ -40,9 +40,7 @@ services:
   # ============================ WebChat Bot =================================
   # Specific Rasa bot integrated with WebChat.
   bot-webchat:
-    build:
-      context: .
-      dockerfile: ./docker/bot.Dockerfile
+    image: lappis/bot:boilerplate 
     ports:
       - 5005:5005
     depends_on:
