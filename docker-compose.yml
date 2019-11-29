@@ -39,14 +39,14 @@ services:
   # ============================ WebChat Bot =================================
   # Specific Rasa bot integrated with WebChat.
   bot-webchat:
-      build:
-        context: .
-        dockerfile: ./docker/bot.Dockerfile
-      ports:
-        - 5005:5005
-      depends_on:
-        - actions
-      command: sh -c "make webchat"
+    build:
+      context: .
+      dockerfile: ./docker/bot.Dockerfile
+    ports:
+      - 5005:5005
+    depends_on:
+      - actions
+    command: sh -c "make webchat"
 
   # =============================== Analytics =================================
   # Analitics ElasticSearch Stack.
