@@ -4,6 +4,7 @@ services:
   # =============================== Coach =================================
   # All the models are trained by this coach.
   coach:
+    image: lappis/coach:boilerplate
     build:
       context: .
       dockerfile: ./docker/coach.Dockerfile
