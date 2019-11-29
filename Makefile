@@ -5,7 +5,7 @@ clean:
 
 ############################## BOILERPLATE ############################## 
 first-run:
-	make build
+	sudo make build
 	make run-webchat
 
 build:
@@ -47,7 +47,7 @@ run-shell:
 
 run-webchat:
 	sudo docker-compose run -d --rm --service-ports bot-webchat
-	sensible-browser --no-sandbox modules/webchat/index.html
+	sensible-browser modules/webchat/index.html
 
 run-telegram:
 	sudo docker-compose run -d --rm --service-ports bot_telegram make telegram
