@@ -11,7 +11,7 @@
 Para ter seu chatbot Rasa no ar e funcionando rápidamente no `shell` execute o seguinte comando:
 
 ```sh
-sudo make first-run
+make first-run
 ```
 
 Este comando irá construir o seu chatbot (containers necessários) e abrir a conversação em um `livechat`
@@ -51,13 +51,13 @@ criar um repositório para as imagens e substitua os nomes das imagens "lappis/b
 **Atenção**: o comando de treinamento é usado para criar os modelos necessários na conversação do bot para treinar o seu chatbot execute o comando:
 
 ```sh
-sudo make train
+make train
 ```
 
 ### Console
 
 ```sh
-sudo make run-console
+make run-console
 ```
 
 ### Telegram
@@ -78,13 +78,13 @@ telegram:
 Se ainda não tiver treinado seu bot execute antes:
 
 ```sh
-sudo make train
+make train
 ```
 
 Depois execute o bot no telegram:
 
 ```sh
-sudo make run-telegram
+make run-telegram
 ```
 
 ### Analytics
@@ -96,7 +96,7 @@ Para a visualização dos dados da interação entre o usuário e o chatbot nós
 * Para uma **configuração rápida** execute o seguinte comando:
 
 ```sh
-sudo make build-analytics
+make build-analytics
 ```
 
 O comando acima só precisa ser executado apenas 1 vez e já vai deixar toda a infra de `analytics` pronta para o uso.
@@ -104,7 +104,7 @@ O comando acima só precisa ser executado apenas 1 vez e já vai deixar toda a i
 Nas próximas vezes que desejar utilizar o `analytics` execute o comando:
 
 ```sh
-sudo make run-analytics
+make run-analytics
 ```
 
 Por fim acesse o **kibana** no `locahost:5601`
@@ -206,7 +206,7 @@ Você pode acessar o kibana no `locahost:5601`
 Levante o container `notebooks`
 
 ```sh
-sudo make run-notebooks
+make run-notebooks
 ```
 
 Acesse o notebook em `localhost:8888`
