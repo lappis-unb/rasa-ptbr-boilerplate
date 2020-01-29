@@ -15,11 +15,12 @@ services:
   # ================================= Bot =====================================
   # Generic Rasa bot, used to run console for example.
   bot:
-    image: lappis/bot:boilerplate
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
     restart: unless-stopped
+    volumes:
+      - ./bot/:/bot/
     ports:
       - 5004:5004
     depends_on:
@@ -40,12 +41,16 @@ services:
   # ============================ WebChat Bot =================================
   # Specific Rasa bot integrated with WebChat.
   bot-webchat:
-    image: lappis/bot:boilerplate 
-    ports:
-      - 5005:5005
-    depends_on:
-      - actions
-    command: sh -c "make webchat"
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      volumes:
+        - ./bot/:/bot/
+      ports:
+        - 5005:5005
+      depends_on:
+        - actions
+      command: sh -c "make webchat"
 
   # =============================== Analytics =================================
   # Analitics ElasticSearch Stack.
@@ -109,14 +114,14 @@ services:
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
+      volumes:
+        - ./bot/:/bot/
       env_file:
         - env/bot-telegram.env
       ports:
         - 5001:5001
       depends_on:
         - actions
-      volumes:
-        - ./bot:/bot
       command: sh -c "make telegram"
 
   # =============================== Notebooks =================================

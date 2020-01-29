@@ -5,7 +5,8 @@ clean:
 
 ############################## BOILERPLATE ############################## 
 first-run:
-	sudo make build
+	make build
+	make train
 	make run-webchat
 
 build:
@@ -14,13 +15,13 @@ build:
 	make build-bot
 
 build-requirements:
-	docker build . -f docker/requirements.Dockerfile -t botrequirements
+	docker build . --no-cache -f docker/requirements.Dockerfile -t botrequirements
 
 build-bot:
-	sudo docker-compose build bot
+	docker-compose build --no-cache bot
 	
 build-coach:
-	sudo docker-compose up coach
+	docker-compose build --no-cache coach
 
 build-analytics:
 	sudo docker-compose up -d elasticsearch
@@ -57,8 +58,10 @@ run-notebooks:
 	sensible-browser --no-sandbox http://localhost:8888
 
 train:
-	sudo docker-compose up coach
-	sudo docker-compose build bot
+	mkdir -p bot/models
+	sudo chmod -R +777 bot/models
+	docker-compose up coach
+	sudo chmod -R +777 bot/models
 
 validate:
 	sudo docker-compose run --rm coach rasa data validate --domain domain.yml --data data/ -vv
