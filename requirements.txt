@@ -1,4 +1,4 @@
-rasa==1.4.2
+rasa==1.6.2
 nltk==3.4.5
 elasticsearch==7.0.4
 flake8==3.7.8

@@ -6,6 +6,7 @@ clean:
 ############################## BOILERPLATE ############################## 
 first-run:
 	make build
+	make train
 	make run-webchat
 
 build:
@@ -57,8 +58,10 @@ run-notebooks:
 	sensible-browser --no-sandbox http://localhost:8888
 
 train:
-	docker-compose build coach
-	docker-compose build bot
+	mkdir -p bot/models
+	sudo chmod -R +777 bot/models
+	docker-compose up coach
+	sudo chmod -R +777 bot/models
 
 validate:
 	docker-compose run --rm coach rasa data validate --domain domain.yml --data data/ -vv
