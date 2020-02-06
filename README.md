@@ -14,6 +14,8 @@ Para ter seu chatbot Rasa no ar e funcionando rápidamente no `shell` execute o 
 make first-run
 ```
 
+Caso ocorra algum erro de permissão, executar o comando `sudo make first-run`.
+
 Este comando irá construir o seu chatbot (containers necessários) e abrir a conversação em um `livechat`
 no canto inferior direito da sua tela. Este `mensageiro` é o **WebChat**.
 
