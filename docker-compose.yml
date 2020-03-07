@@ -6,7 +6,7 @@ services:
   coach:
     build:
       context: .
-      dockerfile: ./docker/coach.Dockerfile
+      dockerfile: ./docker/bot.Dockerfile
     volumes:
       - ./bot/models/:/bot/models/
     command: "make train"
@@ -25,6 +25,21 @@ services:
       - 5004:5004
     depends_on:
       - actions
+
+  # ================================= RASA X ==================================
+  # Rasa X container
+  x:
+    build:
+      context: .
+      dockerfile: ./docker/bot.Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./bot/:/bot/
+    ports:
+      - 5002:5002
+    depends_on:
+      - actions
+    command: sh -c "make x"
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
