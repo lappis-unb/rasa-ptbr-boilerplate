@@ -323,14 +323,10 @@
 
 ## fallback
 * out_of_scope
-    - utter_default
+    - utter_fallback
 
 ## negar sem contexto
 * negar
-    - utter_despedir
-
-## negar_despedir
-* negar_despedir
     - utter_despedir
 
 ## elogios 1
@@ -358,11 +354,15 @@
 ## afirmar_botao
 * botao
     - utter_botao
-* afirmacao_botao
+* afirmar
     - utter_afirmacao_botao
 
 ## negar_botao
 * botao
     - utter_botao
-* negacao_botao
+* negar
     - utter_negacao_botao
+
+## objetivo
+* objetivo
+    - utter_objetivo

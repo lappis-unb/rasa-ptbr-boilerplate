@@ -6,14 +6,12 @@ intents:
 - o_que_sei_falar
 - despedir
 - out_of_scope
-- negar_despedir
-- negar
 - diga_mais
 - tudo_bem
 - elogios
 - botao
-- afirmacao_botao
-- negacao_botao
+- afirmar
+- negar
 - religiao
 - esporte
 - time
@@ -40,6 +38,7 @@ intents:
 - risada
 - testa_acoes
 - informa_cpf
+- objetivo
 entities:
 - religiao
 - esporte
@@ -69,7 +68,7 @@ slots:
   cpf:
     type: text
 responses:
-  utter_default:
+  utter_fallback:
   - text: "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender\
       \ direito\nVocê pode perguntar de novo de outro jeito?\n"
   - text: "Hummmm... Não sei se entendi. Pode escrever de outra forma?\n"
@@ -87,11 +86,9 @@ responses:
       \ te interessa :)\nPara aprender como você pode interagir comigo basta escrever\
       \ meajuda.\n"
   utter_o_que_sei_falar:
-  - text: "Eu ainda não consigo entender frases muito longas, \npara a gente ter uma\
-      \ conversa mais eficiente, envia pra mim\nperguntas curtas e completas, como\
-      \ por exemplo \"qual é o seu filme favorito?\"\n\nTem alguns assuntos que eu\
-      \ também ainda não domino, \nmas vou deixar você descobrir o que eu sei responder.\n\
-      Vou adorar poder bater um papo com você  ;)\nE, aí do que podemos conversar?\n"
+  - text: "Eu posso falar de assuntos simples, como por exemplo \"qual é o seu filme\
+      \ favorito?\"\n\nTem alguns assuntos que eu também ainda não domino, \nmas vou\
+      \ deixar você descobrir o que eu sei responder.\n\nE, aí do que podemos conversar?\n"
   utter_despedir:
   - text: "Foi um prazer te ajudar!\nSempre que tiver alguma dúvida, volte aqui!\n\
       Até logo!\n"
@@ -111,7 +108,7 @@ responses:
   - text: "Eu amo jogar futebol\n\nEu que ensinei o Pele a jogar bola haha\n"
   - text: "Falam que todo ser humano nasce Flamenguista\n\nCom os Bots não é diferente\n"
   utter_time:
-  - text: "Flamengo, sem sombra de dúvida\n"
+  - text: "Flamengo, sem sombra de dúvida!\n"
   - text: "Melhor time do mundo disparado, Flamengooo!!!!\n"
   utter_linguagens:
   - text: "Poderíamos falar de algo melhor\n\nNão é mesmo, $user ?! kkk\n"
@@ -205,7 +202,9 @@ responses:
   - text: "Hahahaha... \n\nEngraçadinho\n"
   - text: "kkkkkkkkkk\n\nVocê está feliz hoje, hein!?\n"
   utter_continuar_conversa:
-  - text: "E aí, qual nosso próximo assunto?\n"
+  - text: E aí, qual nosso próximo assunto?
+  - text: Quer conversar sobre outra coisa?
+  - text: Gostaria de saber algo mais?
   utter_botao:
   - text: "Enviando mensagem do botão\n"
     channel: telegram
@@ -220,42 +219,11 @@ responses:
   - text: "Mensagem de negação após clique em botão\n"
   utter_pergunta_cpf:
   - text: "Por favor, me diga seu CPF\n"
+  utter_objetivo:
+  - text: "Eu sou um chatbot Básico. Sei falar de coisas pontuais, mas eu posso ajudar\
+      \ em muito em exemplos! no meu repositório tem muita coisa legal que vc pode\
+      \ aprender! Acessa lá: https://github.com/lappis-unb/rasa-ptbr-boilerplate\n\
+      \n Ah e eu sou Open Source!!!"
 actions:
 - action_teste
 - action_cpf
-- utter_default
-- utter_diga_mais
-- utter_elogios
-- utter_cumprimentar
-- utter_o_que_sei_falar
-- utter_despedir
-- utter_tudo_bem
-- utter_religiao
-- utter_esporte
-- utter_time
-- utter_linguagens
-- utter_genero
-- utter_star_wars
-- utter_piada
-- utter_license
-- utter_onde_voce_mora
-- utter_como_estou
-- utter_playlist
-- utter_comida
-- utter_cor
-- utter_de_onde_voce_eh
-- utter_relationship
-- utter_me
-- utter_filhos
-- utter_filme
-- utter_signo
-- utter_triste
-- utter_hobby
-- utter_bff
-- utter_historia
-- utter_risada
-- utter_continuar_conversa
-- utter_botao
-- utter_afirmacao_botao
-- utter_negacao_botao
-- utter_pergunta_cpf
