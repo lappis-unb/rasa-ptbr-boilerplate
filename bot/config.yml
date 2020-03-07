@@ -1,32 +1,30 @@
 language : "pt"
+
 pipeline:
-  - name: "WhitespaceTokenizer"
-  - name: "CRFEntityExtractor"
-  - name: "EntitySynonymMapper"
-  - name: "CountVectorsFeaturizer"
-  - name: "EmbeddingIntentClassifier"
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 55
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
 
 policies:
+  - name: TEDPolicy
+    epochs: 10
+    featurizer:
+    - name: MaxHistoryTrackerFeaturizer
+      max_history: 5
+      state_featurizer:
+        - name: BinarySingleStateFeaturizer
   - name: MemoizationPolicy
-  - name: KerasPolicy
-  - name: MappingPolicy
+    max_history: 5
+  - name: FallbackPolicy
+    nlu_threshold: 0.4
+    core_threshold: 0.3
+    fallback_action_name: "utter_fallback"
 
-# TODO: Update this config file with previous configurations
-#policies:
-#  - name: KerasPolicy
-#    priority: 5
-#    epochs: 20
-#    batch_size: 10
-#    featurizer:
-#      - name: FullDialogueTrackerFeaturizer
-#        state_featurizer:
-#          - name: LabelTokenizerSingleStateFeaturizer
-#  - name: FallbackPolicy
-#    nlu_threshold: 0.6
-#    core_threshold: 0.6
-#    priority: 1
-#  - name: MemoizationPolicy
-#    priority: 2
-#    max_history: 2
-#    
-#
