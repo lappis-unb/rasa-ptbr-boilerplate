@@ -1,4 +1,7 @@
-rasa==1.6.2
+rasa==1.8.0
 nltk==3.4.5
 elasticsearch==7.0.4
 flake8==3.7.8
+
+--extra-index-url https://pypi.rasa.com/simple
+rasa-x==0.26.0 
