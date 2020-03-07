@@ -12,15 +12,15 @@ x:
 train-nlu:
 	rasa train nlu -vv 
 
-test-nlu:
-	rasa test nlu -vv 
-
 # CORE
 train:
 	rasa train -vv
 
 validate:
 	rasa data validate -vv
+
+test:
+	rasa test -vv 
 
 # MENSAGEIROS
 shell:

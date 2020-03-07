@@ -62,9 +62,9 @@ run-notebooks:
 
 train:
 	mkdir -p bot/models
-	sudo chmod -R 644 bot/models
+	sudo chmod -R 755 bot/models
 	docker-compose up coach
-	sudo chmod -R 644 bot/models
+	sudo chmod -R 644 bot/models/*
 
 validate:
 	sudo docker-compose run --rm coach rasa data validate --domain domain.yml --data data/ -vv
