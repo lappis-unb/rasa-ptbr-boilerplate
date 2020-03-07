@@ -46,6 +46,9 @@ run-analytics:
 run-shell:
 	sudo docker-compose run --rm --service-ports bot make shell
 
+run-x:
+	sudo docker-compose run --rm --service-ports bot make x
+
 run-webchat:
 	sudo docker-compose run -d --rm --service-ports bot-webchat
 	sensible-browser modules/webchat/index.html
@@ -59,9 +62,9 @@ run-notebooks:
 
 train:
 	mkdir -p bot/models
-	sudo chmod -R +777 bot/models
+	sudo chmod -R 644 bot/models
 	docker-compose up coach
-	sudo chmod -R +777 bot/models
+	sudo chmod -R 644 bot/models
 
 validate:
 	sudo docker-compose run --rm coach rasa data validate --domain domain.yml --data data/ -vv
