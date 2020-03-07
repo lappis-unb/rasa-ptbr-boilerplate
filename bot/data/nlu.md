@@ -1,3 +1,16 @@
+## intent:cumprimentar
+- olá
+- Ola
+- Oi
+- bom dia
+- boa tarde
+- boa noite
+
+## intent:despedir
+- tchau
+- adeus
+- flw
+
 ## intent:testa_acoes
 - testa acoes
 - test custom action
@@ -17,7 +30,7 @@
 
 ## intent:religiao
 - voce acredita em [deus](religiao)
-- [deus] (religiao) existe
+- [deus](religiao) existe
 - voce e [catolico protestante](religiao)
 - voce tem [religiao](religiao)
 - voce e [mussumano](religiao)
@@ -87,7 +100,7 @@
 - sabedoria [jedi](starwars)
 - concelhos [jedi](starwars)
 - [star wars](starwars)
-- [yoda] (starwars)
+- [yoda](starwars)
 - concelhos do [yoda](starwars)
 - [guerra nas estrelas](starwars)
 - quero conselhos do yoda
@@ -485,47 +498,6 @@
 - feio
 - burro
 
-## intent:despedir
-- tchau obrigada
-- tchau
-- namaste
-- sayonara
-- au revoir
-- até logo
-- ate logo
-- até mais
-- ate mais
-- até breve
-- ate breve
-- até a próxima
-- ate a proxima
-- falou, valeu
-- flw vlw
-- beleza
-- blza
-- blz
-- valew
-- valeu
-
-/# intent:cumprimentar
-- com licenca
-- posso falar com voce
-- pode me tirar uma duvida
-- gostaria de tirar uma duvida
-- bom dia
-- boa tarde
-- boa noite
-- bonjour
-- bonsoir
-- olá
-- ola
-- oi
-- oiii
-- oie
-- oiee
-- ola boa tarde
-- hi
-- salut
 
 ## intent:elogios
 - você é muito educado
@@ -643,6 +615,8 @@
 
 ## intent:objetivo
 - Qual o seu objetivo robo?
+- Qual o seu objetivo robô?
+- Vc tem um objetivo de existencia?
 - Você foi feito pra que?
 - Vc tem algum propósito?
 - Como que vc pode me ser útil?
