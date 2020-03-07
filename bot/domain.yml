@@ -70,7 +70,11 @@ slots:
   cpf:
     type: text
 
-templates:
+actions:
+  - action_teste
+  - action_cpf
+
+responses:
   utter_default:
     - text: |
         Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
@@ -463,45 +467,6 @@ templates:
   - text: |
         Por favor, me diga seu CPF
 
-actions:
-  - utter_default
-  - utter_cumprimentar
-  - utter_o_que_sei_falar
-  - utter_despedir
-  - utter_tudo_bem
-  - utter_diga_mais
-  - utter_elogios
-  - utter_continuar_conversa
-
-  - utter_religiao
-  - utter_esporte
-  - utter_time
-  - utter_linguagens
-  - utter_genero
-  - utter_star_wars
-  - utter_piada
-  - utter_license
-  - utter_onde_voce_mora
-  - utter_como_estou
-  - utter_playlist
-  - utter_comida
-  - utter_cor
-  - utter_de_onde_voce_eh
-  - utter_relationship
-  - utter_me
-  - utter_filhos
-  - utter_filme
-  - utter_signo
-  - utter_triste
-  - utter_hobby
-  - utter_bff
-  - utter_historia
-  - utter_risada
-  - utter_botao
-  - utter_afirmacao_botao
-  - utter_negacao_botao
-
-  - utter_pergunta_cpf
-
-  - action_teste
-  - action_cpf
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
