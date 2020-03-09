@@ -1,3 +1,16 @@
+## intent:cumprimentar
+- olá
+- Ola
+- Oi
+- bom dia
+- boa tarde
+- boa noite
+
+## intent:despedir
+- tchau
+- adeus
+- flw
+
 ## intent:testa_acoes
 - testa acoes
 - test custom action
@@ -17,7 +30,7 @@
 
 ## intent:religiao
 - voce acredita em [deus](religiao)
-- [deus] (religiao) existe
+- [deus](religiao) existe
 - voce e [catolico protestante](religiao)
 - voce tem [religiao](religiao)
 - voce e [mussumano](religiao)
@@ -87,7 +100,7 @@
 - sabedoria [jedi](starwars)
 - concelhos [jedi](starwars)
 - [star wars](starwars)
-- [yoda] (starwars)
+- [yoda](starwars)
 - concelhos do [yoda](starwars)
 - [guerra nas estrelas](starwars)
 - quero conselhos do yoda
@@ -485,80 +498,6 @@
 - feio
 - burro
 
-## intent:despedir
-- tchau obrigada
-- tchau
-- namaste
-- sayonara
-- au revoir
-- até logo
-- ate logo
-- até mais
-- ate mais
-- até breve
-- ate breve
-- até a próxima
-- ate a proxima
-- falou, valeu
-- flw vlw
-- beleza
-- blza
-- blz
-- valew
-- valeu
-
-## intent: negar_despedir
-- não sei onde a minha pergunta se encaixa
-- nao quero saber mais
-- quero falar sobre outra coisa
-- não quero saber de mais nada
-- não tenho mais dúvidas
-- não tenho mais perguntas
-- você já me respondeu tudo
-- nao era isso, me enganei
-- não quero falar sobre isso
-- ainda nao sei escolher um tópico
-- ainda não pensei sobre isso
-- nao sei do que quero falar
-- não sei do que quero conversar
-- já me respondeu
-- já me ajudou
-- só isso mesmo, obrigada
-- so isso mesmo obrigada
-- só isso mesmo, obrigado
-- so isso mesmo obrigado
-- só isso mesmo
-- so isso mesmo
-- não tenho mais perguntas
-- não tenho mais dúvidas
-- nao tenho mais duvidas
-- não tenho mais
-- não quero saber
-- não obrigado
-- nao obrigado
-- não obrigada
-- nao obrigada
-- nada
-
-## intent:cumprimentar
-- com licenca
-- posso falar com voce
-- pode me tirar uma duvida
-- gostaria de tirar uma duvida
-- bom dia
-- boa tarde
-- boa noite
-- bonjour
-- bonsoir
-- olá
-- ola
-- oi
-- oiii
-- oie
-- oiee
-- ola boa tarde
-- hi
-- salut
 
 ## intent:elogios
 - você é muito educado
@@ -662,8 +601,23 @@
 - Me envia um botão
 - Testando um botão
 
-## intent:afirmacao_botao
-- afirmação de botão
+## intent:afirmar
+- sim
+- confirmo
+- afirmo
+- claro
 
-## intent:negacao_botao
-- negação de botão
+## intent:negar
+- não
+- nao
+- nego
+- cancelo
+
+## intent:objetivo
+- Qual o seu objetivo robo?
+- Qual o seu objetivo robô?
+- Vc tem um objetivo de existencia?
+- Você foi feito pra que?
+- Vc tem algum propósito?
+- Como que vc pode me ser útil?
+- Me fale mais sobre você.
