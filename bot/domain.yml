@@ -82,9 +82,9 @@ responses:
   utter_tudo_bem:
   - text: "Tudo bem, obrigada! Em que posso te ajudar?\n"
   utter_continuar_conversa:
-  - text: E aí, qual nosso próximo assunto?
-  - text: Quer conversar sobre outra coisa?
-  - text: Gostaria de saber algo mais?
+  - text: E aí, o que você deseja de nosso menu?
+  - text: Você gostaria de escolher algum dos produtos citados?
+  - text: Por favor escolha um dos itens acima?
   utter_objetivo:
   - text: "Eu sou um chatbot Básico. Sei falar de coisas pontuais, mas eu posso ajudar\
       \ em muito em exemplos! no meu repositório tem muita coisa legal que vc pode\
@@ -92,21 +92,23 @@ responses:
       \n Ah e eu sou Open Source!!!"
   utter_menu_geral:
   - text: "Segue nosso menu:\n\
-        \ - Anchos    - Assados\n\
-        \ - Canelones - Cordeiro\n\
-        \ - Cervejas  - Chorizos\n\
-        \ - Javali    - Costelinha\n\
-        \ - Jacaré    - Tilápia\n\
-        \ - Avestruz  - Frango\n\
-        \ - Lasanhas  - Linguiça\n\
-        \ - Lombo     - Maminha\n\
-        \ - Pernil    - Pão de Alho\n\
-        \ - Picanha   - Angus\n\
-        \ - Salsichão - Coelho\n\
-        \ - Faisão    - Leitoa\n\
-        \ - Pato      - Marreco\n\
-        \ - Nhoque    - Rã\n\
-        \ - Tulipas   - Strogonoff"
+        \ - Anchos\n\
+        \ - Shoulders\n\
+        \ - Salsichões\n\
+        \ - Canelones\n\
+        \ - Cervejas\n\
+        \ - Chorizos\n\
+        \ - Costelinhas\n\
+        \ - Lasanha\n\
+        \ - Picanha\n\
+        \ - Lombo\n\
+        \ - Pernil\n\
+        \ - Pães\n\
+        \ - Maminha\n\
+        \ - Linguiça\n\
+        \ - Aves\n\
+        \ - Filé\n\
+        \ - carré"
   utter_menu_ancho:
   - text: "Nós temos:\n\
         \ - Ancho BBQ Secrets\n\
@@ -218,6 +220,9 @@ responses:
   - text: "Nós temos:\n\
         \ - Frango Desossado e Recheado com Farofa Rica\n\
         \ - Frango Desossado e Recheado com Milho e Catupiry\n\
+        \ - Avestruz\n\
+        \ - Pato\n\
+        \ - Faisão\n\
         \ - Galinha Caipira\n\
         \ - Galinha D’Angola"
   utter_menu_file:

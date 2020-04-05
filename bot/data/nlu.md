@@ -119,6 +119,7 @@
 ## intent:menu_ancho
 - ancho
 - anchos
+- Anchos
 - quais anchos você tem
 - quais anchos voce tem
 - quais anchos vc tem
@@ -126,6 +127,7 @@
 ## intent:menu_shoulder
 - shoulder
 - shoulders
+- Shoulders
 - quais shoulders você tem
 - quais shoulders voce tem
 - quais shoulders vc tem
@@ -133,6 +135,7 @@
 ## intent:menu_salsichao
 - salsichão
 - salsichões
+- Salsichões
 - quais salsichões você tem
 - quais salsichões voce tem
 - quais salsichões vc tem
@@ -140,6 +143,7 @@
 ## intent:menu_canelone
 - canelone
 - canelones
+- Canelones
 - quais canelones você tem
 - quais canelones voce tem
 - quais canelones vc tem
@@ -147,6 +151,7 @@
 ## intent:menu_cerveja
 - cerveja
 - cervejas
+- Cervejas
 - quais cervejas você tem
 - quais cervejas voce tem
 - quais cervejas vc tem
@@ -154,6 +159,7 @@
 ## intent:menu_chorizo
 - chorizo
 - chorizos
+- Chorizos
 - quais chorizos você tem
 - quais chorizos voce tem
 - quais chorizos vc tem
@@ -161,6 +167,7 @@
 ## intent:menu_costelinha
 - costelinha
 - costelinhas
+- Costelinhas
 - quais costelinhas você tem
 - quais costelinhas voce tem
 - quais costelinhas vc tem
@@ -168,6 +175,7 @@
 ## intent:menu_lasanha
 - lasanha
 - lasanhas
+- Lasanha
 - quais lasanhas você tem
 - quais lasanhas voce tem
 - quais lasanhas vc tem
@@ -175,18 +183,21 @@
 ## intent:menu_picanha
 - picanha
 - picanhas
+- Picanha
 - quais picanhas você tem
 - quais picanhas voce tem
 - quais picanhas vc tem
 
 ## intent:menu_lombo
 - lombo
+- Lombo
 - lombos
 - quais lombos você tem
 - quais lombos voce tem
 - quais lombos vc tem
 
 ## intent:menu_pernil
+- Pernil
 - pernil
 - pernis
 - quais pernis você tem
@@ -196,12 +207,14 @@
 ## intent:menu_pao
 - pão
 - pães
+- Pães
 - quais pães de alho você tem
 - quais pães de alho voce tem
 - quais pães de alho vc tem
 
 ## intent:menu_maminha
 - maminha
+- Maminha
 - maminhas
 - quais maminhas você tem
 - quais maminhas voce tem
@@ -209,14 +222,22 @@
 
 ## intent:menu_linguica
 - linguiça
+- Linguiça
 - linguiças
 - quais linguiças você tem
 - quais linguiças voce tem
 - quais linguiças vc tem
 
 ## intent:menu_aves
+- Aves
 - frango
 - frangos
+- Faisão
+- faisão
+- Pato
+- pato
+- Avestruz
+- avestruz
 - quais frangos você tem
 - quais frangos voce tem
 - quais frangos vc tem
