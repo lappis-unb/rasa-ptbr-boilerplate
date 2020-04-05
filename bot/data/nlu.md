@@ -115,3 +115,122 @@
 - quero ver o menu
 - quero vê o menu
 - quero ve o menu
+
+## intent:menu_ancho
+- ancho
+- anchos
+- quais anchos você tem
+- quais anchos voce tem
+- quais anchos vc tem
+
+## intent:menu_shoulder
+- shoulder
+- shoulders
+- quais shoulders você tem
+- quais shoulders voce tem
+- quais shoulders vc tem
+
+## intent:menu_salsichao
+- salsichão
+- salsichões
+- quais salsichões você tem
+- quais salsichões voce tem
+- quais salsichões vc tem
+
+## intent:menu_canelone
+- canelone
+- canelones
+- quais canelones você tem
+- quais canelones voce tem
+- quais canelones vc tem
+
+## intent:menu_cerveja
+- cerveja
+- cervejas
+- quais cervejas você tem
+- quais cervejas voce tem
+- quais cervejas vc tem
+
+## intent:menu_chorizo
+- chorizo
+- chorizos
+- quais chorizos você tem
+- quais chorizos voce tem
+- quais chorizos vc tem
+
+## intent:menu_costelinha
+- costelinha
+- costelinhas
+- quais costelinhas você tem
+- quais costelinhas voce tem
+- quais costelinhas vc tem
+
+## intent:menu_lasanha
+- lasanha
+- lasanhas
+- quais lasanhas você tem
+- quais lasanhas voce tem
+- quais lasanhas vc tem
+
+## intent:menu_picanha
+- picanha
+- picanhas
+- quais picanhas você tem
+- quais picanhas voce tem
+- quais picanhas vc tem
+
+## intent:menu_lombo
+- lombo
+- lombos
+- quais lombos você tem
+- quais lombos voce tem
+- quais lombos vc tem
+
+## intent:menu_pernil
+- pernil
+- pernis
+- quais pernis você tem
+- quais pernis voce tem
+- quais pernis vc tem
+
+## intent:menu_pao
+- pão
+- pães
+- quais pães de alho você tem
+- quais pães de alho voce tem
+- quais pães de alho vc tem
+
+## intent:menu_maminha
+- maminha
+- maminhas
+- quais maminhas você tem
+- quais maminhas voce tem
+- quais maminhas vc tem
+
+## intent:menu_linguica
+- linguiça
+- linguiças
+- quais linguiças você tem
+- quais linguiças voce tem
+- quais linguiças vc tem
+
+## intent:menu_aves
+- frango
+- frangos
+- quais frangos você tem
+- quais frangos voce tem
+- quais frangos vc tem
+
+## intent:menu_file
+- filé
+- filés
+- quais filés você tem
+- quais filés voce tem
+- quais filés vc tem
+
+## intent:menu_carre
+- carré
+- carrés
+- quais carrés você tem
+- quais carrés voce tem
+- quais carrés vc tem

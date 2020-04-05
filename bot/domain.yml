@@ -1,6 +1,7 @@
 session_config:
   session_expiration_time: 60.0
   carry_over_slots_to_new_session: true
+
 intents:
 - cumprimentar
 - o_que_sei_falar
@@ -11,12 +12,47 @@ intents:
 - negar
 - objetivo
 - menu_geral
+- menu_ancho
+- menu_shoulder
+- menu_salsichao
+- menu_canelone
+- menu_cerveja
+- menu_chorizo
+- menu_costelinha
+- menu_lasanha
+- menu_picanha
+- menu_lombo
+- menu_pernil
+- menu_pao
+- menu_maminha
+- menu_linguica
+- menu_aves
+- menu_file
+- menu_carre
+
 entities:
-- religiao
+- ancho
+- shoulder
+- salsichao
+- canelone
+- cerveja
+- chorizo
+- costelinha
+- lasanha
+- picanha
+- lombo
+- pernil
+- pao
+- maminha
+- linguica
+- aves
+- file
+- carre
 
 slots:
   menu:
     type: text
+
 responses:
   utter_fallback:
   - text: "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender\
@@ -70,7 +106,133 @@ responses:
         \ - Faisão    - Leitoa\n\
         \ - Pato      - Marreco\n\
         \ - Nhoque    - Rã\n\
-        \ - Tulipas   - Strogonoff\n\
-        \n Escolha apenas um, nesse momento."
+        \ - Tulipas   - Strogonoff"
+  utter_menu_ancho:
+  - text: "Nós temos:\n\
+        \ - Ancho BBQ Secrets\n\
+        \ - Ancho Black Angus Supremo\n\
+        \ - Ancho Fatiado Temperado\n\
+        \ - Ancho Las Piedras Angus\n\
+        \ - Ancho Maturado Supremo\n\
+        \ - Ancho Suíno Steak Bife"
+  utter_menu_shoulder:
+  - text: "Nós temos:\n\
+        \ - Shoulder Angus Minerva\n\
+        \ - Shoulder Black Angus\n\
+        \ - Shoulder Steak Angus\n\
+        \ - Shoulder Wagyu Japonês"
+  utter_menu_salsichao:
+  - text: "Nós temos:\n\
+        \ - Salsichão Alemão\n\
+        \ - Salsichão Tradicional"
+  utter_menu_canelone:
+  - text: "Nós temos:\n\
+        \ - Canelone 4 Queijos\n\
+        \ - Canelone a Bolonhesa\n\
+        \ - Canelone de Frango com Catupiry\n\
+        \ - Canelone Frango com Catupiry ao Sugo\n\
+        \ - Canelone Frango com Presunto"
+  utter_menu_cerveja:
+  - text: "Nós temos:\n\
+        \ - Cerveja Budweiser Long Neck, 343ml\n\
+        \ - Cerveja Heineken Long Neck, 355ml\n\
+        \ - Cerveja Stella Artois Long Neck, 275ml"
+  utter_menu_chorizo:
+  - text: "Nós temos:\n\
+        \ - Chorizo BBQ Secrets. A peça varia entre 1100 a 1300g\n\
+        \ - Chorizo Chef Frigol. A peça varia entre 1000 a 1200g"
+  utter_menu_costelinha:
+  - text: "Nós temos:\n\
+        \ - Costelinha de Javali: A peça varia entre 600 a 800g\n\
+        \ - Costelinha Fatiada Temp. da Roça: A peça varia entre 1000 a 1200g\n\
+        \ - Costelinha Grill: Aproveite a nossa costelinha de porco inteira (grill),\n\ 
+        \   muito carnuda e suculenta. De ótima procedência, trás o gostinho da roça \n\ 
+        \   que você vai se viciar. A peça varia entre 900 a 1200g"
+  utter_menu_lasanha:
+  - text: "Nós temos:\n\
+        \ - Lasanha a Bolonhesa\n\
+        \ - Lasanha de 4 Queijos\n\
+        \ - Lasanha de Bacalhau M Queijo\n\
+        \ - Lasanha de Filé de Frango"
+  utter_menu_picanha:
+  - text: "Nós temos:\n\
+        \ - Picanha Ana Paula\n\
+        \ - Picanha Angus BBQ Secrets\n\
+        \ - Picanha Argentina Lilas\n\
+        \ - Picanha Argentina Pico A\n\
+        \ - Picanha Bassi\n\
+        \ - Picanha Black Swift\n\
+        \ - Picanha Chef Frigol\n\
+        \ - Picanha de Cordeiro Baby\n\
+        \ - Picanha Diretoria Frigonorte\n\
+        \ - Picanha Frigolar\n\
+        \ - Picanha Frigomerc\n\
+        \ - Picanha Invertida Recheada c/ Provolone\n\
+        \ - Picanha La Anônima Angus\n\
+        \ - Picanha Las Piedras Angus\n\
+        \ - Picanha Maturada Supremo\n\
+        \ - Picanha Minerva Linha Grill\n\
+        \ - Picanha Quality Meat\n\
+        \ - Picanha Suína\n\
+        \ - Picanha Supremo Grill\n\
+        \ - Picanha Wagyu Japonesa"
+  utter_menu_lombo:
+  - text: "Nós temos:\n\
+        \ - Lombo Recheado com Provolone\n\
+        \ - Lombo Recheado com Ricota, Nozes e Passas\n\
+        \ - Lombo Suíno Temp. Ao Vinho"
+  utter_menu_pernil:
+  - text: "Nós temos:\n\
+        \ - Pernil de Cordeiro\n\
+        \ - Pernil de Cordeiro Baby\n\
+        \ - Pernil de Javali Baby\n\
+        \ - Pernil s/ osso\n\
+        \ - Pernil Suíno Inteiro Temp. ao Vinho\n\
+        \ - Pernil Suíno Temperado ao Vinho"
+  utter_menu_pao:
+  - text: "Nós temos:\n\
+        \ - Pão de 4 Queijos Zé do Espeto\n\
+        \ - Pão de Alho Picante Zé do Espeto\n\
+        \ - Pão de Alho Poró Zé do Espeto\n\
+        \ - Pão de Alho Zé do Espeto Tradicional\n\
+        \ - Pão de Azeitona Preta Zé do Espeto\n\
+        \ - Pão de Bacalhau Zé do Espeto\n\
+        \ - Pão de Chocolate Zé do Espeto\n\
+        \ - Pão de Frango com Requeijão Zé do Espeto\n\
+        \ - Pão de Pepperoni Zé do Espeto\n\
+        \ - Pão de Tomate Seco Zé do Espeto"
+  utter_menu_maminha:
+  - text: "Nós temos:\n\
+        \ - Maminha Angus – Frigol\n\
+        \ - Maminha Angus BBQ Secrets\n\
+        \ - Maminha Angus Recheada\n\
+        \ - Maminha Prime"
+  utter_menu_linguica:
+  - text: "Nós temos:\n\
+        \ - Linguiça de Cordeiro\n\
+        \ - Linguiça de Leitoa Caipira c/ Queijo\n\
+        \ - Linguiça de Lombo Ao Vinho\n\
+        \ - Linguiça de Lombo Pura\n\
+        \ - Linguiça de Vitelo c/ Provolone Black Angus – R$29,80 kg"
+  utter_menu_aves:
+  - text: "Nós temos:\n\
+        \ - Frango Desossado e Recheado com Farofa Rica\n\
+        \ - Frango Desossado e Recheado com Milho e Catupiry\n\
+        \ - Galinha Caipira\n\
+        \ - Galinha D’Angola"
+  utter_menu_file:
+  - text: "Nós temos:\n\
+        \ - Filé de Cauda de Jacaré\n\
+        \ - Filé de Costela Angus s/ Osso\n\
+        \ - Filé de Tilápia\n\
+        \ - Filé Mignon BBQ Secrets\n\
+        \ - Filé Mignon de Avestruz\n\
+        \ - Filé Mignon Frigovita\n\
+        \ - Filé Mignon Supremo"
+  utter_menu_carre:
+  - text: "Nós temos:\n\
+        \ - Carré de Cordeiro Curto\n\
+        \ - Carré de Cordeiro Francês"
+
 actions:
 - utter_fallback
