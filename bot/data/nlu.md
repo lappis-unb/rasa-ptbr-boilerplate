@@ -103,3 +103,15 @@
 - Vc tem algum propósito?
 - Como que vc pode me ser útil?
 - Me fale mais sobre você.
+
+## intent:menu_geral
+- liste seus produtos
+- liste os produtos que você tem
+- liste os produtos que vc tem
+- me mostre seu menu
+- mostre-me seu menu
+- me mostre o menu
+- mostre-me o menu
+- quero ver o menu
+- quero vê o menu
+- quero ve o menu

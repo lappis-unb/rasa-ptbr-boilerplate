@@ -10,11 +10,12 @@ intents:
 - tudo_bem
 - negar
 - objetivo
+- menu_geral
 entities:
 - religiao
 
 slots:
-  cpf:
+  menu:
     type: text
 responses:
   utter_fallback:
@@ -53,5 +54,23 @@ responses:
       \ em muito em exemplos! no meu repositório tem muita coisa legal que vc pode\
       \ aprender! Acessa lá: https://github.com/lappis-unb/rasa-ptbr-boilerplate\n\
       \n Ah e eu sou Open Source!!!"
+  utter_menu_geral:
+  - text: "Segue nosso menu:\n\
+        \ - Anchos    - Assados\n\
+        \ - Canelones - Cordeiro\n\
+        \ - Cervejas  - Chorizos\n\
+        \ - Javali    - Costelinha\n\
+        \ - Jacaré    - Tilápia\n\
+        \ - Avestruz  - Frango\n\
+        \ - Lasanhas  - Linguiça\n\
+        \ - Lombo     - Maminha\n\
+        \ - Pernil    - Pão de Alho\n\
+        \ - Picanha   - Angus\n\
+        \ - Salsichão - Coelho\n\
+        \ - Faisão    - Leitoa\n\
+        \ - Pato      - Marreco\n\
+        \ - Nhoque    - Rã\n\
+        \ - Tulipas   - Strogonoff\n\
+        \n Escolha apenas um, nesse momento."
 actions:
 - utter_fallback
