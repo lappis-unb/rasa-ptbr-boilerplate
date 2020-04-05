@@ -10,6 +10,10 @@ first-run:
 	make run-webchat
 
 build:
+	make build-coach
+	make build-bot
+
+build-install:
 	make build-requirements
 	make build-coach
 	make build-bot
