@@ -1,6 +1,3 @@
 rasa==1.10.0
 nltk==3.4.5
 elasticsearch==7.0.4
-
---extra-index-url https://pypi.rasa.com/simple
-rasa-x==0.27.7
