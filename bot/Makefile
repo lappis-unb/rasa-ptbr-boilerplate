@@ -3,24 +3,28 @@
 clean:
 	rm -rf graph.html results/ models/* *.db*
 
-############################## BOT ############################## 
+############################## BOT ##############################
 # RASA X
 x:
 	rasa x
 
 # NLU
 train-nlu:
-	rasa train nlu -vv 
+	rasa train nlu -vv
 
 # CORE
 train:
 	rasa train -vv
 
+# TESTS
 validate:
 	rasa data validate -vv
 
-test:
-	rasa test -vv 
+test-nlu:
+	rasa test nlu --out results-nlu-test
+
+test-core:
+	rasa test core --fail-on-prediction-errors --out results-core-test
 
 # MENSAGEIROS
 shell:

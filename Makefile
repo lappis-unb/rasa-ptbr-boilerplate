@@ -3,7 +3,7 @@ current_dir := $(shell pwd)
 clean:
 	sudo docker-compose down
 
-############################## BOILERPLATE ############################## 
+############################## BOILERPLATE ##############################
 first-run:
 	make build
 	make train
@@ -19,7 +19,7 @@ build-requirements:
 
 build-bot:
 	docker-compose build --no-cache bot
-	
+
 build-coach:
 	docker-compose build --no-cache coach
 
@@ -65,6 +65,13 @@ train:
 	sudo chmod -R 755 bot/models
 	docker-compose up coach
 	sudo chmod -R 644 bot/models/*
+
+############################## TESTS ##############################
+run-test-nlu:
+	docker-compose run --rm bot make test-nlu
+
+run-test-core:
+	docker-compose run --rm bot make test-core
 
 validate:
 	sudo docker-compose run --rm coach rasa data validate --domain domain.yml --data data/ -vv
