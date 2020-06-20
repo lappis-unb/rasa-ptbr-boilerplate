@@ -3,6 +3,9 @@ current_dir := $(shell pwd)
 clean:
 	docker-compose down
 
+stop:
+	docker-compose stop
+
 ############################## BOILERPLATE ############################## 
 first-run:
 	make build
@@ -33,7 +36,9 @@ build-analytics:
 	sleep 30
 	docker-compose run --rm -v $(current_dir)/modules/analytics/setup_elastic.py:/analytics/setup_elastic.py bot python /analytics/setup_elastic.py
 	docker-compose run --rm -v $(current_dir)/modules/analytics/:/analytics/ bot python /analytics/import_dashboards.py
-	echo "Não se esqueça de atualizar o arquivo endpoints.yml"
+	$(info )
+	$(info Não se esqueça de atualizar o arquivo endpoints.yml)
+	$(info )
 	sensible-browser --no-sandbox http://localhost:5601
 
 run-analytics:
@@ -50,6 +55,9 @@ run-x:
 	docker-compose run --rm --service-ports bot make x
 
 run-webchat:
+	$(info )
+	$(info Executando Bot com Webchat. Caso seu navegador não seja iniciado automáticamente, abra o seguinte arquivo com seu navegador: modules/webchat/index.html)
+	$(info )
 	docker-compose run -d --rm --service-ports bot-webchat
 	sensible-browser modules/webchat/index.html
 
