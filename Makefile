@@ -6,7 +6,7 @@ clean:
 stop:
 	docker-compose stop
 
-############################## BOILERPLATE ############################## 
+############################## BOILERPLATE ##############################
 first-run:
 	make build
 	make train
@@ -22,7 +22,7 @@ build-requirements:
 
 build-bot:
 	docker-compose build --no-cache bot
-	
+
 build-coach:
 	docker-compose build --no-cache coach
 
@@ -71,6 +71,13 @@ run-notebooks:
 train:
 	mkdir -p bot/models
 	docker-compose up --build coach
+
+############################## TESTS ##############################
+run-test-nlu:
+	docker-compose run --rm bot make test-nlu
+
+run-test-core:
+	docker-compose run --rm bot make test-core
 
 validate:
 	docker-compose run --rm coach rasa data validate --domain domain.yml --data data/ -vv
