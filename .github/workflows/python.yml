@@ -38,10 +38,11 @@ jobs:
     - name: Test Rasa version
       run: |
         rasa --version 
+    - name: Rasa train
+      run: |
+        cd bot/
+        make train
     - name: Test Rasa bot
       run: |
         cd bot/
         make test
-#     - name: Test with pytest
-#       run: |
-#         pytest
