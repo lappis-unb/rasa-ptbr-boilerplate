@@ -3,24 +3,39 @@
 clean:
 	rm -rf graph.html results/ models/* *.db*
 
-############################## BOT ############################## 
+install:
+	pip install --upgrade pip && \
+	pip install -r ../requirements.txt && \
+	pip install -r ../x-requirements.txt
+
 # RASA X
 x:
 	rasa x
 
 # NLU
 train-nlu:
-	rasa train nlu -vv 
+	rasa train nlu -vv
 
 # CORE
 train:
 	rasa train -vv
 
+# TESTS
 validate:
 	rasa data validate -vv
 
 test:
-	rasa test -vv 
+	rasa test --out results/
+
+test-nlu:
+	rasa test nlu --out results/results-nlu-test
+
+test-core:
+	rasa test core --fail-on-prediction-errors --out results/results-core-test
+
+# VALIDACAO
+validate:
+	rasa data validate
 
 # MENSAGEIROS
 shell:

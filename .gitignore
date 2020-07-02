@@ -1,5 +1,6 @@
 ### Rasa ###
 bot/models
+bot/results*
 
 ### Rasa X ###
 events.db
