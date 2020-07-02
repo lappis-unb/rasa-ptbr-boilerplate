@@ -25,13 +25,13 @@ validate:
 	rasa data validate -vv
 
 test:
-	rasa test -vv
+	rasa test --out results/
 
 test-nlu:
-	rasa test nlu --out results-nlu-test
+	rasa test nlu --out results/results-nlu-test
 
 test-core:
-	rasa test core --fail-on-prediction-errors --out results-core-test
+	rasa test core --fail-on-prediction-errors --out results/results-core-test
 
 # VALIDACAO
 validate:
