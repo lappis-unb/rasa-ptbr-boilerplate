@@ -24,11 +24,18 @@ train:
 validate:
 	rasa data validate -vv
 
+test:
+	rasa test -vv
+
 test-nlu:
 	rasa test nlu --out results-nlu-test
 
 test-core:
 	rasa test core --fail-on-prediction-errors --out results-core-test
+
+# VALIDACAO
+validate:
+	rasa data validate
 
 # MENSAGEIROS
 shell:
