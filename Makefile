@@ -1,4 +1,5 @@
 current_dir := $(shell pwd)
+user := $(shell whoami)
 
 clean:
 	docker-compose down
@@ -31,9 +32,12 @@ build-analytics:
 	docker-compose up -d rabbitmq
 	docker-compose up -d rabbitmq-consumer
 	docker-compose up -d kibana
+	chown $(user) -R db/
 	# This sleep time is a work arround the main objetive is run the following command when elasticsearch is ready
 	# The following command is needed just once for project. It's just a setup onfiguration script.
-	sleep 30
+	#make run-analytics
+
+run-analytics:
 	docker-compose run --rm -v $(current_dir)/modules/analytics/setup_elastic.py:/analytics/setup_elastic.py bot python /analytics/setup_elastic.py
 	docker-compose run --rm -v $(current_dir)/modules/analytics/:/analytics/ bot python /analytics/import_dashboards.py
 	$(info )
@@ -51,6 +55,9 @@ run-analytics:
 
 run-shell:
 	docker-compose run --rm --service-ports bot make shell
+
+run-api:
+	docker-compose run --rm --service-ports bot make api
 
 run-x:
 	docker-compose run --rm --service-ports bot make x
