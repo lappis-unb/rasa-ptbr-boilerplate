@@ -59,6 +59,9 @@ run-shell:
 run-api:
 	docker-compose run --rm --service-ports bot make api
 
+run-actions:
+	docker-compose run --rm --service-ports bot make actions
+
 run-x:
 	docker-compose run --rm --service-ports bot make x
 
