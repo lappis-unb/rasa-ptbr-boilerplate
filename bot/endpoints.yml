@@ -7,8 +7,10 @@ action_endpoint:
 #  url: "http://localhost:5055/webhook"
 
 # Descomente estas linhas para integrar o bot com o Analytics
-#event_broker:
-#  url: rabbitmq
-#  username: admin
-#  password: admin
-#  queue: bot_messages
+event_broker:
+  type: pika
+  url: rabbitmq
+  username: admin
+  password: admin
+  queues: 
+    - bot_messages
