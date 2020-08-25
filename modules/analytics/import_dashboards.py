@@ -62,6 +62,6 @@ def createIndexPattern():
 
 if __name__ == "__main__":
     try:
-        importDashboards("/analytics/dashboards.json")
+        importDashboards("./dashboards.json")
     except Exception as ex:
         logger.error(str(ex))

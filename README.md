@@ -167,7 +167,7 @@ Para subir o ambiente do ElasticSearch rode os seguintes comandos:
 
 ```
 sudo docker-compose up -d elasticsearch
-sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
+sudo docker-compose run --rm -v $PWD/modules/analytics:/analytics bot python /analytics/setup_elastic.py
 ```
 
 Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
