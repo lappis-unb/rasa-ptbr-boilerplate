@@ -59,7 +59,7 @@ make train
 ### Console
 
 ```sh
-make run-console
+make run-shell
 ```
 
 ### Telegram
