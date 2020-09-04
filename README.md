@@ -8,18 +8,43 @@
 
 ## Tutorial para configurar todo o projeto
 
-Para ter seu chatbot Rasa no ar e funcionando rápidamente no `shell` execute o seguinte comando:
+### Pré requisitos
+
+Para rodar o projeto em sua máquina é necessário ter instalado:
+- Docker
+- Docker compose
+
+### Primeiros passos
+
+Primeiramente, clone o repositório para sua máquina local usando o comando:
+
+```sh
+git clone <Link para o repositório>
+```
+
+Para ter seu chatbot Rasa no ar e funcionando, certifique-se de estar dentro da pasta do projeto e então execute no terminal o seguinte comando:
 
 ```sh
 make first-run
 ```
 
-Caso ocorra algum erro de permissão, executar o comando `sudo make first-run`.
+⚠️ **Atenção**: Caso ocorra algum erro de permissão, executar o comando `sudo make first-run`.
 
-Este comando irá construir o seu chatbot (containers necessários) e abrir a conversação em um `livechat`
-no canto inferior direito da sua tela. Este `mensageiro` é o **WebChat**.
 
-Tudo está dockerizado então você não terá problemas de instalação do ambiente.
+Esse comando irá construir a infraestrutura necessária (subir containers com as dependências, treinar o chatbot, etc) para possibilitar a interação com o chatbot. 
+
+Tudo está dockerizado então você não deve ter problemas de instalação do ambiente.
+
+Para conferir se os contêineres foram construídos corretamente, execute o comando:
+
+```sh
+docker ps
+```
+Se tudo der certo, você conseguirá ver uma tabela com dois contêineres de nomes `rasa-ptbr-boilerplate_bot-webchat` e 
+`rasa-ptbr-boilerplate_actions` na coluna IMAGE.
+
+Para iniciar uma conversa com o chatbot, execute o comando `make run-shell`, espere o comando rodar e divirta-se!
+
 
 ## Introdução
 
@@ -50,7 +75,7 @@ criar um repositório para as imagens e substitua os nomes das imagens "lappis/b
 
 ### Treinamento
 
-**Atenção**: o comando de treinamento é usado para criar os modelos necessários na conversação do bot para treinar o seu chatbot execute o comando:
+**Atenção**: o comando de treinamento é usado para criar os modelos necessários na conversação do bot. Para treinar o seu chatbot execute o comando:
 
 ```sh
 make train
