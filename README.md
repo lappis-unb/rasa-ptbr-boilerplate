@@ -22,7 +22,7 @@ Primeiramente, clone o repositório para sua máquina local usando o comando:
 git clone <Link para o repositório>
 ```
 
-Para ter seu chatbot Rasa no ar e funcionando, certifique-se de estar dentro da pasta do projeto e então execute no terminal o seguinte comando:
+Para ter seu chatbot Rasa funcionando, certifique-se de estar dentro da pasta do projeto e então execute no terminal o seguinte comando:
 
 ```sh
 make first-run
@@ -31,9 +31,19 @@ make first-run
 ⚠️ **Atenção**: Caso ocorra algum erro de permissão, executar o comando `sudo make first-run`.
 
 
-Esse comando irá construir a infraestrutura necessária (subir containers com as dependências, treinar o chatbot, etc) para possibilitar a interação com o chatbot. 
+Esse comando irá construir a infraestrutura necessária (subir containers com as dependências, treinar o chatbot, etc) para possibilitar a interação com o chatbot.
 
 Tudo está dockerizado então você não deve ter problemas de instalação do ambiente.
+
+Depois que tudo for instalado, você verá a seguinte mensagem e pode começar a interagir com o bot
+
+```sh
+Bot loaded. Type a message and press enter (use '/stop' to exit):
+Your input ->
+```
+
+Para fechar a interação com o bot é só dar `ctrl+c`.
+
 
 Para conferir se os contêineres foram construídos corretamente, execute o comando:
 

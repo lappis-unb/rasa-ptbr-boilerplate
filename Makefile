@@ -10,7 +10,7 @@ stop:
 first-run:
 	make build
 	make train
-	make run-webchat
+	make run-shell
 
 build:
 	make build-requirements
