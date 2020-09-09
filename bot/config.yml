@@ -21,11 +21,12 @@ policies:
       max_history: 5
       state_featurizer:
         - name: BinarySingleStateFeaturizer
+  - name: "FormPolicy"
   - name: MemoizationPolicy
     max_history: 5
   - name: MappingPolicy
   - name: FallbackPolicy
-    nlu_threshold: 0.4
+    nlu_threshold: 0.38
     core_threshold: 0.3
     fallback_action_name: "utter_fallback"
 
