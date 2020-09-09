@@ -32,17 +32,6 @@ build-analytics:
 	docker-compose up -d rabbitmq
 	docker-compose up -d rabbitmq-consumer
 	docker-compose up -d kibana
-	#chown $(user) -R db/
-	# This sleep time is a work arround the main objetive is run the following command when elasticsearch is ready
-	# The following command is needed just once for project. It's just a setup onfiguration script.
-	#make run-analytics
-
-run-analytics:
-	docker-compose run --rm -v $(current_dir)/modules/analytics/setup_elastic.py:/analytics/setup_elastic.py bot python /analytics/setup_elastic.py
-	docker-compose run --rm -v $(current_dir)/modules/analytics/:/analytics/ bot python /analytics/import_dashboards.py
-	$(info )
-	$(info Acesse o KIBANA em: http://localhost:5601)
-	$(info )
 
 run-analytics:
 	docker-compose up -d rabbitmq
