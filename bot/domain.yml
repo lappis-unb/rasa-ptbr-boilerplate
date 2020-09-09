@@ -188,7 +188,7 @@ responses:
   utter_pergunta_cancelar:
     - text: Entendi. Você deseja cancelar?
   utter_login_form:
-    - text: Não se preocupe! Vou te pedir algumas informações pra te ajudar melhor.
+    - text: Ok, Vou te pedir algumas informações.
   utter_ask_cpf:
     - text: Qual o seu CPF?
   utter_errado_cpf_formato:
