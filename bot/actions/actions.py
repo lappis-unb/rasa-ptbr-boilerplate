@@ -1,7 +1,7 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
+# Este arquivo contém custom actions que utilizão código python
+# para executar ações no diálogo.
 #
-# See this guide on how to implement these action:
+# Veja o guia na documentação do RASA em:
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
 
 from typing import Any, Text, Dict, List
@@ -28,9 +28,9 @@ class ActionTeste(Action):
         return []
 
 
-class ActionCPF(Action):
+class ActionTelefone(Action):
     def name(self) -> Text:
-        return "action_cpf"
+        return "action_telefone"
 
     def run(
         self,
@@ -39,10 +39,10 @@ class ActionCPF(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        cpf = tracker.get_slot('cpf')
+        telefone = tracker.get_slot('telefone')
 
         try:
-            dispatcher.utter_message("O seu CPF é {}?".format(cpf))
+            dispatcher.utter_message("O seu telefone é {}?".format(telefone))
         except ValueError:
             dispatcher.utter_message(ValueError)
-        return [SlotSet("cpf", cpf)]
+        return [SlotSet("telefone", telefone)]
