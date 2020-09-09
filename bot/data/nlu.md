@@ -20,13 +20,11 @@
 - action
 - test action
 
-## intent:informa_cpf
-- O meu cpf é [000.000.000-00](cpf)
-- meu cpf é [000.000.000-00](cpf)
-- Claro, [000.000.000-00](cpf)
-- Sim, anota ai: [000.000.000-00](cpf)
-- Ok, o meu CPF é [000.000.000-00](cpf)
-- Blz [000.000.000-00](cpf)
+## intent:informa_telefone
+- O meu número é [61 99999-9999](telefone)
+- meu telefone é [999999999](telefone)
+- Sim, anota ai meu telefone: [61 99999-9999](telefone))
+- Ok, o meu número de telefone é [999999999](telefone)
 
 ## intent:religiao
 - voce acredita em [deus](religiao)
@@ -296,7 +294,7 @@
 - cidade de nascimento
 - cidade natal
 
-## intent:relationship
+## intent:relacionamento
 - Você tem [namorado](relationship)?
 - Você tem [namorada](relationship)?
 - Você [namora](relationship)?
@@ -553,8 +551,8 @@
 - nao tenho certeza
 
 ## intent:tudo_bem
-- oi, tudo bem
-- oi, como vai voce
+- tudo bem
+- como vai voce
 - como vao as coisas
 - opa tudo bem
 - to bem
@@ -596,11 +594,6 @@
 - ajuda
 - menu
 
-## intent:botao
-- Envia um botão
-- Me envia um botão
-- Testando um botão
-
 ## intent:afirmar
 - sim
 - confirmo
@@ -621,3 +614,29 @@
 - Vc tem algum propósito?
 - Como que vc pode me ser útil?
 - Me fale mais sobre você.
+
+## intent:cancelar
+- Desisto
+- Para
+- Cancela
+- Sai disso
+- Me tira daqui
+- Para com isso
+- Me tira disso
+- Quero cancelar
+- Saia dessa conversa
+- Não quero mais isso
+- Cancele esta operação
+- Para de me perguntar coisas
+- cansei, não quero responder!
+- Pare o que você está fazendo
+- Que loucura está acontecendo?!
+- Não quero compartilhar meus dados
+- Não quero mais informar meus dados
+
+## intent:request_login
+- Me ajuda a fazer login?
+- Gostaria de fazer login
+- Quero fazer login
+- Formulário de login
+- Rasa forms
