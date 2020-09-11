@@ -1,3 +1,52 @@
+## story_login_form
+* request_login
+  - utter_login_form
+  - login_form
+  - form{"name": "login_form"}
+  - form{"name": null}
+* afirmar
+  - utter_finaliza_forms
+
+## story_login_form
+* request_login
+  - utter_login_form
+  - login_form
+  - form{"name": "login_form"}
+* cancelar
+  - utter_pergunta_cancelar
+* negar
+  - form{"name": "login_form"}
+  - form{"name": null}
+  - utter_finaliza_forms
+
+## story_login_form_cancelar
+* request_login
+  - utter_login_form
+  - login_form
+  - form{"name": "login_form"}
+* cancelar
+  - utter_pergunta_cancelar
+* afirmar
+  - action_deactivate_form
+  - form{"name": null}
+  - utter_forms_cancelado
+  - utter_continuar_conversa
+* negar
+  - utter_despedir
+
+## story_login_form_cancelar
+* request_login
+  - utter_login_form
+  - login_form
+  - form{"name": "login_form"}
+* cancelar
+  - utter_pergunta_cancelar
+* afirmar
+  - action_deactivate_form
+  - form{"name": null}
+  - utter_forms_cancelado
+  - utter_continuar_conversa
+
 ## testa acoes
 * cumprimentar
     - utter_cumprimentar
@@ -9,8 +58,8 @@
     - action_teste
 
 ## testa slots
-* informa_cpf
-    - action_cpf
+* informa_telefone
+    - action_telefone
 
 ## path_religiao 1
 * religiao
@@ -24,18 +73,6 @@
     - utter_religiao
     - utter_continuar_conversa
 
-## path_esporte 1
-* esporte
-    - utter_esporte
-    - utter_continuar_conversa
-
-## path_esporte 2
-* cumprimentar
-    - utter_cumprimentar
-* esporte
-    - utter_esporte
-    - utter_continuar_conversa
-
 ## path_time 1
 * time
     - utter_time
@@ -46,18 +83,6 @@
     - utter_cumprimentar
 * time
     - utter_time
-    - utter_continuar_conversa
-
-## path_linguagens 1
-* linguagens
-    - utter_linguagens
-    - utter_continuar_conversa
-
-## path_linguagens 2
-* cumprimentar
-    - utter_cumprimentar
-* linguagens
-    - utter_linguagens
     - utter_continuar_conversa
 
 ## path_genero 1
@@ -168,40 +193,9 @@
     - utter_cor
     - utter_continuar_conversa
 
-## path_de_onde_voce_eh 1
-* de_onde_voce_eh
-    - utter_de_onde_voce_eh
-    - utter_continuar_conversa
-
-## path_de_onde_voce_eh 2
-* cumprimentar
-    - utter_cumprimentar
-* de_onde_voce_eh
-    - utter_de_onde_voce_eh
-    - utter_continuar_conversa
-
-## path_relationship 1
-* relationship
-    - utter_relationship
-    - utter_continuar_conversa
-
-## path_relationship 2
-* cumprimentar
-    - utter_cumprimentar
-* relationship
-    - utter_relationship
-    - utter_continuar_conversa
-
-## path_me 1
-* me
-    - utter_me
-    - utter_continuar_conversa
-
-## path_me 2
-* cumprimentar
-    - utter_cumprimentar
-* me
-    - utter_me
+## path_relacionamento
+* relacionamento
+    - utter_relacionamento
     - utter_continuar_conversa
 
 ## path_filhos 1
@@ -214,18 +208,6 @@
     - utter_cumprimentar
 * filhos
     - utter_filhos
-    - utter_continuar_conversa
-
-## path_filme 1
-* filme
-    - utter_filme
-    - utter_continuar_conversa
-
-## path_filme 2
-* cumprimentar
-    - utter_cumprimentar
-* filme
-    - utter_filme
     - utter_continuar_conversa
 
 ## path_signo 1
@@ -252,30 +234,6 @@
     - utter_triste
     - utter_continuar_conversa
 
-## path_hobby 1
-* hobby
-    - utter_hobby
-    - utter_continuar_conversa
-
-## path_hobby 2
-* cumprimentar
-    - utter_cumprimentar
-* hobby
-    - utter_hobby
-    - utter_continuar_conversa
-
-## path_bff 1
-* bff
-    - utter_bff
-    - utter_continuar_conversa
-
-## path_bff 2
-* cumprimentar
-    - utter_cumprimentar
-* bff
-    - utter_bff
-    - utter_continuar_conversa
-
 ## path_historia 1
 * historia
     - utter_historia
@@ -288,17 +246,6 @@
     - utter_historia
     - utter_continuar_conversa
 
-## path_risada 1
-* risada
-    - utter_risada
-    - utter_continuar_conversa
-
-## path_risada 2
-* cumprimentar
-    - utter_cumprimentar
-* risada
-    - utter_risada
-    - utter_continuar_conversa
 ## cumprimentar
 * cumprimentar
     - utter_cumprimentar
@@ -351,18 +298,10 @@
 * o_que_sei_falar
     - utter_o_que_sei_falar
 
-## afirmar_botao
-* botao
-    - utter_botao
-* afirmar
-    - utter_afirmacao_botao
-
-## negar_botao
-* botao
-    - utter_botao
-* negar
-    - utter_negacao_botao
-
 ## objetivo
 * objetivo
     - utter_objetivo
+
+## story_limpar_slots
+* limpar_slots
+    - action_restart

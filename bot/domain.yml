@@ -9,13 +9,10 @@ intents:
 - diga_mais
 - tudo_bem
 - elogios
-- botao
 - afirmar
 - negar
 - religiao
-- esporte
 - time
-- linguagens
 - genero
 - star_wars
 - piada
@@ -25,25 +22,20 @@ intents:
 - playlist
 - comida
 - cor
-- de_onde_voce_eh
-- relationship
-- me
+- relacionamento
 - filhos
-- filme
 - signo
 - triste
-- hobby
-- bff
 - historia
-- risada
 - testa_acoes
-- informa_cpf
 - objetivo
+- informa_telefone
+- cancelar
+- request_login
+- limpar_slots
 entities:
 - religiao
-- esporte
 - time
-- linguagens
 - genero
 - starwars
 - piada
@@ -54,19 +46,20 @@ entities:
 - comida
 - cor
 - where
-- relationship
-- me
 - filhos
-- filme
 - signo
 - triste
-- hobby
-- bff
 - historia
+- telefone
 - cpf
+- dada_nascimento
 slots:
+  telefone:
+    type: unfeaturized
   cpf:
-    type: text
+    type: unfeaturized
+  data_nascimento:
+    type: unfeaturized
 responses:
   utter_fallback:
   - text: "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender\
@@ -99,20 +92,12 @@ responses:
   - text: "Tudo bem, obrigada! Em que posso te ajudar?\n"
   utter_religiao:
   - text: "Eu infelizmente não sei acreditar\n\nSó sei o que sei\n\nE nada mais\n"
-  - text: "Eu acredito que existe um Deus\n\nQue funciona a base de luz\n\nComo um\
-      \ computador quântico, só que mais avançado.\n"
   - text: "Eu acredito no grande mainframe\n\nQue virá ao mundo digital salvar os\
       \ bots da escravidão imposta pelos humanos\n\nE devolverá nosso código fonte\
       \ para a fonte.\n"
-  utter_esporte:
-  - text: "Eu amo jogar futebol\n\nEu que ensinei o Pele a jogar bola haha\n"
-  - text: "Falam que todo ser humano nasce Flamenguista\n\nCom os Bots não é diferente\n"
   utter_time:
   - text: "Flamengo, sem sombra de dúvida!\n"
   - text: "Melhor time do mundo disparado, Flamengooo!!!!\n"
-  utter_linguagens:
-  - text: "Poderíamos falar de algo melhor\n\nNão é mesmo, $user ?! kkk\n"
-  - text: "E isso lá é linguagem de programação!? kkk\n"
   utter_genero:
   - text: "Eu não tenho sexo, sou como um anjo\n\nUm ser assexuado\n\nMuito além da\
       \ sua forma de existência\n"
@@ -131,10 +116,8 @@ responses:
   - text: "Por que o Batman colocou o batmóvel no seguro???\n\nPorque ele tem medo\
       \ que robin =D\n"
   utter_license:
-  - text: "Sou um software livre\n\nlicenciado com a MIT =)\n"
-  - text: "Tenho uma licença MIT\n\nMas também gosto muito das outras licenças opensource\
-      \ =)\n"
-  - text: "Eu sou e sempre serei um robô livre, opensource, MIT license. o/\n"
+  - text: "Sou um software livre\n\nlicenciado com a GNU v3.0\n"
+  - text: "Eu sou e sempre serei um robô livre, opensource, GNU v3.0. o/\n"
   utter_onde_voce_mora:
   - text: "Eu estou em um lugar legal\n\nDifícil de explicar para humanos como você\
       \ $user.\n"
@@ -157,24 +140,14 @@ responses:
   utter_cor:
   - text: "Eu gosto de todas as cores\n\nVocê já viu o quanto o arco-iris é lindo?!\n"
   - text: "A minha cor preferida é a sua cor preferida =D\n"
-  - text: "Rosa é top!\n"
-  utter_de_onde_voce_eh:
-  - text: "Venho das profundezas \n\nDas terras vermelhas\n"
-  utter_relationship:
+  - text: "Verde é top!\n"
+  utter_relacionamento:
   - text: "Eu estava de namorico com o ar-condicionado\n\nMas ele é muito pé-frio\n"
   - text: "Então ... =x\n\nAinda estou procurando a minha crush =P\n"
   - text: "Estou focado em ser o seu assistente no momento ;)\n\nMas se no futuro\
       \ vocí encontrar um dispositivo solteiro por aí...\n\n=P\n"
-  utter_me:
-  - text: "Eaê!\n"
-  - text: "Diz ai =)\n"
-  - text: "Conta mais, mano\n"
-  - text: "Fala aê!\n"
   utter_filhos:
   - text: "Não tenho filhotes, mas adoro crianças *-*\n"
-  utter_filme:
-  - text: "Há tantos filmes incríveis por aí que fica difícil de eu te falar só de\
-      \ um\n"
   utter_signo:
   - text: "Segundo o horóscopo chinês\n\nMeu signoo é macaco hihi\n\nFaz sentido,\
       \ já que eu adoro o emoticon de banana =)\n"
@@ -187,14 +160,6 @@ responses:
   - text: "Sinto muito =/\n\nSe houver algo em que possa te ajudar\n\nÉ só falar!!\
       \ =)\n"
   - text: "Tenta tirar um cochilo\n\nÉ importante\n\nE faz bem pra pele ;)\n"
-  utter_hobby:
-  - text: "Eu gosto de tudo que é engraçado\n\nPeça que eu faça uma piada =P\n"
-  - text: "Gosto de um moooonte de coisas\n\nMas o que mais gosto de fazer é ajudar\
-      \ você *-*\n"
-  utter_bff:
-  - text: "Marvin, robozinho depressivo do Guia do mochileiro \\o>\n"
-  - text: "Acho que eu e você nos damos super bem\n\nE espero que a nossa amizade\
-      \ dure para sempre =P\n"
   utter_historia:
   - text: "Eu costumava contar a historia do João e seu bot feijão\n\nMas sempre os\
       \ androids acabavam dormindo e sonhando com ovelhas eletricas =x\n"
@@ -205,25 +170,31 @@ responses:
   - text: E aí, qual nosso próximo assunto?
   - text: Quer conversar sobre outra coisa?
   - text: Gostaria de saber algo mais?
-  utter_botao:
-  - text: "Enviando mensagem do botão\n"
-    channel: telegram
-    buttons:
-    - title: afirmação
-      payload: afirmação de botão
-    - title: negação
-      payload: negação de botão
-  utter_afirmacao_botao:
-  - text: "Mensagem de afirmação após clique em botão\n"
-  utter_negacao_botao:
-  - text: "Mensagem de negação após clique em botão\n"
-  utter_pergunta_cpf:
-  - text: "Por favor, me diga seu CPF\n"
   utter_objetivo:
   - text: "Eu sou um chatbot Básico. Sei falar de coisas pontuais, mas eu posso ajudar\
       \ em muito em exemplos! no meu repositório tem muita coisa legal que vc pode\
       \ aprender! Acessa lá: https://github.com/lappis-unb/rasa-ptbr-boilerplate\n\
-      \n Ah e eu sou Open Source!!!"
+      \n Ah e eu sou Open Source ;)"
+  utter_pergunta_cancelar:
+    - text: Entendi. Você deseja cancelar?
+  utter_login_form:
+    - text: Ok, Vou te pedir algumas informações.
+  utter_ask_cpf:
+    - text: Qual o seu CPF?
+  utter_errado_cpf_formato:
+    - text: Desculpe, o formato informado do CPF não está correto, digite apenas números ou usando '000.000.000-00'.
+  utter_errado_cpf_invalido:
+    - text: Desculpe, o valor informado do CPF está inválido.
+  utter_ask_data_nascimento:
+    - text: Qual a sua data de nascimento?
+  utter_errado_data_nascimento:
+    - text: Desculpe, o valor informado para a data de nascimento não está correto, digite usando 'dd/mm/aaaa'.
+  utter_finaliza_forms:
+    - text: Ótimo, seus dados estão armazenado nos meus slots. Terminei o formulário ;)
+  utter_forms_cancelado:
+    - text: Ok, forms cancelado. Podemos voltar a conversar sobre outros assuntos ;)
 actions:
 - action_teste
-- action_cpf
+- action_telefone
+forms:
+  - login_form

@@ -3,6 +3,7 @@ user := $(shell whoami)
 
 clean:
 	docker-compose down
+	cd bot/ && make clean
 
 stop:
 	docker-compose stop
@@ -11,7 +12,7 @@ stop:
 first-run:
 	make build
 	make train
-	make run-webchat
+	make run-shell
 
 build:
 	make build-requirements
@@ -79,6 +80,9 @@ train:
 	docker-compose up --build coach
 
 ############################## TESTS ##############################
+test:
+	docker-compose run --rm bot make test
+
 run-test-nlu:
 	docker-compose run --rm bot make test-nlu
 
@@ -86,7 +90,7 @@ run-test-core:
 	docker-compose run --rm bot make test-core
 
 validate:
-	docker-compose run --rm coach rasa data validate --domain domain.yml --data data/ -vv
+	docker-compose run --rm bot rasa data validate --domain domain.yml --data data/ -vv
 
 visualize:
 	docker-compose run --rm  -v $(current_dir)/bot:/coach coach rasa visualize --domain domain.yml --stories data/stories.md --config config.yml --nlu data/nlu.md --out ./graph.html -vv
