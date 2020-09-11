@@ -33,6 +33,8 @@ build-analytics:
 	docker-compose up -d rabbitmq
 	docker-compose up -d rabbitmq-consumer
 	docker-compose up -d kibana
+	make config-elastic
+	make config-kibana
 
 config-elastic:
 	docker-compose run --rm -v $(current_dir)/modules/analytics/setup_elastic.py:/analytics/setup_elastic.py bot python /analytics/setup_elastic.py
