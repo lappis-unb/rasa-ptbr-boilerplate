@@ -246,17 +246,6 @@
     - utter_historia
     - utter_continuar_conversa
 
-## path_risada 1
-* risada
-    - utter_risada
-    - utter_continuar_conversa
-
-## path_risada 2
-* cumprimentar
-    - utter_cumprimentar
-* risada
-    - utter_risada
-    - utter_continuar_conversa
 ## cumprimentar
 * cumprimentar
     - utter_cumprimentar
@@ -312,3 +301,7 @@
 ## objetivo
 * objetivo
     - utter_objetivo
+
+## story_limpar_slots
+* limpar_slots
+    - action_restart

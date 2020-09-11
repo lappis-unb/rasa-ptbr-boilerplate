@@ -12,9 +12,7 @@ intents:
 - afirmar
 - negar
 - religiao
-- esporte
 - time
-- linguagens
 - genero
 - star_wars
 - piada
@@ -24,27 +22,20 @@ intents:
 - playlist
 - comida
 - cor
-- de_onde_voce_eh
 - relacionamento
-- me
 - filhos
-- filme
 - signo
 - triste
-- hobby
-- bff
 - historia
-- risada
 - testa_acoes
 - objetivo
 - informa_telefone
 - cancelar
 - request_login
+- limpar_slots
 entities:
 - religiao
-- esporte
 - time
-- linguagens
 - genero
 - starwars
 - piada
@@ -56,7 +47,6 @@ entities:
 - cor
 - where
 - filhos
-- filme
 - signo
 - triste
 - historia

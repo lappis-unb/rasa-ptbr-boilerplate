@@ -43,19 +43,6 @@
 - qual a sua [religião](religiao)?
 - você acredita em alguma [religião](religiao)?
 
-## intent:esporte
-- voce joga [futebol](esporte)
-- vamos falar de [futebol](esporte)
-- qual o seu [esporte](esporte) favorito?
-- voce pratica [esporte](esporte)?
-- você joga basquete
-- você joga tênis
-- você joga vôlei
-- você joga xadrez
-- você joga damas
-- voce joga basquete
-- voce joga
-
 ## intent:time
 - qual o melhor time do brasil
 - qual é o seu time
@@ -210,19 +197,6 @@
 - cor preferida
 - cor da sorte
 
-## intent:de_onde_voce_eh
-- de onde você é?
-- onde você [nasceu](where)?
-- onde voce [nasceu](where)?
-- qual a sua [natalidade](where)?
-- em qual cidade você nasceu
-- em qual cidade voce nasceu
-- qual a sua naturalidade
-- qual a sua nacionalidade
-- de onde você veio
-- de onde voce veio
-- cidade de nascimento
-
 ## intent:relacionamento
 - Você tem [namorado](relationship)?
 - Você tem [namorada](relationship)?
@@ -260,21 +234,6 @@
 - você é pai
 - voce e pai
 
-## intent:filme
-- Me indica um [filme](filme)?
-- Qual o seu [filme](filme) favorito?
-- De qual [filme](filme) você gosta?
-- Qual o melhor [filme](filme)?
-- qual seu filme preferido
-- me indica um movie
-- melhor filme
-- filme incrível
-- filme maravilhoso
-- filme que gosta
-- filme que ama
-- filme favorito
-- filme preferido
-
 ## intent:signo
 - Qual o seu [signoo](signo)?
 - qual é o seu signo
@@ -303,24 +262,6 @@
 - tô infeliz
 - tô magoado
 - tô frustrado
-
-## intent:hobby
-- O que você [gosta de fazer](hobby)?
-- Quais são seus [hobbies](hobby)?
-- Me fala seu [hobby](hobby)?
-- Qual é o seu [hobby](hobby)?
-- Me fala o que você [gosta de fazer](hobby)?
-- qual o seu passatempo favorito
-- o que você gosta de fazer
-- o q vc gosta de fazer
-- como você se diverte
-- como voce se diverte
-- como você curte a vida
-- voce curte a vida
-- o que te diverte
-- gosta de fazer
-- [hobby](hobby)
-- [hobbies](hobby)
 
 ## intent:historia
 - me fala uma [história](historia)
@@ -475,3 +416,11 @@
 - Quero fazer login
 - Formulário de login
 - Rasa forms
+
+## intent:limpar_slots
+- Desejo apagar meus dados
+- Quero limpar os slots
+- clean slots
+- esqueça os meus dados
+- remova meu CPF e data de nascimento
+- limpar dados
