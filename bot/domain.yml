@@ -199,6 +199,10 @@ responses:
     - text: Qual a sua data de nascimento?
   utter_errado_data_nascimento:
     - text: Desculpe, o valor informado para a data de nascimento não está correto, digite usando 'dd/mm/aaaa'.
+  utter_finaliza_forms:
+    - text: Ótimo, seus dados estão armazenado nos meus slots. Terminei o formulário ;)
+  utter_forms_cancelado:
+    - text: Ok, forms cancelado. Podemos voltar a conversar sobre outros assuntos ;)
 actions:
 - action_teste
 - action_telefone

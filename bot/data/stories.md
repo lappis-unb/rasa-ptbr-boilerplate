@@ -1,11 +1,25 @@
-## story_login_form_caminho_feliz
+## story_login_form
 * request_login
   - utter_login_form
   - login_form
   - form{"name": "login_form"}
   - form{"name": null}
+* afirmar
+  - utter_finaliza_forms
 
 ## story_login_form
+* request_login
+  - utter_login_form
+  - login_form
+  - form{"name": "login_form"}
+* cancelar
+  - utter_pergunta_cancelar
+* negar
+  - form{"name": "login_form"}
+  - form{"name": null}
+  - utter_finaliza_forms
+
+## story_login_form_cancelar
 * request_login
   - utter_login_form
   - login_form
@@ -15,11 +29,12 @@
 * afirmar
   - action_deactivate_form
   - form{"name": null}
+  - utter_forms_cancelado
   - utter_continuar_conversa
 * negar
   - utter_despedir
 
-## story_login_form
+## story_login_form_cancelar
 * request_login
   - utter_login_form
   - login_form
@@ -29,32 +44,8 @@
 * afirmar
   - action_deactivate_form
   - form{"name": null}
+  - utter_forms_cancelado
   - utter_continuar_conversa
-* afirmar
-  - utter_cumprimentar
-
-## story_login_form
-* request_login
-  - utter_login_form
-  - login_form
-  - form{"name": "login_form"}
-* cancelar
-  - utter_pergunta_cancelar
-* afirmar
-  - action_deactivate_form
-  - form{"name": null}
-  - utter_continuar_conversa
-
-## story_login_form
-* request_login
-  - utter_login_form
-  - login_form
-  - form{"name": "login_form"}
-* cancelar
-  - utter_pergunta_cancelar
-* negar
-  - form{"name": "login_form"}
-  - form{"name": null}
 
 ## testa acoes
 * cumprimentar

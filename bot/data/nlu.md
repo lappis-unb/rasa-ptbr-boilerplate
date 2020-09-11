@@ -10,15 +10,15 @@
 - tchau
 - adeus
 - flw
+- Até mais, bot
 
 ## intent:testa_acoes
 - testa acoes
 - test custom action
 - custom action
-- actions
 - custom actions
-- action
 - test action
+- Rasa actions
 
 ## intent:informa_telefone
 - O meu número é [61 99999-9999](telefone)
@@ -32,9 +32,6 @@
 - voce e [catolico protestante](religiao)
 - voce tem [religiao](religiao)
 - voce e [mussumano](religiao)
-- [jesus](religiao)
-- [deus](religiao)
-- [crente](religiao)
 - [evengelico](religiao)
 - voce e [crente](religiao)
 - voce é [católico](religiao)
@@ -45,20 +42,12 @@
 - qual é o seu deus?
 - qual a sua [religião](religiao)?
 - você acredita em alguma [religião](religiao)?
-- [biblia](religiao)
-- [religiao](religiao)
-- deuses gregos
-- espiritismo
-- alcorão
-- alcorao
 
 ## intent:esporte
 - voce joga [futebol](esporte)
 - vamos falar de [futebol](esporte)
 - qual o seu [esporte](esporte) favorito?
 - voce pratica [esporte](esporte)?
-- [esporte](esporte)
-- [futebol](esporte)
 - você joga basquete
 - você joga tênis
 - você joga vôlei
@@ -66,13 +55,6 @@
 - você joga damas
 - voce joga basquete
 - voce joga
-- basquete
-- damas
-- xadrez
-- vôlei
-- volei
-- tênis
-- jogar
 
 ## intent:time
 - qual o melhor time do brasil
@@ -88,7 +70,6 @@
 - quem vai ser o campeao brasileiro nesse ano
 - time do brasil
 - melhor time
-- time
 
 ## intent:star_wars
 - [mestre yoda](starwars)
@@ -98,21 +79,13 @@
 - sabedoria [jedi](starwars)
 - concelhos [jedi](starwars)
 - [star wars](starwars)
-- [yoda](starwars)
 - concelhos do [yoda](starwars)
 - [guerra nas estrelas](starwars)
 - quero conselhos do yoda
 - lado negro da força
 - lado negro da forca
-- lado negro
 - frase de star wars
 - guerra nas estrelas
-- darth vader
-- luke
-- leia
-- c3po
-- r2d2
-- jedi
 
 ## intent:como_estou
 - [como voce é](how)?
@@ -171,7 +144,6 @@
 - voce [mora](live) no computador
 - voce [vive](live) na internet
 - [onde vc esta](live)
-- [cade vc](live)
 - qual é o seu habitat
 - qual é o seu endereço
 - qual e o seu endereco
@@ -191,39 +163,6 @@
 - você é uma mulher
 - você é andrógeno
 - voce e androgeno
-- andrógeno
-- androgeno
-- feminino
-- masculino
-- fêmea
-- macho
-- homem
-- mulher
-- sexo
-- vagina
-
-## intent:linguagens
-- o que acha do [java](linguagens)
-- o que acha do [c#](linguagens)
-- o que acha do [php](linguagens)
-- você gosta de [java](linguagens)
-- você gosta de [c#](linguagens)
-- você gosta de [php](linguagens)
-- e o [php](linguagens)
-- e o [java](linguagens)
-- e o [c#](linguagens)
-- [java](linguagens)
-- [php](linguagens)
-- linguagem [java](linguagens)
-- linguagem [php](linguagens)
-- linguagem [c#](linguagens)
-- qual é a sua linguagem
-- qual é a melhor linguagem de programação
-- linguagem de programação
-- linguagem de programacao
-- desenvolvedor
-- programador
-- codar
 
 ## intent:playlist
 - me indica uma música
@@ -241,9 +180,6 @@
 - indica uma musica
 - indicar música
 - indicar musica
-- spotify
-- musica
-- música
 
 ## intent:comida
 - Qual a sua [comida preferida](comida)?
@@ -259,9 +195,6 @@
 - o que voce prefere comer
 - qual seu rango favorito
 - me fala de comida
-- fast food
-- comida
-- rango
 
 ## intent:cor
 - Qual a sua [cor preferida](cor)?
@@ -276,7 +209,6 @@
 - cor favorita
 - cor preferida
 - cor da sorte
-- cor
 
 ## intent:de_onde_voce_eh
 - de onde você é?
@@ -289,10 +221,7 @@
 - qual a sua nacionalidade
 - de onde você veio
 - de onde voce veio
-- naturalidade
-- nacionalidade
 - cidade de nascimento
-- cidade natal
 
 ## intent:relacionamento
 - Você tem [namorado](relationship)?
@@ -319,40 +248,10 @@
 - amar alguém
 - gosta de alguém
 - gosta de alguem
-- é casado
-- casad
-- esposa
-- esposo
-
-## intent:me
-- [Ow](me)
-- [Ei](me)
-- [hey](me)
-- [yo](me)
-- [Fala](me) man
-- [Fala](me) macho
-- fala brother
-- fala irmão
-- fala irmao
-- iai irmão
-- iai irmao
-- iai mano
-- iai man
-- brother
-- mano
-- irmão
-- irmao
-- man
-- iai
 
 ## intent:filhos
 - Você tem [filhos](filhos)?
-- [filhos](filhos)?
 - Você tem [filhos](filhos)?
-- [filho](filhos)
-- [filha](filhos)
-- [filhas](filhos)?
-- [Filhote](filhos)?
 - Tem [filhote](filhos)?
 - Tem [filhotes](filhos)?
 - Quantos [filhos](filhos) você tem?
@@ -360,7 +259,6 @@
 - você é pai de quantos filhos
 - você é pai
 - voce e pai
-- pai
 
 ## intent:filme
 - Me indica um [filme](filme)?
@@ -382,11 +280,9 @@
 - qual é o seu signo
 - qual o seu signo
 - Fala seu [signoo](signo)?
-- [signoo](signo)
 - diz pra mim qual é seu signo
 - diz pra mim qual e seu signo
 - seu signo
-- signo
 
 ## intent:triste
 - Estou [triste](triste)
@@ -423,28 +319,8 @@
 - voce curte a vida
 - o que te diverte
 - gosta de fazer
-- te diverte
-- curtir a vida
-- passatempo
 - [hobby](hobby)
 - [hobbies](hobby)
-
-## intent:bff
-- qual é o seu [melhor amigo](bff)?
-- qual é o sua [melhor amiga](bff)?
-- Quem é seu [melhor amigo](bff)?
-- Quem é sua [melhor amiga](bff)?
-- [melhor amigo](bff)
-- [melhor amiga](bff)
-- [amigo](bff)
-- [amiga](bff)
-- Quem é seu [bff](bff)?
-- quem é seu best friend
-- Quem é sua [bff](bff)?
-- mais que amigos, friends
-- best friend forever
-- amigos pra sempre
-- [bff](bff)
 
 ## intent:historia
 - me fala uma [história](historia)
@@ -459,43 +335,18 @@
 - me conta uma experiencia
 - me conta uma historinha
 - me conta uma estória
-- experiência
-- hitorinha
-- estória
 
-## intent:risada
-- kkk
-- kkkkkkkkk
-- iuahsuahsuha
-- hehe
-- hehehehehe
-- haha
-- hahahahahaha
-- ksksksksks
-- risos
-- kospksposkpskspokspoksposk
-- jajajajajajajaja
-- rsrsrsrsrs
-- rsrs
-- rosos
-- pala
-- chorei de ri
-- ri
-- rachei
-- morri
 ## intent:out_of_scope
 - você fala sobre o meio ambiente
 - qual a origem do mundo
 - vc gosta de carnaval
 - batatinha quando nasce
 - imbecil
-- imbécil
 - nojento
 - chato
 - babaca
-- feio
-- burro
-
+- bot feio
+- bot, burro
 
 ## intent:elogios
 - você é muito educado
@@ -517,14 +368,6 @@
 - amei voce
 - adorei vc
 - amei vc
-- maravilhoso
-- educado
-- adorei
-- bonito
-- bonitão
-- lindo
-- lindão
-- lindao
 
 ## intent:negar
 - não
@@ -542,13 +385,8 @@
 ## intent:diga_mais
 - como funciona
 - me diga mais
-- não entendi
-- nao entendi
-- não é isso
-- nao eh isso
 - como assim
 - e como funciona
-- nao tenho certeza
 
 ## intent:tudo_bem
 - tudo bem
@@ -570,10 +408,6 @@
 - como vai você
 - como vai voce
 - como vai vc
-- como vai
-- como ta
-- joia
-- joinha
 
 ## intent: o_que_sei_falar
 - sobre o que você sabe falar
@@ -586,12 +420,10 @@
 - quero ajuda
 - meajuda
 - meajude
-- MEAJUD
 - MEAJDA
 - me ajuda
 - me ajude
 - ajuda eu
-- ajuda
 - menu
 
 ## intent:afirmar
@@ -599,12 +431,15 @@
 - confirmo
 - afirmo
 - claro
+- exato
+- isso mesmo
 
 ## intent:negar
 - não
 - nao
 - nego
 - cancelo
+- negativo
 
 ## intent:objetivo
 - Qual o seu objetivo robo?
