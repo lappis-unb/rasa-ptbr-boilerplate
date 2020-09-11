@@ -50,7 +50,7 @@ class LoginForm(FormAction):
         cpf = tracker.get_slot("cpf")
         data_nascimento = tracker.get_slot("data_nascimento")
         dispatcher.utter_message(
-            "Então seu CPF é: {} e sua data de nascimento é: {}.".format(
+            "Então seu CPF é: {} e sua data de nascimento é: {}?".format(
                 cpf, data_nascimento
             )
         )
