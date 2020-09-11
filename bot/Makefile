@@ -21,9 +21,6 @@ train:
 	rasa train -vv
 
 # TESTS
-validate:
-	rasa data validate -vv
-
 test:
 	rasa test --out results/
 
@@ -35,7 +32,7 @@ test-core:
 
 # VALIDACAO
 validate:
-	rasa data validate
+	rasa data validate -vv
 
 # MENSAGEIROS
 shell:

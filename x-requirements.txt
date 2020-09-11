@@ -1,2 +1,2 @@
 --extra-index-url https://pypi.rasa.com/simple
-rasa-x==0.28.0
+rasa-x==0.31.2

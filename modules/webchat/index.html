@@ -6,14 +6,11 @@
       Você deve ver uma bola azul no canto inferior direito do seu navegador.
     </center>
     <div id="webchat" />
-    <script src="https://storage.googleapis.com/mrbot-cdn/webchat-0.5.8.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
     <script>
         WebChat.default.init({
             selector: "#webchat",
-            initPayload: "oi",
-            interval: 1000, // 1000 ms between each message
-            //customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
-            // socketUrl: "http://localhost:3000",
+            initPayload: "/cumprimentar",
             socketUrl: "http://localhost:5005",
             socketPath: "/socket.io/",
             title: "Tais",

@@ -91,13 +91,14 @@ criar um repositório para as imagens e substitua os nomes das imagens "lappis/b
 make train
 ```
 
-### Console
+### Executando o bot no terminal
+Para executar o bot no terminal execute:
 
 ```sh
 make run-shell
 ```
 
-### Telegram
+### Executando o bot no Telegram
 
 Após realizar o [tutorial](/docs/setup_telegram.md) de exportação de todas variávies de ambiente necessárias, é possível realizar a execução do bot no telegram corretamente.
 
@@ -112,12 +113,6 @@ telegram:
  webhook_url: ${TELEGRAM_WEBHOOK}
 ```
 
-Se ainda não tiver treinado seu bot execute antes:
-
-```sh
-make train
-```
-
 Depois execute o bot no telegram:
 
 ```sh
@@ -128,113 +123,29 @@ make run-telegram
 
 Para a visualização dos dados da interação entre o usuário e o chatbot nós utilizamos uma parte da Stack do Elastic, composta pelo ElasticSearch e o Kibana. Com isso, utilizamos um broker para fazer a gerência de mensagens. Então conseguimos adicionar mensagens ao ElasticSearch independente do tipo de mensageiro que estamos utilizando.
 
-### Configuração do RabbitMQ
-
 * Para uma **configuração rápida** execute o seguinte comando:
 
 ```sh
 make build-analytics
 ```
 
-O comando acima só precisa ser executado apenas 1 vez e já vai deixar toda a infra de `analytics` pronta para o uso.
-
-Nas próximas vezes que desejar utilizar o `analytics` execute o comando:
-
-```sh
-make run-analytics
-```
-
-Por fim acesse o **kibana** no `locahost:5601`
-
-* **Explicação completa:**
-
-Em primeiro lugar para fazer o setup do analytics é necessário subir o RabiitMQ e suas configurações.
-
-Inicie o serviço do servidor do RabbitMQ:
-
-```sh
-sudo docker-compose up -d rabbitmq
-```
-
-Inicie o serviço do consumidor do RabbitMQ, que ficará responsável por enviar as mensagens para o ElasticSearch:
-
-```sh
-sudo docker-compose up -d rabbitmq-consumer
-```
-
-Lembre-se de configurar as seguintes variáveis de ambiente do serviço `rabbitmq-consumer` no `docker-compose`.
-
-```sh
-ENVIRONMENT_NAME=localhost
-BOT_VERSION=last-commit-hash
-RABBITMQ_DEFAULT_USER=admin
-RABBITMQ_DEFAULT_PASS=admin
-```
-
-Sendo que as configurações de `RABBITMQ_DEFAULT_USER` e `RABBITMQ_DEFAULT_PASS` devem ser as mesmas definidas no serviço do `rabbitmq`.
-
-#### Integração com Rasa
-
-Existem duas formas para executar a Tais com o *broker*. A primeira delas é via linha de comando.
-Para utilizar esta forma é preciso definir Dentro do arquivo `endpoints.yml` as configurações do broker:
-
-```yml
-event_broker:
-  url: rabbitmq
-  username: admin
-  password: admin
-  queue: bot_messages
-```
-
-Ao final é necessário buildar novamente o container do bot.
+Espere até os serviço do *ElasticSearch* estar pronto, e execute o comando abaixo para configurar os índices:
 
 ```
-sudo docker-compose up --build -d bot
-```
+make config-elastic
+``` 
 
-### Configuração ElasticSearch
-
-O ElasticSearch é o serviço responsável por armazenar os dados provenientes da interação entre o usuário e o chatbot.
-
-As mensagens são inseridas no índice do ElasticSearch utilizando o *broker* RabbitMQ.
-
-Para subir o ambiente do ElasticSearch rode os seguintes comandos:
+Espere até os serviço do *Kibana* estar pronto, e execute o comando abaixo para configurar os *dashboards*:
 
 ```
-sudo docker-compose up -d elasticsearch
-sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
-```
+make config-kibana
+``` 
 
-Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
+O comando acima precisa ser executado apenas 1 vez e já vai deixar toda a infra de `analytics` pronta para o uso.
 
-```
-ENVIRONMENT_NAME=localhost
-BOT_VERSION=last-commit-hash
-```
+Acesse o **kibana** na url `locahost:5601`
 
-#### Setup Kibana (Visualização)
-
-Para a análise dos dados das conversas com o usuário, utilize o kibana, e veja como os usuários estão interagindo com o bot, os principais assuntos, média de usuários e outras informações da análise de dados.
-
-O Kibana nos auxilia com uma interface para criação de visualização para os dados armazenados nos índices do ElasticSearch.
-
-```sh
-sudo docker-compose up -d kibana
-```
-
-**Atenção:** Caso queira configurar permissões diferentes de usuários (Login) no ElasticSearch/Kibana, siga esse tutorial ([link](https://github.com/lappis-unb/rasa-ptbr-boilerplate/tree/master/docs/setup_user_elasticsearch.md)).
-
-#### Importação de dashboards
-
-Caso queira subir com os dashboards que criamos para fazer o monitoramento de bots:
-
-```
-sudo docker-compose run --rm kibana python3.6 import_dashboards.py
-```
-
-Após rodar o comando anterior os dashboards importados estarão presentes no menu management/kibana/Saved Objects.
-
-Você pode acessar o kibana no `locahost:5601`
+Caso você deseje entender o processo de configuração da *stack* de *analytics*, veja a [explicação completa de analytics](docs/setup_analytics.md).
 
 ## Notebooks - Análise de dados
 
