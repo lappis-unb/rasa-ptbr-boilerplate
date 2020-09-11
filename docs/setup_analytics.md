@@ -1,7 +1,7 @@
 ## Configuração da stack de analytics
 Este documento tem por objetivo detalhar o processo de configuração da *stack* de *analytics* utilizada no boilerplate.
 
-Aqui os passos de configuração são descritos separadamente, para facilitar o entendimento e a adaptação. Caso você já tenha executado o comando `make build-analytics`, não é necessário executar os passos abaixo, e o *analytics* já deve estar funcionando para o seu *bot*.
+Aqui os passos de configuração são descritos separadamente, para facilitar o entendimento e a adaptação. Caso você já tenha executado os comandos `make build-analytics`, `make config-elastic` e `make config-kibana`, não é necessário executar os passos abaixo, e o *analytics* já deve estar funcionando para o seu *bot*.
 
 #### RabbitMQ
 
@@ -40,12 +40,6 @@ event_broker:
   password: admin
   queues:
     - bot_messages
-```
-
-Ao final é necessário buildar novamente o container do bot.
-
-```
-sudo docker-compose up -d --force-recreate bot
 ```
 
 #### Configuração ElasticSearch
