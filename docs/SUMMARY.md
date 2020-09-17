@@ -20,6 +20,9 @@
 * [Setup]()
     * [Setup do bot no Telegram](Setup/setup_telegram.md)
     * [Configurando os usuários](Setup/setup_user_elasticsearch.md)
+<<<<<<< HEAD
 
 
 * [Teste](teste.md)
+=======
+>>>>>>> 45b6845... Setup gitbook
