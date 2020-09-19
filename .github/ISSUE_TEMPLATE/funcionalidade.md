@@ -7,9 +7,15 @@ assignees: ''
 
 ---
 
-**A sua sugestão de funcionalidade está relacionada a um problema? Descreva**
+# Problema
+Descreva o problema ou melhoria
 
-**Descreva a solução desejada**
+# Sugestão de solução
+Fala um pouco o que seria uma boa solução (não necessariamente tecnicamente)
 
-**Tarefas:**
-- [ ]
+## Tarefas
+- [ ] Alguns passos para a solução 
+- [ ] Critério de aceitação etc
+
+
+> Usem o espaço da issue para discutir sobre as soluções
