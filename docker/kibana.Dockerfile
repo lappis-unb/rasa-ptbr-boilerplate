@@ -8,7 +8,7 @@ USER root
 RUN yum -y update
 RUN yum -y install yum-utils
 RUN yum -y groupinstall development
-RUN yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+RUN yum -y install https://repo.ius.io/ius-release-el7.rpm
 RUN yum -y install python36u
 RUN yum -y install python36u-pip
 
