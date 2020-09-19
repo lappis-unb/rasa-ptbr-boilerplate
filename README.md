@@ -2,6 +2,7 @@
 <!-- badges -->
 <a href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html"><img src="https://img.shields.io/badge/licence-GPL3-green.svg"/></a>
 <a href="https://codeclimate.com/github/lappis-unb/rasa-ptbr-boilerplate/maintainability"><img src="https://api.codeclimate.com/v1/badges/3fe22bf52000e147c6df/maintainability"/></a>
+![badge_build](https://github.com/lappis-unb/rasa-ptbr-boilerplate/workflows/build_bot/badge.svg)
 
 
 ## For English version, see [README-en](docs/README-en.md)
