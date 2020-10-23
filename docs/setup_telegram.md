@@ -17,6 +17,8 @@ Segura elas aí, pois vamos precisar em breve.
 
 Precisamos configurar um webhook para fazer a comunicação do nosso bot com o telegram.
 Para isso, vamos utilizar o [ngrok](https://ngrok.com/download).
+Nesse link, você vai fazer o download. E executar o comando de unzip do arquivo.
+
 Faça o download, extraia o arquivo que foi baixado e execute o comando a seguir.
 
 ```sh
@@ -70,6 +72,7 @@ telegram:
  verify: ${TELEGRAM_BOT_USERNAME}
  webhook_url: ${TELEGRAM_WEBHOOK}
 ```
+Não precisa trocar nenhuma informação, apenas descomentar essa seção do arquivo.
 
 
 Com isso, é possível realizar a execução do bot com o comando
@@ -77,6 +80,9 @@ Com isso, é possível realizar a execução do bot com o comando
 ```
 make run-telegram
 ```
+
+Assim que rodar o comando, você pode conversar com o seu bot no telegram.
+Basta procurar ele pelo username que você criou.
 
 Para mais comandos e informações, veja o [README](https://github.com/lappis-unb/rasa-ptbr-boilerplate/blob/main/README.md)
 
