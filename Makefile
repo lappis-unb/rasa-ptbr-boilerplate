@@ -62,11 +62,10 @@ run-webchat:
 	$(info Executando Bot com Webchat.)
 	$(info )
 	docker-compose run -d --rm --service-ports bot-webchat
+	docker-compose up -d webchat
 	$(info )
-	$(info Caso o FIREFOX não seja iniciado automáticamente, abra o seguinte arquivo com seu navegador:)
-	$(info modules/webchat/index.html)
+	$(info Acesse o WEBCHAT em: http://localhost:5010)
 	$(info )
-	firefox modules/webchat/index.html
 
 run-telegram:
 	docker-compose run -d --rm --service-ports bot_telegram make telegram

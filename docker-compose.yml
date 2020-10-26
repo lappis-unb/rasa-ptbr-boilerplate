@@ -125,6 +125,16 @@ services:
       - env/rabbitmq-consumer.env
     command: python3 /opt/scripts/consume_bot_messages.py
 
+
+  # ============================ Webchat Page  =================================
+  # A container to run webchat html page
+  webchat:
+    image: nginx
+    ports:
+      - 5010:80
+    volumes:
+      - ./modules/webchat:/usr/share/nginx/html
+
   # ============================ Telegram Bot =================================
   # Specific Rasa bot integrated with Telegram.
   bot_telegram:
