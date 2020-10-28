@@ -29,10 +29,10 @@ class LoginForm(FormAction):
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         """A dictionary to map required slots to
-            - an extracted entity
-            - intent: value pairs
-            - a whole message
-            or a list of them, where a first match will be picked"""
+        - an extracted entity
+        - intent: value pairs
+        - a whole message
+        or a list of them, where a first match will be picked"""
         return {
             "cpf": self.from_text(not_intent="cancelar"),
             "data_nascimento": self.from_text(not_intent="cancelar"),
@@ -45,7 +45,7 @@ class LoginForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
         """Define what the login form will do after
-            all required slots are filled"""
+        all required slots are filled"""
 
         cpf = tracker.get_slot("cpf")
         data_nascimento = tracker.get_slot("data_nascimento")
@@ -94,4 +94,3 @@ class LoginForm(FormAction):
             # validation failed, set this slot to None, meaning the
             # user will be asked for the slot again
             return {"data_nascimento": None}
-
