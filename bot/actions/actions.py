@@ -39,7 +39,7 @@ class ActionTelefone(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        telefone = tracker.get_slot('telefone')
+        telefone = tracker.get_slot("telefone")
 
         try:
             dispatcher.utter_message("O seu telefone é {}?".format(telefone))

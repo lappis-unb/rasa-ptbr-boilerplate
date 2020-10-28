@@ -45,7 +45,10 @@ if __name__ == "__main__":
             if not es.indices.exists(index_name):
                 logger.debug(
                     es.indices.create(
-                        index=index_name, ignore=400, params=param, body=settings,
+                        index=index_name,
+                        ignore=400,
+                        params=param,
+                        body=settings,
                     )
                 )
                 logger.info("Created Index")

@@ -117,7 +117,8 @@ def create_bot_user():
         print("User already created.")
 
     api_post(
-        "users.setAvatar", {"avatarUrl": bot["avatar"], "username": bot["username"]},
+        "users.setAvatar",
+        {"avatarUrl": bot["avatar"], "username": bot["username"]},
     )
 
 
@@ -169,6 +170,7 @@ if __name__ == "__main__":
             rocket_available = True
         except Exception:
             import time
+
             logger.info("\n\n --------- Rocket Chat Unavailable! --------\n\n")
             logger.info(">> Waiting for 3 seconds...")
             time.sleep(3)
@@ -176,15 +178,17 @@ if __name__ == "__main__":
     logger.info(">> Connected to Rocket Instance")
 
     if user_header:
-        logger.info(">> Create user")
-        create_bot_user()
+        try:
+            logger.info(">> Create user")
+            create_bot_user()
 
-        logger.info(">> Configure Rocketchat")
-        configure_rocketchat()
+            logger.info(">> Configure Rocketchat")
+            configure_rocketchat()
 
-        logger.info(">> Configure Webhooks")
-        configure_webhooks()
-
+            logger.info(">> Configure Webhooks")
+            configure_webhooks()
+        except Exception as e:
+            logger.error(f"Problem while trying to configure bot in Rocketchat: {e}")
 
     else:
         logger.error(">> Login Failed")
