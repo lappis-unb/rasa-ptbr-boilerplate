@@ -176,14 +176,18 @@ if __name__ == "__main__":
     logger.info(">> Connected to Rocket Instance")
 
     if user_header:
-        logger.info(">> Create user")
-        create_bot_user()
+        try:
+            logger.info(">> Create user")
+            create_bot_user()
 
-        logger.info(">> Configure Rocketchat")
-        configure_rocketchat()
+            logger.info(">> Configure Rocketchat")
+            configure_rocketchat()
 
-        logger.info(">> Configure Webhooks")
-        configure_webhooks()
+            logger.info(">> Configure Webhooks")
+            configure_webhooks()
+        except Exception as e:
+            logger.error(f"Problem while trying to configure bot in Rocketchat: {e}")
+
 
 
     else:
