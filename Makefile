@@ -76,6 +76,9 @@ run-notebooks:
 	$(info Acesse o KIBANA em: http://localhost:8888)
 	$(info )
 
+run-rocket:
+	docker-compose up -d rocketchat bot-rocket
+
 train:
 	mkdir -p bot/models
 	docker-compose up --build coach
