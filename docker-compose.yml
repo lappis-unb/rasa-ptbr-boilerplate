@@ -23,6 +23,7 @@ services:
       - ./bot/:/bot/
     ports:
       - 5004:5004
+      - 5002:5002
     depends_on:
       - actions
 
