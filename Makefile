@@ -29,10 +29,7 @@ build-coach:
 	docker-compose build --no-cache coach
 
 build-analytics:
-	docker-compose up -d elasticsearch
-	docker-compose up -d rabbitmq
-	docker-compose up -d rabbitmq-consumer
-	docker-compose up -d kibana
+	make run-analytics
 	make config-elastic
 	make config-kibana
 
@@ -42,8 +39,14 @@ config-elastic:
 config-kibana:
 	docker-compose run --rm -v $(current_dir)/modules/analytics/:/analytics/ kibana python3 /analytics/import_dashboards.py
 	$(info )
-	$(info Acesse o KIBANA em: http://localhost:5601)
+	$(info Acesse o KIBANA em: http://localhost:5004)
 	$(info )
+
+run-analytics:
+	docker-compose up -d elasticsearch
+	docker-compose up -d rabbitmq
+	docker-compose up -d rabbitmq-consumer
+	docker-compose up -d kibana
 
 run-shell:
 	docker-compose run --rm --service-ports bot make shell

@@ -22,7 +22,7 @@ services:
     volumes:
       - ./bot/:/bot/
     ports:
-      - 5004:5004
+      - 5006:5006
     depends_on:
       - actions
 
@@ -62,7 +62,7 @@ services:
       volumes:
         - ./bot/:/bot/
       ports:
-        - 5005:5005
+        - 5007:5007
       depends_on:
         - actions
       command: sh -c "make webchat"
@@ -105,7 +105,7 @@ services:
       dockerfile: ./docker/kibana.Dockerfile
     restart: unless-stopped
     ports:
-      - 5601:5601
+      - 5004:5601
     env_file:
       - env/kibana.env
     depends_on:
@@ -206,7 +206,7 @@ services:
       - mongo
       - mongo-init-replica
     ports:
-      - 3000:3000
+      - 5003:3000
 
   mongo:
     image: mongo:4.0
