@@ -31,6 +31,9 @@ build-coach:
 build-analytics:
 	make run-analytics
 	make config-elastic
+	# This line should be removed ASAP
+	sleep 10
+	# Run this command only when kibana is up and ready. A script is needed.
 	make config-kibana
 
 config-elastic:
@@ -81,6 +84,9 @@ run-notebooks:
 
 run-rocket:
 	docker-compose up -d rocketchat bot-rocket
+	$(info )
+	$(info Acesse o ROCKETCHAT em: http://localhost:5003)
+	$(info )
 
 train:
 	mkdir -p bot/models
