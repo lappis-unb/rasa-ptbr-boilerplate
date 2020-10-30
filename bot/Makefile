@@ -36,17 +36,22 @@ validate:
 
 # MENSAGEIROS
 shell:
-	rasa shell -m models/ -vv --endpoints endpoints.yml --port 5004
+	rasa shell -m models/ -vv --endpoints endpoints.yml --port 5006
 
 telegram:
 	rasa run -m models/ -vv --port 5001 --credentials credentials.yml \
 	--endpoints endpoints.yml
 
 webchat:
-	rasa run -m models/ -vv --endpoints endpoints.yml --credentials credentials.yml --port 5005 --cors '*'
+	rasa run -m models/ -vv --endpoints endpoints.yml --credentials credentials.yml --port 5007 --cors '*'
 
 api:
 	rasa run -m models/ -vv --endpoints endpoints.yml --enable-api
+
+rocket:
+	python /modules/rocketchat/bot_config.py
+	rasa run -m models/ -vv --endpoints endpoints.yml --credentials credentials.yml --port 5005 --cors '*'
+
 
 # ACTIONS
 actions:

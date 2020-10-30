@@ -29,11 +29,11 @@ build-coach:
 	docker-compose build --no-cache coach
 
 build-analytics:
-	docker-compose up -d elasticsearch
-	docker-compose up -d rabbitmq
-	docker-compose up -d rabbitmq-consumer
-	docker-compose up -d kibana
+	make run-analytics
 	make config-elastic
+	# This line should be removed ASAP
+	sleep 10
+	# Run this command only when kibana is up and ready. A script is needed.
 	make config-kibana
 
 config-elastic:
@@ -44,6 +44,12 @@ config-kibana:
 	$(info )
 	$(info Acesse o KIBANA em: http://localhost:5601)
 	$(info )
+
+run-analytics:
+	docker-compose up -d elasticsearch
+	docker-compose up -d rabbitmq
+	docker-compose up -d rabbitmq-consumer
+	docker-compose up -d kibana
 
 run-shell:
 	docker-compose run --rm --service-ports bot make shell
@@ -62,11 +68,10 @@ run-webchat:
 	$(info Executando Bot com Webchat.)
 	$(info )
 	docker-compose run -d --rm --service-ports bot-webchat
+	docker-compose up -d webchat
 	$(info )
-	$(info Caso o FIREFOX não seja iniciado automáticamente, abra o seguinte arquivo com seu navegador:)
-	$(info modules/webchat/index.html)
+	$(info Acesse o WEBCHAT em: http://localhost:5010)
 	$(info )
-	firefox modules/webchat/index.html
 
 run-telegram:
 	docker-compose run -d --rm --service-ports bot_telegram make telegram
@@ -75,6 +80,12 @@ run-notebooks:
 	docker-compose up -d notebooks
 	$(info )
 	$(info Acesse o KIBANA em: http://localhost:8888)
+	$(info )
+
+run-rocket:
+	docker-compose up -d rocketchat bot-rocket
+	$(info )
+	$(info Acesse o ROCKETCHAT em: http://localhost:5003)
 	$(info )
 
 train:
