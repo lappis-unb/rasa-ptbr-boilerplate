@@ -42,7 +42,7 @@ config-elastic:
 config-kibana:
 	docker-compose run --rm -v $(current_dir)/modules/analytics/:/analytics/ kibana python3 /analytics/import_dashboards.py
 	$(info )
-	$(info Acesse o KIBANA em: http://localhost:5004)
+	$(info Acesse o KIBANA em: http://localhost:5601)
 	$(info )
 
 run-analytics:
