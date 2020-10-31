@@ -211,7 +211,7 @@ Caso na hora de instalar o gitbook a versão do npm estiver desatualizada, você
 
 Na raíz do projeto tem o arquivo `SUMMARY.md`, e é importante se atentar a ele pois o que não estiver mapeado nele, não será possível abrir como uma página html no gitbook.
 
-**Contribuição**: Para contribuir com a documentação do projeto leia [como contribuir para a documentação]()
+**Contribuição**: Para contribuir com a documentação do projeto leia [como contribuir para a documentação](docs/Tutoriais/tutorial-como-contribuir-com-documentacao.md)
 
 # Como conseguir ajuda
 
