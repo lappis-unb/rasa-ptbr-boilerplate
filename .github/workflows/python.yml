@@ -39,6 +39,9 @@ jobs:
         make test
   lint:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7]
     steps:
     - name: Lint with flake8
       run: |
