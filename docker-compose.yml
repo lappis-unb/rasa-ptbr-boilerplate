@@ -105,7 +105,7 @@ services:
       dockerfile: ./docker/kibana.Dockerfile
     restart: unless-stopped
     ports:
-      - 5004:5601
+      - 5601:5601
     env_file:
       - env/kibana.env
     depends_on:
