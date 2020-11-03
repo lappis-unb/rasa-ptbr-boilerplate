@@ -46,7 +46,7 @@ webchat:
 	rasa run -m models/ -vv --endpoints endpoints.yml --credentials credentials.yml --port 5007 --cors '*'
 
 api:
-	rasa run -m models/ -vv --endpoints endpoints.yml --enable-api
+	rasa run -m models/ -vv --endpoints endpoints.yml --enable-api --port 5006
 
 rocket:
 	python /modules/rocketchat/bot_config.py
