@@ -74,14 +74,14 @@ conectores, onde ele identifica a *intent*, e responde pelo Rasa Core, de acordo
 As *models* utilizadas para a conversação foram geradas pelo módulo *trainer* e depois transferidas para o bot, estes
 modelos podem ser versionados e evoluídos entre bots.  
 Os notebooks avaliam o funcionamento de acordo com o formato das *intents* e *stories*.
-O elasticsearch coleta os dados da conversa e armazena para a análise feita pelo kibana, que gera gráficos para
+O ElasticSearch coleta os dados da conversa e armazena para a análise feita pelo Kibana, que gera gráficos para
 avaliação das conversas dos usuários e do boilerplate.
 
 ### Bot
 
 Este script foi configurado para construir as imagens genéricas necessárias para execução deste ambiente.
 Caso seu projeto utilize este boilerplate e vá realizar uma integração contínua ou similar, é interessante
-criar um repositório para as imagens e substitua os nomes das imagens "lappis/bot", e "lappis/botrequirements" pelas suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público.
+criar um repositório para as imagens e substituir os nomes das imagens "lappis/bot", e "lappis/botrequirements" pelas suas respectivas novas imagens, por exemplo "<organização>/bot" em repositório público.
 
 
 ### Treinamento
@@ -150,6 +150,68 @@ make run-notebooks
 ```
 
 Acesse o notebook em `localhost:8888`
+
+## Documentação
+
+A documentação do projeto pode ser executada localmente utilizando o [GitBook](https://www.gitbook.com/).
+Para instalar o gitbook via npm, é preciso ter instalado no computador [Node.js e npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+
+Para conferir a versão do npm:
+
+```sh
+npm -v
+```
+
+Agora instale o [gitbook](https://til.secretgeek.net/gitbook/use_gitbook_locally.html):
+
+```sh
+npm install -g gitbook
+```
+
+Agora instale o pacote `cli`:
+
+```sh
+npm install -g gitbook-cli
+```
+
+Depois de instalado, na pasta raíz do projeto, execute:
+
+```sh
+gitbook build .
+```
+
+E para rodar localmente execute:
+
+```sh
+gitbook serve .
+```
+
+E acesse:
+
+```
+http://localhost:4000/
+```
+
+Você também pode rodar o projeto em uma porta diferente:
+
+```sh
+gitbook serve . --port 4003
+```
+
+
+
+#### Observações
+
+Quando executa o comando `gitbook build .` é criado uma pasta `_book` que contém o arquivo `index.html` e os outros htmls da documentação. Desta forma também é possível visualizar o arquivo `_book/index.html` diretamente em um navegador. 
+
+
+Caso na hora de instalar o gitbook a versão do npm estiver desatualizada, você pode atualizar para a [versão mais recente](https://docs.npmjs.com/try-the-latest-stable-version-of-npm) ou uma versão específica.
+
+
+Na raíz do projeto tem o arquivo `SUMMARY.md`, e é importante se atentar a ele pois o que não estiver mapeado nele, não será possível abrir como uma página html no gitbook.
+
+**Contribuição**: Para contribuir com a documentação do projeto leia [como contribuir para a documentação](docs/Tutoriais/tutorial-como-contribuir-com-documentacao.md)
 
 # Como conseguir ajuda
 

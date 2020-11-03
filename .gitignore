@@ -29,6 +29,9 @@ db/
 ### PyCharm ###
 .idea/
 
+### GitBook ###
+_book/
+
 # Created by https://www.gitignore.io/api/vim,linux,macos,python
 ### Linux ###
 *~
