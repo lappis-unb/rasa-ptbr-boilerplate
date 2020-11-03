@@ -61,7 +61,7 @@ run-actions:
 	docker-compose run --rm --service-ports bot make actions
 
 run-x:
-	docker-compose run --rm --service-ports bot make x
+	docker-compose run --rm --service-ports x make x
 
 run-webchat:
 	$(info )
