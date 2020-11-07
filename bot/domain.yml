@@ -2,6 +2,7 @@ session_config:
   session_expiration_time: 60.0
   carry_over_slots_to_new_session: true
 intents:
+- boca_suja
 - cumprimentar
 - o_que_sei_falar
 - despedir
@@ -34,6 +35,7 @@ intents:
 - request_login
 - limpar_slots
 entities:
+- palavrao
 - religiao
 - time
 - genero
@@ -61,6 +63,14 @@ slots:
   data_nascimento:
     type: unfeaturized
 responses:
+  utter_boca_suja:
+  - text: "Que feiuraaa, falando palavrão! 😮"
+  - text: "Olha a boca suja, meu consagrado..."
+  - text: "Iiiihh, apelou perdeu!"
+  - text: "Para de xingar, c@*!# kkk brincs 😅 (mas para mesmo)"
+  - text: "Que deselegante"
+  - text: "Ela ta brava, ela..."
+  - text: "Ih, gente, qual a necessidade disso!?!"
   utter_fallback:
   - text: "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender\
       \ direito\nVocê pode perguntar de novo de outro jeito?\n"

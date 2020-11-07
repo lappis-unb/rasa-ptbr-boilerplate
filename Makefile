@@ -95,7 +95,7 @@ validate:
 	docker-compose run --rm bot rasa data validate --domain domain.yml --data data/ -vv
 
 visualize:
-	docker-compose run --rm  -v $(current_dir)/bot:/coach coach rasa visualize --domain domain.yml --stories data/stories.md --config config.yml --nlu data/nlu.md --out ./graph.html -vv
+	docker-compose run --rm  -v $(current_dir)/bot:/bot coach rasa visualize --domain domain.yml --stories data/stories.md --config config.yml --nlu data/nlu.md --out ./graph.html -vv
 	$(info )
 	$(info Caso o FIREFOX não seja iniciado automáticamente, abra o seguinte arquivo com seu navegador:)
 	$(info bot/graph.html)

@@ -1,3 +1,27 @@
+## intent:boca_suja
+- [caralho](palavrao)
+- oh [carai](palavrao)
+- ah [carai](palavrao)
+- [porra](palavrao)
+- [pourra](palavrao)
+- vai se [fuder](palavrao)
+- va se [fude](palavrao)
+- va pra [porra](palavrao)
+- va pa [porra](palavrao)
+- va a [merda](palavrao)
+- vai a [merda](palavrao)
+- merda
+- [cuzão](palavrao)
+- [cuzao](palavrao)
+- [buceta](palavrao)
+- pau no [cu](palavrao)
+- filho da [puta](palavrao)
+- fi da égua
+- fi da egua
+- fi da puta
+- você é um [otário](palavrao)
+- voce é um [otaro](palavrao)
+
 ## intent:cumprimentar
 - olá
 - Ola
