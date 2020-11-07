@@ -389,7 +389,6 @@
 - Você foi feito pra que?
 - Vc tem algum propósito?
 - Como que vc pode me ser útil?
-- Me fale mais sobre você.
 
 ## intent:cancelar
 - Desisto
@@ -424,3 +423,39 @@
 - esqueça os meus dados
 - remova meu CPF e data de nascimento
 - limpar dados
+
+## intent:sus_saber_mais
+- O que é o [SUS](sistema_unico_saude)?
+- Você sabe o que é o [sistema único de saúde](sistema_unico_saude)?
+- Me fala um pouco sobre o [sus](sistema_unico_saude).
+- Quero informações sobre o [sistema de saúde](sistema_unico_saude)
+- Me diz mais sobre o [Sus](sistema_unico_saude).
+- quero saber mais sobre o [sus](sistema_unico_saude)
+- Quem é o [sus](sistema_unico_saude)?
+- Me fala do SUS
+- o [sus](sistema_unico_saude) é bom?
+- O que o [sus](sistema_unico_saude) faz
+
+## intent:sus_avancado
+- Quais as politicas do [sistema de saude](sistema_unico_saude)
+- quais as atribuições do [sistema de saude pública](sistema_unico_saude)
+- Como o [SUS](sistema_unico_saude) é organizado
+- Quem cuida do [SUS](sistema_unico_saude)
+- Quais pessoas são atendidas no [sistema nacional de saude](sistema_unico_saude)
+- Me fala uma curiosidade sobre o [SUS](sistema_unico_saude)
+- O que mais voce sabe sobre o [sistema saude publica](sistema_unico_saude)
+- Quais são as áreas que o [SUS](sistema_unico_saude) atua?
+- Onde o [SUS](sistema_unico_saude) está presente?
+
+## synonym:sistema_unico_saude   <!-- synonyms, method 2 -->
+- sus
+- SUS
+- sistema unico de saude
+- sistema de saude publica
+- Sistema Único de Saúde
+- Saúde pública
+- sistema de saúde
+- sistema saude
+- saude pública
+- sistema nacional de saúde
+- sistema de saúde brasileiro

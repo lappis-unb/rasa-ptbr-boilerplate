@@ -305,3 +305,23 @@
 ## story_limpar_slots
 * limpar_slots
     - action_restart
+
+## O que eh o SUS 1
+* sus_saber_mais
+    - utter_sobre_sus
+    - utter_sobre_sus_politica
+    - utter_sobre_sus_programas
+
+## O que eh o SUS 2
+* cumprimentar
+    - utter_cumprimentar
+    - utter_continuar_conversa
+* sus_saber_mais
+    - utter_sobre_sus
+    - utter_sobre_sus_politica
+    - utter_sobre_sus_curiosidades
+
+## Mais ainda sobre o SUS 1
+* sus_avancado
+    - utter_sobre_sus_programas
+    - utter_sobre_sus_curiosidades

@@ -33,6 +33,8 @@ intents:
 - cancelar
 - request_login
 - limpar_slots
+- sus_saber_mais
+- sus_avancado
 entities:
 - religiao
 - time
@@ -53,6 +55,7 @@ entities:
 - telefone
 - cpf
 - dada_nascimento
+- sistema_unico_saude
 slots:
   telefone:
     type: unfeaturized
@@ -193,6 +196,32 @@ responses:
     - text: Ótimo, seus dados estão armazenado nos meus slots. Terminei o formulário ;)
   utter_forms_cancelado:
     - text: Ok, forms cancelado. Podemos voltar a conversar sobre outros assuntos ;)
+  utter_sobre_sus:
+  - text: "O SUS é o sistema de saúde pública do Brasil: o Sistema Único de Saúde."
+  utter_sobre_sus_politica:
+  - text: "É a maior política de saúde pública do país e foi criado para atender todos os brasileiros, prestando serviços médicos de saúde à população."
+  - text: "É um dos maiores sistemas de saúde pública do mundo, considerado um dos mais completos, pela quantidade de serviços que oferece."
+  utter_sobre_sus_programas:
+  - text: "Alguns dos programas do SUS são serviços de atenção primária, o atendimento\
+           inicial dos pacientes nas ambulâncias, serviços de pronto socorro e UPAs.\
+           Além do programa nacional de imunização"
+  - text: "No SUS tem atendimento em ambulância, UPA, zé gotinha com a vacinação, pronto socorro e muito mais"
+  utter_sobre_sus_principios:
+  - text: "O SUS se baseia nos princípios:  universalidade, integralidade, equidade"
+  - text: "O SUS tem 3 princípios: \n1. Chegar em todos os cidadãos \n2.Atendimento\
+           de forma integral \n3. Igualdade entre os pacientes"
+  utter_sobre_sus_curiosidades:
+  - text: "Você sabia que só na Constituição de 88 a saúde passa a ser direito do cidadão e dever do estado?"
+  - text: "Você conhecia o Programa Saúde da Família? Nele, a equipe que atende nas UBSs \
+           precisa entender a realidade das famílias, os riscos e problemas de saúde mais comuns, \
+           e promover discussões relacionadas a saúde nas comunidades."
+  - text: "O Programa Nacional de Imunização do Brasil é um caso de sucesso reconhecido internacionalmente. Segura esse reconhecimento!"
+  - text: "O Brasil oferece gratuitamente todas as vacinas recomendadas pela Organização Mundial da Saúde.💉"
+  - text: "O Programa Mais Médicos tem como objetivo humanizar o atendimento médico, aproximando esses profissionais das comunidades que atendem."
+  - text: "Sabia que atualmente são quase 900 remédios fornecidos sem custo pelo SUS?"
+  - text: "O Brasil é referência mundial no controle da epidemia de HIV/AIDS e desde 1996."
+  - text: "O SAMU é SUS."
+  - text: "Sofreu um acidente? O socorro prestado é SUS. Sabia disso?"
 actions:
 - action_teste
 - action_telefone
