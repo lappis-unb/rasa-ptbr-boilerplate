@@ -37,6 +37,8 @@ services:
       - ./bot/:/bot/
     ports:
       - 5002:5002
+    env_file:
+      - env/rasax.env
     depends_on:
       - actions
     command: sh -c "make x"
