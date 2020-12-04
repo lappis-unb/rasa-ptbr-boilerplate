@@ -7,7 +7,7 @@ import os
 
 # == Log Config ==
 
-logger = logging.getLogger("Bot Config")
+logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 ch = logging.StreamHandler()
@@ -44,7 +44,7 @@ bot = {
 admin_name = os.getenv("ROCKETCHAT_ADMIN_USERNAME", "admin")
 admin_password = os.getenv("ROCKETCHAT_ADMIN_PASSWORD", "admin")
 
-rasa_url = os.getenv("RASA_URL", "http://bot:5005/webhooks/rocketchat/webhook")
+rasa_url = os.getenv("RASA_URL", "http://bot-rocket:5005/webhooks/rocketchat/webhook")
 user_header = None
 
 
@@ -117,42 +117,9 @@ def create_bot_user():
         print("User already created.")
 
     api_post(
-        "users.setAvatar", {"avatarUrl": bot["avatar"], "username": bot["username"]},
+        "users.setAvatar",
+        {"avatarUrl": bot["avatar"], "username": bot["username"]},
     )
-
-
-def create_livechat_agent():
-    response = api_post("livechat/users/agent", {"username": bot["username"]})
-    return response["user"]["_id"]
-
-
-def configure_livechat():
-    # Enable Livechat
-    api_post("settings/Livechat_enabled", {"value": True})
-
-    # Disable show pre-registration form
-    api_post("settings/Livechat_registration_form", {"value": False})
-
-    # Change Livechat Color
-    api_post("settings/Livechat_title_color", {"value": "#039046", "editor": "color"})
-
-    # Change Livechat Title
-    api_post("settings/Livechat_title", {"value": bot["name"]})
-
-    # Disable Livechat Email display
-    api_post("settings/Livechat_show_agent_email", {"value": False})
-
-    # Disable file upload
-    api_post("settings/Livechat_fileupload_enabled", {"value": False})
-
-    # Change Livechat Webhook URL
-    api_post("settings/Livechat_webhookUrl", {"value": rasa_url})
-
-    # Activate Livechat Webhook Send Request on Visitor Message
-    api_post("settings/Livechat_webhook_on_visitor_message", {"value": True})
-
-    # Activate Livechat Webhook Send Request on Agent Messages
-    api_post("settings/Livechat_webhook_on_agent_message", {"value": True})
 
 
 def configure_webhooks():
@@ -192,61 +159,36 @@ def configure_rocketchat():
     api_post("settings/API_Enable_CORS", {"value": True})
 
 
-def create_department(bot_agent_id):
-    get_departments_url = host + "/api/v1/livechat/department"
-
-    get_departments_response = requests.get(get_departments_url, headers=user_header)
-
-    number_of_departments = len(get_departments_response.json()["departments"])
-
-    if number_of_departments == 0:
-        api_post(
-            "livechat/department",
-            {
-                "department": {
-                    "enabled": True,
-                    "showOnRegistration": True,
-                    "name": "department",
-                    "description": "default department",
-                },
-                "agents": [
-                    {
-                        "agentId": bot_agent_id,
-                        "username": bot["username"],
-                        "count": 0,
-                        "order": 0,
-                    }
-                ],
-            },
-        )
-
-
 if __name__ == "__main__":
     logger.info("===== Automatic env configuration =====")
 
-    try:
-        user_header = get_authentication_token()
-    except Exception:
-        print("\n\n --------- Rocket Chat Unavailable! --------\n\n")
+    rocket_available = False
+
+    while not rocket_available:
+        try:
+            user_header = get_authentication_token()
+            rocket_available = True
+        except Exception:
+            import time
+
+            logger.info("\n\n --------- Rocket Chat Unavailable! --------\n\n")
+            logger.info(">> Waiting for 3 seconds...")
+            time.sleep(3)
+
+    logger.info(">> Connected to Rocket Instance")
 
     if user_header:
-        logger.info(">> Create user")
-        create_bot_user()
+        try:
+            logger.info(">> Create user")
+            create_bot_user()
 
-        logger.info(">> Create livechat agent")
-        bot_agent_id = create_livechat_agent()
+            logger.info(">> Configure Rocketchat")
+            configure_rocketchat()
 
-        logger.info(">> Configure livechat")
-        configure_livechat()
-
-        logger.info(">> Configure Rocketchat")
-        configure_rocketchat()
-
-        logger.info(">> Configure Webhooks")
-        configure_webhooks()
-
-        logger.info(">> Create livechat department")
-        create_department(bot_agent_id)
+            logger.info(">> Configure Webhooks")
+            configure_webhooks()
+        except Exception as e:
+            logger.error(f"Problem while trying to configure bot in Rocketchat: {e}")
 
     else:
-        logger.error("Login Failed")
+        logger.error(">> Login Failed")

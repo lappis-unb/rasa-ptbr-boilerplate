@@ -22,7 +22,7 @@ services:
     volumes:
       - ./bot/:/bot/
     ports:
-      - 5004:5004
+      - 5006:5006
     depends_on:
       - actions
 
@@ -37,6 +37,8 @@ services:
       - ./bot/:/bot/
     ports:
       - 5002:5002
+    env_file:
+      - env/rasax.env
     depends_on:
       - actions
     command: sh -c "make x"
@@ -62,10 +64,24 @@ services:
       volumes:
         - ./bot/:/bot/
       ports:
-        - 5005:5005
+        - 5007:5007
       depends_on:
         - actions
       command: sh -c "make webchat"
+
+  # ============================ WebChat Bot =================================
+  # Specific Rasa bot integrated with WebChat.
+  bot-rocket:
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      volumes:
+        - ./bot/:/bot/
+      ports:
+        - 5005:5005
+      depends_on:
+        - actions
+      command: sh -c "make rocket"
 
   # =============================== Analytics =================================
   # Analitics ElasticSearch Stack.
@@ -125,6 +141,16 @@ services:
       - env/rabbitmq-consumer.env
     command: python3 /opt/scripts/consume_bot_messages.py
 
+
+  # ============================ Webchat Page  =================================
+  # A container to run webchat html page
+  webchat:
+    image: nginx
+    ports:
+      - 5010:80
+    volumes:
+      - ./modules/webchat:/usr/share/nginx/html
+
   # ============================ Telegram Bot =================================
   # Specific Rasa bot integrated with Telegram.
   bot_telegram:
@@ -155,6 +181,60 @@ services:
     ports:
       - 8888:8888
 
+  # =============================== Rocket.Chat =================================
+  # Rocket.Chat instance and database
+  rocketchat:
+    image: rocketchat/rocket.chat:3.7.1
+    command: >
+      bash -c
+        "for i in `seq 1 30`; do
+          node main.js &&
+          s=$$? && break || s=$$?;
+          echo \"Tried $$i times. Waiting 5 secs...\";
+          sleep 5;
+        done; (exit $$s)"
+    restart: unless-stopped
+    volumes:
+      - rocket_uploads:/app/uploads
+    environment:
+      - PORT=3000
+      - ROOT_URL=http://localhost:3000
+      - MONGO_URL=mongodb://mongo:27017/rocketchat
+      - MONGO_OPLOG_URL=mongodb://mongo:27017/local
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASS=admin
+      - ADMIN_EMAIL=mail@mail.com
+    depends_on:
+      - mongo
+      - mongo-init-replica
+    ports:
+      - 5003:3000
+
+  mongo:
+    image: mongo:4.0
+    restart: unless-stopped
+    volumes:
+     - mongo_data:/data/db
+    command: mongod --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1
+
+  # this container's job is just run the command to initialize the replica set.
+  # it will run the command and remove himself (it will not stay running)
+  mongo-init-replica:
+    image: mongo:4.0
+    command: >
+      bash -c
+        "for i in `seq 1 30`; do
+          mongo mongo/rocketchat --eval \"
+            rs.initiate({
+              _id: 'rs0',
+              members: [ { _id: 0, host: 'localhost:27017' } ]})\" &&
+          s=$$? && break || s=$$?;
+          echo \"Tried $$i times. Waiting 5 secs...\";
+          sleep 5;
+        done; (exit $$s)"
+    depends_on:
+      - mongo
+
 volumes:
   notebook_models:
   mongo_data:
@@ -162,3 +242,4 @@ volumes:
   esbackup:
   esdata:
     driver: local
+  rocket_uploads:
