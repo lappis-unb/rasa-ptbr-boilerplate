@@ -1,7 +1,0 @@
-pos
-pos
-neu
-neu
-neg
-neg
-neg
