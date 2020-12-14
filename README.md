@@ -145,7 +145,7 @@ O Rasa permite a adição de módulos customizados no seu pipeline de processame
 
 Existe aqui um exemplo de componente customizado que implementa Análise de Sentimentos.
 
-Para utilizá-lo basta introduzir o componente `components.sentiment_analyzer.SentimentAnalyzer` ao no arquivo `bot/config`. Como no exemplo:
+Para utilizá-lo basta introduzir o componente `components.sentiment_analyzer.SentimentAnalyzer` ao arquivo `bot/config`. Como no exemplo:
 
 ```yml
 language : "pt
@@ -155,7 +155,7 @@ pipeline:
   - name: "components.sentiment_analyzer.SentimentAnalyzer"                                                                                        - name: RegexFeaturizer
 ```
 
-Depois, como no exemplo do arquivo `bot/components/labels.yml`, adicione frases que correspondam à uma label(ou classificação).
+Depois, como no exemplo do arquivo `bot/components/labels.yml`, adicione frases que correspondam à uma label(classificação ou sentimento).
 
 Por último basta treinar o bot novamente, e a informação será armazenada na entidade `sentiment` caso o componente identifique um valor para essa entidade.
 
