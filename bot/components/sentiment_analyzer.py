@@ -15,7 +15,6 @@ SENTIMENT_MODEL_FILE_NAME = "sentiment_classifier.pkl"
 
 
 class SentimentAnalyzer(Component):
-    language_list = ["pt"]
     print('Initialised Sentiment Analyzer')
 
     def __init__(self, component_config=None):
