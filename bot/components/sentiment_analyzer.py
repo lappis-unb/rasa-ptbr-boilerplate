@@ -14,17 +14,12 @@ from typing import Any, Optional, Text, Dict
 SENTIMENT_MODEL_FILE_NAME = "sentiment_classifier.pkl"
 
 
-class MultinomialSentimentAnalyzer(Component):
-    """ Multinomial Naive Bayes classifier """
-    name = "sentiment"
-    provides = ["entities"]
-    requires = ["tokens"]
-    defaults = {}
+class SentimentAnalyzer(Component):
     language_list = ["pt"]
-    print('initialised the class')
+    print('Initialised Sentiment Analyzer')
 
     def __init__(self, component_config=None):
-        super(MultinomialSentimentAnalyzer, self).__init__(component_config)
+        super(SentimentAnalyzer, self).__init__(component_config)
         self.corpus_words = {}
         self.class_words = {}
         self.stemmer = stem.RSLPStemmer()
@@ -37,7 +32,7 @@ class MultinomialSentimentAnalyzer(Component):
 
         training_data = {}
         import yaml
-        with open('/bot/components/sentiment_analyzer/labels.yml') as f:
+        with open('/bot/components/labels.yml') as f:
             training_data = yaml.safe_load(f)
 
         # capture unique stemmed words in the training corpus

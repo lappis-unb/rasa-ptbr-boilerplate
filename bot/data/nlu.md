@@ -443,3 +443,6 @@
 - normalzinho
 - bot normal
 - nada a declarar
+- nada de mais
+- foi normal a conversa
+- nem fede e nem cheira
