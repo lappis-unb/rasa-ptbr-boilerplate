@@ -2,7 +2,6 @@ language : "pt"
 
 pipeline:
   - name: WhitespaceTokenizer
-  - name: "components.sentiment_analyzer.SentimentAnalyzer"
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer

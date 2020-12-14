@@ -139,6 +139,27 @@ Acesse o **kibana** na url `locahost:5601`
 
 Caso você deseje entender o processo de configuração da *stack* de *analytics*, veja a [explicação completa de analytics](docs/setup_analytics.md).
 
+### Adicionando componentes customizados de treinamento
+
+O Rasa permite a adição de módulos customizados no seu pipeline de processamento, aprenda mais [AQUI](https://blog.rasa.com/enhancing-rasa-nlu-with-custom-components/).
+
+Existe aqui um exemplo de componente customizado que implementa Análise de Sentimentos.
+
+Para utilizá-lo basta introduzir o componente `components.sentiment_analyzer.SentimentAnalyzer` ao no arquivo `bot/config`. Como no exemplo:
+
+```yml
+language : "pt
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: "components.sentiment_analyzer.SentimentAnalyzer"                                                                                        - name: RegexFeaturizer
+```
+
+Depois, como no exemplo do arquivo `bot/components/labels.yml`, adicione frases que correspondam à uma label(ou classificação).
+
+Por último basta treinar o bot novamente, e a informação será armazenada na entidade `sentiment` caso o componente identifique um valor para essa entidade.
+
+
 ## Notebooks - Análise de dados
 
 ### Setup
