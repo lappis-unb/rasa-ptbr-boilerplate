@@ -5,9 +5,9 @@ name: build_bot
 
 on:
   push:
-    branches: [ main, devel ]
+    branches: [ main]
   pull_request:
-    branches: [ main, devel ]
+    branches: [ main]
 
 jobs:
   build:
