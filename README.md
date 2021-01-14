@@ -5,6 +5,8 @@
 ![badge_build](https://github.com/lappis-unb/rasa-ptbr-boilerplate/workflows/build_bot/badge.svg)
 
 
+## Acesse o formulário sobre seu perfil para a comunidade Brasileira: [Formulário](https://forms.gle/A1M6cU8eYvQRqFuy7)
+
 ## For English version, see [README-en](docs/README-en.md)
 
 ## Tutorial para configurar todo o projeto
