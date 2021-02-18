@@ -59,17 +59,39 @@ services:
 
   # ============================ WebChat Bot =================================
   # Specific Rasa bot integrated with WebChat.
-  bot-webchat:
+  bot-webchat-core1:
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
       volumes:
         - ./bot/:/bot/
-      ports:
-        - 5007:5007
       depends_on:
         - actions
       command: sh -c "make webchat"
+
+  bot-webchat-core2:
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      volumes:
+        - ./bot/:/bot/
+      depends_on:
+        - actions
+      command: sh -c "make webchat"
+
+  # =========================== Loadbalancer =================================
+  # HAProxy used as loadbalancer for more than 1 instance of bot-webchat
+  # Use case for load balacing websockets
+  bot-webchat:
+    image: haproxy:2.3
+    volumes:
+      - "./modules/haproxy/:/usr/local/etc/haproxy:ro"
+    ports:
+      - 5007:5007
+      - 32700:32700
+    depends_on:
+      - bot-webchat-core1
+      - bot-webchat-core2
 
   # ============================ WebChat Bot =================================
   # Specific Rasa bot integrated with WebChat.
