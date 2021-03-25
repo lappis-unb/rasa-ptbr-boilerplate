@@ -1,12 +1,15 @@
 .PHONY: all clean actions
 
+# TODO: This is a hotfix while RASA don't solve dependencies issues.
+PIP_FLAGS = --use-deprecated=legacy-resolver 
+
 clean:
 	rm -rf graph.html results/ models/* *.db*
 
 install:
 	pip install --upgrade pip && \
-	pip install -r ../requirements.txt && \
-	pip install -r ../x-requirements.txt
+	pip install $(PIP_FLAGS) -r ../requirements.txt && \
+	pip install $(PIP_FLAGS) -r ../x-requirements.txt
 
 # RASA X
 x:
