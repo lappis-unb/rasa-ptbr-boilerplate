@@ -424,3 +424,25 @@
 - esqueça os meus dados
 - remova meu CPF e data de nascimento
 - limpar dados
+
+## intent:feedback
+- gostei muito desse bot
+- me ajudou bastante
+- amei demais
+- foi muito util
+- melhor bot
+- gostei 
+- não gostei
+- bot inutil
+- não serviu pra nada
+- não meu ajudou
+- não funciona
+- bot sem classe
+- tanto faz
+- irrelevante pra mim
+- normalzinho
+- bot normal
+- nada a declarar
+- nada de mais
+- foi normal a conversa
+- nem fede e nem cheira

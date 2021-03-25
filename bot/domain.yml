@@ -34,6 +34,7 @@ intents:
 - request_login
 - limpar_slots
 entities:
+- sentiment
 - religiao
 - time
 - genero
@@ -197,6 +198,10 @@ responses:
       ;)
   utter_forms_cancelado:
   - text: Ok, forms cancelado. Podemos voltar a conversar sobre outros assuntos ;)
+  utter_feedback:
+  - text: Muito obrigado pelo seu feedback! Crescer é escutar e evoluir
+  - text: Obrigado pelo feedback, vou tentar melhorar cada vez mais
+  - text: Valeu pelo feedback, quanto mais a gente rala mais a gente cresce
 actions:
 - action_teste
 - action_telefone

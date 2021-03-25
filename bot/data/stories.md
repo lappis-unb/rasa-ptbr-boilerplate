@@ -302,6 +302,18 @@
 * objetivo
     - utter_objetivo
 
+## path_feedback 1
+* feedback
+    - utter_feedback
+    - utter_continuar_conversa
+
+## path_feedback 2
+* cumprimentar
+    - utter_cumprimentar
+* feedback
+    - utter_feedback
+    - utter_continuar_conversa
+
 ## story_limpar_slots
 * limpar_slots
     - action_restart
