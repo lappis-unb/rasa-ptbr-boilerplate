@@ -43,12 +43,16 @@ test-core:
 		--fail-on-prediction-errors 	\
 		--out results/results-core-test
 
-# VALIDACAO
+# UTIL
 validate:
 	rasa data validate 		\
 		$(LOG_LEVEL)
 
-# CONVERSAÇÃO 
+visualize:
+		rasa visualize 		\
+			--out ./graph.html
+
+# CHAT
 shell:
 	rasa shell 				\
 		-m models/ 			\
