@@ -28,7 +28,7 @@ jobs:
         # Added "gast=0.2.2" as a workarround because of a Tensorflow issue, should be removed soon
         python -m pip install --upgrade pip gast==0.2.2
         pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        if [ -f bot/requirements.txt ]; then pip install --use-deprecated=legacy-resolver -r bot/requirements.txt; fi
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
