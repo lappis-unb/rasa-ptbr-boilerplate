@@ -1,32 +1,6 @@
-language : "pt"
-
-pipeline:
-  - name: WhitespaceTokenizer
-  - name: RegexFeaturizer
-  - name: LexicalSyntacticFeaturizer
-  - name: CountVectorsFeaturizer
-    analyzer: "char_wb"
-    min_ngram: 1
-    max_ngram: 4
-  - name: DIETClassifier
-    epochs: 55
-  - name: EntitySynonymMapper
-  - name: ResponseSelector
-
-policies:
-  - name: TEDPolicy
-    epochs: 10
-    featurizer:
-    - name: MaxHistoryTrackerFeaturizer
-      max_history: 5
-      state_featurizer:
-        - name: BinarySingleStateFeaturizer
-  - name: "FormPolicy"
-  - name: MemoizationPolicy
-    max_history: 5
-  - name: MappingPolicy
-  - name: FallbackPolicy
-    nlu_threshold: 0.38
-    core_threshold: 0.3
-    fallback_action_name: "utter_fallback"
-
+version: "2.0"
+rules:
+- rule: Rule to handle messages with low NLU confidence (automated conversion from 'FallbackPolicy')
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallback
