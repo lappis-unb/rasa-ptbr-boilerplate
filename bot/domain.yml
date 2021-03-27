@@ -15,12 +15,10 @@ intents:
 - religiao
 - time
 - genero
-- star_wars
 - piada
 - license
 - onde_voce_mora
-- como_estou
-- playlist
+- musica
 - comida
 - cor
 - relacionamento
@@ -30,21 +28,20 @@ intents:
 - historia
 - testa_acoes
 - objetivo
-- informa_telefone
 - cancelar
 - request_login
 - limpar_slots
+- feedback
 entities:
 - sentiment
 - religiao
 - time
 - genero
-- starwars
 - piada
 - license
 - live
 - how
-- playlist
+- musica
 - comida
 - cor
 - where
@@ -58,13 +55,13 @@ entities:
 - relationship
 slots:
   cpf:
-    type: unfeaturized
+    type: text
     influence_conversation: false
   data_nascimento:
-    type: unfeaturized
+    type: text
     influence_conversation: false
   telefone:
-    type: unfeaturized
+    type: text
     influence_conversation: false
 responses:
   utter_fallback:
@@ -141,19 +138,6 @@ responses:
       Muito além da sua forma de existência
   - text: |
       Eu sou um robô, tire suas próprias conclusões...
-  utter_star_wars:
-  - text: |
-      O medo é o caminho para o lado negro.
-  - text: |
-      O medo leva à raiva, a raiva leva ao ódio e o ódio leva ao sofrimento.
-  - text: |
-      Que a Força esteja com você!
-  - text: |
-      Grande guerreiro? Guerra não faz grande ninguém.
-  - text: |
-      Lembre-se sempre, o seu foco determina a sua realidade.
-  - text: |
-      Muito a aprender você ainda tem.
   utter_piada:
   - text: |
       Conheço uma piada
@@ -193,22 +177,7 @@ responses:
       Mas é temporário
 
       Só até conseguir achar uma memória cache...
-  utter_como_estou:
-  - text: |
-      Eu não tenho um corpo físico
-
-      Sou feito da mais bela e pura lógica algoritimica.
-  - text: |
-      Eu posso ser como você quiser
-
-      Basta me desenhar
-
-      Mas capricha, hein!? ;)
-  - text: |
-      Sou duro e frio por fora
-
-      Mas tenho um coração quentinho
-  utter_playlist:
+  utter_musica:
   - text: |
       Estava doido para que me preguntasse isso hahaha
 
