@@ -176,16 +176,6 @@ nlu:
     - amar alguém
     - gosta de alguém
     - gosta de alguem
-- intent: filhos
-  examples: |
-    - Você tem [filhos](filhos)?
-    - Tem [filhote](filhos)?
-    - Tem [filhotes](filhos)?
-    - Quantos [filhos](filhos) você tem?
-    - Quantos [filhotes](filhos) você tem?
-    - você é pai de quantos filhos
-    - você é pai
-    - voce e pai
 - intent: signo
   examples: |
     - Qual o seu [signoo](signo)?
@@ -356,21 +346,6 @@ nlu:
     - Que loucura está acontecendo?!
     - Não quero compartilhar meus dados
     - Não quero mais informar meus dados
-- intent: request_login
-  examples: |
-    - Me ajuda a fazer login?
-    - Gostaria de fazer login
-    - Quero fazer login
-    - Formulário de login
-    - Rasa forms
-- intent: limpar_slots
-  examples: |
-    - Desejo apagar meus dados
-    - Quero limpar os slots
-    - clean slots
-    - esqueça os meus dados
-    - remova meu CPF e data de nascimento
-    - limpar dados
 - intent: feedback
   examples: |
     - gostei muito desse bot
