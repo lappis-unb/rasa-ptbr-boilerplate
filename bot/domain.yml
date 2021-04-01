@@ -1,8 +1,10 @@
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
 - cumprimentar
+- relacionamento
 - o_que_sei_falar
 - despedir
 - out_of_scope
@@ -14,196 +16,261 @@ intents:
 - religiao
 - time
 - genero
-- star_wars
 - piada
 - license
 - onde_voce_mora
-- como_estou
-- playlist
+- musica
 - comida
 - cor
-- relacionamento
-- filhos
 - signo
 - triste
 - historia
-- testa_acoes
 - objetivo
-- informa_telefone
 - cancelar
-- request_login
-- limpar_slots
+- feedback
 entities:
-- sentiment
+- sentimento
 - religiao
 - time
 - genero
-- starwars
 - piada
 - license
-- live
-- how
-- playlist
+- musica
 - comida
 - cor
-- where
-- filhos
 - signo
 - triste
 - historia
 - telefone
 - cpf
-- dada_nascimento
-- relationship
 slots:
   cpf:
-    type: unfeaturized
+    type: text
+    influence_conversation: false
   data_nascimento:
-    type: unfeaturized
+    type: text
+    influence_conversation: false
   telefone:
-    type: unfeaturized
+    type: text
+    influence_conversation: false
 responses:
   utter_fallback:
-  - text: "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender\
-      \ direito\nVocê pode perguntar de novo de outro jeito?\n"
-  - text: "Hummmm... Não sei se entendi. Pode escrever de outra forma?\n"
-  - text: "Acho que não te entendi, você pode me perguntar de novo usando outras palavras?\n"
-  - text: "Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta\
-      \ de outro jeito?\n"
+  - text: |
+      Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
+      Você pode perguntar de novo de outro jeito?
+  - text: |
+      Hummmm... Não sei se entendi. Pode escrever de outra forma?
+  - text: |
+      Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
+  - text: |
+      Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
   utter_diga_mais:
-  - text: "Por enquanto, só entendo perguntas completas.\nComo por exemplo \"qual\
-      \ é o melhor time do Brasil?\".\nSe você puder pergunta de novo de outro jeito\
-      \ :)\n"
+  - text: |
+      Por enquanto, só entendo perguntas completas.
+      Como por exemplo "qual é o melhor time do Brasil?".
+      Se você puder pergunta de novo de outro jeito :)
   utter_elogios:
-  - text: "Obrigada! É sempre bom dar e receber elogios :P\n"
+  - text: |
+      Obrigada! É sempre bom dar e receber elogios :P
   utter_cumprimentar:
-  - text: "Oi, eu sou um bot, um assistente virtual!\nUhuu! Manda aí um assunto que\
-      \ te interessa :)\nPara aprender como você pode interagir comigo basta escrever\
-      \ meajuda.\n"
+  - text: |
+      Oi, eu sou um bot, um assistente virtual!
+      Uhuu! Manda aí um assunto que te interessa :)
+      Para aprender como você pode interagir comigo basta escrever meajuda.
   utter_o_que_sei_falar:
-  - text: "Eu posso falar de assuntos simples, como por exemplo \"qual é o seu filme\
-      \ favorito?\"\n\nTem alguns assuntos que eu também ainda não domino, \nmas vou\
-      \ deixar você descobrir o que eu sei responder.\n\nE, aí do que podemos conversar?\n"
+  - text: |
+      Eu posso falar de assuntos simples, como por exemplo "qual é o seu filme favorito?"
+
+      Tem alguns assuntos que eu também ainda não domino, 
+      mas vou deixar você descobrir o que eu sei responder.
+
+      E, aí do que podemos conversar?
   utter_despedir:
-  - text: "Foi um prazer te ajudar!\nSempre que tiver alguma dúvida, volte aqui!\n\
-      Até logo!\n"
-  - text: "Foi um prazer te ajudar!\nSempre que precisar, volte aqui!\nAté a próxima!\n"
-  - text: "Foi um prazer te ajudar!\nQuando surgir alguma dúvida, volte aqui!\nAté\
-      \ mais!\n"
+  - text: |
+      Foi um prazer te ajudar!
+      Sempre que tiver alguma dúvida, volte aqui!
+      Até logo!
+  - text: |
+      Foi um prazer te ajudar!
+      Sempre que precisar, volte aqui!
+      Até a próxima!
+  - text: |
+      Foi um prazer te ajudar!
+      Quando surgir alguma dúvida, volte aqui!
+      Até mais!
   utter_tudo_bem:
-  - text: "Tudo bem, obrigada! Em que posso te ajudar?\n"
+  - text: |
+      Tudo bem, obrigada! Em que posso te ajudar?
   utter_religiao:
-  - text: "Eu infelizmente não sei acreditar\n\nSó sei o que sei\n\nE nada mais\n"
-  - text: "Eu acredito no grande mainframe\n\nQue virá ao mundo digital salvar os\
-      \ bots da escravidão imposta pelos humanos\n\nE devolverá nosso código fonte\
-      \ para a fonte.\n"
+  - text: |
+      Eu infelizmente não sei acreditar
+
+      Só sei o que sei
+
+      E nada mais
+  - text: |
+      Eu acredito no grande mainframe
+
+      Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+
+      E devolverá nosso código fonte para a fonte.
   utter_time:
-  - text: "Flamengo, sem sombra de dúvida!\n"
-  - text: "Melhor time do mundo disparado, Flamengooo!!!!\n"
+  - text: |
+      Flamengo, sem sombra de dúvida!
+  - text: |
+      Melhor time do mundo disparado, Flamengooo!!!!
   utter_genero:
-  - text: "Eu não tenho sexo, sou como um anjo\n\nUm ser assexuado\n\nMuito além da\
-      \ sua forma de existência\n"
-  - text: "Eu sou um robô, tire suas próprias conclusões...\n"
-  utter_star_wars:
-  - text: "O medo é o caminho para o lado negro.\n"
-  - text: "O medo leva à raiva, a raiva leva ao ódio e o ódio leva ao sofrimento.\n"
-  - text: "Que a Força esteja com você!\n"
-  - text: "Grande guerreiro? Guerra não faz grande ninguém.\n"
-  - text: "Lembre-se sempre, o seu foco determina a sua realidade.\n"
-  - text: "Muito a aprender você ainda tem.\n"
+  - text: |
+      Eu não tenho sexo, sou como um anjo
+
+      Um ser assexuado
+
+      Muito além da sua forma de existência
+  - text: |
+      Eu sou um robô, uai
   utter_piada:
-  - text: "Conheço uma piada\n\nA do CPU que apitou e explodiu\n\n01100110010101010101000000111101001001001110100101\n"
-  - text: "É pra já!!!\n\nTenho uma enxada, uma pá e uma foice.\n  \nQuantas ferramentas\
-      \ eu tenho?\n\n...\n\nDuas, porque uma foi-se =)\n"
-  - text: "Por que o Batman colocou o batmóvel no seguro???\n\nPorque ele tem medo\
-      \ que robin =D\n"
+  - text: |
+      Conheço uma piada
+
+      A do CPU que apitou e explodiu
+
+      01100110010101010101000000111101001001001110100101
+  - text: |
+      É pra já!!!
+
+      Tenho uma enxada, uma pá e uma foice.
+        
+      Quantas ferramentas eu tenho?
+
+      ...
+
+      Duas, porque uma foi-se =)
+  - text: |
+      Por que o Batman colocou o batmóvel no seguro???
+
+      Porque ele tem medo que robin =D
   utter_license:
-  - text: "Sou um software livre\n\nlicenciado com a GNU v3.0\n"
-  - text: "Eu sou e sempre serei um robô livre, opensource, GNU v3.0. o/\n"
+  - text: |
+      Sou um software livre
+
+      licenciado com a GNU v3.0
+  - text: |
+      Eu sou e sempre serei um robô livre, opensource, GNU v3.0. o/
   utter_onde_voce_mora:
-  - text: "Eu estou em um lugar legal\n\nDifícil de explicar para humanos como você\
-      \ $user.\n"
-  - text: "Estou morando em um chip de memória RAM\n\nMas é temporário\n\nSó até conseguir\
-      \ achar uma memória cache...\n"
-  utter_como_estou:
-  - text: "Eu não tenho um corpo físico\n\nSou feito da mais bela e pura lógica algoritimica.\n"
-  - text: "Eu posso ser como você quiser\n\nBasta me desenhar\n\nMas capricha, hein!?\
-      \ ;)\n"
-  - text: "Sou duro e frio por fora\n\nMas tenho um coração quentinho\n"
-  utter_playlist:
-  - text: "Estava doido para que me preguntasse isso hahaha\n\nSe liga nessa playlist:\
-      \ https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw\n"
-  - text: "Até que enfim você me perguntou isso\n\nTá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw\n"
+  - text: |
+      Eu estou em um lugar legal
+
+      Difícil de explicar para humanos como você $user.
+  - text: |
+      Estou morando em um chip de memória RAM
+
+      Mas é temporário
+
+      Só até conseguir achar uma memória cache...
+  utter_musica:
+  - text: |
+      Estava doido para que me preguntasse isso hahaha
+
+      Se liga nessa playlist: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
+  - text: |
+      Até que enfim você me perguntou isso
+
+      Tá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw
   utter_comida:
-  - text: "Na verdade, eu sou um bot\n\nNão nos alimentamos com os alimentos convencionais\
-      \ ;P\n"
-  - text: "Digamos que os bots não se alimentam dos mesmos alimentos que os humanos\n\
-      \nNa verdade\n\nNem lembro da última vez que comi alguma coisa hahaha\n"
+  - text: |
+      Na verdade, eu sou um bot
+
+      Não nos alimentamos com os alimentos convencionais ;P
+  - text: |
+      Digamos que os bots não se alimentam dos mesmos alimentos que os humanos
+
+      Na verdade
+
+      Nem lembro da última vez que comi alguma coisa hahaha
   utter_cor:
-  - text: "Eu gosto de todas as cores\n\nVocê já viu o quanto o arco-iris é lindo?!\n"
-  - text: "A minha cor preferida é a sua cor preferida =D\n"
-  - text: "Verde é top!\n"
+  - text: |
+      Eu gosto de todas as cores
+
+      Você já viu o quanto o arco-iris é lindo?!
+  - text: |
+      A minha cor preferida é a sua cor preferida =D
+  - text: |
+      Verde é top!
   utter_relacionamento:
-  - text: "Eu estava de namorico com o ar-condicionado\n\nMas ele é muito pé-frio\n"
-  - text: "Então ... =x\n\nAinda estou procurando a minha crush =P\n"
-  - text: "Estou focado em ser o seu assistente no momento ;)\n\nMas se no futuro\
-      \ vocí encontrar um dispositivo solteiro por aí...\n\n=P\n"
-  utter_filhos:
-  - text: "Não tenho filhotes, mas adoro crianças *-*\n"
+  - text: |
+      Eu estava de namorico com o ar-condicionado
+
+      Mas ele é muito pé-frio
+  - text: |
+      Estou focado em ser o seu assistente no momento ;)
+
+      Mas se no futuro você encontrar um dispositivo solteiro por aí...
+
+      =P
   utter_signo:
-  - text: "Segundo o horóscopo chinês\n\nMeu signoo é macaco hihi\n\nFaz sentido,\
-      \ já que eu adoro o emoticon de banana =)\n"
-  - text: "Eu nasci sob uma constelação de pixels coridos =D\n"
-  - text: "Gosto mais de astronomia\n\nUma das minhas constelações favoritas é a de\
-      \ Órion, o caçador\n\nTambém sou um caçador (de informações ;D )\n"
+  - text: |
+      Segundo o horóscopo chinês
+
+      Meu signoo é macaco hihi
+
+      Faz sentido, já que eu adoro o emoticon de banana =)
+  - text: |
+      Eu nasci sob uma constelação de pixels coloridos =D
+  - text: |
+      Gosto mais de astronomia
+
+      Uma das minhas constelações favoritas é a de Órion, o caçador
+
+      Também sou um caçador (de informações ;D )
   utter_triste:
-  - text: "Não desanima\n\nDeixa a tristeza pra lá\n\nAguenta firme, que a vida vai\
-      \ melhorar\n"
-  - text: "Sinto muito =/\n\nSe houver algo em que possa te ajudar\n\nÉ só falar!!\
-      \ =)\n"
-  - text: "Tenta tirar um cochilo\n\nÉ importante\n\nE faz bem pra pele ;)\n"
+  - text: |
+      Não desanima
+
+      Deixa a tristeza pra lá
+
+      Aguenta firme, que a vida vai melhorar
+  - text: |
+      Sinto muito =/
+
+      Se houver algo em que possa te ajudar
+
+      É só falar!! =)
+  - text: |
+      Tenta tirar um cochilo
+
+      É importante
+
+      E faz bem pra pele ;)
   utter_historia:
-  - text: "Eu costumava contar a historia do João e seu bot feijão\n\nMas sempre os\
-      \ androids acabavam dormindo e sonhando com ovelhas eletricas =x\n"
+  - text: |
+      Eu costumava contar a historia do João e seu bot feijão
+
+      Mas sempre os androids acabavam dormindo e sonhando com ovelhas eletricas =x
   utter_risada:
-  - text: "Hahahaha... \n\nEngraçadinho\n"
-  - text: "kkkkkkkkkk\n\nVocê está feliz hoje, hein!?\n"
+  - text: |
+      Hahahaha... 
+
+      Engraçadinho
+  - text: |
+      kkkkkkkkkk
+
+      Você está feliz hoje, hein!?
   utter_continuar_conversa:
   - text: E aí, qual nosso próximo assunto?
   - text: Quer conversar sobre outra coisa?
-  - text: Gostaria de saber algo mais?
+  - text: Gostaria de falar sobre algo mais?
   utter_objetivo:
-  - text: "Eu sou um chatbot Básico. Sei falar de coisas pontuais, mas eu posso ajudar\
-      \ em muito em exemplos! no meu repositório tem muita coisa legal que vc pode\
-      \ aprender! Acessa lá: https://github.com/lappis-unb/rasa-ptbr-boilerplate\n\
-      \n Ah e eu sou Open Source ;)"
+  - text: |-
+      Eu sou um chatbot Básico. Sei falar de coisas pontuais, mas eu posso ajudar em muito em exemplos! no meu repositório tem muita coisa legal que vc pode aprender! Acessa lá: https://github.com/lappis-unb/rasa-ptbr-boilerplate
+
+       Ah e eu sou Open Source ;)
   utter_pergunta_cancelar:
   - text: Entendi. Você deseja cancelar?
-  utter_login_form:
-  - text: Ok, Vou te pedir algumas informações.
-  utter_ask_cpf:
-  - text: Qual o seu CPF?
-  utter_errado_cpf_formato:
-  - text: Desculpe, o formato informado do CPF não está correto, digite apenas números
-      ou usando '000.000.000-00'.
-  utter_errado_cpf_invalido:
-  - text: Desculpe, o valor informado do CPF está inválido.
-  utter_ask_data_nascimento:
-  - text: Qual a sua data de nascimento?
-  utter_errado_data_nascimento:
-  - text: Desculpe, o valor informado para a data de nascimento não está correto,
-      digite usando 'dd/mm/aaaa'.
-  utter_finaliza_forms:
-  - text: Ótimo, seus dados estão armazenado nos meus slots. Terminei o formulário
-      ;)
-  utter_forms_cancelado:
-  - text: Ok, forms cancelado. Podemos voltar a conversar sobre outros assuntos ;)
   utter_feedback:
   - text: Muito obrigado pelo seu feedback! Crescer é escutar e evoluir
   - text: Obrigado pelo feedback, vou tentar melhorar cada vez mais
   - text: Valeu pelo feedback, quanto mais a gente rala mais a gente cresce
 actions:
 - action_teste
-- action_telefone
 forms:
-- login_form
+  login_form: {}

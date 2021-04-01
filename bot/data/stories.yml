@@ -1,0 +1,115 @@
+version: "2.0"
+stories:
+- story: cumprimentar
+  steps:
+  - intent: cumprimentar
+  - action: utter_cumprimentar
+- story: Despedir
+  steps:
+  - intent: despedir
+  - action: utter_despedir
+- story: path_religiao
+  steps:
+  - intent: religiao
+  - action: utter_religiao
+  - action: utter_continuar_conversa
+- story: path_time
+  steps:
+  - intent: time
+  - action: utter_time
+  - action: utter_continuar_conversa
+- story: path_genero
+  steps:
+  - intent: genero
+  - action: utter_genero
+  - action: utter_continuar_conversa
+- story: path_piada
+  steps:
+  - intent: piada
+  - action: utter_piada
+  - action: utter_continuar_conversa
+- story: path_license
+  steps:
+  - intent: license
+  - action: utter_license
+  - action: utter_continuar_conversa
+- story: path_onde_voce_mora
+  steps:
+  - intent: onde_voce_mora
+  - action: utter_onde_voce_mora
+  - action: utter_continuar_conversa
+- story: path_musica
+  steps:
+  - intent: musica
+  - action: utter_musica
+  - action: utter_continuar_conversa
+- story: path_comida
+  steps:
+  - intent: comida
+  - action: utter_comida
+  - action: utter_continuar_conversa
+- story: path_cor
+  steps:
+  - intent: cor
+  - action: utter_cor
+  - action: utter_continuar_conversa
+- story: path_relacionamento
+  steps:
+  - intent: relacionamento
+  - action: utter_relacionamento
+  - action: utter_continuar_conversa
+- story: path_signo
+  steps:
+  - intent: signo
+  - action: utter_signo
+  - action: utter_continuar_conversa
+- story: path_triste
+  steps:
+  - intent: triste
+  - action: utter_triste
+  - action: utter_continuar_conversa
+- story: path_historia
+  steps:
+  - intent: historia
+  - action: utter_historia
+  - action: utter_continuar_conversa
+- story: Tudo Bem Story
+  steps:
+  - intent: tudo_bem
+  - action: utter_tudo_bem
+- story: Oi Tudo Bem Story
+  steps:
+  - intent: cumprimentar
+  - action: utter_cumprimentar
+  - intent: tudo_bem
+  - action: utter_tudo_bem
+- story: Nao entendi
+  steps:
+  - intent: diga_mais
+  - action: utter_diga_mais
+- story: fallback
+  steps:
+  - intent: out_of_scope
+  - action: utter_fallback
+- story: negar sem contexto
+  steps:
+  - intent: negar
+  - action: utter_despedir
+- story: elogios
+  steps:
+  - intent: elogios
+  - action: utter_elogios
+  - action: utter_continuar_conversa
+- story: meajuda
+  steps:
+  - intent: o_que_sei_falar
+  - action: utter_o_que_sei_falar
+- story: objetivo
+  steps:
+  - intent: objetivo
+  - action: utter_objetivo
+- story: path_feedback
+  steps:
+  - intent: feedback
+  - action: utter_feedback
+  - action: utter_continuar_conversa

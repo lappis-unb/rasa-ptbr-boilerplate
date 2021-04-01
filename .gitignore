@@ -1,6 +1,7 @@
 ### Rasa ###
 bot/models
 bot/results*
+bot/train_test_split/
 
 ### Rasa X ###
 events.db

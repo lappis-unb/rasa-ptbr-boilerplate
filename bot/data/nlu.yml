@@ -1,0 +1,370 @@
+version: "2.0"
+nlu:
+- intent: cumprimentar
+  examples: |
+    - olá
+    - Ola
+    - Oi
+    - bom dia
+    - boa tarde
+    - boa noite
+- intent: despedir
+  examples: |
+    - tchau
+    - adeus
+    - flw
+    - Até mais, bot
+- intent: religiao
+  examples: |
+    - voce acredita em [deus](religiao)
+    - [deus](religiao) existe
+    - voce e [catolico protestante](religiao)
+    - voce tem [religiao](religiao)
+    - voce e [mussumano](religiao)
+    - [evengelico](religiao)
+    - voce e [crente](religiao)
+    - voce é [católico](religiao)
+    - voce é [ateu](religiao)
+    - você é espírita
+    - voce e espirita
+    - você é religioso
+    - qual é o seu deus?
+    - qual a sua [religião](religiao)?
+    - você acredita em alguma [religião](religiao)?
+- intent: time
+  examples: |
+    - qual o melhor time do brasil
+    - qual é o seu time
+    - quel e o seu time
+    - qual o seu time
+    - para qual time você torce
+    - para qual time voce torce
+    - para qual time vc torce
+    - que time voce torce
+    - que time vc torce
+    - quem vai ser o campeao brasileiro
+    - quem vai ser o campeao brasileiro nesse ano
+    - time do brasil
+    - melhor time
+- intent: piada
+  examples: |
+    - sabe alguma [piada](piada)
+    - voce sabe contar [piadas](piada)
+    - conhece alguma [piada](piada)
+    - [piada](piada)
+    - me conte uma [piada](piada)
+    - me conta uma piada
+    - conte-me uma [piada](piada)
+    - manda uma [piada](piada) ai
+    - me conta uma [coisa engraçada](piada)
+    - me fala uma piada
+    - me faz rir
+    - vc sabe fazer rir
+- intent: license
+  examples: |
+    - qual é a sua [licença](license)
+    - qual e a sua [licenca](license)
+    - voce e [licenciado](license)
+    - sua [licenca de software](license)
+    - posso copiar voce
+    - posso te clonar
+    - posso ter um bot como voce
+    - posso ver seu [codigo](license)
+    - voce e [opensource](license)
+    - você é um software livre
+    - voce e um [software livre](license)
+    - vc é um software livre
+    - [software livre](license)
+    - [licença](license)
+    - [licenca](license)
+- intent: onde_voce_mora
+  examples: |
+    - onde voce [mora](live)
+    - onde voce [vive](live)
+    - onde voce habita
+    - em que lugar voce [vive](live)
+    - [onde voce esta](live) agora
+    - voce [mora](live) no computador
+    - voce [vive](live) na internet
+    - [onde vc esta](live)
+    - qual é o seu habitat
+    - qual é o seu endereço
+    - qual e o seu endereco
+    - qual o seu endereço
+    - qual o seu endereco
+- intent: genero
+  examples: |
+    - voce é [homem ou mulher](genero)
+    - voce é [macho ou femea](genero)
+    - qual o seu [sexo](genero)
+    - voce e [mulher](genero)
+    - voce e um [homem](genero)
+    - você é um [homem](genero)
+    - voce tem [genero](genero)
+    - voce faz [sexo](genero)
+    - voce tem um [penis ou uma vagina](genero)
+    - você é uma mulher
+    - você é andrógeno
+    - voce e androgeno
+- intent: musica
+  examples: |
+    - me indica uma música
+    - manda uma [playlist](musica)
+    - me fala uma [playlist](musica) boa
+    - quero uma [playlist](musica)
+    - [playlist](musica)
+    - qual a melhor [playlist](musica)
+    - sabe qual [playlist](musica) é boa?
+    - diga uma [playlist](musica)
+    - me indica uma [musica](musica)
+    - me indica uma [playlist](musica)
+    - indica uma [música](musica) pra mim
+    - indica uma [música](musica)
+    - indicar [musica](musica)
+- intent: comida
+  examples: |
+    - Qual a sua [comida preferida](comida)?
+    - Que [comida você gosta](comida)?
+    - Que [comida vc gosta](comida)?
+    - qual a [melhor comida](comida)?
+    - Qual seu [lanche preferido](comida)?
+    - Qual comida você me sugere?
+    - O que você [adora comer](comida)?
+    - O que você [gosta de comer](comida)?
+    - qual a sua comida favorita
+    - o que você prefere comer
+    - o que voce prefere comer
+    - qual seu rango favorito
+    - me fala de comida
+- intent: cor
+  examples: |
+    - Qual a sua [cor preferida](cor)?
+    - Que [cor você gosta](cor)?
+    - Que [cor vc gosta](cor)?
+    - qual a [melhor cor](cor)?
+    - Qual sua [cor preferida](cor)?
+    - Qual [cor](cor) você me sugere?
+    - qual a sua cor favorita
+    - qual a sua cor da sorte
+    - qual a sua cor
+    - cor favorita
+    - cor preferida
+    - cor da sorte
+- intent: relacionamento
+  examples: |
+    - Você tem [namorado](relationship)?
+    - Você tem [namorada](relationship)?
+    - Você [namora](relationship)?
+    - Você é [catristeo](relationship)?
+    - [Namorar](relationship) comigo?
+    - Quer [namorar](relationship)?
+    - Bora [namorar](relationship)?
+    - Tem [boyfriend](relationship)?
+    - Tem [girlfriend](relationship)?
+    - você é casado
+    - você tem esposa
+    - voce tem esposa
+    - vc tem esposa
+    - você tem esposo
+    - voce tem esposo
+    - vc tem esposo
+    - você tem namorado
+    - voce gosta de alguem
+    - você gosta de alguém
+    - você ama alguém
+    - gostar de alguém
+    - amar alguém
+    - gosta de alguém
+    - gosta de alguem
+- intent: signo
+  examples: |
+    - Qual o seu [signoo](signo)?
+    - qual é o seu signo
+    - qual o seu signo
+    - Fala seu [signoo](signo)?
+    - diz pra mim qual é seu signo
+    - diz pra mim qual e seu signo
+    - seu signo
+- intent: triste
+  examples: |
+    - Estou [triste](triste)
+    - Estou muito [triste](triste)
+    - [Tristeza](triste)
+    - A [tristeza](triste) me consome
+    - Estou [chorando](triste)
+    - Estou [desapontado](triste)
+    - [depressão](triste)
+    - estou infeliz
+    - estou magoado
+    - estou desanimado
+    - estou frustrado
+    - me sinto fracassado
+    - sou um fracasso
+    - tô muito triste
+    - tô triste
+    - tô infeliz
+    - tô magoado
+    - tô frustrado
+- intent: historia
+  examples: |
+    - me fala uma [história](historia)
+    - me conta uma [história](historia)
+    - [historia](historia)
+    - [história](historia)
+    - conta pra mim uma [historinha](historia)
+    - fala uma [historia](historia) ai
+    - conta uma história pra dormir
+    - conta uma historia pra dormir
+    - me conta uma experiência sua
+    - me conta uma experiencia
+    - me conta uma historinha
+    - me conta uma estória
+- intent: out_of_scope
+  examples: |
+    - você fala sobre o meio ambiente
+    - qual a origem do mundo
+    - vc gosta de carnaval
+    - batatinha quando nasce
+    - imbecil
+    - nojento
+    - chato
+    - babaca
+    - bot feio
+    - bot, burro
+- intent: elogios
+  examples: |
+    - você é muito educado
+    - voce e muito educado
+    - me ajudou muito
+    - você é demais
+    - você é lindo
+    - voce e lindo
+    - voce e maravilhoso
+    - vc é demais
+    - vc e demais
+    - vc eh linda
+    - vc e lindo
+    - vc é bonito
+    - vc é maravilhoso
+    - adorei você
+    - amei você
+    - adorei voce
+    - amei voce
+    - adorei vc
+    - amei vc
+- intent: negar
+  examples: |
+    - não
+    - nao
+    - nao conheco
+    - não quero
+    - escolhi errado
+    - falei errado
+    - duvida
+    - ainda não sei
+    - nenhum
+    - nunca
+    - jamais
+    - nego
+    - cancelo
+    - negativo
+- intent: diga_mais
+  examples: |
+    - como funciona
+    - me diga mais
+    - como assim
+    - e como funciona
+- intent: tudo_bem
+  examples: |
+    - tudo bem
+    - como vai voce
+    - como vao as coisas
+    - opa tudo bem
+    - to bem
+    - tranquilo
+    - estou bem
+    - estou otimo
+    - tudo bem e você
+    - tudo bom
+    - tá bem
+    - ta bem
+    - como vocês esta
+    - como voce esta
+    - como voce ta
+    - como vai você
+    - como vai vc
+- intent: o_que_sei_falar
+  examples: |
+    - sobre o que você sabe falar
+    - o que mais você sabe falar
+    - quais assuntos você fala
+    - o que você sabe
+    - lista de assuntos possiveis
+    - quais as perguntas vc responde
+    - quais as perquisar você responde
+    - quero ajuda
+    - meajuda
+    - meajude
+    - MEAJDA
+    - me ajuda
+    - me ajude
+    - ajuda eu
+    - menu
+- intent: afirmar
+  examples: |
+    - sim
+    - confirmo
+    - afirmo
+    - claro
+    - exato
+    - isso mesmo
+- intent: objetivo
+  examples: |
+    - Qual o seu objetivo robo?
+    - Qual o seu objetivo robô?
+    - Vc tem um objetivo de existencia?
+    - Você foi feito pra que?
+    - Vc tem algum propósito?
+    - Como que vc pode me ser útil?
+    - Me fale mais sobre você.
+- intent: cancelar
+  examples: |
+    - Desisto
+    - Para
+    - Cancela
+    - Sai disso
+    - Me tira daqui
+    - Para com isso
+    - Me tira disso
+    - Quero cancelar
+    - Saia dessa conversa
+    - Não quero mais isso
+    - Cancele esta operação
+    - Para de me perguntar coisas
+    - cansei, não quero responder!
+    - Pare o que você está fazendo
+    - Que loucura está acontecendo?!
+    - Não quero compartilhar meus dados
+    - Não quero mais informar meus dados
+- intent: feedback
+  examples: |
+    - gostei muito desse bot
+    - me ajudou bastante
+    - amei demais
+    - foi muito util
+    - melhor bot
+    - gostei
+    - não gostei
+    - bot inutil
+    - não serviu pra nada
+    - não meu ajudou
+    - não funciona
+    - bot sem classe
+    - tanto faz
+    - irrelevante pra mim
+    - normalzinho
+    - bot normal
+    - nada a declarar
+    - nada de mais
+    - foi normal a conversa
+    - nem fede e nem cheira
