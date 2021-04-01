@@ -4,6 +4,7 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - cumprimentar
+- relacionamento
 - o_que_sei_falar
 - despedir
 - out_of_scope
@@ -15,56 +16,42 @@ intents:
 - religiao
 - time
 - genero
-- star_wars
 - piada
 - license
 - onde_voce_mora
-- como_estou
-- playlist
+- musica
 - comida
 - cor
-- relacionamento
-- filhos
 - signo
 - triste
 - historia
-- testa_acoes
 - objetivo
-- informa_telefone
 - cancelar
-- request_login
-- limpar_slots
+- feedback
 entities:
-- sentiment
+- sentimento
 - religiao
 - time
 - genero
-- starwars
 - piada
 - license
-- live
-- how
-- playlist
+- musica
 - comida
 - cor
-- where
-- filhos
 - signo
 - triste
 - historia
 - telefone
 - cpf
-- dada_nascimento
-- relationship
 slots:
   cpf:
-    type: unfeaturized
+    type: text
     influence_conversation: false
   data_nascimento:
-    type: unfeaturized
+    type: text
     influence_conversation: false
   telefone:
-    type: unfeaturized
+    type: text
     influence_conversation: false
 responses:
   utter_fallback:
@@ -140,20 +127,7 @@ responses:
 
       Muito além da sua forma de existência
   - text: |
-      Eu sou um robô, tire suas próprias conclusões...
-  utter_star_wars:
-  - text: |
-      O medo é o caminho para o lado negro.
-  - text: |
-      O medo leva à raiva, a raiva leva ao ódio e o ódio leva ao sofrimento.
-  - text: |
-      Que a Força esteja com você!
-  - text: |
-      Grande guerreiro? Guerra não faz grande ninguém.
-  - text: |
-      Lembre-se sempre, o seu foco determina a sua realidade.
-  - text: |
-      Muito a aprender você ainda tem.
+      Eu sou um robô, uai
   utter_piada:
   - text: |
       Conheço uma piada
@@ -193,22 +167,7 @@ responses:
       Mas é temporário
 
       Só até conseguir achar uma memória cache...
-  utter_como_estou:
-  - text: |
-      Eu não tenho um corpo físico
-
-      Sou feito da mais bela e pura lógica algoritimica.
-  - text: |
-      Eu posso ser como você quiser
-
-      Basta me desenhar
-
-      Mas capricha, hein!? ;)
-  - text: |
-      Sou duro e frio por fora
-
-      Mas tenho um coração quentinho
-  utter_playlist:
+  utter_musica:
   - text: |
       Estava doido para que me preguntasse isso hahaha
 
@@ -243,18 +202,11 @@ responses:
 
       Mas ele é muito pé-frio
   - text: |
-      Então ... =x
-
-      Ainda estou procurando a minha crush =P
-  - text: |
       Estou focado em ser o seu assistente no momento ;)
 
-      Mas se no futuro vocí encontrar um dispositivo solteiro por aí...
+      Mas se no futuro você encontrar um dispositivo solteiro por aí...
 
       =P
-  utter_filhos:
-  - text: |
-      Não tenho filhotes, mas adoro crianças *-*
   utter_signo:
   - text: |
       Segundo o horóscopo chinês
@@ -263,7 +215,7 @@ responses:
 
       Faz sentido, já que eu adoro o emoticon de banana =)
   - text: |
-      Eu nasci sob uma constelação de pixels coridos =D
+      Eu nasci sob uma constelação de pixels coloridos =D
   - text: |
       Gosto mais de astronomia
 
@@ -306,7 +258,7 @@ responses:
   utter_continuar_conversa:
   - text: E aí, qual nosso próximo assunto?
   - text: Quer conversar sobre outra coisa?
-  - text: Gostaria de saber algo mais?
+  - text: Gostaria de falar sobre algo mais?
   utter_objetivo:
   - text: |-
       Eu sou um chatbot Básico. Sei falar de coisas pontuais, mas eu posso ajudar em muito em exemplos! no meu repositório tem muita coisa legal que vc pode aprender! Acessa lá: https://github.com/lappis-unb/rasa-ptbr-boilerplate
@@ -314,29 +266,11 @@ responses:
        Ah e eu sou Open Source ;)
   utter_pergunta_cancelar:
   - text: Entendi. Você deseja cancelar?
-  utter_login_form:
-  - text: Ok, Vou te pedir algumas informações.
-  utter_ask_cpf:
-  - text: Qual o seu CPF?
-  utter_errado_cpf_formato:
-  - text: Desculpe, o formato informado do CPF não está correto, digite apenas números ou usando '000.000.000-00'.
-  utter_errado_cpf_invalido:
-  - text: Desculpe, o valor informado do CPF está inválido.
-  utter_ask_data_nascimento:
-  - text: Qual a sua data de nascimento?
-  utter_errado_data_nascimento:
-  - text: Desculpe, o valor informado para a data de nascimento não está correto, digite usando 'dd/mm/aaaa'.
-  utter_finaliza_forms:
-  - text: Ótimo, seus dados estão armazenado nos meus slots. Terminei o formulário ;)
-  utter_forms_cancelado:
-  - text: Ok, forms cancelado. Podemos voltar a conversar sobre outros assuntos ;)
   utter_feedback:
   - text: Muito obrigado pelo seu feedback! Crescer é escutar e evoluir
   - text: Obrigado pelo feedback, vou tentar melhorar cada vez mais
   - text: Valeu pelo feedback, quanto mais a gente rala mais a gente cresce
 actions:
 - action_teste
-- action_telefone
-- login_form
 forms:
   login_form: {}
