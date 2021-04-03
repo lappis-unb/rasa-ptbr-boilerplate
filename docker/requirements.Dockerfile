@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM python:3.8.9-slim-buster
 
 ARG BOT_DIR=./bot
 

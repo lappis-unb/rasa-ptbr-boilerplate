@@ -1,8 +1,6 @@
 .PHONY: all clean actions
 
 ## FLAGS:
-# TODO: This is a hotfix while RASA don't solve dependencies issues.
-PIP_FLAGS = --use-deprecated=legacy-resolver 
 LOG_LEVEL = -v
 RASA_ENDPOINTS = --endpoints endpoints.yml
 RASA_CREDENTIALS = --credentials credentials.yml
@@ -12,8 +10,8 @@ clean:
 
 install:
 	pip install --upgrade pip 						&& \
-	pip install $(PIP_FLAGS) -r requirements.txt	&& \
-	pip install $(PIP_FLAGS) -r x-requirements.txt
+	pip install -r requirements.txt	&& \
+	pip install -r x-requirements.txt
 
 # RASA X
 x:
