@@ -8,67 +8,67 @@ stories:
   steps:
   - intent: despedir
   - action: utter_despedir
-- story: path_religiao
+- story: religiao
   steps:
   - intent: religiao
   - action: utter_religiao
   - action: utter_continuar_conversa
-- story: path_time
+- story: time
   steps:
   - intent: time
   - action: utter_time
   - action: utter_continuar_conversa
-- story: path_genero
+- story: genero
   steps:
   - intent: genero
   - action: utter_genero
   - action: utter_continuar_conversa
-- story: path_piada
+- story: piada
   steps:
   - intent: piada
   - action: utter_piada
   - action: utter_continuar_conversa
-- story: path_license
+- story: licenca
   steps:
-  - intent: license
-  - action: utter_license
+  - intent: licenca
+  - action: utter_licenca
   - action: utter_continuar_conversa
-- story: path_onde_voce_mora
+- story: onde_voce_mora
   steps:
   - intent: onde_voce_mora
   - action: utter_onde_voce_mora
   - action: utter_continuar_conversa
-- story: path_musica
+- story: musica
   steps:
   - intent: musica
   - action: utter_musica
   - action: utter_continuar_conversa
-- story: path_comida
+- story: comida
   steps:
   - intent: comida
   - action: utter_comida
   - action: utter_continuar_conversa
-- story: path_cor
+- story: cor
   steps:
   - intent: cor
   - action: utter_cor
   - action: utter_continuar_conversa
-- story: path_relacionamento
+- story: relacionamento
   steps:
   - intent: relacionamento
   - action: utter_relacionamento
   - action: utter_continuar_conversa
-- story: path_signo
+- story: signo
   steps:
   - intent: signo
   - action: utter_signo
   - action: utter_continuar_conversa
-- story: path_triste
+- story: triste
   steps:
   - intent: triste
   - action: utter_triste
   - action: utter_continuar_conversa
-- story: path_historia
+- story: historia
   steps:
   - intent: historia
   - action: utter_historia
@@ -83,14 +83,6 @@ stories:
   - action: utter_cumprimentar
   - intent: tudo_bem
   - action: utter_tudo_bem
-- story: Nao entendi
-  steps:
-  - intent: diga_mais
-  - action: utter_diga_mais
-- story: fallback
-  steps:
-  - intent: out_of_scope
-  - action: utter_fallback
 - story: negar sem contexto
   steps:
   - intent: negar
@@ -108,8 +100,3 @@ stories:
   steps:
   - intent: objetivo
   - action: utter_objetivo
-- story: path_feedback
-  steps:
-  - intent: feedback
-  - action: utter_feedback
-  - action: utter_continuar_conversa
