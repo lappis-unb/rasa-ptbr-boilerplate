@@ -8,16 +8,13 @@ intents:
 - o_que_sei_falar
 - despedir
 - out_of_scope
-- diga_mais
 - tudo_bem
 - elogios
-- afirmar
-- negar
 - religiao
 - time
 - genero
 - piada
-- license
+- licenca
 - onde_voce_mora
 - musica
 - comida
@@ -26,15 +23,15 @@ intents:
 - triste
 - historia
 - objetivo
+- afirmar
+- negar
 - cancelar
-- feedback
 entities:
-- sentimento
 - religiao
 - time
 - genero
 - piada
-- license
+- licenca
 - musica
 - comida
 - cor
@@ -64,11 +61,6 @@ responses:
       Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
   - text: |
       Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
-  utter_diga_mais:
-  - text: |
-      Por enquanto, só entendo perguntas completas.
-      Como por exemplo "qual é o melhor time do Brasil?".
-      Se você puder pergunta de novo de outro jeito :)
   utter_elogios:
   - text: |
       Obrigada! É sempre bom dar e receber elogios :P
@@ -149,7 +141,7 @@ responses:
       Por que o Batman colocou o batmóvel no seguro???
 
       Porque ele tem medo que robin =D
-  utter_license:
+  utter_licenca:
   - text: |
       Sou um software livre
 
@@ -192,8 +184,6 @@ responses:
       Eu gosto de todas as cores
 
       Você já viu o quanto o arco-iris é lindo?!
-  - text: |
-      A minha cor preferida é a sua cor preferida =D
   - text: |
       Verde é top!
   utter_relacionamento:
@@ -266,10 +256,6 @@ responses:
        Ah e eu sou Open Source ;)
   utter_pergunta_cancelar:
   - text: Entendi. Você deseja cancelar?
-  utter_feedback:
-  - text: Muito obrigado pelo seu feedback! Crescer é escutar e evoluir
-  - text: Obrigado pelo feedback, vou tentar melhorar cada vez mais
-  - text: Valeu pelo feedback, quanto mais a gente rala mais a gente cresce
 actions:
 - action_teste
 forms:
