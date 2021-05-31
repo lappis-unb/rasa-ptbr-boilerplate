@@ -3,43 +3,44 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- cumprimentar
-- relacionamento
-- o_que_sei_falar
-- despedir
-- out_of_scope
-- tudo_bem
-- elogios
-- religiao
-- time
-- genero
-- piada
-- licenca
-- onde_voce_mora
-- musica
-- comida
-- cor
-- signo
-- triste
-- historia
-- objetivo
-- afirmar
-- negar
-- cancelar
+  - cumprimentar
+  - relacionamento
+  - o_que_sei_falar
+  - despedir
+  - out_of_scope
+  - tudo_bem
+  - elogios
+  - religiao
+  - time
+  - genero
+  - piada
+  - licenca
+  - onde_voce_mora
+  - musica
+  - comida
+  - cor
+  - signo
+  - triste
+  - historia
+  - objetivo
+  - afirmar
+  - negar
+  - cancelar
+  - informar
 entities:
-- religiao
-- time
-- genero
-- piada
-- licenca
-- musica
-- comida
-- cor
-- signo
-- triste
-- historia
-- telefone
-- cpf
+  - religiao
+  - time
+  - genero
+  - piada
+  - licenca
+  - musica
+  - comida
+  - cor
+  - signo
+  - triste
+  - historia
+  - telefone
+  - cpf
 slots:
   cpf:
     type: text
@@ -256,7 +257,24 @@ responses:
        Ah e eu sou Open Source ;)
   utter_pergunta_cancelar:
   - text: Entendi. Você deseja cancelar?
+  utter_nao_nlu:
+  - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
+  utter_nao_core:
+  - text: Desculpe, não sei te responder.
 actions:
 - action_teste
 forms:
   login_form: {}
+#    required_slots:
+#        cpf:
+#        - type: from_entity
+#          intent: informar
+#          not_intent: cumprimentar
+#        data_nascimento:
+#        - type: from_entity
+#          intent: informar
+#          not_intent: cumprimentar
+#        telefone:
+#        - type: from_entity
+#          intent: informar
+#          not_intent: cumprimentar

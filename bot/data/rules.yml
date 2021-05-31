@@ -1,0 +1,5 @@
+rules:
+- rule: Pedir para reformular a mensagem caso NLU não entenda
+  steps:
+  - intent: nlu_fallback
+  - action: utter_nao_nlu

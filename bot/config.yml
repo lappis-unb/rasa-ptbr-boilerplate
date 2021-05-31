@@ -1,12 +1,8 @@
-version: "2.0"
-language: "pt-br"
-rules:
-- rule: Rule to handle messages with low NLU confidence (automated conversion from 'FallbackPolicy')
-  steps:
-  - intent: nlu_fallback
-  - action: utter_fallback
-pipeline:
+# https://rasa.com/docs/rasa/nlu/components/
+language: pt-br
+
 # See https://rasa.com/docs/rasa/tuning-your-model for more information.
+pipeline:
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
@@ -16,20 +12,24 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
+    model_confidence: linear_norm
     epochs: 100
-    constrain_similarities: true
   - name: EntitySynonymMapper
   - name: ResponseSelector
+    model_confidence: linear_norm
     epochs: 100
-    constrain_similarities: true
   - name: FallbackClassifier
-    threshold: 0.3
+    threshold: 0.7
     ambiguity_threshold: 0.1
+
+# https://rasa.com/docs/rasa/core/policies/
 policies:
-# See https://rasa.com/docs/rasa/policies for more information.
   - name: MemoizationPolicy
   - name: TEDPolicy
+    model_confidence: linear_norm
     max_history: 5
     epochs: 100
-    constrain_similarities: true
   - name: RulePolicy
+    core_fallback_threshold: 0.7
+    core_fallback_action_name: "utter_nao_core"
+    enable_fallback_prediction: True

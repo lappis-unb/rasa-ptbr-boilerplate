@@ -312,3 +312,16 @@ nlu:
     - Que loucura está acontecendo?!
     - Não quero compartilhar meus dados
     - Não quero mais informar meus dados
+- intent: informar
+  examples: |
+    - "CPF: [000.000.000-00](cpf)"
+    - [000.000.000-00](cpf)
+    - [00000000000](cpf)
+    - O meu CPF é [000.000.000-00](cpf)
+    - "Nascimento: [10/12/1999](data_nascimento)"
+    - Eu nasci no dia [10/12/1999](data_nascimento)
+    - [10/12/1999](data_nascimento)
+    - "Telefone: [(00) 00000-0000](telefone)"
+    - [(00) 00000-0000](telefone)
+    - [00000000000](telefone)
+    - O meu celular é [(00) 00000-0000](telefone)
