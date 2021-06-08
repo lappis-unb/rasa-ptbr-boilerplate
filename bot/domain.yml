@@ -264,14 +264,15 @@ responses:
 actions:
 - action_teste
 forms:
-  login_form:
-    required_slots:
-        cpf:
-          - type: from_intent
-            entity: informar
-        data_nascimento:
-          - type: from_intent
-            entity: informar
-        telefone:
-          - type: from_intent
-            entity: informar
+  login_form: {}
+#  login_form:
+#    required_slots:
+#        cpf:
+#          - type: from_intent
+#            entity: informar
+#        data_nascimento:
+#          - type: from_intent
+#            entity: informar
+#        telefone:
+#          - type: from_intent
+#            entity: informar
