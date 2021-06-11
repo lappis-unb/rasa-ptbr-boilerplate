@@ -2,9 +2,11 @@ version: "2.0"
 nlu:
 - intent: cumprimentar
   examples: |
-    - olá
-    - Ola
-    - Oi
+    - [olá](oi)
+    - [Ola](oi)
+    - [Oi](oi)
+    - [Iae](oi)
+    - [Olá](oi) Bot!
     - bom dia
     - boa tarde
     - boa noite
@@ -259,7 +261,7 @@ nlu:
     - como voce ta
     - como vai você
     - como vai vc
-- intent: o_que_sei_falar
+- intent: me_ajuda
   examples: |
     - sobre o que você sabe falar
     - o que mais você sabe falar
@@ -268,14 +270,20 @@ nlu:
     - lista de assuntos possiveis
     - quais as perguntas vc responde
     - quais as perquisar você responde
-    - quero ajuda
-    - meajuda
-    - meajude
-    - MEAJDA
-    - me ajuda
-    - me ajude
-    - ajuda eu
-    - menu
+    - quero [ajuda](meajuda)
+    - [meajuda](meajuda
+    - [meajude](meajuda)
+    - [MEAJDA](meajuda)
+    - [me ajuda](meajuda)
+    - [me ajude](meajuda)
+    - [ajuda eu](meajuda)
+    - Qual o seu objetivo robo?
+    - Qual o seu objetivo robô?
+    - Vc tem um objetivo de existencia?
+    - Você foi feito pra que?
+    - Vc tem algum propósito?
+    - Como que vc pode me ser útil?
+    - Me fale mais sobre você.
 - intent: afirmar
   examples: |
     - sim
@@ -284,15 +292,6 @@ nlu:
     - claro
     - exato
     - isso mesmo
-- intent: objetivo
-  examples: |
-    - Qual o seu objetivo robo?
-    - Qual o seu objetivo robô?
-    - Vc tem um objetivo de existencia?
-    - Você foi feito pra que?
-    - Vc tem algum propósito?
-    - Como que vc pode me ser útil?
-    - Me fale mais sobre você.
 - intent: cancelar
   examples: |
     - Desisto
@@ -325,3 +324,12 @@ nlu:
     - [(00) 00000-0000](telefone)
     - [00000000000](telefone)
     - O meu celular é [(00) 00000-0000](telefone)
+- intent: menu
+  examples: |
+    - Me mostre o [menu](menu)
+    - [menu](menu)
+    - Quero ver o [menu](menu)
+    - kd o [menu](menu)
+    - Bot, me mostra o [menu](menu)
+    - Quais são as [opções](menu) de diálogo?
+    - Me mostre as [opcoes](menu) de conversa

@@ -4,6 +4,12 @@ stories:
   steps:
   - intent: cumprimentar
   - action: utter_cumprimentar
+- story: Oi Tudo Bem
+  steps:
+  - intent: cumprimentar
+  - action: utter_cumprimentar
+  - intent: tudo_bem
+  - action: utter_tudo_bem
 - story: Despedir
   steps:
   - intent: despedir
@@ -73,30 +79,16 @@ stories:
   - intent: historia
   - action: utter_historia
   - action: utter_continuar_conversa
-- story: Tudo Bem Story
+- story: Tudo Bem 
   steps:
   - intent: tudo_bem
   - action: utter_tudo_bem
-- story: Oi Tudo Bem Story
-  steps:
-  - intent: cumprimentar
-  - action: utter_cumprimentar
-  - intent: tudo_bem
-  - action: utter_tudo_bem
-- story: negar sem contexto
-  steps:
-  - intent: negar
-  - action: utter_despedir
 - story: elogios
   steps:
   - intent: elogios
   - action: utter_elogios
   - action: utter_continuar_conversa
-- story: meajuda
+- story: me ajuda
   steps:
-  - intent: o_que_sei_falar
-  - action: utter_o_que_sei_falar
-- story: objetivo
-  steps:
-  - intent: objetivo
-  - action: utter_objetivo
+  - intent: me_ajuda
+  - action: utter_me_ajuda

@@ -4,8 +4,9 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
   - cumprimentar
+  - menu
   - relacionamento
-  - o_que_sei_falar
+  - me_ajuda
   - despedir
   - out_of_scope
   - tudo_bem
@@ -22,12 +23,14 @@ intents:
   - signo
   - triste
   - historia
-  - objetivo
   - afirmar
   - negar
   - cancelar
   - informar
 entities:
+  - oi
+  - menu
+  - meajuda
   - religiao
   - time
   - genero
@@ -70,14 +73,6 @@ responses:
       Oi, eu sou um bot, um assistente virtual!
       Uhuu! Manda aí um assunto que te interessa :)
       Para aprender como você pode interagir comigo basta escrever meajuda.
-  utter_o_que_sei_falar:
-  - text: |
-      Eu posso falar de assuntos simples, como por exemplo "qual é o seu filme favorito?"
-
-      Tem alguns assuntos que eu também ainda não domino, 
-      mas vou deixar você descobrir o que eu sei responder.
-
-      E, aí do que podemos conversar?
   utter_despedir:
   - text: |
       Foi um prazer te ajudar!
@@ -250,17 +245,19 @@ responses:
   - text: E aí, qual nosso próximo assunto?
   - text: Quer conversar sobre outra coisa?
   - text: Gostaria de falar sobre algo mais?
-  utter_objetivo:
-  - text: |-
-      Eu sou um chatbot Básico. Sei falar de coisas pontuais, mas eu posso ajudar em muito em exemplos! no meu repositório tem muita coisa legal que vc pode aprender! Acessa lá: https://github.com/lappis-unb/rasa-ptbr-boilerplate
+  utter_me_ajuda:
+  - text: |
+      Eu sou um chatbot e sei falar de assuntos relacionados com chatbots!Posso te ensinar a como construir um chatbot e mostrar com eu funciono.
 
-       Ah e eu sou Open Source ;)
+      Por exemplo, me peça o menu que te mostro umas opções (digite: me mostre o menu)
+
+      Ah, e no meu repositório tem muita coisa legal que vc pode aprender! Acessa lá: [https://github.com/lappis-unb/rasa-ptbr-boilerplate](https://github.com/lappis-unb/rasa-ptbr-boilerplate)
   utter_pergunta_cancelar:
   - text: Entendi. Você deseja cancelar?
   utter_nao_nlu:
   - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
   utter_nao_core:
-  - text: Desculpe, não sei te responder.
+  - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
 actions:
 - action_teste
 forms:

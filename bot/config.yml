@@ -11,7 +11,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 100
+    epochs: 200
     model_confidence: linear_norm
     constrain_similarities: True
   - name: EntitySynonymMapper
@@ -20,7 +20,7 @@ pipeline:
     epochs: 100
     constrain_similarities: True
   - name: FallbackClassifier
-    threshold: 0.7
+    threshold: 0.4
     ambiguity_threshold: 0.1
 
 # https://rasa.com/docs/rasa/core/policies/
@@ -31,6 +31,6 @@ policies:
     epochs: 100
     model_confidence: linear_norm
   - name: RulePolicy
-    core_fallback_threshold: 0.7
+    core_fallback_threshold: 0.2
     core_fallback_action_name: "utter_nao_core"
-    enable_fallback_prediction: True
+    enable_fallback_prediction: False
