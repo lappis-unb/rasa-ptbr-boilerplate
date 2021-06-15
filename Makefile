@@ -56,7 +56,7 @@ config-kibana:
 		python3 /analytics/import_dashboards.py
 	echo "Acesse o KIBANA em: http://localhost:5601"
 
-run-analytics:
+analytics:
 	docker-compose up \
 		-d elasticsearch
 	docker-compose up \
@@ -66,35 +66,35 @@ run-analytics:
 	docker-compose up \
 		-d kibana
 
-run-shell:
+shell:
 	docker-compose run \
 		--rm \
 		--service-ports \
 		bot \
 		make shell
 
-run-api:
+api:
 	docker-compose run \
 		--rm \
 		--service-ports \
 		bot \
 		make api
 
-run-actions:
+actions:
 	docker-compose run \
 		--rm \
 		--service-ports \
 		bot \
 		make actions
 
-run-x:
+x:
 	docker-compose run \
 		--rm \
 		--service-ports \
 		x \
 		make x
 
-run-webchat:
+webchat:
 	echo "Executando Bot com Webchat."
 	docker-compose run \
 		-d \
@@ -106,7 +106,7 @@ run-webchat:
 		webchat
 	echo "Acesse o WEBCHAT em: http://localhost:5010"
 
-run-telegram:
+telegram:
 	docker-compose run \
 		-d \
 		--rm \
@@ -114,12 +114,12 @@ run-telegram:
 		bot_telegram \
 		make telegram
 
-run-notebooks:
+notebooks:
 	docker-compose up \
 		-d notebooks
 	echo "Acesse o KIBANA em: http://localhost:8888"
 
-run-rocket:
+rocket:
 	docker-compose up \
 		-d rocketchat \
 		bot-rocket
@@ -131,18 +131,23 @@ train:
 		--build coach
 
 ############################## TESTS ##############################
+validate:
+	docker-compose run \
+		--rm bot \
+		make validate
+
 test:
 	docker-compose run \
 		--rm bot \
 		make test
 
-run-test-nlu:
+test-nlu:
 	docker-compose run \
 		--rm \
 		bot \
 		make test-nlu
 
-run-test-core:
+test-core:
 	docker-compose run \
 		--rm \
 		bot \
