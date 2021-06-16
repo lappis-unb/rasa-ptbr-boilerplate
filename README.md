@@ -56,7 +56,7 @@ docker ps
 Se tudo der certo, você conseguirá ver uma tabela com dois contêineres de nomes `rasa-ptbr-boilerplate_bot-webchat` e 
 `rasa-ptbr-boilerplate_actions` na coluna IMAGE.
 
-Para iniciar uma conversa com o chatbot, execute o comando `make run-shell`, espere o comando rodar e divirta-se!
+Para iniciar uma conversa com o chatbot, execute o comando `make shell`, espere o comando rodar e divirta-se!
 
 
 ## Introdução
@@ -98,7 +98,7 @@ make train
 Para executar o bot no terminal execute:
 
 ```sh
-make run-shell
+make shell
 ```
 
 ### Executando o bot no Telegram
@@ -110,7 +110,7 @@ Após realizar o [tutorial](/docs/setup_telegram.md) de exportação de todas va
 Depois execute o bot no telegram:
 
 ```sh
-make run-telegram
+make telegram
 ```
 
 ### Analytics
@@ -169,7 +169,7 @@ Por último basta treinar o bot novamente, e a informação será armazenada na 
 Levante o container `notebooks`
 
 ```sh
-make run-notebooks
+make notebooks
 ```
 
 Acesse o notebook em `localhost:8888`

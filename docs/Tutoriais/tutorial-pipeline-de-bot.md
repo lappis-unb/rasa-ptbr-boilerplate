@@ -13,7 +13,7 @@ O primeiro passo para configuração é definir uma imagem base a ser utilizada 
 Para definir uma imagem global é necessário utilizar a configuração abaixo:
 
 ```yml
-image: python:3.6-slim
+image: python:3.8.9-slim-buster
 
 test style:
   stage: test style

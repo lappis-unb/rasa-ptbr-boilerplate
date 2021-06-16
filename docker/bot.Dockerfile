@@ -1,4 +1,4 @@
-FROM botrequirements
+FROM arthurtemporim/boilerplate-requirements:latest
 
 WORKDIR /bot
 COPY ./bot /bot

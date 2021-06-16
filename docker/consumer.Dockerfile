@@ -1,4 +1,4 @@
-FROM python:3.6-slim
+FROM python:3.8.9-slim-buster
 
 RUN python -m pip install --upgrade pip
 
