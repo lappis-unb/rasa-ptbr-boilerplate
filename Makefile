@@ -8,14 +8,18 @@ clean:
 stop:
 	docker-compose stop
 
+
+############################## DOCKERHUB ##############################
+dchub-requirements:
+	docker push arthurtemporim/boilerplate-requirements
+
 ############################## BOILERPLATE ##############################
 first-run:
 	make build
 	make train
-	make run-shell
+	make shell
 
 build:
-	make build-requirements
 	make build-coach
 	make build-bot
 
@@ -23,7 +27,7 @@ build-requirements:
 	docker build . \
 		--no-cache \
 		-f docker/requirements.Dockerfile \
-		-t botrequirements
+		-t arthurtemporim/boilerplate-requirements
 
 build-bot:
 	docker-compose build \
@@ -34,7 +38,7 @@ build-coach:
 		--no-cache coach
 
 build-analytics:
-	make run-analytics
+	make analytics
 	make config-elastic
 	# This line should be removed ASAP
 	sleep 10
