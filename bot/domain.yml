@@ -3,46 +3,47 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- cumprimentar
-- relacionamento
-- o_que_sei_falar
-- despedir
-- out_of_scope
-- diga_mais
-- tudo_bem
-- elogios
-- afirmar
-- negar
-- religiao
-- time
-- genero
-- piada
-- license
-- onde_voce_mora
-- musica
-- comida
-- cor
-- signo
-- triste
-- historia
-- objetivo
-- cancelar
-- feedback
+  - cumprimentar
+  - menu
+  - relacionamento
+  - me_ajuda
+  - despedir
+  - out_of_scope
+  - tudo_bem
+  - elogios
+  - religiao
+  - time
+  - genero
+  - piada
+  - licenca
+  - onde_voce_mora
+  - musica
+  - comida
+  - cor
+  - signo
+  - triste
+  - historia
+  - afirmar
+  - negar
+  - cancelar
+  - informar
 entities:
-- sentimento
-- religiao
-- time
-- genero
-- piada
-- license
-- musica
-- comida
-- cor
-- signo
-- triste
-- historia
-- telefone
-- cpf
+  - oi
+  - menu
+  - meajuda
+  - religiao
+  - time
+  - genero
+  - piada
+  - licenca
+  - musica
+  - comida
+  - cor
+  - signo
+  - triste
+  - historia
+  - telefone
+  - cpf
 slots:
   cpf:
     type: text
@@ -64,11 +65,6 @@ responses:
       Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
   - text: |
       Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
-  utter_diga_mais:
-  - text: |
-      Por enquanto, só entendo perguntas completas.
-      Como por exemplo "qual é o melhor time do Brasil?".
-      Se você puder pergunta de novo de outro jeito :)
   utter_elogios:
   - text: |
       Obrigada! É sempre bom dar e receber elogios :P
@@ -77,14 +73,6 @@ responses:
       Oi, eu sou um bot, um assistente virtual!
       Uhuu! Manda aí um assunto que te interessa :)
       Para aprender como você pode interagir comigo basta escrever meajuda.
-  utter_o_que_sei_falar:
-  - text: |
-      Eu posso falar de assuntos simples, como por exemplo "qual é o seu filme favorito?"
-
-      Tem alguns assuntos que eu também ainda não domino, 
-      mas vou deixar você descobrir o que eu sei responder.
-
-      E, aí do que podemos conversar?
   utter_despedir:
   - text: |
       Foi um prazer te ajudar!
@@ -149,7 +137,7 @@ responses:
       Por que o Batman colocou o batmóvel no seguro???
 
       Porque ele tem medo que robin =D
-  utter_license:
+  utter_licenca:
   - text: |
       Sou um software livre
 
@@ -192,8 +180,6 @@ responses:
       Eu gosto de todas as cores
 
       Você já viu o quanto o arco-iris é lindo?!
-  - text: |
-      A minha cor preferida é a sua cor preferida =D
   - text: |
       Verde é top!
   utter_relacionamento:
@@ -259,18 +245,31 @@ responses:
   - text: E aí, qual nosso próximo assunto?
   - text: Quer conversar sobre outra coisa?
   - text: Gostaria de falar sobre algo mais?
-  utter_objetivo:
-  - text: |-
-      Eu sou um chatbot Básico. Sei falar de coisas pontuais, mas eu posso ajudar em muito em exemplos! no meu repositório tem muita coisa legal que vc pode aprender! Acessa lá: https://github.com/lappis-unb/rasa-ptbr-boilerplate
+  utter_me_ajuda:
+  - text: |
+      Eu sou um chatbot e sei falar de assuntos relacionados com chatbots!Posso te ensinar a como construir um chatbot e mostrar com eu funciono.
 
-       Ah e eu sou Open Source ;)
+      Por exemplo, me peça o menu que te mostro umas opções (digite: me mostre o menu)
+
+      Ah, e no meu repositório tem muita coisa legal que vc pode aprender! Acessa lá: [https://github.com/lappis-unb/rasa-ptbr-boilerplate](https://github.com/lappis-unb/rasa-ptbr-boilerplate)
   utter_pergunta_cancelar:
   - text: Entendi. Você deseja cancelar?
-  utter_feedback:
-  - text: Muito obrigado pelo seu feedback! Crescer é escutar e evoluir
-  - text: Obrigado pelo feedback, vou tentar melhorar cada vez mais
-  - text: Valeu pelo feedback, quanto mais a gente rala mais a gente cresce
+  utter_nao_nlu:
+  - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
+  utter_nao_core:
+  - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
 actions:
 - action_teste
 forms:
   login_form: {}
+#  login_form:
+#    required_slots:
+#        cpf:
+#          - type: from_intent
+#            entity: informar
+#        data_nascimento:
+#          - type: from_intent
+#            entity: informar
+#        telefone:
+#          - type: from_intent
+#            entity: informar
