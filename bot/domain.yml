@@ -44,18 +44,19 @@ entities:
   - signo
   - triste
   - historia
-  - telefone
-  - cpf
+  - acao
+  - formulario
+  - nome
+  - idade
 slots:
-  cpf:
+  nome:
     type: text
     influence_conversation: false
-  data_nascimento:
+    auto_fill: false
+  idade:
     type: text
     influence_conversation: false
-  telefone:
-    type: text
-    influence_conversation: false
+    auto_fill: false
 responses:
   utter_fallback:
   - text: |
@@ -269,4 +270,13 @@ responses:
 actions:
 - action_exemplo
 forms:
-  exemplo_form: {}
+  exemplo_form:
+    required_slots:
+      nome:
+        - type: from_entity
+          entity: nome
+          intent: inform
+      idade:
+        - type: from_entity
+          entity: idade
+          intent: inform
