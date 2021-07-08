@@ -92,3 +92,9 @@ stories:
   steps:
   - intent: me_ajuda
   - action: utter_me_ajuda
+- story: exemplo acao
+  steps:
+  - intent: pede_exemplo
+    entities:
+      - acao
+  - action: action_exemplo
