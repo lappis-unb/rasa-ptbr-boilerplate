@@ -30,7 +30,7 @@ policies:
   - name: MemoizationPolicy
   - name: TEDPolicy
     max_history: 5
-    epochs: 100
+    epochs: 44
     model_confidence: linear_norm
     tensorboard_log_directory: ".tensorboard_ted"
     tensorboard_log_level: "epoch"

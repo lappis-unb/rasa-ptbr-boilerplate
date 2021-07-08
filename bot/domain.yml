@@ -27,7 +27,8 @@ intents:
   - negar
   - cancelar
   - informar
-  - pede_exemplo
+  - pede_exemplo_acao
+  - pede_exemplo_form
 entities:
   - oi
   - menu

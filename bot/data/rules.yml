@@ -6,7 +6,7 @@ rules:
   - action: utter_nao_nlu
 - rule: Ativa formulário
   steps:
-  - intent: pede_exemplo
+  - intent: pede_exemplo_form
     entities:
       - formulario
   - action: utter_explica_exemplo_form
