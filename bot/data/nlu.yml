@@ -313,17 +313,16 @@ nlu:
     - Não quero mais informar meus dados
 - intent: informar
   examples: |
-    - "CPF: [000.000.000-00](cpf)"
-    - [000.000.000-00](cpf)
-    - [00000000000](cpf)
-    - O meu CPF é [000.000.000-00](cpf)
-    - "Nascimento: [10/12/1999](data_nascimento)"
-    - Eu nasci no dia [10/12/1999](data_nascimento)
-    - [10/12/1999](data_nascimento)
-    - "Telefone: [(00) 00000-0000](telefone)"
-    - [(00) 00000-0000](telefone)
-    - [00000000000](telefone)
-    - O meu celular é [(00) 00000-0000](telefone)
+    - [Arthur](nome)
+    - O meu nome é [Arthur](nome)
+    - me chamo [Arthur](nome)
+    - Meu nome: [Arthur](nome)
+    - Claro, meu nome é [Arthur](nome)
+    - [25](idade)
+    - Minha idade é [25](idade)
+    - Tenho [25](idade) anos
+    - Eu tenho [25](idade) anos
+    - Tenho: [25](anos)
 - intent: menu
   examples: |
     - Me mostre o [menu](menu)
@@ -333,3 +332,17 @@ nlu:
     - Bot, me mostra o [menu](menu)
     - Quais são as [opções](menu) de diálogo?
     - Me mostre as [opcoes](menu) de conversa
+- intent: pede_exemplo
+  examples: |
+    - [form](formulario)
+    - Bot, quero um exemplo de [formulário](formulario)
+    - Bot, entra em um [form](formulario)
+    - Exemplo de [formulário](formulario)
+    - Me explique como funciona os [formulários](formulario) no rasa.
+    - Você sabe fazer [forms](formulario)?
+    - [action](acao)
+    - Bot, quero um exemplo de [ação](acao)
+    - Bot, entra em um [action](acao)
+    - Exemplo de [ação](acao)
+    - Me explique como funciona uma [custom action](acao) no rasa.
+    - Você sabe fazer [ações customizadas](acao)?
