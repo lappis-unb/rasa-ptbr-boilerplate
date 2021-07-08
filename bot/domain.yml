@@ -268,15 +268,4 @@ responses:
 actions:
 - action_exemplo
 forms:
-  login_form: {}
-#  login_form:
-#    required_slots:
-#        cpf:
-#          - type: from_intent
-#            entity: informar
-#        data_nascimento:
-#          - type: from_intent
-#            entity: informar
-#        telefone:
-#          - type: from_intent
-#            entity: informar
+  exemplo_form: {}

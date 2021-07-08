@@ -55,9 +55,13 @@ visualize:
 		rasa visualize \
 			--out ./graph.html
 
-tensorboard:
+tensor_diet:
 		tensorboard \
-			--logdir .tensorboard
+			--logdir .tensorboard_diet
+
+tensor_ted:
+		tensorboard \
+			--logdir .tensorboard_ted
 
 # CHAT
 shell:

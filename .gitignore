@@ -2,7 +2,7 @@
 bot/models
 bot/results*
 bot/train_test_split/
-.tensorboard
+.tensorboard*
 
 ### Rasa X ###
 events.db
