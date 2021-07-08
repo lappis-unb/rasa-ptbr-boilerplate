@@ -27,6 +27,7 @@ intents:
   - negar
   - cancelar
   - informar
+  - pede_exemplo
 entities:
   - oi
   - menu
@@ -258,6 +259,12 @@ responses:
   - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
   utter_nao_core:
   - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
+  utter_submit_exemplo_form:
+  - text: Ótimo! terminamos seu exemplo de formulário!
+  utter_explica_exemplo_form:
+  - text: "Agora você entrou em uma story que ativou um formulário! Aqui tem a documentação do Rasa sobre formulários: [documentação](https://rasa.com/docs/rasa/forms/). \n Vou te fazer algumas perguntas, responda elas pra mim pra que você possa sair deste loop."
+  utter_slots_exemplo_form:
+  - text: "No formulário eu preenchi o slot NOME com o seguinte valor: {nome}"
 actions:
 - action_teste
 forms:
