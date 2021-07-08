@@ -266,7 +266,7 @@ responses:
   utter_slots_exemplo_form:
   - text: "No formulário eu preenchi o slot NOME com o seguinte valor: {nome}"
 actions:
-- action_teste
+- action_exemplo
 forms:
   login_form: {}
 #  login_form:

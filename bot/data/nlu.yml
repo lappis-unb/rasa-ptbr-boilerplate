@@ -322,7 +322,7 @@ nlu:
     - Minha idade é [25](idade)
     - Tenho [25](idade) anos
     - Eu tenho [25](idade) anos
-    - Tenho: [25](anos)
+    - Tenho: [25](idade)
 - intent: menu
   examples: |
     - Me mostre o [menu](menu)
