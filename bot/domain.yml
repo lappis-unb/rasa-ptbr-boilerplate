@@ -272,7 +272,6 @@ actions:
 - action_exemplo
 forms:
   exemplo_form:
-    required_slots:
       nome:
         - type: from_entity
           entity: nome

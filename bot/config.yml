@@ -11,7 +11,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 207
+    epochs: 107
     model_confidence: linear_norm
     constrain_similarities: True
     tensorboard_log_directory: ".tensorboard_diet"
