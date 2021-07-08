@@ -272,11 +272,11 @@ actions:
 - action_exemplo
 forms:
   exemplo_form:
-      nome:
-        - type: from_entity
-          entity: nome
-          intent: [informar]
-      idade:
-        - type: from_entity
-          entity: idade
-          intent: [informar]
+    nome:
+    - type: from_entity
+      entity: nome
+      intent: informar
+    idade:
+    - type: from_entity
+      entity: idade
+      intent: informar
