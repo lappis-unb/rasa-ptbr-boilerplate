@@ -276,8 +276,8 @@ forms:
       nome:
         - type: from_entity
           entity: nome
-          intent: inform
+          intent: [informar]
       idade:
         - type: from_entity
           entity: idade
-          intent: inform
+          intent: [informar]

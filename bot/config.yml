@@ -11,7 +11,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 107
+    epochs: 207
     model_confidence: linear_norm
     constrain_similarities: True
     tensorboard_log_directory: ".tensorboard_diet"
@@ -22,7 +22,7 @@ pipeline:
     epochs: 100
     constrain_similarities: True
   - name: FallbackClassifier
-    threshold: 0.3
+    threshold: 0.1
     ambiguity_threshold: 0.1
 
 # https://rasa.com/docs/rasa/core/policies/
@@ -35,6 +35,6 @@ policies:
     tensorboard_log_directory: ".tensorboard_ted"
     tensorboard_log_level: "epoch"
   - name: RulePolicy
-    core_fallback_threshold: 0.3
+    core_fallback_threshold: 0.1
     core_fallback_action_name: "utter_nao_core"
     enable_fallback_prediction: False
