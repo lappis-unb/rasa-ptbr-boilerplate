@@ -74,19 +74,19 @@ nlu:
     - [licenca](licenca)
 - intent: onde_voce_mora
   examples: |
-    - onde voce [mora](live)
-    - onde voce [vive](live)
+    - onde voce [mora](vive)
+    - onde voce [vive](vive)
     - onde voce habita
-    - em que lugar voce [vive](live)
-    - [onde voce esta](live) agora
-    - voce [mora](live) no computador
-    - voce [vive](live) na internet
-    - [onde vc esta](live)
-    - qual é o seu habitat
-    - qual é o seu endereço
-    - qual e o seu endereco
-    - qual o seu endereço
-    - qual o seu endereco
+    - em que lugar voce [vive](vive)
+    - [onde voce esta](vive) agora
+    - voce [mora](vive) no computador
+    - voce [vive](vive) na internet
+    - [onde vc esta](vive)
+    - qual é o seu [habitat](vive)
+    - qual é o seu [endereço](vive)
+    - qual e o seu [endereco](vive)
+    - qual o seu [endereço](vive)
+    - qual o seu [endereco](vive)
 - intent: genero
   examples: |
     - voce é [homem](genero) ou [mulher](genero)?
