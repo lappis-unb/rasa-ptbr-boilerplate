@@ -27,6 +27,8 @@ intents:
   - negar
   - cancelar
   - informar
+  - pede_exemplo_acao
+  - pede_exemplo_form
 entities:
   - oi
   - menu
@@ -42,18 +44,20 @@ entities:
   - signo
   - triste
   - historia
-  - telefone
-  - cpf
+  - vive
+  - acao
+  - formulario
+  - nome
+  - idade
 slots:
-  cpf:
+  nome:
     type: text
     influence_conversation: false
-  data_nascimento:
+    auto_fill: false
+  idade:
     type: text
     influence_conversation: false
-  telefone:
-    type: text
-    influence_conversation: false
+    auto_fill: false
 responses:
   utter_fallback:
   - text: |
@@ -258,18 +262,25 @@ responses:
   - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
   utter_nao_core:
   - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
+  utter_submit_exemplo_form:
+  - text: Ótimo! terminamos seu exemplo de formulário!
+  utter_ask_nome:
+  - text: Qual o seu nome?
+  utter_ask_idade:
+  - text: Qual a sua idade?
+  utter_explica_exemplo_form:
+  - text: "Agora você entrou em uma story que ativou um formulário! Aqui tem a documentação do Rasa sobre formulários: [documentação](https://rasa.com/docs/rasa/forms/). \n Vou te fazer algumas perguntas, responda elas pra mim pra que você possa sair deste loop."
+  utter_slots_exemplo_form:
+  - text: "No formulário eu preenchi o slot NOME com o seguinte valor: {nome}"
 actions:
-- action_teste
+- action_exemplo
 forms:
-  login_form: {}
-#  login_form:
-#    required_slots:
-#        cpf:
-#          - type: from_intent
-#            entity: informar
-#        data_nascimento:
-#          - type: from_intent
-#            entity: informar
-#        telefone:
-#          - type: from_intent
-#            entity: informar
+  exemplo_form:
+    nome:
+    - type: from_entity
+      entity: nome
+      intent: informar
+    idade:
+    - type: from_entity
+      entity: idade
+      intent: informar

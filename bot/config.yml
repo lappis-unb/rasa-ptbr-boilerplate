@@ -11,16 +11,18 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 200
+    epochs: 107
     model_confidence: linear_norm
     constrain_similarities: True
+    tensorboard_log_directory: ".tensorboard_diet"
+    tensorboard_log_level: "epoch"
   - name: EntitySynonymMapper
   - name: ResponseSelector
     model_confidence: linear_norm
     epochs: 100
     constrain_similarities: True
   - name: FallbackClassifier
-    threshold: 0.4
+    threshold: 0.1
     ambiguity_threshold: 0.1
 
 # https://rasa.com/docs/rasa/core/policies/
@@ -28,9 +30,11 @@ policies:
   - name: MemoizationPolicy
   - name: TEDPolicy
     max_history: 5
-    epochs: 100
+    epochs: 44
     model_confidence: linear_norm
+    tensorboard_log_directory: ".tensorboard_ted"
+    tensorboard_log_level: "epoch"
   - name: RulePolicy
-    core_fallback_threshold: 0.2
+    core_fallback_threshold: 0.1
     core_fallback_action_name: "utter_nao_core"
     enable_fallback_prediction: False

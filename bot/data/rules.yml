@@ -1,5 +1,24 @@
+version: "2.0"
 rules:
 - rule: Pedir para reformular a mensagem caso NLU não entenda
   steps:
   - intent: nlu_fallback
   - action: utter_nao_nlu
+- rule: Ativa formulário
+  steps:
+  - intent: pede_exemplo_form
+    entities:
+      - formulario
+  - action: utter_explica_exemplo_form
+  - action: exemplo_form
+  - active_loop: exemplo_form
+- rule: Envia formulário
+  condition:
+  - active_loop: exemplo_form
+  steps:
+  - action: exemplo_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit_exemplo_form
+  - action: utter_slots_exemplo_form

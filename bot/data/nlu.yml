@@ -74,19 +74,19 @@ nlu:
     - [licenca](licenca)
 - intent: onde_voce_mora
   examples: |
-    - onde voce [mora](live)
-    - onde voce [vive](live)
+    - onde voce [mora](vive)
+    - onde voce [vive](vive)
     - onde voce habita
-    - em que lugar voce [vive](live)
-    - [onde voce esta](live) agora
-    - voce [mora](live) no computador
-    - voce [vive](live) na internet
-    - [onde vc esta](live)
-    - qual é o seu habitat
-    - qual é o seu endereço
-    - qual e o seu endereco
-    - qual o seu endereço
-    - qual o seu endereco
+    - em que lugar voce [vive](vive)
+    - [onde voce esta](vive) agora
+    - voce [mora](vive) no computador
+    - voce [vive](vive) na internet
+    - [onde vc esta](vive)
+    - qual é o seu [habitat](vive)
+    - qual é o seu [endereço](vive)
+    - qual e o seu [endereco](vive)
+    - qual o seu [endereço](vive)
+    - qual o seu [endereco](vive)
 - intent: genero
   examples: |
     - voce é [homem](genero) ou [mulher](genero)?
@@ -313,17 +313,16 @@ nlu:
     - Não quero mais informar meus dados
 - intent: informar
   examples: |
-    - "CPF: [000.000.000-00](cpf)"
-    - [000.000.000-00](cpf)
-    - [00000000000](cpf)
-    - O meu CPF é [000.000.000-00](cpf)
-    - "Nascimento: [10/12/1999](data_nascimento)"
-    - Eu nasci no dia [10/12/1999](data_nascimento)
-    - [10/12/1999](data_nascimento)
-    - "Telefone: [(00) 00000-0000](telefone)"
-    - [(00) 00000-0000](telefone)
-    - [00000000000](telefone)
-    - O meu celular é [(00) 00000-0000](telefone)
+    - [Arthur](nome)
+    - O meu nome é [Arthur](nome)
+    - me chamo [Arthur](nome)
+    - Meu nome: [Arthur](nome)
+    - Claro, meu nome é [Arthur](nome)
+    - [25](idade)
+    - Minha idade é [25](idade)
+    - Tenho [25](idade) anos
+    - Eu tenho [25](idade) anos
+    - Tenho: [25](idade)
 - intent: menu
   examples: |
     - Me mostre o [menu](menu)
@@ -333,3 +332,19 @@ nlu:
     - Bot, me mostra o [menu](menu)
     - Quais são as [opções](menu) de diálogo?
     - Me mostre as [opcoes](menu) de conversa
+- intent: pede_exemplo_form
+  examples: |
+    - [form](formulario)
+    - Bot, quero um exemplo de [formulário](formulario)
+    - Bot, entra em um [form](formulario)
+    - Exemplo de [formulário](formulario)
+    - Me explique como funciona os [formulários](formulario) no rasa.
+    - Você sabe fazer [forms](formulario)?
+- intent: pede_exemplo_acao
+  examples: |
+    - [action](acao)
+    - Bot, quero um exemplo de [ação](acao)
+    - Bot, entra em um [action](acao)
+    - Exemplo de [ação](acao)
+    - Me explique como funciona uma [custom action](acao) no rasa.
+    - Você sabe fazer [ações customizadas](acao)?
