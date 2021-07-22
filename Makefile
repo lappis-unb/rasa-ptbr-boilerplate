@@ -29,13 +29,13 @@ build-requirements:
 		-f docker/requirements.Dockerfile \
 		-t arthurtemporim/boilerplate-requirements
 
-build-bot:
-	docker-compose build \
-		--no-cache bot
-
 build-coach:
 	docker-compose build \
 		--no-cache coach
+
+build-bot:
+	docker-compose build \
+		--no-cache bot
 
 build-analytics:
 	make analytics
