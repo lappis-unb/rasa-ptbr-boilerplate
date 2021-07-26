@@ -13,11 +13,20 @@ clean:
 install:
 	pip install --upgrade pip 						&& \
 	pip install $(PIP_FLAGS) -r requirements.txt	&& \
-	pip install $(PIP_FLAGS) -r x-requirements.txt
 
 # RASA X
+install-x:
+	pip install $(PIP_FLAGS) -r x-requirements.txt
+
 x:
 	rasa x
+
+# RASALIT
+install-rasalit:
+	pip install $(PIP_FLAGS) -r rasalit-requirements.txt
+
+rasalit:
+	python -m rasalit nlu-cluster --port 8501
 
 # NLU
 train-nlu:
