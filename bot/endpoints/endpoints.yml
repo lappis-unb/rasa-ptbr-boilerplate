@@ -1,0 +1,3 @@
+# Configuração para ambiente local
+action_endpoint:
+  url: "http://localhost:5055/webhook"

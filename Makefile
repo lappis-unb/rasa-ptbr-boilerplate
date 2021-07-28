@@ -2,7 +2,6 @@ current_dir := $(shell pwd)
 user := $(shell whoami)
 
 ENDPOINTS = endpoints/docker-endpoints.yml
-REQ_VERSION = 2.8.0
 
 clean:
 	docker-compose down
@@ -14,7 +13,7 @@ stop:
 
 ############################## DOCKERHUB ##############################
 dchub-requirements:
-	docker push arthurtemporim/boilerplate-requirements:$(REQ_VERSION)
+	docker push arthurtemporim/boilerplate-requirements
 
 ############################## BOILERPLATE ##############################
 first-run:
