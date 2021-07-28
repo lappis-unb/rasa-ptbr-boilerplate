@@ -4,7 +4,8 @@
 # TODO: This is a hotfix while RASA don't solve dependencies issues.
 PIP_FLAGS = --use-deprecated=legacy-resolver
 LOG_LEVEL = -v
-RASA_ENDPOINTS = --endpoints endpoints.yml
+RASA_ENDPOINTS = --endpoints 
+ENDPOINTS = endpoints.yml
 RASA_CREDENTIALS = --credentials credentials.yml
 
 clean:
@@ -12,7 +13,7 @@ clean:
 
 install:
 	pip install --upgrade pip 						&& \
-	pip install $(PIP_FLAGS) -r requirements.txt	&& \
+	pip install $(PIP_FLAGS) -r requirements.txt
 
 # RASA X
 install-x:
@@ -77,14 +78,14 @@ shell:
 	rasa shell \
 		-m models/ \
 		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) \
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
 		--port 5006
 
 telegram:
 	rasa run \
 		-m models/ \
 		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) \
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
 		$(RASA_CREDENTIALS)	\
 		--port 5001 \
 
@@ -92,7 +93,7 @@ webchat:
 	rasa run \
 		-m models/ \
 		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) \
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
 		$(RASA_CREDENTIALS)	\
 		--port 5007 
 
@@ -100,7 +101,7 @@ api:
 	rasa run \
 		-m models/ \
 		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) \
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
 		--enable-api \
 		--cors '*' \
 		--port 5006
@@ -110,7 +111,7 @@ rocket:
 	rasa run \
 		-m models/ \
 		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) \
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
 		$(RASA_CREDENTIALS)	\
 		--cors '*' \
 		--port 5005 

@@ -1,6 +1,9 @@
 current_dir := $(shell pwd)
 user := $(shell whoami)
 
+ENDPOINTS = endpoints/docker-endpoints.yml
+REQ_VERSION = 2.8.0
+
 clean:
 	docker-compose down
 	cd bot/ && make clean
@@ -11,7 +14,7 @@ stop:
 
 ############################## DOCKERHUB ##############################
 dchub-requirements:
-	docker push arthurtemporim/boilerplate-requirements
+	docker push arthurtemporim/boilerplate-requirements:$(REQ_VERSION)
 
 ############################## BOILERPLATE ##############################
 first-run:
@@ -75,7 +78,7 @@ shell:
 		--rm \
 		--service-ports \
 		bot \
-		make shell
+		make shell ENDPOINTS=$(ENDPOINTS)
 
 api:
 	docker-compose run \
