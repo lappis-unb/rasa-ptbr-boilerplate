@@ -5,8 +5,9 @@
 PIP_FLAGS = --use-deprecated=legacy-resolver
 LOG_LEVEL = -v
 RASA_ENDPOINTS = --endpoints 
-ENDPOINTS = endpoints.yml
-RASA_CREDENTIALS = --credentials credentials.yml
+ENDPOINTS = endpoints/endpoints.yml
+RASA_CREDENTIALS = --credentials
+CREDENTIALS = credentials/crendentials.yml
 
 clean:
 	rm -rf graph.html results/ models/* *.db*
@@ -74,6 +75,16 @@ tensor_ted:
 			--logdir .tensorboard_ted
 
 # CHAT
+api:
+	rasa run \
+		-m models/ \
+		$(LOG_LEVEL) \
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
+		$(RASA_CREDENTIALS)	$(CREDENTIALS) \
+		--enable-api \
+		--cors '*' \
+		--port 5005
+
 shell:
 	rasa shell \
 		-m models/ \
@@ -81,30 +92,22 @@ shell:
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
 		--port 5006
 
-telegram:
-	rasa run \
-		-m models/ \
-		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) $(ENDPOINTS) \
-		$(RASA_CREDENTIALS)	\
-		--port 5001 \
-
 webchat:
 	rasa run \
 		-m models/ \
 		$(LOG_LEVEL) \
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
-		$(RASA_CREDENTIALS)	\
+		$(RASA_CREDENTIALS)	$(CREDENTIALS) \
+		--cors '*' \
 		--port 5007 
 
-api:
+telegram:
 	rasa run \
 		-m models/ \
 		$(LOG_LEVEL) \
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
-		--enable-api \
-		--cors '*' \
-		--port 5006
+		$(RASA_CREDENTIALS)	$(CREDENTIALS) \
+		--port 5008 \
 
 rocket:
 	python /modules/rocketchat/bot_config.py
@@ -112,9 +115,9 @@ rocket:
 		-m models/ \
 		$(LOG_LEVEL) \
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
-		$(RASA_CREDENTIALS)	\
+		$(RASA_CREDENTIALS)	$(CREDENTIALS) \
 		--cors '*' \
-		--port 5005 
+		--port 5009
 
 
 # ACTIONS

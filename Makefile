@@ -2,6 +2,7 @@ current_dir := $(shell pwd)
 user := $(shell whoami)
 
 ENDPOINTS = endpoints/docker-endpoints.yml
+CREDENTIALS = credentials/docker-credentials.yml
 
 clean:
 	docker-compose down
@@ -22,7 +23,6 @@ first-run:
 	make shell
 
 build:
-	make build-coach
 	make build-bot
 
 build-requirements:
@@ -30,10 +30,6 @@ build-requirements:
 		--no-cache \
 		-f docker/requirements.Dockerfile \
 		-t arthurtemporim/boilerplate-requirements
-
-build-coach:
-	docker-compose build \
-		--no-cache coach
 
 build-bot:
 	docker-compose build \
@@ -84,7 +80,7 @@ api:
 		--rm \
 		--service-ports \
 		bot \
-		make api
+		make api ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
 
 actions:
 	docker-compose run \
@@ -106,7 +102,8 @@ webchat:
 		-d \
 		--rm \
 		--service-ports \
-		bot-webchat
+		bot \
+		make webchat 
 	docker-compose up \
 		-d \
 		webchat
@@ -118,7 +115,7 @@ telegram:
 		--rm \
 		--service-ports \
 		bot_telegram \
-		make telegram
+		make telegram ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
 
 notebooks:
 	docker-compose up \
@@ -128,13 +125,13 @@ notebooks:
 rocket:
 	docker-compose up \
 		-d rocketchat \
-		bot-rocket
+		bot-rocket ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
 	echo "Acesse o ROCKETCHAT em: http://localhost:5003"
 
 train:
-	mkdir -p bot/models
-	docker-compose up \
-		--build coach
+	docker-compose run \
+		--rm bot \
+		make train
 
 ############################## TESTS ##############################
 validate:
