@@ -7,7 +7,7 @@ LOG_LEVEL = -v
 RASA_ENDPOINTS = --endpoints 
 ENDPOINTS = endpoints/endpoints.yml
 RASA_CREDENTIALS = --credentials
-CREDENTIALS = credentials/crendentials.yml
+CREDENTIALS = credentials/credentials.yml
 
 clean:
 	rm -rf graph.html results/ models/* *.db*
