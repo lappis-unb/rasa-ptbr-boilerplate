@@ -51,10 +51,22 @@ jobs:
         cd bot/
         make test
         echo "Results is saved"
+    - name: Test actions
+      run: |
+        cd bot/
+        make actions &
     - name: Test webchat
       run: |
         cd bot/
-        make webchat &
+        make api &
         sleep 30
-        curl -sSf http://localhost:5007
+        curl -sSf http://localhost:5005
         echo "Bot is working"
+    - name: Test bot intent cumprimentar
+      run: |
+        intent=$(curl -X POST http://localhost:5005/model/parse -H 'Content-Type: application/json' -d '{"text": "Oi"}' | jq -r '.intent' | jq -r '.name')
+        if [ $intent=='cumprimentar' ]; then echo "Ok"; else echo "erro" && exit 1; fi
+    - name: Test bot SDK response
+      run: |
+        curl -XPOST http://localhost:5005/webhooks/rest/webhook -H 'Content-Type: application/json' -d '{"sender":"default","message":"custom action"}' | grep SDK
+
