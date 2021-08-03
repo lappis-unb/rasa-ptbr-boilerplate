@@ -86,7 +86,7 @@ actions:
 	docker-compose run \
 		--rm \
 		--service-ports \
-		bot \
+		actions \
 		make actions
 
 x:
