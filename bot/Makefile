@@ -106,7 +106,7 @@ telegram:
 		-m models/ \
 		$(LOG_LEVEL) \
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
-		$(RASA_CREDENTIALS)	$(CREDENTIALS) \
+		$(RASA_CREDENTIALS)	credentials/telegram-credentials.yml \
 		--port 5008 \
 
 rocket:
@@ -115,7 +115,7 @@ rocket:
 		-m models/ \
 		$(LOG_LEVEL) \
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
-		$(RASA_CREDENTIALS)	$(CREDENTIALS) \
+		$(RASA_CREDENTIALS)	credentials/rocketchat-credentials.yml \
 		--cors '*' \
 		--port 5009
 

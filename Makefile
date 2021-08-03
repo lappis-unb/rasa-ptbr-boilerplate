@@ -2,7 +2,7 @@ current_dir := $(shell pwd)
 user := $(shell whoami)
 
 ENDPOINTS = endpoints/docker-endpoints.yml
-CREDENTIALS = credentials/docker-credentials.yml
+CREDENTIALS = credentials/credentials.yml
 
 clean:
 	docker-compose down
@@ -103,7 +103,7 @@ webchat:
 		--rm \
 		--service-ports \
 		bot \
-		make webchat 
+		make webchat ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
 	docker-compose up \
 		-d \
 		webchat
