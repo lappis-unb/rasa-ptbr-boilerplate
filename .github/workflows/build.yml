@@ -55,7 +55,6 @@ jobs:
       run: |
         cd bot/
         make webchat &
-        curl -sSf http://localhost:5010 >> /tmp/index.html
         sleep 10
         curl -sSf http://localhost:5007
-        echo "Webchat is working"
+        echo "Bot is working"
