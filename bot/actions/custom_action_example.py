@@ -22,7 +22,7 @@ class ActionExemplo(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Esta mensagem está sendo enviada do RASA SDK!!!")
+        dispatcher.utter_message(text="Esta mensagem esta sendo enviada do RASA SDK!!!")
 
         return []
 
