@@ -12,13 +12,13 @@ pipeline:
     max_ngram: 4
   - name: DIETClassifier
     epochs: 107
-    model_confidence: linear_norm
+    model_confidence: softmax
     constrain_similarities: True
     tensorboard_log_directory: ".tensorboard_diet"
     tensorboard_log_level: "epoch"
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    model_confidence: linear_norm
+    model_confidence: softmax
     epochs: 100
     constrain_similarities: True
   - name: FallbackClassifier
@@ -31,7 +31,7 @@ policies:
   - name: TEDPolicy
     max_history: 5
     epochs: 44
-    model_confidence: linear_norm
+    model_confidence: softmax
     tensorboard_log_directory: ".tensorboard_ted"
     tensorboard_log_level: "epoch"
   - name: RulePolicy

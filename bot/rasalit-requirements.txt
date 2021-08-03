@@ -1,0 +1,2 @@
+git+git://github.com/RasaHQ/rasalit@main
+whatlies==0.6.3

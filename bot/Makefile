@@ -4,20 +4,31 @@
 # TODO: This is a hotfix while RASA don't solve dependencies issues.
 PIP_FLAGS = --use-deprecated=legacy-resolver
 LOG_LEVEL = -v
-RASA_ENDPOINTS = --endpoints endpoints.yml
-RASA_CREDENTIALS = --credentials credentials.yml
+RASA_ENDPOINTS = --endpoints 
+ENDPOINTS = endpoints/endpoints.yml
+RASA_CREDENTIALS = --credentials
+CREDENTIALS = credentials/credentials.yml
 
 clean:
 	rm -rf graph.html results/ models/* *.db*
 
 install:
 	pip install --upgrade pip 						&& \
-	pip install $(PIP_FLAGS) -r requirements.txt	&& \
-	pip install $(PIP_FLAGS) -r x-requirements.txt
+	pip install $(PIP_FLAGS) -r requirements.txt
 
 # RASA X
+install-x:
+	pip install $(PIP_FLAGS) -r x-requirements.txt
+
 x:
 	rasa x
+
+# RASALIT
+install-rasalit:
+	pip install $(PIP_FLAGS) -r rasalit-requirements.txt
+
+rasalit:
+	python -m rasalit nlu-cluster --port 8501
 
 # NLU
 train-nlu:
@@ -64,47 +75,49 @@ tensor_ted:
 			--logdir .tensorboard_ted
 
 # CHAT
+api:
+	rasa run \
+		-m models/ \
+		$(LOG_LEVEL) \
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
+		$(RASA_CREDENTIALS)	$(CREDENTIALS) \
+		--enable-api \
+		--cors '*' \
+		--port 5005
+
 shell:
 	rasa shell \
 		-m models/ \
 		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) \
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
 		--port 5006
-
-telegram:
-	rasa run \
-		-m models/ \
-		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) \
-		$(RASA_CREDENTIALS)	\
-		--port 5001 \
 
 webchat:
 	rasa run \
 		-m models/ \
 		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) \
-		$(RASA_CREDENTIALS)	\
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
+		$(RASA_CREDENTIALS)	$(CREDENTIALS) \
+		--cors '*' \
 		--port 5007 
 
-api:
+telegram:
 	rasa run \
 		-m models/ \
 		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) \
-		--enable-api \
-		--cors '*' \
-		--port 5006
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
+		$(RASA_CREDENTIALS)	credentials/telegram-credentials.yml \
+		--port 5008 \
 
 rocket:
 	python /modules/rocketchat/bot_config.py
 	rasa run \
 		-m models/ \
 		$(LOG_LEVEL) \
-		$(RASA_ENDPOINTS) \
-		$(RASA_CREDENTIALS)	\
+		$(RASA_ENDPOINTS) $(ENDPOINTS) \
+		$(RASA_CREDENTIALS)	credentials/rocketchat-credentials.yml \
 		--cors '*' \
-		--port 5005 
+		--port 5009
 
 
 # ACTIONS

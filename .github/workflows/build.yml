@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -39,11 +38,34 @@ jobs:
     - name: Test Rasa version
       run: |
         rasa --version 
+        echo "Rasa is installed"
     - name: Rasa train
       run: |
         cd bot/
+        sed -i "s/epochs.*$/epochs: 1/" ./config.yml
+        echo "Changed epochs to 1 to check faster"
         make train
+        echo "Model is saved"
     - name: Test Rasa bot
       run: |
         cd bot/
         make test
+        echo "Results is saved"
+    - name: Test actions
+      run: |
+        cd bot/
+        make actions &
+    - name: Test rasa api
+      run: |
+        cd bot/
+        make api &
+        sleep 30
+        curl -sSf http://localhost:5005
+        echo "Bot is working"
+    - name: Test bot intent cumprimentar
+      run: |
+        intent=$(curl -X POST http://localhost:5005/model/parse -H 'Content-Type: application/json' -d '{"text": "Oi"}' | jq -r '.intent' | jq -r '.name')
+        if [ $intent=='cumprimentar' ]; then echo "Ok"; else echo "erro" && exit 1; fi
+    - name: Test bot SDK response
+      run: |
+        curl -XPOST http://localhost:5005/webhooks/rest/webhook -H 'Content-Type: application/json' -d '{"sender":"default","message":"custom action"}'

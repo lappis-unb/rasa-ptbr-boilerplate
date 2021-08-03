@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
     <center>
       <h1>Seja bem vindo ao BOILERPLATE integrado com webchat</h1>
       Você deve ver uma bola azul no canto inferior direito do seu navegador.
     </center>
-    <div id="webchat" />
-    <script src="./index.min.js"></script>
-    <script>
-        WebChat.default.init({
+    <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "./1.0.1.min.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            customData: { language: "pt-br" },
             selector: "#webchat",
             initPayload: "/cumprimentar",
             socketUrl: "http://localhost:5007",
             socketPath: "/socket.io/",
             title: "Tais",
-            backgroundColor: '#FF0000',
             inputTextFieldHint: "Digite sua mensagem...",
             connectingText: "Conectando...",
             hideWhenNotConnected: true,
@@ -31,7 +36,12 @@
                 },
                 storage: "session"
             }
-        })
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+    })();
     </script>
-</body>
+  </body>
 </html>
