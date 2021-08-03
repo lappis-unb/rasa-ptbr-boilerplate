@@ -42,6 +42,8 @@ jobs:
     - name: Rasa train
       run: |
         cd bot/
+        sed -i "s/epochs.*$/epochs: 1/" ./config.yml
+        echo "Changed epochs to 1 to check faster"
         make train
         echo "Model is saved"
     - name: Test Rasa bot
@@ -52,7 +54,7 @@ jobs:
     - name: Test webchat
       run: |
         cd bot/
-        make webchat
+        make webchat &
         curl -sSf http://localhost:5010 >> /tmp/index.html
         sleep 10
         curl -sSf http://localhost:5007
