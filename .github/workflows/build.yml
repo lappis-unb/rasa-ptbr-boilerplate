@@ -55,7 +55,7 @@ jobs:
       run: |
         cd bot/
         make actions &
-    - name: Test webchat
+    - name: Test rasa api
       run: |
         cd bot/
         make api &
@@ -68,5 +68,4 @@ jobs:
         if [ $intent=='cumprimentar' ]; then echo "Ok"; else echo "erro" && exit 1; fi
     - name: Test bot SDK response
       run: |
-        curl -XPOST http://localhost:5005/webhooks/rest/webhook -H 'Content-Type: application/json' -d '{"sender":"default","message":"custom action"}' | grep SDK
-
+        curl -XPOST http://localhost:5005/webhooks/rest/webhook -H 'Content-Type: application/json' -d '{"sender":"default","message":"custom action"}'
