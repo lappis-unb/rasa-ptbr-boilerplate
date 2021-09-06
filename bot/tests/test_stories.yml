@@ -1,0 +1,70 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+version: "2.0"
+stories:
+- story: Cumprimentar e despedir
+  steps:
+    - user: |
+        boa tarde!
+      intent: cumprimentar
+    - action: utter_cumprimentar
+    - user: |
+        Até logo.
+      intent: despedir
+    - action: utter_despedir
+- story: Religião
+  steps:
+    - user: |
+        Você segue qual religião?
+      intent: religiao
+    - action: utter_religiao
+    - action: utter_continuar_conversa
+- story: piada
+  steps:
+    - user: |
+        Você sabe alguma piada?
+      intent: piada
+    - action: utter_piada
+    - action: utter_continuar_conversa
+- story: futebol
+  steps:
+    - user: |
+        Você gosta de futebol?
+      intent: time
+    - action: utter_time
+    - action: utter_continuar_conversa
+- story: história qualquer
+  steps:
+    - user: |
+        Qual seu time favorito?
+      intent: time
+    - action: utter_time
+    - action: utter_continuar_conversa
+    - user: |
+        Onde você vive?
+      intent: onde_voce_mora
+    - action: utter_onde_voce_mora
+    - action: utter_continuar_conversa
+    - user: |
+        Qual estilo de música você ouve?
+      intent: musica
+    - action: utter_musica
+    - action: utter_continuar_conversa
+    - user: |
+        Você come o quê?
+      intent: comida
+    - action: utter_comida
+    - action: utter_continuar_conversa
+    - user: |
+        Como está se sentindo hoje?
+      intent: tudo_bem
+    - action: utter_tudo_bem
+    - user: |
+        Adorei ter esta conversa com você bot
+      intent: elogios
+    - action: utter_elogios
+    - action: utter_continuar_conversa
+    - user: |
+        Valeu, to indo nessa
+      intent: despedir
+    - action: utter_despedir
