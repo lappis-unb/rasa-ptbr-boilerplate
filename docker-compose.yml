@@ -33,7 +33,6 @@ services:
       - env/rasax.env
     depends_on:
       - actions
-    command: sh -c "make x"
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
@@ -117,7 +116,7 @@ services:
 
   # ============================ Telegram Bot =================================
   # Specific Rasa bot integrated with Telegram.
-  bot_telegram:
+  bot-telegram:
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
