@@ -114,24 +114,32 @@ telegram:
 		-d \
 		--rm \
 		--service-ports \
-		bot_telegram \
+		bot-telegram \
 		make telegram ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
-
-notebooks:
-	docker-compose up \
-		-d notebooks
-	echo "Acesse o KIBANA em: http://localhost:8888"
 
 rocket:
 	docker-compose up \
-		-d rocketchat \
-		bot-rocket ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
+		-d rocketchat
+	docker-compose run \
+		-d \
+		--rm \
+		--service-ports \
+		bot \
+		make rocket ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
 	echo "Acesse o ROCKETCHAT em: http://localhost:5003"
 
 train:
 	docker-compose run \
 		--rm bot \
 		make train
+
+############################## NOTEBOOKS ##########################
+
+notebooks:
+	docker-compose up \
+		-d notebooks
+	echo "Acesse o KIBANA em: http://localhost:8888"
+
 
 ############################## TESTS ##############################
 validate:
