@@ -1,4 +1,4 @@
-FROM arthurtemporim/boilerplate-requirements:latest
+FROM arthurtemporim/boilerplate:latest
 
 COPY ./bot/actions/ /bot/actions/
 COPY ./bot/Makefile /bot/Makefile
