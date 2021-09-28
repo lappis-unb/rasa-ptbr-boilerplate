@@ -13,8 +13,11 @@ stop:
 
 
 ############################## DOCKERHUB ##############################
-dchub-requirements:
-	docker push arthurtemporim/boilerplate-requirements
+dchub-tag:
+	docker tag arthurtemporim/boilerplate arthurtemporim/boilerplate:1.0
+
+dchub-push:
+	docker push arthurtemporim/boilerplate
 
 ############################## BOILERPLATE ##############################
 first-run:
@@ -29,7 +32,7 @@ build-requirements:
 	docker build . \
 		--no-cache \
 		-f docker/requirements.Dockerfile \
-		-t arthurtemporim/boilerplate-requirements
+		-t arthurtemporim/boilerplate
 
 build-bot:
 	docker-compose build \
