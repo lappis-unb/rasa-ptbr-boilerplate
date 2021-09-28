@@ -1,4 +1,4 @@
-FROM python:3.7.9-slim-buster 
+FROM python:3.7.12-slim-bullseye
 
 ARG BOT_DIR=./bot
 
@@ -8,7 +8,7 @@ COPY $BOT_DIR/Makefile /tmp
 
 RUN apt-get update                                                             && \
     apt-get install -y gcc make build-essential git                            && \
-    #pip install --upgrade pip                                                  && \
+    pip install --upgrade pip                                                  && \
     make  -C /tmp install-x                                                    && \
     rasa telemetry disable                                                     && \
     #python -c "import nltk; nltk.download(['stopwords', 'rslp', 'punkt']);"    && \

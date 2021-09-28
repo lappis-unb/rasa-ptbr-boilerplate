@@ -1,4 +1,4 @@
-FROM arthurtemporim/boilerplate-requirements:latest
+FROM arthurtemporim/boilerplate:latest
 
 RUN apt-get --allow-releaseinfo-change update && apt-get install -y graphviz libgraphviz-dev pkg-config
 
