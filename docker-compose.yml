@@ -15,6 +15,7 @@ services:
       - 5005:5005
       - 5006:5006
       - 5007:5007
+      - 5009:5009
     depends_on:
       - actions
 
@@ -171,7 +172,7 @@ services:
       - mongo
       - mongo-init-replica
     ports:
-      - 5003:3000
+      - 3000:3000
 
   mongo:
     image: mongo:4.0
