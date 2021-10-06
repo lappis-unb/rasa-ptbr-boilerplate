@@ -123,13 +123,16 @@ telegram:
 rocket:
 	docker-compose up \
 		-d rocketchat
+	make rocket-bot
+	
+rocket-bot:
 	docker-compose run \
 		-d \
 		--rm \
 		--service-ports \
 		bot \
 		make rocket ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
-	echo "Acesse o ROCKETCHAT em: http://localhost:5003"
+	echo "Acesse o ROCKETCHAT em: http://localhost:3000"
 
 train:
 	docker-compose run \

@@ -117,7 +117,8 @@ rocket:
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
 		$(RASA_CREDENTIALS)	credentials/rocketchat-credentials.yml \
 		--cors '*' \
-		--port 5009
+		--port 5009 \
+		--enable-api
 
 
 # ACTIONS
