@@ -18,6 +18,8 @@ services:
       - 5009:5009
     depends_on:
       - actions
+    networks:
+      - rocketchat
 
   # ================================= RASA X ==================================
   # Rasa X container
@@ -173,18 +175,24 @@ services:
       - mongo-init-replica
     ports:
       - 3000:3000
+    networks:
+      - rocketchat
 
   mongo:
     image: mongo:4.0
     restart: unless-stopped
     volumes:
      - mongo_data:/data/db
+    networks:
+      - rocketchat
     command: mongod --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1
 
   # this container's job is just run the command to initialize the replica set.
   # it will run the command and remove himself (it will not stay running)
   mongo-init-replica:
     image: mongo:4.0
+    networks:
+      - rocketchat
     command: >
       bash -c
         "for i in `seq 1 30`; do
@@ -207,3 +215,6 @@ volumes:
   esdata:
     driver: local
   rocket_uploads:
+
+networks:
+  rocketchat: {}
