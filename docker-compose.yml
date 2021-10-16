@@ -1,4 +1,4 @@
-version: '2'
+version: "3.9"
 
 services:
   # ================================= Bot =====================================
@@ -49,65 +49,6 @@ services:
       - ./bot/actions:/bot/actions
     command: sh -c "make actions"
 
-  # =============================== Analytics =================================
-  # Analitics ElasticSearch Stack.
-  elasticsearch:
-    build:
-      context: .
-      dockerfile: ./docker/elasticsearch.Dockerfile
-    restart: unless-stopped
-    ports:
-      - 9200:9200
-      - 9300:9300
-    env_file:
-      - env/elasticsearch.env
-    volumes:
-      - esbackup:/usr/share/elasticsearch/backup
-      - ./modules/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-      - esdata:/usr/share/elasticsearch/data
-
-  # Visualization layer of Analitics Stack.
-  kibana:
-    build:
-      context: .
-      dockerfile: ./docker/kibana.Dockerfile
-    restart: unless-stopped
-    ports:
-      - 5601:5601
-    env_file:
-      - env/kibana.env
-    depends_on:
-      - elasticsearch
-    volumes:
-      - ./modules/analytics:/usr/share/kibana/analytics
-
-  # =============================== Broker ====================================
-  # Custom broker to store Rasa tracker data.
-  rabbitmq:
-    image: rabbitmq:3-management
-    restart: unless-stopped
-    volumes:
-      - ./db/rabbitmq:/var/lib/rabbitmq/mnesia
-    ports:
-      - 15672:15672
-    env_file:
-      - env/rabbitmq.env
-
-  # Custom broker consumer responsible to store data into ElasticSearch.
-  rabbitmq-consumer:
-    build:
-      context: .
-      dockerfile: ./docker/consumer.Dockerfile
-    restart: unless-stopped
-    volumes:
-      - ./modules/rabbitmq/consumer/:/opt/scripts/
-    depends_on:
-      - rabbitmq
-    env_file:
-      - env/rabbitmq-consumer.env
-    command: python3 /opt/scripts/consume_bot_messages.py
-
-
   # ============================ Webchat Page  =================================
   # A container to run webchat html page
   webchat:
@@ -150,7 +91,7 @@ services:
   # =============================== Rocket.Chat =================================
   # Rocket.Chat instance and database
   rocketchat:
-    image: rocketchat/rocket.chat:3.7.1
+    image: rocketchat/rocket.chat:4.0.2
     command: >
       bash -c
         "for i in `seq 1 30`; do
@@ -206,6 +147,61 @@ services:
         done; (exit $$s)"
     depends_on:
       - mongo
+
+  # =============================== Analytics =================================
+  # Analitics ElasticSearch Stack.
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.1
+    restart: unless-stopped
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - ./modules/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - esdata:/usr/share/elasticsearch/data
+
+  # Visualization layer of Analitics Stack.
+  kibana:
+    build:
+      context: .
+      dockerfile: ./docker/kibana.Dockerfile
+    restart: unless-stopped
+    ports:
+      - 5601:5601
+    env_file:
+      - env/kibana.env
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./modules/analytics:/usr/share/kibana/analytics
+
+  # =============================== Broker ====================================
+  # Custom broker to store Rasa tracker data.
+  rabbitmq:
+    image: rabbitmq:3-management
+    restart: unless-stopped
+    volumes:
+      - ./db/rabbitmq:/var/lib/rabbitmq/mnesia
+    ports:
+      - 15672:15672
+    env_file:
+      - env/rabbitmq.env
+
+  # Custom broker consumer responsible to store data into ElasticSearch.
+  rabbitmq-consumer:
+    build:
+      context: .
+      dockerfile: ./docker/consumer.Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./modules/rabbitmq/consumer/:/opt/scripts/
+    depends_on:
+      - rabbitmq
+    env_file:
+      - env/rabbitmq-consumer.env
+    command: python3 /opt/scripts/consume_bot_messages.py
 
 volumes:
   notebook_models:
