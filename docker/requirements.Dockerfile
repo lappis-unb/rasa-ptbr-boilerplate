@@ -1,4 +1,4 @@
-FROM python:3.7.12-slim-bullseye
+FROM python:3.7.9-slim
 
 ARG BOT_DIR=./bot
 
@@ -9,9 +9,9 @@ COPY $BOT_DIR/Makefile /tmp
 RUN apt-get update                                                             && \
     apt-get install -y gcc make build-essential git                            && \
     pip install --upgrade pip                                                  && \
+    make  -C /tmp install                                                      && \
     make  -C /tmp install-x                                                    && \
-    rasa telemetry disable                                                     && \
-    #python -c "import nltk; nltk.download(['stopwords', 'rslp', 'punkt']);"    && \
+    python -c "import nltk; nltk.download(['stopwords', 'rslp', 'punkt']);"    && \
     find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf               && \
     apt-get clean                                                              && \
     apt-get remove -y build-essential

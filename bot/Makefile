@@ -10,7 +10,7 @@ RASA_CREDENTIALS = --credentials
 CREDENTIALS = credentials/credentials.yml
 
 clean:
-	rm -rf graph.html results/ models/* *.db*
+	rm -rf graph.html results/ models/* *.db* .*tensorboard*
 
 install:
 	pip install --upgrade pip 						&& \
