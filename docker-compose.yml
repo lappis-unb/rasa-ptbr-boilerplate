@@ -18,8 +18,18 @@ services:
       - 5009:5009
     depends_on:
       - actions
-    networks:
-      - rocketchat
+
+  # ================================= Actions =================================
+  # Rasa middleware used to connect with external APIs.
+  actions:
+    build:
+      context: .
+      dockerfile: ./docker/actions.Dockerfile
+    ports:
+      - 5055:5055
+    volumes:
+      - ./bot/actions:/bot/actions
+    command: sh -c "make actions"
 
   # ================================= RASA X ==================================
   # Rasa X container
@@ -36,18 +46,6 @@ services:
       - env/rasax.env
     depends_on:
       - actions
-
-  # ================================= Actions =================================
-  # Rasa middleware used to connect with external APIs.
-  actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
-    ports:
-      - 5055:5055
-    volumes:
-      - ./bot/actions:/bot/actions
-    command: sh -c "make actions"
 
   # ============================ Webchat Page  =================================
   # A container to run webchat html page
@@ -74,24 +72,10 @@ services:
         - actions
       command: sh -c "make telegram"
 
-  # =============================== Notebooks =================================
-  # Rasa lab to enhance hyperparameters.
-  notebooks:
-    build:
-      context: .
-      dockerfile: ./docker/notebooks.Dockerfile
-    env_file:
-      - env/notebooks.env
-    volumes:
-      - ./modules/notebooks:/work/notebooks
-      - ./bot/:/bot/
-    ports:
-      - 8888:8888
-
   # =============================== Rocket.Chat =================================
   # Rocket.Chat instance and database
   rocketchat:
-    image: rocketchat/rocket.chat:4.0.2
+    image: rocketchat/rocket.chat:3.18.2
     command: >
       bash -c
         "for i in `seq 1 30`; do
@@ -102,7 +86,7 @@ services:
         done; (exit $$s)"
     restart: unless-stopped
     volumes:
-      - rocket_uploads:/app/uploads
+      - ./uploads:/app/uploads
     environment:
       - PORT=3000
       - ROOT_URL=http://localhost:3000
@@ -113,27 +97,20 @@ services:
       - ADMIN_EMAIL=mail@mail.com
     depends_on:
       - mongo
-      - mongo-init-replica
     ports:
       - 3000:3000
-    networks:
-      - rocketchat
 
   mongo:
     image: mongo:4.0
     restart: unless-stopped
     volumes:
-     - mongo_data:/data/db
-    networks:
-      - rocketchat
+     - ./data/db:/data/db
     command: mongod --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1
 
   # this container's job is just run the command to initialize the replica set.
   # it will run the command and remove himself (it will not stay running)
   mongo-init-replica:
     image: mongo:4.0
-    networks:
-      - rocketchat
     command: >
       bash -c
         "for i in `seq 1 30`; do
@@ -203,6 +180,20 @@ services:
       - env/rabbitmq-consumer.env
     command: python3 /opt/scripts/consume_bot_messages.py
 
+  # =============================== Notebooks =================================
+  # Rasa lab to enhance hyperparameters.
+  notebooks:
+    build:
+      context: .
+      dockerfile: ./docker/notebooks.Dockerfile
+    env_file:
+      - env/notebooks.env
+    volumes:
+      - ./modules/notebooks:/work/notebooks
+      - ./bot/:/bot/
+    ports:
+      - 8888:8888
+
 volumes:
   notebook_models:
   mongo_data:
@@ -211,6 +202,3 @@ volumes:
   esdata:
     driver: local
   rocket_uploads:
-
-networks:
-  rocketchat: {}

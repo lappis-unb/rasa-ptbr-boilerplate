@@ -122,7 +122,8 @@ telegram:
 
 rocket:
 	docker-compose up \
-		-d rocketchat
+		-d \
+		rocketchat
 	make rocket-bot
 	
 rocket-bot:
