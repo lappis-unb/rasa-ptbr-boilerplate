@@ -55,6 +55,8 @@ intents:
     use_entities: true
 - exemplo_acao:
     use_entities: true
+- exemplo_forms:
+    use_entities: true
   # response selectors
 - explica:
     use_entities: true
@@ -73,11 +75,16 @@ entities:
 - triste
 - historia
 - vive
-- acao
-- formulario
 - nome
 - idade
 - relationship
+- intent
+- entity 
+- slot
+- response_selectors
+- storie
+- acao
+- forms
 slots:
   nome:
     type: text
@@ -295,8 +302,24 @@ responses:
   utter_pergunta_cancelar:
   - text: Entendi. Você deseja cancelar?
   # utters response selectors
+  utter_explica/intent:
+  - text: |
+      Ok, vou te explicar o que é um intent!
+  utter_explica/entity:
+  - text: |
+      Ok, vou te explicar o que é um entity!
+  utter_explica/slot:
+  - text: |
+      Ok, vou te explicar o que é um slot!
+  utter_explica/response_selectors:
+  - text: |
+      Ok, vou te explicar o que são os response_selectors!
+  utter_explica/storie:
+  - text: |
+      Ok, vou te explicar o que é um storie!
   utter_explica/forms:
-  - text: Ok, vou te explicar o que é um formulário!
+  - text: |
+      Ok, vou te explicar o que é um formulário!
   # utters dos forms
   utter_exemplo_forms:
   - text: |-

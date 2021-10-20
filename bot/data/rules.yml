@@ -12,8 +12,7 @@ rules:
   - action: utter_nao_nlu
 - rule: Ativa formulário
   steps:
-  - intent: explica
-  - action: utter_explica
+  - intent: exemplo_forms
   - action: utter_exemplo_forms
   - action: exemplo_forms
   - active_loop: exemplo_forms
