@@ -1,63 +1,114 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-  - cumprimentar
-  - menu
-  - relacionamento
-  - me_ajuda
-  - despedir
-  - out_of_scope
-  - tudo_bem
-  - elogios
-  - religiao
-  - time
-  - genero
-  - piada
-  - licenca
-  - onde_voce_mora
-  - musica
-  - comida
-  - cor
-  - signo
-  - triste
-  - historia
-  - afirmar
-  - negar
-  - cancelar
-  - informar
-  - pede_exemplo_acao
-  - pede_exemplo_form
+- cumprimentar:
+    use_entities: true
+- relacionamento:
+    use_entities: true
+- me_ajuda:
+    use_entities: true
+- despedir:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- tudo_bem:
+    use_entities: true
+- elogios:
+    use_entities: true
+- religiao:
+    use_entities: true
+- time:
+    use_entities: true
+- genero:
+    use_entities: true
+- piada:
+    use_entities: true
+- licenca:
+    use_entities: true
+- onde_voce_mora:
+    use_entities: true
+- musica:
+    use_entities: true
+- comida:
+    use_entities: true
+- cor:
+    use_entities: true
+- signo:
+    use_entities: true
+- triste:
+    use_entities: true
+- historia:
+    use_entities: true
+- afirmar:
+    use_entities: true
+- negar:
+    use_entities: true
+- cancelar:
+    use_entities: true
+- informar:
+    use_entities: true
+- menu:
+    use_entities: true
+- exemplo_intent:
+    use_entities: true
+- exemplo_entity:
+    use_entities: true
+- exemplo_slot:
+    use_entities: true
+- exemplo_response_selector:
+    use_entities: true
+- exemplo_action:
+    use_entities: true
+- exemplo_form:
+    use_entities: true
+- pede_exemplo_form:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- pede_exemplo_acao:
+    use_entities: true
+- exemplo_acao:
+    use_entities: true
 entities:
-  - oi
-  - menu
-  - meajuda
-  - religiao
-  - time
-  - genero
-  - piada
-  - licenca
-  - musica
-  - comida
-  - cor
-  - signo
-  - triste
-  - historia
-  - vive
-  - acao
-  - formulario
-  - nome
-  - idade
+- menu
+- meajuda
+- religiao
+- time
+- genero
+- piada
+- licenca
+- musica
+- comida
+- cor
+- signo
+- triste
+- historia
+- vive
+- acao
+- formulario
+- nome
+- idade
+- relationship
 slots:
   nome:
-    type: text
-    influence_conversation: false
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
     auto_fill: false
+    influence_conversation: false
   idade:
-    type: text
-    influence_conversation: false
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
     auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_fallback:
   - text: |
@@ -269,18 +320,22 @@ responses:
   utter_ask_idade:
   - text: Qual a sua idade?
   utter_explica_exemplo_form:
-  - text: "Agora você entrou em uma story que ativou um formulário! Aqui tem a documentação do Rasa sobre formulários: [documentação](https://rasa.com/docs/rasa/forms/). \n Vou te fazer algumas perguntas, responda elas pra mim pra que você possa sair deste loop."
+  - text: |-
+      Agora você entrou em uma story que ativou um formulário! Aqui tem a documentação do Rasa sobre formulários: [documentação](https://rasa.com/docs/rasa/forms/). 
+       Vou te fazer algumas perguntas, responda elas pra mim pra que você possa sair deste loop.
   utter_slots_exemplo_form:
-  - text: "No formulário eu preenchi o slot NOME com o seguinte valor: {nome}"
+  - text: 'No formulário eu preenchi o slot NOME com o seguinte valor: {nome}'
 actions:
 - action_exemplo
 forms:
   exemplo_form:
-    nome:
-    - type: from_entity
-      entity: nome
-      intent: informar
-    idade:
-    - type: from_entity
-      entity: idade
-      intent: informar
+    required_slots:
+      idade:
+      - entity: idade
+        intent: informar
+        type: from_entity
+      nome:
+      - entity: nome
+        intent: informar
+        type: from_entity
+e2e_actions: []

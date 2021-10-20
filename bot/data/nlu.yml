@@ -2,11 +2,11 @@ version: "2.0"
 nlu:
 - intent: cumprimentar
   examples: |
-    - [olá](oi)
-    - [Ola](oi)
-    - [Oi](oi)
-    - [Iae](oi)
-    - [Olá](oi) Bot!
+    - olá
+    - Ola
+    - Oi
+    - Iae
+    - Olá
     - bom dia
     - boa tarde
     - boa noite
@@ -332,7 +332,7 @@ nlu:
     - Bot, me mostra o [menu](menu)
     - Quais são as [opções](menu) de diálogo?
     - Me mostre as [opcoes](menu) de conversa
-- intent: pede_exemplo_form
+- intent: exemplo_form
   examples: |
     - [form](formulario)
     - Bot, quero um exemplo de [formulário](formulario)
@@ -340,7 +340,7 @@ nlu:
     - Exemplo de [formulário](formulario)
     - Me explique como funciona os [formulários](formulario) no rasa.
     - Você sabe fazer [forms](formulario)?
-- intent: pede_exemplo_acao
+- intent: exemplo_acao
   examples: |
     - [action](acao)
     - Bot, quero um exemplo de [ação](acao)
