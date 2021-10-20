@@ -14,11 +14,11 @@ clean:
 
 install:
 	pip install --upgrade pip 						&& \
-	pip install $(PIP_FLAGS) -r requirements.txt
+	pip install -r requirements.txt
 
 # RASA X
 install-x:
-	pip install $(PIP_FLAGS) -r x-requirements.txt
+	pip install -r x-requirements.txt
 
 x:
 	rasa x --no-prompt
