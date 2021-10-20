@@ -53,25 +53,10 @@ intents:
     use_entities: true
 - menu:
     use_entities: true
-- exemplo_intent:
-    use_entities: true
-- exemplo_entity:
-    use_entities: true
-- exemplo_slot:
-    use_entities: true
-- exemplo_response_selector:
-    use_entities: true
-- exemplo_action:
-    use_entities: true
-- exemplo_form:
-    use_entities: true
-- pede_exemplo_form:
-    use_entities: true
-- nlu_fallback:
-    use_entities: true
-- pede_exemplo_acao:
-    use_entities: true
 - exemplo_acao:
+    use_entities: true
+  # response selectors
+- explica:
     use_entities: true
 entities:
 - menu
@@ -95,17 +80,17 @@ entities:
 - relationship
 slots:
   nome:
-    type: rasa.shared.core.slots.TextSlot
+    type: text
     initial_value: null
     auto_fill: false
     influence_conversation: false
   idade:
-    type: rasa.shared.core.slots.TextSlot
+    type: text
     initial_value: null
     auto_fill: false
     influence_conversation: false
   requested_slot:
-    type: rasa.shared.core.slots.UnfeaturizedSlot
+    type: any
     initial_value: null
     auto_fill: true
     influence_conversation: false
@@ -309,26 +294,31 @@ responses:
       Ah, e no meu repositório tem muita coisa legal que vc pode aprender! Acessa lá: [https://github.com/lappis-unb/rasa-ptbr-boilerplate](https://github.com/lappis-unb/rasa-ptbr-boilerplate)
   utter_pergunta_cancelar:
   - text: Entendi. Você deseja cancelar?
-  utter_nao_nlu:
-  - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
-  utter_nao_core:
-  - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
-  utter_submit_exemplo_form:
+  # utters response selectors
+  utter_explica/forms:
+  - text: Ok, vou te explicar o que é um formulário!
+  # utters dos forms
+  utter_exemplo_forms:
+  - text: |-
+      Agora você entrou em uma story que ativou um formulário! Aqui tem a documentação do Rasa sobre formulários: [documentação](https://rasa.com/docs/rasa/forms/). 
+       Vou te fazer algumas perguntas, responda elas pra mim pra que você possa sair deste loop.
+  utter_slots_exemplo_forms:
+  - text: 'No formulário eu preenchi o slot NOME com o seguinte valor: {nome}'
+  utter_submit_exemplo_forms:
   - text: Ótimo! terminamos seu exemplo de formulário!
   utter_ask_nome:
   - text: Qual o seu nome?
   utter_ask_idade:
   - text: Qual a sua idade?
-  utter_explica_exemplo_form:
-  - text: |-
-      Agora você entrou em uma story que ativou um formulário! Aqui tem a documentação do Rasa sobre formulários: [documentação](https://rasa.com/docs/rasa/forms/). 
-       Vou te fazer algumas perguntas, responda elas pra mim pra que você possa sair deste loop.
-  utter_slots_exemplo_form:
-  - text: 'No formulário eu preenchi o slot NOME com o seguinte valor: {nome}'
+  # utters fallback
+  utter_nao_nlu:
+  - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
+  utter_nao_core:
+  - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
 actions:
 - action_exemplo
 forms:
-  exemplo_form:
+  exemplo_forms:
     required_slots:
       idade:
       - entity: idade

@@ -332,14 +332,6 @@ nlu:
     - Bot, me mostra o [menu](menu)
     - Quais são as [opções](menu) de diálogo?
     - Me mostre as [opcoes](menu) de conversa
-- intent: exemplo_form
-  examples: |
-    - [form](formulario)
-    - Bot, quero um exemplo de [formulário](formulario)
-    - Bot, entra em um [form](formulario)
-    - Exemplo de [formulário](formulario)
-    - Me explique como funciona os [formulários](formulario) no rasa.
-    - Você sabe fazer [forms](formulario)?
 - intent: exemplo_acao
   examples: |
     - [action](acao)
@@ -348,3 +340,12 @@ nlu:
     - Exemplo de [ação](acao)
     - Me explique como funciona uma [custom action](acao) no rasa.
     - Você sabe fazer [ações customizadas](acao)?
+  # response selectors
+- intent: explica/forms
+  examples: |
+    - [form](formulario)
+    - Bot, quero um exemplo de [formulário](formulario)
+    - Bot, entra em um [form](formulario)
+    - Exemplo de [formulário](formulario)
+    - Me explique como funciona os [formulários](formulario) no rasa.
+    - Você sabe fazer [forms](formulario)?
