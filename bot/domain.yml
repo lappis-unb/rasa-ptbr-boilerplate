@@ -305,18 +305,50 @@ responses:
   utter_explica/intent:
   - text: |
       Ok, vou te explicar o que é um intent!
+      
+      Uma intenção é o objetivo do usuário ao enviar a mensagem, olhe este link com a definição:
+      https://rasa.com/docs/rasa/glossary#intent
+
+      Para criar uma intent você precisa adicionar o nome da sua intent no domain.yml e no arquivo data/nlu.yml, olha esse tutorial para mais informações:
+      https://rasa.com/docs/rasa/domain#intents
+
   utter_explica/entity:
   - text: |
       Ok, vou te explicar o que é um entity!
+
+      Entidades são palavras chaves que podem ser estraídas da mensagem do usário, olhe este link com a definição:
+      https://rasa.com/docs/rasa/glossary#entity
+
+      Para criar uma entidade você precisa adicionar o nome da sua entidade no domain.yml e anotar as entidades arquivo data/nlu.yml, olha esse tutorial para mais informações:
+      https://rasa.com/docs/rasa/domain#entities
+
   utter_explica/slot:
   - text: |
       Ok, vou te explicar o que é um slot!
+
+      Slots são como variáveis de diálogo onde você consegue armazenar informações para utilizar na conversa, olhe este link com a definição:
+      https://rasa.com/docs/rasa/glossary#slot
+
+      Para criar um slot você precisa adicionar o nome do seu slot no domain.yml indicar onde utiliza-lo no arquivo data/stories.yml e também é possível utiliza-lo nas custom actions, olha esse tutorial para mais informações:
+      https://rasa.com/docs/rasa/domain#slots
+
   utter_explica/response_selectors:
   - text: |
       Ok, vou te explicar o que são os response_selectors!
+
+      É uma forma mais simples de explicar informações que fazem parte do mesmo assunto, inclusive, esta mensagem foi feita dentro de um response selector! Se quiser saber mais, acesse o link:
+      https://rasa.com/docs/rasa/components#responseselector
+      
   utter_explica/storie:
   - text: |
       Ok, vou te explicar o que é um storie!
+
+      São exemplos de diálogo que são utilizados para treinar o modelo, como se você ensinasse o chatbot com exemplos de conversa, olha aqui a definição:
+      https://rasa.com/docs/rasa/glossary#story
+
+      Para criar uma story você precisa adicionar os exemplos desejados no arquivo data/stories.yml. Se quiser saber mais, acessa o link:
+      https://rasa.com/docs/rasa/stories
+
   utter_explica/forms:
   - text: |
       Ok, vou te explicar o que é um formulário!
