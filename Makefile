@@ -14,7 +14,7 @@ stop:
 
 ############################## DOCKERHUB ##############################
 dchub-tag:
-	docker tag arthurtemporim/boilerplate arthurtemporim/boilerplate:1.2
+	docker tag arthurtemporim/boilerplate arthurtemporim/boilerplate:2.8.12
 
 dchub-push:
 	docker push arthurtemporim/boilerplate

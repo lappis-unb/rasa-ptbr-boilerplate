@@ -27,7 +27,7 @@ services:
     ports:
       - 5055:5055
     volumes:
-      - ./bot/actions:/bot/actions
+      - ./bot:/bot
     command: sh -c "make actions"
 
   # ================================= RASA X ==================================
