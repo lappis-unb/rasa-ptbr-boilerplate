@@ -11,10 +11,10 @@ services:
     volumes:
       - ./bot/:/bot/
     ports:
-      - 5004:5004
       - 5005:5005
       - 5006:5006
       - 5007:5007
+      - 5008:5008
       - 5009:5009
     depends_on:
       - actions
@@ -22,9 +22,8 @@ services:
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
   actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
+    image: arthurtemporim/boilerplate:latest
+    restart: unless-stopped
     ports:
       - 5055:5055
     volumes:
@@ -68,13 +67,11 @@ services:
         - env/bot-telegram.env
       ports:
         - 5001:5001
-      depends_on:
-        - actions
       command: sh -c "make telegram"
 
   # =============================== Rocket.Chat =================================
   # Rocket.Chat instance and database
-  rocketchat:
+  rogketchat:
     image: rocketchat/rocket.chat:3.18.2
     command: >
       bash -c

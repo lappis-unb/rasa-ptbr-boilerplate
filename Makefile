@@ -14,10 +14,10 @@ stop:
 
 ############################## DOCKERHUB ##############################
 dchub-tag:
-	docker tag arthurtemporim/boilerplate arthurtemporim/boilerplate:1.1
+	docker tag arthurtemporim/boilerplate arthurtemporim/boilerplate:1.2
 
 dchub-push:
-	docker push arthurtemporim/boilerplate:1.1
+	docker push arthurtemporim/boilerplate
 
 ############################## BOILERPLATE ##############################
 first-run:
@@ -89,7 +89,7 @@ actions:
 	docker-compose run \
 		--rm \
 		--service-ports \
-		actions \
+		bot \
 		make actions
 
 x:
