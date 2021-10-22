@@ -57,8 +57,12 @@ jobs:
       run: |
         cd bot/
         make api &
-        sleep 30
-        curl -sSf http://localhost:5005
+        curl --connect-timeout 5 \
+        --max-time 10 \
+        --retry 20 \
+        --retry-delay 3 \
+        --retry-max-time 120 \
+        --retry-connrefused 'http://localhost:5005'
         echo "Bot is working"
     - name: Test bot intent cumprimentar
       run: |
