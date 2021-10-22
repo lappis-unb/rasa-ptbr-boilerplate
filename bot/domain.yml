@@ -1,63 +1,106 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-  - cumprimentar
-  - menu
-  - relacionamento
-  - me_ajuda
-  - despedir
-  - out_of_scope
-  - tudo_bem
-  - elogios
-  - religiao
-  - time
-  - genero
-  - piada
-  - licenca
-  - onde_voce_mora
-  - musica
-  - comida
-  - cor
-  - signo
-  - triste
-  - historia
-  - afirmar
-  - negar
-  - cancelar
-  - informar
-  - pede_exemplo_acao
-  - pede_exemplo_form
+- cumprimentar:
+    use_entities: true
+- relacionamento:
+    use_entities: true
+- me_ajuda:
+    use_entities: true
+- despedir:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- tudo_bem:
+    use_entities: true
+- elogios:
+    use_entities: true
+- religiao:
+    use_entities: true
+- time:
+    use_entities: true
+- genero:
+    use_entities: true
+- piada:
+    use_entities: true
+- licenca:
+    use_entities: true
+- onde_voce_mora:
+    use_entities: true
+- musica:
+    use_entities: true
+- comida:
+    use_entities: true
+- cor:
+    use_entities: true
+- signo:
+    use_entities: true
+- triste:
+    use_entities: true
+- historia:
+    use_entities: true
+- afirmar:
+    use_entities: true
+- negar:
+    use_entities: true
+- cancelar:
+    use_entities: true
+- informar:
+    use_entities: true
+- menu:
+    use_entities: true
+- exemplo_acao:
+    use_entities: true
+- exemplo_forms:
+    use_entities: true
+  # response selectors
+- explica:
+    use_entities: true
 entities:
-  - oi
-  - menu
-  - meajuda
-  - religiao
-  - time
-  - genero
-  - piada
-  - licenca
-  - musica
-  - comida
-  - cor
-  - signo
-  - triste
-  - historia
-  - vive
-  - acao
-  - formulario
-  - nome
-  - idade
+- menu
+- meajuda
+- religiao
+- time
+- genero
+- piada
+- licenca
+- musica
+- comida
+- cor
+- signo
+- triste
+- historia
+- vive
+- nome
+- idade
+- relationship
+- intent
+- entity 
+- slot
+- response_selectors
+- storie
+- acao
+- forms
 slots:
   nome:
     type: text
-    influence_conversation: false
+    initial_value: null
     auto_fill: false
+    influence_conversation: false
   idade:
     type: text
-    influence_conversation: false
+    initial_value: null
     auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: any
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_fallback:
   - text: |
@@ -258,29 +301,86 @@ responses:
       Ah, e no meu repositório tem muita coisa legal que vc pode aprender! Acessa lá: [https://github.com/lappis-unb/rasa-ptbr-boilerplate](https://github.com/lappis-unb/rasa-ptbr-boilerplate)
   utter_pergunta_cancelar:
   - text: Entendi. Você deseja cancelar?
-  utter_nao_nlu:
-  - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
-  utter_nao_core:
-  - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
-  utter_submit_exemplo_form:
+  # utters response selectors
+  utter_explica/intent:
+  - text: |
+      Ok, vou te explicar o que é um intent!
+      
+      Uma intenção é o objetivo do usuário ao enviar a mensagem, olhe este link com a definição:
+      https://rasa.com/docs/rasa/glossary#intent
+
+      Para criar uma intent você precisa adicionar o nome da sua intent no domain.yml e no arquivo data/nlu.yml, olha esse tutorial para mais informações:
+      https://rasa.com/docs/rasa/domain#intents
+
+  utter_explica/entity:
+  - text: |
+      Ok, vou te explicar o que é um entity!
+
+      Entidades são palavras chaves que podem ser estraídas da mensagem do usário, olhe este link com a definição:
+      https://rasa.com/docs/rasa/glossary#entity
+
+      Para criar uma entidade você precisa adicionar o nome da sua entidade no domain.yml e anotar as entidades arquivo data/nlu.yml, olha esse tutorial para mais informações:
+      https://rasa.com/docs/rasa/domain#entities
+
+  utter_explica/slot:
+  - text: |
+      Ok, vou te explicar o que é um slot!
+
+      Slots são como variáveis de diálogo onde você consegue armazenar informações para utilizar na conversa, olhe este link com a definição:
+      https://rasa.com/docs/rasa/glossary#slot
+
+      Para criar um slot você precisa adicionar o nome do seu slot no domain.yml indicar onde utiliza-lo no arquivo data/stories.yml e também é possível utiliza-lo nas custom actions, olha esse tutorial para mais informações:
+      https://rasa.com/docs/rasa/domain#slots
+
+  utter_explica/response_selectors:
+  - text: |
+      Ok, vou te explicar o que são os response_selectors!
+
+      É uma forma mais simples de explicar informações que fazem parte do mesmo assunto, inclusive, esta mensagem foi feita dentro de um response selector! Se quiser saber mais, acesse o link:
+      https://rasa.com/docs/rasa/components#responseselector
+      
+  utter_explica/storie:
+  - text: |
+      Ok, vou te explicar o que é um storie!
+
+      São exemplos de diálogo que são utilizados para treinar o modelo, como se você ensinasse o chatbot com exemplos de conversa, olha aqui a definição:
+      https://rasa.com/docs/rasa/glossary#story
+
+      Para criar uma story você precisa adicionar os exemplos desejados no arquivo data/stories.yml. Se quiser saber mais, acessa o link:
+      https://rasa.com/docs/rasa/stories
+
+  utter_explica/forms:
+  - text: |
+      Ok, vou te explicar o que é um formulário!
+  # utters dos forms
+  utter_exemplo_forms:
+  - text: |-
+      Agora você entrou em uma story que ativou um formulário! Aqui tem a documentação do Rasa sobre formulários: [documentação](https://rasa.com/docs/rasa/forms/). 
+       Vou te fazer algumas perguntas, responda elas pra mim pra que você possa sair deste loop.
+  utter_slots_exemplo_forms:
+  - text: 'No formulário eu preenchi o slot NOME com o seguinte valor: {nome}'
+  utter_submit_exemplo_forms:
   - text: Ótimo! terminamos seu exemplo de formulário!
   utter_ask_nome:
   - text: Qual o seu nome?
   utter_ask_idade:
   - text: Qual a sua idade?
-  utter_explica_exemplo_form:
-  - text: "Agora você entrou em uma story que ativou um formulário! Aqui tem a documentação do Rasa sobre formulários: [documentação](https://rasa.com/docs/rasa/forms/). \n Vou te fazer algumas perguntas, responda elas pra mim pra que você possa sair deste loop."
-  utter_slots_exemplo_form:
-  - text: "No formulário eu preenchi o slot NOME com o seguinte valor: {nome}"
+  # utters fallback
+  utter_nao_nlu:
+  - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
+  utter_nao_core:
+  - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
 actions:
 - action_exemplo
 forms:
-  exemplo_form:
-    nome:
-    - type: from_entity
-      entity: nome
-      intent: informar
-    idade:
-    - type: from_entity
-      entity: idade
-      intent: informar
+  exemplo_forms:
+    required_slots:
+      idade:
+      - entity: idade
+        intent: informar
+        type: from_entity
+      nome:
+      - entity: nome
+        intent: informar
+        type: from_entity
+e2e_actions: []

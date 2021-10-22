@@ -120,8 +120,8 @@ Existe aqui um exemplo de componente customizado que implementa Análise de Sent
 
 Para utilizá-lo basta introduzir o componente `components.sentiment_analyzer.SentimentAnalyzer` ao arquivo `bot/config.yml`. Como no exemplo:
 
-```yml
-language : "pt
+```ymal
+language : "pt"
 
 pipeline:
   - name: WhitespaceTokenizer

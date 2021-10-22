@@ -14,7 +14,7 @@ stop:
 
 ############################## DOCKERHUB ##############################
 dchub-tag:
-	docker tag arthurtemporim/boilerplate arthurtemporim/boilerplate:1.0
+	docker tag arthurtemporim/boilerplate arthurtemporim/boilerplate:2.8.12
 
 dchub-push:
 	docker push arthurtemporim/boilerplate
@@ -89,7 +89,7 @@ actions:
 	docker-compose run \
 		--rm \
 		--service-ports \
-		actions \
+		bot \
 		make actions
 
 x:
@@ -122,14 +122,18 @@ telegram:
 
 rocket:
 	docker-compose up \
-		-d rocketchat
+		-d \
+		rocketchat
+	make rocket-bot
+	
+rocket-bot:
 	docker-compose run \
 		-d \
 		--rm \
 		--service-ports \
 		bot \
 		make rocket ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
-	echo "Acesse o ROCKETCHAT em: http://localhost:5003"
+	echo "Acesse o ROCKETCHAT em: http://localhost:3000"
 
 train:
 	docker-compose run \

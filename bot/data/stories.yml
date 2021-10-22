@@ -94,7 +94,7 @@ stories:
   - action: utter_me_ajuda
 - story: exemplo acao
   steps:
-  - intent: pede_exemplo_acao
+  - intent: exemplo_acao
     entities:
       - acao
   - action: action_exemplo

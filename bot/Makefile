@@ -10,15 +10,15 @@ RASA_CREDENTIALS = --credentials
 CREDENTIALS = credentials/credentials.yml
 
 clean:
-	rm -rf graph.html results/ models/* *.db*
+	rm -rf graph.html results/ models/* *.db* .*tensorboard*
 
 install:
 	pip install --upgrade pip 						&& \
-	pip install $(PIP_FLAGS) -r requirements.txt
+	pip install -r requirements.txt
 
 # RASA X
 install-x:
-	pip install $(PIP_FLAGS) -r x-requirements.txt
+	pip install -r x-requirements.txt
 
 x:
 	rasa x --no-prompt
@@ -117,7 +117,8 @@ rocket:
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
 		$(RASA_CREDENTIALS)	credentials/rocketchat-credentials.yml \
 		--cors '*' \
-		--port 5009
+		--port 5009 \
+		--enable-api
 
 
 # ACTIONS

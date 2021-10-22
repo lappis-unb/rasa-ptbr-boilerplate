@@ -44,7 +44,7 @@ bot = {
 admin_name = os.getenv("ROCKETCHAT_ADMIN_USERNAME", "admin")
 admin_password = os.getenv("ROCKETCHAT_ADMIN_PASSWORD", "admin")
 
-rasa_url = os.getenv("RASA_URL", "http://bot-rocket:5005/webhooks/rocketchat/webhook")
+rasa_url = os.getenv("RASA_URL", "http://bot:5009/webhooks/rocketchat/webhook")
 user_header = None
 
 

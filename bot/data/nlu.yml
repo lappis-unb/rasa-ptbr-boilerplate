@@ -2,11 +2,11 @@ version: "2.0"
 nlu:
 - intent: cumprimentar
   examples: |
-    - [olá](oi)
-    - [Ola](oi)
-    - [Oi](oi)
-    - [Iae](oi)
-    - [Olá](oi) Bot!
+    - olá
+    - Ola
+    - Oi
+    - Iae
+    - Olá
     - bom dia
     - boa tarde
     - boa noite
@@ -332,19 +332,66 @@ nlu:
     - Bot, me mostra o [menu](menu)
     - Quais são as [opções](menu) de diálogo?
     - Me mostre as [opcoes](menu) de conversa
-- intent: pede_exemplo_form
-  examples: |
-    - [form](formulario)
-    - Bot, quero um exemplo de [formulário](formulario)
-    - Bot, entra em um [form](formulario)
-    - Exemplo de [formulário](formulario)
-    - Me explique como funciona os [formulários](formulario) no rasa.
-    - Você sabe fazer [forms](formulario)?
-- intent: pede_exemplo_acao
+- intent: exemplo_acao
   examples: |
     - [action](acao)
-    - Bot, quero um exemplo de [ação](acao)
-    - Bot, entra em um [action](acao)
-    - Exemplo de [ação](acao)
-    - Me explique como funciona uma [custom action](acao) no rasa.
-    - Você sabe fazer [ações customizadas](acao)?
+    - ativa [ação](acao)
+    - executa [action](acao)
+    - roda [ação](acao)
+    - entra [ação](acao)
+- intent: exemplo_forms
+  examples: |
+    - [forms](forms)
+    - ativa [forms](forms)
+    - executa [forms](forms)
+    - roda [forms](forms)
+    - entra [forms](forms)
+  # response selectors
+- intent: explica/forms
+  examples: |
+    - [form](forms)
+    - Bot, quero um exemplo de [formulário](forms)
+    - Bot, entra em um [form](forms)
+    - Exemplo de [formulário](forms)
+    - Me explique como funcionam os [formulários](forms) no rasa.
+    - Você sabe fazer um [forms](forms)?
+- intent: explica/intent
+  examples: |
+    - [intent](intent)
+    - Bot, quero um exemplo de [intent](intent)
+    - Bot, o que significa uma [intent](intent)
+    - Exemplo de [intent](intent)
+    - Me explique como funcionam as [intent](intent) no rasa.
+    - Você sabe fazer uma [intent](intent)?
+- intent: explica/entity
+  examples: |
+    - [entity](entity)
+    - Bot, quero um exemplo de [entity](entity)
+    - Bot, o que significa uma [entity](entity)
+    - Exemplo de [entity](entity)
+    - Me explique como funcionam as [entity](entity) no rasa.
+    - Você sabe fazer uma [entity](entity)?
+- intent: explica/slot
+  examples: |
+    - [slot](slot)
+    - Bot, quero um exemplo de [slot](slot)
+    - Bot, o que significa uma [slot](slot)
+    - Exemplo de [slot](slot)
+    - Me explique como funcionam as [slot](slot) no rasa.
+    - Você sabe fazer uma [slot](slot)?
+- intent: explica/response_selectors
+  examples: |
+    - [response_selectors](response_selectors)
+    - Bot, quero um exemplo de [response_selectors](response_selectors)
+    - Bot, o que significa uma [response_selectors](response_selectors)
+    - Exemplo de [response_selectors](response_selectors)
+    - Me explique como funcionam as [response_selectors](response_selectors) no rasa.
+    - Você sabe fazer uma [response_selectors](response_selectors)?
+- intent: explica/storie
+  examples: |
+    - [storie](storie)
+    - Bot, quero um exemplo de [storie](storie)
+    - Bot, o que significa uma [storie](storie)
+    - Exemplo de [storie](storie)
+    - Me explique como funcionam as [storie](storie) no rasa.
+    - Você sabe fazer uma [storie](storie)?
