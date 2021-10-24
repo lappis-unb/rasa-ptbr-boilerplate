@@ -1,6 +1,6 @@
 ---
 layout: default
-title: readme
+title: Home
 ---
 
 # Rasa Boilerplate
