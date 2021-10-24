@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ed1eb7eddc566a676d27b57ede24c49e0046e5ed" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Qualidade do bot | rasa-ptbr-boilerplate</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Qualidade do bot" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<meta property="og:description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<link rel="canonical" href="http://localhost:4000/pipeline-de-qualidade.html" />
+<meta property="og:url" content="http://localhost:4000/pipeline-de-qualidade.html" />
+<meta property="og:site_name" content="rasa-ptbr-boilerplate" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Qualidade do bot" />
+<script type="application/ld+json">
+{"description":"Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search","url":"http://localhost:4000/pipeline-de-qualidade.html","@type":"WebPage","headline":"Qualidade do bot","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="http://localhost:4000/">
+          <h1>rasa-ptbr-boilerplate</h1>
+        </a>
+        <h2>Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search</h2>
+        
+          <a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate" class="button"><small>View project on</small> GitHub</a>
+        
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1 id="qualidade-do-bot">Qualidade do bot</h1>
+
+<p>Além do grande desafio de como gerenciar o conteúdo de maneira viável e organizada, existe o desafio de como crescer o domínio do bot com qualidade. À medida que a base de treinamento do bot muda, muitas vezes é necessário também atualizar os parâmetros de treinamento da rede para garantir que a acurácia do <em>bot</em> se mantenha.</p>
+
+<p>Aliado à isso, no contexto colaborativo de uma equipe com diversas pessoas evoluindo o bot simultaneamente, é preciso alinhar a visão dos membros do time em relação aos parâmetros de qualidade.</p>
+
+<h2 id="qualidade-em-chatbots-rasa">Qualidade em ChatBots Rasa</h2>
+
+<p>Se Tratando de Chatbots desenvolvidos com Rasa, os parâmetros de qualidade estão relacionados principalmente à dois aspectos:</p>
+
+<p><strong>Identificação de intenções:</strong> Qual o desempenho do <em>bot</em> em classificar um texto em uma categoria que define a sua intenção;</p>
+
+<p><strong>Desempenho em fluxos de conversa:</strong> O quão bem o <em>bot</em> consegue se comportar de acordo com as intenções classificadas e responder corretamente o usuário de acordo com o histórico das interações e a base de treinamento;</p>
+
+<p>Também há a preocupação em relação à usabilidade do <em>bot</em>, uma vez que caso o <em>bot</em> tenha uma Experiência de Usuário ruim, ele poderá ter um péssimo desempenho e se comportar de forma inesperada, mesmo com uma boa base de treinamentos e uma rede muito bem configurada. A melhoria desta experiência está relacionada há fatores como desenvolvimento de personalidade, construção de roteiros de conversa, adequação da linguagem do bot ao público-alvo, etc. Porém, aferir de forma automatizada a qualidade desses parâmetros ainda é uma tarefa inviável, sendo assim a qualidade dessas métricas exige uma análise direta e profunda por parte da equipe.</p>
+
+<h2 id="abordagem-de-aferição-da-qualidade">Abordagem de aferição da qualidade</h2>
+
+<p>Tendo em consideração os parâmetros anteriores, a construção desta abordagem é baseada no objetivo de garantir de forma automatizada a acurácia do ChatBot em relação à detecção de intenções e o desempenho nos fluxos de conversas.</p>
+
+<p><strong>Estágio 1:</strong> O primeiro estágio consiste em garantir a consistência de sintaxe dos arquivos de treinamento do <em>bot</em>. O Rasa utiliza um formato de configuração que depende de um arquivo principal chamado <code class="language-plaintext highlighter-rouge">domain</code>, onde devem estar definidas todas as <em>intents</em> e <em>utters</em> definidas e utilizadas. Caso haja alguma inconsistência entre essas informações o desempenho do <em>bot</em> poderá ser afetado, uma vez que parâmetros importantes podem não ser corretamente utilizados durante o processo de treinamento e predição do <em>bot</em>.</p>
+
+<p>Objetivo: O foco deste estágio é sanar possíveis erros de digitação, inconsistências durante <em>merges</em> e definições incorretas de <em>intents</em> e <em>utters</em> nos arquivos de configuração.</p>
+
+<p>Solução proposta: Dentro da TAIS é utilizado um <a href="https://github.com/lappis-unb/tais/blob/master/coach/validator.py">script de validação</a> automatizada desses parâmetros, que analiza os arquivos de configuração do Rasa e o <em>dataset</em> para garantir que não hajam inconsistências.</p>
+
+<p><strong>Estágio 2:</strong> O segundo estágio consiste na validação do comportamento do <em>bot</em> durante as interações e a execução dos fluxos de conversa.</p>
+
+<p>O Rasa já oferece um <a href="https://rasa.com/docs/core/evaluation/">recurso de validação dos fluxos de conversação</a>. Através desse <em>evaluation</em> é possível testar o comportamento do <em>bot</em> dentro do contexto de uma conversa, e entender se ele está fazendo uma predição correta das ações a serem tomadas de acordo com cada intenção identificada. Além disso, esse mecanismo facilita o teste da capacidade de generalização do <em>bot</em>.</p>
+
+<p>Objetivo: O objetivo deste estágio é garantir que o <em>bot</em> está se comportando da forma esperada para determinados fluxos de conversa.</p>
+
+<p>Solução proposta: Pode-se utilizar a funcionalidade de <a href="https://rasa.com/docs/core/evaluation/">evaluation</a> do Rasa para testar diretamente o funcionamento de um fluxo de conversa.</p>
+
+<p>Dentro da TAIS foi adicionada mais uma camada de testes com um <a href="https://github.com/lappis-unb/tais/blob/master/bot/test_stories.py">script para melhoria da visualização dos testes</a>. Onde é possível ver no <em>console</em> quais são as <em>intents</em> e <em>utters</em> que falharam. Isso permite que a equipe de desenvolvimento possa identificar diretamente os pontos onde a acurácia do <em>bot</em> não está tão boa ou o comportamento não está sendo o esperado.</p>
+
+<p><img src="../../assets/teste_quebrado.png" alt="" /></p>
+
+<p>Ao fim desse <em>script</em> é exibido um log das histórias que falharam dentro de cada um dos arquivos.</p>
+
+<p><img src="../../assets/teste_resultado.png" alt="" /></p>
+
+<h2 id="utilização-do-pipeline">Utilização do Pipeline</h2>
+
+<p>Pode-se configurar tasks para a execução destes <em>scripts</em> dentro de cada contexto.
+Uma das alternativas, que é utilizada dentro da TAIS, é utilizar um serviço de CI para validação automatizada destes passos simultaneamente ao processo de contribuição no repositório.
+Na TAIS foram configuradas duas <em>tasks</em> simples utilizando um <code class="language-plaintext highlighter-rouge">Makefile</code>. A primeira <em>task</em> executa a validação dos arquivos de configuração do <em>bot</em> e recebe como parâmetro o path para o arquivo <code class="language-plaintext highlighter-rouge">domain</code>, e os diretórios onde estão as <code class="language-plaintext highlighter-rouge">intents</code> e <code class="language-plaintext highlighter-rouge">stories</code>. A segunda <em>task</em> executa o <code class="language-plaintext highlighter-rouge">evaluation</code> nos fluxos de teste que estão dentro do diretório <code class="language-plaintext highlighter-rouge">e2e</code>.</p>
+
+<div class="language-makefile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">run-validator</span><span class="o">:</span>
+  <span class="err">python3</span> <span class="err">validator.py</span> <span class="err">--intents</span> <span class="err">data/intents/</span> <span class="err">--stories</span> <span class="err">data/stories</span> <span class="err">--domain</span> <span class="err">domain.yml</span>
+
+<span class="nl">test-stories</span><span class="o">:</span>
+   <span class="err">python3</span> <span class="err">test_stories.py</span> <span class="err">--stories</span> <span class="err">e2e/</span> <span class="err">--e2e</span>
+</code></pre></div></div>
+
+<p>Após isso foram definidas duas <em>tasks</em> simples para validação dos parâmetros definidos. Estes estágios são validados no CI a cada <em>commit</em>, mas podem ser configurado segundo regras específicas, por exemplo serem executados apenas em determinadas <em>branches</em> do repositório.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">run dataset validator</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">validate format</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">lappis/coach:latest</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">cd coach/</span>
+    <span class="pi">-</span> <span class="s">make run-validator</span>
+
+<span class="na">test stories</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">test stories</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">lappis/bot:latest</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">cd bot/</span>
+    <span class="pi">-</span> <span class="s">make test-stories</span>
+</code></pre></div></div>
+
+        </section>
+
+        <aside id="sidebar">
+          
+
+          
+            <p class="repo-owner"><a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate">rasa-ptbr-boilerplate</a> is maintained by <a href="https://github.com/lappis-unb">lappis-unb</a>.</p>
+          
+          
+              <h2><a href="/">Home</a></h2>
+                
+          
+              <h2><a href="/assets/css/style.css"></a></h2>
+                
+          
+              <h2><a href="/assets/css/print.css"></a></h2>
+                
+          
+              <h2><a href="/README-en.html">Rasa Boilerplate</a></h2>
+                
+          
+              <h2><a href="/pipeline-de-qualidade.html">Qualidade do bot</a></h2>
+                
+          
+              <h2><a href="/setup_analytics.html">Configuração da stack de analytics</a></h2>
+                
+          
+              <h2><a href="/setup_telegram.html">Setup do bot no Telegram</a></h2>
+                
+          
+              <h2><a href="/setup_user_elasticsearch.html">Configurando os usuários</a></h2>
+                
+          
+              <h2><a href="/tutorial-add-bot-rocketchat.html">Adicionar bot ao RocketChat</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-contribuir-com-documentacao.html">Contribuir com a Documentação</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-criar-uma-action.html">Criação de Actions</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-fazer-uma-utter.html">Criação de Utter</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-treinar-o-modelo.html">Configuração da Policy do chatbot</a></h2>
+                
+          
+              <h2><a href="/tutorial-criar-BI.html">Criação de visualizações no Kibana</a></h2>
+                
+          
+              <h2><a href="/tutorial-pipeline-de-bot.html">Configuração pipeline de bot</a></h2>
+                
+          
+              <h2><a href="/tutorial-primeira-conversa.html">Primeira Conversa</a></h2>
+                
+          
+              <h2><a href="/tutorial-testes-automatizados.html">Criação de Testes Automatizados</a></h2>
+                
+          
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+    <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "assets/1.0.1.min.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            customData: { language: "pt-br" },
+            selector: "#webchat",
+            initPayload: "/cumprimentar",
+            socketUrl: "http://localhost:5007",
+            socketPath: "/socket.io/",
+            title: "Tais",
+            inputTextFieldHint: "Digite sua mensagem...",
+            connectingText: "Conectando...",
+            hideWhenNotConnected: true,
+            fullScreenMode: false,
+            profileAvatar: "assets/images/bot.png",
+            openLauncherImage: 'assets/images/launcher_button.svg',
+            closeLauncherImage: 'assets/images/launcher_button.svg',
+            params: {
+                images: {
+                    dims: {
+                        width: 300,
+                        height: 200,
+                    }
+                },
+                storage: "session"
+            }
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+    })();
+    </script>
+
+  </body>
+</html>

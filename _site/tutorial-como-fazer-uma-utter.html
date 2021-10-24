@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ed1eb7eddc566a676d27b57ede24c49e0046e5ed" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Criação de Utter | rasa-ptbr-boilerplate</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Criação de Utter" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<meta property="og:description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<link rel="canonical" href="http://localhost:4000/tutorial-como-fazer-uma-utter.html" />
+<meta property="og:url" content="http://localhost:4000/tutorial-como-fazer-uma-utter.html" />
+<meta property="og:site_name" content="rasa-ptbr-boilerplate" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Criação de Utter" />
+<script type="application/ld+json">
+{"description":"Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search","url":"http://localhost:4000/tutorial-como-fazer-uma-utter.html","@type":"WebPage","headline":"Criação de Utter","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="http://localhost:4000/">
+          <h1>rasa-ptbr-boilerplate</h1>
+        </a>
+        <h2>Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search</h2>
+        
+          <a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate" class="button"><small>View project on</small> GitHub</a>
+        
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1 id="criação-de-utter">Criação de Utter</h1>
+
+<p><strong>Formato</strong> - A Utter (textos que o Bot envia) não devem ser muito grande, pense em uma postagem do Twitter.</p>
+
+<p><strong>Conteúdo</strong> - Deve seguir um Roteiro como se fosse uma conversa natural entre duas pessoas, sendo assim, as perguntas feitas pelo seu Bot devem ter um significado dentro dos objetivos e missões dele.</p>
+
+<p><strong>Personalidade</strong> - Por fim, para que a conversa seja interessante e cativante você deve criar uma personalidade para o seu Chatbot que vai aparecer através do modo como ele se comunica, assim como uma pessoa ele deve ter características e comportamentos únicos que aparecem no modo como ele fala e interage com o interlocutor,  seja por meio de emojis, ou pela escolha de palavras que usa, você pode ver exemplos disso nas recomendações.</p>
+
+<h2 id="como-colocar-a-personalidade-da-tais-nas-utters">COMO COLOCAR A PERSONALIDADE DA TAIS NAS UTTERS</h2>
+
+<p>A Tais usa norma padrão com um toque de oralidade, ela não conversa de um jeito muito formal, não usa jargões do direito, exceto quando manda algum artigo da Lei Rouanet. Ela gosta muito de usar palavras que enfatizam uma conversa falada:</p>
+
+<p>“aí” (“E aí, por onde vamos começar?”)</p>
+
+<p>“daí” (“daí você me manda outra!”)</p>
+
+<p>“que tal” (“Que tal falar de outra forma?”)</p>
+
+<p>“Hummmm…” (“Hummmm… Não sei se entendi.”)</p>
+
+<p>“olha”, (“Olha, alguns familiares não podem incentivar projetos”)</p>
+
+<p>Ela também usa emojis para demonstrar expressar simpatia: “Para lembrar dos assuntos que eu domino, é só digitar: #MEAJUDA :)”</p>
+
+<p>Para deixar sua utter mais fácil de ler, use conjunções para ligar os elementos da frase, mas lembre-se que a Tais não é muito formal então nunca use um “destarte” opte pelo mais simples como “logo”. Vou colocar alguns exemplos de conjunções/conectivos que você pode usar, não se esqueça de que você pode usar outros que não estão nessa lista e não tenham um tom tão formal: e, nem, mas também, assim, dessa forma, além disso, assim como, mas, porém, se bem que, se não, ou, já, talvez, da mesma maneira, tal como, da mesma forma, segundo, de acordo com, se, caso, quanto mais, quanto menos, porque, pois, para que, provavelmente, realmente, sem dúvida, com certeza, isto é, ou seja, em primeiro lugar, para começar, então, ainda, na medida em que, já que, por isso.</p>
+
+<h2 id="roteiro">ROTEIRO:</h2>
+
+<p>1 - Primeiro você precisa analisar o tema da utter, deste modo, leia o texto que a Secretaria Especial da Cultura enviou como resposta para a pergunta do usuário;</p>
+
+<p>2 - É importante observar quais são as informações mais importantes. Se o texto for muito grande e abarcar muitos temas, você pode quebrá-lo em várias utters desde que encontre uma lógica para que as utters se liguem e o usuário possa ser guiado até elas através da conversa;</p>
+
+<p>3 - Retire o essencial, desde que esse essencial consiga sanar a dúvida do usuário. Seja simples, às vezes menos é mais! Uma utter pode responder várias dúvidas ou apenas uma, isso vai depender de como você vai conseguir encaixar todos esses assuntos e se é mais viável criar novas utters ou colocar tudo em uma;</p>
+
+<p>4 - Agora, você tem que pensar em quais dúvidas as expressões usadas ali podem causar nos usuários, depois disso, escreva a resposta com as suas palavras, implementando a personalidade da Tais no seu texto;</p>
+
+<p>5 - O texto deve ser fluído, coerente e fácil de ler. Deve ser o menor possível, deve ser claro e objetivo, vá direto ao ponto!</p>
+
+<h2 id="recomendações">RECOMENDAÇÕES:</h2>
+
+<p><strong>Polida</strong> - “Obrigada por conversar comigo!”
+A Tais é muito educada, mas não exagere demais para não parecer uma conversa forçada. Seja simples, agradeça, use “por favor”, mas sem extrapolar na polidez.</p>
+
+<p><strong>Dedicada</strong> - “quero te ajudar”
+A Tais precisa demonstrar ao usuário que está engajada em sua missão, ela demonstra sua dedicação quando oferece ajuda e se mostra sempre disponível.</p>
+
+<p><strong>Paciente</strong> - “você pode escrever de novo de outra forma?”
+Ela está sempre disposta a tentar de novo, então se ela errou ou não sabe explicar, vai continuar pedindo para o usuário perguntar novamente de outro modo.</p>
+
+<p><strong>Gentil</strong> - “espero estar te ajudando”
+A gentileza da Assistente Virtual da Secretaria Especial da Cultura é muito mais sutil e harmoniosa: “Foi um prazer te ajudar! Sempre que tiver alguma dúvida, volte aqui!”</p>
+
+<p><strong>Passiva</strong> - “Que tal falar de outra forma?”
+Quando a Tais é afrontada e o usuário usa um palavrão, o melhor caminho será sempre a passividade: “Hummm… Não gostei muito dessa expressão que você usou.  Que tal falar de outra forma?”.</p>
+
+<p><strong>Não dá espaço para intimidade</strong> - “Oi, sou assistente virtual da Secretaria Especial da Cultura”
+Ela é muito atenciosa, mas é muito reservada. Então, nada de “Oi, bebê!”.</p>
+
+<p>Caso você queira entender como implementar a personalidade da Tais de forma mais profunda, leia o Guia de Conversação completo, acessando aqui:
+https://lappis-unb.github.io/tais/guia-de-conversacao-da-tais/</p>
+
+        </section>
+
+        <aside id="sidebar">
+          
+
+          
+            <p class="repo-owner"><a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate">rasa-ptbr-boilerplate</a> is maintained by <a href="https://github.com/lappis-unb">lappis-unb</a>.</p>
+          
+          
+              <h2><a href="/">Home</a></h2>
+                
+          
+              <h2><a href="/assets/css/style.css"></a></h2>
+                
+          
+              <h2><a href="/assets/css/print.css"></a></h2>
+                
+          
+              <h2><a href="/README-en.html">Rasa Boilerplate</a></h2>
+                
+          
+              <h2><a href="/pipeline-de-qualidade.html">Qualidade do bot</a></h2>
+                
+          
+              <h2><a href="/setup_analytics.html">Configuração da stack de analytics</a></h2>
+                
+          
+              <h2><a href="/setup_telegram.html">Setup do bot no Telegram</a></h2>
+                
+          
+              <h2><a href="/setup_user_elasticsearch.html">Configurando os usuários</a></h2>
+                
+          
+              <h2><a href="/tutorial-add-bot-rocketchat.html">Adicionar bot ao RocketChat</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-contribuir-com-documentacao.html">Contribuir com a Documentação</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-criar-uma-action.html">Criação de Actions</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-fazer-uma-utter.html">Criação de Utter</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-treinar-o-modelo.html">Configuração da Policy do chatbot</a></h2>
+                
+          
+              <h2><a href="/tutorial-criar-BI.html">Criação de visualizações no Kibana</a></h2>
+                
+          
+              <h2><a href="/tutorial-pipeline-de-bot.html">Configuração pipeline de bot</a></h2>
+                
+          
+              <h2><a href="/tutorial-primeira-conversa.html">Primeira Conversa</a></h2>
+                
+          
+              <h2><a href="/tutorial-testes-automatizados.html">Criação de Testes Automatizados</a></h2>
+                
+          
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+    <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "assets/1.0.1.min.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            customData: { language: "pt-br" },
+            selector: "#webchat",
+            initPayload: "/cumprimentar",
+            socketUrl: "http://localhost:5007",
+            socketPath: "/socket.io/",
+            title: "Tais",
+            inputTextFieldHint: "Digite sua mensagem...",
+            connectingText: "Conectando...",
+            hideWhenNotConnected: true,
+            fullScreenMode: false,
+            profileAvatar: "assets/images/bot.png",
+            openLauncherImage: 'assets/images/launcher_button.svg',
+            closeLauncherImage: 'assets/images/launcher_button.svg',
+            params: {
+                images: {
+                    dims: {
+                        width: 300,
+                        height: 200,
+                    }
+                },
+                storage: "session"
+            }
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+    })();
+    </script>
+
+  </body>
+</html>

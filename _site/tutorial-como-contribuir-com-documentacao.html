@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ed1eb7eddc566a676d27b57ede24c49e0046e5ed" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Contribuir com a Documentação | rasa-ptbr-boilerplate</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Contribuir com a Documentação" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<meta property="og:description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<link rel="canonical" href="http://localhost:4000/tutorial-como-contribuir-com-documentacao.html" />
+<meta property="og:url" content="http://localhost:4000/tutorial-como-contribuir-com-documentacao.html" />
+<meta property="og:site_name" content="rasa-ptbr-boilerplate" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Contribuir com a Documentação" />
+<script type="application/ld+json">
+{"description":"Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search","url":"http://localhost:4000/tutorial-como-contribuir-com-documentacao.html","@type":"WebPage","headline":"Contribuir com a Documentação","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="http://localhost:4000/">
+          <h1>rasa-ptbr-boilerplate</h1>
+        </a>
+        <h2>Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search</h2>
+        
+          <a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate" class="button"><small>View project on</small> GitHub</a>
+        
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2 id="contribuir-com-a-documentação">Contribuir com a Documentação</h2>
+
+<p>A documentação do projeto utiliza a ferramenta GitBook, e para contribuir com melhorias ou correções primeiro é preciso rodar localmente como mostra no <a href="../../README.md">README</a>.</p>
+
+<p>Caso tenha alguma dúvida ou queira entender mais a fundo a ferramenta, acesse sua <a href="https://docs.gitbook.com/">documentação aqui</a>.</p>
+
+<p><strong>Estrutura</strong>: São necessários dois arquivos para que o gitbook funcione corretamente. O arquivo <em>readme</em> é primeira página da documentação e deve estar na pasta raíz como <code class="language-plaintext highlighter-rouge">./README.md</code>.
+E o arquivo <em>summary</em> é o índice da documentação e deve estar também na pasta raíz como <code class="language-plaintext highlighter-rouge">./SUMMARY.md</code>.</p>
+
+<p>O gitbook cria htmls de todos os arquivos markdowns que estejam no <code class="language-plaintext highlighter-rouge">SUMMARY.md</code>.</p>
+
+<h3 id="primeiros-passos">Primeiros passos</h3>
+
+<p>Então o primeiro passo para contribuir com a documentação é identificar se será uma correção, criação de conteúdo, organização e/ou atualização. 
+Verifique se já existe uma <a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate/issues">issue</a> aberta sobre o assunto específico. Caso não tenha, <a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate/issues/new/choose">crie uma issue</a> e coloque a label de <code class="language-plaintext highlighter-rouge">documentação</code> e outra caso seja necessário. 
+Rode localmente o gitbook para ver a documentação do projeto.</p>
+
+<ol>
+  <li>
+    <p>Caso a contribuição não precise de criação de novos arquivos, faça as correções nos arquivos e abra um PR descrevendo claramente tudo o que foi feito.</p>
+  </li>
+  <li>
+    <p>Caso a contribuição envolva exclusão de arquivos, é muito importante verificar o arquivo <code class="language-plaintext highlighter-rouge">summary</code> e corrigir ou apagar os links que levariam para esses arquivos excluidos. Pois se não tirar desses arquivos, quando abrir vai dar erro.</p>
+  </li>
+  <li>
+    <p>Se a contribuição envolver atualização de nome de arquivos, é muito importante a correção também do arquivos <code class="language-plaintext highlighter-rouge">summary</code> e todos os outros que indiquem o redirecionamento, assim como testar antes de abrir o PR.</p>
+  </li>
+  <li>
+    <p>Se a contribuição envolver criação de novos arquivos, tente seguir o padrão, por exemplo, os tutoriais começam com <code class="language-plaintext highlighter-rouge">tutorial-nome-do-tutorial.md</code>. Após a criação de um novo arquivo é preciso colocar no arquivo <code class="language-plaintext highlighter-rouge">summary</code>, onde está o arquivo no projeto. Veja o exemplo do arquivo <code class="language-plaintext highlighter-rouge">./SUMMARY.md</code>.</p>
+  </li>
+</ol>
+
+<p>O arquivo <code class="language-plaintext highlighter-rouge">./SUMMARY.md</code> segue a seguinte estrutura:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>‌# Summary​
+
+<span class="gu">## Use títulos para criar grupos de páginas</span>
+<span class="p">
+*</span> <span class="p">[</span><span class="nv">Introdução</span><span class="p">](</span><span class="sx">README.md</span><span class="p">)</span>
+<span class="p">*</span> <span class="p">[</span><span class="nv">Setup</span><span class="p">](</span><span class="sx">)</span>    
+<span class="p">    *</span> <span class="p">[</span><span class="nv">Setup Telegram</span><span class="p">](</span><span class="sx">docs/Setup/setup-telegram.md</span><span class="p">)</span>    
+<span class="p">    *</span> <span class="p">[</span><span class="nv">Setup Slack</span><span class="p">](</span><span class="sx">docs/Setup/slack.md</span><span class="p">)</span>
+<span class="p">    
+*</span> <span class="p">[</span><span class="nv">Tutorial</span><span class="p">](</span><span class="sx">)</span>    
+<span class="p">    *</span> <span class="p">[</span><span class="nv">Criar uma intent</span><span class="p">](</span><span class="sx">docs/Tutoriais/tutorial-criar-intent.md</span><span class="p">)</span>    
+<span class="p">    *</span> <span class="p">[</span><span class="nv">Como usar slot</span><span class="p">](</span><span class="sx">docs/Tutoriais/tutorial-usar-slot.md</span><span class="p">)</span>    
+    
+<span class="gu">## Segundo grupo de páginas</span>
+<span class="p">
+*</span> <span class="p">[</span><span class="nv">Introduction</span><span class="p">](</span><span class="sx">docs/README-en.md</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Após alterações, rode novamente, verifique o <code class="language-plaintext highlighter-rouge">summary</code> e teste todos os links.</p>
+
+<h3 id="referências">Referências</h3>
+
+<p>[1] - <a href="https://docs.gitbook.com/integrations/github/content-configuration#structure">https://docs.gitbook.com/integrations/github/content-configuration#structure</a></p>
+
+        </section>
+
+        <aside id="sidebar">
+          
+
+          
+            <p class="repo-owner"><a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate">rasa-ptbr-boilerplate</a> is maintained by <a href="https://github.com/lappis-unb">lappis-unb</a>.</p>
+          
+          
+              <h2><a href="/">Home</a></h2>
+                
+          
+              <h2><a href="/assets/css/style.css"></a></h2>
+                
+          
+              <h2><a href="/assets/css/print.css"></a></h2>
+                
+          
+              <h2><a href="/README-en.html">Rasa Boilerplate</a></h2>
+                
+          
+              <h2><a href="/pipeline-de-qualidade.html">Qualidade do bot</a></h2>
+                
+          
+              <h2><a href="/setup_analytics.html">Configuração da stack de analytics</a></h2>
+                
+          
+              <h2><a href="/setup_telegram.html">Setup do bot no Telegram</a></h2>
+                
+          
+              <h2><a href="/setup_user_elasticsearch.html">Configurando os usuários</a></h2>
+                
+          
+              <h2><a href="/tutorial-add-bot-rocketchat.html">Adicionar bot ao RocketChat</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-contribuir-com-documentacao.html">Contribuir com a Documentação</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-criar-uma-action.html">Criação de Actions</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-fazer-uma-utter.html">Criação de Utter</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-treinar-o-modelo.html">Configuração da Policy do chatbot</a></h2>
+                
+          
+              <h2><a href="/tutorial-criar-BI.html">Criação de visualizações no Kibana</a></h2>
+                
+          
+              <h2><a href="/tutorial-pipeline-de-bot.html">Configuração pipeline de bot</a></h2>
+                
+          
+              <h2><a href="/tutorial-primeira-conversa.html">Primeira Conversa</a></h2>
+                
+          
+              <h2><a href="/tutorial-testes-automatizados.html">Criação de Testes Automatizados</a></h2>
+                
+          
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+    <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "assets/1.0.1.min.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            customData: { language: "pt-br" },
+            selector: "#webchat",
+            initPayload: "/cumprimentar",
+            socketUrl: "http://localhost:5007",
+            socketPath: "/socket.io/",
+            title: "Tais",
+            inputTextFieldHint: "Digite sua mensagem...",
+            connectingText: "Conectando...",
+            hideWhenNotConnected: true,
+            fullScreenMode: false,
+            profileAvatar: "assets/images/bot.png",
+            openLauncherImage: 'assets/images/launcher_button.svg',
+            closeLauncherImage: 'assets/images/launcher_button.svg',
+            params: {
+                images: {
+                    dims: {
+                        width: 300,
+                        height: 200,
+                    }
+                },
+                storage: "session"
+            }
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+    })();
+    </script>
+
+  </body>
+</html>

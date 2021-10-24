@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ed1eb7eddc566a676d27b57ede24c49e0046e5ed" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Criação de Testes Automatizados | rasa-ptbr-boilerplate</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Criação de Testes Automatizados" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<meta property="og:description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<link rel="canonical" href="http://localhost:4000/tutorial-testes-automatizados.html" />
+<meta property="og:url" content="http://localhost:4000/tutorial-testes-automatizados.html" />
+<meta property="og:site_name" content="rasa-ptbr-boilerplate" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Criação de Testes Automatizados" />
+<script type="application/ld+json">
+{"description":"Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search","url":"http://localhost:4000/tutorial-testes-automatizados.html","@type":"WebPage","headline":"Criação de Testes Automatizados","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="http://localhost:4000/">
+          <h1>rasa-ptbr-boilerplate</h1>
+        </a>
+        <h2>Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search</h2>
+        
+          <a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate" class="button"><small>View project on</small> GitHub</a>
+        
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1 id="criação-de-testes-automatizados">Criação de Testes Automatizados</h1>
+
+<p>Ao construir um bot com o framework Rasa, deve se ter em mente como funciona a construção do diálogo do ponto de vista do bot, como ele processa todas as informações que são jogadas. O bot agrega uma concepção de um ser que interage e que se mostra “pensante”, mas os desenvolvedores devem ter noção de como um bot age, como ele constrói todas suas previsões de diálogo e as usa a seu favor.</p>
+
+<p>Imagine que começamos a fazer um bot qualquer, com um escopo definido, ao construirmos todas as estruturas necessárias para que ele responda e entenda, na verdade estaremos construindo a sua rede neural, que na parte humana seria a associação que fazemos da resposta a uma pergunta. Dessa forma, a rede neural é baseada na inserção de conteúdo e a ligação do mesmo a interação com o usuário, por exemplo no Boiler-Plate, ao colocarmos cada vez mais assunto, estamos expandindo nosso escopo e deixando nosso bot mais “inteligente”. Em suma, as redes neurais são construídas a partir do treinamento do bot, que possibilita-o prever respostas, sintetizando os fluxos possíveis mediante a intenção do usuário.</p>
+
+<p>No Rasa isso é feito de uma forma muito simples, ao criarmos novas intents e stories, damos abertura ao nosso bot dialogar sobre mais assuntos. Infelizmente temos um grande problema nesse quesito, ao inserirmos mais conteúdo, estamos abrindo espaço para que nosso bot esteja confundindo algum fluxo com outro.</p>
+
+<p>Para inserirmos mais conteúdo em nosso bot de forma segura, utilizamos os testes automatizados que identifica se o novo conteúdo foi interferido ou interferiu em outro fluxo, acarretando em uma validação de fluxo e trazendo uma evolução muito mais fácil em estrutura e conteúdo.</p>
+
+<p>Para construirmos os testes devemos primeiro escolher um fluxo no qual queremos tratar, depois estruturar uma conversa para esse fluxo, que nos permite avaliar todo o escopo que escolhemos. Por exemplo, no BoilerPlate temos a intent esporte e queremos ter a certeza que ela sempre estará funcionando. Nesse contexto, podemos gerar um diálogo que condiz com o que queremos:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Usuário
+ 
+- oi                                  (intent cumprimentar)
+- qual o seu jogo favorito?           (intent esporte)
+- tchau                               (intent despedir)
+</code></pre></div></div>
+
+<p>Esse é um exemplo bem simples, que conseguimos tirar dele informações que confirma o fluxo que queremos e nos informa se alguma mudança ocorreu.</p>
+
+<p>Para construirmos o código dos testes, primeiro devemos entender que ao criarmos o fluxo que queremos temos que identificar a utter que corresponde aquela intenção:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Usuário                              Bot
+ 
+- oi                            -&gt;     utter_cumprimentar
+- qual o seu jogo favorito?     -&gt;     utter_esporte                   
+- tchau                         -&gt;     utter_despedir
+</code></pre></div></div>
+
+<p>Agora fazer o código fica bem mais fácil:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## end-to-end story 1
+* cumprimentar: ola
+  - utter_cumprimentar
+* esporte: qual o seu jogo favorito?
+  - utter_esporte
+* despedir: tchau
+  - utter_despedir
+</code></pre></div></div>
+
+<p>O código é um arquivo MarkDown composto por um título que indica que estamos trabalhando com arquivos de ponta a ponta, em seguida dizemos a intent e o texto pré estabelecido para o teste, embaixo dizemos a utter que corresponde ao texto.</p>
+
+<p>Esse código está localizado no coach/data/e2e, nele concentramos todos os arquivos de teste, como boa prática é comum começarmos o nome do arquivo de “e2e”.</p>
+
+<h2 id="executando-os-arquivos-e2e">Executando os arquivos e2e</h2>
+
+<p>Todas as informações de como executar os arquivos de teste está descrito no README do <a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate">BoilerPlate</a></p>
+
+<h2 id="entendendo-os-resultados">Entendendo os resultados</h2>
+
+<p>Sabe-se que o teste do Rasa nos possibilita avaliar o fluxo de ponta a ponta, com as intenções pré definidas pelo mesmo, desta forma, ele nos disponibiliza uma forma de visualização desse teste no qual ele nos fornece:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"precision" - quantidade de utters_esperadas divididas pela quantidade de utters_ocorridas
+"recall" - porcentagem de respostas que corresponderam a utter esperada.
+"f1-score" - a porcentagem de relação da precisão com o recall, sendo (2x precisão x recall) / (precisão + recall)
+"support" - o tanto de vezes que teste utiliza cada variável.
+</code></pre></div></div>
+
+<p>Matriz:</p>
+
+<p>Desses dados gera uma matriz pelo script que permite visualizar a distribuição de confiança para todas as previsões</p>
+
+<p>Essa matriz nos permite visualizar a relação entre as utters_esperadas (criadas pelos testes) e as utters_ocorridas (as que realmente foram respondidas mediante ao fluxo), priorizando o fluxo em que a conversa segue e a intenções que as correspondem, como pode ser visto no exemplo acima onde todas as utters_esperadas correlacionam com as utters_ocorridas. Forma-se uma matriz quadrada onde sua coluna 0 e linha 0 são respectivamente, a quantidade de utters_esperadas que correlacionaram com as utters ocorridas + as utters_esperadas que não resultaram em nenhum valor e a action_list (o numero de intenções no teste).</p>
+
+<p>Há apenas uma exceção nesse quesito, quando houver um texto que retorne o fallback, ele criará uma matriz onde a coluna 0 e linha 0 são respectivamente, fallback e NONE. Isso pode ser visto na imagem abaixo no qual o texto retornou um fallback e a relação com a utter_esperada na ultima linha.</p>
+
+<p>Pode-se dizer que as linhas são a utters_esperadas e as colunas são as utters_ocorridas, e os números são as quantidades de vezes que uma utter corresponde a outra ou deixa de corresponder naquele fluxo da conversa. Quando as utters_esperadas são relacionadas com as corretas utters_ocorridas este número irá ficar na diagonal principal sinalizando a quantidade de vezes de correspondência.</p>
+
+<p>Na matriz pode-se perceber que existem dois números fora da diagonal principal, eles correspondem a utters que não corresponderam a sua respectiva resposta esperada. No número fora da diagonal na linha 0, conclui-se que é uma ação que ocorreu de algum utter que não foi esperada, já no segundo número fora da diagonal é uma utter esperada que não correspondeu a utter_ocorrida.</p>
+
+        </section>
+
+        <aside id="sidebar">
+          
+
+          
+            <p class="repo-owner"><a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate">rasa-ptbr-boilerplate</a> is maintained by <a href="https://github.com/lappis-unb">lappis-unb</a>.</p>
+          
+          
+              <h2><a href="/">Home</a></h2>
+                
+          
+              <h2><a href="/assets/css/style.css"></a></h2>
+                
+          
+              <h2><a href="/assets/css/print.css"></a></h2>
+                
+          
+              <h2><a href="/README-en.html">Rasa Boilerplate</a></h2>
+                
+          
+              <h2><a href="/pipeline-de-qualidade.html">Qualidade do bot</a></h2>
+                
+          
+              <h2><a href="/setup_analytics.html">Configuração da stack de analytics</a></h2>
+                
+          
+              <h2><a href="/setup_telegram.html">Setup do bot no Telegram</a></h2>
+                
+          
+              <h2><a href="/setup_user_elasticsearch.html">Configurando os usuários</a></h2>
+                
+          
+              <h2><a href="/tutorial-add-bot-rocketchat.html">Adicionar bot ao RocketChat</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-contribuir-com-documentacao.html">Contribuir com a Documentação</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-criar-uma-action.html">Criação de Actions</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-fazer-uma-utter.html">Criação de Utter</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-treinar-o-modelo.html">Configuração da Policy do chatbot</a></h2>
+                
+          
+              <h2><a href="/tutorial-criar-BI.html">Criação de visualizações no Kibana</a></h2>
+                
+          
+              <h2><a href="/tutorial-pipeline-de-bot.html">Configuração pipeline de bot</a></h2>
+                
+          
+              <h2><a href="/tutorial-primeira-conversa.html">Primeira Conversa</a></h2>
+                
+          
+              <h2><a href="/tutorial-testes-automatizados.html">Criação de Testes Automatizados</a></h2>
+                
+          
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+    <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "assets/1.0.1.min.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            customData: { language: "pt-br" },
+            selector: "#webchat",
+            initPayload: "/cumprimentar",
+            socketUrl: "http://localhost:5007",
+            socketPath: "/socket.io/",
+            title: "Tais",
+            inputTextFieldHint: "Digite sua mensagem...",
+            connectingText: "Conectando...",
+            hideWhenNotConnected: true,
+            fullScreenMode: false,
+            profileAvatar: "assets/images/bot.png",
+            openLauncherImage: 'assets/images/launcher_button.svg',
+            closeLauncherImage: 'assets/images/launcher_button.svg',
+            params: {
+                images: {
+                    dims: {
+                        width: 300,
+                        height: 200,
+                    }
+                },
+                storage: "session"
+            }
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+    })();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ed1eb7eddc566a676d27b57ede24c49e0046e5ed" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Criação de Actions | rasa-ptbr-boilerplate</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Criação de Actions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<meta property="og:description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<link rel="canonical" href="http://localhost:4000/tutorial-como-criar-uma-action.html" />
+<meta property="og:url" content="http://localhost:4000/tutorial-como-criar-uma-action.html" />
+<meta property="og:site_name" content="rasa-ptbr-boilerplate" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Criação de Actions" />
+<script type="application/ld+json">
+{"description":"Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search","url":"http://localhost:4000/tutorial-como-criar-uma-action.html","@type":"WebPage","headline":"Criação de Actions","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="http://localhost:4000/">
+          <h1>rasa-ptbr-boilerplate</h1>
+        </a>
+        <h2>Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search</h2>
+        
+          <a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate" class="button"><small>View project on</small> GitHub</a>
+        
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1 id="criação-de-actions">Criação de Actions</h1>
+
+<p>A cada mensagem do usuário, o bot deve ser capaz de realizar uma atividade. Enviar uma mensagem de texto, chamar uma API, exibir uma imagem, salvar algum dado recebido, entre outras várias possibilidades. Para poder executar essas ações, o Boilerplate utiliza as Actions.<br />
+Actions são arquivos py onde devem existir dois métodos fundamentais: <code class="language-plaintext highlighter-rouge">name</code> e <code class="language-plaintext highlighter-rouge">run</code>.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">name</code>:
+O método <code class="language-plaintext highlighter-rouge">name</code> recebe o parâmetro <code class="language-plaintext highlighter-rouge">self</code> e retorna uma string com o nome da action, que é a maneira como ela será chamada em outros arquivos do Boilerplate.</li>
+  <li><code class="language-plaintext highlighter-rouge">run</code>:
+O método <code class="language-plaintext highlighter-rouge">run</code> também recebe o parâmetro <code class="language-plaintext highlighter-rouge">self</code> e mais outros três: o <code class="language-plaintext highlighter-rouge">dispatcher</code>, que é responsável por retornar mensagens ao usuário, o arquivo <code class="language-plaintext highlighter-rouge">domain</code> e o <code class="language-plaintext highlighter-rouge">tracker</code>, que é responsável por acessar a memória do bot, e ele retorna uma lista de eventos e respostas. É através desse método que as ações da action são realizadas.</li>
+</ul>
+
+<h2 id="para-criar-uma-action-siga-os-passos">Para criar uma action, siga os passos:</h2>
+<p>1) Crie um arquivo .py para a sua action em <code class="language-plaintext highlighter-rouge">bot/actions</code>
+2) Importe as seguintes bibliotecas:</p>
+<pre><code class="language-Python">from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+</code></pre>
+<p>3) Implemente os métodos <code class="language-plaintext highlighter-rouge">name</code> e <code class="language-plaintext highlighter-rouge">run</code></p>
+
+<p>Exemplo de um método <code class="language-plaintext highlighter-rouge">name</code>:</p>
+<pre><code class="language-Python">    def name(self) -&gt; Text:
+        return "action_exemplo"
+</code></pre>
+<p>Exemplo de um método <code class="language-plaintext highlighter-rouge">run</code>:</p>
+<pre><code class="language-Python"> def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -&gt; List[Dict[Text, Any]]:
+
+        try:
+            dispatcher.utter_message("Eu sou uma action de exemplo")
+        except ValueError:
+            dispatcher.utter_message(ValueError)
+        return []
+</code></pre>
+<p>4) Adicione o nome da sua action (o mesmo do retorno do <code class="language-plaintext highlighter-rouge">name</code>) na parte de <code class="language-plaintext highlighter-rouge">actions</code> do arquivo <code class="language-plaintext highlighter-rouge">domain</code>, na pasta <code class="language-plaintext highlighter-rouge">bot</code></p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">actions</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">action_exemplo</span>
+</code></pre></div></div>
+<p>5) Por fim, crie um storie para a sua action no arquivo <code class="language-plaintext highlighter-rouge">stories</code> em <code class="language-plaintext highlighter-rouge">bot/data</code>, utilizando novamente o nome dado para a sua action</p>
+<pre><code class="language-MarkDown">## story_da_action
+* intent_da_action
+    - action_exemplo
+</code></pre>
+<h2 id="executando-e-testando-sua-action">Executando e testando sua action</h2>
+<p>As informações de como executar e treinar seu bot estão descritas no README do BoilerPlate. Entretanto, sempre que criar ou modificar uma action, lembre-se de parar o contêiner de actions, para que este possa subir novamente com as modificações feitas.</p>
+<h3 id="parando-um-contêiner">Parando um contêiner:</h3>
+<p>Use o seguinte comando para descobrir seu ID</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
+</code></pre></div></div>
+<p>E pare-o usando</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop &lt;ID do contêiner&gt;
+</code></pre></div></div>
+
+<h2 id="para-mais-informações-sobre-actions-confira">Para mais informações sobre actions, confira:</h2>
+<p>https://rasa.com/docs/rasa/actions<br />
+https://rasa.com/docs/action-server/running-action-server<br />
+https://www.youtube.com/watch?v=t_Ds4uT2z5g&amp;t=601s</p>
+
+        </section>
+
+        <aside id="sidebar">
+          
+
+          
+            <p class="repo-owner"><a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate">rasa-ptbr-boilerplate</a> is maintained by <a href="https://github.com/lappis-unb">lappis-unb</a>.</p>
+          
+          
+              <h2><a href="/">Home</a></h2>
+                
+          
+              <h2><a href="/assets/css/style.css"></a></h2>
+                
+          
+              <h2><a href="/assets/css/print.css"></a></h2>
+                
+          
+              <h2><a href="/README-en.html">Rasa Boilerplate</a></h2>
+                
+          
+              <h2><a href="/pipeline-de-qualidade.html">Qualidade do bot</a></h2>
+                
+          
+              <h2><a href="/setup_analytics.html">Configuração da stack de analytics</a></h2>
+                
+          
+              <h2><a href="/setup_telegram.html">Setup do bot no Telegram</a></h2>
+                
+          
+              <h2><a href="/setup_user_elasticsearch.html">Configurando os usuários</a></h2>
+                
+          
+              <h2><a href="/tutorial-add-bot-rocketchat.html">Adicionar bot ao RocketChat</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-contribuir-com-documentacao.html">Contribuir com a Documentação</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-criar-uma-action.html">Criação de Actions</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-fazer-uma-utter.html">Criação de Utter</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-treinar-o-modelo.html">Configuração da Policy do chatbot</a></h2>
+                
+          
+              <h2><a href="/tutorial-criar-BI.html">Criação de visualizações no Kibana</a></h2>
+                
+          
+              <h2><a href="/tutorial-pipeline-de-bot.html">Configuração pipeline de bot</a></h2>
+                
+          
+              <h2><a href="/tutorial-primeira-conversa.html">Primeira Conversa</a></h2>
+                
+          
+              <h2><a href="/tutorial-testes-automatizados.html">Criação de Testes Automatizados</a></h2>
+                
+          
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+    <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "assets/1.0.1.min.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            customData: { language: "pt-br" },
+            selector: "#webchat",
+            initPayload: "/cumprimentar",
+            socketUrl: "http://localhost:5007",
+            socketPath: "/socket.io/",
+            title: "Tais",
+            inputTextFieldHint: "Digite sua mensagem...",
+            connectingText: "Conectando...",
+            hideWhenNotConnected: true,
+            fullScreenMode: false,
+            profileAvatar: "assets/images/bot.png",
+            openLauncherImage: 'assets/images/launcher_button.svg',
+            closeLauncherImage: 'assets/images/launcher_button.svg',
+            params: {
+                images: {
+                    dims: {
+                        width: 300,
+                        height: 200,
+                    }
+                },
+                storage: "session"
+            }
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+    })();
+    </script>
+
+  </body>
+</html>

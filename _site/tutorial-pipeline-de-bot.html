@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ed1eb7eddc566a676d27b57ede24c49e0046e5ed" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Configuração pipeline de bot | rasa-ptbr-boilerplate</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Configuração pipeline de bot" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<meta property="og:description" content="Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search" />
+<link rel="canonical" href="http://localhost:4000/tutorial-pipeline-de-bot.html" />
+<meta property="og:url" content="http://localhost:4000/tutorial-pipeline-de-bot.html" />
+<meta property="og:site_name" content="rasa-ptbr-boilerplate" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Configuração pipeline de bot" />
+<script type="application/ld+json">
+{"description":"Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search","url":"http://localhost:4000/tutorial-pipeline-de-bot.html","@type":"WebPage","headline":"Configuração pipeline de bot","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="http://localhost:4000/">
+          <h1>rasa-ptbr-boilerplate</h1>
+        </a>
+        <h2>Um template para criar um FAQ chatbot usando Rasa, Rocket.chat, elastic search</h2>
+        
+          <a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate" class="button"><small>View project on</small> GitHub</a>
+        
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1 id="configuração-pipeline-de-bot">Configuração pipeline de bot</h1>
+
+<p>O objetivo deste tutorial é explicar os passos necessários para configuração de um <em>pipeline</em> de <em>deploy</em> contínuo de um <em>bot</em> <code class="language-plaintext highlighter-rouge">Rasa</code>, utilizando o <code class="language-plaintext highlighter-rouge">GitLabCI</code>.</p>
+
+<p>Os exemplos e estratégias utilizados neste tutorial são baseados no <em>pipeline</em> utilizado na TAIS. Para uma referência completa basta analisar o <a href="https://github.com/lappis-unb/tais/blob/master/.gitlab-ci.yml">arquivo de configuração</a> do <em>pipeline</em> da TAIS no GitLab.</p>
+
+<p>A configuração de <em>pipelines</em> utilizando o <code class="language-plaintext highlighter-rouge">GitLabCI</code> se dá a partir da utilização de um arquivo de configuração chamado <code class="language-plaintext highlighter-rouge">gitlab-ci.yml</code>. Neste tutorial aprenderemos  configurar um arquivo de utilização do <em>CI</em>.</p>
+
+<p>Cada um dos <em>jobs</em> criados no <em>CI</em> são executados dentro de <em>containers</em> na infraestrutura do <code class="language-plaintext highlighter-rouge">GitLab</code>.</p>
+
+<p>O primeiro passo para configuração é definir uma imagem base a ser utilizada nos <em>jobs</em> do <em>pipeline</em>. Pode-se definir uma imagem padrão que será utilizado em todos os <em>jobs</em> ou definir imagens diferentes para cada um dos <em>jobs</em> existentes.</p>
+
+<p>Para definir uma imagem global é necessário utilizar a configuração abaixo:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">image</span><span class="pi">:</span> <span class="s">python:3.8.9-slim-buster</span>
+
+<span class="na">test style</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">test style</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">pip -V</span>
+    <span class="pi">-</span> <span class="s">python -V</span>
+    <span class="pi">-</span> <span class="s">pip install -r dev.requirements.txt</span>
+    <span class="pi">-</span> <span class="s">flake8 --exclude venv</span>
+
+<span class="na">run dataset validator</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">validate format</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">lappis/coach:latest</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">cd coach/</span>
+    <span class="pi">-</span> <span class="s">make run-validator</span>
+</code></pre></div></div>
+
+<p>No exemplo acima, foi definida uma imagem base chamada <code class="language-plaintext highlighter-rouge">python:3.6-slim</code>. Em seguida foram definidos dois <em>jobs</em> de teste, o primeiro deles utilizará a imagem padrão do python que foi definida na primeira linha, já que este não possui nenhuma <em>tag</em> de definição de imagem. O segundo <em>job</em> utilizará a imagem <code class="language-plaintext highlighter-rouge">lappis/coach:latest</code>, já que possui uma <em>tag</em> de definição de imagem que sobreescreve a imagem base.</p>
+
+<h2 id="definição-dos-stages">Definição dos stages</h2>
+
+<p>Os <em>jobs</em> serão criados a partir da organização em <em>stages</em>, sendo que estes serão executados de acordo com a ordem de prioridade definida. Essa característica define a dependência dos <em>jobs</em>, uma vez que caso o <em>job</em> de um estágio anterior falhe todos os <em>jobs</em> subsequentes de todos os próximos <em>jobs</em> serão cancelados e não serão executados.</p>
+
+<p>Caso mais de um <em>job</em> seja definido com o mesmo estágio, a execução destes <em>jobs</em> será paralelizada pelo próprio <code class="language-plaintext highlighter-rouge">GitLab</code> e eles serão executados simultaneamente.</p>
+
+<p>Uma estratégia que pode ser utilizada é separar os <em>jobs</em> do <em>pipeline</em> em três fases principais: <em>test</em>, <em>build</em> e <em>deploy</em>.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">stages</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">test</span>
+  <span class="pi">-</span> <span class="s">build</span>
+  <span class="pi">-</span> <span class="s">deploy</span>
+</code></pre></div></div>
+
+<p>No <em>job</em> <code class="language-plaintext highlighter-rouge">test style</code> exemplificado acima, o <em>stage</em> é definido como <code class="language-plaintext highlighter-rouge">test</code>. Então ele será um dos <em>jobs</em> rodados no começo da execução do <em>pipeline</em>.</p>
+
+<h2 id="estratégia-de-build">Estratégia de Build</h2>
+
+<p>Como este tutorial é baseado na utilização de serviços <code class="language-plaintext highlighter-rouge">docker</code>, a estratégia de build é focada na construção e publicação da imagem utilizada pelos serviços.</p>
+
+<p>Está exemplificado abaixo um <em>job</em> de build para imagens <code class="language-plaintext highlighter-rouge">docker</code> no CI do <code class="language-plaintext highlighter-rouge">GitLab</code>.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">build bot</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">build</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">docker</span>
+  <span class="na">tags</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">docker</span>
+  <span class="na">services</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">docker:dind</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD</span>
+    <span class="pi">-</span> <span class="s">docker build -f docker/bot/bot.Dockerfile -t lappis/bot:latest .</span>
+    <span class="pi">-</span> <span class="s">docker push lappis/bot:latest</span>
+  <span class="na">only</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">master</span>
+  <span class="na">environment</span><span class="pi">:</span> <span class="s">homolog</span>
+</code></pre></div></div>
+
+<p>A imagem utilizada deve ser a imagem <code class="language-plaintext highlighter-rouge">docker</code> e deve ser adicionada uma <em>label</em> que defina a utilização do serviço <code class="language-plaintext highlighter-rouge">docker:dind</code>, um acrônimo para “Docker in Docker”. O que indica ao CI que serão utilizados comandos <code class="language-plaintext highlighter-rouge">Docker</code> dentro do <em>container</em> onde o <em>job</em> está sendo executado.</p>
+
+<p>A <em>label</em> <code class="language-plaintext highlighter-rouge">script</code> define quais comandos serão executados durante esse <em>job</em>. Neste caso, são 3 comandos/etapas para a criação e publicação da imagem.</p>
+
+<p>1 - Primeiro é feito o <em>login</em> no <code class="language-plaintext highlighter-rouge">Dockerhub</code> utilizando os dados de acesso configurados em variáveis secretas no próprio repositório. Para entender como utilizar estas variáveis no GitLab basta seguir a <a href="https://docs.gitlab.com/ee/ci/variables/">documentação oficial</a>;</p>
+
+<p>2 - Logo após, a imagem é construída a partir do <code class="language-plaintext highlighter-rouge">Dockerfile</code> contido no próprio repositório do projeto, com o nome definido;</p>
+
+<p>3 - Por último, a imagem é publicada e enviada para o <em>registry</em> do <code class="language-plaintext highlighter-rouge">Dockerhub</code>, e estará pronta para ser utilizada no estágio de <em>deploy</em>;</p>
+
+<h2 id="estratégias-de-deploy">Estratégias de Deploy</h2>
+
+<p>Serão ensinadas duas estratégias principais, estas estratégias são baseadas no uso de <code class="language-plaintext highlighter-rouge">docker</code> e arquiteturas de microserviços.
+Existem diversas estratégias que podem ser adotadas para fazer o <em>deploy</em> de um serviço <code class="language-plaintext highlighter-rouge">docker</code>, aqui serão ensinadas duas delas: A primeira utilizando o protocolo <code class="language-plaintext highlighter-rouge">ssh</code> e a segunda utilizando uma aplicação chamada <a href="https://github.com/containrrr/watchtower">Watchtower</a>.</p>
+
+<h3 id="deploy-via-ssh">Deploy via ssh</h3>
+
+<p>Para esta estratégia é utilizado um <em>job</em> que utiliza o protocolo <code class="language-plaintext highlighter-rouge">ssh</code> para criar uma sessão dentro da máquina onde será feito o <em>deploy</em> do serviço e atualizar o serviço <code class="language-plaintext highlighter-rouge">docker</code>.</p>
+
+<p>O <em>job</em> definido a seguir executa um <em>script</em> <code class="language-plaintext highlighter-rouge">shell</code> chamado <code class="language-plaintext highlighter-rouge">deploy_bot</code> que faz autenticação na máquina através da senha do usuário <code class="language-plaintext highlighter-rouge">root</code> e o IP da máquina, estas informações estão configuradas utilizando as variáveis secretas do <code class="language-plaintext highlighter-rouge">GitLabCI</code>.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">deploy bot to homolog</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">deploy</span>
+  <span class="s">&lt;&lt;</span><span class="pi">:</span> <span class="nv">*set_ssh_config</span>
+  <span class="na">environment</span><span class="pi">:</span> <span class="s">homolog</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">./scripts/deploy_bot.sh $TAIS_SERVER_PASSWORD $TAIS_SERVER_IP</span>
+  <span class="na">only</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">master</span>
+</code></pre></div></div>
+
+<p>A linha <code class="language-plaintext highlighter-rouge">&lt;&lt;: *set_ssh_config</code> é uma referência à um conjunto de comandos que está definido no mesmo arquivo de configuração, sendo ele:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">.set_ssh_config</span><span class="pi">:</span> <span class="nl">&amp;set_ssh_config</span>
+  <span class="na">before_script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">apt-get update -y</span>
+    <span class="pi">-</span> <span class="s">apt-get install sshpass -y</span>
+</code></pre></div></div>
+
+<p>O que essa linha faz é executar os comandos acima no começo do <em>job</em>, instalando a dependência de <code class="language-plaintext highlighter-rouge">sshpass</code> utilizada no script <code class="language-plaintext highlighter-rouge">deploy_bot</code>. Como mostrado abaixo, esse <em>script</em> recria o serviço de <em>bot</em>, baixando a nova imagem e recriando o <em>container</em> para este serviço.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+sshpass  <span class="nt">-p</span> <span class="nv">$1</span> ssh <span class="nt">-o</span> <span class="nv">StrictHostKeyChecking</span><span class="o">=</span>no root@<span class="nv">$2</span> <span class="o">&lt;&lt;-</span><span class="sh">'</span><span class="no">ENDSSH</span><span class="sh">'
+    cd rouana/
+    docker-compose stop bot
+		docker-compose rm -f bot
+		docker-compose pull bot
+    docker-compose up -d bot
+</span><span class="no">ENDSSH
+</span></code></pre></div></div>
+
+<h3 id="watchtower">Watchtower</h3>
+
+<p>O <a href="https://github.com/containrrr/watchtower">Watchtower</a> é um serviço que monitora os <em>containers</em> criados dentro do mesmo contexto, e sempre que a imagem sendo utilizada pelo <em>container</em> é atualizada este serviço faz uma atualização no serviço, baixando a nova imagem e recriando o <em>container</em> do serviço com as mesma configurações, porém com a imagem nova.</p>
+
+<p>Para utilizar esta estratégia basta adicionar um serviço utilizando a imagem do <code class="language-plaintext highlighter-rouge">watchtower</code> ao mesmo arquivo de configuração dos serviços, ou garantir manualmente que ele esteja na mesma rede dos serviços que se quer monitorar.
+Além disso, é preciso adicionar uma label <code class="language-plaintext highlighter-rouge">com.centurylinklabs.watchtower.enable</code> indicando quais serviços devem ser ou não monitorados e atualizados de acordo com o valor que pode ser <code class="language-plaintext highlighter-rouge">false</code> ou  <code class="language-plaintext highlighter-rouge">true</code>.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+
+<span class="na">services</span><span class="pi">:</span>
+
+  <span class="na">kibana</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">docker.elastic.co/kibana/kibana:6.4.2</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">5601:5601</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">SERVER_PORT=5601</span>
+      <span class="pi">-</span> <span class="s">ELASTICSEARCH_URL=http://elasticsearch:9200</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">elasticsearch</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">com.centurylinklabs.watchtower.enable=false"</span>
+
+  <span class="na">watchtower</span><span class="pi">:</span>
+     <span class="na">image</span><span class="pi">:</span> <span class="s">containrrr/watchtower</span>
+     <span class="na">volumes</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="s">/var/run/docker.sock:/var/run/docker.sock</span>
+     <span class="na">command</span><span class="pi">:</span> <span class="s">--interval </span><span class="m">30</span>
+     <span class="na">labels</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="s2">"</span><span class="s">com.centurylinklabs.watchtower.enable=false"</span>
+</code></pre></div></div>
+
+<p>O serviço <code class="language-plaintext highlighter-rouge">Watchtower</code> fica consultando o repositório da imagem a ser monitorado a cada X segundos, para saber ser houve alguma atulização ou não. O período de tempo utilizado nesta estratégi pode ser definido com o parâmetro <code class="language-plaintext highlighter-rouge">--interval</code>, como exemplificado acima onde é definido com o valor de 30 segundos.</p>
+
+<p>Esta estratégia possui a vantagem de que a estratégia de <em>deploy</em> está totalmente contida dentro da própria infraestrutura onde estão rodando os serviços, desta forma não há dependência de um outro serviço e não é necessários ter credenciais de acesso configuradas em outros ambientes como na estratégia anterior. Além disso, caso o objetivo seja fazer somente <em>deploy</em> dos serviços e não haja um <em>pipeline</em> mais elaborado, utilizar esta abordagem traz uma solução simples para o problema. Porém, a utilização desta estratégia é menos flexível em relação à generização, uma vez que funciona apenas para estratégias de <em>deploy</em> baseadas em <code class="language-plaintext highlighter-rouge">docker</code>.</p>
+
+<h2 id="testando-jobs">Testando Jobs</h2>
+
+<p>Configurar corretamente um <em>pipeline</em> muitas vezes pode ser um processo um tanto quanto demorado e custoso, uma vez que o teste das configurações deve ser realizado diretamente no CI executando <em>builds</em> reais.</p>
+
+<p>Para testar localmente alguns <em>jobs</em> e facilitar o processo de <em>debug</em> e configuração do <em>pipeline</em> é possível utilizar uma instância local do <a href="https://docs.gitlab.com/runner/">GitLab Runner</a>.</p>
+
+<p>Utilizando como exemplo o <em>job</em> <code class="language-plaintext highlighter-rouge">test style</code>:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">test style</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">test style</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">pip -V</span>
+    <span class="pi">-</span> <span class="s">python -V</span>
+    <span class="pi">-</span> <span class="s">pip install -r dev.requirements.txt</span>
+    <span class="pi">-</span> <span class="s">flake8 --exclude venv</span>
+</code></pre></div></div>
+
+<p>Para executar este <em>job</em> localmente bastaria <a href="https://docs.gitlab.com/runner/install/">instalar o runner do GitLab</a>,
+e em seguida executar o seguinte comando:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gitlab-runner <span class="nb">exec </span>docker <span class="s2">"test style"</span>
+</code></pre></div></div>
+
+        </section>
+
+        <aside id="sidebar">
+          
+
+          
+            <p class="repo-owner"><a href="https://github.com/lappis-unb/rasa-ptbr-boilerplate">rasa-ptbr-boilerplate</a> is maintained by <a href="https://github.com/lappis-unb">lappis-unb</a>.</p>
+          
+          
+              <h2><a href="/">Home</a></h2>
+                
+          
+              <h2><a href="/assets/css/style.css"></a></h2>
+                
+          
+              <h2><a href="/assets/css/print.css"></a></h2>
+                
+          
+              <h2><a href="/README-en.html">Rasa Boilerplate</a></h2>
+                
+          
+              <h2><a href="/pipeline-de-qualidade.html">Qualidade do bot</a></h2>
+                
+          
+              <h2><a href="/setup_analytics.html">Configuração da stack de analytics</a></h2>
+                
+          
+              <h2><a href="/setup_telegram.html">Setup do bot no Telegram</a></h2>
+                
+          
+              <h2><a href="/setup_user_elasticsearch.html">Configurando os usuários</a></h2>
+                
+          
+              <h2><a href="/tutorial-add-bot-rocketchat.html">Adicionar bot ao RocketChat</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-contribuir-com-documentacao.html">Contribuir com a Documentação</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-criar-uma-action.html">Criação de Actions</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-fazer-uma-utter.html">Criação de Utter</a></h2>
+                
+          
+              <h2><a href="/tutorial-como-treinar-o-modelo.html">Configuração da Policy do chatbot</a></h2>
+                
+          
+              <h2><a href="/tutorial-criar-BI.html">Criação de visualizações no Kibana</a></h2>
+                
+          
+              <h2><a href="/tutorial-pipeline-de-bot.html">Configuração pipeline de bot</a></h2>
+                
+          
+              <h2><a href="/tutorial-primeira-conversa.html">Primeira Conversa</a></h2>
+                
+          
+              <h2><a href="/tutorial-testes-automatizados.html">Criação de Testes Automatizados</a></h2>
+                
+          
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+    <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "assets/1.0.1.min.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            customData: { language: "pt-br" },
+            selector: "#webchat",
+            initPayload: "/cumprimentar",
+            socketUrl: "http://localhost:5007",
+            socketPath: "/socket.io/",
+            title: "Tais",
+            inputTextFieldHint: "Digite sua mensagem...",
+            connectingText: "Conectando...",
+            hideWhenNotConnected: true,
+            fullScreenMode: false,
+            profileAvatar: "assets/images/bot.png",
+            openLauncherImage: 'assets/images/launcher_button.svg',
+            closeLauncherImage: 'assets/images/launcher_button.svg',
+            params: {
+                images: {
+                    dims: {
+                        width: 300,
+                        height: 200,
+                    }
+                },
+                storage: "session"
+            }
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+    })();
+    </script>
+
+  </body>
+</html>
