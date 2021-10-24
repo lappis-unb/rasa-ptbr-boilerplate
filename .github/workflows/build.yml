@@ -44,11 +44,6 @@ jobs:
         echo "Changed epochs to 10 to check faster"
         make train
         echo "Model is saved"
-    - name: Test Rasa bot
-      run: |
-        cd bot/
-        make test
-        echo "Results is saved"
     - name: Test actions
       run: |
         cd bot/
@@ -71,3 +66,8 @@ jobs:
     - name: Test bot SDK response
       run: |
         curl -XPOST http://localhost:5005/webhooks/rest/webhook -H 'Content-Type: application/json' -d '{"sender":"default","message":"custom action"}'
+    - name: Test Rasa bot
+      run: |
+        cd bot/
+        make test
+        echo "Results is saved"
