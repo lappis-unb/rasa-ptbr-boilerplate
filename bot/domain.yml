@@ -118,6 +118,7 @@ responses:
   utter_cumprimentar:
   - text: |
       Oi, eu sou um bot, um assistente virtual!
+      OI Teste!
       Uhuu! Manda aí um assunto que te interessa :)
       Para aprender como você pode interagir comigo basta escrever meajuda.
   utter_despedir:

@@ -4,6 +4,7 @@ language: pt-br
 # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 pipeline:
   - name: WhitespaceTokenizer
+#  - name: "components.sentiment_analyzer.SentimentAnalyzer"
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -24,6 +25,7 @@ pipeline:
   - name: FallbackClassifier
     threshold: 0.1
     ambiguity_threshold: 0.1
+
 
 # https://rasa.com/docs/rasa/core/policies/
 policies:
