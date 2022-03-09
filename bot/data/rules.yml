@@ -1,28 +1,27 @@
-version: "2.0"
+version: "3.0"
 rules:
-  # response selectors
-- rule: explica
-  steps:
-  - intent: explica
-  - action: utter_explica
+  # Response selectors
+  - rule: explica
+    steps:
+      - intent: explica
+      - action: utter_explica
   # forms
-- rule: Pedir para reformular a mensagem caso NLU não entenda
-  steps:
-  - intent: nlu_fallback
-  - action: utter_nao_nlu
-- rule: Ativa formulário
-  steps:
-  - intent: exemplo_forms
-  - action: utter_exemplo_forms
-  - action: exemplo_forms
-  - active_loop: exemplo_forms
-- rule: Envia formulário
-  condition:
-  - active_loop: exemplo_forms
-  steps:
-  - action: exemplo_forms
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: utter_submit_exemplo_forms
-  - action: utter_slots_exemplo_forms
+  - rule: Pedir para reformular a mensagem caso NLU não entenda
+    steps:
+      - intent: nlu_fallback
+      - action: utter_nao_nlu
+  # Forms
+  - rule: Ativa formulário
+    steps:
+      - intent: exemplo_forms
+      - action: utter_exemplo_forms
+      - action: exemplo_forms
+      - active_loop: exemplo_forms
+  - rule: Envia formulário
+    condition:
+    - active_loop: exemplo_forms
+    steps:
+      - action: exemplo_forms
+      - active_loop: null
+      - action: utter_submit_exemplo_forms
+      - action: utter_slots_exemplo_forms

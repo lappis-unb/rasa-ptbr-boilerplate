@@ -1,8 +1,8 @@
 current_dir := $(shell pwd)
 user := $(shell whoami)
 
-ENDPOINTS = endpoints/docker-endpoints.yml
-CREDENTIALS = credentials/credentials.yml
+ENDPOINTS = endpoints.yml
+CREDENTIALS = credentials.yml
 
 # CLEAR PROJECT
 clean:

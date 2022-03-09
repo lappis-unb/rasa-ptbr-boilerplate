@@ -5,9 +5,9 @@
 PIP_FLAGS = --use-deprecated=legacy-resolver
 LOG_LEVEL = -v
 RASA_ENDPOINTS = --endpoints 
-ENDPOINTS = endpoints/endpoints.yml
+ENDPOINTS = endpoints.yml
 RASA_CREDENTIALS = --credentials
-CREDENTIALS = credentials/credentials.yml
+CREDENTIALS = credentials.yml
 
 # CLEAN PROJECT
 clean:

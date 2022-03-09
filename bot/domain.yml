@@ -1,106 +1,92 @@
-version: '2.0'
-config:
-  store_entities_as_slots: true
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+version: '3.0'
+
 intents:
-- cumprimentar:
-    use_entities: true
-- relacionamento:
-    use_entities: true
-- me_ajuda:
-    use_entities: true
-- despedir:
-    use_entities: true
-- out_of_scope:
-    use_entities: true
-- tudo_bem:
-    use_entities: true
-- elogios:
-    use_entities: true
-- religiao:
-    use_entities: true
-- time:
-    use_entities: true
-- genero:
-    use_entities: true
-- piada:
-    use_entities: true
-- licenca:
-    use_entities: true
-- onde_voce_mora:
-    use_entities: true
-- musica:
-    use_entities: true
-- comida:
-    use_entities: true
-- cor:
-    use_entities: true
-- signo:
-    use_entities: true
-- triste:
-    use_entities: true
-- historia:
-    use_entities: true
-- afirmar:
-    use_entities: true
-- negar:
-    use_entities: true
-- cancelar:
-    use_entities: true
-- informar:
-    use_entities: true
-- menu:
-    use_entities: true
-- exemplo_acao:
-    use_entities: true
-- exemplo_forms:
-    use_entities: true
+  - cumprimentar
+  - relacionamento
+  - me_ajuda
+  - despedir
+  - out_of_scope
+  - tudo_bem
+  - elogios
+  - religiao
+  - time
+  - genero
+  - piada
+  - licenca
+  - onde_voce_mora
+  - musica
+  - comida
+  - cor
+  - signo
+  - triste
+  - historia
+  - afirmar
+  - negar
+  - cancelar
+  - informar
+  - menu
+  - exemplo_acao
+  - exemplo_forms
   # response selectors
-- explica:
-    use_entities: true
+  - explica
+
 entities:
-- menu
-- meajuda
-- religiao
-- time
-- genero
-- piada
-- licenca
-- musica
-- comida
-- cor
-- signo
-- triste
-- historia
-- vive
-- nome
-- idade
-- relationship
-- intent
-- entity 
-- slot
-- response_selectors
-- storie
-- acao
-- forms
+  - menu
+  - meajuda
+  - religiao
+  - time
+  - genero
+  - piada
+  - licenca
+  - musica
+  - comida
+  - cor
+  - signo
+  - triste
+  - historia
+  - vive
+  - nome
+  - idade
+  - relationship
+  - intent
+  - entity 
+  - slot
+  - response_selectors
+  - storie
+  - acao
+  - forms
+
 slots:
   nome:
     type: text
-    initial_value: null
-    auto_fill: false
     influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: nome
+      intent: informar
   idade:
     type: text
-    initial_value: null
-    auto_fill: false
     influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: idade
+      intent: informar
   requested_slot:
     type: any
-    initial_value: null
-    auto_fill: true
     influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: cuisine
+
+actions:
+  - action_exemplo
+
+forms:
+  exemplo_forms:
+    required_slots:
+      - idade
+      - nome
+
 responses:
   utter_fallback:
   - text: |
@@ -370,17 +356,7 @@ responses:
   - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
   utter_nao_core:
   - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
-actions:
-- action_exemplo
-forms:
-  exemplo_forms:
-    required_slots:
-      idade:
-      - entity: idade
-        intent: informar
-        type: from_entity
-      nome:
-      - entity: nome
-        intent: informar
-        type: from_entity
-e2e_actions: []
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
