@@ -33,16 +33,16 @@ shell:
 		-m models/ \
 		$(LOG_LEVEL) \
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
-		--port 5006
+		--port 5005
 
 webchat:
 	rasa run \
 		-m models/ \
 		$(LOG_LEVEL) \
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
-		$(RASA_CREDENTIALS)	$(CREDENTIALS) \
+		$(RASA_CREDENTIALS) $(CREDENTIALS) \
 		--cors '*' \
-		--port 5007 
+		--port 5005 
 
 telegram:
 	rasa run \
@@ -50,7 +50,7 @@ telegram:
 		$(LOG_LEVEL) \
 		$(RASA_ENDPOINTS) $(ENDPOINTS) \
 		$(RASA_CREDENTIALS)	credentials/telegram-credentials.yml \
-		--port 5008 \
+		--port 5005 \
 
 # ACTIONS
 actions:

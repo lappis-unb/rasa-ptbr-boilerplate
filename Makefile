@@ -6,19 +6,12 @@ CREDENTIALS = credentials.yml
 
 # CLEAR PROJECT
 clean:
-	docker-compose down
+	make down
 	cd bot/ && make clean
 
-stop:
-	docker-compose stop
+down:
+	docker-compose down
 
-
-# DOCKERHUB
-dchub-tag:
-	docker tag arthurtemporim/boilerplate arthurtemporim/boilerplate:2.8.12
-
-dchub-push:
-	docker push arthurtemporim/boilerplate
 
 # RUN
 init:
@@ -26,16 +19,11 @@ init:
 	make train
 	make shell
 
+logs:
+	docker-compose logs \
+		-f
+
 build:
-	make build-bot
-
-build-requirements:
-	docker build . \
-		--no-cache \
-		-f docker/requirements.Dockerfile \
-		-t arthurtemporim/boilerplate
-
-build-bot:
 	docker-compose build \
 		--no-cache bot
 
@@ -65,14 +53,13 @@ webchat:
 	echo "Executando Bot com Webchat."
 	docker-compose run \
 		-d \
-		--rm \
 		--service-ports \
 		bot \
 		make webchat ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
 	docker-compose up \
 		-d \
 		webchat
-	echo "Acesse o WEBCHAT em: http://localhost:5010"
+	echo "Acesse o WEBCHAT em: http://localhost:5000"
 
 telegram:
 	docker-compose run \

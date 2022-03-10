@@ -1,5 +1,7 @@
 # https://rasa.com/docs/rasa/nlu/components/
-language: pt-br
+recipe: default.v1
+
+language: br
 
 # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 pipeline:

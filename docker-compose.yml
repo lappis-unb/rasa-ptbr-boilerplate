@@ -7,28 +7,30 @@ services:
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
-    restart: unless-stopped
+    container_name: bot
     volumes:
       - ./bot/:/bot/
     ports:
       - 5005:5005
-      - 5006:5006
-      - 5007:5007
-      - 5008:5008
-      - 5009:5009
     depends_on:
       - actions
+    networks:
+      - bot
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
   actions:
-    image: arthurtemporim/boilerplate:latest
-    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./docker/actions.Dockerfile
+    container_name: actions
     ports:
       - 5055:5055
     volumes:
       - ./bot:/bot
-    command: sh -c "make actions"
+    command: sh -c "sleep infinity"
+    networks:
+      - bot
 
   # ================================= RASA X ==================================
   # Rasa X container
@@ -36,7 +38,6 @@ services:
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
-    restart: unless-stopped
     volumes:
       - ./bot/:/bot/
     ports:
@@ -45,15 +46,19 @@ services:
       - env/rasax.env
     depends_on:
       - actions
+    networks:
+      - bot
 
   # ============================ Webchat Page  =================================
   # A container to run webchat html page
   webchat:
     image: nginx
     ports:
-      - 5010:80
+      - 5000:80
     volumes:
       - ./modules/webchat:/usr/share/nginx/html
+    networks:
+      - bot
 
   # ============================ Telegram Bot =================================
   # Specific Rasa bot integrated with Telegram.
@@ -66,5 +71,9 @@ services:
       env_file:
         - env/bot-telegram.env
       ports:
-        - 5001:5001
+        - 5005:5005
       command: sh -c "make telegram"
+
+networks:
+  bot:
+    driver: bridge

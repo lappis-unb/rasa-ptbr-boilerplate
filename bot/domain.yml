@@ -81,11 +81,11 @@ slots:
 actions:
   - action_exemplo
 
-forms:
-  exemplo_forms:
-    required_slots:
-      - idade
-      - nome
+#forms:
+#  exemplo_forms:
+#    required_slots:
+#      - idade
+#      - nome
 
 responses:
   utter_fallback:
