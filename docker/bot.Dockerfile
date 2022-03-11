@@ -1,4 +1,4 @@
-FROM rasa/rasa:3.0.7
+FROM rasa/rasa:3.0.8
 
 WORKDIR /bot
 COPY ./bot /bot

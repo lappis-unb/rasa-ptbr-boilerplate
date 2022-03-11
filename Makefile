@@ -78,7 +78,8 @@ x:
 		make x
 train:
 	docker-compose run \
-		--rm bot \
+		--rm  \
+		bot \
 		make train
 
 validate:
