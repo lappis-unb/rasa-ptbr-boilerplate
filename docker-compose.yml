@@ -28,7 +28,7 @@ services:
       - 5055:5055
     volumes:
       - ./bot:/bot
-    command: sh -c "python -m rasa_sdk"
+    command: sh -c "python -m rasa_sdk --actions actions"
     networks:
       - bot
 

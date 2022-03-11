@@ -43,7 +43,7 @@ git clone https://github.com/lappis-unb/rasa-ptbr-boilerplate.git
 Para ter seu chatbot Rasa funcionando, certifique-se de estar dentro da pasta do projeto e então execute no terminal o seguinte comando:
 
 ```sh
-make first-run
+make init
 ```
 
 Esse comando irá construir a infraestrutura necessária (subir containers com as dependências, treinar o chatbot e iniciar o chat no modo shell) para possibilitar a interação com o chatbot.
