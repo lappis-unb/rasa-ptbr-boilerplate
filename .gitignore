@@ -20,6 +20,7 @@ modules/notebooks/intents/models/
 modules/notebooks/intents/results/
 modules/notebooks/stories/models/
 modules/notebooks/stories/results/
+node_modules/
 bot/.ipython/
 bot/.keras/
 bot/.local/
