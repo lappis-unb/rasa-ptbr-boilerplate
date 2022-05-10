@@ -7,28 +7,30 @@ services:
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
-    restart: unless-stopped
+    container_name: bot
     volumes:
       - ./bot/:/bot/
     ports:
       - 5005:5005
-      - 5006:5006
-      - 5007:5007
-      - 5008:5008
-      - 5009:5009
     depends_on:
       - actions
+    networks:
+      - bot
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
   actions:
-    image: arthurtemporim/boilerplate:latest
-    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./docker/actions.Dockerfile
+    container_name: actions
     ports:
       - 5055:5055
     volumes:
       - ./bot:/bot
-    command: sh -c "make actions"
+    command: sh -c "python -m rasa_sdk --actions actions"
+    networks:
+      - bot
 
   # ================================= RASA X ==================================
   # Rasa X container
@@ -36,7 +38,6 @@ services:
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
-    restart: unless-stopped
     volumes:
       - ./bot/:/bot/
     ports:
@@ -45,15 +46,19 @@ services:
       - env/rasax.env
     depends_on:
       - actions
+    networks:
+      - bot
 
   # ============================ Webchat Page  =================================
   # A container to run webchat html page
   webchat:
     image: nginx
     ports:
-      - 5010:80
+      - 5000:80
     volumes:
       - ./modules/webchat:/usr/share/nginx/html
+    networks:
+      - bot
 
   # ============================ Telegram Bot =================================
   # Specific Rasa bot integrated with Telegram.
@@ -66,136 +71,9 @@ services:
       env_file:
         - env/bot-telegram.env
       ports:
-        - 5001:5001
+        - 5005:5005
       command: sh -c "make telegram"
 
-  # =============================== Rocket.Chat =================================
-  # Rocket.Chat instance and database
-  rogketchat:
-    image: rocketchat/rocket.chat:3.18.2
-    command: >
-      bash -c
-        "for i in `seq 1 30`; do
-          node main.js &&
-          s=$$? && break || s=$$?;
-          echo \"Tried $$i times. Waiting 5 secs...\";
-          sleep 5;
-        done; (exit $$s)"
-    restart: unless-stopped
-    volumes:
-      - ./uploads:/app/uploads
-    environment:
-      - PORT=3000
-      - ROOT_URL=http://localhost:3000
-      - MONGO_URL=mongodb://mongo:27017/rocketchat
-      - MONGO_OPLOG_URL=mongodb://mongo:27017/local
-      - ADMIN_USERNAME=admin
-      - ADMIN_PASS=admin
-      - ADMIN_EMAIL=mail@mail.com
-    depends_on:
-      - mongo
-    ports:
-      - 3000:3000
-
-  mongo:
-    image: mongo:4.0
-    restart: unless-stopped
-    volumes:
-     - ./data/db:/data/db
-    command: mongod --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1
-
-  # this container's job is just run the command to initialize the replica set.
-  # it will run the command and remove himself (it will not stay running)
-  mongo-init-replica:
-    image: mongo:4.0
-    command: >
-      bash -c
-        "for i in `seq 1 30`; do
-          mongo mongo/rocketchat --eval \"
-            rs.initiate({
-              _id: 'rs0',
-              members: [ { _id: 0, host: 'localhost:27017' } ]})\" &&
-          s=$$? && break || s=$$?;
-          echo \"Tried $$i times. Waiting 5 secs...\";
-          sleep 5;
-        done; (exit $$s)"
-    depends_on:
-      - mongo
-
-  # =============================== Analytics =================================
-  # Analitics ElasticSearch Stack.
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.1
-    restart: unless-stopped
-    ports:
-      - 9200:9200
-      - 9300:9300
-    environment:
-      - discovery.type=single-node
-    volumes:
-      - ./modules/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-      - esdata:/usr/share/elasticsearch/data
-
-  # Visualization layer of Analitics Stack.
-  kibana:
-    build:
-      context: .
-      dockerfile: ./docker/kibana.Dockerfile
-    restart: unless-stopped
-    ports:
-      - 5601:5601
-    env_file:
-      - env/kibana.env
-    depends_on:
-      - elasticsearch
-    volumes:
-      - ./modules/analytics:/usr/share/kibana/analytics
-
-  # =============================== Broker ====================================
-  # Custom broker to store Rasa tracker data.
-  rabbitmq:
-    image: rabbitmq:3-management
-    restart: unless-stopped
-    volumes:
-      - ./db/rabbitmq:/var/lib/rabbitmq/mnesia
-    ports:
-      - 15672:15672
-    env_file:
-      - env/rabbitmq.env
-
-  # Custom broker consumer responsible to store data into ElasticSearch.
-  rabbitmq-consumer:
-    build:
-      context: .
-      dockerfile: ./docker/consumer.Dockerfile
-    restart: unless-stopped
-    volumes:
-      - ./modules/rabbitmq/consumer/:/opt/scripts/
-    depends_on:
-      - rabbitmq
-    env_file:
-      - env/rabbitmq-consumer.env
-    command: python3 /opt/scripts/consume_bot_messages.py
-
-  # =============================== Notebooks =================================
-  # Rasa lab to enhance hyperparameters.
-  notebooks:
-    build:
-      context: .
-      dockerfile: ./docker/notebooks.Dockerfile
-    env_file:
-      - env/notebooks.env
-    volumes:
-      - ./modules/notebooks:/work/notebooks
-      - ./bot/:/bot/
-    ports:
-      - 8888:8888
-
-volumes:
-  notebook_models:
-  mongo_data:
-  rabbit_data:
-  esbackup:
-  esdata:
-    driver: local
-  rocket_uploads:
+networks:
+  bot:
+    driver: bridge

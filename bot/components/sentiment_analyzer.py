@@ -15,7 +15,7 @@ SENTIMENT_MODEL_FILE_NAME = "sentiment_classifier.pkl"
 
 
 class SentimentAnalyzer(Component):
-    print('Initialised Sentiment Analyzer')
+    print("Initialised Sentiment Analyzer")
 
     def __init__(self, component_config=None):
         super(SentimentAnalyzer, self).__init__(component_config)
@@ -23,15 +23,15 @@ class SentimentAnalyzer(Component):
         self.class_words = {}
         self.stemmer = stem.RSLPStemmer()
 
-
     def train(self, training_data, cfg, **kwargs):
         """Load the sentiment polarity labels from the text
-           file, retrieve training tokens and after formatting
-           data train the classifier."""
+        file, retrieve training tokens and after formatting
+        data train the classifier."""
 
         training_data = {}
         import yaml
-        with open('/bot/components/labels.yml') as f:
+
+        with open("/bot/components/labels.yml") as f:
             training_data = yaml.safe_load(f)
 
         # capture unique stemmed words in the training corpus
@@ -41,12 +41,11 @@ class SentimentAnalyzer(Component):
             # prepare a list of words within each class
             self.class_words[c] = []
 
-
         # loop through each sentence in our training data
         for label, sentences in training_data.items():
             # tokenize each sentence into words
             for sentence in sentences:
-                for word in nltk.word_tokenize(sentence, language='portuguese'):
+                for word in nltk.word_tokenize(sentence, language="portuguese"):
                     # ignore a some things
                     if word not in ["?"]:
                         # stem and lowercase each word
@@ -60,17 +59,17 @@ class SentimentAnalyzer(Component):
                         # add the word to our words in class list
                         self.class_words[label].append(stemmed_word)
 
-
     def convert_to_rasa(self, value, confidence):
         """Convert model output into the Rasa NLU compatible output format."""
 
-        entity = {"value": value,
-                  "confidence": confidence,
-                  "entity": "sentiment",
-                  "extractor": "sentiment_extractor"}
+        entity = {
+            "value": value,
+            "confidence": confidence,
+            "entity": "sentiment",
+            "extractor": "sentiment_extractor",
+        }
 
         return entity
-
 
     def calculate_label_score(self, tokens, class_name):
         score = 0
@@ -79,14 +78,13 @@ class SentimentAnalyzer(Component):
             # check to see if the stem of the word is in any of our classes
             if self.stemmer.stem(word.lower()) in self.class_words[class_name]:
                 # treat each word with relative weight
-                score += (1 / self.corpus_words[self.stemmer.stem(word.lower())])
+                score += 1 / self.corpus_words[self.stemmer.stem(word.lower())]
 
         return score
 
-
     def process(self, message, **kwargs):
         """Retrieve the tokens of the new message, pass it to the classifier
-            and append prediction results to the message class."""
+        and append prediction results to the message class."""
 
         entity = None
 
@@ -112,7 +110,6 @@ class SentimentAnalyzer(Component):
 
         message.set("entities", [entity], add_to_output=True)
 
-
     def persist(self, file_name, model_dir):
         """Persist this model into the passed directory."""
         classifier_file = os.path.join(model_dir, SENTIMENT_MODEL_FILE_NAME)
@@ -120,12 +117,14 @@ class SentimentAnalyzer(Component):
         return {"classifier_file": SENTIMENT_MODEL_FILE_NAME}
 
     @classmethod
-    def load(cls,
-             meta: Dict[Text, Any],
-             model_dir=None,
-             model_metadata=None,
-             cached_component=None,
-             **kwargs):
+    def load(
+        cls,
+        meta: Dict[Text, Any],
+        model_dir=None,
+        model_metadata=None,
+        cached_component=None,
+        **kwargs
+    ):
         file_name = meta.get("classifier_file")
         classifier_file = os.path.join(model_dir, file_name)
         return json_unpickle(classifier_file)

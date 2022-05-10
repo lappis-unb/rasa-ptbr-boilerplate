@@ -1,4 +1,0 @@
-# Configuração para ambiente docker
-action_endpoint:
-  url: "http://actions:5055/webhook"
-
