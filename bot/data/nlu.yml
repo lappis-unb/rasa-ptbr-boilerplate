@@ -311,6 +311,21 @@ nlu:
     - Que loucura está acontecendo?!
     - Não quero compartilhar meus dados
     - Não quero mais informar meus dados
+- intent: cadastro
+  examples: |
+    - quero me cadastrar
+    - preciso fazer o cadastro
+    - como me cadastrar
+    - meu cadastro
+    - me cadastre
+    - me cadastra
+    - cadastro
+    - cadastramento
+    - cadastrar
+    - por favor, me cadastra
+    - por favor, quero me cadastrar
+    - preciso de cadastramento
+    - preciso me cadastrar
 - intent: informar
   examples: |
     - [Arthur](nome)

@@ -57,8 +57,11 @@ intents:
     use_entities: true
 - exemplo_forms:
     use_entities: true
-  # response selectors
+- cadastro:
+    use_entities: true
 - explica:
+    use_entities: true
+- nlu_fallback:
     use_entities: true
 entities:
 - menu
@@ -79,29 +82,34 @@ entities:
 - idade
 - relationship
 - intent
-- entity 
+- entity
 - slot
 - response_selectors
 - storie
 - acao
 - forms
+- cadastro
 slots:
   nome:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: false
     influence_conversation: false
   idade:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: false
     influence_conversation: false
   requested_slot:
-    type: any
+    type: rasa.shared.core.slots.AnySlot
     initial_value: null
     auto_fill: true
     influence_conversation: false
 responses:
+  utter_cadastro:
+  - text: |
+      Ahh! Entendi, você quer se cadastrar! Abaixo seguem as informações para efetuar o seu cadastro.
+      Acesse o link para solicitar a Tele Consulta: https://bit.ly/TeleConsultraCisam
   utter_fallback:
   - text: |
       Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
@@ -117,23 +125,24 @@ responses:
       Obrigada! É sempre bom dar e receber elogios :P
   utter_cumprimentar:
   - text: |
-      Oi, eu sou um bot, um assistente virtual!
-      OI Teste!
-      Uhuu! Manda aí um assunto que te interessa :)
-      Para aprender como você pode interagir comigo basta escrever meajuda.
+      Olá! Meu nome é Clau! Serei sua assistente virtual do CISAM.
+
+      As teleconsultas são consultas realizadas em formato online, ou seja, não presenciais.
+      São realizadas através de chamada de vídeo entre o profissional de saúde (médico, psicólogo, enfermeiro e outros) e a/o paciente.
+      Para dar andamento ao agendamento da Tele Consulta, você precisa acessar o link: https://bit.ly/TeleConsultraCisam
   utter_despedir:
   - text: |
-      Foi um prazer te ajudar!
+      Foi um prazer te conhecer!
       Sempre que tiver alguma dúvida, volte aqui!
-      Até logo!
+      O CISAM agradece o seu contato! Até logo!
   - text: |
       Foi um prazer te ajudar!
       Sempre que precisar, volte aqui!
-      Até a próxima!
+      O CISAM agradece o seu contato! Até a próxima!
   - text: |
       Foi um prazer te ajudar!
       Quando surgir alguma dúvida, volte aqui!
-      Até mais!
+      O CISAM agradece o seu contato! Até mais!
   utter_tudo_bem:
   - text: |
       Tudo bem, obrigada! Em que posso te ajudar?
@@ -302,17 +311,15 @@ responses:
       Ah, e no meu repositório tem muita coisa legal que vc pode aprender! Acessa lá: [https://github.com/lappis-unb/rasa-ptbr-boilerplate](https://github.com/lappis-unb/rasa-ptbr-boilerplate)
   utter_pergunta_cancelar:
   - text: Entendi. Você deseja cancelar?
-  # utters response selectors
   utter_explica/intent:
   - text: |
       Ok, vou te explicar o que é um intent!
-      
+
       Uma intenção é o objetivo do usuário ao enviar a mensagem, olhe este link com a definição:
       https://rasa.com/docs/rasa/glossary#intent
 
       Para criar uma intent você precisa adicionar o nome da sua intent no domain.yml e no arquivo data/nlu.yml, olha esse tutorial para mais informações:
       https://rasa.com/docs/rasa/domain#intents
-
   utter_explica/entity:
   - text: |
       Ok, vou te explicar o que é um entity!
@@ -322,7 +329,6 @@ responses:
 
       Para criar uma entidade você precisa adicionar o nome da sua entidade no domain.yml e anotar as entidades arquivo data/nlu.yml, olha esse tutorial para mais informações:
       https://rasa.com/docs/rasa/domain#entities
-
   utter_explica/slot:
   - text: |
       Ok, vou te explicar o que é um slot!
@@ -332,14 +338,12 @@ responses:
 
       Para criar um slot você precisa adicionar o nome do seu slot no domain.yml indicar onde utiliza-lo no arquivo data/stories.yml e também é possível utiliza-lo nas custom actions, olha esse tutorial para mais informações:
       https://rasa.com/docs/rasa/domain#slots
-
   utter_explica/response_selectors:
   - text: |
       Ok, vou te explicar o que são os response_selectors!
 
       É uma forma mais simples de explicar informações que fazem parte do mesmo assunto, inclusive, esta mensagem foi feita dentro de um response selector! Se quiser saber mais, acesse o link:
       https://rasa.com/docs/rasa/components#responseselector
-      
   utter_explica/storie:
   - text: |
       Ok, vou te explicar o que é um storie!
@@ -349,11 +353,9 @@ responses:
 
       Para criar uma story você precisa adicionar os exemplos desejados no arquivo data/stories.yml. Se quiser saber mais, acessa o link:
       https://rasa.com/docs/rasa/stories
-
   utter_explica/forms:
   - text: |
       Ok, vou te explicar o que é um formulário!
-  # utters dos forms
   utter_exemplo_forms:
   - text: |-
       Agora você entrou em uma story que ativou um formulário! Aqui tem a documentação do Rasa sobre formulários: [documentação](https://rasa.com/docs/rasa/forms/). 
@@ -366,7 +368,6 @@ responses:
   - text: Qual o seu nome?
   utter_ask_idade:
   - text: Qual a sua idade?
-  # utters fallback
   utter_nao_nlu:
   - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
   utter_nao_core:
