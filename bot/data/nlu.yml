@@ -1,5 +1,14 @@
 version: "2.0"
 nlu:
+  # consulta form
+- intent: consulta_form
+  examples: |
+    -  Quero marcar uma consulta
+    -  Como eu faço pra marcar uma consulta?
+    -  marcar consulta
+    -  marca uma consulta pra mim!
+    -  consulta
+    -  Me marca uma consulta por favor?
 - intent: cumprimentar
   examples: |
     - olá
@@ -338,6 +347,12 @@ nlu:
     - Tenho [25](idade) anos
     - Eu tenho [25](idade) anos
     - Tenho: [25](idade)
+    - Opção [1](tipo_consulta)
+    - Opção [2](tipo_consulta)
+    - Opção [3](tipo_consulta)
+    - [1](tipo_consulta)
+    - [2](tipo_consulta)
+    - [3](tipo_consulta)
 - intent: menu
   examples: |
     - Me mostre o [menu](menu)

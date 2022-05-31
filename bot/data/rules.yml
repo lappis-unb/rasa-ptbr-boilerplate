@@ -6,16 +6,19 @@ rules:
   - intent: explica
   - action: utter_explica
   # forms
+
 - rule: Pedir para reformular a mensagem caso NLU não entenda
   steps:
   - intent: nlu_fallback
   - action: utter_nao_nlu
+
 - rule: Ativa formulário
   steps:
   - intent: exemplo_forms
   - action: utter_exemplo_forms
   - action: exemplo_forms
   - active_loop: exemplo_forms
+
 - rule: Envia formulário
   condition:
   - active_loop: exemplo_forms
@@ -26,3 +29,21 @@ rules:
     - requested_slot: null
   - action: utter_submit_exemplo_forms
   - action: utter_slots_exemplo_forms
+
+# Consulta form
+- rule: Ativa formulário de consulta
+  steps:
+  - intent: consulta_form
+  - action: utter_consulta_form
+  - action: consulta_form
+  - active_loop: consulta_form
+
+- rule: Envia formulário de consulta
+  condition:
+  - active_loop: consulta_form
+  steps:
+  - action: consulta_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_consulta_slots

@@ -3,7 +3,7 @@
 ## FLAGS:
 # TODO: This is a hotfix while RASA don't solve dependencies issues.
 PIP_FLAGS = --use-deprecated=legacy-resolver
-LOG_LEVEL = -v
+LOG_LEVEL = -vv
 RASA_ENDPOINTS = --endpoints 
 ENDPOINTS = endpoints/endpoints.yml
 RASA_CREDENTIALS = --credentials

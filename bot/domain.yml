@@ -1,10 +1,7 @@
 version: '2.0'
-config:
-  store_entities_as_slots: true
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+
 intents:
+- consulta_form
 - cumprimentar:
     use_entities: true
 - relacionamento:
@@ -63,6 +60,7 @@ intents:
     use_entities: true
 - nlu_fallback:
     use_entities: true
+      
 entities:
 - menu
 - meajuda
@@ -89,23 +87,65 @@ entities:
 - acao
 - forms
 - cadastro
+
 slots:
   nome:
-    type: rasa.shared.core.slots.TextSlot
+    type: text
     initial_value: null
     auto_fill: false
     influence_conversation: false
   idade:
-    type: rasa.shared.core.slots.TextSlot
+    type: text
     initial_value: null
     auto_fill: false
     influence_conversation: false
-  requested_slot:
-    type: rasa.shared.core.slots.AnySlot
+  tipo_consulta:
+    type: text
     initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    influence_conversation: true
+
+forms:
+  exemplo_forms:
+    required_slots:
+      idade:
+      - entity: idade
+        intent: informar
+        type: from_entity
+      nome:
+      - entity: nome
+        intent: informar
+        type: from_entity
+  consulta_form:
+    required_slots:
+      tipo_consulta:
+      - type: from_text
+        intent: null
+
+actions:
+- action_exemplo
+- validate_consulta_form
+
 responses:
+  utter_tipo_consulta_errado:
+  - text: |
+      Desculpe, informe um valor numérico entre 1 e 3!
+
+  utter_consulta_form:
+  - text: |
+      Ok, vou marcar uma consulta pra você! 
+
+  utter_ask_tipo_consulta:
+  - text: |
+      Qual consulta você quer? 
+
+       1: Genicologia 
+       2: Genicologia
+       3: Genicologia
+
+  utter_consulta_slots:
+  - text: |
+      A consulta que você quer é a de número {tipo_consulta}!
+
   utter_cadastro:
   - text: |
       Ahh! Entendi, você quer se cadastrar! Abaixo seguem as informações para efetuar o seu cadastro.
@@ -372,17 +412,7 @@ responses:
   - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
   utter_nao_core:
   - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
-actions:
-- action_exemplo
-forms:
-  exemplo_forms:
-    required_slots:
-      idade:
-      - entity: idade
-        intent: informar
-        type: from_entity
-      nome:
-      - entity: nome
-        intent: informar
-        type: from_entity
-e2e_actions: []
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
