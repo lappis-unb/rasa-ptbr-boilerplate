@@ -1,32 +1,42 @@
-language : "pt"
+# https://rasa.com/docs/rasa/nlu/components/
+recipe: default.v1
 
+language: br
+
+# See https://rasa.com/docs/rasa/tuning-your-model for more information.
 pipeline:
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
-    analyzer: "char_wb"
+    analyzer: char_wb
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 55
+    epochs: 107
+    model_confidence: softmax
+    constrain_similarities: True
+    tensorboard_log_directory: ".tensorboard_diet"
+    tensorboard_log_level: "epoch"
   - name: EntitySynonymMapper
   - name: ResponseSelector
+    model_confidence: softmax
+    epochs: 100
+    constrain_similarities: True
+  - name: FallbackClassifier
+    threshold: 0.1
+    ambiguity_threshold: 0.1
 
+# https://rasa.com/docs/rasa/core/policies/
 policies:
-  - name: TEDPolicy
-    epochs: 10
-    featurizer:
-    - name: MaxHistoryTrackerFeaturizer
-      max_history: 5
-      state_featurizer:
-        - name: BinarySingleStateFeaturizer
-  - name: "FormPolicy"
   - name: MemoizationPolicy
+  - name: TEDPolicy
     max_history: 5
-  - name: MappingPolicy
-  - name: FallbackPolicy
-    nlu_threshold: 0.38
-    core_threshold: 0.3
-    fallback_action_name: "utter_fallback"
-
+    epochs: 44
+    model_confidence: softmax
+    tensorboard_log_directory: ".tensorboard_ted"
+    tensorboard_log_level: "epoch"
+  - name: RulePolicy
+    core_fallback_threshold: 0.1
+    core_fallback_action_name: "utter_nao_core"
+    enable_fallback_prediction: False

@@ -1,45 +1,21 @@
-version: '2'
+version: "3.9"
 
 services:
-  # =============================== Coach =================================
-  # All the models are trained by this coach.
-  coach:
-    build:
-      context: .
-      dockerfile: ./docker/bot.Dockerfile
-    volumes:
-      - ./bot/models/:/bot/models/
-    command: "make train"
-
-
   # ================================= Bot =====================================
   # Generic Rasa bot, used to run console for example.
   bot:
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
-    restart: unless-stopped
+    container_name: bot
     volumes:
       - ./bot/:/bot/
     ports:
-      - 5004:5004
+      - 5005:5005
     depends_on:
       - actions
-
-  # ================================= RASA X ==================================
-  # Rasa X container
-  x:
-    build:
-      context: .
-      dockerfile: ./docker/bot.Dockerfile
-    restart: unless-stopped
-    volumes:
-      - ./bot/:/bot/
-    ports:
-      - 5002:5002
-    depends_on:
-      - actions
-    command: sh -c "make x"
+    networks:
+      - bot
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
@@ -47,111 +23,46 @@ services:
     build:
       context: .
       dockerfile: ./docker/actions.Dockerfile
+    container_name: actions
     ports:
       - 5055:5055
     volumes:
-      - ./bot/actions:/bot/actions
-    command: sh -c "make actions"
+      - ./bot:/bot
+    command: sh -c "python -m rasa_sdk --actions actions"
+    networks:
+      - bot
 
-  # ============================ WebChat Bot =================================
-  # Specific Rasa bot integrated with WebChat.
-  bot-webchat:
-      build:
-        context: .
-        dockerfile: ./docker/bot.Dockerfile
-      volumes:
-        - ./bot/:/bot/
-      ports:
-        - 5005:5005
-      depends_on:
-        - actions
-      command: sh -c "make webchat"
-
-  # ============================ WebChat Bot =================================
-  # Specific Rasa bot integrated with WebChat.
-  bot-rocket:
-      build:
-        context: .
-        dockerfile: ./docker/bot.Dockerfile
-      volumes:
-        - ./bot/:/bot/
-      ports:
-        - 5005:5005
-      depends_on:
-        - actions
-      command: sh -c "make rocket"
-
-  # =============================== Analytics =================================
-  # Analitics ElasticSearch Stack.
-  elasticsearch:
+  # ================================= RASA X ==================================
+  # Rasa X container
+  x:
     build:
       context: .
-      dockerfile: ./docker/elasticsearch.Dockerfile
-    restart: unless-stopped
-    ports:
-      - 9200:9200
-      - 9300:9300
-    env_file:
-      - env/elasticsearch.env
+      dockerfile: ./docker/bot.Dockerfile
     volumes:
-      - esbackup:/usr/share/elasticsearch/backup
-      - ./modules/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-      - esdata:/usr/share/elasticsearch/data
-
-  # Visualization layer of Analitics Stack.
-  kibana:
-    build:
-      context: .
-      dockerfile: ./docker/kibana.Dockerfile
-    restart: unless-stopped
+      - ./bot/:/bot/
     ports:
-      - 5601:5601
+      - 5002:5002
     env_file:
-      - env/kibana.env
+      - env/rasax.env
     depends_on:
-      - elasticsearch
-    volumes:
-      - ./modules/analytics:/usr/share/kibana/analytics
-
-  # =============================== Broker ====================================
-  # Custom broker to store Rasa tracker data.
-  rabbitmq:
-    image: rabbitmq:3-management
-    restart: unless-stopped
-    volumes:
-      - ./db/rabbitmq:/var/lib/rabbitmq/mnesia
-    ports:
-      - 15672:15672
-    env_file:
-      - env/rabbitmq.env
-
-  # Custom broker consumer responsible to store data into ElasticSearch.
-  rabbitmq-consumer:
-    build:
-      context: .
-      dockerfile: ./docker/consumer.Dockerfile
-    restart: unless-stopped
-    volumes:
-      - ./modules/rabbitmq/consumer/:/opt/scripts/
-    depends_on:
-      - rabbitmq
-    env_file:
-      - env/rabbitmq-consumer.env
-    command: python3 /opt/scripts/consume_bot_messages.py
-
+      - actions
+    networks:
+      - bot
 
   # ============================ Webchat Page  =================================
   # A container to run webchat html page
   webchat:
     image: nginx
     ports:
-      - 5010:80
+      - 5000:80
     volumes:
       - ./modules/webchat:/usr/share/nginx/html
+    networks:
+      - bot
 
   # ============================ Telegram Bot =================================
   # Specific Rasa bot integrated with Telegram.
-  bot_telegram:
+  bot-telegram:
       build:
         context: .
         dockerfile: ./docker/bot.Dockerfile
@@ -160,9 +71,7 @@ services:
       env_file:
         - env/bot-telegram.env
       ports:
-        - 5001:5001
-      depends_on:
-        - actions
+        - 5005:5005
       command: sh -c "make telegram"
 
   # =============================== Notebooks =================================
@@ -239,3 +148,8 @@ volumes:
   esdata:
     driver: local
   rocket_uploads:
+
+
+networks:
+  bot:
+    driver: bridge

@@ -1,0 +1,73 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: build_bot
+
+on:
+  push:
+    branches: [ main]
+  pull_request:
+    branches: [ main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        cd bot/
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then make install; fi
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test Rasa version
+      run: |
+        rasa --version 
+        echo "Rasa is installed"
+    - name: Rasa train
+      run: |
+        cd bot/
+        sed -i "s/epochs.*$/epochs: 10/" ./config.yml
+        echo "Changed epochs to 10 to check faster"
+        make train
+        echo "Model is saved"
+    - name: Test actions
+      run: |
+        cd bot/
+        make actions &
+    - name: Test rasa api
+      run: |
+        cd bot/
+        make api &
+        curl --connect-timeout 5 \
+        --max-time 10 \
+        --retry 20 \
+        --retry-delay 5 \
+        --retry-max-time 120 \
+        --retry-connrefused 'http://localhost:5005'
+        echo "Bot is working"
+    - name: Test bot intent cumprimentar
+      run: |
+        intent=$(curl -X POST http://localhost:5005/model/parse -H 'Content-Type: application/json' -d '{"text": "Oi"}' | jq -r '.intent' | jq -r '.name')
+        if [ $intent=='cumprimentar' ]; then echo "Ok"; else echo "erro" && exit 1; fi
+    - name: Test bot SDK response
+      run: |
+        curl -XPOST http://localhost:5005/webhooks/rest/webhook -H 'Content-Type: application/json' -d '{"sender":"default","message":"custom action"}'
+    - name: Test Rasa bot
+      run: |
+        cd bot/
+        make test
+        echo "Results is saved"

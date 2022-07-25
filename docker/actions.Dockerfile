@@ -1,12 +1,11 @@
-FROM botrequirements
-
-COPY ./bot/actions/actions.py /bot/actions/actions.py
-COPY ./bot/Makefile /bot/Makefile
+FROM rasa/rasa-sdk:3.0.6
 
 WORKDIR /bot
+COPY ./bot /bot
 
-EXPOSE 5055
-HEALTHCHECK --interval=300s --timeout=60s --retries=5 \
-  CMD curl -f http://0.0.0.0:5055/health || exit 1
+USER root
+RUN apt update && apt install make
+USER 1001
 
-CMD make run-actions
+ENTRYPOINT []
+CMD []

@@ -1,7 +1,14 @@
-FROM botrequirements
+FROM rasa/rasa:3.0.8
 
 WORKDIR /bot
 COPY ./bot /bot
 COPY ./modules /modules
 
-RUN find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
+USER root
+RUN apt install make
+USER 1001
+
+RUN export PYTHONPATH=/bot/components/:$PYTHONPATH
+
+ENTRYPOINT []
+CMD []

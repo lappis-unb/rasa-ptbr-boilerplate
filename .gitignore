@@ -1,6 +1,9 @@
 ### Rasa ###
 bot/models
 bot/results*
+bot/train_test_split/
+.tensorboard*
+.rasa/
 
 ### Rasa X ###
 events.db
@@ -28,6 +31,9 @@ db/
 
 ### PyCharm ###
 .idea/
+
+### GitBook ###
+_book/
 
 # Created by https://www.gitignore.io/api/vim,linux,macos,python
 ### Linux ###

@@ -1,104 +1,106 @@
 current_dir := $(shell pwd)
 user := $(shell whoami)
 
+ENDPOINTS = endpoints.yml
+CREDENTIALS = credentials.yml
+
+# CLEAR PROJECT
 clean:
-	docker-compose down
+	make down
 	cd bot/ && make clean
 
-stop:
-	docker-compose stop
+down:
+	docker-compose down
 
-############################## BOILERPLATE ##############################
-first-run:
+
+# RUN
+init:
 	make build
 	make train
-	make run-shell
+	make shell
+
+logs:
+	docker-compose logs \
+		-f
 
 build:
-	make build-requirements
-	make build-coach
-	make build-bot
+	docker-compose build \
+		--no-cache bot
 
-build-requirements:
-	docker build . --no-cache -f docker/requirements.Dockerfile -t botrequirements
+shell:
+	docker-compose run \
+		--rm \
+		--service-ports \
+		bot \
+		make shell ENDPOINTS=$(ENDPOINTS)
 
-build-bot:
-	docker-compose build --no-cache bot
+api:
+	docker-compose run \
+		--rm \
+		--service-ports \
+		bot \
+		make api ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
 
-build-coach:
-	docker-compose build --no-cache coach
+actions:
+	docker-compose run \
+		--rm \
+		--service-ports \
+		bot \
+		make actions
 
-build-analytics:
-	docker-compose up -d elasticsearch
-	docker-compose up -d rabbitmq
-	docker-compose up -d rabbitmq-consumer
-	docker-compose up -d kibana
-	make config-elastic
-	make config-kibana
 
-config-elastic:
-	docker-compose run --rm -v $(current_dir)/modules/analytics/setup_elastic.py:/analytics/setup_elastic.py bot python /analytics/setup_elastic.py
+webchat:
+	echo "Executando Bot com Webchat."
+	docker-compose run \
+		-d \
+		--service-ports \
+		bot \
+		make webchat ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
+	docker-compose up \
+		-d \
+		webchat
+	echo "Acesse o WEBCHAT em: http://localhost:5000"
 
-config-kibana:
-	docker-compose run --rm -v $(current_dir)/modules/analytics/:/analytics/ kibana python3 /analytics/import_dashboards.py
-	$(info )
-	$(info Acesse o KIBANA em: http://localhost:5601)
-	$(info )
+telegram:
+	docker-compose run \
+		-d \
+		--rm \
+		--service-ports \
+		bot-telegram \
+		make telegram ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
 
-run-shell:
-	docker-compose run --rm --service-ports bot make shell
-
-run-api:
-	docker-compose run --rm --service-ports bot make api
-
-run-actions:
-	docker-compose run --rm --service-ports bot make actions
-
-run-x:
-	docker-compose run --rm --service-ports bot make x
-
-run-webchat:
-	$(info )
-	$(info Executando Bot com Webchat.)
-	$(info )
-	docker-compose run -d --rm --service-ports bot-webchat
-	docker-compose up -d webchat
-	$(info )
-	$(info Acesse o WEBCHAT em: http://localhost:5010)
-	$(info )
-
-run-telegram:
-	docker-compose run -d --rm --service-ports bot_telegram make telegram
-
-run-notebooks:
-	docker-compose up -d notebooks
-	$(info )
-	$(info Acesse o KIBANA em: http://localhost:8888)
-	$(info )
-
-run-rocket:
-	docker-compose up -d rocketchat bot-rocket
-
+# DEVELOPMENT
+x:
+	docker-compose run \
+		--rm \
+		--service-ports \
+		x \
+		make x
 train:
-	mkdir -p bot/models
-	docker-compose up --build coach
-
-############################## TESTS ##############################
-test:
-	docker-compose run --rm bot make test
-
-run-test-nlu:
-	docker-compose run --rm bot make test-nlu
-
-run-test-core:
-	docker-compose run --rm bot make test-core
+	docker-compose run \
+		--rm  \
+		bot \
+		make train
 
 validate:
-	docker-compose run --rm bot rasa data validate --domain domain.yml --data data/ -vv
+	docker-compose run \
+		--rm bot \
+		make validate
 
-visualize:
-	docker-compose run --rm  -v $(current_dir)/bot:/coach coach rasa visualize --domain domain.yml --stories data/stories.md --config config.yml --nlu data/nlu.md --out ./graph.html -vv
-	$(info )
-	$(info Caso o FIREFOX não seja iniciado automáticamente, abra o seguinte arquivo com seu navegador:)
-	$(info bot/graph.html)
-	firefox bot/graph.html
+test:
+	docker-compose run \
+		--rm bot \
+		make test
+
+test-nlu:
+	docker-compose run \
+		--rm \
+		bot \
+		make test-nlu
+
+test-core:
+	docker-compose run \
+		--rm \
+		bot \
+		make test-core
+

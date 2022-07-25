@@ -1,16 +1,3 @@
-# Configuração para ambiente docker
+# Configuração para ambiente local
 action_endpoint:
   url: "http://actions:5055/webhook"
-
-# Configuração para ambiente local
-#action_endpoint:
-#  url: "http://localhost:5055/webhook"
-
-# Descomente estas linhas para integrar o bot com o Analytics
-#event_broker:
-#  type: pika
-#  url: rabbitmq
-#  username: admin
-#  password: admin
-#  queues: 
-#    - bot_messages
