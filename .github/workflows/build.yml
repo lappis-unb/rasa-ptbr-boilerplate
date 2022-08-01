@@ -69,5 +69,5 @@ jobs:
     - name: Test Rasa bot
       run: |
         cd bot/
-        make test
+        rasa test --no-plot
         echo "Results is saved"
