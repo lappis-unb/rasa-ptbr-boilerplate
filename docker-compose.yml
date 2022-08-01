@@ -57,6 +57,82 @@ services:
         - 5005:5005
       command: sh -c "make telegram"
 
+  # =============================== Notebooks =================================
+  # Rasa lab to enhance hyperparameters.
+  notebooks:
+    build:
+      context: .
+      dockerfile: ./docker/notebooks.Dockerfile
+    env_file:
+      - env/notebooks.env
+    volumes:
+      - ./modules/notebooks:/work/notebooks
+      - ./bot/:/bot/
+    ports:
+      - 8888:8888
+
+  # =============================== Rocket.Chat =================================
+  # Rocket.Chat instance.
+  rocketchat:
+    image: registry.rocket.chat/rocketchat/rocket.chat:latest
+    command: >
+      bash -c
+        "for i in `seq 1 30`; do
+          node main.js &&
+          s=$$? && break || s=$$?;
+          echo \"Tried $$i times. Waiting 5 secs...\";
+          sleep 5;
+        done; (exit $$s)"
+    restart: unless-stopped
+    volumes:
+      - ./uploads:/app/uploads
+    environment:
+      - PORT=3000
+      - ROOT_URL=http://localhost:3000
+      - MONGO_URL=mongodb://mongo:27017/rocketchat
+      - MONGO_OPLOG_URL=mongodb://mongo:27017/local
+      - REG_TOKEN=${REG_TOKEN}
+    depends_on:
+      - mongo
+    ports:
+      - 3000:3000
+  # =============================== Mongo =================================
+  # Mongo database and replica set.
+  mongo:
+    image: mongo:4.0
+    restart: unless-stopped
+    volumes:
+     - ./data/db:/data/db
+    command: mongod --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1
+
+  # this container's job is just run the command to initialize the replica set.
+  # it will run the command and remove himself (it will not stay running)
+  mongo-init-replica:
+    image: mongo:4.0
+    command: >
+      bash -c
+        "for i in `seq 1 30`; do
+          mongo mongo/rocketchat --eval \"
+            rs.initiate({
+              _id: 'rs0',
+              members: [ { _id: 0, host: 'localhost:27017' } ]})\" &&
+          s=$$? && break || s=$$?;
+          echo \"Tried $$i times. Waiting 5 secs...\";
+          sleep 5;
+        done; (exit $$s)"
+    depends_on:
+      - mongo
+
+volumes:
+  notebook_models:
+  mongo_data:
+  rabbit_data:
+  esbackup:
+  esdata:
+    driver: local
+  rocket_uploads:
+
+
 networks:
   bot:
     driver: bridge
