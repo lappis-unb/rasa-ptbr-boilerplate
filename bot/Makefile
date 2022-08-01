@@ -81,13 +81,6 @@ test-core:
 		--out results/results-core-test
 
 # UTIL
-## RASA X
-install-x:
-	pip install -r x-requirements.txt
-
-x:
-	rasa x --no-prompt
-
 ## RASALIT
 install-rasalit:
 	pip install $(PIP_FLAGS) -r rasalit-requirements.txt

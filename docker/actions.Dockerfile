@@ -4,8 +4,8 @@ WORKDIR /bot
 COPY ./bot /bot
 
 USER root
-RUN apt update && apt install make
+RUN apt-get install make
 USER 1001
 
 ENTRYPOINT []
-CMD []
+CMD "python -m rasa_sdk -p 5055"

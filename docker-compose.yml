@@ -32,23 +32,6 @@ services:
     networks:
       - bot
 
-  # ================================= RASA X ==================================
-  # Rasa X container
-  x:
-    build:
-      context: .
-      dockerfile: ./docker/bot.Dockerfile
-    volumes:
-      - ./bot/:/bot/
-    ports:
-      - 5002:5002
-    env_file:
-      - env/rasax.env
-    depends_on:
-      - actions
-    networks:
-      - bot
-
   # ============================ Webchat Page  =================================
   # A container to run webchat html page
   webchat:

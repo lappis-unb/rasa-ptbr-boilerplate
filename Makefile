@@ -70,12 +70,6 @@ telegram:
 		make telegram ENDPOINTS=$(ENDPOINTS) CREDENTIALS=$(CREDENTIALS)
 
 # DEVELOPMENT
-x:
-	docker-compose run \
-		--rm \
-		--service-ports \
-		x \
-		make x
 train:
 	docker-compose run \
 		--rm  \
