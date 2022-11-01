@@ -1,8 +1,6 @@
 .PHONY: all clean actions
 
 ## FLAGS:
-# TODO: This is a hotfix while RASA don't solve dependencies issues.
-PIP_FLAGS = --use-deprecated=legacy-resolver
 LOG_LEVEL = -v
 RASA_ENDPOINTS = --endpoints 
 ENDPOINTS = endpoints.yml
@@ -11,10 +9,15 @@ CREDENTIALS = credentials.yml
 
 # CLEAN PROJECT
 clean:
-	rm -rf graph.html results/ models/* *.db* .*tensorboard*
+	rm -rf graph.html \
+	       results/ \
+	       models/* \
+	       *.db* \
+	       .*tensorboard* \
+	       .rasa
 
 install:
-	pip install --upgrade pip 						&& \
+	pip install --upgrade pip && \
 	pip install -r requirements.txt
 
 # RUN
@@ -83,7 +86,7 @@ test-core:
 # UTIL
 ## RASALIT
 install-rasalit:
-	pip install $(PIP_FLAGS) -r rasalit-requirements.txt
+	pip install -r rasalit-requirements.txt
 
 rasalit:
 	python -m rasalit nlu-cluster --port 8501

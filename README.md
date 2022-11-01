@@ -20,7 +20,7 @@ A [arquitetura](https://drive.google.com/file/d/1xUojfFGrYubSfmd3tL77XzgZzD6cR-X
 
 Processo que transforma arquivos de configuração `.yml` em um `modelo treinado` que contẽm a inteligência do chatbot.
 
-![arquitetura_boilerplate-v3-criar](./docs/images/arquitetura_boilerplate-v3-criar.png)
+![arquitetura_boilerplate-v3-criar](https://github.com/lappis-unb/rasa-ptbr-boilerplate/wiki/images/arquitetura_boilerplate-v3-criar.png)
 
 
 * **Prover**
@@ -29,7 +29,7 @@ O usuário interage com a Boilerplate via Telegram, que manda as mensagens para 
 
 As *models* utilizadas para a conversação foram geradas pelo módulo *trainer* e depois transferidas para o bot, estes modelos podem ser versionados e evoluídos entre bots.
 
-![arquitetura_boilerplate-v3-prover](./docs/images/arquitetura_boilerplate-v3-prover.png)
+![arquitetura_boilerplate-v3-prover](https://github.com/lappis-unb/rasa-ptbr-boilerplate/wiki/images/arquitetura_boilerplate-v3-criar.png)
 
 
 ## Tutorial

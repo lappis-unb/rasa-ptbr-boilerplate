@@ -352,9 +352,9 @@ responses:
   utter_ask_idade:
   - text: Qual a sua idade?
   # utters fallback
-  utter_nao_nlu:
+  utter_nlu_fallback:
   - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
-  utter_nao_core:
+  utter_core_fallback:
   - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
 
 session_config:

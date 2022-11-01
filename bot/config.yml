@@ -36,7 +36,8 @@ policies:
     model_confidence: softmax
     tensorboard_log_directory: ".tensorboard_ted"
     tensorboard_log_level: "epoch"
+    constrain_similarities: True
   - name: RulePolicy
     core_fallback_threshold: 0.1
-    core_fallback_action_name: "utter_nao_core"
+    core_fallback_action_name: "utter_core_fallback"
     enable_fallback_prediction: False
