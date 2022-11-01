@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         cd bot/
-        pip install flake8 pytest rasa==3.2.4
+        pip install flake8 pytest rasa==3.3.0
         if [ -f requirements.txt ]; then make install; fi
     - name: Lint with flake8
       run: |
