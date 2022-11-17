@@ -1,4 +1,4 @@
-FROM rasa/rasa-sdk:3.0.6
+FROM rasa/rasa-sdk:3.3.0
 
 WORKDIR /bot
 COPY ./bot /bot
