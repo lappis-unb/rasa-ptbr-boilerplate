@@ -38,6 +38,6 @@ policies:
     tensorboard_log_level: "epoch"
     constrain_similarities: True
   - name: RulePolicy
-    core_fallback_threshold: 0.5
-    core_fallback_action_name: "utter_core_fallback"
+    core_fallback_threshold: 0.7
+    core_fallback_action_name: "action_default_fallback"
     enable_fallback_prediction: True

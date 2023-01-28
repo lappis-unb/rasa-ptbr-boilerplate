@@ -98,3 +98,17 @@ stories:
     entities:
       - acao
   - action: action_exemplo
+#- story: Ativa formulário
+#  steps:
+#    - intent: exemplo_forms
+#    - action: utter_exemplo_forms
+#    - action: exemplo_forms
+#    - active_loop: exemplo_forms
+#- story: Envia formulário
+#  condition:
+#  - active_loop: exemplo_forms
+#  steps:
+#    - action: exemplo_forms
+#    - active_loop: null
+#    - action: utter_submit_exemplo_forms
+#    - action: utter_slots_exemplo_forms

@@ -80,6 +80,7 @@ slots:
 
 actions:
   - action_exemplo
+  - action_default_fallback
 
 forms:
   exemplo_forms:
