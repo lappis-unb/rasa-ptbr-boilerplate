@@ -226,22 +226,6 @@ nlu:
     - amei voce
     - adorei vc
     - amei vc
-- intent: negar
-  examples: |
-    - não
-    - nao
-    - nao conheco
-    - não quero
-    - escolhi errado
-    - falei errado
-    - duvida
-    - ainda não sei
-    - nenhum
-    - nunca
-    - jamais
-    - nego
-    - cancelo
-    - negativo
 - intent: tudo_bem
   examples: |
     - tudo bem
@@ -292,8 +276,20 @@ nlu:
     - claro
     - exato
     - isso mesmo
+    - concordo
+    - isso mesmo!
+- intent: negar
+  examples: |
+    - não
+    - nao
+    - nao conheco
+    - não quero
+    - nego
+    - negativo
+    - ainda não sei
 - intent: cancelar
   examples: |
+    - sair
     - Desisto
     - Para
     - Cancela
@@ -346,15 +342,14 @@ nlu:
     - executa [forms](forms)
     - roda [forms](forms)
     - entra [forms](forms)
-  # response selectors
-- intent: explica/forms
-  examples: |
     - [form](forms)
     - Bot, quero um exemplo de [formulário](forms)
     - Bot, entra em um [form](forms)
     - Exemplo de [formulário](forms)
     - Me explique como funcionam os [formulários](forms) no rasa.
     - Você sabe fazer um [forms](forms)?
+    - me explica sobre [forms](forms)?
+  # response selectors
 - intent: explica/intent
   examples: |
     - [intent](intent)
@@ -363,6 +358,7 @@ nlu:
     - Exemplo de [intent](intent)
     - Me explique como funcionam as [intent](intent) no rasa.
     - Você sabe fazer uma [intent](intent)?
+    - O que é uma [intent](intent)?
 - intent: explica/entity
   examples: |
     - [entity](entity)
@@ -371,6 +367,7 @@ nlu:
     - Exemplo de [entity](entity)
     - Me explique como funcionam as [entity](entity) no rasa.
     - Você sabe fazer uma [entity](entity)?
+    - O que é uma [entidade](entity)?
 - intent: explica/slot
   examples: |
     - [slot](slot)
@@ -379,14 +376,7 @@ nlu:
     - Exemplo de [slot](slot)
     - Me explique como funcionam as [slot](slot) no rasa.
     - Você sabe fazer uma [slot](slot)?
-- intent: explica/response_selectors
-  examples: |
-    - [response_selectors](response_selectors)
-    - Bot, quero um exemplo de [response_selectors](response_selectors)
-    - Bot, o que significa uma [response_selectors](response_selectors)
-    - Exemplo de [response_selectors](response_selectors)
-    - Me explique como funcionam as [response_selectors](response_selectors) no rasa.
-    - Você sabe fazer uma [response_selectors](response_selectors)?
+    - O que é um [slot](slot)?
 - intent: explica/storie
   examples: |
     - [storie](storie)
@@ -395,3 +385,13 @@ nlu:
     - Exemplo de [storie](storie)
     - Me explique como funcionam as [storie](storie) no rasa.
     - Você sabe fazer uma [storie](storie)?
+    - O que é uma [storie](storie)?
+- intent: explica/response_selectors
+  examples: |
+    - [response_selectors](response_selectors)
+    - Bot, quero um exemplo de [response_selectors](response_selectors)
+    - Bot, o que significa uma [response_selectors](response_selectors)
+    - Exemplo de [response_selectors](response_selectors)
+    - Me explique como funcionam as [response_selectors](response_selectors) no rasa.
+    - Você sabe fazer uma [response_selectors](response_selectors)?
+    - Como fazer uma FAQ com [Response Selector](response_selectors)?

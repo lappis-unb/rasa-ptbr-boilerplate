@@ -81,11 +81,11 @@ slots:
 actions:
   - action_exemplo
 
-#forms:
-#  exemplo_forms:
-#    required_slots:
-#      - idade
-#      - nome
+forms:
+  exemplo_forms:
+    required_slots:
+      - idade
+      - nome
 
 responses:
   utter_fallback:
@@ -342,9 +342,11 @@ responses:
   utter_exemplo_forms:
   - text: |-
       Agora você entrou em uma story que ativou um formulário! Aqui tem a documentação do Rasa sobre formulários: [documentação](https://rasa.com/docs/rasa/forms/). 
-       Vou te fazer algumas perguntas, responda elas pra mim pra que você possa sair deste loop.
+       Vou te fazer algumas perguntas, caso queria sair, só falar 'Sair'!
   utter_slots_exemplo_forms:
-  - text: 'No formulário eu preenchi o slot NOME com o seguinte valor: {nome}'
+  - text: "Ok, seu nome é {nome} e sua idade é {idade} \n \n\
+     Estou encerrando o formulário, pode falar sobre outro assunto. \n \n\
+     Ah, gravei seu nome e idade em slots, então digite /restart caso queira preencher novos valores."
   utter_submit_exemplo_forms:
   - text: Ótimo! terminamos seu exemplo de formulário!
   utter_ask_nome:
@@ -353,9 +355,9 @@ responses:
   - text: Qual a sua idade?
   # utters fallback
   utter_nlu_fallback:
-  - text: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?
+  - text: "**NLU Fallback**: Desculpe, não consegui entender sua mensagem. Pode me perguntar de outra forma?"
   utter_core_fallback:
-  - text: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa.
+  - text: "**Core Fallback**: Desculpe, não consegui encontrar uma resposta pra sua mensagem. Digite /restart para recomeçar a conversa."
 
 session_config:
   session_expiration_time: 60
