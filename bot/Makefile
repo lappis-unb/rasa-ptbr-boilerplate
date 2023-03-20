@@ -1,7 +1,7 @@
 .PHONY: all clean actions
 
 ## FLAGS:
-LOG_LEVEL = -v
+LOG_LEVEL = -vv
 RASA_ENDPOINTS = --endpoints 
 ENDPOINTS = endpoints.yml
 RASA_CREDENTIALS = --credentials

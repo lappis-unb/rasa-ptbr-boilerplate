@@ -8,14 +8,31 @@ services:
       context: .
       dockerfile: ./docker/bot.Dockerfile
     container_name: bot
+    env_file:
+      - ./env/bot.env
     volumes:
       - ./bot/:/bot/
     ports:
       - 5005:5005
     depends_on:
       - actions
+      - mongo
     networks:
       - bot
+  # ============================ Tracker Store=================================
+  # A mongodb container as rasa tracker store.
+  mongo:
+    container_name: mongo
+    image: mongo:6.0
+    restart: unless-stopped
+    env_file:
+      - env/bot.env
+    ports:
+      - 27017:27017
+    networks:
+      - bot
+    volumes:
+      - ./data/db:/data/db
 
   # ================================= Actions =================================
   # Rasa middleware used to connect with external APIs.
@@ -24,6 +41,8 @@ services:
       context: .
       dockerfile: ./docker/actions.Dockerfile
     container_name: actions
+    env_file:
+      - ./env/bot.env
     ports:
       - 5055:5055
     volumes:
@@ -52,10 +71,12 @@ services:
       volumes:
         - ./bot/:/bot/
       env_file:
-        - env/bot-telegram.env
+        - ./env/bot-telegram.env
+        - ./env/bot.env
       ports:
         - 5005:5005
       command: sh -c "make telegram"
+
 
   # =============================== Rocket.Chat =================================
   # Rocket.Chat instance.
@@ -75,16 +96,16 @@ services:
     environment:
       - PORT=3000
       - ROOT_URL=http://localhost:3000
-      - MONGO_URL=mongodb://mongo:27017/rocketchat
-      - MONGO_OPLOG_URL=mongodb://mongo:27017/local
+      - MONGO_URL=mongodb://mongo-rocket:27017/rocketchat
+      - MONGO_OPLOG_URL=mongodb://mongo-rocket:27017/local
       #- REG_TOKEN=${REG_TOKEN}
     depends_on:
-      - mongo
+      - mongo-rocket
     ports:
       - 3000:3000
   # =============================== Mongo =================================
   # Mongo database and replica set.
-  mongo:
+  mongo-rocket:
     image: mongo:4.0
     restart: unless-stopped
     volumes:
@@ -107,7 +128,7 @@ services:
           sleep 5;
         done; (exit $$s)"
     depends_on:
-      - mongo
+      - mongo-rocket
 
 volumes:
   mongo_data:

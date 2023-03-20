@@ -1,3 +1,11 @@
 # Configuração para ambiente local
 action_endpoint:
   url: "http://actions:5055/webhook"
+
+tracker_store:
+  type: mongod
+  url: mongodb://${MONGO_HOST}:${MONGO_PORT}
+  db: "bot"
+  username: ${MONGO_USERNAME}
+  password: ${MONGO_PASSWORD}
+  auth_source: "bot"
