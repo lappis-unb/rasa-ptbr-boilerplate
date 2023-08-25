@@ -28,6 +28,10 @@ bot/results/
 
 ### database ###
 db/
+alerting/
+csv/
+plugins/
+png/
 
 ### PyCharm ###
 .idea/

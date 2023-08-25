@@ -9,7 +9,7 @@ CREDENTIALS = credentials.yml
 
 # CLEAN PROJECT
 clean:
-	rm -rf graph.html \
+	sudo rm -rf graph.html \
 	       results/ \
 	       models/* \
 	       *.db* \

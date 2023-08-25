@@ -12,7 +12,6 @@ clean:
 down:
 	docker compose down
 
-
 # RUN
 init:
 	make build
@@ -47,7 +46,6 @@ actions:
 		--service-ports \
 		bot \
 		make actions
-
 
 webchat:
 	echo "Executando Bot com Webchat."
