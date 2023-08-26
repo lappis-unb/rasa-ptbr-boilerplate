@@ -51,21 +51,23 @@ services:
     networks:
       - bot
 
-  # ============================ Webchat Page  =================================
-  # A container to run webchat html page
-  webchat:
-    image: nginx
-    ports:
-      - 5000:80
-    volumes:
-      - ./modules/webchat:/usr/share/nginx/html
-    networks:
-      - bot
+  # ============================ Telegram Bot =================================
+  # Specific Rasa bot integrated with Telegram.
+  bot-telegram:
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      volumes:
+        - ./bot/:/bot/
+      env_file:
+        - ./env/bot-telegram.env
+        - ./env/bot.env
+      ports:
+        - 5005:5005
+      command: sh -c "make telegram"
 
 volumes:
   mongo_data:
-  rocket_uploads:
-
 
 networks:
   bot:

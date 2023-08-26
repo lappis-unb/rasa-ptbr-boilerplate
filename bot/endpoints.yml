@@ -9,3 +9,7 @@ tracker_store:
   username: ${MONGO_USERNAME}
   password: ${MONGO_PASSWORD}
   auth_source: "bot"
+
+event_broker:
+  type: "file"
+  path: "rasa_events.log"

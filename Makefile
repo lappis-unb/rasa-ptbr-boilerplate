@@ -16,7 +16,7 @@ down:
 init:
 	make build
 	make train
-	make shell
+	make webchat
 
 logs:
 	docker compose logs \

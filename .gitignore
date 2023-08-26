@@ -4,6 +4,7 @@ bot/results*
 bot/train_test_split/
 .tensorboard*
 .rasa/
+*.log
 
 ### Rasa X ###
 events.db
