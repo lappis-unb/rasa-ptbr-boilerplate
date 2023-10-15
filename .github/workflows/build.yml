@@ -28,6 +28,10 @@ jobs:
         pip install --upgrade pip
         pip install flake8 pytest rasa==3.6.12
         if [ -f requirements.txt ]; then make install; fi
+        export MONGO_HOST=mongo
+        export MONGO_PORT=27017
+        export MONGO_USERNAME=
+        export MONGO_PASSWORD=
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
