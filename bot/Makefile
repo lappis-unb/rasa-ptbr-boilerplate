@@ -1,7 +1,7 @@
 .PHONY: all clean actions
 
 ## FLAGS:
-LOG_LEVEL = -v
+LOG_LEVEL = -vv
 RASA_ENDPOINTS = --endpoints 
 ENDPOINTS = endpoints.yml
 RASA_CREDENTIALS = --credentials
@@ -9,7 +9,7 @@ CREDENTIALS = credentials.yml
 
 # CLEAN PROJECT
 clean:
-	rm -rf graph.html \
+	sudo rm -rf graph.html \
 	       results/ \
 	       models/* \
 	       *.db* \

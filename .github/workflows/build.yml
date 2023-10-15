@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7]
+        python-version: [3.10.13]
 
     steps:
     - uses: actions/checkout@v2
@@ -25,7 +25,8 @@ jobs:
     - name: Install dependencies
       run: |
         cd bot/
-        pip install flake8 pytest rasa==3.3.0
+        pip install --upgrade pip
+        pip install flake8 pytest rasa==3.6.12
         if [ -f requirements.txt ]; then make install; fi
     - name: Lint with flake8
       run: |
@@ -39,8 +40,12 @@ jobs:
         echo "Rasa is installed"
     - name: Rasa train
       run: |
+        # Removing endpoints.yml and credentials.yml to this workflow.
+        rm bot/endpoints.yml
+        rm bot/credentials.yml
         cd bot/
-        sed -i "s/epochs.*$/epochs: 10/" ./config.yml
+        # Editing config.yml to train with less time.
+        sed -i "s/epochs.*$/epochs: 5/" ./config.yml
         echo "Changed epochs to 10 to check faster"
         make train
         echo "Model is saved"

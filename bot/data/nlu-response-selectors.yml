@@ -1,0 +1,47 @@
+version: "3.1"
+nlu:
+- intent: explica/intent
+  examples: |
+    - [intent](intent)
+    - Bot, quero um exemplo de [intent](intent)
+    - Bot, o que significa uma [intent](intent)
+    - Exemplo de [intent](intent)
+    - Me explique como funcionam as [intent](intent) no rasa.
+    - Você sabe fazer uma [intent](intent)?
+    - O que é uma [intent](intent)?
+- intent: explica/entity
+  examples: |
+    - [entity](entity)
+    - Bot, quero um exemplo de [entity](entity)
+    - Bot, o que significa uma [entity](entity)
+    - Exemplo de [entity](entity)
+    - Me explique como funcionam as [entity](entity) no rasa.
+    - Você sabe fazer uma [entity](entity)?
+    - O que é uma [entidade](entity)?
+- intent: explica/slot
+  examples: |
+    - [slot](slot)
+    - Bot, quero um exemplo de [slot](slot)
+    - Bot, o que significa uma [slot](slot)
+    - Exemplo de [slot](slot)
+    - Me explique como funcionam as [slot](slot) no rasa.
+    - Você sabe fazer uma [slot](slot)?
+    - O que é um [slot](slot)?
+- intent: explica/storie
+  examples: |
+    - [storie](storie)
+    - Bot, quero um exemplo de [storie](storie)
+    - Bot, o que significa uma [storie](storie)
+    - Exemplo de [storie](storie)
+    - Me explique como funcionam as [storie](storie) no rasa.
+    - Você sabe fazer uma [storie](storie)?
+    - O que é uma [storie](storie)?
+- intent: explica/response_selectors
+  examples: |
+    - [response_selectors](response_selectors)
+    - Bot, quero um exemplo de [response_selectors](response_selectors)
+    - Bot, o que significa uma [response_selectors](response_selectors)
+    - Exemplo de [response_selectors](response_selectors)
+    - Me explique como funcionam as [response_selectors](response_selectors) no rasa.
+    - Você sabe fazer uma [response_selectors](response_selectors)?
+    - Como fazer uma FAQ com [Response Selector](response_selectors)?
