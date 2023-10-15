@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.10.10]
+        python-version: [3.10.13]
 
     steps:
     - uses: actions/checkout@v2
@@ -25,7 +25,8 @@ jobs:
     - name: Install dependencies
       run: |
         cd bot/
-        pip install flake8 pytest rasa==3.3.0
+        pip install --upgrade pip
+        pip install flake8 pytest rasa==3.6.12
         if [ -f requirements.txt ]; then make install; fi
     - name: Lint with flake8
       run: |
