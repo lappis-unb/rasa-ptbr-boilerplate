@@ -1,1 +1,2 @@
-rasa==3.6.12
+rasa==${RASA_VERSION}
+rasa-model-report==1.5.0

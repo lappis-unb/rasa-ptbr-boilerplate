@@ -1,3 +1,6 @@
+include bot/.env
+export $(shell sed 's/=.*//' bot/.env)
+
 current_dir := $(shell pwd)
 user := $(shell whoami)
 
@@ -23,6 +26,7 @@ logs:
 		-f
 
 build:
+	export $(grep -v '^#' env/bot.env | xargs)
 	docker compose build \
 		--no-cache bot
 

@@ -1,5 +1,8 @@
 .PHONY: all clean actions
 
+include .env
+export $(shell sed 's/=.*//' .env)
+
 ## FLAGS:
 LOG_LEVEL = -vv
 RASA_ENDPOINTS = --endpoints 
