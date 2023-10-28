@@ -7,9 +7,11 @@ services:
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
+      args:
+        RASA_VERSION: ${RASA_VERSION}
     container_name: bot
     env_file:
-      - ./env/bot.env
+      - ./bot/.env
     volumes:
       - ./bot/:/bot/
     ports:
@@ -26,7 +28,7 @@ services:
     image: mongo:6.0
     restart: unless-stopped
     env_file:
-      - env/bot.env
+      - ./bot/.env
     ports:
       - 27017:27017
     networks:
@@ -40,9 +42,11 @@ services:
     build:
       context: .
       dockerfile: ./docker/actions.Dockerfile
+      args:
+        RASA_SDK_VERSION: ${RASA_SDK_VERSION}
     container_name: actions
     env_file:
-      - ./env/bot.env
+      - ./bot/.env
     ports:
       - 5055:5055
     volumes:

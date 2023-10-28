@@ -1,4 +1,5 @@
-FROM rasa/rasa:3.6.12-full
+ARG RASA_VERSION
+FROM rasa/rasa:${RASA_VERSION}-full
 
 WORKDIR /bot
 COPY ./bot /bot
