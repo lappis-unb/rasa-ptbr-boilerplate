@@ -7,9 +7,11 @@ services:
     build:
       context: .
       dockerfile: ./docker/bot.Dockerfile
+      args:
+        RASA_VERSION: ${RASA_VERSION}
     container_name: bot
     env_file:
-      - ./env/bot.env
+      - ./bot/.env
     volumes:
       - ./bot/:/bot/
     ports:
@@ -19,6 +21,7 @@ services:
       - mongo
     networks:
       - bot
+    command: make api
   # ============================ Tracker Store=================================
   # A mongodb container as rasa tracker store.
   mongo:
